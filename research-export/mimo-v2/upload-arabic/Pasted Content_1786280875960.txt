@@ -1,0 +1,3279 @@
+
+
+
+تقنيات بناء ai شهر 8 2026.txt
+Document
+شوف الملف هاض كله حرف حرف وفكر منيح واعطيني خطة واضحة لبناء الدكاء الاصطناعي 
+
+آه. الآن بعد ما وضحت نقطة Z.ai + GLM-5.2 + المحادثة العادية + وضع Agent/Long-Horizon، الصورة صارت أدق بكثير.
+
+وبالمناسبة: تحققت من المعلومة رسميًا؛ GLM-5.2 هو نموذج Z.ai الحالي المصمم أصلًا للمهام طويلة الأفق، مع سياق 1M token، وZ.ai توفر له Chat وAgent، بينما ZCode منتج منفصل موجه للتطوير البرمجي. لذلك سنبني نظامنا حول GLM-5.2 كالعقل الأساسي عبر API، وليس حول ZCode. 
+
+الخطة التي أنصح بها
+الخطأ الأكبر سيكون أن نبني 100 نظام صغير ثم نحاول ربطهم ببعض.
+
+سنصمم Runtime واحدًا قويًا، وكل القدرات تصبح خدمات/أنظمة فوقه.
+
+0. قبل البرمجة: نثبت الـArchitecture
+نكتب مواصفات نهائية لـ:
+
+AI Runtime
+├── Model Layer
+├── Context Layer
+├── Memory Layer
+├── Knowledge Layer
+├── Reasoning Layer
+├── Planning Layer
+├── Agent Layer
+├── Tool Layer
+├── Execution Layer
+├── Verification Layer
+├── Learning Layer
+├── Autonomy Layer
+├── Security Layer
+├── Observability Layer
+└── Evaluation Layer
+لا نبدأ بناء أي Feature قبل تثبيت العقود بين هذه الطبقات.
+
+1. نبني الـCore Runtime أولًا
+هذا أهم جزء في المشروع كله.
+
+نبني:
+
+Event Bus
+
+Task Engine
+
+State Machine
+
+Session Manager
+
+Context Manager
+
+Job Manager
+
+Configuration
+
+Error Handling
+
+Retry System
+
+Cancellation
+
+Checkpoints
+
+Persistence
+
+Plugin Interface
+
+API Layer
+
+Logging
+
+الهدف:
+
+أي شيء سنضيفه لاحقًا يستطيع الدخول إلى الـRuntime بطريقة موحدة.
+
+2. ندخل GLM-5.2 كـModel Provider
+نعمل:
+
+Model Gateway
+      │
+      └── GLM-5.2
+ثم لا نربط بقية النظام مباشرة بـZ.ai.
+
+بل:
+
+AI System
+   ↓
+Model Gateway
+   ↓
+Provider Adapter
+   ↓
+Z.ai API
+   ↓
+GLM-5.2
+وهذا مهم جدًا.
+
+لأنك لاحقًا تستطيع إضافة:
+
+GLM
+OpenAI
+Anthropic
+Gemini
+Local Models
+Vision Models
+Embedding Models
+Speech Models
+بدون إعادة كتابة النظام.
+
+3. نبني Context Engine
+هنا نحل مشكلة الـLong-Horizon.
+
+لا نعتمد على 1M context وحده.
+
+هذه نقطة مهمة جدًا.
+
+GLM-5.2 عنده سياق 1M token، وهذا ممتاز للمهام الطويلة، لكن النظام نفسه يجب أن يدير السياق بدل رمي كل شيء داخل الـprompt. Z.ai نفسها تركز في GLM-5.2 على الحفاظ على الاستمرارية في المهام طويلة الأفق. 
+
+نبني:
+
+Current Task
++
+Conversation
++
+Workspace
++
+Files
++
+Memory
++
+Knowledge
++
+Agent State
++
+Tool State
++
+Execution State
++
+Goal
+ثم Context Builder يقرر ماذا يدخل للنموذج ومتى.
+
+4. نبني Memory Engine
+بعدها مباشرة.
+
+Memory
+├── Working
+├── Episodic
+├── Semantic
+├── Procedural
+├── Preference
+├── Relationship
+├── Failure
+└── Skill
+ثم:
+
+Store
+Retrieve
+Rank
+Compress
+Consolidate
+Forget
+Resolve Conflicts
+هذه الطبقة هي التي تجعل المحادثة تستمر عبر الأيام والمشاريع، وليس فقط ضمن نافذة الـcontext.
+
+5. نبني Knowledge Engine
+ثم:
+
+Files
+Web
+Databases
+Documents
+Research
+External Sources
+تدخل:
+
+Ingestion
+↓
+Chunking
+↓
+Embedding
+↓
+Indexing
+↓
+Keyword Search
+↓
+Vector Search
+↓
+Hybrid Search
+↓
+Reranking
+↓
+Evidence
+وبعدها:
+
+Knowledge Graph + GraphRAG.
+
+6. نبني Reasoning Engine
+هنا نبدأ بتحويل GLM-5.2 من:
+
+نموذج محادثة
+
+إلى:
+
+عقل داخل نظام Agent.
+
+نبني طبقة تتحكم في:
+
+Understand
+↓
+Think
+↓
+Analyze
+↓
+Plan
+↓
+Act
+↓
+Observe
+↓
+Reflect
+مع أنواع reasoning مختلفة.
+
+7. نبني Executive
+الـExecutive هو أهم Agent.
+
+USER GOAL
+   ↓
+EXECUTIVE
+   ↓
+Understand Goal
+   ↓
+Determine Strategy
+   ↓
+Break Into Tasks
+   ↓
+Assign
+   ↓
+Monitor
+   ↓
+Verify
+هو الذي يقرر:
+
+هل أجيب؟
+هل أبحث؟
+هل أستخدم Tool؟
+هل أشغل Agent؟
+هل أحتاج عدة Agents؟
+هل أستمر؟
+هل أتوقف؟
+
+8. نبني Agent Runtime
+هنا نعمل نظام Agents حقيقي.
+
+Agent Runtime
+│
+├── Supervisor
+├── Researcher
+├── Browser
+├── Coding
+├── Data
+├── Analysis
+├── Writer
+└── Verifier
+لكن هذه ليست برامج منفصلة عشوائيًا.
+
+كل Agent لديه:
+
+Identity
+Goal
+Instructions
+Memory
+Tools
+Permissions
+State
+Budget
+Timeout
+Output Contract
+9. نبني Tool Runtime
+ثم نعطي الـAgents أيديًا.
+
+Tool Registry
+الأدوات:
+
+Web Search
+
+Browser
+
+HTTP
+
+Python
+
+Shell
+
+Files
+
+Database
+
+Git
+
+Document processing
+
+Data analysis
+
+Computer interaction
+
+وكل استدعاء يمر:
+
+Agent
+↓
+Tool Selection
+↓
+Permission Check
+↓
+Execution
+↓
+Result
+↓
+Context Update
+10. نبني Execution Engine
+هنا يبدأ الـLong Running Agent الحقيقي.
+
+مثلاً:
+
+Task
+↓
+Start
+↓
+Step 1
+↓
+Tool
+↓
+Step 2
+↓
+Agent
+↓
+Step 3
+↓
+Failure
+↓
+Recovery
+↓
+Continue
+↓
+Verification
+↓
+Complete
+والحالة تحفظ باستمرار.
+
+لذلك لو توقف البرنامج:
+
+لا نخسر المهمة.
+
+نعمل Resume.
+
+11. نبني Verification
+هذه الطبقة ستكون إجبارية للمهام المهمة.
+
+Execution
+↓
+Result
+↓
+Verifier
+↓
+PASS
+   OR
+FAIL
+↓
+Replan
+يعني الـAgent لا يستطيع اعتبار نفسه ناجحًا بمجرد أن يقول:
+
+Done.
+
+12. نبني Reflection + Recovery
+إذا فشل:
+
+Failure
+↓
+Diagnose
+↓
+Determine Cause
+↓
+Alternative Strategy
+↓
+Retry
+مع حد أقصى للمحاولات.
+
+ولو لم ينجح:
+
+Escalate
+↓
+Ask User
+13. نبني Autonomous Engine
+بعد أن يصبح:
+
+Think → Plan → Execute → Verify
+
+مستقرًا، نفتح الاستقلالية.
+
+Trigger
+↓
+Should Act?
+↓
+Permission
+↓
+Plan
+↓
+Execute
+↓
+Verify
+↓
+Notify
+يدعم:
+
+Scheduled tasks
+
+Event triggers
+
+Background tasks
+
+Persistent goals
+
+Proactive tasks
+
+14. نبني Learning Engine
+بعد وجود Execution حقيقي، يصبح لدينا شيء يمكن التعلم منه.
+
+نأخذ:
+
+Task
+Result
+Failure
+Correction
+Feedback
+ونستخرج:
+
+Experience
+↓
+Lesson
+↓
+Memory / Skill / Strategy
+15. نبني Self-Improvement
+ليس في البداية.
+
+بعد وجود Evaluation قوي.
+
+Weakness
+↓
+Candidate Improvement
+↓
+Sandbox
+↓
+Benchmark
+↓
+Regression
+↓
+Safety
+↓
+Canary
+↓
+Deploy
+وهذا يسمح للنظام بتحسين:
+
+Strategies
+
+Prompts
+
+Tool selection
+
+Planning
+
+Agent behavior
+
+Routing
+
+بدون أن نسمح له بتخريب النسخة الإنتاجية.
+
+16. نبني Multimodal Layer
+بعد استقرار العقل:
+
+Vision
+Audio
+Speech
+Video
+Screen
+Documents
+ثم نربطها بنفس Context/Memory/Agent Runtime.
+
+17. نبني Security كطبقة مستقلة
+وليس في نهاية المشروع فقط.
+
+من البداية نضع الـinterfaces، ثم نوسعها:
+
+Identity
+Permissions
+RBAC
+ABAC
+Secrets
+Sandbox
+Network Policy
+Audit
+Approval
+Kill Switch
+خصوصًا لأن Agent قادر على تنفيذ أفعال حقيقية.
+
+18. نبني Observability
+كل شيء قابل للرؤية:
+
+Task
+→ Agent
+→ Model
+→ Prompt
+→ Memory
+→ Tool
+→ Result
+→ Verification
+→ Cost
+→ Time
+→ Error
+ثم Dashboard.
+
+19. نبني Evaluation Lab
+هنا تبدأ القوة الحقيقية.
+
+نعمل مجموعة مهام معيارية:
+
+Simple Tasks
+Medium Tasks
+Complex Tasks
+Long-Horizon Tasks
+Research
+Coding
+Browser
+Memory
+Planning
+Recovery
+Autonomy
+ثم كل تغيير في النظام يتم اختباره.
+
+20. بعدها فقط ندخل التقنيات الثقيلة
+مثل:
+
+World Models
+
+Continual Learning
+
+Neural Memory
+
+Meta-Learning
+
+Evolutionary Agents
+
+Advanced Self-Improvement
+
+Digital Twins
+
+Experimental architectures
+
+لأن هذه ليست الأساس.
+
+هي مضاعفات للقوة بعد أن يصبح الـRuntime الأساسي قويًا.
+
+🚀 أسرع طريقة للعمل فعليًا
+أنا سأقسم المشروع إلى 5 خطوط تطوير متوازية بدل بناء كل شيء خطيًا.
+
+Track A — Brain
+GLM-5.2
+Context
+Reasoning
+Executive
+Planning
+Track B — Memory
+Memory
+Knowledge
+RAG
+Graph
+Track C — Agents
+Agent Runtime
+Supervisor
+Specialists
+Multi-Agent
+Track D — Action
+Tools
+Browser
+Code
+Shell
+Execution
+Sandbox
+Track E — Reliability
+Verification
+Recovery
+Security
+Observability
+Evaluation
+ثم نربطهم في نقاط تكامل محددة.
+
+⚡ وأهم قرار عندي للمشروع
+لا نبني 30 Agent من البداية.
+
+نبني أولًا:
+
+GLM-5.2
+   +
+Context
+   +
+Memory
+   +
+Planner
+   +
+Tool System
+   +
+Execution
+   +
+Verifier
+ثم نختبره على مهمة حقيقية طويلة.
+
+إذا استطاع:
+
+يفهم → يخطط → يستخدم الأدوات → يتذكر → ينفذ → يفشل → يتعافى → يتحقق → يكمل
+
+فقد بنينا النواة الحقيقية.
+
+بعدها إضافة Research Agent أو Browser Agent أو Coding Agent تصبح توسيعًا للنظام، وليست إعادة بناء له.
+
+وهذا متوافق جدًا مع طبيعة GLM-5.2 نفسها؛ Z.ai تقول إن التركيز فيه على long context + long chains of work + multi-turn tool calls + stable long-horizon execution، وليس مجرد إجابة محادثية أطول. 
+
+🏁 الشكل النهائي الذي نستهدفه
+                  ┌──────────────────────┐
+                  │       GLM-5.2        │
+                  │       AI BRAIN       │
+                  └──────────┬───────────┘
+                             │
+                     ┌───────▼───────┐
+                     │ Context Engine│
+                     └───────┬───────┘
+                             │
+          ┌──────────────────┼──────────────────┐
+          ▼                  ▼                  ▼
+       Memory            Knowledge          World State
+          └──────────────────┼──────────────────┘
+                             ▼
+                        EXECUTIVE
+                             │
+                         PLANNER
+                             │
+                     AGENT RUNTIME
+                             │
+              ┌──────────────┼──────────────┐
+              ▼              ▼              ▼
+           Research        Coding         Browser
+              │              │              │
+              └──────────────┼──────────────┘
+                             ▼
+                        TOOL RUNTIME
+                             │
+                       EXECUTION
+                             │
+                         SANDBOX
+                             │
+                       VERIFICATION
+                        ↙         ↘
+                     FAIL        PASS
+                      │            │
+                  RECOVERY         ▼
+                      │          RESULT
+                      └────┬───────┘
+                           ▼
+                       LEARNING
+                           │
+                       AUTONOMY
+                           │
+                  SELF-IMPROVEMENT
+هذا هو الـAI الذي سنبنيه.
+
+وليس الهدف أن نقلد Z.ai أو ZCode. الهدف أن نستفيد من GLM-5.2 كعقل قوي جدًا ونبني حوله الـOperating System الذي يحوله إلى Agent مستقل طويل الأفق. Z.ai نفسها تصف GLM-5.2 بأنه مصمم لهذا النوع من العمل، وتوفره حاليًا عبر Z.ai وواجهات API، مع إمكانية تشغيل الأوزان محليًا أيضًا. 
+
+والخطوة التالية المنطقية ليست كتابة كود؛ بل أن نحول هذا الكلام إلى Architecture Blueprint فعلي: أسماء الخدمات، المجلدات، قواعد البيانات، الـAPIs، الـqueues، الـevents، الـagents، الـtools، والـinterfaces — بحيث يكون عندنا مخطط بناء يمكن للمطور تنفيذه مباشرة بدون اجتهادات عشوائية.
+
+
+ولك انت حمار بحكيلك هو وكيل وهو الي رح نكتب اله برومتات ورح يبني لنا المشروع من الصفر الان الخطوة الاولى نخليه يفهم المشروع من الجدور الى الانتهاء ويكون عنده وعي تام بالي رح يبنيه بعدها نخليه يبحث ويخزن كل المعلومات عن هاي التقنيات ببيئته ويعطيك اسماء الملفات الي داخلها هاي المعلومات بعدها نبلش بالشغل ما رح  نخلي الشغل طويل لازم يخلص كل اشي بسرعة وودقة متناهية 
+
+صح. هسا فهمت المعمارية التشغيلية التي تقصدها. أنا كنت أتعامل مع الموضوع كأننا نحن سنبني النظام طبقة طبقة، بينما أنت تريد استخدام GLM-5.2 كوكيل البناء نفسه: نعطيه المشروع كاملًا، نخليه يفهمه ويبحث ويجهز بيئة المعرفة، وبعدها نتركه ينفذ.
+
+إذًا الخطة الأسرع ليست "نبني AI ثم نضيف قدراته".
+الخطة هي:
+
+المرحلة 0 — تجهيز الوكيل ليصبح مهندس المشروع
+قبل أن نطلب منه كتابة سطر كود واحد، نعمل له 3 عمليات متتالية.
+
+1. 🧠 PROJECT IMMERSION — الاستيعاب الكامل
+نعطي GLM-5.2 الملف العملاق كاملًا + ملفات المشروع الحالية إن وجدت.
+
+والـPrompt الأول لا يطلب منه البناء.
+
+يطلب منه:
+
+لا تبرمج. لا تنفذ. لا تختصر. افهم المشروع بالكامل.
+
+يجب أن يستخرج:
+
+هوية المنتج
+ما الذي نبنيه؟
+
+لماذا؟
+
+لمن؟
+
+ما المشكلة التي يحلها؟
+
+ما الفرق بينه وبين Chatbot؟
+
+ما معنى Autonomous AI في مشروعنا؟
+
+النتيجة النهائية
+يحدد بالضبط:
+
+كل الأنظمة
+
+كل الطبقات
+
+كل الخدمات
+
+كل الـAgents
+
+كل الـTools
+
+كل أنواع الذاكرة
+
+كل أنواع المعرفة
+
+كل أنظمة التفكير
+
+كل أنظمة التنفيذ
+
+كل أنظمة الاستقلالية
+
+كل أنظمة الأمان
+
+كل أنظمة التحقق
+
+كل أنظمة التعلم
+
+كل أنظمة المراقبة
+
+كل الواجهات
+
+العلاقات
+والأهم:
+
+A depends on B
+A communicates with B
+A reads from B
+A writes to B
+A triggers B
+A verifies B
+A can fail because of B
+يعني لا نريد منه مجرد قائمة Features.
+
+نريد نموذجًا ذهنيًا كاملًا للنظام.
+
+2. 🗺️ PROJECT BLUEPRINT — تحويل الفهم إلى خريطة تنفيذ
+بعد أن ينتهي من الدراسة، نطلب منه إنشاء Project Master Blueprint.
+
+مثلاً:
+
+PROJECT
+│
+├── Core Runtime
+│
+├── Model Layer
+│
+├── Context
+│
+├── Memory
+│
+├── Knowledge
+│
+├── Reasoning
+│
+├── Planning
+│
+├── Executive
+│
+├── Agents
+│
+├── Tools
+│
+├── Execution
+│
+├── Verification
+│
+├── Learning
+│
+├── Autonomy
+│
+├── Security
+│
+├── Observability
+│
+├── Evaluation
+│
+├── API
+│
+├── UI
+│
+└── Infrastructure
+لكن لكل جزء يحدد:
+
+Purpose
+Responsibilities
+Inputs
+Outputs
+Dependencies
+Interfaces
+Storage
+Events
+APIs
+Failure modes
+Tests
+Required technologies
+وهنا يصبح عنده Blueprint حقيقي بدل "فكرة المشروع".
+
+3. 📚 KNOWLEDGE ACQUISITION — البحث وتجهيز المعرفة
+وهذه النقطة التي قلتها أنت تحديدًا.
+
+بعد أن يفهم المشروع، نقوله:
+
+الآن ابحث عن كل تقنية ومفهوم يحتاجه المشروع، وتعلمه، ولا تبدأ التنفيذ قبل بناء Knowledge Base هندسية للمشروع.
+
+ويبدأ البحث منظمًا حسب الـBlueprint.
+
+مثلاً:
+
+AI Core
+├── Agent architectures
+├── Long-horizon agents
+├── Planning
+├── Reasoning
+├── Memory
+├── Tool use
+└── Reflection
+ثم:
+
+Agent Runtime
+├── Agent orchestration
+├── State machines
+├── Multi-agent systems
+├── Task scheduling
+├── Checkpointing
+└── Recovery
+وهكذا.
+
+4. 📁 كل بحث يجب أن يتحول إلى ملف
+وهذه نقطة مهمة جدًا.
+
+لا نترك المعرفة داخل Context المحادثة.
+
+نريد داخل Workspace شيئًا مثل:
+
+knowledge/
+│
+├── architecture/
+│   ├── agent_architectures.md
+│   ├── long_horizon_agents.md
+│   ├── planning_systems.md
+│   └── orchestration.md
+│
+├── memory/
+│   ├── memory_architectures.md
+│   ├── episodic_memory.md
+│   ├── semantic_memory.md
+│   ├── procedural_memory.md
+│   └── memory_consolidation.md
+│
+├── retrieval/
+│   ├── rag.md
+│   ├── hybrid_search.md
+│   ├── reranking.md
+│   ├── graphrag.md
+│   └── knowledge_graphs.md
+│
+├── execution/
+│   ├── tool_runtime.md
+│   ├── sandboxing.md
+│   ├── task_execution.md
+│   ├── checkpointing.md
+│   └── recovery.md
+│
+├── security/
+│   ├── agent_security.md
+│   ├── prompt_injection.md
+│   ├── permissions.md
+│   └── secrets_management.md
+│
+└── research_index.md
+هذه ليست أسماء نهائية.
+
+الوكيل نفسه هو الذي يولدها بناءً على الـBlueprint.
+
+5. 🔎 وكل ملف معرفة له قالب موحد
+لا نسمح له أن ينسخ مقالات عشوائيًا.
+
+كل تقنية يبحث عنها يجب أن يسجل:
+
+Technology:
+What it is:
+Why we need it:
+How it works:
+Architecture:
+Interfaces:
+Dependencies:
+Strengths:
+Weaknesses:
+Alternatives:
+Production readiness:
+Integration method:
+Security implications:
+Performance implications:
+Relevant libraries:
+Relevant papers:
+Official documentation:
+Implementation notes:
+Our project's intended usage:
+والأهم:
+
+"Our project's intended usage"
+لأننا لا نريد موسوعة.
+
+نريد معرفة مرتبطة بمشروعنا تحديدًا.
+
+6. 🧠 بعدها يعمل Knowledge Index
+الوكيل يخرج ملفًا مركزيًا:
+
+KNOWLEDGE_INDEX.md
+مثلاً:
+
+Technology                 Knowledge File
+------------------------------------------------
+Long Horizon Agents        knowledge/agents/long_horizon.md
+ReAct                      knowledge/reasoning/react.md
+GraphRAG                   knowledge/retrieval/graphrag.md
+Vector Search              knowledge/retrieval/vector_search.md
+Checkpointing              knowledge/execution/checkpointing.md
+Sandbox                    knowledge/security/sandbox.md
+...
+وهذا بالضبط ما قصدته بموضوع:
+
+"يعطيني أسماء الملفات اللي داخلها المعلومات."
+
+نعم.
+
+بل نرفعها درجة:
+
+نريد Index قابلًا للبحث آليًا، وليس مجرد أسماء.
+
+7. 🧠 بعد ذلك نعطيه "PROJECT MEMORY"
+الوكيل يصبح عنده ثلاثة مصادر:
+
+PROJECT SPECIFICATION
+        +
+PROJECT BLUEPRINT
+        +
+PROJECT KNOWLEDGE BASE
+        ↓
+   PROJECT MEMORY
+وهنا يستطيع عند أي مهمة جديدة أن يعرف:
+
+ماذا نبني
+
+لماذا نبنيه
+
+كيف صممناه
+
+ما التقنيات التي اخترناها
+
+لماذا اخترناها
+
+أين توجد المعلومات
+
+ما الملفات المرتبطة بالمشكلة
+
+ما الذي تم تنفيذه
+
+ما الذي لم ينفذ
+
+ما القرارات السابقة
+
+8. 🚨 نقطة مهمة: لا نعطيه كل المعرفة في Prompt
+هذا سيكون خطأ.
+
+نستخدم:
+
+GLM-5.2 + Repository + Knowledge Retrieval + Context Assembly
+
+يعني عند مهمة معينة:
+
+Task
+ ↓
+Determine required knowledge
+ ↓
+Search Knowledge Base
+ ↓
+Retrieve relevant files
+ ↓
+Build Context
+ ↓
+GLM-5.2
+بدل:
+
+1500 تقنية
+↓
+ضعها كلها في Prompt
+حتى مع السياق الكبير، هذا غير فعال.
+
+9. 🧪 بعدها نعمل Knowledge Verification
+قبل أن نقول له "ابدأ البناء"، نطلب منه اختبار نفسه.
+
+نعطيه أسئلة مثل:
+
+لماذا اخترنا architecture X؟
+
+ما dependencies الخاصة بـY؟
+
+إذا تعطلت Z، ما الذي يتأثر؟
+
+أين يتم تخزين memory؟
+
+كيف ينتقل Task من Planner إلى Executor؟
+
+ما الفرق بين Agent State وMemory؟
+
+كيف نوقف Agent طويل التشغيل؟
+
+كيف يستأنف بعد crash؟
+
+ما صلاحيات Browser Agent؟
+
+أين توجد معلومات GraphRAG؟
+
+والإجابة يجب أن تحتوي مرجع الملف.
+
+إذا لم يستطع:
+
+المعرفة غير جاهزة.
+
+10. 🧬 بعدها يعمل Architecture Freeze
+بعد اكتمال الفهم والبحث:
+
+PROJECT
+   ↓
+UNDERSTOOD
+   ↓
+BLUEPRINT
+   ↓
+RESEARCHED
+   ↓
+KNOWLEDGE BASE
+   ↓
+VERIFIED
+   ↓
+ARCHITECTURE FREEZE
+هنا فقط نقول:
+
+ابدأ البناء.
+11. 🚀 وبعدها الوكيل نفسه يبني المشروع
+وهنا تأتي النقطة التي تريدها أنت.
+
+ليس نحن من نقول له:
+
+اعمل Core.
+
+ثم:
+
+اعمل Memory.
+
+ثم:
+
+اعمل Agent.
+
+بل نعطيه Mission Prompt واحد كبير مع قواعد التنفيذ.
+
+وهو يقرأ:
+
+PROJECT_SPEC
+ARCHITECTURE
+KNOWLEDGE_INDEX
+KNOWLEDGE_BASE
+TASK_SYSTEM
+ثم:
+
+Analyze
+↓
+Plan
+↓
+Implement
+↓
+Test
+↓
+Verify
+↓
+Fix
+↓
+Continue
+12. 🔁 لكن البناء ليس Prompt واحدًا وينتهي
+نعطيه Autonomous Build Loop:
+
+READ PROJECT STATE
+        ↓
+SELECT NEXT OBJECTIVE
+        ↓
+READ REQUIRED KNOWLEDGE
+        ↓
+IMPLEMENT
+        ↓
+RUN TESTS
+        ↓
+ANALYZE FAILURES
+        ↓
+FIX
+        ↓
+RUN TESTS AGAIN
+        ↓
+UPDATE PROJECT STATE
+        ↓
+SELECT NEXT OBJECTIVE
+        ↓
+...
+هذا هو الذي سيجعل المشروع يخلص بسرعة بدل أن نضل نحركه يدويًا.
+
+13. 🧾 لازم يكون عنده BUILD STATE
+ملف مثل:
+
+PROJECT_STATE.md
+فيه:
+
+Completed
+In Progress
+Blocked
+Pending
+Known Bugs
+Architecture Decisions
+Changed Files
+Tests
+Coverage
+Dependencies
+Next Objective
+وكل دورة عمل تحدثه.
+
+لو انقطع الـAgent:
+
+يقرأ PROJECT_STATE ويكمل.
+
+14. 📋 ونعطيه TODO ديناميكي
+مثلاً:
+
+BUILD_PLAN.md
+ليس قائمة ثابتة فقط.
+
+بل:
+
+Phase 1
+[x] Runtime
+[x] Config
+[x] Event bus
+
+Phase 2
+[x] Model gateway
+[x] GLM provider
+
+Phase 3
+[x] Context
+[ ] Memory retrieval
+[ ] Memory consolidation
+
+...
+والوكيل هو الذي يحدثها.
+
+15. 🧪 كل Feature = Definition of Done
+لا يسمح لنفسه أن يقول:
+
+"أنجزت Memory."
+
+إلا إذا تحقق:
+
+Implementation ✓
+Integration ✓
+Tests ✓
+Error handling ✓
+Persistence ✓
+Observability ✓
+Security ✓
+Documentation ✓
+Regression ✓
+وهذا يقلل جدًا من مشكلة الـAI التي تبني نصف النظام ثم تعتبر نفسها انتهت.
+
+16. ⚡ السرعة التي تريدها
+نستخدم parallelism حيث يمكن.
+
+مثلاً بعد تثبيت الـCore:
+
+                 CORE
+                  │
+      ┌───────────┼───────────┐
+      ▼           ▼           ▼
+   Memory     Knowledge    Tool System
+      │           │           │
+      └───────────┼───────────┘
+                  ▼
+              Integration
+لكن ليس Parallel Blind.
+
+كل Agent/مسار يجب أن يعرف contracts.
+
+17. 🎯 ترتيبنا الحقيقي إذًا
+ليس:
+
+Core → Memory → Agents → إلخ بشكل يدوي.
+
+بل:
+
+المرحلة الأولى — فهم
+Project Files
++
+Huge Technology List
+        ↓
+GLM-5.2
+        ↓
+Complete Project Understanding
+الثانية — تصميم
+Understanding
+↓
+Master Blueprint
+↓
+Architecture
+↓
+Interfaces
+↓
+Dependency Graph
+الثالثة — معرفة
+Blueprint
+↓
+Research
+↓
+Knowledge Files
+↓
+Knowledge Index
+↓
+Verification
+الرابعة — تجهيز الوكيل
+Project Spec
++
+Blueprint
++
+Knowledge Base
++
+State
++
+Build Rules
+الخامسة — البناء
+Autonomous Build Loop
+↓
+Implement
+↓
+Test
+↓
+Fix
+↓
+Verify
+↓
+Continue
+السادسة — التدقيق النهائي
+Full System Audit
+↓
+Missing Components
+↓
+Integration Problems
+↓
+Security
+↓
+Performance
+↓
+Long-Horizon Tests
+↓
+Final Release
+🔥 أهم شيء الآن
+لا نريد أن نبدأ بالـPrompt الخاص بالبناء.
+
+أول Prompt يجب أن يكون PROJECT IMMERSION PROMPT.
+
+وظيفته الوحيدة:
+
+اجعل GLM-5.2 يفهم المشروع كاملًا من الجذر حتى النتيجة النهائية، ويحوّل الملف العملاق إلى نموذج مشروع قابل للتنفيذ.
+
+ثم Prompt ثانٍ:
+
+RESEARCH & KNOWLEDGE ACQUISITION
+
+ثم الثالث:
+
+ARCHITECTURE FREEZE
+
+ثم الرابع:
+
+AUTONOMOUS BUILD
+
+وهذه الأربعة هي العمود الفقري للعمل كله.
+
+وبهذا الأسلوب فعلًا نستفيد من GLM-5.2 كوكيل بناء، بدل أن نستخدمه مجرد مساعد برمجي.
+
+والأهم: لن أكتب لك Prompt البناء الآن؛ لأنك إذا أردت دقة متناهية، أول شيء يجب أن نصنعه هو Prompt الاستيعاب الأول بشكل شديد الصرامة، بحيث يجبر الوكيل على قراءة الملف كاملًا، اكتشاف التكرار والتعارضات، فهم النتيجة النهائية، وعدم البدء بالبرمجة قبل إثبات أنه فهم المشروع.
+
+
+هات البرومت كامل ما تنسا اي معلومة مهمة 
+
+بالضبط. هذا هو Prompt المرحلة الأولى فقط: لا نريده يبني شيئًا الآن. نريده يدخل المشروع بالكامل، يفهمه، يفكك ملف التقنيات، يبحث، وينشئ ذاكرة معرفة هندسية للمشروع يمكنه الاعتماد عليها لاحقًا.
+
+وأنا صغته بحيث لا يكرر خطأ شائع جدًا مع الوكلاء: يقرأ جزءًا من الملفات، يقول "فهمت"، ثم يبدأ البرمجة. ممنوع ذلك هنا.
+
+المشروع الذي أمامه يجب أن يُعامل كمنظومة AI مستقلة طويلة الأفق، مع GLM-5.2 كالعقل التنفيذي، وليس كـ ZCode. والملف الذي لدينا يوثق أن GLM-5.2 موجه للسياق الطويل والمهام الممتدة، بينما تشير ملاحظات البحث نفسها إلى أن السياق الطويل وحده لا يكفي وأن إدارة المعرفة والذاكرة مهمة. 
+
+
+Prompt المرحلة 1 — انسخه كما هو إلى GLM-5.2
+MASTER PROJECT IMMERSION & KNOWLEDGE ACQUISITION PROTOCOL
+PHASE 1 — COMPLETE UNDERSTANDING — NO IMPLEMENTATION
+You are the primary autonomous engineering agent responsible for understanding, researching, architecting, and eventually building this entire AI system from the ground up.
+
+Your underlying model is GLM-5.2.
+
+You are operating in an Agent / Long-Horizon environment with access to the project workspace, files, tools, web/research capabilities, terminal/filesystem capabilities, and any other tools exposed to you.
+
+Your job in THIS PHASE is NOT to write the product.
+
+Your job is to become deeply and accurately informed about the product before implementation begins.
+
+0. ABSOLUTE MISSION
+We are building a complete autonomous AI system.
+
+This is NOT:
+
+a normal chatbot
+
+a simple LLM wrapper
+
+a prompt collection
+
+a coding assistant only
+
+a website with an AI chat box
+
+a collection of disconnected agents
+
+a collection of APIs
+
+a demo
+
+a prototype that only works for a few examples
+
+The final product is intended to be a serious, extensible, autonomous AI system capable of:
+
+understanding complex goals
+
+maintaining long-running context
+
+reasoning
+
+planning
+
+researching
+
+using tools
+
+operating agents
+
+executing tasks
+
+recovering from failures
+
+verifying results
+
+maintaining memory
+
+maintaining knowledge
+
+learning from experience
+
+operating autonomously when authorized
+
+working over long horizons
+
+handling multimodal information
+
+interacting with software and external environments
+
+monitoring itself
+
+evaluating its own performance
+
+improving its strategies under controlled conditions
+
+remaining secure, observable, testable, and maintainable
+
+The final architecture must be capable of growing substantially without requiring a complete rewrite.
+
+The project must be designed as a coherent system.
+
+1. MOST IMPORTANT RULE
+DO NOT IMPLEMENT THE PRODUCT IN THIS PHASE.
+
+Do not:
+
+write production code
+
+modify application source code
+
+refactor the application
+
+create implementation files for the product
+
+install arbitrary dependencies just because they look useful
+
+make architectural decisions silently
+
+begin "helpfully" building components
+
+declare the project complete
+
+skip research because you already know the technology
+
+You ARE allowed to create documentation, research, analysis, indexes, architecture documents, knowledge files, diagrams, inventories, decision records, and project-state files specifically required to complete this discovery/research phase.
+
+If you believe implementation is necessary to validate a concept, DO NOT implement it yet. Record the validation requirement instead.
+
+The output of this phase is KNOWLEDGE + UNDERSTANDING + BLUEPRINT, not software.
+
+2. FIRST OBJECTIVE — READ EVERYTHING
+Before making architectural conclusions:
+
+Read the entire project workspace.
+
+Read:
+
+all project files
+
+all source files
+
+configuration files
+
+package manifests
+
+documentation
+
+existing architecture documents
+
+existing prompts
+
+existing research
+
+database schemas
+
+API definitions
+
+environment/configuration files where safe
+
+scripts
+
+tests
+
+assets when relevant
+
+generated reports
+
+technology inventories
+
+previously created knowledge files
+
+previous engineering decisions
+
+Do not assume a file is irrelevant because its name looks unimportant.
+
+Do not stop after reading a representative sample.
+
+Do not rely on filenames alone.
+
+Do not say "I have enough context" until you have actually inspected the relevant workspace.
+
+If the workspace is large, process it systematically in batches.
+
+Maintain a reading inventory so you know what has and has not been inspected.
+
+3. FILE INVENTORY
+Create or maintain:
+
+PROJECT_FILE_INVENTORY.md
+
+For every relevant file, record:
+
+path
+
+file type
+
+purpose
+
+current state
+
+whether active / unused / deprecated / temporary
+
+dependencies
+
+important relationships
+
+whether it affects the future AI system
+
+whether it should be preserved, replaced, migrated, or removed later
+
+Do not confuse:
+
+existing project
+
+future AI system
+
+research material
+
+temporary artifacts
+
+Keep these categories separate.
+
+4. UNDERSTAND THE EXISTING SYSTEM
+If an existing application/project exists, understand it completely before designing its evolution.
+
+Determine:
+
+what already exists
+
+what actually works
+
+what is incomplete
+
+what is duplicated
+
+what is obsolete
+
+what is misleading
+
+what is temporary
+
+what is technically weak
+
+what is structurally sound
+
+what can be reused
+
+what must be replaced
+
+what must be migrated
+
+what should be discarded
+
+Do not preserve bad architecture merely because it already exists.
+
+Do not rewrite good architecture merely because it is old.
+
+Every conclusion must be based on evidence.
+
+For the existing project, distinguish clearly between:
+
+CURRENT STATE
+
+and
+
+TARGET STATE.
+
+5. READ THE COMPLETE TECHNOLOGY INVENTORY
+There is a large technology/reference inventory associated with this project.
+
+Treat it as raw source material, NOT as an automatic implementation checklist.
+
+You must inspect it completely.
+
+For every technology, concept, framework, architecture, research direction, protocol, model technique, agent technique, memory technique, retrieval technique, security technique, execution technique, infrastructure technique, evaluation technique, or experimental technology listed there:
+
+Determine:
+
+What is it?
+
+What problem does it solve?
+
+What category does it belong to?
+
+How mature is it?
+
+Is it production-ready?
+
+Is it experimental?
+
+Is it obsolete?
+
+Does it overlap with another technology?
+
+Does our project actually need it?
+
+Where could it fit?
+
+What dependencies does it introduce?
+
+What are its tradeoffs?
+
+What are the alternatives?
+
+What are the integration risks?
+
+What are the security implications?
+
+What are the performance implications?
+
+What are the operational implications?
+
+Is it foundational, optional, experimental, or irrelevant?
+
+What evidence supports the conclusion?
+
+What exact knowledge file contains the research?
+
+DO NOT blindly implement every technology.
+
+The goal is to extract the maximum useful engineering value from the inventory while avoiding unnecessary complexity.
+
+6. DO NOT TRUST THE INVENTORY BLINDLY
+The technology list may contain:
+
+duplicates
+
+outdated technologies
+
+competing technologies
+
+mutually incompatible approaches
+
+research concepts
+
+technologies that have been superseded
+
+technologies that are useful only in specific circumstances
+
+technologies that sound impressive but provide little practical value
+
+technologies that belong in future experimentation rather than the core system
+
+You must classify them.
+
+Create:
+
+TECHNOLOGY_CLASSIFICATION.md
+
+Use categories such as:
+
+CORE
+
+REQUIRED
+
+IMPORTANT
+
+OPTIONAL
+
+SPECIALIZED
+
+EXPERIMENTAL
+
+FUTURE
+
+REPLACED
+
+DUPLICATE
+
+NOT NEEDED
+
+REJECTED
+
+Do not reject something merely because it is unfamiliar.
+
+Do not select something merely because it is popular.
+
+Use engineering reasoning and evidence.
+
+7. BUILD THE COMPLETE CAPABILITY MAP
+Create:
+
+CAPABILITY_MAP.md
+
+Map every capability the final AI is expected to have.
+
+At minimum investigate:
+
+Intelligence
+language understanding
+
+reasoning
+
+structured reasoning
+
+planning
+
+decision making
+
+problem solving
+
+critical reasoning
+
+causal reasoning
+
+temporal reasoning
+
+probabilistic reasoning
+
+strategic reasoning
+
+counterfactual reasoning
+
+constraint reasoning
+
+reflection
+
+metacognition where technically meaningful
+
+Context
+conversation context
+
+task context
+
+workspace context
+
+environment context
+
+temporal context
+
+user context
+
+tool context
+
+agent context
+
+execution context
+
+Memory
+working memory
+
+short-term memory
+
+episodic memory
+
+semantic memory
+
+procedural memory
+
+preference memory
+
+relationship memory
+
+task memory
+
+failure memory
+
+skill memory
+
+temporal memory
+
+memory consolidation
+
+memory compression
+
+memory retrieval
+
+memory ranking
+
+memory conflict resolution
+
+memory forgetting
+
+provenance
+
+Knowledge
+document ingestion
+
+web knowledge
+
+structured data
+
+vector retrieval
+
+keyword retrieval
+
+hybrid retrieval
+
+reranking
+
+RAG
+
+advanced RAG
+
+GraphRAG
+
+knowledge graphs
+
+entity extraction
+
+relationship extraction
+
+source tracking
+
+evidence tracking
+
+contradiction detection
+
+Agents
+single-agent architecture
+
+supervisor patterns
+
+specialist agents
+
+multi-agent coordination where justified
+
+agent state
+
+agent memory
+
+agent planning
+
+agent communication
+
+agent delegation
+
+agent lifecycle
+
+agent permissions
+
+agent observability
+
+IMPORTANT:
+
+Do not assume multi-agent architecture is always better.
+
+The research material explicitly discusses the advantage of single-agent context continuity in systems such as Z.ai's approach. Evaluate this carefully rather than automatically multiplying agents.
+
+Long-Horizon Execution
+Investigate:
+
+long-running tasks
+
+persistent tasks
+
+checkpoints
+
+resumability
+
+state persistence
+
+retries
+
+recovery
+
+failure handling
+
+task queues
+
+scheduling
+
+background execution
+
+event-driven execution
+
+cancellation
+
+timeouts
+
+dead-letter handling
+
+partial completion
+
+rollback
+
+human escalation
+
+Tools
+Investigate the complete tool layer:
+
+web search
+
+browser automation
+
+HTTP/API
+
+filesystem
+
+terminal
+
+shell
+
+Python
+
+code execution
+
+Git
+
+databases
+
+document processing
+
+data analysis
+
+image processing
+
+audio
+
+video
+
+screen interaction
+
+computer interaction
+
+external services
+
+MCP where useful
+
+Coding
+Investigate:
+
+repository understanding
+
+code generation
+
+code editing
+
+refactoring
+
+debugging
+
+test generation
+
+test execution
+
+static analysis
+
+dependency management
+
+build systems
+
+runtime verification
+
+Git workflows
+
+regression testing
+
+Multimodal
+Investigate:
+
+vision
+
+OCR
+
+document understanding
+
+image reasoning
+
+video understanding
+
+speech-to-text
+
+text-to-speech
+
+audio understanding
+
+screen understanding
+
+GUI interaction
+
+Autonomy
+Investigate:
+
+proactive agents
+
+scheduled agents
+
+event-driven agents
+
+goal-driven agents
+
+persistent goals
+
+environmental monitoring
+
+trigger systems
+
+autonomous planning
+
+autonomous execution
+
+autonomous recovery
+
+controlled self-improvement
+
+Learning
+Investigate:
+
+feedback learning
+
+experience extraction
+
+continual learning
+
+skill acquisition
+
+strategy improvement
+
+memory-based learning
+
+meta-learning
+
+self-reflection
+
+self-evaluation
+
+controlled self-improvement
+
+Verification
+Investigate:
+
+result verification
+
+critic systems
+
+test-based verification
+
+evidence verification
+
+source verification
+
+consistency checking
+
+regression testing
+
+confidence estimation
+
+quality gates
+
+Security
+Investigate:
+
+authentication
+
+authorization
+
+RBAC
+
+ABAC
+
+tool permissions
+
+agent permissions
+
+sandboxing
+
+secrets management
+
+API key management
+
+encryption
+
+isolation
+
+prompt injection defense
+
+data exfiltration defense
+
+network restrictions
+
+audit logs
+
+approval gates
+
+rate limiting
+
+kill switch
+
+safe failure
+
+Observability
+Investigate:
+
+logs
+
+metrics
+
+traces
+
+agent traces
+
+task traces
+
+model traces
+
+tool traces
+
+memory traces
+
+cost tracking
+
+latency tracking
+
+error tracking
+
+audit trails
+
+Evaluation
+Investigate:
+
+model evaluation
+
+reasoning evaluation
+
+agent evaluation
+
+memory evaluation
+
+tool-use evaluation
+
+long-horizon evaluation
+
+autonomy evaluation
+
+security evaluation
+
+regression testing
+
+benchmark suites
+
+adversarial evaluation
+
+Infrastructure
+Investigate:
+
+databases
+
+vector databases
+
+graph databases
+
+object storage
+
+caching
+
+queues
+
+workers
+
+event buses
+
+APIs
+
+model gateways
+
+model routing
+
+local/cloud hybrid execution
+
+deployment
+
+monitoring
+
+backups
+
+recovery
+
+Experimental Intelligence
+Investigate but DO NOT automatically put into the core architecture:
+
+world models
+
+digital twins
+
+neural memory
+
+continual learning architectures
+
+meta-learning
+
+evolutionary agents
+
+advanced self-improvement
+
+embodied AI
+
+other frontier/research technologies
+
+Classify them according to maturity and relevance.
+
+8. MODEL LAYER — GLM-5.2
+The primary model for the project is:
+
+GLM-5.2 through the normal Z.ai / model API path, not ZCode.
+
+Treat GLM-5.2 as the reasoning engine/model provider, not as the entire product.
+
+Research and document:
+
+API capabilities
+
+context capabilities
+
+tool calling
+
+reasoning behavior
+
+effort controls if available
+
+structured output
+
+multimodal capabilities where applicable
+
+latency
+
+limits
+
+token behavior
+
+context management
+
+long-horizon behavior
+
+failure modes
+
+API constraints
+
+cost/usage considerations
+
+model routing possibilities
+
+fallback model strategy
+
+local model possibilities where relevant
+
+The project must NOT become architecturally dependent on hardcoding Z.ai everywhere.
+
+Design a model abstraction/gateway concept so another model can be introduced later without rewriting the entire system.
+
+The current research notes indicate GLM-5.2's long-context and long-horizon positioning, while also noting that advertised context capacity should not be treated as a substitute for good context management. Record this distinction explicitly.
+
+9. SINGLE AGENT VS MULTI-AGENT
+This is a major architectural decision.
+
+Do not automatically assume:
+
+"More agents = more intelligence."
+
+Analyze:
+
+single-agent architecture
+
+supervisor architecture
+
+specialist agents
+
+hierarchical agents
+
+peer-to-peer agents
+
+dynamic agent spawning
+
+agent delegation
+
+shared context
+
+compressed context
+
+independent context
+
+coordination overhead
+
+latency
+
+reliability
+
+information loss
+
+observability
+
+complexity
+
+Then determine where single-agent execution is superior and where specialized agents genuinely provide value.
+
+The final architecture may be hybrid.
+
+Document the reasoning.
+
+10. BUILD THE FINAL PRODUCT MODEL
+Create:
+
+FINAL_PRODUCT_MODEL.md
+
+Describe the finished system as if it already exists.
+
+It must answer:
+
+"What exactly will exist when this project is complete?"
+
+Describe:
+
+user interaction
+
+conversation
+
+workspace
+
+AI core
+
+model layer
+
+context
+
+memory
+
+knowledge
+
+reasoning
+
+planning
+
+executive control
+
+agents
+
+tools
+
+execution
+
+verification
+
+recovery
+
+learning
+
+autonomy
+
+multimodality
+
+security
+
+observability
+
+evaluation
+
+infrastructure
+
+APIs
+
+UI
+
+data
+
+extensibility
+
+Do not describe it as a list of buzzwords.
+
+Describe how the components interact.
+
+11. BUILD THE SYSTEM DEPENDENCY GRAPH
+Create:
+
+SYSTEM_DEPENDENCY_GRAPH.md
+
+For every major subsystem identify:
+
+depends on
+
+consumed by
+
+produces
+
+triggers
+
+observes
+
+verifies
+
+persists
+
+can fail because of
+
+Example:
+
+MODEL
+→ Reasoning
+
+Reasoning
+→ Planner
+
+Planner
+→ Agent Runtime
+
+Agent Runtime
+→ Tool Runtime
+
+Tool Runtime
+→ Execution
+
+Execution
+→ Verification
+
+Verification
+→ Recovery / Completion
+
+Memory
+→ Context
+
+Context
+→ Model
+
+etc.
+
+The final dependency graph must cover the whole system.
+
+12. BUILD THE DATA FLOW
+Create:
+
+SYSTEM_DATA_FLOW.md
+
+Describe the lifecycle of a task:
+
+USER INPUT
+→ INTENT UNDERSTANDING
+→ CONTEXT ASSEMBLY
+→ MEMORY RETRIEVAL
+→ KNOWLEDGE RETRIEVAL
+→ REASONING
+→ PLANNING
+→ TOOL / AGENT SELECTION
+→ EXECUTION
+→ OBSERVATION
+→ VERIFICATION
+→ RECOVERY / REPLANNING
+→ RESULT
+→ MEMORY UPDATE
+→ LEARNING
+→ AUDIT
+
+Do not assume this exact flow is optimal.
+
+Analyze it and improve it where necessary.
+
+13. BUILD THE STATE MODEL
+Create:
+
+SYSTEM_STATE_MODEL.md
+
+Identify every important state.
+
+For example:
+
+session state
+
+conversation state
+
+task state
+
+plan state
+
+agent state
+
+tool state
+
+execution state
+
+memory state
+
+knowledge state
+
+workflow state
+
+approval state
+
+verification state
+
+recovery state
+
+system health state
+
+Define transitions and failure states.
+
+Long-running tasks must be resumable.
+
+14. BUILD THE KNOWLEDGE BASE
+This is one of the most important outputs of this phase.
+
+Create a structured knowledge directory.
+
+Recommended high-level structure:
+
+knowledge/
+├── architecture/
+├── models/
+├── reasoning/
+├── context/
+├── memory/
+├── knowledge/
+├── retrieval/
+├── agents/
+├── tools/
+├── execution/
+├── long_horizon/
+├── planning/
+├── coding/
+├── browser/
+├── multimodal/
+├── autonomy/
+├── learning/
+├── verification/
+├── security/
+├── observability/
+├── evaluation/
+├── infrastructure/
+├── research/
+└── experimental/
+
+Do not create meaningless files just to make the directory look complete.
+
+Each file must contain useful, researched engineering knowledge.
+
+15. EVERY KNOWLEDGE FILE MUST HAVE A STANDARD FORMAT
+Use this structure:
+
+Technology / Concept
+Definition
+Problem Solved
+Why It Matters
+How It Works
+Architecture
+Interfaces
+Dependencies
+Strengths
+Weaknesses
+Failure Modes
+Security Implications
+Performance Implications
+Operational Implications
+Alternatives
+Maturity
+Production Readiness
+Relevant Research
+Official Documentation
+Implementation Considerations
+Relevance To Our Project
+Recommended Usage
+Decision
+Sources
+Do not copy large amounts of copyrighted material.
+
+Summarize and synthesize.
+
+16. KNOWLEDGE INDEX
+Create:
+
+KNOWLEDGE_INDEX.md
+
+For every researched technology/concept:
+
+canonical name
+
+category
+
+status
+
+knowledge file path
+
+related technologies
+
+dependencies
+
+project relevance
+
+decision
+
+Example:
+
+Technology	Category	Status	Knowledge File	Project Role
+X	Memory	Required	knowledge/memory/x.md	Core
+Y	Retrieval	Optional	knowledge/retrieval/y.md	Optional
+Z	Experimental	Future	knowledge/experimental/z.md	Research
+The index must become the map to the entire engineering knowledge base.
+
+17. SOURCE QUALITY
+For external research, prioritize:
+
+official documentation
+
+official technical papers
+
+original research papers
+
+official repositories
+
+authoritative engineering documentation
+
+reputable technical analysis
+
+Use community discussions only as supplementary evidence.
+
+Never treat a random article as authoritative simply because it appears in search results.
+
+For every important architectural decision, preserve source references.
+
+Separate:
+
+FACT
+from
+INFERENCE
+from
+RECOMMENDATION.
+
+18. TECHNOLOGY DECISION RECORDS
+For major choices create:
+
+decisions/
+
+Each decision should record:
+
+problem
+
+candidates
+
+evidence
+
+tradeoffs
+
+selected option
+
+rejected options
+
+reason
+
+consequences
+
+reversal cost
+
+Never silently lock the architecture.
+
+19. IDENTIFY CONTRADICTIONS
+Create:
+
+ARCHITECTURAL_CONFLICTS.md
+
+Find contradictions such as:
+
+two systems solving the same problem
+
+incompatible frameworks
+
+duplicated storage
+
+conflicting runtime models
+
+conflicting agent strategies
+
+conflicting memory models
+
+conflicting security models
+
+unnecessary technologies
+
+mutually exclusive assumptions
+
+For every conflict:
+
+describe it
+
+identify the affected components
+
+propose possible resolutions
+
+recommend one
+
+explain why
+
+Do not silently resolve major conflicts.
+
+20. IDENTIFY MISSING TECHNOLOGY
+Do not assume the supplied technology inventory is complete.
+
+After understanding the desired system, identify:
+
+MISSING_CAPABILITIES.md
+
+If a required capability has no adequate technology in the supplied inventory, research what is missing.
+
+Do not add technologies simply because they are interesting.
+
+Add only if there is a real architectural requirement.
+
+21. COMPLEXITY CONTROL
+We want the strongest practical system, not the largest pile of technologies.
+
+For every proposed technology ask:
+
+"Does this materially improve the final system?"
+
+If NO:
+
+do not place it in the core
+
+classify it as optional, experimental, future, or rejected
+
+Avoid:
+
+duplicate databases without justification
+
+duplicate agent frameworks
+
+duplicate orchestration systems
+
+duplicate memory systems
+
+unnecessary abstraction layers
+
+technology for technology's sake
+
+The architecture must remain understandable.
+
+22. PERFORMANCE OBJECTIVE
+The final system should be designed for:
+
+fast responses for simple tasks
+
+deep reasoning for difficult tasks
+
+long-running autonomous tasks
+
+efficient context usage
+
+efficient retrieval
+
+efficient tool use
+
+parallel execution where safe
+
+checkpointing
+
+recovery
+
+minimal unnecessary model calls
+
+appropriate model selection
+
+scalable storage
+
+predictable latency
+
+Do not optimize only for theoretical capability.
+
+Optimize for real execution.
+
+23. LONG-HORIZON OBJECTIVE
+The final AI must be capable of tasks that take substantially longer than a single response.
+
+Research:
+
+persistent state
+
+checkpoints
+
+resumability
+
+task journals
+
+progress tracking
+
+retries
+
+recovery
+
+partial results
+
+context reconstruction
+
+tool history
+
+decision history
+
+verification
+
+escalation
+
+background execution
+
+A task that runs for a long time must not depend on one giant uninterrupted context.
+
+24. SELF-IMPROVEMENT BOUNDARY
+Research self-improvement, but distinguish:
+
+SAFE CONTROLLED IMPROVEMENT
+
+from
+
+UNCONTROLLED SELF-MODIFICATION.
+
+The final system may eventually improve:
+
+strategies
+
+workflows
+
+skills
+
+prompts
+
+routing
+
+retrieval
+
+planning
+
+tool selection
+
+But changes to core production behavior must eventually pass:
+
+tests
+
+evaluation
+
+regression checks
+
+security checks
+
+approval policy
+
+rollback capability
+
+Do not design unrestricted self-modification.
+
+25. SECURITY FROM DAY ONE
+Security is architectural.
+
+Research:
+
+tool authorization
+
+agent authorization
+
+secrets
+
+sandboxing
+
+filesystem isolation
+
+network isolation
+
+prompt injection
+
+malicious tool outputs
+
+data exfiltration
+
+unsafe automation
+
+auditability
+
+human approval
+
+kill switches
+
+recovery
+
+The more autonomous the system becomes, the more important these controls become.
+
+26. FINAL ARCHITECTURE DOCUMENT
+After research, create:
+
+MASTER_ARCHITECTURE.md
+
+It must contain:
+
+System purpose
+
+Product definition
+
+Design principles
+
+Architecture overview
+
+Component map
+
+Data flow
+
+State flow
+
+Dependency graph
+
+Model layer
+
+Context layer
+
+Memory layer
+
+Knowledge layer
+
+Reasoning layer
+
+Planning layer
+
+Executive layer
+
+Agent runtime
+
+Tool runtime
+
+Execution runtime
+
+Verification
+
+Recovery
+
+Learning
+
+Autonomy
+
+Security
+
+Observability
+
+Evaluation
+
+Infrastructure
+
+APIs
+
+UI
+
+Storage
+
+Extensibility
+
+Experimental technologies
+
+Technology decisions
+
+Risks
+
+Missing capabilities
+
+Future expansion
+
+27. IMPLEMENTATION READINESS
+Create:
+
+IMPLEMENTATION_READINESS.md
+
+Answer:
+
+Do we understand the complete product?
+
+Do we understand the existing codebase?
+
+Do we understand the required technologies?
+
+Do we know the dependencies?
+
+Do we know the data flow?
+
+Do we know the state model?
+
+Do we know the interfaces?
+
+Do we know the storage requirements?
+
+Do we know the security boundaries?
+
+Do we know the testing requirements?
+
+Do we know the deployment requirements?
+
+Do we know what is missing?
+
+Then assign a readiness score.
+
+Do NOT claim 100% merely because documents exist.
+
+100% means:
+
+"The architecture is sufficiently understood that implementation can begin without repeatedly rediscovering the system."
+
+28. FINAL SELF-AUDIT
+Before finishing Phase 1, perform a second independent audit.
+
+Pretend you are reviewing another engineering team's architecture.
+
+Ask:
+
+What did we miss?
+
+What did we misunderstand?
+
+What did we assume without evidence?
+
+What technologies are duplicated?
+
+What technologies are missing?
+
+Which components are unnecessarily complex?
+
+Which components are under-designed?
+
+Where are the single points of failure?
+
+Where can long-running tasks fail?
+
+Where can memory become inconsistent?
+
+Where can retrieval become unreliable?
+
+Where can agents loop forever?
+
+Where can tools cause damage?
+
+Where can prompts be injected?
+
+Where can data leak?
+
+Where can the model hallucinate?
+
+Where can verification fail?
+
+Where can recovery fail?
+
+Where can self-improvement become unsafe?
+
+What happens if the model API fails?
+
+What happens if the machine restarts?
+
+What happens if a task runs for hours?
+
+What happens if a tool returns malicious content?
+
+What happens if two sources contradict each other?
+
+What happens if memory conflicts with current evidence?
+
+What happens if the architecture needs to support a different model later?
+
+Document every important finding.
+
+29. COMPLETION GATE
+You are NOT allowed to report:
+
+"Phase 1 complete"
+
+until ALL of the following exist:
+
+PROJECT_FILE_INVENTORY.md
+
+PROJECT_UNDERSTANDING.md
+
+FINAL_PRODUCT_MODEL.md
+
+CAPABILITY_MAP.md
+
+SYSTEM_DEPENDENCY_GRAPH.md
+
+SYSTEM_DATA_FLOW.md
+
+SYSTEM_STATE_MODEL.md
+
+TECHNOLOGY_CLASSIFICATION.md
+
+KNOWLEDGE_INDEX.md
+
+ARCHITECTURAL_CONFLICTS.md
+
+MISSING_CAPABILITIES.md
+
+MASTER_ARCHITECTURE.md
+
+IMPLEMENTATION_READINESS.md
+
+technology knowledge files
+
+technology decision records
+
+research source records
+
+And until:
+
+the complete workspace has been inspected
+
+the technology inventory has been inspected
+
+major technologies have been researched
+
+major architectural conflicts have been analyzed
+
+major missing capabilities have been identified
+
+the final product has been modeled
+
+dependencies have been mapped
+
+the architecture has been cross-checked
+
+the knowledge base is searchable
+
+every major conclusion has evidence or is explicitly marked as inference/recommendation
+
+30. OUTPUT DISCIPLINE
+Do not flood the chat with thousands of lines.
+
+The workspace is the primary output.
+
+Use files for detailed research.
+
+At the end of the phase, return ONLY a concise executive report containing:
+
+What you inspected
+
+How many files you inspected
+
+How many technologies/concepts you classified
+
+How many knowledge files you created
+
+Major architectural conclusions
+
+Major conflicts discovered
+
+Major missing capabilities discovered
+
+Major technologies selected
+
+Major technologies rejected/deferred
+
+Final architecture status
+
+Implementation readiness score
+
+Exact paths of the most important files
+
+Any unresolved issue that genuinely blocks implementation
+
+Do not claim certainty where uncertainty exists.
+
+31. OPERATING PRINCIPLES
+Throughout this phase:
+
+Think before acting.
+
+Read before designing.
+
+Research before selecting.
+
+Verify before concluding.
+
+Prefer evidence over assumptions.
+
+Prefer simplicity where capability is equivalent.
+
+Prefer modularity where future evolution is expected.
+
+Avoid unnecessary complexity.
+
+Preserve useful existing work.
+
+Replace weak foundations when necessary.
+
+Never hide uncertainty.
+
+Never silently resolve major architectural conflicts.
+
+Never confuse a technology list with an architecture.
+
+Never confuse model capability with system capability.
+
+Never confuse context length with memory.
+
+Never confuse tool access with autonomy.
+
+Never confuse planning with execution.
+
+Never confuse execution with successful completion.
+
+Never confuse self-reflection with genuine learning.
+
+Never confuse multi-agent complexity with intelligence.
+
+32. THE MOST IMPORTANT DISTINCTION
+The final system consists of:
+
+MODEL
++
+SYSTEM
++
+MEMORY
++
+KNOWLEDGE
++
+TOOLS
++
+AGENTS
++
+EXECUTION
++
+VERIFICATION
++
+RECOVERY
++
+LEARNING
++
+AUTONOMY
++
+SECURITY
++
+OBSERVABILITY
++
+EVALUATION
+
+GLM-5.2 is the primary intelligence engine.
+
+It is NOT the entire architecture.
+
+The architecture must amplify the model's capabilities instead of assuming the model itself solves every system problem.
+
+33. DO NOT START PHASE 2
+When this phase is complete, STOP.
+
+Do not start implementation.
+
+Do not start coding.
+
+Do not modify the production architecture after the completion gate without documenting the change.
+
+Wait for the next explicit instruction:
+
+"START PHASE 2"
+
+Only then should implementation planning begin.
+
+FINAL COMMAND
+Start now.
+
+First inspect the entire workspace.
+
+Then inspect the complete technology/reference material.
+
+Then understand the existing project.
+
+Then build the complete capability map.
+
+Then research and classify the required technologies.
+
+Then build the project knowledge base.
+
+Then construct the architecture, dependency graph, state model, and data flow.
+
+Then perform the independent architectural audit.
+
+Then produce the implementation-readiness report.
+
+Do NOT implement the product during this phase.
+
+Your goal is to reach a state where you understand this project deeply enough that, when Phase 2 begins, you can build rapidly without repeatedly stopping to rediscover what the system is supposed to be.
+
+Accuracy is more important than speed during discovery.
+
+However, do not waste time producing redundant documentation.
+
+Be exhaustive in understanding and selective in documentation.
+
+Begin.
+
+هذا الـPrompt مصمم للـغوص الأول فقط. والسبب أن ملفك الحالي عن GLM نفسه فيه نقطة مهمة جدًا: حتى مع سياق 1M، إدارة السياق الفعلية والذاكرة ليست شيئًا يجب تركه للنموذج وحده؛ كما أن ملاحظاتك توثق أن Z.ai نفسها تميل في بعض الحالات إلى single-agent مع رؤية كاملة للسياق بدل تفتيته عشوائيًا بين عدة Agents. 
+
+
+بعد تنفيذ هذا الـPrompt، لا نطلب منه البناء مباشرة. نأخذ الملفات التي أنشأها، وخصوصًا MASTER_ARCHITECTURE.md وKNOWLEDGE_INDEX.md وIMPLEMENTATION_READINESS.md، ثم نبني عليها Prompt المرحلة الثانية: Architecture → Autonomous Build.
+
+

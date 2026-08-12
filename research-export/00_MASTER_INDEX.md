@@ -190,3 +190,160 @@
 - **MiMo_Testing_Architecture** (36K)
 - **MiMo_Tool_Architecture** (36K)
 - **MiMo_UI_Architecture** (20K)
+
+---
+
+## 🆕 القسم الجديد: MiMo AI v2 (my-nextjs-project)
+
+> المستودع الأحدث (2026-08-11) — الإصدار المنظّم من MiMo AI
+> 15K LOC + 19 API route + 57 component + **10 ADRs + 64 knowledge docs**
+
+### 📁 mimo-v2/ — المحتوى الكامل
+
+#### 📄 الملفات الرئيسية (4):
+- README.md — MiMo AI Personal AI Operating System
+- API.md — واجهة API كاملة
+- ARCHITECTURE.md — المعمارية
+- SETUP.md — التشغيل
+
+#### 📂 docs/ — الوثائق الهندسية (13 ملف):
+- MASTER_ARCHITECTURE.md (20K)
+- CAPABILITY_MAP.md (16K)
+- PROJECT_UNDERSTANDING.md (16K)
+- TECHNOLOGY_CLASSIFICATION.md (16K)
+- FINAL_PRODUCT_MODEL.md (12K)
+- IMPLEMENTATION_READINESS.md (12K)
+- KNOWLEDGE_INDEX.md (12K)
+- SYSTEM_DEPENDENCY_GRAPH.md (12K)
+- ARCHITECTURAL_CONFLICTS.md (12K)
+- MISSING_CAPABILITIES.md (8K)
+- PROJECT_FILE_INVENTORY.md (8K)
+- SYSTEM_DATA_FLOW.md (8K)
+- SYSTEM_STATE_MODEL.md (8K)
+
+#### 🏛️ docs/decisions/ — 10 Architecture Decision Records:
+1. **ADR-001**: GLM-5.2 as Primary Brain via Model Gateway
+2. **ADR-002**: Minimal TypeScript Runtime on Vercel AI SDK
+3. **ADR-003**: Hybrid Agent Strategy
+4. **ADR-004**: Embedded Storage for V1
+5. **ADR-005**: Tiered Sandboxing and Tool Runtime Mini-Service
+6. **ADR-006**: Controlled Self-Improvement Hard Boundary
+7. **ADR-007**: Context Management Mandatory
+8. **ADR-008**: Non-Bypassable Policy Engine
+9. **ADR-009**: Mini-Services and Caddy Single-Port
+10. **ADR-010**: Socket.IO Real-Time
+
+#### 📚 docs/knowledge/ — 64 وثيقة معرفة منظّمة:
+
+**🧠 Agents (6):**
+- agent_architectures, agent_handoff, agent_lifecycle
+- react_agent_loop, single_vs_multi_agent, supervisor_pattern
+
+**🎯 Autonomy (2):**
+- autonomous_agents, proactive_intelligence
+
+**🌐 Browser (2):**
+- browser_agent, browser_automation
+
+**💻 Coding (1):**
+- coding_agent
+
+**📝 Context (4):**
+- context_engineering, context_assembly, context_compression, long_context_management
+
+**📊 Evaluation (1):**
+- evaluation_lab
+
+**⚡ Execution (3):**
+- checkpointing, long_horizon_execution, recovery
+
+**🔧 Infrastructure (4):**
+- event_bus, knowledge_graph_store, task_queue, vector_database
+
+**🎓 Learning (2):**
+- learning_engine, controlled_self_improvement
+
+**💾 Memory (8):**
+- memory_architectures, memory_consolidation, memory_compression
+- memory_retrieval, episodic_memory, preference_memory
+- procedural_memory, semantic_memory
+
+**🤖 Models (4):**
+- glm_5_2, model_gateway, model_routing, embeddings
+
+**🎨 Multimodal (3):**
+- vision, asr_tts, image_generation
+
+**📊 Observability (2):**
+- observability, audit_trails
+
+**🔗 Protocols (2):**
+- mcp, a2a
+
+**🧩 Reasoning (6):**
+- chain_of_thought, plan_and_solve, react
+- reflection, self_consistency, structured_reasoning
+
+**🔍 Retrieval (6):**
+- rag, graphrag, hybrid_search, knowledge_graph
+- reranking, vector_search
+
+**🔒 Security (4):**
+- agent_security, permissions_rbac_abac
+- prompt_injection_defense, secrets_management
+
+**🛠️ Tools (5):**
+- function_calling, approval_workflow
+- sandboxing, tool_policy_engine, tool_runtime
+
+**✅ Verification (1):**
+- verification
+
+---
+
+## 📖 القسم الأقوى: بحوث عربية ضخمة (1.2MB)
+
+### 📄 ملف التجميع المعلوماتي (904KB | 14,170 سطر)
+> "ملف التجميع المعلووومات البحثية لمشروع AI"
+> **محتوى:** كل الـ ADRs + كل البحوث التقنية مجمّعة بملف واحد
+
+### 📄 تقنيات بناء AI شهر 8 2026 (240KB | 22,495 سطر)
+> "خريطة التقنيات الشاملة لبناء MiMo AI"
+> **محتوى:** جدول كامل بكل تقنية AI بالعربي والإنجليزي + تصنيف + أولوية (P0/P1/P2)
+
+### 📄 Pasted Content (60KB | 3,279 سطر)
+> "خطة واضحة لبناء الذكاء الاصطناعي"
+> **محتوى:** محادثة عميقة عن بناء الـ AI Runtime
+> - GLM-5.2 + Z.ai + وضع Agent/Long-Horizon
+> - بناء Runtime واحد قوي بدل 100 نظام صغير
+> - 15 طبقة (Model, Context, Memory, Knowledge, Reasoning, Planning, Agent, Tool, Execution, Verification, Learning, Autonomy, Security, Observability, Evaluation)
+
+---
+
+## 🎯 الخلاصة النهائية للكنز البحثي
+
+| الفئة | العدد | الحجم |
+|------|------|------|
+| موسوعات + تقارير رئيسية | 22 | 1.7MB |
+| أدوات AI موثّقة | 54 | 2.4MB |
+| نظريات أكاديمية | 16 | 204KB |
+| أنماط UX | 16 | 840KB |
+| وثائق معمارية (v1) | 28 | 980KB |
+| وثائق MiMo v2 | 88 | 2.4MB |
+| بحوث عربية | 3 | 1.2MB |
+| **الإجمالي** | **234 ملف** | **8.4MB** |
+
+### 🔥 الاكتشافات الكبرى:
+
+1. **عندك 10 ADRs موثّقة** — نضج هندسي نادر
+2. **عندك خريطة تقنية شاملة** بالعربي (240KB) — أقوى من موسوعات تجارية
+3. **عندك 64 ملف معرفة منظّم** بـ 20 مجال (agents/memory/security/...)
+4. **عندك خطة Runtime واضحة** — 15 طبقة موثّقة بالعربي
+5. **كل بحوثك متّسقة** — من v1 → v2 → عربي، نفس الرؤية
+
+### 💎 هذا الكنز يساوي:
+- **كتاب تقني** كامل (موسوعة + بحوث عربية)
+- **curriculum جامعي** (لـ AI engineering course)
+- **consulting deliverable** (capability map + readiness audit)
+- **backbone لكتاب PhD** (بحوث موثّقة + ADRs)
+- **spec تنفيذي** (المعمارية + القرارات + الخطة)
