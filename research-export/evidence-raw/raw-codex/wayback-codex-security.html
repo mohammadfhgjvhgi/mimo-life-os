@@ -1,0 +1,917 @@
+<!DOCTYPE html><html lang="en"> <head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=2N_sDSC0" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://developers.openai.com/codex/security","20260101164638","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1767285998");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv" />
+<!-- End Wayback Rewrite JS Include -->
+<!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/png" href="/web/20260101164638im_/https://developers.openai.com/favicon.png"><meta name="generator" content="Astro v5.16.5"><link rel="preload" href="/web/20260101164638/https://developers.openai.com/fonts/OpenAISans-Regular.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/web/20260101164638/https://developers.openai.com/fonts/OpenAISans-Bold.woff" as="font" type="font/woff" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://web.archive.org/web/20260101164638/https://developers.openai.com/codex/security/"><!-- Primary Meta Tags --><title>Security</title><meta name="title" content="Security"><meta name="description" content="How to securely operate and manage Codex agents"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://web.archive.org/web/20260101164638/https://developers.openai.com/codex/security/"><meta property="og:title" content="Security"><meta property="og:description" content="How to securely operate and manage Codex agents"><meta property="og:image" content="https://web.archive.org/web/20260101164638im_/https://developers.openai.com/open-graph.png"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://web.archive.org/web/20260101164638im_/https://developers.openai.com/codex/security/"><meta name="twitter:title" content="Security"><meta name="twitter:description" content="How to securely operate and manage Codex agents"><meta name="twitter:image" content="https://web.archive.org/web/20260101164638im_/https://developers.openai.com/open-graph.png"><!-- Sitemap --><link rel="sitemap" href="/sitemap-index.xml"><!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="Security" href="https://web.archive.org/web/20260101164638/https://developers.openai.com/rss.xml"><!-- Global Scripts --><script src="/web/20260101164638js_/https://developers.openai.com/js/theme.js"></script><script src="/web/20260101164638js_/https://developers.openai.com/js/scroll.js"></script><script src="/web/20260101164638js_/https://developers.openai.com/js/animate.js"></script><script defer src="/web/20260101164638js_/https://developers.openai.com/js/copy.js"></script><link rel="stylesheet" href="/web/20260101164638cs_/https://developers.openai.com/_astro/index.CPa0O_K3.css">
+<style>.cursor-blink[data-astro-cid-76h4scq2]{display:inline-block;min-width:.65ch;padding:0 .05ch;animation:cli-cursor-blink 1.4s steps(2,start) infinite}[data-astro-cid-76h4scq2][data-cli-terminal-preview] pre[data-astro-cid-76h4scq2]{-ms-overflow-style:none;scrollbar-width:none}[data-astro-cid-76h4scq2][data-cli-terminal-preview] pre[data-astro-cid-76h4scq2]::-webkit-scrollbar{display:none}@keyframes cli-cursor-blink{0%,45%{background:#fff;color:var(--cli-cursor-text)}55%,to{background:transparent;color:inherit}}[data-astro-cid-76h4scq2][data-cli-terminal-preview]{--cli-bg: #0f172ae6;--cli-border: #47556980;--cli-ring: #00000066;--cli-header-bg: #020617b3;--cli-text-strong: #e2e8f0;--cli-text: #cbd5e1;--cli-text-muted: #94a3b8;--cli-accent: #38bdf8;--cli-panel-bg: #0f172a66;--cli-dot-red: #ff5f56;--cli-dot-yellow: #ffbd2e;--cli-dot-green: #27c93f;--cli-cursor-text: #374151}
+</style></head> <body class="overflow-x-hidden" data-pagefind-filter="section:codex"> <header id="header" class="fixed top-0 w-full h-16 z-50 bg-white dark:bg-black border-b border-primary-surface" data-astro-cid-3ef6ksr2> <div class="flex items-center h-full px-4 md:px-8 md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-6" data-astro-cid-3ef6ksr2> <!-- Logo --> <a href="/web/20260101164638/https://developers.openai.com/" class="flex items-center font-semibold ml-0 md:-ml-2 md:justify-self-start" data-astro-cid-3ef6ksr2> <img src="/web/20260101164638im_/https://developers.openai.com/OpenAI_Developers.svg" alt="OpenAI Developers" class="h-6 w-48 md:h-6 dark:invert" data-astro-cid-3ef6ksr2> </a> <!-- Links --> <nav class="hidden md:flex items-center justify-center gap-1" data-astro-cid-3ef6ksr2> <div class="relative group" data-astro-cid-3ef6ksr2> <a href="/web/20260101164638/https://developers.openai.com/resources" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha" data-astro-cid-3ef6ksr2> Resources  </a>  </div><div class="relative group" data-astro-cid-3ef6ksr2> <a href="/web/20260101164638/https://developers.openai.com/codex" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-default bg-primary-soft" data-astro-cid-3ef6ksr2> Codex  </a>  </div><div class="relative group" data-astro-cid-3ef6ksr2> <a href="/web/20260101164638/https://developers.openai.com/chatgpt" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha" aria-haspopup="menu" data-astro-cid-3ef6ksr2> ChatGPT <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-tertiary " data-astro-cid-3ef6ksr2="true"><path d="M11.2929 16.2929C11.6834 16.6834 12.3166 16.6834 12.7071 16.2929L18.7071 10.2929C19.0976 9.90237 19.0976 9.26921 18.7071 8.87868C18.3166 8.48816 17.6834 8.48816 17.2929 8.87868L12 14.1716L6.70711 8.87868C6.31658 8.48816 5.68342 8.48816 5.29289 8.87868C4.90237 9.26921 4.90237 9.90237 5.29289 10.2929L11.2929 16.2929Z" fill="currentColor"></path></svg> </a> <div class="invisible opacity-0 absolute left-0 top-full z-50 mt-2 min-w-full w-max transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 before:content-[''] before:absolute before:-top-2 before:left-0 before:right-0 before:h-2" role="menu" data-astro-cid-3ef6ksr2> <div class="overflow-hidden rounded-md border border-primary-surface bg-surface shadow-md ring-1 ring-black/5 dark:ring-white/10" data-astro-cid-3ef6ksr2> <a role="menuitem" href="/web/20260101164638/https://developers.openai.com/apps-sdk" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default" data-astro-cid-3ef6ksr2> <div class="flex flex-col gap-1" data-astro-cid-3ef6ksr2> <div class="font-medium" data-astro-cid-3ef6ksr2>Apps SDK</div> <div class="text-sm text-secondary" data-astro-cid-3ef6ksr2> Build apps to extend ChatGPT </div> </div> </a><a role="menuitem" href="/web/20260101164638/https://developers.openai.com/commerce" class="block px-4 py-3 text-sm text-default transition-colors hover:bg-primary-soft-alpha dark:hover:bg-alpha-10 hover:text-default" data-astro-cid-3ef6ksr2> <div class="flex flex-col gap-1" data-astro-cid-3ef6ksr2> <div class="font-medium" data-astro-cid-3ef6ksr2>Agentic Commerce</div> <div class="text-sm text-secondary" data-astro-cid-3ef6ksr2> Build commerce flows in ChatGPT </div> </div> </a> </div> </div> </div><div class="relative group" data-astro-cid-3ef6ksr2> <a href="/web/20260101164638/https://developers.openai.com/blog" class="flex items-center gap-1 text-sm px-2.5 py-1 rounded-md text-primary-soft hover:text-default hover:bg-primary-soft-alpha" data-astro-cid-3ef6ksr2> Blog  </a>  </div>  </nav> <!-- Theme Toggle, Mobile Menu --> <div class="ml-auto flex items-center gap-4 md:gap-5 md:ml-0 md:justify-end md:justify-self-end" data-astro-cid-3ef6ksr2> <button id="header-theme-button" aria-label="Toggle light and dark theme" class="hidden md:flex text-secondary hover:text-default transition-colors" data-astro-cid-3ef6ksr2> <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="block dark:hidden w-4 h-4 " data-astro-cid-3ef6ksr2="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C11.5523 0 12 0.447715 12 1V3C12 3.55228 11.5523 4 11 4C10.4477 4 10 3.55228 10 3V1C10 0.447715 10.4477 0 11 0ZM3.22183 3.22183C3.61235 2.8313 4.24551 2.8313 4.63604 3.22183L6.05025 4.63604C6.44078 5.02656 6.44078 5.65973 6.05025 6.05025C5.65973 6.44078 5.02656 6.44078 4.63604 6.05025L3.22183 4.63604C2.8313 4.24551 2.8313 3.61235 3.22183 3.22183ZM18.7782 3.22183C19.1687 3.61235 19.1687 4.24551 18.7782 4.63604L17.364 6.05025C16.9734 6.44078 16.3403 6.44078 15.9497 6.05025C15.5592 5.65973 15.5592 5.02656 15.9497 4.63604L17.364 3.22183C17.7545 2.8313 18.3876 2.8313 18.7782 3.22183ZM11 8C9.34315 8 8 9.34315 8 11C8 12.6569 9.34315 14 11 14C12.6569 14 14 12.6569 14 11C14 9.34315 12.6569 8 11 8ZM6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11ZM0 11C0 10.4477 0.447715 10 1 10H3C3.55228 10 4 10.4477 4 11C4 11.5523 3.55228 12 3 12H1C0.447715 12 0 11.5523 0 11ZM18 11C18 10.4477 18.4477 10 19 10H21C21.5523 10 22 10.4477 22 11C22 11.5523 21.5523 12 21 12H19C18.4477 12 18 11.5523 18 11ZM6.05025 15.9497C6.44078 16.3403 6.44078 16.9734 6.05025 17.364L4.63604 18.7782C4.24551 19.1687 3.61235 19.1687 3.22183 18.7782C2.8313 18.3876 2.8313 17.7545 3.22183 17.364L4.63604 15.9497C5.02656 15.5592 5.65973 15.5592 6.05025 15.9497ZM15.9497 15.9497C16.3403 15.5592 16.9734 15.5592 17.364 15.9497L18.7782 17.364C19.1687 17.7545 19.1687 18.3876 18.7782 18.7782C18.3877 19.1687 17.7545 19.1687 17.364 18.7782L15.9497 17.364C15.5592 16.9734 15.5592 16.3403 15.9497 15.9497ZM11 18C11.5523 18 12 18.4477 12 19V21C12 21.5523 11.5523 22 11 22C10.4477 22 10 21.5523 10 21V19C10 18.4477 10.4477 18 11 18Z" fill="currentColor"></path></svg> <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden dark:block w-4 h-4 " data-astro-cid-3ef6ksr2="true"><path d="M10.7836 0.470481C10.9676 0.765118 10.9855 1.13415 10.8309 1.44525C10.2994 2.51497 10 3.7211 10 5.00001C10 9.41829 13.5817 13 18 13L18.0575 12.9998C18.4049 12.9974 18.7287 13.1754 18.9127 13.47C19.0968 13.7647 19.1147 14.1337 18.9601 14.4448C17.325 17.7352 13.9279 20 10 20C4.47715 20 0 15.5229 0 10C0 4.50107 4.43841 0.038857 9.92838 0.000268937C10.2758 -0.00217271 10.5995 0.175844 10.7836 0.470481ZM8.40989 2.15803C4.75344 2.8954 2 6.12619 2 10C2 14.4183 5.58172 18 10 18C12.587 18 14.8886 16.7721 16.3516 14.8648C11.6131 14.0789 8 9.96139 8 5.00001C8 4.01361 8.1431 3.05953 8.40989 2.15803Z" fill="currentColor"></path></svg> </button> <!-- Mobile Menu Button --> <button id="header-drawer-button" type="button" aria-label="Toggle menu" aria-controls="drawer" aria-expanded="false" class="md:hidden relative right-1 text-secondary hover:text-default transition-colors" data-astro-cid-3ef6ksr2> <svg width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-secondary hover:text-default transition-colors " data-astro-cid-3ef6ksr2="true"><path d="M0 1C0 0.447715 0.447715 0 1 0H17C17.5523 0 18 0.447715 18 1C18 1.55228 17.5523 2 17 2H1C0.447715 2 0 1.55228 0 1ZM0 9C0 8.44772 0.447715 8 1 8H11C11.5523 8 12 8.44772 12 9C12 9.55229 11.5523 10 11 10H1C0.447715 10 0 9.55229 0 9Z" fill="currentColor"></path></svg> </button> </div> </div> </header> <div id="header-search-overlay" role="dialog" aria-modal="true" aria-labelledby="header-search-title" aria-hidden="true" data-open="false" class="fixed inset-0 z-[60] hidden items-start justify-center px-4 pt-24 pb-12 md:pt-28" data-astro-cid-3ef6ksr2> <div class="absolute inset-0 bg-black/40 backdrop-blur-xs transition-opacity dark:bg-black/70" data-header-search-dismiss data-astro-cid-3ef6ksr2></div> <div class="relative z-10 w-full max-w-3xl overflow-hidden rounded-2xl bg-surface shadow-2xl ring-1 ring-black/10 dark:ring-white/10" data-header-search-panel data-astro-cid-3ef6ksr2> <div data-header-search-toolbar class="flex items-center justify-between border-b border-primary-surface px-4 py-4 md:px-6" data-astro-cid-3ef6ksr2> <h2 id="header-search-title" class="heading-xs" data-astro-cid-3ef6ksr2>Search the Codex docs</h2> <div class="flex items-center gap-3 text-xs text-gray-400 dark:text-gray-500" data-astro-cid-3ef6ksr2> <button type="button" data-header-search-close class="items-center gap-2 rounded-md px-2 py-1 text-secondary transition-colors hover:text-default md:flex" data-astro-cid-3ef6ksr2>
+Close
+</button> </div> </div> <div data-header-search-body class="px-4 py-5 md:px-6 md:py-6" data-astro-cid-3ef6ksr2> <div id="header-site-search" class="pagefind-header-ui pagefind-desktop-ui pagefind-init" data-pagefind-ui data-bundle-path="/pagefind/" data-ui-options="{&quot;showImages&quot;:false,&quot;showSubResults&quot;:false,&quot;translations&quot;:{&quot;placeholder&quot;:&quot;Start searching&quot;,&quot;zeroResults&quot;:&quot;No matches yet. Try a different keyword.&quot;}}" data-filters="{&quot;section&quot;:&quot;codex&quot;}"></div> <script type="module" src="/web/20260101164638jm_/https://developers.openai.com/_astro/PagefindSearch.astro_astro_type_script_index_0_lang.CvCg4nbM.js"></script> </div> </div> </div> <div id="drawer" data-default-tab-id="mobile-nav-tab-1" data-default-search-placeholder="Start searching" data-default-search-scope="codex" class="fixed inset-0 z-40 flex flex-col bg-surface transform translate-x-full transition-transform duration-300 md:hidden" data-astro-cid-3ef6ksr2> <div class="flex flex-col h-full w-full" data-astro-cid-3ef6ksr2> <div class="px-6 pt-6 w-full mt-16" data-astro-cid-3ef6ksr2> <span id="mobile-nav-primary-label" class="sr-only" data-astro-cid-3ef6ksr2>Primary navigation</span> <div class="relative" data-astro-cid-3ef6ksr2> <button type="button" id="mobile-nav-trigger" class="flex w-full items-center justify-between gap-3 rounded-md border border-primary-surface bg-surface px-4 py-2.5 text-sm text-secondary transition-colors duration-150 hover:border-primary-surface-hover hover:bg-primary-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface data-[open=true]:border-primary-surface-hover data-[open=true]:bg-primary-soft" data-mobile-nav-trigger aria-haspopup="listbox" aria-expanded="false" aria-controls="mobile-nav-dropdown" aria-labelledby="mobile-nav-primary-label mobile-nav-trigger-value" data-astro-cid-3ef6ksr2> <span id="mobile-nav-trigger-value" data-mobile-nav-label class="flex-1 truncate text-left text-gray-500" data-astro-cid-3ef6ksr2> Codex </span> <span data-mobile-nav-chevron class="flex h-5 w-5 shrink-0 items-center justify-center text-gray-500 transition-transform duration-200 data-[open=true]:rotate-180 data-[open=true]:text-gray-700 dark:text-gray-400 dark:data-[open=true]:text-gray-200" data-astro-cid-3ef6ksr2> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 " aria-hidden="true" data-astro-cid-3ef6ksr2="true"><path d="M11.2929 16.2929C11.6834 16.6834 12.3166 16.6834 12.7071 16.2929L18.7071 10.2929C19.0976 9.90237 19.0976 9.26921 18.7071 8.87868C18.3166 8.48816 17.6834 8.48816 17.2929 8.87868L12 14.1716L6.70711 8.87868C6.31658 8.48816 5.68342 8.48816 5.29289 8.87868C4.90237 9.26921 4.90237 9.90237 5.29289 10.2929L11.2929 16.2929Z" fill="currentColor"></path></svg> </span> </button> <div id="mobile-nav-dropdown" role="listbox" aria-labelledby="mobile-nav-primary-label" tabindex="-1" class="absolute text-default left-0 right-0 top-full z-50 mt-2 max-h-[60vh] overflow-y-auto rounded-xl border border-primary-surface bg-surface p-1 shadow-xl shadow-gray-900/10 ring-1 ring-black/5 opacity-0 scale-95 origin-top transition duration-150 ease-out data-[open=true]:opacity-100 data-[open=true]:scale-100 dark:ring-white/10" data-mobile-nav-dropdown hidden data-astro-cid-3ef6ksr2> <button type="button" role="option" data-mobile-nav-option data-tab-id="mobile-nav-tab-0" data-has-nav="true" data-href="/resources" data-label="Resources" data-search-placeholder="Start searching" data-search-scope="resources" data-selected="false" aria-selected="false" class="flex w-full items-center justify-between gap-3 rounded-lg px-3 py-2.5 text-left text-sm text-default transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default data-[selected=true]:shadow-inner hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface dark:data-[selected=true]:shadow-inner dark:focus-visible:outline-gray-600" data-astro-cid-3ef6ksr2> <span class="flex-1 truncate" data-astro-cid-3ef6ksr2>Resources</span> <span data-mobile-nav-option-indicator data-selected="false" class="h-2.5 w-2.5 rounded-full border border-primary-surface bg-transparent transition duration-150 data-[selected=true]:border-transparent data-[selected=true]:bg-primary-solid" aria-hidden="true" data-astro-cid-3ef6ksr2></span> </button><button type="button" role="option" data-mobile-nav-option data-tab-id="mobile-nav-tab-1" data-has-nav="true" data-href="/codex" data-label="Codex" data-search-placeholder="Start searching" data-search-scope="codex" data-selected="true" aria-selected="true" class="flex w-full items-center justify-between gap-3 rounded-lg px-3 py-2.5 text-left text-sm text-default transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default data-[selected=true]:shadow-inner hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface dark:data-[selected=true]:shadow-inner dark:focus-visible:outline-gray-600" data-astro-cid-3ef6ksr2> <span class="flex-1 truncate" data-astro-cid-3ef6ksr2>Codex</span> <span data-mobile-nav-option-indicator data-selected="true" class="h-2.5 w-2.5 rounded-full border border-primary-surface bg-transparent transition duration-150 data-[selected=true]:border-transparent data-[selected=true]:bg-primary-solid" aria-hidden="true" data-astro-cid-3ef6ksr2></span> </button><button type="button" role="option" data-mobile-nav-option data-tab-id="mobile-nav-tab-2" data-has-nav="true" data-href="/chatgpt" data-label="ChatGPT" data-search-placeholder="Start searching" data-search-scope="chatgpt" data-selected="false" aria-selected="false" class="flex w-full items-center justify-between gap-3 rounded-lg px-3 py-2.5 text-left text-sm text-default transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default data-[selected=true]:shadow-inner hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface dark:data-[selected=true]:shadow-inner dark:focus-visible:outline-gray-600" data-astro-cid-3ef6ksr2> <span class="flex-1 truncate" data-astro-cid-3ef6ksr2>ChatGPT</span> <span data-mobile-nav-option-indicator data-selected="false" class="h-2.5 w-2.5 rounded-full border border-primary-surface bg-transparent transition duration-150 data-[selected=true]:border-transparent data-[selected=true]:bg-primary-solid" aria-hidden="true" data-astro-cid-3ef6ksr2></span> </button><button type="button" role="option" data-mobile-nav-option data-tab-id="mobile-nav-tab-3" data-has-nav="true" data-href="/blog" data-label="Blog" data-search-placeholder="Start searching" data-search-scope="blog" data-selected="false" aria-selected="false" class="flex w-full items-center justify-between gap-3 rounded-lg px-3 py-2.5 text-left text-sm text-default transition-colors duration-150 data-[selected=true]:bg-primary-soft data-[selected=true]:text-default data-[selected=true]:shadow-inner hover:bg-primary-soft-alpha hover:text-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface dark:data-[selected=true]:shadow-inner dark:focus-visible:outline-gray-600" data-astro-cid-3ef6ksr2> <span class="flex-1 truncate" data-astro-cid-3ef6ksr2>Blog</span> <span data-mobile-nav-option-indicator data-selected="false" class="h-2.5 w-2.5 rounded-full border border-primary-surface bg-transparent transition duration-150 data-[selected=true]:border-transparent data-[selected=true]:bg-primary-solid" aria-hidden="true" data-astro-cid-3ef6ksr2></span> </button> </div> </div> </div> <div class="flex-1 w-full overflow-y-auto px-6 py-4 flex flex-col gap-6" data-mobile-nav-panels data-astro-cid-3ef6ksr2> <div data-mobile-search data-astro-cid-3ef6ksr2> <div id="header-mobile-search" class="pagefind-header-ui pagefind-mobile-ui pagefind-init" data-pagefind-ui data-bundle-path="/pagefind/" data-ui-options="{&quot;showImages&quot;:false,&quot;showSubResults&quot;:false,&quot;translations&quot;:{&quot;placeholder&quot;:&quot;Start searching&quot;,&quot;zeroResults&quot;:&quot;No matches yet. Try a different keyword.&quot;}}" data-filters="{&quot;section&quot;:&quot;codex&quot;}"></div>   </div> <div id="mobile-nav-panel-0" data-mobile-nav-content data-tab-id="mobile-nav-tab-0" hidden class="flex flex-col gap-6 pb-8" data-astro-cid-3ef6ksr2> <div class="flex flex-col gap-3" data-astro-cid-3ef6ksr2>  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/resources" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Home  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/changelog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Changelog  </a> </li> </ul> </div><div class="flex flex-col gap-3" data-astro-cid-3ef6ksr2> <h3 class="text-xs tracking-wide text-secondary" data-astro-cid-3ef6ksr2> Categories </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/resources/code" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Code  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/resources/cookbooks" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Cookbooks  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/resources/guides" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Guides  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/resources/videos" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Videos  </a> </li> </ul> </div><div class="flex flex-col gap-3" data-astro-cid-3ef6ksr2> <h3 class="text-xs tracking-wide text-secondary" data-astro-cid-3ef6ksr2> Topics </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/resources/agents" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Agents  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/resources/audio" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Audio &amp; Voice  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/resources/imagegen" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Image generation  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/resources/videogen" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Video generation  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/resources/tools" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Tools  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/resources/cua" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Computer use  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/resources/fine-tuning" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Fine-tuning  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/resources/scaling" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Scaling  </a> </li> </ul> </div> </div><div id="mobile-nav-panel-1" data-mobile-nav-content data-tab-id="mobile-nav-tab-1" class="flex flex-col gap-6 pb-8" data-astro-cid-3ef6ksr2> <div class="flex flex-col gap-3" data-astro-cid-3ef6ksr2> <h3 class="text-xs tracking-wide text-secondary" data-astro-cid-3ef6ksr2> Getting Started </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/quickstart" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Quickstart  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/pricing" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Pricing  </a> </li><li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Concepts</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block text-secondary transition-transform duration-150  group-open:rotate-90 " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/prompting" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Prompting  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/workflows" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Workflows  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/models" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Models  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/guides/build-ai-native-engineering-team" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> AI-Native Teams  </a> </li> </ul> </details> </li> </ul> </div><div class="flex flex-col gap-3" data-astro-cid-3ef6ksr2> <h3 class="text-xs tracking-wide text-secondary" data-astro-cid-3ef6ksr2> Using Codex </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">IDE Extension</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block text-secondary transition-transform duration-150  group-open:rotate-90 " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/ide" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/ide/features" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Features  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/ide/settings" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Settings  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/ide/commands" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> IDE Commands  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/ide/slash-commands" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Slash commands  </a> </li> </ul> </details> </li><li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">CLI</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block text-secondary transition-transform duration-150  group-open:rotate-90 " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/cli" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/cli/features" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Features  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/cli/reference" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Command Line Options  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/cli/slash-commands" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Slash commands  </a> </li> </ul> </details> </li><li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Web</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block text-secondary transition-transform duration-150  group-open:rotate-90 " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/cloud" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/cloud/environments" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Environments  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/cloud/internet-access" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Internet Access  </a> </li> </ul> </details> </li><li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Integrations</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block text-secondary transition-transform duration-150  group-open:rotate-90 " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/integrations/github" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GitHub  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/integrations/slack" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Slack  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/integrations/linear" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Linear  </a> </li> </ul> </details> </li> </ul> </div><div class="flex flex-col gap-3" data-astro-cid-3ef6ksr2> <h3 class="text-xs tracking-wide text-secondary" data-astro-cid-3ef6ksr2> Configuration </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Config File</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block text-secondary transition-transform duration-150  group-open:rotate-90 " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/config-basic" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Basic Config  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/config-advanced" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Advanced Config  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/config-reference" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Config Reference  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/config-sample" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Sample Config  </a> </li> </ul> </details> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/exec-policy" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Execution Policy  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/guides/agents-md" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> AGENTS.md  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/custom-prompts" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Custom Prompts  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/mcp" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> MCP  </a> </li><li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-2 rounded-lg transition-colors flex items-center justify-between gap-2 hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Skills</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block text-secondary transition-transform duration-150  group-open:rotate-90 " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/skills" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Overview  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/skills/create-skill" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Create skills  </a> </li> </ul> </details> </li> </ul> </div><div class="flex flex-col gap-3" data-astro-cid-3ef6ksr2> <h3 class="text-xs tracking-wide text-secondary" data-astro-cid-3ef6ksr2> Administration </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/auth" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Authentication  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/security" class="px-3 py-1.5 rounded-lg transition-colors block text-default bg-primary-ghost-active " data-mobile-nav-link> Security  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/enterprise" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Enterprise  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/windows" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Windows  </a> </li> </ul> </div><div class="flex flex-col gap-3" data-astro-cid-3ef6ksr2> <h3 class="text-xs tracking-wide text-secondary" data-astro-cid-3ef6ksr2> Automation </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/noninteractive" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Non-interactive Mode  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/sdk" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Codex SDK  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/guides/agents-sdk" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> MCP Server  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/github-action" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> GitHub Action  </a> </li> </ul> </div><div class="flex flex-col gap-3" data-astro-cid-3ef6ksr2> <h3 class="text-xs tracking-wide text-secondary" data-astro-cid-3ef6ksr2> Releases </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/changelog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Changelog  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/feature-maturity" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Feature Maturity  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/open-source" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Open Source  </a> </li> </ul> </div> </div><div id="mobile-nav-panel-2" data-mobile-nav-content data-tab-id="mobile-nav-tab-2" hidden class="flex flex-col gap-6 pb-8" data-astro-cid-3ef6ksr2> <div class="flex flex-col gap-3" data-astro-cid-3ef6ksr2>  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/apps-sdk" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Apps SDK  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/commerce" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Agentic Commerce  </a> </li> </ul> </div> </div><div id="mobile-nav-panel-3" data-mobile-nav-content data-tab-id="mobile-nav-tab-3" hidden class="flex flex-col gap-6 pb-8" data-astro-cid-3ef6ksr2> <div class="flex flex-col gap-3" data-astro-cid-3ef6ksr2>  <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/blog" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> All posts  </a> </li> </ul> </div><div class="flex flex-col gap-3" data-astro-cid-3ef6ksr2> <h3 class="text-xs tracking-wide text-secondary" data-astro-cid-3ef6ksr2> Recent </h3> <ul class="flex flex-col gap-1 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/blog/openai-for-developers-2025" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> OpenAI for Developers in 2025  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/blog/updates-audio-models" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Updates for developers building with voice  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/blog/what-makes-a-great-chatgpt-app" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> What makes a great ChatGPT app  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/blog/codex-for-documentation-dagster" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> Using Codex for education at Dagster Labs  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/blog/codex-at-devday" class="px-3 py-1.5 rounded-lg transition-colors block hover:text-default hover:bg-primary-ghost-hover " data-mobile-nav-link> How Codex ran OpenAI DevDay 2025  </a> </li> </ul> </div> </div> </div> <div class="w-full px-6 py-6 border-t border-primary-surface" data-astro-cid-3ef6ksr2> <div class="flex flex-wrap items-center justify-between gap-4 text-sm text-gray-700 dark:text-gray-300" data-astro-cid-3ef6ksr2> <div class="flex flex-wrap items-center gap-4" data-astro-cid-3ef6ksr2>  </div> <button id="drawer-theme-button" type="button" aria-label="Toggle light and dark theme" class="text-secondary hover:text-default transition-colors flex items-center gap-2" data-astro-cid-3ef6ksr2> <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="block dark:hidden w-6 h-6 " data-astro-cid-3ef6ksr2="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C11.5523 0 12 0.447715 12 1V3C12 3.55228 11.5523 4 11 4C10.4477 4 10 3.55228 10 3V1C10 0.447715 10.4477 0 11 0ZM3.22183 3.22183C3.61235 2.8313 4.24551 2.8313 4.63604 3.22183L6.05025 4.63604C6.44078 5.02656 6.44078 5.65973 6.05025 6.05025C5.65973 6.44078 5.02656 6.44078 4.63604 6.05025L3.22183 4.63604C2.8313 4.24551 2.8313 3.61235 3.22183 3.22183ZM18.7782 3.22183C19.1687 3.61235 19.1687 4.24551 18.7782 4.63604L17.364 6.05025C16.9734 6.44078 16.3403 6.44078 15.9497 6.05025C15.5592 5.65973 15.5592 5.02656 15.9497 4.63604L17.364 3.22183C17.7545 2.8313 18.3876 2.8313 18.7782 3.22183ZM11 8C9.34315 8 8 9.34315 8 11C8 12.6569 9.34315 14 11 14C12.6569 14 14 12.6569 14 11C14 9.34315 12.6569 8 11 8ZM6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11ZM0 11C0 10.4477 0.447715 10 1 10H3C3.55228 10 4 10.4477 4 11C4 11.5523 3.55228 12 3 12H1C0.447715 12 0 11.5523 0 11ZM18 11C18 10.4477 18.4477 10 19 10H21C21.5523 10 22 10.4477 22 11C22 11.5523 21.5523 12 21 12H19C18.4477 12 18 11.5523 18 11ZM6.05025 15.9497C6.44078 16.3403 6.44078 16.9734 6.05025 17.364L4.63604 18.7782C4.24551 19.1687 3.61235 19.1687 3.22183 18.7782C2.8313 18.3876 2.8313 17.7545 3.22183 17.364L4.63604 15.9497C5.02656 15.5592 5.65973 15.5592 6.05025 15.9497ZM15.9497 15.9497C16.3403 15.5592 16.9734 15.5592 17.364 15.9497L18.7782 17.364C19.1687 17.7545 19.1687 18.3876 18.7782 18.7782C18.3877 19.1687 17.7545 19.1687 17.364 18.7782L15.9497 17.364C15.5592 16.9734 15.5592 16.3403 15.9497 15.9497ZM11 18C11.5523 18 12 18.4477 12 19V21C12 21.5523 11.5523 22 11 22C10.4477 22 10 21.5523 10 21V19C10 18.4477 10.4477 18 11 18Z" fill="currentColor"></path></svg> <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden dark:block w-6 h-6 " data-astro-cid-3ef6ksr2="true"><path d="M10.7836 0.470481C10.9676 0.765118 10.9855 1.13415 10.8309 1.44525C10.2994 2.51497 10 3.7211 10 5.00001C10 9.41829 13.5817 13 18 13L18.0575 12.9998C18.4049 12.9974 18.7287 13.1754 18.9127 13.47C19.0968 13.7647 19.1147 14.1337 18.9601 14.4448C17.325 17.7352 13.9279 20 10 20C4.47715 20 0 15.5229 0 10C0 4.50107 4.43841 0.038857 9.92838 0.000268937C10.2758 -0.00217271 10.5995 0.175844 10.7836 0.470481ZM8.40989 2.15803C4.75344 2.8954 2 6.12619 2 10C2 14.4183 5.58172 18 10 18C12.587 18 14.8886 16.7721 16.3516 14.8648C11.6131 14.0789 8 9.96139 8 5.00001C8 4.01361 8.1431 3.05953 8.40989 2.15803Z" fill="currentColor"></path></svg> </button> </div> </div> </div> </div>  <script>
+  function initializeMobileNavigation() {
+    const drawer = document.getElementById("drawer");
+    const drawerButton = document.getElementById("header-drawer-button");
+
+    if (
+      !drawer ||
+      !drawerButton ||
+      drawer.dataset.mobileNavInitialized === "true"
+    ) {
+      return;
+    }
+
+    const navTrigger = drawer.querySelector("[data-mobile-nav-trigger]");
+    const navLabel = drawer.querySelector("[data-mobile-nav-label]");
+    const navChevron = drawer.querySelector("[data-mobile-nav-chevron]");
+    const navDropdown = drawer.querySelector("[data-mobile-nav-dropdown]");
+    const navOptionElements = Array.from(
+      drawer.querySelectorAll("[data-mobile-nav-option]")
+    );
+    const defaultSearchPlaceholder =
+      drawer.dataset.defaultSearchPlaceholder || "Search the site";
+    const defaultSearchScope = drawer.dataset.defaultSearchScope || "";
+    const headerSearchOverlay = document.getElementById(
+      "header-search-overlay"
+    );
+    const navLinkElements = Array.from(
+      drawer.querySelectorAll("[data-mobile-nav-link]")
+    );
+    const tabPanels = Array.from(
+      drawer.querySelectorAll("[data-mobile-nav-content]")
+    );
+
+    let dropdownOpen = false;
+    let activeTabId =
+      drawer.dataset.defaultTabId ||
+      navOptionElements.find((option) => option.dataset.selected === "true")
+        ?.dataset.tabId ||
+      tabPanels[0]?.getAttribute("data-tab-id") ||
+      navOptionElements[0]?.dataset.tabId ||
+      null;
+
+    const updateSelectedOption = (tabId) => {
+      let selectedLabel = "";
+      let selectedPlaceholder = "";
+      let selectedScope = "";
+
+      navOptionElements.forEach((option) => {
+        const isSelected = option.dataset.tabId === tabId;
+        option.dataset.selected = isSelected ? "true" : "false";
+        option.setAttribute("aria-selected", isSelected ? "true" : "false");
+
+        const indicator = option.querySelector(
+          "[data-mobile-nav-option-indicator]"
+        );
+        if (indicator instanceof HTMLElement) {
+          indicator.dataset.selected = isSelected ? "true" : "false";
+        }
+
+        if (isSelected && !selectedLabel) {
+          selectedLabel =
+            option.dataset.label || option.textContent?.trim() || "";
+        }
+
+        if (isSelected && !selectedPlaceholder) {
+          selectedPlaceholder = option.dataset.searchPlaceholder || "";
+        }
+
+        if (isSelected && !selectedScope) {
+          selectedScope = option.dataset.searchScope || "";
+        }
+      });
+
+      if (!selectedLabel && navOptionElements[0]) {
+        selectedLabel =
+          navOptionElements[0].dataset.label ||
+          navOptionElements[0].textContent?.trim() ||
+          "";
+      }
+
+      if (!selectedPlaceholder && navOptionElements[0]) {
+        selectedPlaceholder =
+          navOptionElements[0].dataset.searchPlaceholder || "";
+      }
+
+      if (!selectedScope && navOptionElements[0]) {
+        selectedScope = navOptionElements[0].dataset.searchScope || "";
+      }
+
+      if (selectedLabel) {
+        if (navLabel instanceof HTMLElement) {
+          navLabel.textContent = selectedLabel;
+        }
+        if (navTrigger instanceof HTMLElement) {
+          navTrigger.setAttribute("title", selectedLabel);
+        }
+      }
+
+      const nextPlaceholder = selectedPlaceholder || defaultSearchPlaceholder;
+      const nextScope = selectedScope || defaultSearchScope;
+      const updatePlaceholder = (container) => {
+        if (!container) return;
+        const input = container.querySelector(
+          '[data-pagefind-ui] input[type="text"]'
+        );
+        if (input instanceof HTMLInputElement) {
+          input.placeholder = nextPlaceholder;
+        }
+      };
+      const updateFilters = (container) => {
+        if (!container) return;
+        const target = container.querySelector("[data-pagefind-ui]");
+        if (!target) return;
+        const filters = nextScope ? { section: nextScope } : {};
+        target.setAttribute("data-filters", JSON.stringify(filters));
+        if (target.pagefindUI?.triggerFilters) {
+          target.pagefindUI.triggerFilters(filters);
+        }
+      };
+      updatePlaceholder(drawer);
+      updatePlaceholder(headerSearchOverlay);
+      updateFilters(drawer);
+      updateFilters(headerSearchOverlay);
+    };
+
+    const setDropdownState = (open) => {
+      dropdownOpen = open;
+
+      if (navTrigger instanceof HTMLButtonElement) {
+        navTrigger.setAttribute("aria-expanded", open ? "true" : "false");
+        navTrigger.dataset.open = open ? "true" : "false";
+      }
+
+      if (navChevron instanceof HTMLElement) {
+        navChevron.dataset.open = open ? "true" : "false";
+      }
+
+      if (navDropdown instanceof HTMLElement) {
+        navDropdown.dataset.open = open ? "true" : "false";
+        navDropdown.setAttribute("aria-hidden", open ? "false" : "true");
+
+        if (open) {
+          navDropdown.removeAttribute("hidden");
+        } else {
+          navDropdown.setAttribute("hidden", "true");
+        }
+      }
+    };
+
+    const closeDropdown = () => {
+      if (dropdownOpen) {
+        setDropdownState(false);
+      }
+    };
+
+    const focusSelectedOption = () => {
+      const selectedOption =
+        navOptionElements.find(
+          (option) => option.dataset.selected === "true"
+        ) || navOptionElements[0];
+
+      selectedOption?.focus();
+    };
+
+    const activateTab = (tabId) => {
+      if (!tabId) return;
+      activeTabId = tabId;
+      updateSelectedOption(tabId);
+
+      tabPanels.forEach((panel) => {
+        const isActive = panel.getAttribute("data-tab-id") === tabId;
+        if (isActive) {
+          panel.removeAttribute("hidden");
+        } else {
+          panel.setAttribute("hidden", "true");
+        }
+      });
+    };
+
+    const closeDrawer = () => {
+      closeDropdown();
+      drawer.classList.remove("open");
+      drawerButton.classList.remove("open");
+      drawerButton.setAttribute("aria-expanded", "false");
+    };
+
+    const openDrawer = () => {
+      drawer.classList.add("open");
+      drawerButton.classList.add("open");
+      drawerButton.setAttribute("aria-expanded", "true");
+      closeDropdown();
+      if (activeTabId) {
+        activateTab(activeTabId);
+      }
+    };
+
+    const toggleDrawer = () => {
+      if (drawer.classList.contains("open")) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    };
+
+    const handleOptionSelection = (option) => {
+      const hasNav = option.dataset.hasNav === "true";
+      const href = option.dataset.href;
+      const tabId = option.dataset.tabId;
+
+      if (!tabId) {
+        closeDropdown();
+        return;
+      }
+
+      if (!hasNav && href) {
+        updateSelectedOption(tabId);
+        closeDropdown();
+        closeDrawer();
+        window.location.href = href;
+        return;
+      }
+
+      activateTab(tabId);
+      closeDropdown();
+      if (navTrigger instanceof HTMLButtonElement) {
+        navTrigger.focus();
+      }
+    };
+
+    const handleDocumentClick = (event) => {
+      if (!dropdownOpen) return;
+      const target = event.target;
+      if (!(target instanceof Node)) return;
+
+      if (
+        navDropdown instanceof HTMLElement &&
+        navTrigger instanceof HTMLElement
+      ) {
+        if (!navDropdown.contains(target) && !navTrigger.contains(target)) {
+          closeDropdown();
+        }
+      } else if (!drawer.contains(target)) {
+        closeDropdown();
+      }
+    };
+
+    drawerButton.addEventListener("click", toggleDrawer);
+
+    if (navTrigger instanceof HTMLButtonElement) {
+      navTrigger.addEventListener("click", () => {
+        const willOpen = !dropdownOpen;
+        setDropdownState(willOpen);
+        if (willOpen) {
+          window.requestAnimationFrame(() => {
+            focusSelectedOption();
+          });
+        }
+      });
+
+      navTrigger.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+          event.preventDefault();
+          if (!dropdownOpen) {
+            setDropdownState(true);
+          }
+          window.requestAnimationFrame(() => {
+            focusSelectedOption();
+          });
+        } else if (
+          event.key === "Enter" ||
+          event.key === " " ||
+          event.key === "Space" ||
+          event.key === "Spacebar"
+        ) {
+          event.preventDefault();
+          const willOpen = !dropdownOpen;
+          setDropdownState(willOpen);
+          if (willOpen) {
+            window.requestAnimationFrame(() => {
+              focusSelectedOption();
+            });
+          }
+        } else if (event.key === "Escape" && dropdownOpen) {
+          event.preventDefault();
+          closeDropdown();
+        }
+      });
+    }
+
+    navOptionElements.forEach((option) => {
+      option.addEventListener("click", () => {
+        handleOptionSelection(option);
+      });
+
+      option.addEventListener("keydown", (event) => {
+        if (!navOptionElements.length) return;
+
+        const currentIndex = navOptionElements.indexOf(option);
+
+        if (event.key === "ArrowDown") {
+          event.preventDefault();
+          const nextIndex = (currentIndex + 1) % navOptionElements.length;
+          navOptionElements[nextIndex]?.focus();
+        } else if (event.key === "ArrowUp") {
+          event.preventDefault();
+          const prevIndex =
+            (currentIndex - 1 + navOptionElements.length) %
+            navOptionElements.length;
+          navOptionElements[prevIndex]?.focus();
+        } else if (event.key === "Home") {
+          event.preventDefault();
+          navOptionElements[0]?.focus();
+        } else if (event.key === "End") {
+          event.preventDefault();
+          navOptionElements[navOptionElements.length - 1]?.focus();
+        } else if (
+          event.key === "Enter" ||
+          event.key === " " ||
+          event.key === "Space" ||
+          event.key === "Spacebar"
+        ) {
+          event.preventDefault();
+          handleOptionSelection(option);
+        } else if (event.key === "Escape") {
+          event.preventDefault();
+          closeDropdown();
+          if (navTrigger instanceof HTMLButtonElement) {
+            navTrigger.focus();
+          }
+        } else if (event.key === "Tab") {
+          closeDropdown();
+        }
+      });
+    });
+
+    document.addEventListener("click", handleDocumentClick);
+
+    navLinkElements.forEach((link) => {
+      link.addEventListener("click", () => {
+        closeDrawer();
+      });
+    });
+
+    const mobileSearch = drawer.querySelector("[data-mobile-search]");
+    mobileSearch?.addEventListener("click", (event) => {
+      const target = event.target;
+      if (target instanceof Element) {
+        const anchor = target.closest("a[href]");
+        if (anchor) {
+          closeDrawer();
+        }
+      }
+    });
+
+    mobileSearch?.addEventListener("focusin", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLInputElement) || target.type !== "text") {
+        return;
+      }
+      closeDrawer();
+      window.requestAnimationFrame(() => {
+        if (document.activeElement === target) {
+          target.blur();
+        }
+        document.dispatchEvent(
+          new CustomEvent("header:open-search", {
+            detail: {
+              trigger: target,
+              variant: "mobile",
+            },
+          })
+        );
+      });
+    });
+
+    drawer.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        if (dropdownOpen) {
+          event.stopPropagation();
+          closeDropdown();
+          if (navTrigger instanceof HTMLButtonElement) {
+            navTrigger.focus();
+          }
+          return;
+        }
+
+        closeDrawer();
+        drawerButton.focus();
+      }
+    });
+
+    drawer.dataset.mobileNavInitialized = "true";
+    if (activeTabId) {
+      activateTab(activeTabId);
+    } else if (navOptionElements[0]?.dataset.tabId) {
+      updateSelectedOption(navOptionElements[0].dataset.tabId);
+    }
+  }
+
+  function initializeHeaderSearch() {
+    const overlay = document.getElementById("header-search-overlay");
+    if (!overlay) {
+      return;
+    }
+
+    const getSearchButtons = () =>
+      Array.from(document.querySelectorAll("[data-header-search-button]"));
+
+    const closeButtons = overlay.querySelectorAll("[data-header-search-close]");
+    const dismissTarget = overlay.querySelector("[data-header-search-dismiss]");
+    const panel = overlay.querySelector("[data-header-search-panel]");
+    const overlayMobileClass = "header-search-overlay--mobile";
+    const panelMobileClass = "header-search-panel--mobile";
+    let lastTrigger = null;
+    let lastVariant = null;
+
+    const setExpandedState = (isOpen) => {
+      const expanded = isOpen ? "true" : "false";
+      getSearchButtons().forEach((button) => {
+        button.setAttribute("aria-expanded", expanded);
+        button.setAttribute("data-active", expanded);
+      });
+      overlay.dataset.open = expanded;
+      overlay.setAttribute("aria-hidden", isOpen ? "false" : "true");
+    };
+
+    const focusSearchInput = () => {
+      window.requestAnimationFrame(() => {
+        const input = overlay.querySelector(
+          '[data-pagefind-ui] input[type="text"]'
+        );
+        if (input) {
+          input.focus();
+          input.select();
+        }
+      });
+    };
+
+    const openOverlay = (trigger, options = {}) => {
+      lastTrigger = trigger ?? document.activeElement;
+      const variant = options.variant ?? null;
+      lastVariant = typeof variant === "string" ? variant : null;
+      overlay.classList.remove("hidden");
+      overlay.classList.add("flex");
+      const isMobileVariant = lastVariant === "mobile";
+      if (isMobileVariant) {
+        overlay.dataset.variant = "mobile";
+      } else {
+        delete overlay.dataset.variant;
+      }
+      overlay.classList.toggle(overlayMobileClass, isMobileVariant);
+      panel?.classList.toggle(panelMobileClass, isMobileVariant);
+      document.documentElement.classList.add("has-header-search-open");
+      setExpandedState(true);
+      focusSearchInput();
+    };
+
+    const closeOverlay = () => {
+      overlay.classList.add("hidden");
+      overlay.classList.remove("flex");
+      document.documentElement.classList.remove("has-header-search-open");
+      overlay.classList.remove(overlayMobileClass);
+      panel?.classList.remove(panelMobileClass);
+      delete overlay.dataset.variant;
+      setExpandedState(false);
+      if (lastTrigger instanceof HTMLElement) {
+        if (
+          lastVariant === "mobile" &&
+          typeof lastTrigger.blur === "function"
+        ) {
+          lastTrigger.blur();
+        } else if (lastVariant !== "mobile") {
+          lastTrigger.focus();
+        }
+      }
+      lastTrigger = null;
+      lastVariant = null;
+    };
+
+    const bindSearchButtons = () => {
+      getSearchButtons().forEach((button) => {
+        if (button.dataset.searchButtonInitialized === "true") {
+          return;
+        }
+
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          openOverlay(button);
+        });
+
+        button.dataset.searchButtonInitialized = "true";
+      });
+    };
+
+    if (overlay.dataset.searchInitialized !== "true") {
+      closeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          closeOverlay();
+        });
+      });
+
+      overlay.addEventListener("click", (event) => {
+        if (event.target === overlay) {
+          closeOverlay();
+        }
+      });
+
+      dismissTarget?.addEventListener("click", closeOverlay);
+
+      const handleKeydown = (event) => {
+        const key = "key" in event ? event.key : undefined;
+        const isShortcut =
+          !!key &&
+          key.toLowerCase() === "k" &&
+          (event.metaKey || event.ctrlKey);
+
+        if (isShortcut) {
+          event.preventDefault();
+          const buttons = getSearchButtons();
+          openOverlay(buttons[0] ?? null);
+          return;
+        }
+
+        if (key === "Escape" && overlay.dataset.open === "true") {
+          event.preventDefault();
+          closeOverlay();
+        }
+      };
+
+      document.addEventListener("keydown", handleKeydown);
+
+      document.addEventListener("header:open-search", (event) => {
+        const detail =
+          event instanceof CustomEvent && typeof event.detail === "object"
+            ? event.detail
+            : {};
+        const trigger =
+          detail && detail.trigger instanceof HTMLElement
+            ? detail.trigger
+            : null;
+        openOverlay(trigger, detail);
+      });
+
+      document.addEventListener("astro:before-swap", () => {
+        if (overlay.dataset.open === "true") {
+          closeOverlay();
+        }
+      });
+
+      overlay.dataset.searchInitialized = "true";
+    }
+
+    bindSearchButtons();
+  }
+
+  const handleAfterSwap = () => {
+    initializeMobileNavigation();
+    window.requestAnimationFrame(() => {
+      initializeHeaderSearch();
+    });
+  };
+
+  document.addEventListener("astro:after-swap", handleAfterSwap);
+  handleAfterSwap();
+</script> <div class="flex pt-8"> <div class="hidden md:flex md:flex-col w-[218px] px-3 pb-6 pt-2 md:fixed md:top-16 md:bottom-0 bg-surface dark:bg-black" data-left-nav-container data-astro-cid-73gi4scu><div class="mt-1 mb-4 shrink-0" data-astro-cid-73gi4scu><button type="button" data-header-search-button aria-expanded="false" aria-haspopup="dialog" class="flex h-9 w-full items-center gap-2 rounded-md border border-primary-surface bg-surface pl-3 pr-2 py-0 text-sm text-secondary select-none transition-colors hover:border-primary-surface-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-surface" data-astro-cid-73gi4scu><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-current " data-astro-cid-73gi4scu="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span class="flex-1 text-left" data-astro-cid-73gi4scu>Search</span><span class="flex items-center gap-1" data-astro-cid-73gi4scu><span class="inline-flex h-5 w-5 items-center justify-center rounded-sm bg-surface-secondary text-[12px] font-medium text-secondary border border-subtle" data-astro-cid-73gi4scu>
+⌘
+</span><span class="inline-flex h-5 w-5 items-center justify-center rounded-sm bg-surface-secondary text-[12px] font-medium text-secondary border border-subtle" data-astro-cid-73gi4scu>
+K
+</span></span></button></div><nav class="flex-1 overflow-y-auto overflow-x-visible" data-left-nav data-left-nav-id="/codex" data-astro-cid-73gi4scu><div data-astro-cid-73gi4scu><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none" data-astro-cid-73gi4scu>Getting Started</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Overview  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/quickstart" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Quickstart  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/pricing" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Pricing  </a> </li><li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 flex items-center justify-between hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Concepts</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block ml-1 text-current group-open:rotate-90 transition-transform duration-150  " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-0.5 text-sm text-default w-full mb-2 "> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/prompting" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Prompting  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/workflows" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Workflows  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/models" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Models  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/guides/build-ai-native-engineering-team" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> AI-Native Teams  </a> </li> </ul> </details> </li> </ul></div><div data-astro-cid-73gi4scu><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none" data-astro-cid-73gi4scu>Using Codex</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 flex items-center justify-between hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">IDE Extension</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block ml-1 text-current group-open:rotate-90 transition-transform duration-150  " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-0.5 text-sm text-default w-full mb-2 "> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/ide" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Overview  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/ide/features" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Features  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/ide/settings" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Settings  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/ide/commands" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> IDE Commands  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/ide/slash-commands" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Slash commands  </a> </li> </ul> </details> </li><li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 flex items-center justify-between hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">CLI</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block ml-1 text-current group-open:rotate-90 transition-transform duration-150  " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-0.5 text-sm text-default w-full mb-2 "> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/cli" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Overview  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/cli/features" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Features  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/cli/reference" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Command Line Options  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/cli/slash-commands" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Slash commands  </a> </li> </ul> </details> </li><li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 flex items-center justify-between hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Web</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block ml-1 text-current group-open:rotate-90 transition-transform duration-150  " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-0.5 text-sm text-default w-full mb-2 "> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/cloud" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Overview  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/cloud/environments" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Environments  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/cloud/internet-access" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Internet Access  </a> </li> </ul> </details> </li><li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 flex items-center justify-between hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Integrations</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block ml-1 text-current group-open:rotate-90 transition-transform duration-150  " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-0.5 text-sm text-default w-full mb-2 "> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/integrations/github" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> GitHub  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/integrations/slack" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Slack  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/integrations/linear" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Linear  </a> </li> </ul> </details> </li> </ul></div><div data-astro-cid-73gi4scu><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none" data-astro-cid-73gi4scu>Configuration</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 flex items-center justify-between hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Config File</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block ml-1 text-current group-open:rotate-90 transition-transform duration-150  " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-0.5 text-sm text-default w-full mb-2 "> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/config-basic" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Basic Config  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/config-advanced" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Advanced Config  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/config-reference" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Config Reference  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/config-sample" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Sample Config  </a> </li> </ul> </details> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/exec-policy" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Execution Policy  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/guides/agents-md" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> AGENTS.md  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/custom-prompts" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Custom Prompts  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/mcp" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> MCP  </a> </li><li> <details class="group"> <summary class="list-none cursor-pointer select-none px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 flex items-center justify-between hover:text-default hover:bg-primary-ghost-hover"> <span class="flex-1">Skills</span> <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 inline-block ml-1 text-current group-open:rotate-90 transition-transform duration-150  " aria-hidden="true"><path d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill="currentColor"></path></svg> </summary> <ul class="mt-1 ml-3 max-w-[calc(100%-theme(spacing.3))] flex flex-col gap-0.5 text-sm text-default w-full mb-2 "> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/skills" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Overview  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/skills/create-skill" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default block hover:text-default hover:bg-primary-ghost-hover "> Create skills  </a> </li> </ul> </details> </li> </ul></div><div data-astro-cid-73gi4scu><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none" data-astro-cid-73gi4scu>Administration</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/auth" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Authentication  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/security" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block bg-primary-ghost-hover "> Security  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/enterprise" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Enterprise  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/windows" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Windows  </a> </li> </ul></div><div data-astro-cid-73gi4scu><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none" data-astro-cid-73gi4scu>Automation</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/noninteractive" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Non-interactive Mode  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/sdk" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Codex SDK  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/guides/agents-sdk" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> MCP Server  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/github-action" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> GitHub Action  </a> </li> </ul></div><div data-astro-cid-73gi4scu><h3 class="mb-2 ml-3 mt-6 text-sm font-semibold select-none" data-astro-cid-73gi4scu>Releases</h3><ul class="flex flex-col gap-0.25 text-sm text-default w-full"> <li> <a href="/web/20260101164638/https://developers.openai.com/codex/changelog" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Changelog  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/feature-maturity" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Feature Maturity  </a> </li><li> <a href="/web/20260101164638/https://developers.openai.com/codex/open-source" class="px-3 py-1.5 w-full rounded-[8px] transition-colors text-default pl-5 block hover:text-default hover:bg-primary-ghost-hover "> Open Source  </a> </li> </ul></div></nav></div><script>
+  const NAV_SELECTOR = "nav[data-left-nav]";
+  const STORAGE_PREFIX = "left-nav-scroll:";
+  const INITIALIZED_ATTRIBUTE = "data-left-nav-scroll-initialized";
+
+  const isStorageAvailable = (() => {
+    try {
+      const storageKey = `${STORAGE_PREFIX}__test__`;
+      sessionStorage.setItem(storageKey, "1");
+      sessionStorage.removeItem(storageKey);
+      return true;
+    } catch (error) {
+      return false;
+    }
+  })();
+
+  const getNav = () => document.querySelector(NAV_SELECTOR);
+
+  const getStorageKey = (nav) =>
+    `${STORAGE_PREFIX}${nav.dataset.leftNavId ?? "default"}`;
+
+  const restoreScrollPosition = (nav) => {
+    if (!isStorageAvailable) return;
+    const storedValue = sessionStorage.getItem(getStorageKey(nav));
+    if (storedValue !== null) {
+      nav.scrollTop = Number(storedValue);
+    }
+  };
+
+  const saveScrollPosition = (nav) => {
+    if (!isStorageAvailable) return;
+    sessionStorage.setItem(getStorageKey(nav), String(nav.scrollTop));
+  };
+
+  const setupNav = () => {
+    const nav = getNav();
+    if (!nav || nav.getAttribute(INITIALIZED_ATTRIBUTE) === "true") return;
+
+    restoreScrollPosition(nav);
+
+    nav.addEventListener(
+      "scroll",
+      () => {
+        saveScrollPosition(nav);
+      },
+      { passive: true }
+    );
+
+    nav.setAttribute(INITIALIZED_ATTRIBUTE, "true");
+  };
+
+  const persistScrollPosition = () => {
+    const nav = getNav();
+    if (!nav) return;
+    saveScrollPosition(nav);
+  };
+
+  const initialize = () => {
+    setupNav();
+    const nav = getNav();
+    if (!nav) return;
+    restoreScrollPosition(nav);
+  };
+
+  window.addEventListener("pageshow", initialize);
+  document.addEventListener("astro:page-load", initialize);
+  document.addEventListener("astro:after-swap", initialize);
+
+  document.addEventListener("astro:before-swap", persistScrollPosition);
+  window.addEventListener("beforeunload", persistScrollPosition);
+
+  initialize();
+</script> <main class="flex-1 md:pl-[240px]"> <div class="px-4 md:px-12 xl:px-4 py-12 mx-4 sm:mx-8 md:mx-auto md:max-w-6xl md:w-full"> <div class="mx-auto md:w-full grid grid-cols-1 gap-12 max-w-7xl xl:grid-cols-[minmax(0,1fr)_200px]"> <div class="hidden xl:flex fixed right-8 top-[7.5rem] z-30 w-[200px] max-h-[calc(100vh-7.5rem)] flex-col"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><script>window._$HY||(e=>{let t=e=>e&&e.hasAttribute&&(e.hasAttribute("data-hk")?e:t(e.host&&e.host.nodeType?e.host:e.parentNode));["click", "input"].forEach((o=>document.addEventListener(o,(o=>{if(!e.events)return;let s=t(o.composedPath&&o.composedPath()[0]||o.target);s&&!e.completed.has(s)&&e.events.push([s,o])}))))})(_$HY={events:[],completed:new WeakSet,r:{},fe(){}});</script><!--xs--><astro-island uid="Z1ejPwO" data-solid-render-id="s0" component-url="/_astro/TableOfContents.D0glIiss.js" component-export="default" renderer-url="/_astro/client.any8AbzQ.js" props="{&quot;variant&quot;:[0,&quot;static&quot;],&quot;targetSelector&quot;:[0,&quot;#mainContent&quot;],&quot;class&quot;:[0,&quot;flex-1 overflow-y-auto pr-1&quot;]}" ssr client="load" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:true}" await-children><nav data-hk="s00000" class="hidden xl:block w-full overflow-y-auto flex-1 overflow-y-auto pr-1"><div class="relative"><div class="absolute left-0 top-0 bottom-0 w-[2.15px] bg-primary-soft"></div><div class="absolute left-0 w-[2.15px] bg-primary-solid transition-transform duration-200 ease-out" style="transform:translateY(0);height:0px"></div><ul class="relative list-none p-0 m-0 ml-3 [&amp;>*+*]:mt-3"></ul></div></nav><!--astro:end--></astro-island> <div class="mt-8 shrink-0"> <astro-island uid="ECr27" data-solid-render-id="s1" component-url="/_astro/PageActions.CoRWPUtt.js" component-export="default" renderer-url="/_astro/client.any8AbzQ.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;PageActions&quot;,&quot;value&quot;:true}" await-children><div data-hk="s10000" class="relative inline-flex items-stretch pb-1"><button type="button" class="flex items-center gap-1.5 rounded-l-lg border border-primary-outline px-2.5 py-1.5 text-xs font-medium text-default transition-colors hover:bg-primary-outline-active focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"><!--$--><svg data-hk="s1000100" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewbox="0 0 24 24" class="h-[16px] w-[16px] " aria-hidden="true"><path fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2V5Zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1v2ZM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1H5Z" clip-rule="evenodd"></path></svg><!--/--><span aria-live="polite">Copy Page</span></button><button type="button" class="-ml-px inline-flex items-center rounded-r-lg border border-l-0 border-primary-outline px-2 py-1.5 text-default transition-colors hover:bg-primary-outline-active focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500" aria-haspopup="menu" aria-expanded="false"><!--$--><svg data-hk="s100020" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-[16px] w-[16px] "><path d="M11.2929 16.2929C11.6834 16.6834 12.3166 16.6834 12.7071 16.2929L18.7071 10.2929C19.0976 9.90237 19.0976 9.26921 18.7071 8.87868C18.3166 8.48816 17.6834 8.48816 17.2929 8.87868L12 14.1716L6.70711 8.87868C6.31658 8.48816 5.68342 8.48816 5.29289 8.87868C4.90237 9.26921 4.90237 9.90237 5.29289 10.2929L11.2929 16.2929Z" fill="currentColor"></path></svg><!--/--><span class="sr-only">More page actions</span></button><!--$--><!--/--></div><!--astro:end--></astro-island> </div> </div> <div class="flex flex-col relative"> <div class="absolute right-0 -top-1 z-20 flex justify-end xl:hidden"> <astro-island uid="1q1ANY" data-solid-render-id="s2" component-url="/_astro/PageActions.CoRWPUtt.js" component-export="default" renderer-url="/_astro/client.any8AbzQ.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;PageActions&quot;,&quot;value&quot;:true}" await-children><div data-hk="s20000" class="relative inline-flex items-stretch pb-1"><button type="button" class="flex items-center gap-1.5 rounded-l-lg border border-primary-outline px-2.5 py-1.5 text-xs font-medium text-default transition-colors hover:bg-primary-outline-active focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"><!--$--><svg data-hk="s2000100" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewbox="0 0 24 24" class="h-[16px] w-[16px] " aria-hidden="true"><path fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2V5Zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1v2ZM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1H5Z" clip-rule="evenodd"></path></svg><!--/--><span aria-live="polite">Copy Page</span></button><button type="button" class="-ml-px inline-flex items-center rounded-r-lg border border-l-0 border-primary-outline px-2 py-1.5 text-default transition-colors hover:bg-primary-outline-active focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500" aria-haspopup="menu" aria-expanded="false"><!--$--><svg data-hk="s200020" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-[16px] w-[16px] "><path d="M11.2929 16.2929C11.6834 16.6834 12.3166 16.6834 12.7071 16.2929L18.7071 10.2929C19.0976 9.90237 19.0976 9.26921 18.7071 8.87868C18.3166 8.48816 17.6834 8.48816 17.2929 8.87868L12 14.1716L6.70711 8.87868C6.31658 8.48816 5.68342 8.48816 5.29289 8.87868C4.90237 9.26921 4.90237 9.90237 5.29289 10.2929L11.2929 16.2929Z" fill="currentColor"></path></svg><!--/--><span class="sr-only">More page actions</span></button><!--$--><!--/--></div><!--astro:end--></astro-island> </div> <div class="flex flex-col gap-8 mb-2"> <header class="flex flex-col not-prose gap-2 pt-4 items-start text-left"> <div class="w-full">  </div> <h1 class="heading-2xl md:heading-2xl"> Security </h1> <p class="text-lg text-secondary">How to securely operate and manage Codex agents</p> <div class="w-full"> <div>  </div> </div> </header>  </div> <article id="mainContent" class="prose prose-content dark:prose-invert max-w-none pt-4 pb-0"> <p>Codex helps protect your code and data and reduces the risk of misuse.</p>
+<p>By default, the agent runs with network access turned off and can write only inside the current workspace, whether locally or in the cloud.</p>
+<h2 id="sandbox-and-approvals" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Sandbox and approvals</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="sandbox-and-approvals" aria-label="Copy link to sandbox and approvals" title="Copy link to sandbox and approvals"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>Codex uses different sandbox modes depending on where you run it:</p>
+<ul>
+<li><strong>Codex cloud</strong>: Runs in isolated OpenAI-managed containers, preventing access to your host system or unrelated data. You can expand access intentionally (for example, to install dependencies or allow specific domains) when needed. Network access is always enabled during the setup phase, which runs before the agent has access to your code.</li>
+<li><strong>Codex CLI / IDE extension</strong>: OS-level mechanisms enforce sandbox policies. Defaults include no network access and write permissions limited to the active workspace. You can configure the sandbox, approval policy, and network settings based on your risk tolerance.</li>
+</ul>
+<p>In the default approval mode, Codex can read files, make edits, and run commands in the working directory automatically.</p>
+<p>Codex asks for approval to edit files outside the working directory or to run commands that require network access. If you want to chat or plan without making changes, switch to <code>read-only</code> mode with the <code>/approvals</code> command.</p>
+<h2 id="network-access" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Network access</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="network-access" aria-label="Copy link to network access" title="Copy link to network access"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>For Codex cloud, see <a href="/web/20260101164638/https://developers.openai.com/codex/cloud/internet-access">agent internet access</a> to enable full internet access or a domain allow list.</p>
+<p>For the Codex CLI or IDE extension, the default <code>workspace-write</code> sandbox mode keeps network access turned off unless you enable it in your configuration:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="toml"><code><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">[</span><span style="color:#6F42C1;--shiki-dark:#B392F0">sandbox_workspace_write</span><span style="color:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">network_access = </span><span style="color:#005CC5;--shiki-dark:#79B8FF">true</span></span></code></pre>
+<p>You can also enable the <a href="https://web.archive.org/web/20260101164638/https://platform.openai.com/docs/guides/tools-web-search">web search tool</a> without allowing full network access by passing the <code>--search</code> flag or toggling the feature in <code>config.toml</code>:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="toml"><code><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">[</span><span style="color:#6F42C1;--shiki-dark:#B392F0">features</span><span style="color:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">web_search_request = </span><span style="color:#005CC5;--shiki-dark:#79B8FF">true</span></span></code></pre>
+<p>Use caution when enabling network access or web search in Codex. Prompt injection can cause the agent to fetch and follow untrusted instructions.</p>
+<h2 id="defaults-and-recommendations" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Defaults and recommendations</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="defaults-and-recommendations" aria-label="Copy link to defaults and recommendations" title="Copy link to defaults and recommendations"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<ul>
+<li>On launch, Codex detects whether the folder is version-controlled and recommends:
+<ul>
+<li>Version-controlled folders: <code>Auto</code> (workspace write + on-request approvals)</li>
+<li>Non-version-controlled folders: <code>read-only</code></li>
+</ul>
+</li>
+<li>The workspace includes the current directory and temporary directories like <code>/tmp</code>. Use the <code>/status</code> command to see which directories are in the workspace.</li>
+<li>To accept the defaults, run <code>codex</code>.</li>
+<li>You can set these explicitly:
+<ul>
+<li><code>codex --sandbox workspace-write --ask-for-approval on-request</code></li>
+<li><code>codex --sandbox read-only --ask-for-approval on-request</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="run-without-approval-prompts" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Run without approval prompts</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="run-without-approval-prompts" aria-label="Copy link to run without approval prompts" title="Copy link to run without approval prompts"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<p>You can disable approval prompts with <code>--ask-for-approval never</code> or <code>-a never</code> (shorthand).</p>
+<p>This option works with all <code>--sandbox</code> modes, so you still control Codex’s level of autonomy. Codex makes a best effort within the constraints you set.</p>
+<p>If you need Codex to read files, make edits, and run commands with network access without approval prompts, use <code>--sandbox danger-full-access</code> (or the <code>--dangerously-bypass-approvals-and-sandbox</code> flag). Use caution before doing so.</p>
+<h3 id="common-sandbox-and-approval-combinations" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Common sandbox and approval combinations</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="common-sandbox-and-approval-combinations" aria-label="Copy link to common sandbox and approval combinations" title="Copy link to common sandbox and approval combinations"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="md:max-w-5xl mx-auto overflow-x-auto"><table class="w-full "><thead><tr><th>Intent</th><th>Flags</th><th>Effect</th></tr></thead><tbody><tr><td>Auto (preset)</td><td><em>no flags needed, default</em></td><td>Codex can read files, make edits, and run commands in the workspace. Codex asks for approval to run commands outside the sandbox.</td></tr><tr><td>Read-only</td><td><code>--sandbox read-only --ask-for-approval never</code></td><td>Codex can only read files; never asks for approval.</td></tr><tr><td>Automatically edit but ask for approval to run untrusted commands</td><td><code>--sandbox workspace-write --ask-for-approval untrusted</code></td><td>Codex can read and edit files but asks for approval before running untrusted commands.</td></tr><tr><td>Dangerous full access</td><td><code>--dangerously-bypass-approvals-and-sandbox</code> (alias: <code>--yolo</code>)</td><td>No sandbox; no approvals <em>(not recommended)</em></td></tr></tbody></table></div>
+<h4 id="configuration-in-configtoml" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Configuration in <code>config.toml</code></span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="configuration-in-configtoml" aria-label="Copy link to configuration in configtoml" title="Copy link to configuration in configtoml"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-2.5 w-2.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h4>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="toml"><code><span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># Always ask for approval mode</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">approval_policy = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;untrusted&quot;</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">sandbox_mode    = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;read-only&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># Optional: Allow network in workspace-write mode</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">[</span><span style="color:#6F42C1;--shiki-dark:#B392F0">sandbox_workspace_write</span><span style="color:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">network_access = </span><span style="color:#005CC5;--shiki-dark:#79B8FF">true</span></span></code></pre>
+<h3 id="test-the-sandbox-locally" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Test the sandbox locally</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="test-the-sandbox-locally" aria-label="Copy link to test the sandbox locally" title="Copy link to test the sandbox locally"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<p>To see what happens when a command runs under the Codex sandbox, use these Codex CLI commands:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># macOS</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">codex</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> sandbox</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> macos</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> [COMMAND]...</span></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># Linux</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">codex</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> sandbox</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> linux</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> [COMMAND]...</span></span></code></pre>
+<h2 id="os-level-sandbox" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">OS-level sandbox</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="os-level-sandbox" aria-label="Copy link to os level sandbox" title="Copy link to os level sandbox"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>Codex enforces the sandbox differently depending on your OS:</p>
+<ul>
+<li><strong>macOS</strong> uses Seatbelt policies and runs commands using <code>sandbox-exec</code> with a profile (<code>-p</code>) that corresponds to the <code>--sandbox</code> mode you selected.</li>
+<li><strong>Linux</strong> uses a combination of <code>Landlock</code> and <code>seccomp</code> to enforce the sandbox configuration.</li>
+<li><strong>Windows</strong> uses the Linux sandbox implementation when running in <a href="/web/20260101164638/https://developers.openai.com/codex/windows#windows-subsystem-for-linux">Windows Subsystem for Linux (WSL)</a>. When running natively on Windows, you can enable an <a href="/web/20260101164638/https://developers.openai.com/codex/windows#windows-experimental-sandbox">experimental sandbox</a> implementation.</li>
+</ul>
+<p>If you use the Codex IDE extension on Windows, it supports WSL directly. Set the following in your VS Code settings to keep the agent inside WSL whenever it’s available:</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="json"><code><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  &quot;chatgpt.runCodexInWindowsSubsystemForLinux&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">true</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+<p>This ensures the IDE extension inherits Linux sandbox semantics for commands, approvals, and filesystem access even when the host OS is Windows. Learn more in the <a href="/web/20260101164638/https://developers.openai.com/codex/windows">Windows setup guide</a>.</p>
+<p>When you run Linux in a containerized environment such as Docker, the sandbox may not work if the host or container configuration doesn’t support the required <code>Landlock</code> and <code>seccomp</code> features.</p>
+<p>In that case, configure your Docker container to provide the isolation you need, then run <code>codex</code> with <code>--sandbox danger-full-access</code> (or the <code>--dangerously-bypass-approvals-and-sandbox</code> flag) inside the container.</p>
+<h2 id="version-control" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Version control</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="version-control" aria-label="Copy link to version control" title="Copy link to version control"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>Codex works best with a version control workflow:</p>
+<ul>
+<li>Work on a feature branch and keep <code>git status</code> clean before delegating. This keeps Codex patches easier to isolate and revert.</li>
+<li>Prefer patch-based workflows (for example, <code>git diff</code>/<code>git apply</code>) over editing tracked files directly. Commit frequently so you can roll back in small increments.</li>
+<li>Treat Codex suggestions like any other PR: run targeted verification, review diffs, and document decisions in commit messages for auditing.</li>
+</ul>
+<h2 id="monitoring-and-telemetry" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Monitoring and telemetry</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="monitoring-and-telemetry" aria-label="Copy link to monitoring and telemetry" title="Copy link to monitoring and telemetry"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>Codex supports opt-in monitoring via OpenTelemetry (OTEL) to help teams audit usage, investigate issues, and meet compliance requirements without weakening local security defaults. Telemetry is off by default and must be explicitly enabled in your configuration.</p>
+<h3 id="overview" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Overview</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="overview" aria-label="Copy link to overview" title="Copy link to overview"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<ul>
+<li>Codex turns off OTEL export by default to keep local runs self-contained.</li>
+<li>When enabled, Codex emits structured log events covering conversations, API requests, streamed responses, user prompts (redacted by default), tool approval decisions, and tool results.</li>
+<li>Codex tags exported events with <code>service.name</code> (originator), CLI version, and an environment label to separate dev/staging/prod traffic.</li>
+</ul>
+<h3 id="enable-otel-opt-in" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Enable OTEL (opt-in)</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="enable-otel-opt-in" aria-label="Copy link to enable otel opt in" title="Copy link to enable otel opt in"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<p>Add an <code>[otel]</code> block to your Codex configuration (typically <code>~/.codex/config.toml</code>), choosing an exporter and whether to log prompt text.</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="toml"><code><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">[</span><span style="color:#6F42C1;--shiki-dark:#B392F0">otel</span><span style="color:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">environment = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;staging&quot;</span><span style="color:#6A737D;--shiki-dark:#6A737D">   # dev | staging | prod</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">exporter = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;none&quot;</span><span style="color:#6A737D;--shiki-dark:#6A737D">          # none | otlp-http | otlp-grpc</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">log_user_prompt = </span><span style="color:#005CC5;--shiki-dark:#79B8FF">false</span><span style="color:#6A737D;--shiki-dark:#6A737D">     # redact prompt text unless policy allows</span></span></code></pre>
+<ul>
+<li><code>exporter = &quot;none&quot;</code> leaves instrumentation active but doesn’t send data anywhere.</li>
+<li>To send events to your own collector, pick one of:</li>
+</ul>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="toml"><code><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">[</span><span style="color:#6F42C1;--shiki-dark:#B392F0">otel</span><span style="color:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">exporter = { otlp-http = {</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  endpoint = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;https://otel.example.com/v1/logs&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  protocol = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;binary&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  headers = { &quot;x-otlp-api-key&quot; = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;${OTLP_TOKEN}&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}}</span></span></code></pre>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="toml"><code><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">[</span><span style="color:#6F42C1;--shiki-dark:#B392F0">otel</span><span style="color:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">exporter = { otlp-grpc = {</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  endpoint = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;https://otel.example.com:4317&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  headers = { &quot;x-otlp-meta&quot; = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;abc123&quot;</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}}</span></span></code></pre>
+<p>Codex batches events and flushes them on shutdown. Codex exports only telemetry produced by its OTEL module.</p>
+<h3 id="event-categories" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Event categories</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="event-categories" aria-label="Copy link to event categories" title="Copy link to event categories"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<p>Representative event types include:</p>
+<ul>
+<li><code>codex.conversation_starts</code> (model, reasoning settings, sandbox/approval policy)</li>
+<li><code>codex.api_request</code> and <code>codex.sse_event</code> (durations, status, token counts)</li>
+<li><code>codex.user_prompt</code> (length; content redacted unless explicitly enabled)</li>
+<li><code>codex.tool_decision</code> (approved/denied, source: configuration vs. user)</li>
+<li><code>codex.tool_result</code> (duration, success, output snippet)</li>
+</ul>
+<p>For the full event catalog and configuration reference, see the <a href="https://web.archive.org/web/20260101164638/https://github.com/openai/codex/blob/main/docs/config.md#otel">Codex configuration documentation on GitHub</a>.</p>
+<h3 id="security-and-privacy-guidance" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Security and privacy guidance</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="security-and-privacy-guidance" aria-label="Copy link to security and privacy guidance" title="Copy link to security and privacy guidance"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<ul>
+<li>Keep <code>log_user_prompt = false</code> unless policy explicitly permits storing prompt contents. Prompts can include source code and sensitive data.</li>
+<li>Route telemetry only to collectors you control; apply retention limits and access controls aligned with your compliance requirements.</li>
+<li>Treat tool arguments and outputs as sensitive. Favor redaction at the collector or SIEM when possible.</li>
+<li>If you run the CLI with network access turned off, OTEL export can’t reach your collector. To export, either allow network access in <code>workspace-write</code> mode for the OTEL endpoint or export from Codex cloud with the collector domain on your allow list.</li>
+<li>Review events periodically for approval/sandbox changes and unexpected tool executions.</li>
+</ul>
+<p>OTEL is optional and designed to complement, not replace, the sandbox and approval protections described above.</p>
+<h2 id="managed-configuration" class="group flex items-center gap-2 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Managed configuration</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="managed-configuration" aria-label="Copy link to managed configuration" title="Copy link to managed configuration"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h2>
+<p>Enterprise admins can set safe defaults and organization policies using a managed configuration layer. Managed configuration merges on top of a user’s local <code>config.toml</code> and takes precedence over any CLI <code>--config</code> overrides, setting the starting values when Codex launches. Users can still change those settings during a session; Codex reapplies managed defaults the next time it starts.</p>
+<h3 id="precedence-and-layering" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Precedence and layering</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="precedence-and-layering" aria-label="Copy link to precedence and layering" title="Copy link to precedence and layering"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<p>Codex assembles the effective configuration in this order (top overrides bottom):</p>
+<ul>
+<li>Managed preferences (macOS MDM; highest precedence)</li>
+<li><code>managed_config.toml</code> (system/managed file)</li>
+<li><code>config.toml</code> (user’s base configuration)</li>
+</ul>
+<p>CLI <code>--config key=value</code> overrides apply to the base, but managed layers override them. This means each run starts from the managed defaults even if you provide local flags.</p>
+<h3 id="locations" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Locations</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="locations" aria-label="Copy link to locations" title="Copy link to locations"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<ul>
+<li>Linux/macOS (Unix): <code>/etc/codex/managed_config.toml</code></li>
+<li>Windows/non-Unix: <code>~/.codex/managed_config.toml</code></li>
+</ul>
+<p>If the file is missing, Codex skips the managed layer.</p>
+<h3 id="macos-managed-preferences-mdm" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">macOS managed preferences (MDM)</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="macos-managed-preferences-mdm" aria-label="Copy link to macos managed preferences mdm" title="Copy link to macos managed preferences mdm"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<p>On macOS, admins can push a device profile that provides a base64-encoded TOML payload at:</p>
+<ul>
+<li>Preference domain: <code>com.openai.codex</code></li>
+<li>Key: <code>config_toml_base64</code></li>
+</ul>
+<p>Codex parses this “managed preferences” layer as TOML and applies it with the highest precedence, above <code>managed_config.toml</code>.</p>
+<h3 id="mdm-setup-workflow" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">MDM setup workflow</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="mdm-setup-workflow" aria-label="Copy link to mdm setup workflow" title="Copy link to mdm setup workflow"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<p>Codex honors standard macOS MDM payloads, so you can distribute settings with tooling like <code>Jamf Pro</code>, <code>Fleet</code>, or <code>Kandji</code>. A lightweight deployment looks like:</p>
+<ol>
+<li>Build the managed payload TOML and encode it with <code>base64</code> (no wrapping).</li>
+<li>Drop the string into your MDM profile under the <code>com.openai.codex</code> domain at <code>config_toml_base64</code>.</li>
+<li>Push the profile, then ask users to restart Codex or rerun <code>codex config show --effective</code> to confirm the managed values are active.</li>
+<li>When revoking or changing policy, update the managed payload; the CLI reads the refreshed preference the next time it launches.</li>
+</ol>
+<p>Avoid embedding secrets or high-churn dynamic values in the payload. Treat the managed TOML like any other MDM setting under change control.</p>
+<h3 id="example-managed_configtoml" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Example managed_config.toml</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="example-managed_configtoml" aria-label="Copy link to example managed_configtoml" title="Copy link to example managed_configtoml"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8;overflow-x:auto" tabindex="0" data-language="toml"><code><span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># Set conservative defaults</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">approval_policy = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;on-request&quot;</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">sandbox_mode    = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;workspace-write&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">[</span><span style="color:#6F42C1;--shiki-dark:#B392F0">sandbox_workspace_write</span><span style="color:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">network_access = </span><span style="color:#005CC5;--shiki-dark:#79B8FF">false</span><span style="color:#6A737D;--shiki-dark:#6A737D">             # keep network disabled unless explicitly allowed</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">[</span><span style="color:#6F42C1;--shiki-dark:#B392F0">otel</span><span style="color:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">environment = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;prod&quot;</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">exporter = </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&quot;otlp-http&quot;</span><span style="color:#6A737D;--shiki-dark:#6A737D">            # point at your collector</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">log_user_prompt = </span><span style="color:#005CC5;--shiki-dark:#79B8FF">false</span><span style="color:#6A737D;--shiki-dark:#6A737D">            # keep prompts redacted</span></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># exporter details live under exporter tables; see Monitoring and telemetry above</span></span></code></pre>
+<h3 id="recommended-guardrails" class="group flex items-center gap-1 mt-7 mb-2 scroll-mt-[110px] "><span class="min-w-0">Recommended guardrails</span><button type="button" class="shrink-0 self-center inline-flex items-center justify-center rounded-md p-0.5 opacity-0 transition-colors transition-opacity duration-200 ease-out text-info hover:text-info focus-visible:opacity-100 group-focus-within:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 group-hover:opacity-100 dark:focus-visible:outline-gray-600 motion-reduce:transition-none relative -top-0.5" data-anchor-id="recommended-guardrails" aria-label="Copy link to recommended guardrails" title="Copy link to recommended guardrails"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 "><path d="M18.2929 5.7071C16.4743 3.88849 13.5257 3.88849 11.7071 5.7071L10.7071 6.7071C10.3166 7.09763 9.68341 7.09763 9.29289 6.7071C8.90236 6.31658 8.90236 5.68341 9.29289 5.29289L10.2929 4.29289C12.8926 1.69322 17.1074 1.69322 19.7071 4.29289C22.3068 6.89255 22.3068 11.1074 19.7071 13.7071L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.2929 12.2929C20.1115 10.4743 20.1115 7.52572 18.2929 5.7071ZM15.7071 8.29289C16.0976 8.68341 16.0976 9.31658 15.7071 9.7071L9.7071 15.7071C9.31658 16.0976 8.68341 16.0976 8.29289 15.7071C7.90236 15.3166 7.90236 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90236 15.3166 7.90236 15.7071 8.29289ZM6.7071 9.29289C7.09763 9.68341 7.09763 10.3166 6.7071 10.7071L5.7071 11.7071C3.88849 13.5257 3.88849 16.4743 5.7071 18.2929C7.52572 20.1115 10.4743 20.1115 12.2929 18.2929L13.2929 17.2929C13.6834 16.9024 14.3166 16.9024 14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071L13.7071 19.7071C11.1074 22.3068 6.89255 22.3068 4.29289 19.7071C1.69322 17.1074 1.69322 12.8926 4.29289 10.2929L5.29289 9.29289C5.68341 8.90236 6.31658 8.90236 6.7071 9.29289Z" fill="currentColor"></path></svg></button></h3>
+<ul>
+<li>Prefer <code>workspace-write</code> with approvals for most users; reserve full access for controlled containers.</li>
+<li>Keep <code>network_access = false</code> unless your security review allows a collector or domains required by your workflows.</li>
+<li>Use managed configuration to pin OTEL settings (exporter, environment), but keep <code>log_user_prompt = false</code> unless your policy explicitly allows storing prompt contents.</li>
+<li>Periodically audit diffs between local <code>config.toml</code> and managed policy to catch drift; managed layers should win over local flags and files.</li>
+</ul>  </article>  </div> <div></div> </div> </div> <script>
+    const copyHeadingLink = async (slug) => {
+      const url = `${location.origin}${location.pathname}#${slug}`;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        try {
+          await navigator.clipboard.writeText(url);
+          return;
+        } catch (error) {
+          console.warn("Copy to clipboard failed", error);
+        }
+      }
+
+      window.prompt("Copy link", url);
+    };
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const button = target.closest("[data-anchor-id]");
+      if (!button) return;
+
+      const slug = button.getAttribute("data-anchor-id");
+      if (!slug) return;
+
+      event.preventDefault();
+      copyHeadingLink(slug);
+      const heading = document.getElementById(slug);
+      if (heading) {
+        heading.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      history.replaceState(null, "", `#${slug}`);
+    });
+  </script>   </main> </div> <script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();</script><astro-island uid="DQ4jb" component-url="/_astro/Analytics.B8u7a6Um.js" component-export="default" renderer-url="/_astro/client.any8AbzQ.js" props="{}" ssr client="only" opts="{&quot;name&quot;:&quot;VercelAnalyticsClient&quot;,&quot;value&quot;:&quot;solid-js&quot;}"></astro-island> </body></html><!--
+     FILE ARCHIVED ON 16:46:38 Jan 01, 2026 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:53:32 Aug 07, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.721
+  exclusion.robots: 0.083
+  exclusion.robots.policy: 0.069
+  esindex: 0.012
+  cdx.remote: 9.293
+  LoadShardBlock: 97.426 (3)
+  PetaboxLoader3.datanode: 137.624 (5)
+  PetaboxLoader3.resolve: 108.451 (2)
+  load_resource: 259.233
+  loaddict: 67.501
+-->

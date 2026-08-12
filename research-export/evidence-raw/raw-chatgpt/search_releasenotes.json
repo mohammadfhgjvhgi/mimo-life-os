@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "name": "ChatGPT — Release Notes",
+    "snippet": "A changelog of the latest updates and release notes for ChatGPT . August 6, 2026 Updates. Plus and Pro users can now use an updated GPT‐5.6 Sol in ChatGPT with ...",
+    "host_name": "help.openai.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes",
+    "name": "ChatGPT Enterprise & Edu - Release Notes",
+    "snippet": "New controls for desktop app updates. ChatGPT Enterprise, ChatGPT for Healthcare, and ChatGPT Edu admins can now turn off in-app updates for the ChatGPT ... Read more",
+    "host_name": "help.openai.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes",
+    "name": "ChatGPT Business - Release Notes",
+    "snippet": "A changelog of the latest updates for ChatGPT Business plan. model updates, bug fixes, security patches, and support for permissions.",
+    "host_name": "help.openai.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+    "name": "Model Release Notes | OpenAI Help Center",
+    "snippet": "Jul 9, 2026 — We're updating GPT-5.5 Instant in ChatGPT and the API to improve response style and quality. It's now easier to read, more natural in everyday ... Read more",
+    "host_name": "help.openai.com",
+    "rank": 3,
+    "date": "Jul 9, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://learn.chatgpt.com/docs/changelog",
+    "name": "ChatGPT & Codex changelog",
+    "snippet": "Added a New Quick Chat command and local video embeds in the app . Performance improvements and bug fixes … review refresh reliability, and fixed dictation loss ...",
+    "host_name": "learn.chatgpt.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.openai.com/t/chatgpt-release-notes-2025-march-27-gpt-4o-a-new-update/1153887",
+    "name": "Release Notes: 2025-March-27 - GPT-4o a new update",
+    "snippet": "Mar 27, 2025 — GPT-4o feels more intuitive, creative, and collaborative · Follows instructions more accurately · Handles coding tasks more smoothly · Communicates ... Read more",
+    "host_name": "community.openai.com",
+    "rank": 5,
+    "date": "Mar 27, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://openai.com/products/release-notes",
+    "name": "Release Notes",
+    "snippet": "OpenAI release notes for ChatGPT , API Platform, and Codex. Explore the latest features, updates, and improvements across OpenAI products.",
+    "host_name": "openai.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ChatGPT/comments/1ra9teh/openai_release_notes_check_them",
+    "name": "OpenAI Release Notes. Check them. : r/ChatGPT",
+    "snippet": "The last time OpenAI spoke about deprecating 5.1 was in December 2025. They said that all paid users have access to it for three months. That's ... Read more",
+    "host_name": "www.reddit.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://releasebot.io/updates/openai/chatgpt",
+    "name": "ChatGPT Updates by OpenAI - August 2026",
+    "snippet": "Browse a full list of updates made to ChatGPT by OpenAI . Follow to get all release notes by email, RSS, and more.",
+    "host_name": "releasebot.io",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  }
+]

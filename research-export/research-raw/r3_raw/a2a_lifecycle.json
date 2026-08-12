@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://agent2agent.info/docs/concepts/task",
+    "name": "Task – Agent2Agent Protocol - The A2A Protocol Community",
+    "snippet": "submitted : The task has been submitted . · working : The task is currently being processed. · input - required : The task requires additional input from the client.",
+    "host_name": "agent2agent.info",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/strands-agents/harness-sdk/issues/1371",
+    "name": "[FEATURE] Support for Full A2A Task Lifecycle States",
+    "snippet": "Dec 19, 2025 — The input_required state is specifically designed for interactive agent workflows. A2A lifecycle support is critical for production multi-agent ...",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "Dec 19, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://gyliu513.medium.com/task-in-a2a-protocol-the-core-abstraction-of-distributed-ai-systems-27ca102ec198",
+    "name": "Task in A2A Protocol: The Core Abstraction of Distributed AI",
+    "snippet": "1. Pending — Awaiting Processing · 2. Working — In Progress · 3. InputRequired — Input Needed · 5. Failed — Failed · 6. Canceled — Canceled",
+    "host_name": "gyliu513.medium.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://discuss.google.dev/t/a2a-protocol-demystifying-tasks-vs-messages/255879",
+    "name": "A2A protocol: Demystifying Tasks vs Messages",
+    "snippet": "Aug 18, 2025 — The goal completion can require the agent to collaborate over multiple turns. The operation is long-running and requires asynchronous tracking.",
+    "host_name": "discuss.google.dev",
+    "rank": 3,
+    "date": "Aug 18, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://huggingface.co/blog/1bo/a2a-protocol-explained",
+    "name": "A2A Protocol Explained",
+    "snippet": "Jul 16, 2025 — Each task has a unique ID assigned by the agent and progresses through a defined lifecycle (e.g., submitted , working , input - required , ...",
+    "host_name": "huggingface.co",
+    "rank": 4,
+    "date": "Jul 16, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.glukhov.org/ai-systems/architecture/a2a-streaming-async-task-lifecycle",
+    "name": "A2A Streaming and Async Tasks for Long-Running Agent",
+    "snippet": "What does input_required mean in an A2A task ? It is a pause state where the agent needs more information or human approval. Design UX and timeouts around it ...",
+    "host_name": "www.glukhov.org",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.tmasolutions.com/insights/agent2agent-a2a-protocol-opening-a-new-era-for-autonomous-ai-agents-interaction",
+    "name": "Opening a New Era for Autonomous AI Agents Interaction",
+    "snippet": "May 2, 2025 — These states include submitted , working , input - required , and final states such as completed , failed, or canceled. Managing Tasks along this ...",
+    "host_name": "www.tmasolutions.com",
+    "rank": 6,
+    "date": "May 2, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://mastra.ai/blog/what-is-agent-to-agent-protocol",
+    "name": "What is the Agent2Agent (A2A) protocol? How AI agents",
+    "snippet": "Jun 22, 2026 — The eight task states grouped into Running ( submitted , working ), Finished ( completed . The three groups are: Running covers submitted and working ...",
+    "host_name": "mastra.ai",
+    "rank": 7,
+    "date": "Jun 22, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://aigrowthagent.co/articles/how-a2a-protocol-works",
+    "name": "How A2A Protocol Works: Technical Guide for Engineers",
+    "snippet": "Jul 5, 2026 — States group into three categories: Running ( submitted , working ), Paused ( input - required , auth- required ), and Finished ( completed , ...",
+    "host_name": "aigrowthagent.co",
+    "rank": 8,
+    "date": "Jul 5, 2026",
+    "favicon": ""
+  }
+]

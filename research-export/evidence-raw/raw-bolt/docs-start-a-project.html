@@ -1,0 +1,668 @@
+<!DOCTYPE html><html lang="en" data-theme="dark" data-theme-option="dark"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="theme-color" content="#111114"/><script type="application/json" id="bolt-build-info">{"revision":"6195b0a","release":"6195b0a5848a4c992ff36d383ad21e2adf86c73d"}</script><script>(function setMinViewport() {
+  const MIN_WIDTH = 360;
+  const meta = document.querySelector('meta[name="viewport"]');
+
+  if (!meta) {
+    return;
+  }
+
+  function update() {
+    /**
+     * Never let the layout drop below the min width: on narrower screens the
+     * browser scales the page down to fit instead of reflowing or scrolling.
+     */
+    const width = Math.max(window.screen.width, MIN_WIDTH);
+    meta.setAttribute('content', 'width=' + width);
+  }
+
+  update();
+  window.addEventListener('resize', update);
+  window.addEventListener('orientationchange', update);
+})();
+</script><script>(function detectTheme() {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  globalThis.prefersDark = prefersDark;
+
+  const themeOption = document.documentElement.getAttribute('data-theme-option');
+
+  if (themeOption === 'system') {
+    document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+  }
+})();
+</script><link rel="stylesheet" href="/assets/EmptyState-scVdpVyl.css#"/><link rel="stylesheet" href="/assets/root-BDr8v2JC.css"/><link rel="stylesheet" href="/assets/login-D3NdLlkk.css#"/><link rel="stylesheet" href="/assets/LightRays-apN2LHcc.css#"/><link rel="icon" href="/static/favicon.svg" type="image/svg+xml"/><link rel="icon" href="/static/favicon-48x48.png" type="image/png" sizes="48x48"/><link rel="icon" href="/static/favicon-96x96.png" type="image/png" sizes="96x96"/><link rel="icon" href="/static/favicon-192x192.png" type="image/png" sizes="192x192"/><link rel="apple-touch-icon" href="/static/apple-touch-icon.png" sizes="180x180"/><link rel="stylesheet" href="/assets/tailwind-compat-DeJTMLhw.css"/><link rel="stylesheet" href="/assets/index-9yinAZxV.css"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="preload" href="/static/fonts/inter-display-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><link rel="preload" href="/static/fonts/inter-display-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"/><link rel="stylesheet" href="/static/fonts/fonts.css"/><script>(function createWorkaroundGlobal() {
+  /**
+   * A bug in wrangler injects a __name call in these script tags.
+   *
+   * @see https://github.com/cloudflare/workers-sdk/issues/7107#issuecomment-2454829854
+   */
+  window['__' + 'name'] = () => {
+    // noop
+  };
+})();
+</script><script>// prevent modifications to the DOM until hydration is finished
+(function blockDOMMutations() {
+  let allowed = false;
+
+  const observer = new MutationObserver((mutations) => {
+    observer.disconnect();
+
+    // we iterate backwards so that the oldValue is always correct by the end, in the case of simultaneous changes
+    mutations.reverse().forEach((mutation) => {
+      if (mutation.type === 'childList') {
+        mutation.addedNodes.forEach((node) => {
+          /**
+           * Modifications to the head do not affect hydration (vite uses this for HMR styles).
+           *
+           * Nodes added as children of the body do not affect hydration (WebContainer uses this for the iframe).
+           */
+          if ([document.head, document.body, document.documentElement].includes(node.parentNode)) {
+            return;
+          }
+
+          if (node.parentNode) {
+            node.parentNode.removeChild(node);
+          }
+        });
+
+        mutation.removedNodes.forEach((node) => {
+          if (mutation.previousSibling) {
+            mutation.target.insertBefore(node, mutation.previousSibling.nextSibling);
+          } else if (mutation.target) {
+            mutation.target.appendChild(node);
+          }
+        });
+      }
+
+      if (mutation.type === 'attributes') {
+        const { target, attributeName, oldValue } = mutation;
+
+        if (attributeName) {
+          if (oldValue === null) {
+            target.removeAttribute(attributeName);
+          } else {
+            target.setAttribute(attributeName, oldValue);
+          }
+        }
+      }
+
+      if (mutation.type === 'characterData') {
+        mutation.target.data = mutation.oldValue ?? '';
+      }
+    });
+
+    observe();
+  });
+
+  function observe() {
+    /**
+     * Deferred module scripts (the client entry that calls __allowDOMMutations and
+     * starts hydration) run BEFORE DOMContentLoaded. Without this guard the observer
+     * would re-arm here after hydration has already begun and revert React's own DOM
+     * writes, breaking hydration ("Root did not complete").
+     */
+    if (allowed) {
+      return;
+    }
+
+    observer.observe(document, {
+      subtree: true,
+      childList: true,
+      attributes: true,
+      attributeOldValue: true,
+      characterData: true,
+      characterDataOldValue: true,
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', observe);
+
+  window.__allowDOMMutations = () => {
+    allowed = true;
+    window.removeEventListener('DOMContentLoaded', observe);
+    observer.disconnect();
+    window.__loadingPrompt = document.querySelector('textarea')?.value;
+  };
+})();
+</script><meta name="sentry-trace" content="124fac3c208d41b885855fe1bb88052d-8e3ecab983a07cff-0"/><meta name="baggage" content="sentry-environment=production,sentry-release=6195b0a5848a4c992ff36d383ad21e2adf86c73d,sentry-public_key=a2f02ffb9d5f16260f262b40e72c0efe,sentry-trace_id=124fac3c208d41b885855fe1bb88052d,sentry-org_id=4509445939331072,sentry-transaction=GET%20%2F*,sentry-sampled=false,sentry-sample_rand=0.8813585425414828,sentry-sample_rate=0.5"/></head><body class="bg-bolt-ds-bgAlt"><div id="root" class="w-full h-full"><div class="relative flex flex-col h-dvh items-center justify-center px-4 overflow-hidden sm:px-8"><a href="/" class="absolute top-4 left-4 z-10" aria-label="Go to Home"><div class="i-bolt:logos-bolt-new?mask text-bolt-ds-textPrimary w-[67.5px] h-[30px]"></div></a><div class="flex flex-col gap-10 items-center justify-center max-w-[576px] w-full"><div class="flex flex-col gap-5 items-center justify-center text-center w-full"><div class="flex flex-col gap-2 items-center w-full"><p class="text-xl font-bold text-bolt-ds-brand leading-7">404</p><h1 class="text-4xl font-semibold text-bolt-ds-textPrimary leading-[1.2] tracking-[-0.96px] sm:text-5xl">This page doesn&#x27;t exist</h1></div><p class="text-lg text-bolt-ds-textSecondary max-w-[384px]">It may have moved, or the link is wrong.</p></div><div class="flex flex-col gap-4 items-center justify-center w-full sm:flex-row"><a href="https://support.bolt.new" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center font-medium shrink-0 min-w-0 max-w-full rounded-md focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm border border-bolt-ds-borderPrimary focus-visible:outline-bolt-ds-brandHover shadow-sm text-bolt-ds-textPrimary bg-transparent [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-bgHover focus-visible:bg-bolt-ds-bgHover gap-1 text-sm px-3 h-9 w-full sm:w-auto" type="button"><span class="i-ph:question flex items-center justify-center size-4"></span>Contact Support</a><a href="/" class="flex items-center justify-center font-medium shrink-0 min-w-0 max-w-full rounded-md focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm bg-bolt-ds-brand [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-brandHover shadow-sm text-bolt-ds-onNeutral focus-visible:outline-bolt-ds-brandHover gap-1 text-sm px-3 h-9 w-full sm:w-auto" type="button"><span class="i-heroicons:home flex items-center justify-center size-4"></span>Go home</a></div></div></div></div><script>((storageKey2, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({ key }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(storageKey2) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error7) {
+      console.error(error7);
+      sessionStorage.removeItem(storageKey2);
+    }
+  })("react-router-scroll-positions", null)</script><link rel="modulepreload" href="/assets/entry.client-DGxdQAc4.js"/><link rel="modulepreload" href="/assets/react-vendor-DFS8c0-u.js"/><link rel="modulepreload" href="/assets/app-version-TgcyjiPD.js"/><link rel="modulepreload" href="/assets/index.esm-D-kwiTE8.js"/><link rel="modulepreload" href="/assets/sentry.client-B583diln.js"/><link rel="modulepreload" href="/assets/breadcrumbs-BBDL7Ot9.js"/><link rel="modulepreload" href="/assets/Toast-DBjQyIqs.js"/><link rel="modulepreload" href="/assets/EmptyState-B4uq9z6n.js"/><link rel="modulepreload" href="/assets/constants-DUULTuzt.js"/><link rel="modulepreload" href="/assets/index-hujMIAWZ.js"/><link rel="modulepreload" href="/assets/bundle-mjs-5MOacnAK.js"/><link rel="modulepreload" href="/assets/root-CNPUBw1H.js"/><link rel="modulepreload" href="/assets/index-DkUFz90d.js"/><link rel="modulepreload" href="/assets/stripIndents-pFh2tRUP.js"/><link rel="modulepreload" href="/assets/compare-IkewsJlg-CZqd2GR-.js"/><link rel="modulepreload" href="/assets/client-only-DwosFz52.js"/><link rel="modulepreload" href="/assets/analytics-CCqpfHQz.js"/><link rel="modulepreload" href="/assets/registration-C_mZCv07.js"/><link rel="modulepreload" href="/assets/ErrorBoundary-nf1YnF8u.js"/><link rel="modulepreload" href="/assets/growthbook-1Nz0whI3.js"/><link rel="modulepreload" href="/assets/theme-DrfSRIs9.js"/><link rel="modulepreload" href="/assets/index-DcbV6Jek.js"/><link rel="modulepreload" href="/assets/login-XafVWru6.js"/><link rel="modulepreload" href="/assets/settings-CQiZzHIQ.js"/><link rel="modulepreload" href="/assets/Alert-DZyNlf_T.js"/><link rel="modulepreload" href="/assets/cello-attribution-Biq_3tnl.js"/><link rel="modulepreload" href="/assets/login-CmtXJQP0.js"/><link rel="modulepreload" href="/assets/preload-helper-2mcYJXfA.js"/><link rel="modulepreload" href="/assets/authFlowRoutes-0PvSSBdp.js"/><link rel="modulepreload" href="/assets/cello-config-BXEYGcji.js"/><link rel="modulepreload" href="/assets/queryClient-BKSf7pHs.js"/><link rel="modulepreload" href="/assets/QueryClientProvider-CWoSfmfP.js"/><link rel="modulepreload" href="/assets/urls-DIAei6Vp.js"/><link rel="modulepreload" href="/assets/database-tabs-DvZimEH-.js"/><link rel="modulepreload" href="/assets/index-DyxeRtzf.js"/><link rel="modulepreload" href="/assets/logger-BLqFwVWq.js"/><link rel="modulepreload" href="/assets/lifecycle-events-Cn4S9rt8.js"/><link rel="modulepreload" href="/assets/Header-B0QkzPuy.js"/><link rel="modulepreload" href="/assets/config-DG6yYR4n.js"/><link rel="modulepreload" href="/assets/classNames-BM_Cwa33.js"/><link rel="modulepreload" href="/assets/Logo-LdsYBklI.js"/><link rel="modulepreload" href="/assets/Link-CE2WXvQp.js"/><link rel="modulepreload" href="/assets/Avatar-BaixDSjP.js"/><link rel="modulepreload" href="/assets/store-dau9lu-f.js"/><link rel="modulepreload" href="/assets/index-ApXL96Jy.js"/><link rel="modulepreload" href="/assets/ai-ptijkNWq.js"/><link rel="modulepreload" href="/assets/index-DRXXH9YX.js"/><link rel="modulepreload" href="/assets/chat-started-DnFATCws.js"/><link rel="modulepreload" href="/assets/noops-TSSrUl-c.js"/><link rel="modulepreload" href="/assets/page-visibility-6WPc68Q5.js"/><link rel="modulepreload" href="/assets/util-C8pwnKxy.js"/><link rel="modulepreload" href="/assets/url-Cws4dZ32.js"/><link rel="modulepreload" href="/assets/index-BwBwXA76.js"/><link rel="modulepreload" href="/assets/text_line_stream-DtdTslVH.js"/><link rel="modulepreload" href="/assets/path-C47uQrgn.js"/><link rel="modulepreload" href="/assets/workDir-sxxUHiEw.js"/><link rel="modulepreload" href="/assets/chat-hooks-BAqhNcy-.js"/><link rel="modulepreload" href="/assets/download-rUGbmDk0.js"/><link rel="modulepreload" href="/assets/retry-DX5j_tUn.js"/><link rel="modulepreload" href="/assets/debounce-SvodA6N5.js"/><link rel="modulepreload" href="/assets/plural-DHUPwgOU.js"/><link rel="modulepreload" href="/assets/artifacts-DxQBXx56.js"/><link rel="modulepreload" href="/assets/description-CjYtOCyk.js"/><link rel="modulepreload" href="/assets/unreachable-dJ0nIuQ4.js"/><link rel="modulepreload" href="/assets/projects-C4tFyRTs.js"/><link rel="modulepreload" href="/assets/useQuery-DdV1-BIE.js"/><link rel="modulepreload" href="/assets/query-B76Wiy5M.js"/><link rel="modulepreload" href="/assets/useMutation-ORLi4bPc.js"/><link rel="modulepreload" href="/assets/mutation-BN55KS5u.js"/><link rel="modulepreload" href="/assets/openWithStackblitzAuth-D0TMuezl.js"/><link rel="modulepreload" href="/assets/menu-A2GXftJB.js"/><link rel="modulepreload" href="/assets/useProjectsOwnerContext-BYx03_vE.js"/><link rel="modulepreload" href="/assets/user-DYxDnlA7.js"/><link rel="modulepreload" href="/assets/useProjectRename-JoKXpwMk.js"/><link rel="modulepreload" href="/assets/animationVariants-Bv1Hcyis.js"/><link rel="modulepreload" href="/assets/easings-BDvTs3Wp.js"/><link rel="modulepreload" href="/assets/teamTemplates-C4oNwVfd.js"/><link rel="modulepreload" href="/assets/queryOptions-dfte2Pzq.js"/><link rel="modulepreload" href="/assets/mutationOptions-DuEc1oJu.js"/><link rel="modulepreload" href="/assets/version-history-DIpAZG-Z.js"/><link rel="modulepreload" href="/assets/LazyLoadWrapper-4XVlJP6o.js"/><link rel="modulepreload" href="/assets/LightRays.client-BSVgysmx.js"/><link rel="modulepreload" href="/assets/LightRaysCore-DtpFr9mX.js"/><link rel="modulepreload" href="/assets/LightRays.module-Bxd9H68z.js"/><link rel="modulepreload" href="/assets/LoadingDots-C8V_WRqk.js"/><link rel="modulepreload" href="/assets/BoltLogoSimple-DkgFDo4D.js"/><link rel="modulepreload" href="/assets/infiniteQueryBehavior-hB9lIGYN.js"/><link rel="modulepreload" href="/assets/_slug-BCzp-jG3.js"/><link rel="modulepreload" href="/assets/_slug._-Hwn9Upcm.js"/><script>window.__reactRouterContext = {"basename":"/","future":{"unstable_optimizeDeps":false,"v8_passThroughRequests":false,"v8_trailingSlashAwareDataRequests":false,"unstable_previewServerPrerendering":false,"v8_middleware":false,"v8_splitRouteModules":false,"v8_viteEnvironmentApi":false},"routeDiscovery":{"mode":"lazy","manifestPath":"/__manifest"},"ssr":true,"isSpaMode":false};window.__reactRouterContext.stream = new ReadableStream({start(controller){window.__reactRouterContext.streamController = controller;}}).pipeThrough(new TextEncoderStream());</script><script type="module" async="">;
+import * as route0 from "/assets/root-CNPUBw1H.js";
+import * as route1 from "/assets/_slug-BCzp-jG3.js";
+import * as route2 from "/assets/_slug._-Hwn9Upcm.js";
+  window.__reactRouterManifest = {
+  "entry": {
+    "module": "/assets/entry.client-DGxdQAc4.js",
+    "imports": [
+      "/assets/react-vendor-DFS8c0-u.js",
+      "/assets/app-version-TgcyjiPD.js",
+      "/assets/index.esm-D-kwiTE8.js",
+      "/assets/sentry.client-B583diln.js",
+      "/assets/breadcrumbs-BBDL7Ot9.js",
+      "/assets/Toast-DBjQyIqs.js",
+      "/assets/EmptyState-B4uq9z6n.js",
+      "/assets/constants-DUULTuzt.js",
+      "/assets/index-hujMIAWZ.js",
+      "/assets/bundle-mjs-5MOacnAK.js"
+    ],
+    "css": [
+      "/assets/EmptyState-scVdpVyl.css#"
+    ]
+  },
+  "routes": {
+    "root": {
+      "id": "root",
+      "path": "",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": true,
+      "module": "/assets/root-CNPUBw1H.js",
+      "imports": [
+        "/assets/react-vendor-DFS8c0-u.js",
+        "/assets/app-version-TgcyjiPD.js",
+        "/assets/index.esm-D-kwiTE8.js",
+        "/assets/sentry.client-B583diln.js",
+        "/assets/breadcrumbs-BBDL7Ot9.js",
+        "/assets/Toast-DBjQyIqs.js",
+        "/assets/EmptyState-B4uq9z6n.js",
+        "/assets/constants-DUULTuzt.js",
+        "/assets/index-hujMIAWZ.js",
+        "/assets/bundle-mjs-5MOacnAK.js",
+        "/assets/index-DkUFz90d.js",
+        "/assets/stripIndents-pFh2tRUP.js",
+        "/assets/compare-IkewsJlg-CZqd2GR-.js",
+        "/assets/client-only-DwosFz52.js",
+        "/assets/analytics-CCqpfHQz.js",
+        "/assets/registration-C_mZCv07.js",
+        "/assets/ErrorBoundary-nf1YnF8u.js",
+        "/assets/growthbook-1Nz0whI3.js",
+        "/assets/theme-DrfSRIs9.js",
+        "/assets/index-DcbV6Jek.js",
+        "/assets/login-XafVWru6.js",
+        "/assets/settings-CQiZzHIQ.js",
+        "/assets/Alert-DZyNlf_T.js",
+        "/assets/cello-attribution-Biq_3tnl.js",
+        "/assets/login-CmtXJQP0.js",
+        "/assets/preload-helper-2mcYJXfA.js",
+        "/assets/authFlowRoutes-0PvSSBdp.js",
+        "/assets/cello-config-BXEYGcji.js",
+        "/assets/queryClient-BKSf7pHs.js",
+        "/assets/QueryClientProvider-CWoSfmfP.js",
+        "/assets/urls-DIAei6Vp.js",
+        "/assets/database-tabs-DvZimEH-.js",
+        "/assets/index-DyxeRtzf.js",
+        "/assets/logger-BLqFwVWq.js",
+        "/assets/lifecycle-events-Cn4S9rt8.js",
+        "/assets/Header-B0QkzPuy.js",
+        "/assets/config-DG6yYR4n.js",
+        "/assets/classNames-BM_Cwa33.js",
+        "/assets/Logo-LdsYBklI.js",
+        "/assets/Link-CE2WXvQp.js",
+        "/assets/Avatar-BaixDSjP.js",
+        "/assets/store-dau9lu-f.js",
+        "/assets/index-ApXL96Jy.js",
+        "/assets/ai-ptijkNWq.js",
+        "/assets/index-DRXXH9YX.js",
+        "/assets/chat-started-DnFATCws.js",
+        "/assets/noops-TSSrUl-c.js",
+        "/assets/page-visibility-6WPc68Q5.js",
+        "/assets/util-C8pwnKxy.js",
+        "/assets/url-Cws4dZ32.js",
+        "/assets/index-BwBwXA76.js",
+        "/assets/text_line_stream-DtdTslVH.js",
+        "/assets/path-C47uQrgn.js",
+        "/assets/workDir-sxxUHiEw.js",
+        "/assets/chat-hooks-BAqhNcy-.js",
+        "/assets/download-rUGbmDk0.js",
+        "/assets/retry-DX5j_tUn.js",
+        "/assets/debounce-SvodA6N5.js",
+        "/assets/plural-DHUPwgOU.js",
+        "/assets/artifacts-DxQBXx56.js",
+        "/assets/description-CjYtOCyk.js",
+        "/assets/unreachable-dJ0nIuQ4.js",
+        "/assets/projects-C4tFyRTs.js",
+        "/assets/useQuery-DdV1-BIE.js",
+        "/assets/query-B76Wiy5M.js",
+        "/assets/useMutation-ORLi4bPc.js",
+        "/assets/mutation-BN55KS5u.js",
+        "/assets/openWithStackblitzAuth-D0TMuezl.js",
+        "/assets/menu-A2GXftJB.js",
+        "/assets/useProjectsOwnerContext-BYx03_vE.js",
+        "/assets/user-DYxDnlA7.js",
+        "/assets/useProjectRename-JoKXpwMk.js",
+        "/assets/animationVariants-Bv1Hcyis.js",
+        "/assets/easings-BDvTs3Wp.js",
+        "/assets/teamTemplates-C4oNwVfd.js",
+        "/assets/queryOptions-dfte2Pzq.js",
+        "/assets/mutationOptions-DuEc1oJu.js",
+        "/assets/version-history-DIpAZG-Z.js",
+        "/assets/LazyLoadWrapper-4XVlJP6o.js",
+        "/assets/LightRays.client-BSVgysmx.js",
+        "/assets/LightRaysCore-DtpFr9mX.js",
+        "/assets/LightRays.module-Bxd9H68z.js",
+        "/assets/LoadingDots-C8V_WRqk.js",
+        "/assets/BoltLogoSimple-DkgFDo4D.js",
+        "/assets/infiniteQueryBehavior-hB9lIGYN.js"
+      ],
+      "css": [
+        "/assets/EmptyState-scVdpVyl.css#",
+        "/assets/root-BDr8v2JC.css",
+        "/assets/login-D3NdLlkk.css#",
+        "/assets/LightRays-apN2LHcc.css#"
+      ]
+    },
+    "routes/$slug": {
+      "id": "routes/$slug",
+      "parentId": "root",
+      "path": ":slug",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "/assets/_slug-BCzp-jG3.js",
+      "imports": [
+        "/assets/react-vendor-DFS8c0-u.js"
+      ],
+      "css": []
+    },
+    "routes/$slug.$": {
+      "id": "routes/$slug.$",
+      "parentId": "routes/$slug",
+      "path": "*",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "/assets/_slug._-Hwn9Upcm.js",
+      "imports": [
+        "/assets/react-vendor-DFS8c0-u.js"
+      ],
+      "css": []
+    },
+    "routes/_chat": {
+      "id": "routes/_chat",
+      "parentId": "root",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "/assets/_chat-Dshb15Ox.js",
+      "imports": [
+        "/assets/preload-helper-2mcYJXfA.js",
+        "/assets/react-vendor-DFS8c0-u.js",
+        "/assets/index-DkUFz90d.js",
+        "/assets/client-only-DwosFz52.js",
+        "/assets/EmptyState-B4uq9z6n.js",
+        "/assets/AgentSwitchDialog-Cg1xMxjV.js",
+        "/assets/index-DcbV6Jek.js",
+        "/assets/Toast-DBjQyIqs.js",
+        "/assets/organizations-B-XNwEwJ.js",
+        "/assets/constants-DUULTuzt.js",
+        "/assets/useV1AgentRetired-m4ZsQlMd.js",
+        "/assets/MembersTable-BYW7kcOr.js",
+        "/assets/designSystemStepper-zDM7dWl0.js",
+        "/assets/persistentBanner-4G5KdMFK.js",
+        "/assets/team-CghZTPY6.js",
+        "/assets/classNames-BM_Cwa33.js",
+        "/assets/withSpinner-DGE-K6ya.js",
+        "/assets/analytics-CCqpfHQz.js",
+        "/assets/registration-C_mZCv07.js",
+        "/assets/settings-CQiZzHIQ.js",
+        "/assets/MemberDescription-DfMd2lu7.js",
+        "/assets/TransferProjectDialogContent-BUNIp32q.js",
+        "/assets/store-dau9lu-f.js",
+        "/assets/description-CjYtOCyk.js",
+        "/assets/site-protection-Bm94ydNc.js",
+        "/assets/useFeatureFlags-BjUJ-NRG.js",
+        "/assets/Alert-DZyNlf_T.js",
+        "/assets/useDesignSystemMutationHelpers-BgDM5eEx.js",
+        "/assets/useDesignSystemDraft-DyYFcnaS.js",
+        "/assets/useDesignSystems-BIYgHZEW.js",
+        "/assets/config-DG6yYR4n.js",
+        "/assets/urls-DIAei6Vp.js",
+        "/assets/menu-A2GXftJB.js",
+        "/assets/logger-BLqFwVWq.js",
+        "/assets/index-hujMIAWZ.js",
+        "/assets/useQuery-DdV1-BIE.js",
+        "/assets/StripeLogo-B38cJnFA.js",
+        "/assets/index-ApXL96Jy.js",
+        "/assets/queryOptions-dfte2Pzq.js",
+        "/assets/PricingSelector-BFzCGW48.js",
+        "/assets/format-FBMKGxjf.js",
+        "/assets/organizations-Cct6gh6F.js",
+        "/assets/retry-DX5j_tUn.js",
+        "/assets/LazyLoadWrapper-4XVlJP6o.js",
+        "/assets/IndexLayout-BQxawyl9.js",
+        "/assets/meta-CSEI1Gr2.js",
+        "/assets/noops-TSSrUl-c.js",
+        "/assets/bundle-mjs-5MOacnAK.js",
+        "/assets/app-version-TgcyjiPD.js",
+        "/assets/sentry.client-B583diln.js",
+        "/assets/index-DRXXH9YX.js",
+        "/assets/chat-started-DnFATCws.js",
+        "/assets/page-visibility-6WPc68Q5.js",
+        "/assets/cello-attribution-Biq_3tnl.js",
+        "/assets/util-C8pwnKxy.js",
+        "/assets/url-Cws4dZ32.js",
+        "/assets/index-BwBwXA76.js",
+        "/assets/chat-hooks-BAqhNcy-.js",
+        "/assets/agent-DLQxbdNA.js",
+        "/assets/growthbook-1Nz0whI3.js",
+        "/assets/SearchInput-B0olF-a6.js",
+        "/assets/debounce-SvodA6N5.js",
+        "/assets/ActionMenu-B3rzkx3R.js",
+        "/assets/useRequestUpgrade-Cc1znSCz.js",
+        "/assets/AccountDisplay-AsiqhGa4.js",
+        "/assets/Avatar-BaixDSjP.js",
+        "/assets/plan-info-BKYKcyi_.js",
+        "/assets/ClippedTextTooltip-BZMWvqpa.js",
+        "/assets/Pagination-Cd3A1WpJ.js",
+        "/assets/usePaginatedData-DWNLe8aJ.js",
+        "/assets/openWithStackblitzAuth-D0TMuezl.js",
+        "/assets/plural-DHUPwgOU.js",
+        "/assets/index-DyxeRtzf.js",
+        "/assets/theme-DrfSRIs9.js",
+        "/assets/lifecycle-events-Cn4S9rt8.js",
+        "/assets/confetti.module-W9IyG_S9.js",
+        "/assets/LoadingDots-C8V_WRqk.js",
+        "/assets/netlify-DdTwHWa8.js",
+        "/assets/QueryClientProvider-CWoSfmfP.js",
+        "/assets/useMutation-ORLi4bPc.js",
+        "/assets/mutation-BN55KS5u.js",
+        "/assets/projects-C4tFyRTs.js",
+        "/assets/sites-DAYwIqIZ.js",
+        "/assets/AccountSelectMenu-CyveSxMy.js",
+        "/assets/Link-CE2WXvQp.js",
+        "/assets/animationVariants-Bv1Hcyis.js",
+        "/assets/easings-BDvTs3Wp.js",
+        "/assets/domains-BVrci1_5.js",
+        "/assets/designSystems-BkBnxKHY.js",
+        "/assets/mutationOptions-DuEc1oJu.js",
+        "/assets/index-Bbfe3ZR4.js",
+        "/assets/query-B76Wiy5M.js",
+        "/assets/ai-ptijkNWq.js",
+        "/assets/text_line_stream-DtdTslVH.js",
+        "/assets/path-C47uQrgn.js",
+        "/assets/workDir-sxxUHiEw.js",
+        "/assets/download-rUGbmDk0.js",
+        "/assets/artifacts-DxQBXx56.js",
+        "/assets/unreachable-dJ0nIuQ4.js",
+        "/assets/Logo-LdsYBklI.js",
+        "/assets/Header-B0QkzPuy.js",
+        "/assets/login-CmtXJQP0.js",
+        "/assets/login-XafVWru6.js",
+        "/assets/BoltLogoSimple-DkgFDo4D.js",
+        "/assets/useProjectsOwnerContext-BYx03_vE.js",
+        "/assets/user-DYxDnlA7.js",
+        "/assets/useProjectRename-JoKXpwMk.js",
+        "/assets/teamTemplates-C4oNwVfd.js",
+        "/assets/version-history-DIpAZG-Z.js",
+        "/assets/index-KQgO_-kF.js",
+        "/assets/index-JRXZ0H6Y.js",
+        "/assets/index-BR8qDd1J.js",
+        "/assets/formatDistanceToNow-COqANUcj.js",
+        "/assets/constructNow-9vxuxKIZ.js",
+        "/assets/command-BdUc-NRs.js",
+        "/assets/AccountSelector.client-D2IwIMe8.js",
+        "/assets/teamPlans-Db9phX9H.js",
+        "/assets/github-BDnUX5Hh.js",
+        "/assets/cello-config-BXEYGcji.js",
+        "/assets/authFlowRoutes-0PvSSBdp.js",
+        "/assets/proctor-Dbcms9d6.js",
+        "/assets/init-ref-BMTlAF2a.js",
+        "/assets/Sheet-Cj1esrt6.js",
+        "/assets/subscription-C590ywkg.js",
+        "/assets/useInitializeUserStore-D257I7Q1.js",
+        "/assets/useApplicationOAuthError-BAw5TCUK.js"
+      ],
+      "css": [
+        "/assets/EmptyState-scVdpVyl.css#",
+        "/assets/login-D3NdLlkk.css#"
+      ]
+    },
+    "routes/_chat._index": {
+      "id": "routes/_chat._index",
+      "parentId": "routes/_chat",
+      "index": true,
+      "hasAction": false,
+      "hasLoader": false,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "/assets/_chat._index-75s6Clj0.js",
+      "imports": [
+        "/assets/react-vendor-DFS8c0-u.js",
+        "/assets/client-only-DwosFz52.js",
+        "/assets/Chat.client-D0ETzo8t.js",
+        "/assets/constants-DUULTuzt.js",
+        "/assets/index-DcbV6Jek.js",
+        "/assets/preload-helper-2mcYJXfA.js",
+        "/assets/settings-CQiZzHIQ.js",
+        "/assets/index-DRXXH9YX.js",
+        "/assets/logger-BLqFwVWq.js",
+        "/assets/index-hujMIAWZ.js",
+        "/assets/analytics-CCqpfHQz.js",
+        "/assets/app-version-TgcyjiPD.js",
+        "/assets/sentry.client-B583diln.js",
+        "/assets/index-DyxeRtzf.js",
+        "/assets/EmptyState-B4uq9z6n.js",
+        "/assets/bundle-mjs-5MOacnAK.js",
+        "/assets/Toast-DBjQyIqs.js",
+        "/assets/chat-started-DnFATCws.js",
+        "/assets/noops-TSSrUl-c.js",
+        "/assets/page-visibility-6WPc68Q5.js",
+        "/assets/index-CbycKnko.js",
+        "/assets/index-ApXL96Jy.js",
+        "/assets/ai-ptijkNWq.js",
+        "/assets/util-C8pwnKxy.js",
+        "/assets/url-Cws4dZ32.js",
+        "/assets/index-BwBwXA76.js",
+        "/assets/lifecycle-events-Cn4S9rt8.js",
+        "/assets/text_line_stream-DtdTslVH.js",
+        "/assets/path-C47uQrgn.js",
+        "/assets/workDir-sxxUHiEw.js",
+        "/assets/store-dau9lu-f.js",
+        "/assets/chat-hooks-BAqhNcy-.js",
+        "/assets/index-DkUFz90d.js",
+        "/assets/download-rUGbmDk0.js",
+        "/assets/retry-DX5j_tUn.js",
+        "/assets/urls-DIAei6Vp.js",
+        "/assets/debounce-SvodA6N5.js",
+        "/assets/plural-DHUPwgOU.js",
+        "/assets/artifacts-DxQBXx56.js",
+        "/assets/description-CjYtOCyk.js",
+        "/assets/unreachable-dJ0nIuQ4.js",
+        "/assets/index-JRXZ0H6Y.js",
+        "/assets/index-BR8qDd1J.js",
+        "/assets/stripIndents-pFh2tRUP.js",
+        "/assets/Markdown-CGkdVErq.js",
+        "/assets/Alert-DZyNlf_T.js",
+        "/assets/version-history-DIpAZG-Z.js",
+        "/assets/theme-DrfSRIs9.js",
+        "/assets/classNames-BM_Cwa33.js",
+        "/assets/index-B2AMVukF.js",
+        "/assets/easings-BDvTs3Wp.js",
+        "/assets/stripe-tm7B9iTw.js",
+        "/assets/withSpinner-DGE-K6ya.js",
+        "/assets/Link-CE2WXvQp.js",
+        "/assets/database-tabs-DvZimEH-.js",
+        "/assets/deploy.client-AgLypZGJ.js",
+        "/assets/UpgradeLink-BsXBzeo9.js",
+        "/assets/team-CghZTPY6.js",
+        "/assets/config-DG6yYR4n.js",
+        "/assets/openWithStackblitzAuth-D0TMuezl.js",
+        "/assets/cello-attribution-Biq_3tnl.js",
+        "/assets/organizations-B-XNwEwJ.js",
+        "/assets/useFreeTrialVariant-BLIHvhYP.js",
+        "/assets/growthbook-1Nz0whI3.js",
+        "/assets/SupabaseConfigurationDialog.client-Bd1T2MX2.js",
+        "/assets/command-BdUc-NRs.js",
+        "/assets/site-protection-Bm94ydNc.js",
+        "/assets/domains-BVrci1_5.js",
+        "/assets/useQuery-DdV1-BIE.js",
+        "/assets/QueryClientProvider-CWoSfmfP.js",
+        "/assets/query-B76Wiy5M.js",
+        "/assets/queryOptions-dfte2Pzq.js",
+        "/assets/useMutation-ORLi4bPc.js",
+        "/assets/mutation-BN55KS5u.js",
+        "/assets/csv-DNicIMRr.js",
+        "/assets/useApplications-wyz5raez.js",
+        "/assets/Header-B0QkzPuy.js",
+        "/assets/login-CmtXJQP0.js",
+        "/assets/login-XafVWru6.js",
+        "/assets/registration-C_mZCv07.js",
+        "/assets/LoadingDots-C8V_WRqk.js",
+        "/assets/BoltLogoSimple-DkgFDo4D.js",
+        "/assets/Logo-LdsYBklI.js",
+        "/assets/Avatar-BaixDSjP.js",
+        "/assets/projects-C4tFyRTs.js",
+        "/assets/menu-A2GXftJB.js",
+        "/assets/useProjectsOwnerContext-BYx03_vE.js",
+        "/assets/user-DYxDnlA7.js",
+        "/assets/useProjectRename-JoKXpwMk.js",
+        "/assets/animationVariants-Bv1Hcyis.js",
+        "/assets/teamTemplates-C4oNwVfd.js",
+        "/assets/mutationOptions-DuEc1oJu.js",
+        "/assets/LazyLoadWrapper-4XVlJP6o.js",
+        "/assets/UpgradePlanDialogs-Cti5i4Ty.js",
+        "/assets/ProPlansCard-Cq1ROd91.js",
+        "/assets/PricingSelector-BFzCGW48.js",
+        "/assets/format-FBMKGxjf.js",
+        "/assets/TeamPlansCard-C0sraFks.js",
+        "/assets/teamPlans-Db9phX9H.js",
+        "/assets/useFeatureFlags-BjUJ-NRG.js",
+        "/assets/tokens-stats-BWsF6vgl.js",
+        "/assets/formatDistanceToNow-COqANUcj.js",
+        "/assets/constructNow-9vxuxKIZ.js",
+        "/assets/parseISO-C_HjKyON.js",
+        "/assets/designSystemStepper-zDM7dWl0.js",
+        "/assets/useDesignSystemDraft-DyYFcnaS.js",
+        "/assets/AccountDisplay-AsiqhGa4.js",
+        "/assets/plan-info-BKYKcyi_.js",
+        "/assets/ClippedTextTooltip-BZMWvqpa.js",
+        "/assets/AccountSelectMenu-CyveSxMy.js",
+        "/assets/DesignSources-Csmnawg6.js",
+        "/assets/zod-BOxl0May.js",
+        "/assets/index.esm-DoGqQlne.js",
+        "/assets/index-DuQ2pUCS.js",
+        "/assets/getDefaultOptions-BkjKNS_P.js",
+        "/assets/TextArea-rzg2-qGQ.js",
+        "/assets/init-ref-BMTlAF2a.js",
+        "/assets/ProgressBar-DyYbW4ip.js",
+        "/assets/ActionMenu-B3rzkx3R.js",
+        "/assets/MemberDescription-DfMd2lu7.js",
+        "/assets/confetti.module-W9IyG_S9.js",
+        "/assets/useDesignSystems-BIYgHZEW.js",
+        "/assets/designSystems-BkBnxKHY.js",
+        "/assets/index-Bbfe3ZR4.js",
+        "/assets/ConfirmationDialog.client-BX-rM-hp.js",
+        "/assets/Prompt-CPMw9o2M.js",
+        "/assets/scroll-overflow-mask-qbmlsycm.js",
+        "/assets/useV1AgentRetired-m4ZsQlMd.js",
+        "/assets/agent-DLQxbdNA.js",
+        "/assets/index-7gO_P7I8.js",
+        "/assets/skill-frontmatter-DTYyFnVU.js",
+        "/assets/jszip.min-DhG_DPen.js",
+        "/assets/store-OUx78_yR.js",
+        "/assets/selectors-CWa3blmw.js",
+        "/assets/Sheet-Cj1esrt6.js",
+        "/assets/subscription-C590ywkg.js",
+        "/assets/useSelectedDesignSystem-BN8Oq_2p.js",
+        "/assets/mcp-known-servers-C1cI3xF0.js",
+        "/assets/mcp-D4HLsS9S.js",
+        "/assets/useEnsureSkillsLoaded-BjHsAnjm.js",
+        "/assets/persistentBanner-4G5KdMFK.js",
+        "/assets/import-figma-CO2Y9XNI.js",
+        "/assets/figma-Z9eq1avG.js",
+        "/assets/StripeLogo-B38cJnFA.js",
+        "/assets/Footer-BlANq9IK.js",
+        "/assets/DiscordSupportModal.client-CTdTcrRH.js",
+        "/assets/AgentSwitchDialog-Cg1xMxjV.js",
+        "/assets/utils-B8-fJJrx.js",
+        "/assets/useTrackOnMount-C2B265Jf.js",
+        "/assets/compare-IkewsJlg-CZqd2GR-.js",
+        "/assets/SearchInput-B0olF-a6.js",
+        "/assets/proctor-Dbcms9d6.js",
+        "/assets/differenceInDays-Cp7owLqy.js",
+        "/assets/isYesterday-gfcWJeP4.js",
+        "/assets/addDays-CqaFVKcq.js",
+        "/assets/TransferProjectDialogContent-BUNIp32q.js",
+        "/assets/netlify-DdTwHWa8.js",
+        "/assets/sites-DAYwIqIZ.js",
+        "/assets/sso-B66j0Kcf.js",
+        "/assets/AllProjects-CNsr67s4.js",
+        "/assets/FiltersBar-BGN0FsWG.js",
+        "/assets/Pagination-Cd3A1WpJ.js",
+        "/assets/RecentProjects-Df8xcfdk.js",
+        "/assets/github-BDnUX5Hh.js",
+        "/assets/cello-config-BXEYGcji.js",
+        "/assets/authFlowRoutes-0PvSSBdp.js",
+        "/assets/ErrorBoundary-nf1YnF8u.js",
+        "/assets/LightRays.client-BSVgysmx.js",
+        "/assets/LightRaysCore-DtpFr9mX.js",
+        "/assets/LightRays.module-Bxd9H68z.js",
+        "/assets/queryClient-BKSf7pHs.js",
+        "/assets/infiniteQueryBehavior-hB9lIGYN.js",
+        "/assets/useProjectCollaborationV2-BEth4DY0.js",
+        "/assets/usePaginatedData-DWNLe8aJ.js",
+        "/assets/sheetNavigation-B3KuRHxI.js",
+        "/assets/command-DsKLnxB7.js",
+        "/assets/index-KQgO_-kF.js",
+        "/assets/chart-DdzRD9Kn.js",
+        "/assets/serialize-messages-B2Ycr75j.js",
+        "/assets/index-BDJlJzHK.js",
+        "/assets/client-error-DejbHZY5.js",
+        "/assets/support-BAxtWPS-.js",
+        "/assets/theme-CaxmedKW.js",
+        "/assets/unpublish-project-Dp98898e.js",
+        "/assets/organizationMembers-B873SvzC.js",
+        "/assets/organizations-Cct6gh6F.js",
+        "/assets/breadcrumbs-BBDL7Ot9.js",
+        "/assets/mcp-oauth-listener--b-hiiIl.js",
+        "/assets/index-C_s9gSTi.js",
+        "/assets/prepare-body-BaZ3cpAp.js",
+        "/assets/usePaymentIntentStatusMessage-Pc_YX8Lb.js"
+      ],
+      "css": [
+        "/assets/Chat-C-pxZWHb.css#",
+        "/assets/EmptyState-scVdpVyl.css#",
+        "/assets/Markdown-DOeOYkw8.css#",
+        "/assets/login-D3NdLlkk.css#",
+        "/assets/Prompt-1LVg7nBt.css#",
+        "/assets/LightRays-apN2LHcc.css#"
+      ]
+    }
+  },
+  "url": "/assets/manifest-d25ae2a9.js",
+  "version": "d25ae2a9"
+};
+  window.__reactRouterRouteModules = {"root":route0,"routes/$slug":route1,"routes/$slug.$":route2};
+
+import("/assets/entry.client-DGxdQAc4.js");</script></body></html><!--$?--><template id="B:0"></template><!--/$--><div hidden id="S:0"><script>window.__reactRouterContext.streamController.enqueue("[{\"_1\":2,\"_3\":-5,\"_4\":5},\"loaderData\",{\"_6\":11},\"actionData\",\"errors\",{\"_6\":7},\"root\",[\"ErrorResponse\",8,9,10],\"Not Found\",404,\"Internal Server Error\",{\"_12\":-7,\"_13\":14,\"_15\":-5,\"_16\":17,\"_18\":19,\"_20\":21,\"_22\":23,\"_24\":23,\"_25\":26,\"_27\":28,\"_29\":30,\"_31\":32},\"banner\",\"growthbookPayload\",{\"_40\":41,\"_42\":43,\"_44\":45,\"_46\":47},\"user\",\"serverTime\",\"2026-08-07T13:55:44.393Z\",\"country\",\"HK\",\"cello\",{\"_33\":23,\"_34\":35,\"_36\":37,\"_38\":39},\"isMobileExperience\",false,\"sidebarCollapsed\",\"turnstileSiteKey\",\"0x4AAAAAABt_LacRZZp7J2A6\",\"swk\",\"ta1kDK49qdEDEfd8KYxI37mW0GPkLKn1\",\"gbk\",\"sdk-ye5YC6vB6I5SoRX\",\"ldk\",\"691f98ebed094f09c14ffbeb\",\"enabled\",\"configured\",true,\"scriptSrc\",\"https://assets.cello.so/app/latest/cello.js\",\"attributionScriptSrc\",\"https://assets.cello.so/attribution/latest/cello-attribution.js\",\"status\",200,\"features\",{\"_48\":49,\"_50\":51,\"_52\":53,\"_54\":55,\"_56\":57,\"_58\":59,\"_60\":61,\"_62\":63,\"_64\":65,\"_66\":67,\"_68\":69,\"_70\":71,\"_72\":73,\"_74\":75,\"_76\":77,\"_78\":79,\"_80\":81,\"_82\":83,\"_84\":85},\"experiments\",[],\"dateUpdated\",\"2026-08-07T12:36:49.479Z\",\"insta-teams\",{\"_86\":23},\"team-aware-switcher\",{\"_86\":23},\"plan-mode-enable\",{\"_86\":23},\"free-trial-popup\",{\"_86\":623},\"free-tier-min-messages-per-day\",{\"_86\":339,\"_88\":561},\"anthropic-model-provider\",{\"_86\":549,\"_88\":550},\"glm-5-1-provider\",{\"_86\":303},\"standard-model-routing\",{\"_86\":357,\"_88\":358},\"max-model-routing\",{\"_86\":318,\"_88\":319},\"harness\",{\"_86\":317},\"kimi-k2-6-provider\",{\"_86\":303},\"glm-5-2-provider\",{\"_86\":303,\"_88\":304},\"google_one_tap\",{\"_86\":23,\"_88\":290},\"send-button-exp\",{\"_86\":23},\"retention-coupon\",{\"_86\":188,\"_88\":189},\"gateway-route-limits\",{\"_86\":135,\"_88\":136},\"agent-activity\",{\"_86\":23,\"_88\":98},\"retire-v1-agent\",{\"_86\":23,\"_88\":95},\"multimodal-failback-model\",{\"_86\":87,\"_88\":89},\"defaultValue\",\"claude-sonnet-4-6\",\"rules\",[90],{\"_91\":92,\"_93\":94},\"id\",\"fr_msdu2ktp\",\"force\",\"gpt-5.6-luna\",[96],{\"_91\":97,\"_93\":35},\"fr_msdl4qvv\",[99,100],{\"_91\":105,\"_102\":106,\"_107\":108,\"_109\":91,\"_110\":111,\"_112\":113,\"_114\":111,\"_115\":116,\"_117\":118,\"_119\":120,\"_121\":122,\"_123\":124},{\"_91\":101,\"_102\":103,\"_93\":35},\"fr_mrxejxl3\",\"condition\",{\"_104\":35},\"internal\",\"fr_19g6mmrumev5o\",{\"_130\":23,\"_131\":132},\"coverage\",1,\"hashAttribute\",\"bucketVersion\",2,\"seed\",\"d531ee26-396d-4c26-8cc1-f2fe6635fe19\",\"hashVersion\",\"variations\",[23,35],\"weights\",[128,129],\"key\",\"agent-activity-ui\",\"meta\",[125,126],\"phase\",\"1\",{\"_119\":127},{\"_119\":124},\"0\",0.9,0.1,\"isPaid\",\"createdAt\",{\"_133\":134},\"$gt\",\"2026-07-27T00:00\",{\"_140\":186,\"_142\":187},[137],{\"_91\":138,\"_93\":139},\"fr_mrl5c69w\",{\"_140\":141,\"_142\":143},\"mode\",\"enforce\",\"routes\",{\"_144\":145,\"_146\":147,\"_148\":149,\"_150\":151,\"_152\":153,\"_154\":155,\"_156\":157,\"_158\":159,\"_160\":161,\"_162\":163,\"_164\":165,\"_166\":167,\"_168\":169,\"_170\":171},\"azure-foundry-oss/glm-5.2\",{\"_172\":185},\"azure-foundry-claude/claude-opus-5\",{\"_172\":174},\"azure-foundry-claude/claude-opus-4-6\",{\"_172\":184},\"azure-foundry-claude/claude-opus-4-7\",{\"_172\":183},\"azure-foundry-claude/claude-opus-4-8\",{\"_172\":182},\"azure-foundry-claude/claude-sonnet-4-6\",{\"_172\":181},\"baseten-dedicated/glm-5.2\",{\"_172\":180},\"baseten-mapi/glm-5.2\",{\"_172\":179},\"baseten-mapi/kimi-k3\",{\"_172\":178},\"bedrock/gpt-5.6-sol\",{\"_172\":177},\"bedrock/gpt-5.6-terra\",{\"_172\":177},\"bedrock/gpt-5.6-luna\",{\"_172\":176},\"bedrock/claude-fable-5\",{\"_172\":174,\"_175\":35},\"azure-foundry-claude/claude-fable-5\",{\"_172\":173},\"itpm\",1899000,9500000,\"disabled\",47500000,19000000,9000000,3000000,100000000,23749000,18999000,15199000,9499000,30000000,\"off\",{},{},[190,191],{\"_91\":249,\"_102\":250,\"_107\":108,\"_109\":91,\"_110\":108,\"_112\":251,\"_114\":111,\"_115\":252,\"_117\":253,\"_119\":254,\"_121\":255,\"_123\":127},{\"_91\":192,\"_102\":193,\"_107\":108,\"_109\":91,\"_110\":108,\"_112\":194,\"_114\":111,\"_115\":195,\"_117\":196,\"_119\":197,\"_121\":198,\"_123\":127},\"fr_19g6qmroxhvqj\",{\"_232\":233,\"_234\":235},\"dee60c23-8e9e-47f1-89ed-002cb94a8842\",[208,209,210,211,212],[207,207,207,207,207],\"cancellation-save-flow---pro-50-\",[199,200,201,202,203],{\"_119\":127},{\"_119\":124},{\"_119\":206},{\"_119\":205},{\"_119\":204},\"4\",\"3\",\"2\",0.2,{},{\"_213\":230,\"_215\":231,\"_217\":225,\"_219\":-5,\"_220\":228,\"_222\":229},{\"_213\":226,\"_215\":227,\"_217\":218,\"_219\":-5,\"_220\":228,\"_222\":229},{\"_213\":223,\"_215\":224,\"_217\":225,\"_219\":-5,\"_220\":221,\"_222\":-5},{\"_213\":214,\"_215\":216,\"_217\":218,\"_219\":-5,\"_220\":221,\"_222\":-5},\"coupon_id\",\"XhuX5u2E\",\"name\",\"33% off for 1 month\",\"percent_off\",33,\"amount_off\",\"duration\",\"once\",\"duration_in_months\",\"C0QNwnHJ\",\"50% off for 1 month\",50,\"DKuQ9DNy\",\"33% off for 3 months\",\"repeating\",3,\"lIpeHL6s\",\"50% off for 3 months\",\"tier\",{\"_236\":237},\"interval\",\"monthly\",\"$in\",[111,229,238,239,240,241,242,243,244,245,246,247,248],4,5,6,7,8,9,10,11,12,13,14,\"fr_19g6rmroxhp6r\",{\"_232\":108,\"_234\":235},\"2055f8c6-38b2-4cba-8c08-6a591c31de17\",[266,267,268,269,270,271,272],[265,265,265,265,265,265,265],\"cancellation-save-flow---pro-25\",[256,257,258,259,260,261,262],{\"_119\":127},{\"_119\":124},{\"_119\":206},{\"_119\":205},{\"_119\":204},{\"_119\":264},{\"_119\":263},\"6\",\"5\",0.14285714285714285,{},{\"_213\":288,\"_215\":289,\"_217\":-5,\"_219\":285,\"_220\":228,\"_222\":229},{\"_213\":286,\"_215\":287,\"_217\":-5,\"_219\":282,\"_220\":228,\"_222\":229},{\"_213\":283,\"_215\":284,\"_217\":-5,\"_219\":285,\"_220\":221,\"_222\":-5},{\"_213\":280,\"_215\":281,\"_217\":-5,\"_219\":282,\"_220\":221,\"_222\":-5},{\"_213\":277,\"_215\":278,\"_217\":279,\"_219\":-5,\"_220\":221,\"_222\":-5},{\"_213\":273,\"_215\":274,\"_217\":-5,\"_219\":275,\"_220\":276,\"_222\":-5},\"81No41IJ\",\"$9 Lite plan\",1600,\"forever\",\"UyfJr6Pl\",\"30-day pause\",100,\"3GAG19Cm\",\"$15 off for 1 month\",1500,\"uveycV0z\",\"$10 off for 1 month\",1000,\"CdP3CQfi\",\"$15 off for 3 months\",\"fMcAcvSX\",\"$10 off for 3 months\",[291],{\"_91\":292,\"_102\":293,\"_107\":108,\"_109\":91,\"_110\":108,\"_112\":294,\"_114\":111,\"_115\":295,\"_117\":296,\"_119\":297,\"_121\":298,\"_123\":127},\"fr_19g6rmr0xpfd9\",{\"_131\":301},\"b7ce3c6c-baae-4f18-a685-17a0f6d4cc49\",[23,35],[128,129],\"google-one-tap-anonymous-signup\",[299,300],{\"_119\":127},{\"_119\":124},{\"_302\":23},\"$exists\",\"baseten\",[305],{\"_91\":306,\"_107\":108,\"_109\":307,\"_112\":308,\"_114\":111,\"_115\":309,\"_117\":310,\"_119\":70,\"_121\":311,\"_123\":127},\"fr_mrupy094\",\"email\",\"ac26aa9d-fd12-46a7-99c2-f563139e92ec\",[303,316],[314,315],[312,313],{\"_119\":127},{\"_119\":124},0.68,0.32,\"foundry\",\"v3\",{\"_350\":351},[320],{\"_91\":321,\"_102\":322,\"_107\":108,\"_109\":91,\"_110\":246,\"_112\":323,\"_114\":111,\"_115\":324,\"_117\":325,\"_119\":326,\"_121\":327,\"_123\":328},\"fr_19g6smq178k71\",{\"_130\":35},\"ce4b8c4e-9ab7-494c-9071-70313598c609\",[342,343,344,345,346,347,348,349],[338,129,129,339,340,341,339,339],\"max-agent-underlying-model\",[329,330,331,332,333,334,335,336],\"13\",{\"_119\":127},{\"_119\":124},{\"_119\":206},{\"_119\":205},{\"_119\":204},{\"_119\":264},{\"_119\":263},{\"_119\":337},\"7\",0.72,0,0.05,0.03,{\"_350\":351},{\"_350\":356},{\"_350\":355},{\"_350\":354},{\"_350\":353},{\"_350\":352},{\"_350\":94},{\"_350\":351},\"default\",\"claude-opus-4-6\",\"gpt-5.6-terra\",\"gpt-5.6-sol\",\"claude-fable-5\",\"claude-opus-4-8\",\"claude-opus-4-7\",{\"_350\":381},[359,360,361],{\"_91\":502,\"_102\":503,\"_107\":108,\"_109\":91,\"_112\":504,\"_114\":111,\"_115\":505,\"_117\":506,\"_119\":507,\"_121\":508,\"_123\":127},{\"_91\":426,\"_102\":427,\"_107\":108,\"_109\":91,\"_112\":428,\"_114\":111,\"_115\":429,\"_117\":430,\"_119\":431,\"_121\":432,\"_123\":127},{\"_91\":362,\"_102\":363,\"_107\":108,\"_109\":91,\"_112\":364,\"_114\":111,\"_115\":365,\"_117\":366,\"_119\":367,\"_121\":368,\"_123\":127},\"fr_19g6mmseyueih\",{\"_384\":385},\"90c844db-350d-4033-9007-9c47f08eef75\",[376,377,378,379,380],[374,375,375,375,375],\"free-users_models-limits_tier-3-countries-2\",[369,370,371,372,373],{\"_119\":127},{\"_119\":124},{\"_119\":206},{\"_119\":204},{\"_119\":337},0.4,0.15,{\"_350\":381},{\"_350\":87,\"_383\":381},{\"_350\":382,\"_383\":381},{\"_350\":382,\"_383\":381},{\"_350\":381},\"zai-org/GLM-5.2\",\"claude-sonnet-5\",\"followup\",\"$and\",[386,387],{\"_130\":23,\"_131\":423},{\"_388\":389},\"$or\",[390,391],{\"_18\":407},{\"_18\":392},{\"_236\":393},[394,395,396,397,398,399,400,401,402,403,404,405,406],\"IS\",\"PR\",\"CY\",\"MT\",\"SI\",\"LU\",\"RE\",\"MV\",\"PY\",\"BA\",\"PA\",\"GN\",\"MU\",{\"_236\":408},[409,19,410,411,412,413,414,415,416,417,418,419,420,421,422],\"JO\",\"SG\",\"MA\",\"PH\",\"UG\",\"CN\",\"KE\",\"NG\",\"VN\",\"EG\",\"IN\",\"ID\",\"PK\",\"BD\",{\"_424\":425},\"$gte\",\"2026-08-04T00:00\",\"fr_19g6mmseyzwo2\",{\"_384\":447},\"a640ec35-d769-4b1b-b351-280ba4d042a8\",[441,442,443,444,445,446],[440,375,375,375,375,341],\"free-users_models-limits_tier-2-countries-2\",[433,434,435,436,437,438],{\"_119\":127},{\"_119\":124},{\"_119\":206},{\"_119\":204},{\"_119\":337},{\"_119\":439},\"8\",0.37,{\"_350\":381},{\"_350\":87,\"_383\":381},{\"_350\":382,\"_383\":381},{\"_350\":382,\"_383\":381},{\"_350\":381},{\"_350\":94,\"_383\":381},[448,449],{\"_130\":23,\"_131\":501},{\"_18\":450},{\"_236\":451},[452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500],\"UY\",\"RO\",\"JP\",\"HR\",\"CR\",\"AE\",\"EE\",\"KR\",\"KH\",\"KW\",\"SA\",\"XK\",\"NL\",\"RS\",\"DE\",\"GR\",\"PL\",\"CL\",\"ES\",\"DO\",\"FI\",\"QA\",\"LT\",\"JM\",\"PT\",\"TR\",\"IT\",\"TH\",\"LV\",\"MX\",\"OM\",\"GE\",\"UA\",\"TW\",\"ZA\",\"SN\",\"MY\",\"AR\",\"CD\",\"BH\",\"CI\",\"AM\",\"GT\",\"KZ\",\"EC\",\"TZ\",\"BR\",\"CO\",\"LB\",{\"_424\":425},\"fr_19g6nmsevj8j8\",{\"_384\":525},\"5037e190-f4ca-4348-8133-40d7a198532f\",[518,519,520,521,522,523,524],[516,517,517,517,517,341,517],\"free-users_models-limits_tier-1-countries\",[509,510,511,512,513,514,515],{\"_119\":127},{\"_119\":124},{\"_119\":206},{\"_119\":204},{\"_119\":337},{\"_119\":264},{\"_119\":263},0.42,0.11,{\"_350\":381},{\"_350\":87,\"_383\":381},{\"_350\":382,\"_383\":381},{\"_350\":382,\"_383\":381},{\"_350\":381},{\"_350\":94,\"_383\":381},{\"_350\":355,\"_383\":381},[526,527],{\"_130\":23,\"_131\":548},{\"_18\":528},{\"_236\":529},[530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547],\"NO\",\"CH\",\"AU\",\"US\",\"NZ\",\"DK\",\"BE\",\"GB\",\"CA\",\"AT\",\"FR\",\"SE\",\"IE\",\"HU\",\"SK\",\"IL\",\"CZ\",\"BG\",{\"_424\":425},\"anthropic\",[551],{\"_91\":552,\"_107\":108,\"_109\":307,\"_110\":247,\"_112\":58,\"_114\":111,\"_115\":553,\"_117\":554,\"_119\":58,\"_121\":555,\"_123\":127},\"fr_19g6rmpd0xd9h\",[549,560,316],[339,340,559],[556,557,558],{\"_119\":127},{\"_119\":124},{\"_119\":206},0.95,\"bedrock\",[562,563,564,565],{\"_91\":605,\"_102\":606,\"_107\":108,\"_109\":91,\"_112\":504,\"_114\":111,\"_115\":607,\"_117\":608,\"_119\":507,\"_121\":609,\"_123\":127},{\"_91\":588,\"_102\":589,\"_107\":108,\"_109\":91,\"_112\":428,\"_114\":111,\"_115\":590,\"_117\":591,\"_119\":431,\"_121\":592,\"_123\":127},{\"_91\":567,\"_102\":568,\"_107\":108,\"_109\":91,\"_112\":364,\"_114\":111,\"_115\":569,\"_117\":570,\"_119\":367,\"_121\":571,\"_123\":127},{\"_91\":566,\"_93\":229},\"fr_mpx0zzuq\",\"fr_19g6mmseyuxj6\",{\"_384\":577},[229,229,229,111,111],[374,375,375,375,375],[572,573,574,575,576],{\"_119\":127},{\"_119\":124},{\"_119\":206},{\"_119\":204},{\"_119\":337},[578,579],{\"_130\":23,\"_131\":587},{\"_388\":580},[581,582],{\"_18\":585},{\"_18\":583},{\"_236\":584},[394,395,396,397,398,399,400,401,402,403,404,405,406],{\"_236\":586},[409,19,410,411,412,413,414,415,416,417,418,419,420,421,422],{\"_424\":425},\"fr_19g6mmsez0jw3\",{\"_384\":599},[229,229,229,111,111,229],[440,375,375,375,375,341],[593,594,595,596,597,598],{\"_119\":127},{\"_119\":124},{\"_119\":206},{\"_119\":204},{\"_119\":337},{\"_119\":439},[600,601],{\"_130\":23,\"_131\":604},{\"_18\":602},{\"_236\":603},[452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500],{\"_424\":425},\"fr_19g6mmsevjshg\",{\"_384\":617},[229,229,229,111,111,229,111],[516,517,517,517,517,341,517],[610,611,612,613,614,615,616],{\"_119\":127},{\"_119\":124},{\"_119\":206},{\"_119\":204},{\"_119\":337},{\"_119\":264},{\"_119\":263},[618,619],{\"_130\":23,\"_131\":622},{\"_18\":620},{\"_236\":621},[530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547],{\"_424\":425},\"OFF\"]\n");</script><!--$?--><template id="B:1"></template><!--/$--></div><script>function $RC(a,b){a=document.getElementById(a);b=document.getElementById(b);b.parentNode.removeChild(b);if(a){a=a.previousSibling;var f=a.parentNode,c=a.nextSibling,e=0;do{if(c&&8===c.nodeType){var d=c.data;if("/$"===d)if(0===e)break;else e--;else"$"!==d&&"$?"!==d&&"$!"!==d||e++}d=c.nextSibling;f.removeChild(c);c=d}while(c);for(;b.firstChild;)f.insertBefore(b.firstChild,c);a.data="$";a._reactRetry&&a._reactRetry()}};$RC("B:0","S:0")</script><div hidden id="S:1"><script>window.__reactRouterContext.streamController.close();</script></div><script>$RC("B:1","S:1")</script>

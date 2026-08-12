@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://www.truefoundry.com/blog/mcp-vs-a2a",
+    "name": "MCP vs A2A: Compare Single-Agent & Multi-Agent Protocols",
+    "snippet": "Jun 12, 2026 — While both standards improve AI interoperability , MCP cannot fully replace A2A because they solve different architectural challenges. MCP is ... Read more",
+    "host_name": "www.truefoundry.com",
+    "rank": 0,
+    "date": "Jun 12, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.merge.dev/blog/mcp-vs-a2a",
+    "name": "A2A vs MCP: how they overlap and differ",
+    "snippet": "MCP facilitates integrations between LLMs and 3rd-party data sources, while A2A supports interoperability between AI agents.",
+    "host_name": "www.merge.dev",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/datascience/comments/1lq79vo/a_breakdown_of_a2a_mcp_and_agentic",
+    "name": "A Breakdown of A2A, MCP, and Agentic Interoperability",
+    "snippet": "A2A is designed to support \"discoverability\" with agent cards . MCP is designed to be explicitly pointed to. A2A is designed for asynchronous ... Read more",
+    "host_name": "www.reddit.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://onereach.ai/blog/guide-choosing-mcp-vs-a2a-protocols",
+    "name": "MCP vs A2A: Protocols for Multi-Agent Collaboration 2026",
+    "snippet": "Nov 12, 2025 — Combining MCP and A2A accelerates interoperability. MCP establishes structured data and tool connections , while A2A allows agents to exchange ... Read more",
+    "host_name": "onereach.ai",
+    "rank": 3,
+    "date": "Nov 12, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://jtanruan.medium.com/open-standards-for-ai-agents-a-technical-comparison-of-a2a-mcp-langchain-agent-protocol-and-482be1101ad9",
+    "name": "Open Standards for AI Agents - Medium",
+    "snippet": "This article provides a high-level technical comparison of five notable approaches: Agent2Agent ( A2A ), MCP (Model Context Protocol), LangChain's ... Read more",
+    "host_name": "jtanruan.medium.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.descope.com/blog/post/mcp-vs-a2a",
+    "name": "A2A vs. MCP",
+    "snippet": "MCP focuses on helping a single LLM or agent interact with external tools and data sources . A2A, on the other hand, facilitates communication and collaboration",
+    "host_name": "www.descope.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

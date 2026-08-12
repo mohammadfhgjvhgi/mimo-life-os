@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://github.com/langchain-ai/langgraph",
+    "name": "langchain-ai/langgraph: Build resilient agents.",
+    "snippet": "LangGraph is a low-level orchestration framework for building, managing, and deploying long-running, stateful agents.",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+    "name": "LangGraph overview - Docs by LangChain",
+    "snippet": "LangGraph is focused on the underlying capabilities important for agent orchestration : durable execution, streaming, human-in-the-loop, and more. One of ...",
+    "host_name": "docs.langchain.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.langchain.com/langsmith/studio",
+    "name": "LangSmith Studio - Docs by LangChain",
+    "snippet": "LangGraph CLI Studio is a specialized agent IDE that enables visualization, interaction, and debugging of agentic systems that implement the Agent Server API ...",
+    "host_name": "docs.langchain.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/langchain-ai/langchain",
+    "name": "langchain-ai/langchain: The agent engineering platform.",
+    "snippet": "LangChain is a framework for building agents and LLM-powered applications. It helps you chain together interoperable components and third-party integrations.  ...",
+    "host_name": "github.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://bhavikjikadara.medium.com/langgraph-studio-the-first-agent-ide-468132628274",
+    "name": "LangGraph Studio: The first agent IDE | by Bhavik Jikadara",
+    "snippet": "LangGraph Studio revolutionizes the way you develop LLM applications by offering tools to visualize, interact with, and debug complex agentic ...",
+    "host_name": "bhavikjikadara.medium.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/LangChain/comments/1lc2d7p/any_github_repo_to_refer_for_complex_ai_agents",
+    "name": "Any GitHub repo to refer for complex AI Agents built with",
+    "snippet": "Agent harness built with LangChain and LangGraph . Equipped with a planning tool, a filesystem backend, and the ability to spawn subagents",
+    "host_name": "www.reddit.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.langchain.com/langgraph",
+    "name": "LangGraph: Agent Orchestration Framework for Reliable AI",
+    "snippet": "Learn the basics of LangGraph in this LangChain Academy Course. You'll learn about how to leverage state, memory, human-in-the-loop, and more for your agents.",
+    "host_name": "www.langchain.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://adasci.org/blog/langgraph-studio-for-implementing-ai-agents-a-hands-on-guide",
+    "name": "LangGraph Studio: AI Agent IDE for Seamless Development",
+    "snippet": "Aug 5, 2024 — LangGraph Studio , the latest development from LangChain, is the first AI agent IDE that offers visualization, real-time debugging, iterative ...",
+    "host_name": "adasci.org",
+    "rank": 7,
+    "date": "Aug 5, 2024",
+    "favicon": ""
+  }
+]

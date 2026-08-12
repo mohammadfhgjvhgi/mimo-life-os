@@ -1,0 +1,169 @@
+# Craft Help Center
+
+## Docs
+
+- [Account and Subscription](https://craft-support.mintlify.app/en/account-and-subscription.md): Manage your Craft account, subscription plans, billing, and security settings.
+- [Billing](https://craft-support.mintlify.app/en/account-and-subscription/billing.md): Manage your Craft subscription, payment details, and invoices.
+- [Cancel Subscription](https://craft-support.mintlify.app/en/account-and-subscription/billing/cancel-subscription.md): Cancel your Craft subscription while keeping all your documents and data.
+- [Change Billing Email](https://craft-support.mintlify.app/en/account-and-subscription/billing/change-billing-email.md): Update the email address used for billing on your business subscription.
+- [Discount Codes](https://craft-support.mintlify.app/en/account-and-subscription/billing/discount-codes.md): Apply promotional discount codes to new Craft subscriptions.
+- [Download Invoices and Manage Billing](https://craft-support.mintlify.app/en/account-and-subscription/billing/invoices.md): Find your invoices, download receipts, and manage billing details for your Craft subscription.
+- [Payment Methods](https://craft-support.mintlify.app/en/account-and-subscription/billing/payment-methods.md): Understand the different payment methods available for Craft subscriptions.
+- [Update Payment Method](https://craft-support.mintlify.app/en/account-and-subscription/billing/update-payment-method.md): Change your payment details for your Craft subscription.
+- [Upgrade from App Store](https://craft-support.mintlify.app/en/account-and-subscription/billing/upgrade-from-app-store.md): Switch from an App Store subscription to a Craft web subscription.
+- [Upgrade from Plus to Family](https://craft-support.mintlify.app/en/account-and-subscription/billing/upgrade-plus-to-family.md): Learn how to upgrade your Craft Plus subscription to the Family plan through the web app.
+- [Upgrading Team from App Store Subscription](https://craft-support.mintlify.app/en/account-and-subscription/billing/upgrade-team-from-app-store.md): How to transition from an App Store team subscription to a web subscription.
+- [VAT Information](https://craft-support.mintlify.app/en/account-and-subscription/billing/vat-information.md): Add VAT ID or company details to your Craft invoice.
+- [Data and Security](https://craft-support.mintlify.app/en/account-and-subscription/data-and-security.md): Learn about data protection, privacy, and security features in Craft.
+- [Authentication and Login Security](https://craft-support.mintlify.app/en/account-and-subscription/data-and-security/authentication.md): Learn about login methods and app security features in Craft.
+- [How Your Data Is Stored](https://craft-support.mintlify.app/en/account-and-subscription/data-and-security/data-storage.md): Learn about Craft's data storage practices and security measures.
+- [Document Locking and Protection](https://craft-support.mintlify.app/en/account-and-subscription/data-and-security/document-locking.md): Learn about document locking options and access control in Craft.
+- [Encryption and Data Protection](https://craft-support.mintlify.app/en/account-and-subscription/data-and-security/encryption.md): Understand how Craft protects your data with encryption and security measures.
+- [Multiple Accounts](https://craft-support.mintlify.app/en/account-and-subscription/multiple-accounts.md): Manage and switch between multiple Craft accounts on the same device.
+- [Profile Settings](https://craft-support.mintlify.app/en/account-and-subscription/profile-settings.md): Customize your profile, preferences, and account settings in Craft.
+- [Change Account Name](https://craft-support.mintlify.app/en/account-and-subscription/profile-settings/change-account-name.md): Update how others see you when sharing documents or collaborating in spaces.
+- [Change Email Address](https://craft-support.mintlify.app/en/account-and-subscription/profile-settings/change-email-address.md): Update the email address associated with your Craft account.
+- [Change Profile Photo](https://craft-support.mintlify.app/en/account-and-subscription/profile-settings/change-profile-photo.md): Update your profile picture to personalize your workspace and help collaborators recognize you.
+- [Custom App Icon](https://craft-support.mintlify.app/en/account-and-subscription/profile-settings/custom-app-icon.md): Set a custom icon for the Craft app on macOS.
+- [Languages](https://craft-support.mintlify.app/en/account-and-subscription/profile-settings/languages.md): Craft supports multiple languages across different platforms for a localized experience.
+- [Login Code Issues](https://craft-support.mintlify.app/en/account-and-subscription/profile-settings/login-code-issues.md): Troubleshoot issues with receiving your Craft login code via email.
+- [Rename Spaces](https://craft-support.mintlify.app/en/account-and-subscription/profile-settings/rename-spaces.md): Change the name of your spaces to better organize your content.
+- [Storage and Recovery](https://craft-support.mintlify.app/en/account-and-subscription/storage-and-recovery.md): Manage storage limits and recover deleted documents and content.
+- [External Locations](https://craft-support.mintlify.app/en/account-and-subscription/storage-and-recovery/external-locations.md): Store your Craft documents locally on your device instead of in the cloud.
+- [Keep on Device Folders](https://craft-support.mintlify.app/en/account-and-subscription/storage-and-recovery/on-device-folders.md): Keep folders and their assets available offline on your device.
+- [Recovering Deleted Content](https://craft-support.mintlify.app/en/account-and-subscription/storage-and-recovery/recovering-deleted-content.md): Learn how to recover deleted documents, folders, pages, and blocks in Craft.
+- [Check Storage Usage](https://craft-support.mintlify.app/en/account-and-subscription/storage-and-recovery/storage-usage.md): Monitor your storage usage and space statistics, and understand storage limits.
+- [Document Version History](https://craft-support.mintlify.app/en/account-and-subscription/storage-and-recovery/version-history.md): Learn how Craft automatically backs up your documents and how to restore previous versions.
+- [Troubleshooting Version History](https://craft-support.mintlify.app/en/account-and-subscription/storage-and-recovery/version-history-troubleshooting.md): Common reasons why you might not see a previous version of your document.
+- [Subscription Plans](https://craft-support.mintlify.app/en/account-and-subscription/subscription-plans.md): Compare Craft subscription plans and choose the one that fits your needs.
+- [Education Plan](https://craft-support.mintlify.app/en/account-and-subscription/subscription-plans/education-plan.md): Free Craft access for students, faculty, and staff members of academic institutions.
+- [Plans and Pricing](https://craft-support.mintlify.app/en/account-and-subscription/subscription-plans/plans-and-pricing.md): Choose the Craft subscription plan that best fits your needs – from individual users to large teams.
+- [Pro vs Plus Comparison](https://craft-support.mintlify.app/en/account-and-subscription/subscription-plans/pro-vs-plus.md): Compare the legacy Pro plan with the new Plus plan features.
+- [Setapp](https://craft-support.mintlify.app/en/account-and-subscription/subscription-plans/setapp.md): Access Craft through your Setapp subscription with Plus tier features.
+- [Team Plans and Free Trial](https://craft-support.mintlify.app/en/account-and-subscription/subscription-plans/team-plans.md): Explore Craft's team plans, try them free for 15 days, and find the right plan for your team.
+- [AI Assistant](https://craft-support.mintlify.app/en/ai-assistant.md): Use AI to understand and work with your content using natural language, powered by advanced models and on-device intelligence.
+- [Connect to AI Providers](https://craft-support.mintlify.app/en/ai-assistant/bring-your-own-key.md): Use your own OpenAI or Anthropic credentials with Craft Assistant instead of Craft AI credits.
+- [Custom Prompts](https://craft-support.mintlify.app/en/ai-assistant/custom-prompts.md): Create reusable AI instructions for consistent, personalized results tailored to your workflow.
+- [Document Review](https://craft-support.mintlify.app/en/ai-assistant/document-review.md): Get AI-powered feedback on document structure, clarity, and completeness.
+- [Editing with Craft Assistant](https://craft-support.mintlify.app/en/ai-assistant/editing.md): Let the Assistant make changes directly in your documents — add content, apply styling, create subpages, and more.
+- [Help Agent](https://craft-support.mintlify.app/en/ai-assistant/help-agent.md): Get instant answers about Craft features without leaving the app or breaking your workflow.
+- [Choosing AI Models](https://craft-support.mintlify.app/en/ai-assistant/models.md): Select the right AI model for speed, capability, and AI usage based on your task.
+- [Image and PDF Support](https://craft-support.mintlify.app/en/ai-assistant/ocr-images-pdfs.md): Use AI to summarize, extract text from, and ask questions about images and PDF attachments.
+- [Smart Search](https://craft-support.mintlify.app/en/ai-assistant/smart-search.md): Use AI to search your space with natural language queries and semantic understanding.
+- [Usage & Limits](https://craft-support.mintlify.app/en/ai-assistant/usage.md): Understand your AI usage quota, what's included in your plan, and how to get more when you need it.
+- [Using Craft Assistant](https://craft-support.mintlify.app/en/ai-assistant/using.md): Learn how to start conversations and work with the Assistant to understand and transform your content.
+- [Craft in Action](https://craft-support.mintlify.app/en/craft-in-action.md): Discover how people from all walks of life use Craft to organize their work, manage projects, and bring their ideas to life. From podcasters to doctors, filmmakers to musicians—see the creative ways our community uses Craft every day.
+- [Import and Export](https://craft-support.mintlify.app/en/import-and-export.md): Move your content in and out of Craft with support for multiple formats and platforms.
+- [Export](https://craft-support.mintlify.app/en/import-and-export/export.md): Export your Craft documents to various formats for backup and sharing.
+- [Export to PDF, Word, and Markdown](https://craft-support.mintlify.app/en/import-and-export/export/document.md): Export individual documents to PDF, Word, Markdown, and other formats.
+- [Folder](https://craft-support.mintlify.app/en/import-and-export/export/folder.md): Export entire folders with all documents and nested content.
+- [Space](https://craft-support.mintlify.app/en/import-and-export/export/space.md): Export complete spaces for backup or migration to another Craft account.
+- [Import](https://craft-support.mintlify.app/en/import-and-export/import.md): Import your notes and documents from other apps and file formats into Craft.
+- [Import from Anytype](https://craft-support.mintlify.app/en/import-and-export/import/anytype.md): Import your notes and content from Anytype into Craft.
+- [Import from Apple Notes](https://craft-support.mintlify.app/en/import-and-export/import/apple-notes.md): Export your notes from Apple Notes as Markdown and bring them into Craft.
+- [Import from Bear](https://craft-support.mintlify.app/en/import-and-export/import/bear.md): Import your notes from Bear into Craft with markdown or TextBundle.
+- [Import from Evernote](https://craft-support.mintlify.app/en/import-and-export/import/evernote.md): Import your Evernote notebooks into Craft by exporting them from the Evernote desktop app and uploading the files.
+- [Import from Google Docs](https://craft-support.mintlify.app/en/import-and-export/import/google-docs.md): Import your Google Docs directly into Craft by signing in with your Google account and selecting the documents you want to bring over.
+- [Import from Notion](https://craft-support.mintlify.app/en/import-and-export/import/notion.md): Import your Notion workspace, pages, and databases directly into Craft — no file export needed.
+- [Import from Obsidian](https://craft-support.mintlify.app/en/import-and-export/import/obsidian.md): Import your vault from Obsidian into Craft with backlinks and attachments.
+- [Import from OneNote](https://craft-support.mintlify.app/en/import-and-export/import/onenote.md): Import your notebooks from Microsoft OneNote into Craft.
+- [Import from Roam Research](https://craft-support.mintlify.app/en/import-and-export/import/roam-research.md): Import your graph from Roam Research into Craft with backlinks.
+- [Import TextBundle Files](https://craft-support.mintlify.app/en/import-and-export/import/textbundle.md): Import TextBundle and TextPack files into Craft with images and attachments.
+- [Craft Documentation](https://craft-support.mintlify.app/en/index.md): Learn how to use Craft – the powerful, beautiful tool for creating documents, managing tasks, and organizing your work and life.
+- [Integrate](https://craft-support.mintlify.app/en/integrate.md): Connect Craft with other tools and services to enhance your workflow.
+- [Craft API](https://craft-support.mintlify.app/en/integrate/api.md): Connect Craft to external tools, automate workflows, and build custom integrations with the Craft API.
+- [Apple Shortcuts](https://craft-support.mintlify.app/en/integrate/apple-shortcuts.md): Automate tasks and create custom workflows with Apple Shortcuts integration.
+- [Back Tap Integration](https://craft-support.mintlify.app/en/integrate/apple-shortcuts/back-tap.md): Use iOS Back Tap to open Craft spaces or documents by tapping the back of your iPhone.
+- [Apple Calendar integration](https://craft-support.mintlify.app/en/integrate/calendar.md): Connect Apple Calendar to Craft on Mac so events from Apple Calendar, Google Calendar, and Outlook sync into the Calendar view. Not available on Windows or Web.
+- [URL Scheme](https://craft-support.mintlify.app/en/integrate/deeplinks.md): Use the Craft URL scheme to automate workflows and integrate with other apps.
+- [Email to Craft](https://craft-support.mintlify.app/en/integrate/email-to-craft.md): Forward emails directly to Craft to capture ideas and turn messages into tasks or documents.
+- [MCP](https://craft-support.mintlify.app/en/integrate/mcp.md): Connect Craft with AI assistants and developer tools using the Model Context Protocol.
+- [MCP Limitations with ChatGPT](https://craft-support.mintlify.app/en/integrate/mcp/chatgpt-limitations.md): Understand ChatGPT-specific limitations when using Craft MCP connections.
+- [MCP Security](https://craft-support.mintlify.app/en/integrate/mcp/security.md): Understand the multi-layered security protecting your Craft MCP connections.
+- [Readwise](https://craft-support.mintlify.app/en/integrate/readwise.md): Sync your reading highlights from Readwise automatically into Craft collections.
+- [Reminders](https://craft-support.mintlify.app/en/integrate/reminders.md): Import tasks from Apple Reminders into Craft to manage them alongside your notes.
+- [Web Clipper](https://craft-support.mintlify.app/en/integrate/web-clipper.md): Save web content to Craft with the browser extension for Chrome, Safari, and Firefox.
+- [Widgets](https://craft-support.mintlify.app/en/integrate/widgets.md): Add Craft widgets to your Home Screen, desktop, or Lock Screen for quick access to documents, recent work, and tasks.
+- [Introduction](https://craft-support.mintlify.app/en/introduction.md): Get started with Craft and learn the basics of documents, navigation, and essential features.
+- [Account Setup](https://craft-support.mintlify.app/en/introduction/account-setup.md): Create your Craft account, set up spaces, and get started with your profile.
+- [Creating Your Account](https://craft-support.mintlify.app/en/introduction/account-setup/create-account.md): Get started with Craft by creating an account using email, Apple ID, or Google.
+- [Deleting Your Account](https://craft-support.mintlify.app/en/introduction/account-setup/delete-account.md): Permanently delete your Craft account and all associated data.
+- [Working with Spaces](https://craft-support.mintlify.app/en/introduction/account-setup/spaces.md): Create, customize, and manage your Craft Spaces to organize your content.
+- [Craft 101 Video Series](https://craft-support.mintlify.app/en/introduction/craft-101.md): Learn Craft through our comprehensive video tutorial series – from getting started to advanced features.
+- [Documents, Pages, and Blocks](https://craft-support.mintlify.app/en/introduction/documents.md): Understand the building blocks of Craft and how they create flexible document structures.
+- [Managing Documents](https://craft-support.mintlify.app/en/introduction/documents/manage.md): Create, organize, delete, and share your Craft documents across platforms.
+- [Contact Support or Report a Bug](https://craft-support.mintlify.app/en/introduction/help.md): How to contact Craft support, report a bug, share feedback, or get in touch with a human from our team.
+- [Mobile Features](https://craft-support.mintlify.app/en/introduction/mobile-features.md): Discover iOS and iPadOS features designed for touch-first editing and mobile productivity.
+- [iOS Gestures](https://craft-support.mintlify.app/en/introduction/mobile-features/gestures.md): Use intuitive gestures on iPhone and iPad to select, indent, and navigate faster.
+- [Quick Actions](https://craft-support.mintlify.app/en/introduction/mobile-features/quick-actions.md): Quickly capture documents, tasks, and daily notes with the iOS Quick Add button.
+- [Move to Craft](https://craft-support.mintlify.app/en/introduction/move-to-craft.md): Migrate your notes and documents from other apps to Craft seamlessly.
+- [Navigation](https://craft-support.mintlify.app/en/introduction/navigation.md): Master essential features for navigating Craft and working with your documents.
+- [Comments and Notifications](https://craft-support.mintlify.app/en/introduction/navigation/comments.md): Collaborate with comments and stay informed with notifications on shared documents.
+- [Tab Management](https://craft-support.mintlify.app/en/introduction/navigation/tabs.md): Manage tabs and navigate between open documents on macOS and iPad.
+- [Working Offline](https://craft-support.mintlify.app/en/introduction/offline.md): Work on your Craft documents without an internet connection. Offline editing works across all platforms with automatic syncing.
+- [Platforms and Availability](https://craft-support.mintlify.app/en/introduction/platforms.md): Craft is available on macOS, iOS, Windows, Web app, and Android - work seamlessly across all your devices.
+- [Keyboard Shortcuts](https://craft-support.mintlify.app/en/introduction/shortcuts.md): Master keyboard shortcuts to navigate, edit, and organize your work faster in Craft.
+- [Slash Menu](https://craft-support.mintlify.app/en/introduction/slash-menu.md): Use the slash menu (/) to add content, format blocks, insert media, manage tasks, and access editor actions without leaving the keyboard.
+- [Troubleshooting](https://craft-support.mintlify.app/en/introduction/troubleshooting.md): Solutions to common issues with sync, performance, login, connectivity, storage, and platform-specific problems in Craft.
+- [Organize and Find](https://craft-support.mintlify.app/en/organize-and-find.md): Learn powerful ways to organize, search, and connect your documents in Craft.
+- [Collections](https://craft-support.mintlify.app/en/organize-and-find/collections.md): Organize your content using database-style tables and visual gallery cards inside any document or page.
+- [Gallery View for Collections](https://craft-support.mintlify.app/en/organize-and-find/collections/gallery-view.md): Display your Collection entries as visual cards with image previews. Ideal for portfolios, media libraries, and visual project tracking in Craft.
+- [Using Collections on iOS](https://craft-support.mintlify.app/en/organize-and-find/collections/ios-guide.md): Create and manage Collections on iPhone and iPad — including Gallery View, touch gestures, and fullscreen mode.
+- [Kanban View for Collections](https://craft-support.mintlify.app/en/organize-and-find/collections/kanban-view.md): Organize your Collection as a Kanban board with draggable cards grouped into columns. Ideal for tracking workflows, task status, and project stages in Craft.
+- [Reordering Fields and Columns](https://craft-support.mintlify.app/en/organize-and-find/collections/reordering.md): Customize how your Collection fields and columns appear in different views.
+- [Collection Views](https://craft-support.mintlify.app/en/organize-and-find/collections/views.md): Create Table, Gallery, and Kanban views of your data with sorting, filtering, and grouping. Switch between views instantly.
+- [Links and Backlinks](https://craft-support.mintlify.app/en/organize-and-find/linking.md): Create connections between documents and blocks with internal links, and discover relationships with automatic backlinks.
+- [Deeplinks](https://craft-support.mintlify.app/en/organize-and-find/linking/deeplinks.md): Create direct links to documents, pages, or specific blocks that open directly in the Craft app.
+- [Embedding Google Maps](https://craft-support.mintlify.app/en/organize-and-find/linking/embedding-maps.md): Embed interactive Google Maps links directly into your Craft documents.
+- [Search and Quick Open](https://craft-support.mintlify.app/en/organize-and-find/search.md): Find content across your space with powerful search and navigate faster with Quick Open.
+- [Search in a Document](https://craft-support.mintlify.app/en/organize-and-find/search/in-document.md): Find and replace text within a specific document and its subpages.
+- [Quick Open](https://craft-support.mintlify.app/en/organize-and-find/search/quick-open.md): Navigate your workspace faster with keyboard-driven search for documents, pages, and daily notes.
+- [Spaces](https://craft-support.mintlify.app/en/organize-and-find/spaces.md): Understand what Spaces are in Craft and how to use them to separate your projects, contexts, and teams.
+- [Tags](https://craft-support.mintlify.app/en/organize-and-find/tags.md): Use tags to categorize and quickly find related documents across your spaces.
+- [Teams](https://craft-support.mintlify.app/en/organize-and-find/teams.md): Collaborate with team members and manage shared team spaces.
+- [Plan and Do](https://craft-support.mintlify.app/en/plan-and-do.md): Stay organized and productive with tasks, calendar, daily notes, and reminders.
+- [Calendar view](https://craft-support.mintlify.app/en/plan-and-do/calendar.md): Use the Calendar view in Craft's sidebar to see daily notes, scheduled tasks, and synced events (Apple Calendar, Google Calendar, Outlook) for any day.
+- [Daily notes](https://craft-support.mintlify.app/en/plan-and-do/daily-notes.md): Capture thoughts and plans with automatically organized daily pages.
+- [Reminders](https://craft-support.mintlify.app/en/plan-and-do/reminders.md): Create, schedule, and manage Craft reminders for tasks, blocks, and standalone follow-ups.
+- [Tasks](https://craft-support.mintlify.app/en/plan-and-do/tasks.md): Manage every task across your documents from one place. Capture, schedule, organize, and complete tasks with the Inbox, Today, Upcoming, and All tabs.
+- [Completing & editing tasks](https://craft-support.mintlify.app/en/plan-and-do/tasks/completing-and-editing-tasks.md): Move quickly through your list. Select and bulk edit many tasks at once, complete or cancel tasks, and review everything you have finished in the Logbook.
+- [Creating tasks](https://craft-support.mintlify.app/en/plan-and-do/tasks/creating-tasks.md): Capture tasks the moment they come to mind. Use the Inbox and the quick ways to create a task anywhere in Craft.
+- [Dates, deadlines & reminders](https://craft-support.mintlify.app/en/plan-and-do/tasks/dates-deadlines-and-reminders.md): Give tasks a schedule, a deadline, and a reminder, and set up tasks that repeat. Learn how schedules and deadlines differ and how recurring tasks work.
+- [The Tasks views](https://craft-support.mintlify.app/en/plan-and-do/tasks/tasks-views.md): Move through your tasks by view. The Inbox, Today, Upcoming, and All tabs each show your tasks from a different angle, with their own sorting, grouping, and display options.
+- [Share and Publish](https://craft-support.mintlify.app/en/share-and-publish.md): Share documents with collaborators and publish to the web with custom domains, analytics, and branding.
+- [Publishing Documents](https://craft-support.mintlify.app/en/share-and-publish/publish.md): Make your documents publicly accessible on the web with customizable URLs, security options, and engagement controls.
+- [Analytics](https://craft-support.mintlify.app/en/share-and-publish/publish/analytics.md): Track views, engagement, and audience insights for your published documents with privacy-focused analytics.
+- [Branding](https://craft-support.mintlify.app/en/share-and-publish/publish/branding.md): Display your logo on published pages to create a professional, branded experience for readers.
+- [Domains](https://craft-support.mintlify.app/en/share-and-publish/publish/domains.md): Set up your craft.me link or connect your own custom domain to published Craft documents for professional branding and memorable URLs.
+- [Sharing Documents](https://craft-support.mintlify.app/en/share-and-publish/share.md): Invite collaborators to view and edit documents with flexible access controls and real-time collaboration.
+- [Team Collaboration](https://craft-support.mintlify.app/en/share-and-publish/share/teams.md): Add and manage team members across your Craft team and individual spaces.
+- [Write and Edit](https://craft-support.mintlify.app/en/write-and-edit.md): Create beautiful, structured documents with powerful writing and editing tools.
+- [Blocks and Pages](https://craft-support.mintlify.app/en/write-and-edit/blocks-and-pages.md): Learn how Craft's block-based structure lets you build documents that grow with your ideas.
+- [Deleting Blocks](https://craft-support.mintlify.app/en/write-and-edit/blocks-and-pages/delete-blocks.md): Remove blocks, images, and other content from your Craft documents.
+- [Indent Depth Limits](https://craft-support.mintlify.app/en/write-and-edit/blocks-and-pages/indent-limits.md): Understanding the 5-level indentation limit designed for mobile readability and document structure.
+- [Toggles](https://craft-support.mintlify.app/en/write-and-edit/blocks-and-pages/toggles.md): Learn how to use toggles to collapse and expand content blocks, keeping your documents clean and organized.
+- [Code](https://craft-support.mintlify.app/en/write-and-edit/code.md): Add code blocks with syntax highlighting and formatting options.
+- [Drawings](https://craft-support.mintlify.app/en/write-and-edit/drawings.md): Add sketches, use shape recognition, and create drawings in your documents.
+- [Files and Links](https://craft-support.mintlify.app/en/write-and-edit/files-and-links.md): Attach files, create links, and embed rich link previews in your documents.
+- [Formatting](https://craft-support.mintlify.app/en/write-and-edit/formatting.md): Master text formatting in Craft with the formatting toolbar, slash menu, markdown, and keyboard shortcuts.
+- [Adding Dates](https://craft-support.mintlify.app/en/write-and-edit/formatting/dates.md): Insert date badges that link to daily notes for quick time references in your documents.
+- [Inserting Emoji](https://craft-support.mintlify.app/en/write-and-edit/formatting/emoji.md): Add emoji to document titles and text blocks using standard emoji codes.
+- [Find and Replace](https://craft-support.mintlify.app/en/write-and-edit/formatting/find-replace.md): Quickly find and replace text across your documents to fix typos or update content.
+- [Markdown Shortcuts](https://craft-support.mintlify.app/en/write-and-edit/formatting/markdown-shortcuts.md): Use markdown-style shortcuts to format text and create blocks faster while writing.
+- [Spell Check and Corrections](https://craft-support.mintlify.app/en/write-and-edit/formatting/spell-check.md): Configure spell checking in 34 languages for your documents in Craft.
+- [Subscripts and Superscripts](https://craft-support.mintlify.app/en/write-and-edit/formatting/subscript-superscript.md): Add subscript and superscript formatting using inline formulas or shortcuts.
+- [Surround Selection](https://craft-support.mintlify.app/en/write-and-edit/formatting/surround-selection.md): Quickly wrap selected text with parentheses, brackets, or braces.
+- [Image Playground](https://craft-support.mintlify.app/en/write-and-edit/image-playground.md): Generate AI images directly in your documents using Apple's Image Playground.
+- [Math Formulas](https://craft-support.mintlify.app/en/write-and-edit/math-formulas.md): Write mathematical equations using LaTeX notation — inline within text or as standalone formula blocks.
+- [Media](https://craft-support.mintlify.app/en/write-and-edit/media.md): Add and manage images, videos, audio files, and rich media content in your documents.
+- [Mermaid Diagrams](https://craft-support.mintlify.app/en/write-and-edit/mermaid-diagrams.md): Use Mermaid to create flowcharts, sequence diagrams, ER diagrams, and other text-based diagrams in Craft.
+- [Styling](https://craft-support.mintlify.app/en/write-and-edit/styling.md): Make your documents visually stunning with customizable fonts, colors, backgrounds, and cover images.
+- [App Styles](https://craft-support.mintlify.app/en/write-and-edit/styling/app-styles.md): Extend your document's styling to the app interface for a more immersive and cohesive experience.
+- [Cards](https://craft-support.mintlify.app/en/write-and-edit/styling/cards.md): Transform pages into visually appealing cards with custom backgrounds, colors, images, and preview styles.
+- [Cover Images](https://craft-support.mintlify.app/en/write-and-edit/styling/cover-images.md): Add and customize cover images for your documents with cropping, positioning, and aspect ratio options.
+- [Default Page Styles](https://craft-support.mintlify.app/en/write-and-edit/styling/default-styles.md): Set your preferred page style as the default for all new documents.
+- [Backdrops, Colors & Separators](https://craft-support.mintlify.app/en/write-and-edit/styling/quick-guide.md): Customize backdrops, document and text colors, fonts, and Washi tape separators, and browse the Styles Gallery for preset looks.
+- [Tables](https://craft-support.mintlify.app/en/write-and-edit/tables.md): Create and format tables, use formulas, sort data, and organize information effectively in Craft.
+- [Templates](https://craft-support.mintlify.app/en/write-and-edit/templates.md): Use Craft templates to start recurring documents faster, convert existing documents into templates, and keep your own repeatable workflows consistent.
+- [Version History](https://craft-support.mintlify.app/en/write-and-edit/version-history.md): Track changes, restore previous versions, and manage document history.
+- [Whiteboards](https://craft-support.mintlify.app/en/write-and-edit/whiteboards.md): Create infinite canvas whiteboards for visual thinking, diagramming, and freeform collaboration.

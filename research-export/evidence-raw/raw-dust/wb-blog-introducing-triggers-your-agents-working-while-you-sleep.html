@@ -1,0 +1,88 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><script id="datadog-rum" data-nscript="beforeInteractive">
+             (function(h,o,u,n,d) {
+               h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+               d=o.createElement(u);d.async=1;d.src=n
+               n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+             })(window,document,'script','https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js','DD_RUM')
+             '' && window.DD_RUM.onReady(function() {
+               window.DD_RUM.init({
+                 clientToken: '',
+                 applicationId: '5e9735e7-87c8-4093-b09f-49d708816bfd',
+                 site: 'datadoghq.eu',
+                 service: 'front-browser',
+                 env: 'prod',
+                 version: 'fb14b48',
+                 allowedTracingUrls: [
+                   "https://dust.tt",
+                   "https://eu.dust.tt",
+                   "https://front-edge.dust.tt",
+                   "https://eu.front-edge.dust.tt",
+                 ],
+                 traceSampleRate: 5,
+                 traceContextInjection: 'sampled',
+                 sessionSampleRate: 20,
+                 sessionReplaySampleRate: 5,
+                 defaultPrivacyLevel: 'mask-user-input',
+                 beforeSend: function (event) {
+                    // This error is benign, happens often in the wild but has 0 effect on the user.
+                    // See: https://github.com/DataDog/browser-sdk/issues/1616.
+                    if (
+                    event.type === "error" &&
+                      event.error.message &&
+                      event.error.message.includes(
+                        "ResizeObserver loop completed with undelivered notifications"
+                      )
+                    ) {
+                      return false;
+                    }
+                   if (event.type === "action" && event.action && event.action.target && event.action.type === "click") {
+                     if (event._dd && event._dd.action && event._dd.action.name_source === "text_content") {
+                       var elSelector = event._dd.action.target && event._dd.action.target.selector;
+                       if (elSelector && typeof elSelector === "string") {
+                         try {
+                           var el = document.querySelector(elSelector);
+                           if (el) {
+                             var parentWithPrivacyMask = el.closest(".dd-privacy-mask");
+                             if (parentWithPrivacyMask) {
+                               // Initially redact with a generic string
+                               event.action.target.name = "[text element within dd-privacy-mask]";
+                               // Now attempt to provide a better, less generic name, still respecting privacy
+                               var buttonParent = el.closest("button");
+                               if (buttonParent) {
+                                 var ariaLabel = buttonParent.getAttribute("aria-label");
+                                 if (ariaLabel) {
+                                   event.action.target.name = ariaLabel;  // More specific, but still protecting privacy
+                                 }
+                               }
+                             }
+                           }
+                         } catch (error) {
+                           // Invalid selector - silently ignore
+                         }
+                       }
+                     }
+                   }
+                   return true;
+                 }
+               });
+             })
+           </script><script id="privacy-mask-init" data-nscript="beforeInteractive">
+              (function() {
+                // Initialize privacy mask state from localStorage on page load.
+                function initPrivacyMask() {
+                  const stored = localStorage.getItem('privacy-mask');
+                  const isEnabled = stored === 'true';
+
+                  if (isEnabled) {
+                    document.body.classList.add('privacy-mask-enabled');
+                  }
+                }
+
+                // Run on DOM ready.
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', initPrivacyMask);
+                } else {
+                  initPrivacyMask();
+                }
+              })();
+            </script><link rel="preload" href="/_next/static/css/3f4d5d04a42da6e3.css" as="style"/><link rel="stylesheet" href="/_next/static/css/3f4d5d04a42da6e3.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-42372ed130431b0a.js"></script><script src="/_next/static/chunks/webpack-d20095012c1979c7.js" defer=""></script><script src="/_next/static/chunks/framework-838c6ca2253d4294.js" defer=""></script><script src="/_next/static/chunks/main-cf949400518e02c0.js" defer=""></script><script src="/_next/static/chunks/pages/_app-448467c986a63e71.js" defer=""></script><script src="/_next/static/chunks/7592-17b2841d1c4ee495.js" defer=""></script><script src="/_next/static/chunks/2978-1daa743ee25c358a.js" defer=""></script><script src="/_next/static/chunks/5697-4be0565fd4a679fb.js" defer=""></script><script src="/_next/static/chunks/5131-379282d32595052e.js" defer=""></script><script src="/_next/static/chunks/5352-e01931aff5fdf507.js" defer=""></script><script src="/_next/static/chunks/8579-0230746ccbd0bc98.js" defer=""></script><script src="/_next/static/chunks/5036-31b7790d75ff7c35.js" defer=""></script><script src="/_next/static/chunks/5489-ea4135c9fa11a594.js" defer=""></script><script src="/_next/static/chunks/3818-8412b11066b10758.js" defer=""></script><script src="/_next/static/chunks/8083-e9b9d9a924c635eb.js" defer=""></script><script src="/_next/static/chunks/7400-749f9a0d3c4e968c.js" defer=""></script><script src="/_next/static/chunks/9182-cdc929b6415bc6f2.js" defer=""></script><script src="/_next/static/chunks/9878-9829032f878752db.js" defer=""></script><script src="/_next/static/chunks/pages/blog/%5Bslug%5D-e9a832b3b7f9f07e.js" defer=""></script><script src="/_next/static/nRJ4pBbRbVXzEAmduJxBo/_buildManifest.js" defer=""></script><script src="/_next/static/nRJ4pBbRbVXzEAmduJxBo/_ssgManifest.js" defer=""></script></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDWPND4G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="__next"></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"id":"7Ggy6fHjcHpwknKaLapltG","slug":"introducing-triggers-your-agents-working-while-you-sleep","title":"Introducing Triggers: Your agents, working while you sleep","description":"What if your AI agents didn't wait to be asked? Today, we're introducing Triggers : turns Dust agents from on-demand agents into autonomous workers. Schedule...","body":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"heading-1"},{"data":{},"content":[{"data":{},"marks":[],"value":"What if your AI agents didn't wait to be asked?","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"marks":[],"value":"Today, we're introducing ","nodeType":"text"},{"data":{},"marks":[{"type":"bold"}],"value":"Triggers","nodeType":"text"},{"data":{},"marks":[],"value":": turns Dust agents from on-demand agents into autonomous workers. Schedule agents to run automatically, trigger them from external events, and let them write back to your systems; no human initiation required.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Triggers bring a crucial new piece to the control plane for autonomous work.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"https://www.youtube.com/embed/PkFIX1LiCOk?feature=oembed","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"What Triggers do","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"Triggers complete the automation loop.","nodeType":"text"},{"data":{},"marks":[],"value":" Your agents are no longer waiting for you to remember to use them. You can now create intelligent, persistent, agentic workflows without third-party workflow tools like Zapier, n8n, or Make. Dust agents understand your full company context, make decisions, and act autonomously. Triggers give them the initiative to follow your instructions better.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"Triggers complete Dust’s agent's Operating System.","nodeType":"text"},{"data":{},"marks":[],"value":" As we wrote in ","nodeType":"text"},{"data":{"uri":"blog/companies-are-building-their-agent-os-right-now-are-you/"},"content":[{"data":{},"marks":[],"value":"our Agent OS post","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":", companies are moving from Phase 1 (reactive agents) to Phase 3 (autonomous agent networks). Triggers allow your agents to work while you sleep, coordinate with each other, and close the full automation loop: event happens or agent is scheduled → agent processes with context → agent writes back results.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"Autonomy you can trust and deploy.","nodeType":"text"},{"data":{},"marks":[],"value":" Trust comes from visibility and observability. Every trigger logs what ran, when, and why. Every agent action shows its reasoning. You can audit, correct, and improve every agentic workflow you build in Dust.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"How teams use Triggers","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"Sales teams","nodeType":"text"},{"data":{},"marks":[],"value":" connect their call transcript tool to walk out of their sales meetings with a customized follow-up email leveraging what was discussed, and CRM updates ready for posting.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"Engineering teams","nodeType":"text"},{"data":{},"marks":[],"value":" trigger code review agents when PRs are opened, routing complex changes to senior engineers and auto-approving simple fixes.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"Operations teams","nodeType":"text"},{"data":{},"marks":[],"value":" run weekly metric summaries that pull data from five systems, generate insights, and update Notion dashboards; all autonomously.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"Support teams","nodeType":"text"},{"data":{},"marks":[],"value":" trigger triage agents when tickets arrive, drafting responses to common questions and escalating complex cases, thereby cutting first-response time from hours to minutes.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"Built for scale, secure by default","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Schedule agents using natural language. No cron syntax required","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Trigger from webhooks (GitHub, Jira, and available webhooks)","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Write back to any system using MCP integrations","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Full audit logs for every triggered run","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Works with your existing agents. No rebuild required","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"How to get started","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Open any agent in your Agent Builder","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Add a Trigger action (Schedule or Webhook)","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Describe when it should run—that's it 🎈","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"ordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"Your agent will automatically determine when to trigger based on your description and start running autonomously.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"Not using Dust yet?","nodeType":"text"},{"data":{},"marks":[],"value":" ","nodeType":"text"},{"data":{"uri":"https://dust.tt/home/contact"},"content":[{"data":{},"marks":[],"value":"Get a demo","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":" to see how triggers can transform manual processes into autonomous operations.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[{"type":"bold"}],"value":"Read the full documentation","nodeType":"text"},{"data":{},"marks":[],"value":" ","nodeType":"text"},{"data":{"uri":"https://docs.dust.tt/docs/triggers"},"content":[{"data":{},"marks":[],"value":"here ","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"to learn about webhook filtering, custom triggers, write-back patterns, and advanced workflows.","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"},"cta":null,"tags":["Product"],"image":{"url":"https://images.ctfassets.net/751ge4ljeqso/7tSQKngewKYztfD8QMyj6I/49440face63d0f949e42ff313f93c3e8/image.png","alt":"Introducing Triggers","width":2000,"height":1120},"authors":[],"createdAt":"2025-11-10T18:50:55.000Z","updatedAt":"2025-12-03T08:59:21.653Z","isSeoArticle":false,"isGeoArticle":false,"isThoughtLeadership":false},"relatedPosts":[{"id":"2NyezjqjmkgGCkWn7FwQih","slug":"introducing-self-improving-skills-reusable-ai-capabilities","title":"Introducing self-improving skills: reusable AI capabilities that learn from usage","description":"Skills are one of the best ways to scale expertise across digital teams of humans and agents. They contain sets of instructions that encode various team...","tags":["Product"],"image":{"url":"https://images.ctfassets.net/751ge4ljeqso/36YfWArSPq2vgWapLNO3Dt/1883b633aa39004b47962aef9495ab63/Suggestions.jpg","alt":"self-improving skills","width":4000,"height":2240},"createdAt":"2026-07-07T13:51:29.887Z","isSeoArticle":false,"isGeoArticle":false,"isThoughtLeadership":false},{"id":"5lAyh9p4xIybT4kEJiZIa8","slug":"your-agent-lives-in-your-inbox","title":"AI x Email: Your Agent Lives in Your Inbox","description":"Dust recently shipped a feature that lets you loop any Dust agent into an email thread — just like you'd loop in a colleague. Forward a message to...","tags":["Product"],"image":{"url":"https://images.ctfassets.net/751ge4ljeqso/Gc0kkzx033JWsGeA7OD5f/54e4efbe4999aee83135d804f3c4f166/Your_Agent_Lives_in_Your_Inbox.jpg","alt":"Your Agent Lives in Your Inbox","width":4000,"height":2240},"createdAt":"2026-05-28T13:42:24.535Z","isSeoArticle":false,"isGeoArticle":false,"isThoughtLeadership":true},{"id":"1X5aeBavX2LWEr5UeZKPvz","slug":"build-a-flock-not-a-crowd","title":"Build a Flock, Not a Crowd","description":"The average person at Dust uses over 15 different agents in a week. Each one built by someone who understood a problem: the sales team's way of qualifying...","tags":["Product"],"image":{"url":"https://images.ctfassets.net/751ge4ljeqso/1rPKN9WnrBIBUplKWgGQT6/e7b0946e66988542b76807ee8f26771f/Build_a_Flock__Not_a_Crowd_1.jpg","alt":"flock","width":4000,"height":2240},"createdAt":"2026-03-04T14:00:14.031Z","isSeoArticle":false,"isGeoArticle":false,"isThoughtLeadership":true}],"gtmTrackingId":"GTM-MDWPND4G","preview":false},"__N_SSG":true},"page":"/blog/[slug]","query":{"slug":"introducing-triggers-your-agents-working-while-you-sleep"},"buildId":"nRJ4pBbRbVXzEAmduJxBo","isFallback":false,"isExperimentalCompile":false,"gsp":true,"scriptLoader":[]}</script></body></html>

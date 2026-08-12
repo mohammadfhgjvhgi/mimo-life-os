@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://vercel.com/geist/introduction",
+    "name": "Geist",
+    "snippet": "Geist Design System. Vercel design system for building consistent web experiences. Brand Assets. Learn how to work with our brand assets. Read more",
+    "host_name": "vercel.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://friends.figma.com/events/details/figma-designops-presents-inspect-amp-reflect-vercels-geist-design-system",
+    "name": "Inspect & Reflect: Vercel's Geist Design System",
+    "snippet": "Mar 20, 2025 — Friends of Figma DesignOps presents Inspect & Reflect: Vercel's Geist Design System | Mar 20, 2025. Find event and ticket information.",
+    "host_name": "friends.figma.com",
+    "rank": 1,
+    "date": "Mar 20, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.vercel.com/t/vercel-geist-design-system/2313",
+    "name": "Vercel Geist Design System - Help",
+    "snippet": "Nov 23, 2024 — Geist Design System is publicly viewable, but components based on the design are not published as a library for use in other projects.",
+    "host_name": "community.vercel.com",
+    "rank": 2,
+    "date": "Nov 23, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=vWxKL289cC4",
+    "name": "Inspect & Reflect: Vercel's Geist Design System",
+    "snippet": "This design system inventory workshop that focuses on how you can go into the product and start cutting it into templates into components.",
+    "host_name": "www.youtube.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.shadcn.io/design/vercel",
+    "name": "Vercel Inspired Design System",
+    "snippet": "May 12, 2026 — Vercel's design language is the dashboard marketing surface for a developer platform, written for engineers who already know the syntax. Read more",
+    "host_name": "www.shadcn.io",
+    "rank": 4,
+    "date": "May 12, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://designsystems.surf/design-systems/vercel",
+    "name": "Vercel Framework - Geist Design System",
+    "snippet": "Geist Design System serves as a comprehensive framework for creating cohesive and uniform web experiences across Vercel products, include brand guidelines",
+    "host_name": "designsystems.surf",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

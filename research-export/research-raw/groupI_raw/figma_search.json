@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout",
+    "name": "Guide to auto layout",
+    "snippet": "Auto layout can be used on frames so that designs will respond dynamically to content changes, saving you time and making your designs responsive and adaptable.",
+    "host_name": "help.figma.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=rgbnAsmPaZk",
+    "name": "Figma Tutorial: Master Auto Layout in 30 Minutes | Auto",
+    "snippet": "In this video, you'll learn how to create responsive designs using Figma Auto Layout . We'll cover everything from the basics of Auto Layout and ...",
+    "host_name": "www.youtube.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://help.figma.com/hc/en-us/articles/31351261703063-FD4B-Auto-layout-fundamentals",
+    "name": "FD4B: Auto layout fundamentals",
+    "snippet": "Auto layout helps you organize, arrange, and space out design elements so that they adjust automatically as you make changes, saving you time and making your ...",
+    "host_name": "help.figma.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.figma.com/release-notes",
+    "name": "Figma product news and release notes",
+    "snippet": "release notes and software updates for all Figma related products. the updated auto layout option. New frames get the updated version automatically.",
+    "host_name": "www.figma.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=QDjPXRWOLbI",
+    "name": "Auto Layout Explained in 10 Minutes /// Figma Tutorial",
+    "snippet": "Auto Layout is one of Figma's standout features . I teach you how to use it to create a responsive grid of icons. ALL you NEED to understand in  ...",
+    "host_name": "www.youtube.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.figma.com/blog/config-2025-recap",
+    "name": "Config 2025: Pushing Design Further",
+    "snippet": "May 7, 2025 — Auto layout , grid, and new breakpoint features for seamless adaptation to any screen size. Grid—our new Auto layout option in the Figma design ...",
+    "host_name": "www.figma.com",
+    "rank": 5,
+    "date": "May 7, 2025",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.strata.io/blog/agentic-identity/practicing-the-human-in-the-loop",
+    "name": "Human-in-the-Loop: A 2026 Guide to AI Oversight",
+    "snippet": "May 11, 2026 — Human-in-the-loop (HITL ) is an AI governance approach where trained humans retain decision authority over high-risk agent actions. In practice, ... Read more",
+    "host_name": "www.strata.io",
+    "rank": 0,
+    "date": "May 11, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.elementum.ai/blog/human-in-the-loop-agentic-ai",
+    "name": "Human-in-the-Loop AI Agents: Deploying Agentic AI With",
+    "snippet": "Mar 12, 2026 — Gartner projects that by 2029, 70% of enterprises will deploy agentic AI as part of IT infrastructure operations, up from less than 5% in 2025 . Read more",
+    "host_name": "www.elementum.ai",
+    "rank": 1,
+    "date": "Mar 12, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/pulse/ai-governance-gap-human-in-the-loop-patrick-upmann-uaf9f",
+    "name": "The AI Governance Gap — The Human-in-the-Loop Gap",
+    "snippet": "Almost every enterprise AI risk register in 2026 ends with the same reassuring line: a human is in the loop . It is the control everyone trusts. Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://fifthrow.com/blog/agentic-ai-s-enterprise-tipping-point-how-april-2026-redefined-systematic-innovation-and-production-scale-adoption",
+    "name": "Agentic AI's Enterprise Tipping Point: How April 2026",
+    "snippet": "Apr 28, 2026 — The final week of April 2026 catalyzed a historic transition in enterprise AI , as global leaders rapidly advanced from isolated agentic AI ... Read more",
+    "host_name": "fifthrow.com",
+    "rank": 3,
+    "date": "Apr 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://nhimg.org/community/agentic-ai-and-nhis/ai-infrastructure-in-2026-is-control-now-the-real-differentiator",
+    "name": "AI infrastructure in 2026: is control now the real differentiator?",
+    "snippet": "7 days ago — TL;DR: Enterprise AI crossed from copilots into production infrastructure in 2025 , with agents , MCP, and governance moving into core systems ... Read more",
+    "host_name": "nhimg.org",
+    "rank": 4,
+    "date": "Aug 1, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.ishir.com/blog/329275/human-in-the-loop-is-not-enough-why-governance-in-the-loop-is-becoming-the-new-standard-for-ai-agent-risk-management.htm",
+    "name": "Governance-in-the-Loop: The Future of Enterprise AI",
+    "snippet": "The organizations achieving the highest AI adoption success rates in 2026 are shifting from Human-in-the-Loop toward a more mature framework known as Governance ... Read more",
+    "host_name": "www.ishir.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.tothenew.com/insights/article/enterprise-ai-agents-production-2026",
+    "name": "Enterprise AI Agents in Production",
+    "snippet": "May 28, 2026 — Gartner predicts 40% of enterprise applications will integrate task-specific AI agents by the end of 2026 , up from less than 5% in 2025 .",
+    "host_name": "www.tothenew.com",
+    "rank": 6,
+    "date": "May 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://scale.com/blog/hitl-ep4-future-agents",
+    "name": "The Future of Enterprise Agents",
+    "snippet": "May 15, 2025 — We believe the most powerful and responsible AI systems are built with humans in the loop . And now, it's also the inspiration behind our new ... Read more",
+    "host_name": "scale.com",
+    "rank": 7,
+    "date": "May 15, 2025",
+    "favicon": ""
+  }
+]

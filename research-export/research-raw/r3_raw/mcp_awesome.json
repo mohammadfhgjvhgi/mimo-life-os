@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "name": "modelcontextprotocol/servers: Model Context Protocol",
+    "snippet": "If you are looking for a list of MCP servers, you can browse published servers on the MCP Registry . The repository served by this README is dedicated to housing ... Read more",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://mcpservers.org",
+    "name": "Awesome MCP Servers",
+    "snippet": "Explore 9800+ official and community MCP servers for Claude, Codex, Cursor, and other AI agents. Find the right tools and setup guides for your workflow.",
+    "host_name": "mcpservers.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://mcp.so",
+    "name": "MCP.so - MCP Marketplace",
+    "snippet": "Find MCP servers, clients, and integrations in one MCP marketplace. Use MCP.so as an MCP store, MCP server list , and curated directory for awesome MCP servers. Read more",
+    "host_name": "mcp.so",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://registry.modelcontextprotocol.io",
+    "name": "Official MCP Registry - Model Context Protocol",
+    "snippet": "MCP server for Model Context Protocol hosts — workers, profiles, organizations … 1078 professional Agent Skills + workflow recipes — searchable & fetchable ...",
+    "host_name": "registry.modelcontextprotocol.io",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/mcp/comments/1nc4l7i/introducing_the_mcp_registry",
+    "name": "Introducing the MCP Registry : r/mcp",
+    "snippet": "Launching the MCP Registry in preview: an open catalog and API for discovering publicly available MCP servers . Open. Read more",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://form.io/mcp-server-list-regulated-enterprise-developers",
+    "name": "MCP Server List: Enterprise Picks for Regulated Developers",
+    "snippet": "Jun 8, 2026 — An MCP server list is a directory, registry , repository, or article that helps developers find Model Context Protocol servers .",
+    "host_name": "form.io",
+    "rank": 5,
+    "date": "Jun 8, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://vibehackers.io/blog/best-mcp-servers",
+    "name": "Best MCP Servers for Claude Code, Cursor & Windsurf",
+    "snippet": "Mar 27, 2026 — Browse all 5,000+ Model Context Protocol servers — with AI-extracted summaries, install configs, nearly 4x since May 2025.",
+    "host_name": "vibehackers.io",
+    "rank": 6,
+    "date": "Mar 27, 2026",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,6 @@
+TITLE: Zed — Your last next editor
+DESCRIPTION: Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.
+
+- 
+- 
+- Zed: Not Found

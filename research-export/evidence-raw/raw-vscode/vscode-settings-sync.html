@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="awa-expId" content="cv-downloadv2:1227264;" />
+	<meta name="awa-env" content="prod" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="hNs7DXrTySP_X-0P_AC0WulAXvUwgSXEmgfcO2r79dw" />
+
+	<!-- Twitter and Facebook OpenGraph Metadata-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@code" />
+
+	<meta name="description" content="Synchronize your user settings across all your Visual Studio Code instances." />
+<meta name="keywords" content="" />
+<meta name="ms.prod" content="vs-code" />
+<meta name="ms.TOCTitle" content="" />
+<meta name="ms.ContentId" content="6cb84e60-6d90-4137-83f6-bdab3438b8f5" />
+<meta name="ms.date" content="02/04/2026" />
+<meta name="ms.topic" content="conceptual" />
+<!-- Twitter and Facebook OpenGraph Metadata-->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:url" content="https://code.visualstudio.com/docs/configure/settings-sync" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Settings Sync" />
+<meta property="og:description" content="Synchronize your user settings across all your Visual Studio Code instances." />
+
+<meta property="og:image" content="https://code.visualstudio.com/opengraphimg/generated/docs/configure/settings-sync.webp" />
+
+
+
+	<link rel="shortcut icon" href="/assets/favicon.ico" sizes="128x128" />
+	<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+	<title>Settings Sync</title>
+
+	<link rel="stylesheet" href="/dist/style.css">
+
+	<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
+	<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-4.min.js"></script>
+	
+	<script type="text/javascript">
+	// Leave as var; siteConsent is initialized and referenced elsewhere.
+	var siteConsent = null;
+	
+	const GPC_DataSharingOptIn = false;
+	WcpConsent.onInitCallback(function () {
+		window.appInsights = new oneDS.ApplicationInsights();
+		window.appInsights.initialize({
+			instrumentationKey: "1a3eb3104447440391ad5f2a6ee06a0a-62879566-bc58-4741-9650-302bf2af703f-7103",
+			propertyConfiguration: {
+				userConsented: false,
+				gpcDataSharingOptIn: false,
+				callback: {
+					userConsentDetails: siteConsent ? siteConsent.getConsent : undefined
+				},
+			},
+			cookieCfg: {
+				ignoreCookies: ["MSCC"]
+			},
+			webAnalyticsConfiguration:{ // Web Analytics Plugin configuration
+				urlCollectQuery: true,
+				urlCollectHash: true,
+				autoCapture: {
+					scroll: true,
+					pageView: true,
+					onLoad: true,
+					onUnload: true,
+					click: true,
+					resize: true,
+					jsError: true
+				}
+			}
+		}, []);
+	
+		window.appInsights.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = GPC_DataSharingOptIn;
+	});
+	</script>
+	<link rel="alternate" type="application/atom+xml" title="RSS Feed for code.visualstudio.com" href="/feed.xml" />
+</head>
+
+<body >
+	<!-- Setting theme here to avoid FOUC -->
+	<script>
+		function setTheme(themeName) {
+			if (themeName === 'dark') {
+				document.documentElement.removeAttribute('data-theme'); // dark is default, so no data-theme attribute needed
+			}
+
+			if (themeName === 'light') {
+				document.documentElement.setAttribute('data-theme', themeName);
+			}
+			return;
+		}
+
+		// Determine initial theme: user preference or system preference
+		let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		setTheme(theme); // Apply the initial theme
+
+		// Listen for changes in the system theme preference
+		window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+			if (!localStorage.getItem('theme')) { // Only if no user preference is saved
+				setTheme(e.matches ? 'dark' : 'light');
+			}
+		});
+	</script>
+
+	<div id="main">
+		<div class="navbar-fixed-container">
+			<div class="navbar navbar-inverse navbar-fixed-top ">
+				<div id='cookie-banner'></div>		<nav role="navigation" aria-label="Top Level">
+					<div class="container">
+						<div class="nav navbar-header">
+							<a class="navbar-brand" href="/"><span>Visual Studio Code</span></a>
+						</div>
+						<div class="navbar-collapse collapse">
+							<ul class="nav navbar-nav navbar-left" data-m='{"cN":"top-navbar","aN":"navigation"}'>
+								<li class="nav-dropdown">
+									<a id="nav-features" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Features","aN":"navigation","cT":"toggle"}'>
+										Features <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/features/agents" data-m='{"cN":"Agents","aN":"navigation - Features"}'>Agents</a></li>
+									</ul>
+								</li>
+								<li class="nav-dropdown active">
+									<a id="nav-docs" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Docs","aN":"navigation","cT":"toggle"}'>
+										Docs <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/docs" data-m='{"cN":"Documentation","aN":"navigation - Docs"}'>Documentation</a></li>
+										<li role="none"><a role="menuitem" href="/api" data-m='{"cN":"API","aN":"navigation - Docs"}'>API</a></li>
+										<li role="none"><a role="menuitem" id="nav-faqs" href="/docs/supporting/faq" data-m='{"cN":"FAQ","aN":"navigation - Docs"}'>FAQ</a></li>
+									</ul>
+								</li>
+								<li ><a id="nav-updates" href="/updates" data-m='{"cN":"Release Notes"}'>Release Notes</a>
+								</li>
+								<li ><a id="nav-blogs" href="/blogs" data-m='{"cN":"Blog"}'>Blog</a></li>
+								<li ><a id="nav-learn" href="/learn" data-m='{"cN":"Learn"}'>Learn</a></li>
+								<li><a id="nav-events" href="https://aka.ms/vscode/live" target="_blank" rel="noopener" data-m='{"cN":"Events"}'>Events<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+								<li class="nav-dropdown">
+									<a id="nav-resources" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Resources","aN":"navigation","cT":"toggle"}'>
+										Resources <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="https://marketplace.visualstudio.com/VSCode" target="_blank" rel="noopener"
+												id="nav-extensions" data-m='{"cN":"Extensions","aN":"navigation - Resources"}'>Extensions<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+										<li role="none"><a role="menuitem" id="nav-mcp" href="/mcp" target="_blank" rel="noopener" data-m='{"cN":"MCP","aN":"navigation - Resources"}'>MCP<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right" role="presentation">
+								<li>
+									<a class="link-button" href="/download" id="nav-download">
+										<span>Download</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="navbar-actions">
+							<div class="search" role="presentation">
+								<div class="nav-search search-control" role="button" tabindex="0" aria-label="Open search dialog">
+									<div class="input-group" role="presentation">
+										<span class="input-group-btn">
+											<span class="btn search-icon-container" aria-hidden="true">
+												<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="" />
+												<img class="search-icon-light" src="/assets/icons/search.svg" alt="" />
+											</span>
+										</span>
+										<span class="search-box form-control" aria-hidden="true" role="presentation"></span>
+										<span class="search-shortcut-placeholder">Search</span>
+										<span class="search-shortcut-overlay"></span>
+									</div>
+								</div>					</div>
+							<button type="button" class="theme-switch" id="theme-toggle">
+								<img class="theme-icon-light" src="/assets/icons/theme-light.svg" alt="Switch to the dark theme" />
+								<img class="theme-icon-dark" src="/assets/icons/theme-dark.svg" alt="Switch to the light theme" />
+							</button>
+							<a class="link-button navbar-actions-download" href="/Download">
+								<span>Download</span>
+							</a>
+						</div>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
+							aria-label="Expand and Collapse Menu">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</div>		<div data-announcement-version="2026-06-01-vscode-live-build" class="updates-banner ">
+			<div class="container">
+				<p class="message"><a href="https://aka.ms/VSCode/Livestage?source=vsc-website-banner" target="_blank" rel="noopener">📼 Rewatch VS Code Live at MS Build 2026</a></p>
+			</div>
+			<div tabindex="0" role="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn"><span class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span></div>
+		</div>
+		<script>
+			// Hide the banner synchronously (before first paint) if this version was
+			// already dismissed, to avoid a flicker/layout shift once the main bundle loads.
+			(function () {
+				try {
+					var banner = document.currentScript.previousElementSibling;
+					if (banner && localStorage.getItem('dismissedAnnouncementVersion') === banner.getAttribute('data-announcement-version')) {
+						banner.classList.add('js-hidden');
+					}
+				} catch (e) { /* ignore */ }
+			})();
+		</script>
+		<!-- This div wraps around the entire site -->
+		<!-- The body itself should already have a main tag -->
+		<main id="main-content">
+			<script>
+    function closeReportIssue() {
+        var element = document.getElementById('surveypopup');
+        element.parentElement.removeChild(element);
+    }
+
+    function reportIssue(tutorial, page) {
+        var div = document.createElement('div');
+        div.innerHTML = '<div id="surveypopup" class="overlay visible"><div class="surveypopup"><div id="surveytitle">Tell us more<a href="javascript:void(0)" onclick="closeReportIssue()">X</a></div><div id="surveydiv"><iframe frameBorder="0" scrolling="0" src="https://www.research.net/r/PWZWZ52?tutorial=' + tutorial + '&step=' + page + '"></iframe></div></div></div>';
+        document.body.appendChild(div.children[0]);
+    }
+</script>
+
+<div class="body-content docs docs-github-layout">
+    <div class="docs-layout-wrapper">
+        <!-- Left sidebar - Table of Contents -->
+        <aside class="docs-left-sidebar">
+            <nav id="docs-navbar" aria-label="Topics" class="docs-nav visible-md visible-lg" data-m='{"cN":"docs-left-nav","aN":"navigation"}'>
+              <div class="docs-nav-back">
+                <a class="area" href="/docs" aria-label="Back to all documentation"><span class="codicon codicon-arrow-left" aria-hidden="true"></span><span>All Docs</span></a>
+              </div>
+              <h4>Core Editor</h4>
+              <ul class="nav" id="main-nav">
+              <li >
+                <a href="/docs/core-editor/overview" data-m='{"cN":"Overview"}' >Overview</a>
+              </li>
+              
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#editing-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Write code","cT":"toggle"}'>Write code</a>
+              <ul id="editing-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/editing/getting-started" data-m='{"cN":"Tutorial","aN":"Write code"}' >Tutorial</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/userinterface" data-m='{"cN":"User Interface","aN":"Write code"}' >User Interface</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/tips-and-tricks" data-m='{"cN":"Tips and Tricks","aN":"Write code"}' >Tips and Tricks</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/codebasics" data-m='{"cN":"Basic Editing","aN":"Write code"}' >Basic Editing</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/intellisense" data-m='{"cN":"IntelliSense","aN":"Write code"}' >IntelliSense</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/ai-powered-suggestions" data-m='{"cN":"Inline Suggestions","aN":"Write code"}' >Inline Suggestions</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/copilot-smart-actions" data-m='{"cN":"Smart Actions","aN":"Write code"}' >Smart Actions</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/editingevolved" data-m='{"cN":"Code Navigation","aN":"Write code"}' >Code Navigation</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/refactoring" data-m='{"cN":"Refactoring","aN":"Write code"}' >Refactoring</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/userdefinedsnippets" data-m='{"cN":"Snippets","aN":"Write code"}' >Snippets</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#editing-workspaces-articles" data-toggle="collapse" data-m='{"cN":"Workspaces","aN":"Write code","cT":"toggle"}'>Workspaces</a>
+              <ul id="editing-workspaces-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/editing/workspaces/workspaces" data-m='{"cN":"Overview","aN":"Write code - Workspaces"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/workspaces/multi-root-workspaces" data-m='{"cN":"Multi-Root Workspaces","aN":"Write code - Workspaces"}' >Multi-Root Workspaces</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/workspaces/workspace-trust" data-m='{"cN":"Workspace Trust","aN":"Write code - Workspaces"}' >Workspace Trust</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+              </ul>
+            </li>
+                
+            <li class="panel active expanded">
+              <a class="area" role="button" href="#configure-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Configure the editor","cT":"toggle"}'>Configure the editor</a>
+              <ul id="configure-articles" class="collapse in">
+            
+                    <li >
+                      <a href="/docs/configure/locales" data-m='{"cN":"Display Language","aN":"Configure the editor"}' >Display Language</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/custom-layout" data-m='{"cN":"Layout","aN":"Configure the editor"}' >Layout</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/keybindings" data-m='{"cN":"Keyboard Shortcuts","aN":"Configure the editor"}' >Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/settings" data-m='{"cN":"Settings","aN":"Configure the editor"}' >Settings</a>
+                    </li>
+                      
+                    <li class="active">
+                      <a href="/docs/configure/settings-sync" data-m='{"cN":"Settings Sync","aN":"Configure the editor"}' aria-label="Current Page: Settings Sync">Settings Sync</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-extensions-articles" data-toggle="collapse" data-m='{"cN":"Extensions","aN":"Configure the editor","cT":"toggle"}'>Extensions</a>
+              <ul id="configure-extensions-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/extensions/extensions" data-m='{"cN":"Overview","aN":"Configure the editor - Extensions"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/extensions/extension-marketplace" data-m='{"cN":"Extension Marketplace","aN":"Configure the editor - Extensions"}' >Extension Marketplace</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/extensions/extension-runtime-security" data-m='{"cN":"Extension Runtime Security","aN":"Configure the editor - Extensions"}' >Extension Runtime Security</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li >
+                      <a href="/docs/configure/themes" data-m='{"cN":"Themes","aN":"Configure the editor"}' >Themes</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/profiles" data-m='{"cN":"Profiles","aN":"Configure the editor"}' >Profiles</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-accessibility-articles" data-toggle="collapse" data-m='{"cN":"Accessibility","aN":"Configure the editor","cT":"toggle"}'>Accessibility</a>
+              <ul id="configure-accessibility-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/accessibility/accessibility" data-m='{"cN":"Overview","aN":"Configure the editor - Accessibility"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/accessibility/voice" data-m='{"cN":"Voice Interactions","aN":"Configure the editor - Accessibility"}' >Voice Interactions</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li >
+                      <a href="/docs/configure/command-line" data-m='{"cN":"Command Line Interface","aN":"Configure the editor"}' >Command Line Interface</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/telemetry" data-m='{"cN":"Telemetry","aN":"Configure the editor"}' >Telemetry</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#reference-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Reference","cT":"toggle"}'>Reference</a>
+              <ul id="reference-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/reference/default-keybindings" data-m='{"cN":"Default Keyboard Shortcuts","aN":"Reference"}' >Default Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/default-settings" data-m='{"cN":"Default Settings","aN":"Reference"}' >Default Settings</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/variables-reference" data-m='{"cN":"Substitution Variables","aN":"Reference"}' >Substitution Variables</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/tasks-appendix" data-m='{"cN":"Tasks Schema","aN":"Reference"}' >Tasks Schema</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+              </ul>
+            </nav>
+            
+            <nav id="small-nav" aria-label="Topics" class="docs-nav hidden-md hidden-lg">
+              <label class="faux-h4" for="small-nav-dropdown-core-editor">Topics</label>
+              <select id="small-nav-dropdown-core-editor" aria-label="topics">
+                <option value="/docs/core-editor/overview" >Overview</option>
+            
+              <optgroup label="Write code">
+            
+                    <option value="/docs/editing/getting-started" >Tutorial</option>
+                    
+                    <option value="/docs/editing/userinterface" >User Interface</option>
+                    
+                    <option value="/docs/editing/tips-and-tricks" >Tips and Tricks</option>
+                    
+                    <option value="/docs/editing/codebasics" >Basic Editing</option>
+                    
+                    <option value="/docs/editing/intellisense" >IntelliSense</option>
+                    
+                    <option value="/docs/editing/ai-powered-suggestions" >Inline Suggestions</option>
+                    
+                    <option value="/docs/editing/copilot-smart-actions" >Smart Actions</option>
+                    
+                    <option value="/docs/editing/editingevolved" >Code Navigation</option>
+                    
+                    <option value="/docs/editing/refactoring" >Refactoring</option>
+                    
+                    <option value="/docs/editing/userdefinedsnippets" >Snippets</option>
+                    
+                    <option disabled>Workspaces</option>
+            
+                    <option value="/docs/editing/workspaces/workspaces" >    Overview</option>
+                    
+                    <option value="/docs/editing/workspaces/multi-root-workspaces" >    Multi-Root Workspaces</option>
+                    
+                    <option value="/docs/editing/workspaces/workspace-trust" >    Workspace Trust</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Configure the editor">
+            
+                    <option value="/docs/configure/locales" >Display Language</option>
+                    
+                    <option value="/docs/configure/custom-layout" >Layout</option>
+                    
+                    <option value="/docs/configure/keybindings" >Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/configure/settings" >Settings</option>
+                    
+                    <option value="/docs/configure/settings-sync" selected>Settings Sync</option>
+                    
+                    <option disabled>Extensions</option>
+            
+                    <option value="/docs/configure/extensions/extensions" >    Overview</option>
+                    
+                    <option value="/docs/configure/extensions/extension-marketplace" >    Extension Marketplace</option>
+                    
+                    <option value="/docs/configure/extensions/extension-runtime-security" >    Extension Runtime Security</option>
+                    
+                    <option value="/docs/configure/themes" >Themes</option>
+                    
+                    <option value="/docs/configure/profiles" >Profiles</option>
+                    
+                    <option disabled>Accessibility</option>
+            
+                    <option value="/docs/configure/accessibility/accessibility" >    Overview</option>
+                    
+                    <option value="/docs/configure/accessibility/voice" >    Voice Interactions</option>
+                    
+                    <option value="/docs/configure/command-line" >Command Line Interface</option>
+                    
+                    <option value="/docs/configure/telemetry" >Telemetry</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Reference">
+            
+                    <option value="/docs/reference/default-keybindings" >Default Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/reference/default-settings" >Default Settings</option>
+                    
+                    <option value="/docs/reference/variables-reference" >Substitution Variables</option>
+                    
+                    <option value="/docs/reference/tasks-appendix" >Tasks Schema</option>
+                    
+              </optgroup>
+              
+              </select>
+            </nav>        </aside>
+        
+        <!-- Content wrapper contains main content + right sidebar -->
+        <div class="docs-content-wrapper">
+            <!-- Right sidebar - On This Page -->
+            <aside class="docs-right-sidebar hidden-xs">
+                <div class="docs-markdown-actions">
+                    <div class="docs-markdown-dropdown" data-raw-url="/raw/docs/configure/settings-sync.md">
+                        <button type="button" class="docs-markdown-btn-main" data-action="copy-markdown" aria-label="Copy as Markdown">
+                            <span class="codicon codicon-copy" aria-hidden="true"></span>
+                            <span>Copy as Markdown</span>
+                        </button>
+                        <button type="button" class="docs-markdown-btn-trigger" aria-haspopup="true" aria-expanded="false" aria-label="More Markdown options">
+                            <span class="codicon codicon-chevron-down docs-markdown-chevron" aria-hidden="true"></span>
+                        </button>
+                        <ul class="docs-markdown-menu" role="menu" aria-label="Markdown options">
+                            <li role="menuitem" tabindex="0" data-action="copy-markdown">
+                                <span class="codicon codicon-copy" aria-hidden="true"></span>
+                                <span>Copy as Markdown</span>
+                            </li>
+                            <li role="menuitem" tabindex="0" data-action="view-markdown">
+                                <span class="codicon codicon-file" aria-hidden="true"></span>
+                                <span>View as Markdown</span>
+                                <span class="codicon codicon-link-external" aria-hidden="true"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav id="docs-subnavbar" aria-label="On Page">
+                    
+                    <h4><span class="sr-only">On this page there are 15 sections</span><span
+                            aria-hidden="true">On this page</span></h4>
+                    <ul class="nav">
+                        
+                        <li><a href="#_turning-on-settings-sync">Turning on Settings Sync</a></li>
+                        
+                        <li><a href="#_merge-or-replace">Merge or Replace</a></li>
+                        
+                        <li><a href="#_configuring-synced-data">Configuring synced data</a></li>
+                        
+                        <li><a href="#_conflicts">Conflicts</a></li>
+                        
+                        <li><a href="#_switching-accounts">Switching Accounts</a></li>
+                        
+                        <li><a href="#_syncing-stable-versus-insiders">Syncing Stable versus Insiders</a></li>
+                        
+                        <li><a href="#_restoring-data">Restoring data</a></li>
+                        
+                        <li><a href="#_synced-machines">Synced Machines</a></li>
+                        
+                        <li><a href="#_extension-authors">Extension authors</a></li>
+                        
+                        <li><a href="#_reporting-issues">Reporting issues</a></li>
+                        
+                        <li><a href="#_how-do-i-delete-my-data">How do I delete my data?</a></li>
+                        
+                        <li><a href="#_next-steps">Next steps</a></li>
+                        
+                        <li><a href="#_common-questions">Common questions</a></li>
+                        
+                        <li><a href="#_troubleshooting-keychain-issues">Troubleshooting keychain issues</a></li>
+                        
+                        <li><a href="#_can-i-share-settings-between-vs-code-stable-and-insiders">Can I share settings between VS Code Stable and Insiders?</a></li>
+                        
+                    </ul>
+                    
+                </nav>
+                
+            </aside>
+            
+            <!-- Main article content -->
+            <main class="docs-main-content body">
+                <h1>Settings Sync</h1>
+<p>Settings Sync lets you share your Visual Studio Code configurations such as settings, keyboard shortcuts, and installed extensions across your machines so you are always working with your favorite setup.</p>
+<blockquote><p><strong>Note</strong>: VS Code does not synchronize your extensions to or from a <a href="/docs/remote/remote-overview">remote</a> window, such as when you're connected to SSH, a development container (devcontainer), or WSL.</p>
+</blockquote><h2 id="_turning-on-settings-sync" data-needslink="_turning-on-settings-sync">Turning on Settings Sync</h2>
+<p>You can turn on Settings Sync by using the <strong>Backup and Sync Settings...</strong> entry in the <strong>Manage</strong> gear menu or the <strong>Accounts</strong> menu at the bottom of the Activity Bar.</p>
+<p><img src="/assets/docs/configure/settings-sync/turn-on-sync.png" alt="Screenshot of the Manage menu, highlighting the Backup and Sync Settings command." loading="lazy"></p>
+<p>To use Sync settings, you need to sign in and select which settings you want to sync. Currently, the Settings Sync supports the following settings:</p>
+<ul>
+<li>Settings</li>
+<li>Keyboard shortcuts</li>
+<li>User snippets</li>
+<li>User tasks</li>
+<li>UI State</li>
+<li>Extensions</li>
+<li>Profiles</li>
+</ul>
+<p><img src="/assets/docs/configure/settings-sync/sync-configure.png" alt="Screenshot of the Settings Sync configure Quick Pick to select the settings to synchronize." loading="lazy"></p>
+<p>When you select the <strong>Sign in</strong> button, you can choose between signing in with your Microsoft or GitHub account.</p>
+<p><img src="/assets/docs/configure/settings-sync/sync-accounts.png" alt="Screenshot of the Settings Sync Quick Pick to choose an account type." loading="lazy"></p>
+<p>After making this selection, the browser opens so that you can sign in to your Microsoft or GitHub account. If you choose a Microsoft account, you can use either personal accounts, such as Outlook accounts, or Azure accounts, and you can also link a GitHub account to a new or existing Microsoft account.</p>
+<p>After signing in, Settings Sync is turned on and continues to synchronize your preferences automatically in the background.</p>
+<h2 id="_merge-or-replace" data-needslink="_merge-or-replace">Merge or Replace</h2>
+<p>If you already synced from a machine and turning on sync from another machine, you will be shown with following <strong>Merge or Replace</strong> dialog.</p>
+<p><img src="/assets/docs/configure/settings-sync/sync-merge-replace.png" alt="Settings Sync Merge or Replace dialog" loading="lazy"></p>
+<ul>
+<li><strong>Merge</strong>: Selecting this option will merge <strong>local</strong> settings with <strong>remote</strong> settings from the cloud.</li>
+<li><strong>Replace Local</strong>: Selecting this option will overwrite <strong>local</strong> settings with remote settings from the cloud.</li>
+<li><strong>Merge Manually...</strong>: Selecting this option will open <strong>Merges</strong> view where you can merge preferences one by one.</li>
+</ul>
+<p><img src="/assets/docs/configure/settings-sync/sync-merges-view.png" alt="Settings Sync Merges" loading="lazy"></p>
+<h2 id="_configuring-synced-data" data-needslink="_configuring-synced-data">Configuring synced data</h2>
+<p>Machine settings (with <code>machine</code> or <code>machine-overridable</code> <a href="/updates/v1_34#_machinespecific-settings">scopes</a>) are not synchronized by default, since their values are specific to a given machine. You can also add or remove settings you want to this list from the Settings editor or using the setting <span class="setting"><span class="setting-dropdown" data-setting-id="settingsSync.ignoredSettings">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      settingsSync.ignoredSettings
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>.</p>
+<p><img src="/assets/docs/configure/settings-sync/sync-ignored-settings.png" alt="Settings Sync ignored settings" loading="lazy"></p>
+<p>Keyboard Shortcuts are synchronized per platform by default. If your keyboard shortcuts are platform-agnostic, you can synchronize them across platforms by disabling the setting <span class="setting"><span class="setting-dropdown" data-setting-id="settingsSync.keybindingsPerPlatform">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      settingsSync.keybindingsPerPlatform
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>.</p>
+<p>All built-in and installed extensions are synchronized along with their global enablement state. You can skip synchronizing an extension, either from the Extensions view (<span class="dynamic-keybinding" data-commandId="workbench.view.extensions" data-osx="⇧⌘X" data-win="Ctrl+Shift+X" data-linux="Ctrl+Shift+X"><span class="keybinding">⇧⌘X</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+X</span>)</span>) or using the setting <span class="setting"><span class="setting-dropdown" data-setting-id="settingsSync.ignoredExtensions">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      settingsSync.ignoredExtensions
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>.</p>
+<p><img src="/assets/docs/configure/settings-sync/sync-ignored-extensions.png" alt="Settings Sync ignored settings" loading="lazy"></p>
+<p>Following UI State is synchronized currently:</p>
+<ul>
+<li>Display Language</li>
+<li>Activity Bar entries</li>
+<li>Panel entries</li>
+<li>Views layout and visibility</li>
+<li>Recently used commands</li>
+<li>Do not show again notifications</li>
+</ul>
+<p>You can always change what is synced via the <strong>Settings Sync: Configure</strong> command or by opening the <strong>Manage</strong> gear menu, selecting <strong>Settings Sync is On</strong>, and then <strong>Settings Sync: Configure</strong>.</p>
+<h2 id="_conflicts" data-needslink="_conflicts">Conflicts</h2>
+<p>When synchronizing settings between multiple machines, there may occasionally be conflicts. Conflicts can happen when first setting up sync between machines or when settings change while a machine is offline. When conflicts occur, you will be presented with the following options:</p>
+<ul>
+<li><strong>Accept Local</strong>: Selecting this option will overwrite <strong>remote</strong> settings in the cloud with your local settings.</li>
+<li><strong>Accept Remote</strong>: Selecting this option will overwrite <strong>local</strong> settings with remote settings from the cloud.</li>
+<li><strong>Show Conflicts</strong>: Selecting this will display a diff editor similar to the Source Control diff editor, where you can preview the local and remote settings and choose to either accept local or remote or manually resolve the changes in your local settings file and then accept the local file.</li>
+</ul>
+<h2 id="_switching-accounts" data-needslink="_switching-accounts">Switching Accounts</h2>
+<p>If at any time you want to sync your data to a different account, you can turn off and turn on Settings Sync again with different account. The command to turn off sync is <strong>Settings Sync: Turn off</strong>.</p>
+<h2 id="_syncing-stable-versus-insiders" data-needslink="_syncing-stable-versus-insiders">Syncing Stable versus Insiders</h2>
+<p>By default, the VS Code Stable and <a href="/insiders">Insiders</a> builds use different Settings Sync services, and therefore do not share settings. You can sync your Insiders with Stable by selecting the Stable sync service while turning on Settings Sync. This option is only available in VS Code Insiders.</p>
+<p><img src="/assets/docs/configure/settings-sync/settings-sync-switch.png" alt="Settings Sync Switch Service" loading="lazy"></p>
+<p><strong>Note:</strong> Since Insiders builds are newer than Stable builds, syncing them can sometimes lead to data incompatibility. In such cases, Settings sync will be disabled automatically on stable to prevent data inconsistencies. Once newer version of Stable build is released, you can upgrade your stable client and turn on sync to continue syncing.</p>
+<h2 id="_restoring-data" data-needslink="_restoring-data">Restoring data</h2>
+<p>VS Code always stores local and remote backups of your preferences while syncing and provides views for accessing these. In case something goes wrong, you can restore your data from these views.</p>
+<p><img src="/assets/docs/configure/settings-sync/sync-backup-views.png" alt="Settings Sync backup views" loading="lazy"></p>
+<p>You can open these views using <strong>Settings Sync: Show Synced Data</strong> command from the Command Palette. The Local Sync activity view is hidden by default and you can enable it using <strong>Views</strong> submenu under <strong>Settings Sync</strong> view overflow actions.</p>
+<p><img src="/assets/docs/configure/settings-sync/sync-enable-local-activity-view.png" alt="Settings Sync enable local backup views" loading="lazy"></p>
+<p>Local backups folder in the disk can be accessed via the <strong>Settings Sync: Open Local Backups Folder</strong> command. The folder is organized by the type of preference and contains versions of your JSON files, named with a timestamp of when the backup occurred.</p>
+<blockquote><p><strong>Note</strong>: Local backups are automatically deleted after 30 days. For remote backups the latest 20 versions of each individual resource (settings, extensions, etc.) is retained.</p>
+</blockquote><h2 id="_synced-machines" data-needslink="_synced-machines">Synced Machines</h2>
+<p>VS Code keeps track of the machines synchronizing your preferences and provides a view to access them. Every machine is given a default name based on the type of VS Code (Insiders or Stable) and the platform it is on. You can always update the machine name using the edit action available on the machine entry in the view. You can also disable sync on another machine using <strong>Turn off Settings Sync</strong> context menu action on the machine entry in the view.</p>
+<p><img src="/assets/docs/configure/settings-sync/sync-machines-view.png" alt="Settings Sync machines views" loading="lazy"></p>
+<p>You can open this view using <strong>Settings Sync: Show Synced Data</strong> command from the Command Palette.</p>
+<h2 id="_extension-authors" data-needslink="_extension-authors">Extension authors</h2>
+<p>If you are an extension author, you should make sure your extension behaves appropriately when users enable Setting Sync. For example, you probably don't want your extension to display the same dismissed notifications or welcome pages on multiple machines.</p>
+<h3 id="_sync-user-global-state-between-machines" data-needslink="_sync-user-global-state-between-machines">Sync user global state between machines</h3>
+<p>If your extension needs to preserve some user state across different machines then provide the state to Settings Sync using <code>vscode.ExtensionContext.globalState.setKeysForSync</code>. Sharing state such as UI dismissed or viewed flags across machines can provide a better user experience.</p>
+<p>There is an example of using <code>setKeysforSync</code> in the <a href="/api/extension-capabilities/common-capabilities#data-storage">Extension Capabilities</a> topic.</p>
+<h2 id="_reporting-issues" data-needslink="_reporting-issues">Reporting issues</h2>
+<p>Settings Sync activity can be monitored in the <strong>Log (Settings Sync)</strong> output view. If you experience a problem with Settings Sync, include this log when creating the issue. If your problem is related to authentication, also include the log from the <strong>Account</strong> output view.</p>
+<h2 id="_how-do-i-delete-my-data" data-needslink="_how-do-i-delete-my-data">How do I delete my data?</h2>
+<p>If you want to remove all your data from our servers, just turn off sync via <strong>Settings Sync is On</strong> menu available under <strong>Manage</strong> gear menu and select the checkbox to clear all cloud data. If you choose to re-enable sync, it will be as if you're signing in for the first time.</p>
+<h2 id="_next-steps" data-needslink="_next-steps">Next steps</h2>
+<ul>
+<li><a href="/docs/configure/settings">User and Workspace settings</a> - Learn how to configure VS Code to your preferences through user and workspace settings.</li>
+</ul>
+<h2 id="_common-questions" data-needslink="_common-questions">Common questions</h2>
+<h3 id="_is-vs-code-settings-sync-the-same-as-the-settings-sync-extension" data-needslink="_is-vs-code-settings-sync-the-same-as-the-settings-sync-extension">Is VS Code Settings Sync the same as the Settings Sync extension?</h3>
+<p>No, the <a href="https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync" class="external-link" target="_blank">Settings Sync</a> extension by <a href="https://marketplace.visualstudio.com/publishers/Shan" class="external-link" target="_blank">Shan Khan</a> uses a private Gist on GitHub to share your VS Code settings across different machines and is unrelated to the VS Code Settings Sync.</p>
+<h3 id="_what-types-of-accounts-can-i-use-for-settings-sync-sign-in" data-needslink="_what-types-of-accounts-can-i-use-for-settings-sync-sign-in">What types of accounts can I use for Settings Sync sign in?</h3>
+<p>VS Code Settings Sync supports signing in with either a Microsoft account (for example Outlook or Azure accounts) or a GitHub account. Sign in with GitHub Enterprise accounts is not supported. Other authentication providers may be supported in the future and you can review the proposed Authentication Provider API in <a href="https://github.com/microsoft/vscode/issues/88309" class="external-link" target="_blank">issue #88309</a>.</p>
+<blockquote><p><strong>Note</strong>: VS Code Settings Sync does not support using your <a href="https://www.microsoft.com/en-us/industry/sovereignty/cloud" class="external-link" target="_blank">Microsoft Sovereign Cloud</a> account at this time. If this is something you would like, please let us know what kind of Microsoft Sovereign Cloud you would like to use <a href="https://github.com/microsoft/vscode/issues/196509" class="external-link" target="_blank">in this GitHub issue</a>.</p>
+</blockquote><h3 id="_can-i-use-a-different-backend-or-service-for-settings-sync" data-needslink="_can-i-use-a-different-backend-or-service-for-settings-sync">Can I use a different backend or service for Settings Sync?</h3>
+<p>Settings Sync uses a dedicated service to store settings and coordinate updates. A service provider API may be exposed in the future to allow for custom Settings Sync backends.</p>
+<h2 id="_troubleshooting-keychain-issues" data-needslink="_troubleshooting-keychain-issues">Troubleshooting keychain issues</h2>
+<blockquote><p><strong>Note</strong>: This section applies to VS Code version <strong>1.80 and higher</strong>. In 1.80, we moved away from <a href="https://github.com/atom/node-keytar" class="external-link" target="_blank">keytar</a>, due to its archival, in favor of Electron's <a href="https://www.electronjs.org/docs/latest/api/safe-storage" class="external-link" target="_blank">safeStorage API</a>.</p>
+<p><strong>Note</strong>: keychain, keyring, wallet, credential store are synonymous in this document.</p>
+</blockquote><p>Settings Sync persists authentication information on desktop using the OS keychain for encryption. Using the keychain can fail in some cases if the keychain is misconfigured or the environment isn't recognized.</p>
+<p>To help diagnose the problem, you can restart VS Code with the following flags to generate a verbose log:</p>
+<pre class="shiki" data-lang="text" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>code --verbose --vmodule="*/components/os_crypt/*=1"</span></span>
+<span class="line"><span></span></span></code></pre>
+<h3 id="_windows-macos" data-needslink="_windows-macos">Windows &amp; macOS</h3>
+<p>At this time, there are no known configuration issues on Windows or macOS but, if you suspect something is wrong, you can open an <a href="https://github.com/microsoft/vscode/issues/new/choose" class="external-link" target="_blank">issue on VS Code</a> with the verbose logs from above. This is important for us to support additional desktop configurations.</p>
+<h3 id="_linux" data-needslink="_linux">Linux</h3>
+<p>Towards the top of the logs from the previous command, you will see something to the effect of:</p>
+<pre class="shiki" data-lang="text" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>[9699:0626/093542.027629:VERBOSE1:key_storage_util_linux.cc(54)] Password storage detected desktop environment: GNOME</span></span>
+<span class="line"><span>[9699:0626/093542.027660:VERBOSE1:key_storage_linux.cc(122)] Selected backend for OSCrypt: GNOME_LIBSECRET</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>We rely on Chromium's oscrypt module to discover and store encryption key information in the keyring. Chromium supports <a href="https://source.chromium.org/chromium/chromium/src/+/main:base/nix/xdg_util.cc;l=196-221;drc=502b6c6b6ba9f62ddc2d8a8b39d024627950edb8;bpv=1;bpt=0" class="external-link" target="_blank">a number of different desktop environments</a>. Outlined below are some popular desktop environments and troubleshooting steps that may help if the keyring is misconfigured.</p>
+<h4 id="_gnome-or-unity-or-similar" data-needslink="_gnome-or-unity-or-similar">GNOME or UNITY (or similar)</h4>
+<p>If the error you're seeing is &quot;Cannot create an item in a locked collection&quot;, chances are your keyring's <code>Login</code> keyring is locked. You should launch your OS's keyring (<a href="https://wiki.gnome.org/Apps/Seahorse" class="external-link" target="_blank">Seahorse</a> is the commonly used GUI for seeing keyrings) and ensure the default keyring (usually referred to as <code>Login</code> keyring) is unlocked. This keyring needs to be unlocked when you log into your system.</p>
+<h4 id="_kde" data-needslink="_kde">KDE</h4>
+<blockquote><p>KDE 6 is not yet fully supported by Visual Studio Code. As a workaround: The latest kwallet6 is also accessible as kwallet5, so you can force it to use kwallet5 by setting the password store to <code>kwallet5</code> as explained below in <a href="#_other-linux-desktop-environments">Configure the keyring to use with VS Code</a>.</p>
+</blockquote><p>It's possible that your wallet (aka keyring) is closed. If you open <a href="https://apps.kde.org/kwalletmanager5" class="external-link" target="_blank">KWalletManager</a>, you can see if the default <code>kdewallet</code> is closed and if it is, make sure you open it.</p>
+<p>If you are using KDE5 or higher and are having trouble connecting to <code>kwallet5</code> (like users of the unofficial VS Code Flatpak in <a href="https://github.com/microsoft/vscode/issues/189672" class="external-link" target="_blank">issue #189672</a>), you can try <a href="#_other-linux-desktop-environments">configuring the keyring</a> to <code>gnome-libsecret</code> as this will use the <a href="https://www.gnu.org/software/emacs/manual/html_node/auth/Secret-Service-API.html" class="external-link" target="_blank">Secret Service API</a> to communicate with any valid keyring. <code>kwallet5</code> implements the Secret Service API and can be accessed using this method.</p>
+<p>If you're still experiencing trouble connecting to <code>kwallet5</code>, some users have reported that granting the specific D-Bus service permissions proved a viable fix:</p>
+<pre class="shiki" data-lang="sh" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">flatpak</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> override</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --user</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --talk-name=org.kde.kwalletd5</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --talk-name=org.freedesktop.secrets</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> com.visualstudio.code</span></span>
+<span class="line"></span></code></pre>
+<h4 id="_other-linux-desktop-environments" data-needslink="_other-linux-desktop-environments">Other Linux desktop environments</h4>
+<p>First off, if your desktop environment wasn't detected, you can <a href="https://github.com/microsoft/vscode/issues/new/choose" class="external-link" target="_blank">open an issue on VS Code</a> with the verbose logs from above. This is important for us to support additional desktop configurations.</p>
+<h4 id="_recommended-configure-the-keyring-to-use-with-vs-code" data-needslink="_recommended-configure-the-keyring-to-use-with-vs-code">(recommended) Configure the keyring to use with VS Code</h4>
+<p>You can manually tell VS Code which keyring to use by passing the <code>password-store</code> flag. Our recommended configuration is to first install <a href="https://wiki.gnome.org/Projects/GnomeKeyring" class="external-link" target="_blank">gnome-keyring</a> if you don't have it already and then launch VS Code with <code>code --password-store=&quot;gnome-libsecret&quot;</code>.</p>
+<p>If this solution works for you, you can persist the value of <code>password-store</code> by opening the Command Palette (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>) and running the <strong>Preferences: Configure Runtime Arguments</strong> command. This will open the <code>argv.json</code> file where you can add the setting <code>&quot;password-store&quot;:&quot;gnome-libsecret&quot;</code>.</p>
+<p>Here are all the possible values of <code>password-store</code> if you would like to try using a different keyring than <code>gnome-keyring</code>:</p>
+<ul>
+<li><code>kwallet5</code>: For use with <a href="https://apps.kde.org/kwalletmanager5/" class="external-link" target="_blank">kwalletmanager5</a>.</li>
+<li><code>gnome-libsecret</code>: For use with any package that implements the <a href="https://www.gnu.org/software/emacs/manual/html_node/auth/Secret-Service-API.html" class="external-link" target="_blank">Secret Service API</a> (for example <code>gnome-keyring</code>, <code>kwallet5</code>, <code>KeepassXC</code>).</li>
+<li><em>(not recommended)</em> <code>kwallet</code>: For use with older versions of <code>kwallet</code>.</li>
+<li><em>(not recommended)</em> <code>basic</code>: See the <a href="#_not-recommended-configure-basic-text-encryption">section below on basic text</a> for more details.</li>
+</ul>
+<blockquote><p>If your password store was not detected automatically, see if your setup is mentioned in issue <a href="https://github.com/microsoft/vscode/issues/187338" class="external-link" target="_blank">#187338</a>. If not, feel free to include your setup there or <a href="https://github.com/microsoft/vscode/issues/new/choose" class="external-link" target="_blank">open an issue on VS Code</a> with the verbose logs if you think your issue is not related to automatic password store detection.</p>
+</blockquote><h4 id="_not-recommended-configure-basic-text-encryption" data-needslink="_not-recommended-configure-basic-text-encryption">(not recommended) Configure basic text encryption</h4>
+<p>We rely on Chromium's oscrypt module to discover and store encryption key information in the keyring. Chromium offers an opt-in fallback encryption strategy that uses an in-memory key based on a string that is hardcoded in the Chromium source. Because of this, this fallback strategy is, at best, obfuscation, and should only be used if you are accepting of the risk that any process on the system could, in theory, decrypt your stored secrets.</p>
+<p>If you accept this risk, you can set <code>password-store</code> to <code>basic</code> by opening the Command Palette (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>) and running the <strong>Preferences: Configure Runtime Arguments</strong> command. This will open the <code>argv.json</code> file where you can add the setting <code>&quot;password-store&quot;:&quot;basic&quot;</code>.</p>
+<h2 id="_can-i-share-settings-between-vs-code-stable-and-insiders" data-needslink="_can-i-share-settings-between-vs-code-stable-and-insiders">Can I share settings between VS Code Stable and Insiders?</h2>
+<p>Yes. Please refer to the <a href="#_syncing-stable-versus-insiders">Syncing Stable versus Insiders</a> section for more information.</p>
+<p>Please note that this can sometimes lead to data incompatibility because Insiders builds are newer than Stable builds. In such cases, Settings Sync will be disabled automatically on Stable to prevent data inconsistencies. Once a newer version of the Stable build is released, you can upgrade your client and turn on Settings Sync to continue syncing.</p>
+
+                <div class="feedback" data-edit-url="https://vscode.dev/github/microsoft/vscode-docs/blob/main/docs/configure/settings-sync.md"></div>
+                
+                <div class="body-footer">02/04/2026</div>
+                
+            </main>
+        </div>
+        
+        <!-- Mobile connect widget -->
+        <div class="docs-mobile-widgets visible-xs">
+            <div class="connect-widget"></div>
+        </div>
+    </div>
+</div>
+		</main>
+	</div>
+
+	<div id="search-popup-overlay" class="search-popup-overlay" role="dialog" aria-modal="true" aria-label="Search">
+		<div class="search-popup-container">
+			<div class="search-popup-header">
+				<form class="search-popup-form">
+					<div class="input-group">
+						<input type="text" name="q" class="search-box form-control" placeholder="Search the website"
+							aria-label="Search text" role="combobox" aria-expanded="false"
+							aria-autocomplete="list" aria-controls="search-results-listbox"
+							aria-activedescendant="" />
+						<span class="input-group-btn">
+							<button tabindex="0" class="btn" type="submit" aria-label="Search">
+								<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="Search" />
+								<img class="search-icon-light" src="/assets/icons/search.svg" alt="Search" />
+							</button>
+						</span>
+					</div>
+				</form>
+				<button class="search-popup-close" type="button" aria-label="Close search"><i class="codicon codicon-close" aria-hidden="true"></i></button>
+			</div>
+			<div class="search-popup-results">
+				<ul class="search-popup-results-list" id="search-results-listbox" role="listbox" aria-label="Search results"></ul>
+			</div>
+			<div class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="search-popup-status"></div>
+		</div>
+	</div>
+
+
+	<footer role="contentinfo" class="container">
+		<div class="footer-container">
+			<div class="footer-row">
+				<div class="footer-social">
+					<ul class="links">
+						<li>
+							<a href="https://github.com/microsoft/vscode"><img src="/assets/icons/github-icon.svg" alt="VS Code on Github"></a>
+						</li>
+						<li>
+							<a href="https://go.microsoft.com/fwlink/?LinkID=533687"><img src="/assets/icons/x-icon.svg" class="x-icon" alt="Follow us on X"></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/showcase/vs-code"><img src="/assets/icons/linkedin-icon.svg" alt="VS Code on LinkedIn"></a>
+						</li>
+						<li>
+							<a href="https://bsky.app/profile/vscode.dev"><img src="/assets/icons/bluesky-icon.svg" alt="VS Code on Bluesky"></a>
+						</li>
+						<li>
+							<a href="https://www.reddit.com/r/vscode/"><img src="/assets/icons/reddit-icon.svg" alt="Join the VS Code community on Reddit"></a>
+						</li>
+						<li>
+							<a href="https://www.vscodepodcast.com"><img src="/assets/icons/podcast-icon.svg" alt="The VS Code Insiders Podcast"></a>
+						</li>
+						<li>
+							<a href="https://www.tiktok.com/@vscode"><img src="/assets/icons/tiktok-icon.svg" alt="VS Code on TikTok"></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@code"><img src="/assets/icons/youtube-icon.svg" alt="VS Code on YouTube"></a>
+						</li>
+						<script>
+							function manageConsent() {
+								if (siteConsent && siteConsent.isConsentRequired) {
+									siteConsent.manageConsent();
+								}
+							}
+						</script>
+					</ul>
+					<a id="footer-microsoft-link" class="microsoft-logo" href="https://www.microsoft.com">
+						<img src="/assets/icons/microsoft.svg" alt="Microsoft homepage" />
+					</a>
+				</div>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li><a id="footer-support-link" href="https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=d66407ed-3967-b000-4cfb-2c318cad363d"
+						target="_blank" rel="noopener" title="Get support for VS Code"
+						aria-label="Get support for VS Code (opens in new tab)">Support</a></li>
+					<li><a id="footer-privacy-link" href="https://go.microsoft.com/fwlink/?LinkId=521839"
+						target="_blank" rel="noopener" title="View the Microsoft privacy statement"
+						aria-label="Microsoft privacy statement (opens in new tab)">Privacy</a></li>
+					<li style="display: none;"><a id="footer-cookie-link" style="cursor: pointer;" onclick="manageConsent()"
+						target="_blank" rel="noopener">Manage Cookies</a></li>
+					<li><a id="footer-terms-link" href="https://www.microsoft.com/legal/terms-of-use"
+						target="_blank" rel="noopener" title="View the Microsoft Terms of Use"
+						aria-label="Microsoft Terms of Use (opens in new tab)">Terms of Use</a></li>
+					<li><a id="footer-license-link" href="/License"
+						target="_blank" rel="noopener" title="View the Visual Studio Code license"
+						aria-label="Visual Studio Code license (opens in new tab)">License</a></li>
+				</ul>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li>
+						<svg class="privacy-choices" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43">
+							<title>Your Privacy Choices Opt-Out Icon</title>
+							<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+							<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+							<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+							<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+						</svg>
+						<a id="footer-privacy-choices-link" href="https://aka.ms/YourCaliforniaPrivacyChoices"
+						target="_blank" rel="noopener" title="View Your Privacy Choices"
+						aria-label="Your Privacy Choices (opens in new tab)">Your Privacy Choices</a></li>
+					<li><a id="footer-consumer-health-privacy-link" href="https://go.microsoft.com/fwlink/?linkid=2259814"
+						target="_blank" rel="noopener" title="View the Microsoft Consumer Health Privacy policy"
+						aria-label="Microsoft Consumer Health Privacy policy (opens in new tab)">Consumer Health Privacy</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="module">
+		document.addEventListener('DOMContentLoaded', () => {
+			const copilotDeepLinks = document.querySelectorAll('.copilot-deep-link');
+			if (copilotDeepLinks.length === 0) {
+				return;
+			}
+			if (window.innerWidth < 992) {
+				for (const link of copilotDeepLinks) {
+					link.href = 'https://aka.ms/vscode-activatecopilotfree';
+				}
+			}
+		});
+	</script>
+
+	<script src="/dist/index.js"></script>
+
+	
+
+	<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type" : "SoftwareApplication",
+			"name" : "Visual Studio Code",
+			"softwareVersion": "1.132",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			},
+			"applicationCategory": "DeveloperApplication",
+			"applicationSubCategory": "AI Code Editor",
+			"description": "Visual Studio Code is a free, open source AI code editor for agent-first development. Build with AI agents, manage multi-agent workflows, and code across any environment.",
+			"alternateName": "VS Code",
+			"datePublished": "2021-11-03",
+			"operatingSystem": "Mac, Linux, Windows",
+			"logo": "https://code.visualstudio.com/assets/apple-touch-icon.png",
+			"screenshot": "https://code.visualstudio.com/assets/images/product-screenshot.png",
+			"releaseNotes": "https://code.visualstudio.com/updates",
+			"downloadUrl": "https://code.visualstudio.com/download",
+			"license": "https://code.visualstudio.com/license",
+			"softwareRequirements": "https://code.visualstudio.com/docs/supporting/requirements",
+			"url" : "https://code.visualstudio.com",
+			"author": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"maintainer": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://code.visualstudio.com/Search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			},
+			"sameAs" : [
+				"https://en.wikipedia.org/wiki/Visual_Studio_Code",
+				"https://twitter.com/code",
+				"https://www.youtube.com/code",
+				"https://www.tiktok.com/@vscode",
+				"https://github.com/microsoft/vscode"
+			]
+		}
+	</script>
+</body>
+
+</html>

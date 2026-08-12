@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.reddit.com/r/ObsidianMD/comments/1pqhnct/a_graph_view_for_obsidian_vaults_that_you_can",
+    "name": "A graph view for Obsidian vaults that you can actually work within",
+    "snippet": "Dec 19, 2025 · can you share the plugin or code or whatever it is? or have you already sent it for verification? im so excited to try this out man.",
+    "host_name": "www.reddit.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://obsidian.md/help/plugins/graph",
+    "name": "Graph view - Obsidian Help",
+    "snippet": "Graph view is a core plugin that lets you visualize the relationships between the notes in your vault. To open the Graph view, click Open graph view in the ...",
+    "host_name": "obsidian.md",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.obsidian.md/top",
+    "name": "Obsidian Forum",
+    "snippet": "Base: Add a Graph View (put graph view in base's view menu) · Feature ... Steward - plugin for AI-powered search, vault management, and automation workflows.",
+    "host_name": "forum.obsidian.md",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Oygv7Na2FyM",
+    "name": "ObsidianTutorial The Most Complete Guide to Obsidian Graph View",
+    "snippet": "May 25, 2026 · I'll walk you through how Graph View works, how to customize it, and how to use it effectively in your note‑taking workflow. By the end of ...",
+    "host_name": "www.youtube.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.dsebastien.net/2022-10-19-the-must-have-obsidian-plugins",
+    "name": "Discover the Best Obsidian Plugins - Sébastien Dubois",
+    "snippet": "Nov 14, 2024 · The Obsidian Tasks plugin helps you track tasks across your Obsidian vault. It supports due dates, recurring tasks, querying, filtering, etc.",
+    "host_name": "www.dsebastien.net",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.obsidian.md/t/vs-code-plugin-the-best-of-both-worlds/6358?page=2",
+    "name": "VS Code Plugin - The best of both worlds - Page 2 - Obsidian Forum",
+    "snippet": "Sep 29, 2020 · I'm actually developing a 3D graph view plugin for VSCode now. Already made one for Obsidian: Plugins. I build it for your specific needs!",
+    "host_name": "forum.obsidian.md",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.obsidian.md/t/graph-view-ui-and-filters-non-functional-in-main-vault-filter-panel-missing-entirely-in-new-vault-macos-ventura/99129",
+    "name": "Graph View UI and filters non-functional in main vault",
+    "snippet": "Apr 3, 2025 · The Graph view lets you visualize the relationships between the notes in your vault. To open the Graph view, click Open graph view in the ...",
+    "host_name": "forum.obsidian.md",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://infranodus.com/obsidian-plugin",
+    "name": "InfraNodus Obsidian Graph View Plugin with AI Insights & Chat",
+    "snippet": "If you use Obsidian, you can install the InfraNodus graph view plugin that provides advanced 3D network visualization and AI-enhanced text analysis features.",
+    "host_name": "infranodus.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

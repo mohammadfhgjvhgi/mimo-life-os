@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/UEGQJkERZGrTcggGF6UXXOLcCUc</id>
+  <title>arXiv Query: search_query=all:"trust calibration" AND cat:cs.HC&amp;id_list=&amp;start=0&amp;max_results=6</title>
+  <updated>2026-08-07T15:14:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22trust+calibration%22+AND+cat:cs.HC&amp;start=0&amp;max_results=6&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>6</opensearch:itemsPerPage>
+  <opensearch:totalResults>52</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.18529v2</id>
+    <title>EduPanel: A Three-Agent LLM Judge for Teaching Videos -- Reliability, Complementarity, and Human Trust Calibration</title>
+    <updated>2026-07-30T21:28:29Z</updated>
+    <link href="https://arxiv.org/abs/2607.18529v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.18529v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Teaching videos are becoming a major medium for education, creating a growing need for scalable evaluation of their pedagogical quality. Existing automatic judges do not fully address this setting because teaching quality depends on multimodal evidence and should be evaluated with respect to the intended learner rather than as a universal property. We present EduPanel, a rubric-grounded, learner-conditioned LLM judge that decomposes evaluation across specialized agents to produce interpretable assessments for different aspects of teaching quality. Across expert studies, architecture ablations, and learner-persona analyses, EduPanel achieves reliability comparable to a median human expert. In expert evaluation, its feedback improves scoring accuracy (MAE 0.87 to 0.73), while experts remain able to detect unreliable outputs (AUC = 0.77) instead of accepting them blindly. These results suggest that EduPanel can serve as effective assistants for educational evaluation rather than replacements for human experts.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-20T21:45:00Z</published>
+    <arxiv:comment>19 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Jia-Kai Dong</name>
+    </author>
+    <author>
+      <name>Yi-Cheng Lin</name>
+    </author>
+    <author>
+      <name>Hung-yi Lee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.13798v1</id>
+    <title>Persona Migration and Expectation Recalibration in Generative AI Adoption: A Longitudinal Study at a State Department of Transportation</title>
+    <updated>2026-07-15T13:02:55Z</updated>
+    <link href="https://arxiv.org/abs/2607.13798v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.13798v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative AI tools are increasingly being piloted in public agencies, but limited evidence explains how employee acceptance changes after hands-on use. This study examines Microsoft 365 Copilot adoption during an eight-week pilot at a state Department of Transportation. A matched two-wave survey measured perceived usefulness, perceived ease of use, behavioral intention, and trust before and after participation. After matching and response-quality screening, the sample included 124 employees. Nonparametric tests assessed aggregate changes, k-means clustering identified baseline acceptance personas, and fixed-centroid assignment tracked migration. Open-ended responses were examined using keyword-based content mapping. Perceived usefulness declined significantly after use, suggesting recalibration of expectations, while perceived ease of use, behavioral intention, and trust showed only small, nonsignificant changes. Three baseline personas emerged: Skeptics, Cautiously Positive users, and Champions. Although persona counts changed modestly, individual movement was substantial: 40 percent of Skeptics moved to Cautiously Positive, while 68 percent of Champions moved to less enthusiastic personas. Upward movement was associated with gains in usefulness, behavioral intention, and trust; downward movement was associated with declines in usefulness and trust. Communication and summarization remained stable use cases, while data, chart, and presentation tasks declined. Accuracy and privacy concerns decreased, but job and skills concerns increased. Public-sector AI adoption should be monitored dynamically and supported through persona-specific training, workflow examples, verification routines, and trust-calibration safeguards. The study offers a framework for tracking workforce heterogeneity during enterprise generative AI implementation.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-15T13:02:55Z</published>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Omidreza Shoghli</name>
+    </author>
+    <author>
+      <name>Fatemeh Banani Ardecani</name>
+    </author>
+    <author>
+      <name>Amin Mohamadi Hezaveh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.25809v1</id>
+    <title>Designing Trustworthy LLM-based Wellbeing Recommendation through Controllable Interaction</title>
+    <updated>2026-06-24T13:23:33Z</updated>
+    <link href="https://arxiv.org/abs/2606.25809v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.25809v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) are increasingly used to generate personalized guidance in wellbeing contexts such as physical activity, stress management, and mental health support, enabling fluent and context-aware interaction but relying on largely implicit mechanisms that shape how recommendations are expressed and adapted. We argue that this reliance on implicit adaptation through prompting and alignment limits control over guidance, responsibility framing, and user influence, which is particularly problematic in wellbeing settings where recommendations affect users' actions and long-term outcomes. We propose a system-level perspective in which conversational behavior is structured through explicit interaction constraints, including guidance strategies, explanation styles, degrees of directness, and mechanisms for user control. Building on prior work on tangible recommendations, we show how these constraints address key challenges in wellbeing-oriented recommendation, namely trust calibration, intent alignment, and consequence awareness. We outline a modular architecture for controllable LLM-based recommendation and discuss how different configurations can be systematically designed and evaluated in relation to user-centered outcomes such as self-efficacy, perceived agency, and appropriate reliance. This paper contributes a system-level framework for designing LLM-based recommender systems that are adaptive while remaining transparent, controllable, and aligned with human wellbeing.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-24T13:23:33Z</published>
+    <arxiv:comment>Accepted to the 1st Workshop on Trustworthy and Adaptive LLMs for Mental and Physical Wellbeing in Recommendations @UMAP 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Alan Said</name>
+    </author>
+    <author>
+      <name>Alexandra Weilenmann</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.25489v1</id>
+    <title>When LLM Rationales Become User-Facing: Effects on Trust Perception, Decision-Making, and Gaze Behaviors</title>
+    <updated>2026-06-24T07:18:00Z</updated>
+    <link href="https://arxiv.org/abs/2606.25489v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.25489v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) increasingly show step-by-step reasoning rationales alongside their answers, turning reasoning from an internal model capability into a user-facing interface feature. Yet it is unclear whether such rationales help users judge when trust is warranted or merely persuade through fluent reasoning. We address this gap through the lens of auditable trust calibration: user-facing rationales should help people inspect whether an answer is warranted by evidence. We test this framing in factual verification through two linked studies. Study 1, an online experiment (N=68), manipulated rationale presentation format (instant, delayed, on demand), rationale correctness (correct, incorrect), and certainty framing (none, certain, uncertain). Study 2, a controlled eye-tracking study (N=54), examined how no-, correct-, and incorrect-rationale conditions were associated with users' trust, decision-making, and eye-movement patterns. Study 1 showed no reliable presentation-format effects; instead, rationale correctness and certainty framing influenced the trust in the information, trust in the LLM system, and decision confidence. In Study 2, incorrect rationales drew more attention to the supporting evidence and larger pupil diameter while the rationale was viewed, consistent with greater cognitive effort. Incorrect rationales also lowered trust in LLM system relative to showing no rationale, whereas the no-rationale difference was weaker for trust in information. A post-hoc predictive modeling analysis of gaze data from Study 2 further showed that gaze features carried predictive signal for trust- and decision-related user states. This work challenges the assumption that more reasoning is always better and supports rationale designs that are selective, linked to evidence, calibrated in how they express certainty, and easier to verify.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-24T07:18:00Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Xin Sun</name>
+    </author>
+    <author>
+      <name>Ting Pan</name>
+    </author>
+    <author>
+      <name>Yajing Wang</name>
+    </author>
+    <author>
+      <name>Shu Wei</name>
+    </author>
+    <author>
+      <name>Jos A. Bosch</name>
+    </author>
+    <author>
+      <name>Isao Echizen</name>
+    </author>
+    <author>
+      <name>Abdallah El Ali</name>
+    </author>
+    <author>
+      <name>Saku Sugawara</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.21663v1</id>
+    <title>Measuring What Matters: A Quantitative UX Evaluation Framework for AI-Assisted Home Search</title>
+    <updated>2026-06-19T18:09:00Z</updated>
+    <link href="https://arxiv.org/abs/2606.21663v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.21663v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AI-assisted conversational search is rapidly displacing filter-based interfaces across the major home search portals. Redfin's deployment of conversational search produced a 47\% lift in tour requests, and Zillow launched "AI Mode" in March 2026. Recent consumer surveys indicate that a large majority of Americans now use AI tools for housing market information. Yet the evaluation frameworks practitioners apply to these products remain borrowed from general-purpose usability testing, tools designed for deterministic, filter-driven interfaces that do not capture the distinctive failure modes of AI-driven experiences. This paper proposes a four-layer quantitative evaluation framework purpose-built for AI-assisted home search: recommendation system quality, interaction efficiency, attitudinal measurement, and trust calibration. For each layer, validated instruments, production-derived benchmarks, and practitioner-ready implementation guidance are provided. A minimum viable metric set and a worked example illustrating the framework's application to a mid-sized portal are included to support immediate adoption.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-19T18:09:00Z</published>
+    <arxiv:comment>11 pages, no figures</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Matilda Nkoom</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.20748v1</id>
+    <title>Toward Machine Risk Perception: Integrating Trust Calibration and Precursor-Based Risk Estimation for Humanoid</title>
+    <updated>2026-06-18T00:04:02Z</updated>
+    <link href="https://arxiv.org/abs/2606.20748v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20748v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Humanoid robots are emerging as co-workers in smart manufacturing, yet their dynamic, human-like movements introduce safety risks that differ fundamentally from those of fixed or wheeled robots. Conventional safety paradigms based on reactive force or distance limits fail to capture the sequential, uncertain nature of humanoid failures. This study proposes a precursor-driven, trust-calibrated framework to enable proactive humanoid risk perception. Accident evolution is modeled through sequential precursor cues using a Logistic-Exponential (LE) formulation that couples logistic escalation from diverse precursors with exponential decay for temporal dissipation. Trust is defined as the inverse of the estimated accident probability, allowing humanoids to adapt behavior in real time, reducing aggressiveness when risk intensifies, and restoring confidence as stability returns. A multi-source dataset of 126 documented events and 241 precursors revealed twelve dominant accident modes, most evolving through overlapping cues within one second. A simulated case study ("fall-onto-human") demonstrated how the LE-Trust coupling can trigger early intervention and prevent collapse. The results advance humanoid safety from static thresholds toward dynamic, evidence-based inference, establishing a foundation for risk-aware and trustworthy human-robot collaboration in Industry 5.0 environments.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-18T00:04:02Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>He Wen</name>
+    </author>
+  </entry>
+</feed>

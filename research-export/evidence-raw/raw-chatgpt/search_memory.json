@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://help.openai.com/articles/8590148-memory-faq",
+    "name": "Memory FAQ",
+    "snippet": "Memory controls are available in Settings > Personalization > Memory . You can choose to enable or disable memory at any time.",
+    "host_name": "help.openai.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://openai.com/index/memory-and-new-controls-for-chatgpt",
+    "name": "Memory and new controls for ChatGPT",
+    "snippet": "Feb 13, 2024 — You're in control of ChatGPT's memory and can turn off referencing “saved memories” or “chat history” at any time in Settings.",
+    "host_name": "openai.com",
+    "rank": 1,
+    "date": "Feb 13, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ChatGPTPro/comments/1f5f8m8/how_do_you_use_chatgpts_memory_feature",
+    "name": "How do you use ChatGPT's memory feature? : r/ChatGPTPro",
+    "snippet": "Back in February, OpenAI announced the ChatGPT memory feature (Settings > Personalization > Memory), and there was a discussion here on r/ChatGPTPro ...",
+    "host_name": "www.reddit.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.openai.com/t/increase-chatgpts-memory-mine-is-constantly-full/831880",
+    "name": "Increase ChatGPT's Memory (mine is constantly full)",
+    "snippet": "Jun 20, 2024 — Settings > Personalization > Memory (Manage) - delete memory I'll paste it into the chat with a prompt: write all this down without change in ...",
+    "host_name": "community.openai.com",
+    "rank": 3,
+    "date": "Jun 20, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.mindstudio.ai/blog/chatgpt-memory-dreaming-update-how-to-use",
+    "name": "ChatGPT Memory Dreaming Update: How to Use and",
+    "snippet": "Jun 6, 2026 — In Settings > Personalization, toggle off the memory feature . When memory is off: ChatGPT won't save anything new from your conversations ... Read more",
+    "host_name": "www.mindstudio.ai",
+    "rank": 4,
+    "date": "Jun 6, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.facebook.com/fb-answers/openai-chatgpt-memory-feature-save-preferences-support-article",
+    "name": "OpenAI ChatGPT Memory Feature Save Preferences",
+    "snippet": "The feature is opt-in and can be toggled off under Settings > Personalization > Memory . You can view, edit , or delete specific memories, clear everything,",
+    "host_name": "www.facebook.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.qwe.edu.pl/tutorial/how-to-use-chatgpt-memory-feature",
+    "name": "How to Use ChatGPT Memory Feature (2026 Guide)",
+    "snippet": "Mar 13, 2026 — Saved Memories are facts you store – name, diet, tone. Settings → Data Controls → disable “Improve the model for everyone.” Prevents training ...",
+    "host_name": "www.qwe.edu.pl",
+    "rank": 6,
+    "date": "Mar 13, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.openai.com/t/chatgpt-memory-editing-itself-saved-details-changing-disappearing-or-being-replaced/1109359",
+    "name": "ChatGPT Memory Editing Itself? Saved Details Changing",
+    "snippet": "Jan 31, 2025 — When I try to edit or update a memory , it doesn't actually change —instead, it brings an old memory to the top or edits something completely ...",
+    "host_name": "community.openai.com",
+    "rank": 7,
+    "date": "Jan 31, 2025",
+    "favicon": ""
+  }
+]

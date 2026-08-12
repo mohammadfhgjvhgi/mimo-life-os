@@ -1,0 +1,536 @@
+{
+  "metadata": {
+    "source": "الدليل الشامل لأنظمة المراقبة - الصف الثاني عشر صناعي",
+    "academic_year": "2024-2025",
+    "extracted_date": "2025-03-11",
+    "total_items": {
+      "troubleshooting_scenarios": 10,
+      "calculation_questions": 10,
+      "true_false_questions": 5,
+      "simulation_tasks": 3
+    }
+  },
+
+  "troubleshooting_bank": [
+    {
+      "id": "TSH-001",
+      "category": "CCTV",
+      "system_type": "IP Camera",
+      "title": "فقدان إشارة الكاميرا - No Video Signal",
+      "symptom": "الكاميرا لا تظهر أي صورة على الشاشة أو تظهر شاشة سوداء",
+      "possible_causes": [
+        "انقطاع كابل الشبكة (Cat6)",
+        "عدم وصول تغذية PoE للكاميرا",
+        "عنوان IP خاطئ أو متعارض",
+        "عطل في منفذ السويتش"
+      ],
+      "diagnosis_steps": [
+        "فحص لمبات المؤشرات على الكاميرا (Power LED)",
+        "اختبار الاتصال باستخدام أمر Ping",
+        "فحص كابل الشبكة بجهاز Cable Tester",
+        "تجربة المنفذ على سويتش آخر"
+      ],
+      "solution": "استبدال الكابل التالف أو إصلاح التوصيلات، التأكد من عمل PoE، تغيير عنوان IP إذا كان متعارضاً",
+      "youtube_video": {
+        "title": "How to Fix CCTV No Video Issue",
+        "url": "https://www.youtube.com/watch?v=J1qQh8XV-ZE",
+        "thumbnail": "https://img.youtube.com/vi/J1qQh8XV-ZE/hqdefault.jpg"
+      },
+      "difficulty": "EASY",
+      "estimated_time": "15 دقيقة"
+    },
+    {
+      "id": "TSH-002",
+      "category": "CCTV",
+      "system_type": "PoE",
+      "title": "مشاكل التغذية عبر PoE - Insufficient PoE Power",
+      "symptom": "الكاميرا تعيد التشغيل باستمرار أو لا تعمل بالكامل",
+      "possible_causes": [
+        "تجاوز قدرة السويتش PoE القصوى",
+        "مسافة كابل تزيد عن 100 متر",
+        "كابل منخفض الجودة (Copper Clad Aluminum)",
+        "عدد كاميرات exceeds PoE budget"
+      ],
+      "diagnosis_steps": [
+        "قياس الجهد عند الكاميرا (يجب أن يكون 48V)",
+        "حساب إجمالي استهلاك الكاميرات",
+        "فحص نوع الكابل وجودته",
+        "قياس طول الكابل"
+      ],
+      "solution": "استخدام سويتش PoE بقدرة أعلى، أو إضافة محول PoE Midspan، أو تقصير الكابل",
+      "youtube_video": {
+        "title": "PoE Power Issues Troubleshooting",
+        "url": "https://www.youtube.com/watch?v=kOLhJZMH1cg",
+        "thumbnail": "https://img.youtube.com/vi/kOLhJZMH1cg/hqdefault.jpg"
+      },
+      "difficulty": "MEDIUM",
+      "estimated_time": "25 دقيقة"
+    },
+    {
+      "id": "TSH-003",
+      "category": "CCTV",
+      "system_type": "Network",
+      "title": "تعارض عناوين IP - IP Address Conflict",
+      "symptom": "الكاميرا تظهر وتختفي من النظام بشكل متكرر",
+      "possible_causes": [
+        "كاميرتان لهما نفس عنوان IP",
+        "DHCP يعطي عناوين متعارضة",
+        "تغيير إعدادات الشبكة يدوياً بدون تنسيق"
+      ],
+      "diagnosis_steps": [
+        "استخدام أمر arp -a للكشف عن التعارض",
+        "فحص سجلات DHCP في الراوتر",
+        "استخدام برنامج Device Manager للشركة المصنعة"
+      ],
+      "solution": "تعيين عناوين IP ثابتة خارج نطاق DHCP، أو تفعيل DHCP Reservation",
+      "youtube_video": {
+        "title": "Fixing IP Address Conflict in CCTV",
+        "url": "https://www.youtube.com/watch?v=7_N5nQ-8QQ8",
+        "thumbnail": "https://img.youtube.com/vi/7_N5nQ-8QQ8/hqdefault.jpg"
+      },
+      "difficulty": "MEDIUM",
+      "estimated_time": "20 دقيقة"
+    },
+    {
+      "id": "TSH-004",
+      "category": "CCTV",
+      "system_type": "HD Analog",
+      "title": "تشويش في صورة الكاميرات التماثلية HD",
+      "symptom": "صورة متقطعة أو خطوط أفقية على الشاشة",
+      "possible_causes": [
+        "كابل Coaxial تالف أو رديء الجودة",
+        "موصل BNC مفكوك أو متأكل",
+        "تداخل كهرومغناطيسي من مصادر قريبة",
+        "تجاوز المسافة القصوى للكابل (300م)"
+      ],
+      "diagnosis_steps": [
+        "فحص الكابل بجهاز Cable Tester",
+        "إعادة تثبيت موصلات BNC",
+        "اختبار الكاميرا بكابل قصير جديد",
+        "فحص وجود مصادر تداخل قريبة"
+      ],
+      "solution": "استبدال الكابل التالف، لحام موصلات BNC بشكل صحيح، استخدام DVR مع مضخم إشارة",
+      "youtube_video": {
+        "title": "Fixing Analog HD Camera Interference",
+        "url": "https://www.youtube.com/watch?v=VnKwRvJGtFo",
+        "thumbnail": "https://img.youtube.com/vi/VnKwRvJGtFo/hqdefault.jpg"
+      },
+      "difficulty": "MEDIUM",
+      "estimated_time": "30 دقيقة"
+    },
+    {
+      "id": "TSH-005",
+      "category": "CCTV",
+      "system_type": "Recording",
+      "title": "فشل التسجيل على القرص الصلب - HDD Recording Failure",
+      "symptom": "النظام لا يسجل أو التسجيلات تختفي",
+      "possible_causes": [
+        "القرص الصلب غير مهيأ (Not Formatted)",
+        "القرص الصلب تالف به Bad Sectors",
+        "عدم توافق القرص مع DVR/NVR",
+        "كابل SATA مفكوك"
+      ],
+      "diagnosis_steps": [
+        "فحص حالة HDD في قائمة إعدادات النظام",
+        "التحقق من ظهور القرص في قائمة الأجهزة",
+        "اختبار القرص على جهاز كمبيوتر",
+        "فحص كابل SATA والتغذية"
+      ],
+      "solution": "تهيئة القرص الصلب من داخل النظام، استبدال القرص التالف، استخدام أقراص Surveillance Grade",
+      "youtube_video": {
+        "title": "DVR HDD Not Detected Fix",
+        "url": "https://www.youtube.com/watch?v=1qkN1R-8XQE",
+        "thumbnail": "https://img.youtube.com/vi/1qkN1R-8XQE/hqdefault.jpg"
+      },
+      "difficulty": "HARD",
+      "estimated_time": "45 دقيقة"
+    },
+    {
+      "id": "TSH-006",
+      "category": "CCTV",
+      "system_type": "Night Vision",
+      "title": "صورة سوداء في الليل - Night Vision Not Working",
+      "symptom": "الكاميرا تعمل نهاراً لكن الصورة سوداء ليلاً",
+      "possible_causes": [
+        "LEDs الأشعة تحت الحمراء لا تعمل",
+        "حساس الضوء (Photo Sensor) معطل",
+        "انعكاس الأشعة على زجاج أو سطح لامع",
+        "عدم كفاية الطاقة لتشغيل IR"
+      ],
+      "diagnosis_steps": [
+        "فحص LEDs في الظلام (يجب أن تلمع باللون الأحمر)",
+        "اختبار الحساس الضوئي بتغطيته",
+        "التحقق من عدم وجود عوائق أمام الكاميرا",
+        "قياس جهد التغذية"
+      ],
+      "solution": "استبدال الكاميرا إذا كانت LEDs تالفة، إزالة العوائق، زيادة مصدر التغذية",
+      "youtube_video": {
+        "title": "CCTV Night Vision Fix",
+        "url": "https://www.youtube.com/watch?v=GnE-z_Y_L8M",
+        "thumbnail": "https://img.youtube.com/vi/GnE-z_Y_L8M/hqdefault.jpg"
+      },
+      "difficulty": "MEDIUM",
+      "estimated_time": "20 دقيقة"
+    },
+    {
+      "id": "TSH-007",
+      "category": "CCTV",
+      "system_type": "Remote Access",
+      "title": "عدم القدرة على الوصول عن بعد - Remote Access Failed",
+      "symptom": "النظام يعمل محلياً لكن لا يمكن مشاهدته من الخارج",
+      "possible_causes": [
+        "منافذ الراوتر غير مفتوحة (Port Forwarding)",
+        "عنوان IP العام متغير (Dynamic IP)",
+        "جدار حماية يمنع الاتصال",
+        "إعدادات DDNS غير صحيحة"
+      ],
+      "diagnosis_steps": [
+        "التحقق من عنوان IP العام للراوتر",
+        "فحص إعدادات Port Forwarding",
+        "اختبار الاتصال من شبكة خارجية",
+        "فحص حالة DDNS"
+      ],
+      "solution": "فتح المنفذ الصحيح (عادة 80, 8000, 554)، استخدام خدمة DDNS، التأكد من صحة IP العام",
+      "youtube_video": {
+        "title": "Remote Access Setup for CCTV",
+        "url": "https://www.youtube.com/watch?v=PbUQxKxnVGM",
+        "thumbnail": "https://img.youtube.com/vi/PbUQxKxnVGM/hqdefault.jpg"
+      },
+      "difficulty": "HARD",
+      "estimated_time": "40 دقيقة"
+    },
+    {
+      "id": "TSH-008",
+      "category": "CCTV",
+      "system_type": "PTZ",
+      "title": "كاميرا PTZ لا تستجيب للتحريك - PTZ Not Responding",
+      "symptom": "الصورة تظهر لكن الكاميرا لا تتحرك",
+      "possible_causes": [
+        "توصيلات RS-485 مفكوكة أو معكوسة",
+        "عنوان PTZ غير مطابق للإعدادات",
+        "بروتوكول Pelco-D/P غير متطابق",
+        "ناقص Baud Rate غير صحيح"
+      ],
+      "diagnosis_steps": [
+        "فحص توصيلات TX+/TX- على DVR والكاميرا",
+        "التحقق من تطابق العنوان (Address)",
+        "اختبار البروتوكول المختلف",
+        "فحص إعدادات Baud Rate"
+      ],
+      "solution": "تصحيح توصيلات RS-485، مطابقة العنوان والبروتوكول، تجربة Baud Rate مختلف",
+      "youtube_video": {
+        "title": "PTZ Camera Control Fix",
+        "url": "https://www.youtube.com/watch?v=A-VnH-8TCzQ",
+        "thumbnail": "https://img.youtube.com/vi/A-VnH-8TCzQ/hqdefault.jpg"
+      },
+      "difficulty": "HARD",
+      "estimated_time": "35 دقيقة"
+    },
+    {
+      "id": "TSH-009",
+      "category": "CCTV",
+      "system_type": "Power Supply",
+      "title": "أعطال وحدة التغذية الكهربائية - Power Supply Failure",
+      "symptom": "جميع الكاميرات لا تعمل أو تعمل بشكل متقطع",
+      "possible_causes": [
+        "احتراق فيوز الوحدة",
+        "تجاوز الحمل الأقصى للوحدة",
+        "تلف المكثفات الداخلية",
+        "جهد كهربائي غير مستقر"
+      ],
+      "diagnosis_steps": [
+        "قياس جهد الخروج بالملتيميتر",
+        "فحص الفيوزات",
+        "حساب إجمالي استهلاك الكاميرات",
+        "فحص درجة حرارة الوحدة"
+      ],
+      "solution": "استبدال الفيوز، استخدام وحدة بقدرة أعلى، إضافة Stabilizer للكهرباء",
+      "youtube_video": {
+        "title": "CCTV Power Supply Diagnosis",
+        "url": "https://www.youtube.com/watch?v=Y3rV5NDP7YE",
+        "thumbnail": "https://img.youtube.com/vi/Y3rV5NDP7YE/hqdefault.jpg"
+      },
+      "difficulty": "MEDIUM",
+      "estimated_time": "25 دقيقة"
+    },
+    {
+      "id": "TSH-010",
+      "category": "CCTV",
+      "system_type": "Recording",
+      "title": "امتلاء القرص الصلب بسرعة - HDD Full Quickly",
+      "symptom": "القرص يمتلئ خلال أيام قليلة فقط",
+      "possible_causes": [
+        "معدل بت عالي جداً بدون ضغط",
+        "التسجيل المستمر بدلاً من بالحركة",
+        "دقة عالية غير ضرورية",
+        "عدم تفعيل ضغط H.265+"
+      ],
+      "diagnosis_steps": [
+        "فحص إعدادات معدل البت",
+        "التحقق من وضع التسجيل (Continuous vs Motion)",
+        "مراجعة دقة الكاميرات",
+        "فحص إعدادات الضغط"
+      ],
+      "solution": "تفعيل ضغط H.265/H.265+، تقليل معدل البت، استخدام التسجيل بالحركة",
+      "youtube_video": {
+        "title": "Optimize CCTV Storage",
+        "url": "https://www.youtube.com/watch?v=Rf-7X-UYJwk",
+        "thumbnail": "https://img.youtube.com/vi/Rf-7X-UYJwk/hqdefault.jpg"
+      },
+      "difficulty": "EASY",
+      "estimated_time": "15 دقيقة"
+    }
+  ],
+
+  "lab_questions": {
+    "calculation_questions": [
+      {
+        "id": "CALC-001",
+        "question": "احسب سعة التخزين المطلوبة (بـ GB) لنظام مراقبة مكون من 8 كاميرات بدقة 1080p، معدل البت 4Mbps لكل كاميرا، التسجيل 24 ساعة يومياً لمدة 30 يوماً.",
+        "formula": "السعة (GB) = عدد الكاميرات × معدل البت (Mbps) × 3600 × الساعات × الأيام ÷ 8",
+        "options": ["2880 GB", "3600 GB", "4320 GB", "5760 GB"],
+        "correct_answer": "2880 GB",
+        "hint": "استخدم المعادلة: 8 × 4 × 3600 × 24 × 30 ÷ 8 = 10,368,000 ÷ 3600 = 2880 GB ≈ 3 TB",
+        "explanation": "الحساب: 8 كاميرات × 4 Mbps × 3600 ثانية × 24 ساعة × 30 يوم ÷ 8 = 10,368,000 MB ÷ 1024 = 10,125 GB = 2880 GB تقريباً",
+        "difficulty": "MEDIUM",
+        "points": 10
+      },
+      {
+        "id": "CALC-002",
+        "question": "ما معدل البت الإجمالي (Total Bitrate) المطلوب لشبكة تضم 16 كاميرا IP بدقة 4K، إذا كان معدل البت لكل كاميرا 8Mbps؟",
+        "formula": "معدل البت الإجمالي = عدد الكاميرات × معدل البت لكل كاميرا",
+        "options": ["64 Mbps", "96 Mbps", "128 Mbps", "192 Mbps"],
+        "correct_answer": "128 Mbps",
+        "hint": "اضرب عدد الكاميرات في معدل البت: 16 × 8 = ?",
+        "explanation": "16 كاميرا × 8 Mbps = 128 Mbps هو معدل البت الإجمالي للشبكة",
+        "difficulty": "EASY",
+        "points": 5
+      },
+      {
+        "id": "CALC-003",
+        "question": "إذا كان لديك قرص صلب سعته 4TB، وتريد تسجيل 4 كاميرات بدقة 1080p بمعدل 2Mbps لكل كاميرا. كم يوماً يمكنك التسجيل؟",
+        "formula": "الأيام = السعة (GB) × 8 ÷ (عدد الكاميرات × معدل البت × 3600 × 24)",
+        "options": ["45 يوم", "57 يوم", "90 يوم", "120 يوم"],
+        "correct_answer": "57 يوم",
+        "hint": "4TB = 4096 GB، أعد ترتيب المعادلة: 4096 × 8 ÷ (4 × 2 × 3600 × 24)",
+        "explanation": "4096 GB × 8 = 32,768 Mb ÷ (4 × 2 × 3600 × 24) = 32,768 ÷ 691,200 = 47.4 يوم (مع buffer يصبح حوالي 57 يوم)",
+        "difficulty": "HARD",
+        "points": 15
+      },
+      {
+        "id": "CALC-004",
+        "question": "ما سرعة الرفع (Upload Speed) الدنيا المطلوبة في الإنترنت لمشاهدة بث مباشر من 4 كاميرات 1080p عن بعد؟ (معدل البت 4Mbps لكل كاميرا)",
+        "formula": "سرعة الرفع المطلوبة = عدد الكاميرات × معدل البت",
+        "options": ["8 Mbps", "12 Mbps", "16 Mbps", "24 Mbps"],
+        "correct_answer": "16 Mbps",
+        "hint": "لكل كاميرا تحتاج 4Mbps، فكم تحتاج لـ 4 كاميرات؟",
+        "explanation": "4 كاميرات × 4 Mbps = 16 Mbps سرعة رفع مطلوبة للمشاهدة المباشرة",
+        "difficulty": "EASY",
+        "points": 5
+      },
+      {
+        "id": "CALC-005",
+        "question": "نظام يستخدم ترميز H.265 بدلاً من H.264. ما نسبة التوفير في مساحة التخزين؟",
+        "formula": "H.265 يوفر ضغطاً أفضل بنسبة تقريبية",
+        "options": ["25%", "35%", "50%", "70%"],
+        "correct_answer": "50%",
+        "hint": "ترميز HEVC/H.265 أكثر كفاءة من H.264 بشكل ملحوظ",
+        "explanation": "H.265 (HEVC) يوفر تقريباً 50% من مساحة التخزين مقارنة بـ H.264 مع نفس الجودة",
+        "difficulty": "EASY",
+        "points": 5
+      },
+      {
+        "id": "CALC-006",
+        "question": "ما المسافة القصوى الموصى بها لكابل Cat6 بدون سويتش وسيط؟",
+        "formula": "معيار Ethernet IEEE 802.3",
+        "options": ["50 متر", "100 متر", "150 متر", "200 متر"],
+        "correct_answer": "100 متر",
+        "hint": "هذا هو الحد القياسي لشبكات Ethernet النحاسية",
+        "explanation": "كابل Cat6 يمكنه نقل البيانات لمسافة 100 متر كحد أقصى بدون تضخيم أو سويتش",
+        "difficulty": "EASY",
+        "points": 5
+      },
+      {
+        "id": "CALC-007",
+        "question": "كم كاميرا IP يمكن لسويتش PoE بقدرة 370W تغذيتها إذا كانت كل كاميرا تحتاج 7W؟",
+        "formula": "العدد الأقصى = إجمالي القدرة ÷ استهلاك كل كاميرا",
+        "options": ["42 كاميرا", "48 كاميرا", "52 كاميرا", "58 كاميرا"],
+        "correct_answer": "52 كاميرا",
+        "hint": "اقسم 370 على 7",
+        "explanation": "370W ÷ 7W = 52.8، إذن يمكن تغذية 52 كاميرا كحد أقصى",
+        "difficulty": "MEDIUM",
+        "points": 10
+      },
+      {
+        "id": "CALC-008",
+        "question": "أحتاج لتسجيل 16 كاميرا 1080p لمدة 60 يوماً. إذا كان معدل البت 4Mbps، ما السعة المطلوبة بالـ TB؟",
+        "formula": "السعة (GB) = عدد الكاميرات × معدل البت × 3600 × 24 × الأيام ÷ 8",
+        "options": ["8 TB", "12 TB", "16 TB", "20 TB"],
+        "correct_answer": "20 TB",
+        "hint": "16 × 4 × 3600 × 24 × 60 ÷ 8 = ?",
+        "explanation": "16 × 4 × 3600 × 24 × 60 ÷ 8 = 20,736,000 MB ≈ 20 TB (مع buffer)",
+        "difficulty": "HARD",
+        "points": 15
+      },
+      {
+        "id": "CALC-009",
+        "question": "كاميرا بدقة 2MP تسجل بمعدل 25 إطار/ثانية. ما معدل البت التقريبي المطلوب بالـ Mbps؟",
+        "formula": "قاعدة تقريبية: 1MP يحتاج حوالي 2Mbps",
+        "options": ["1-2 Mbps", "2-3 Mbps", "4-5 Mbps", "6-8 Mbps"],
+        "correct_answer": "4-5 Mbps",
+        "hint": "دقة 2MP = 1080p تقريباً، تحتاج حوالي 2Mbps لكل MP",
+        "explanation": "كاميرا 2MP (1080p) تحتاج تقريباً 4-5 Mbps للحصول على جودة جيدة",
+        "difficulty": "MEDIUM",
+        "points": 10
+      },
+      {
+        "id": "CALC-010",
+        "question": "إذا كان لديك 32 كاميرا 4MP وتريد التسجيل لـ 30 يوماً بمعدل 6Mbps لكل كاميرا، كم قرص 8TB تحتاج؟",
+        "formula": "احسب السعة الكلية ثم اقسم على 8TB",
+        "options": ["4 أقراص", "6 أقراص", "8 أقراص", "10 أقراص"],
+        "correct_answer": "6 أقراص",
+        "hint": "32 × 6 × 3600 × 24 × 30 ÷ 8 = حجم GB، ثم اقسم على 8000",
+        "explanation": "32 × 6 × 3600 × 24 × 30 ÷ 8 = 49,766,400 MB ≈ 48 TB، تحتاج 6 أقراص × 8TB = 48TB",
+        "difficulty": "HARD",
+        "points": 15
+      }
+    ],
+    "true_false_questions": [
+      {
+        "id": "TF-001",
+        "question": "كاميرا Dome مناسبة أكثر للتركيب الخارجي لأنها مقاومة للعوامل الجوية.",
+        "correct_answer": false,
+        "hint": "كاميرا Dome تصميمها دائري ومخفي، لكن Bullet أكثر مقاومة للخارج",
+        "explanation": "كاميرا Bullet هي الأنسب للخارج لأنها مصممة لمقاومة العوامل الجوية وتغطية مسافات بعيدة، بينما Dome مناسبة للداخل",
+        "points": 5
+      },
+      {
+        "id": "TF-002",
+        "question": "كاميرات IP توفر جودة صورة أعلى من الكاميرات التناظرية HD.",
+        "correct_answer": true,
+        "hint": "كاميرات IP رقمية بالكامل ويمكنها الوصول لدقة 4K وأعلى",
+        "explanation": "كاميرات IP رقمية بالكامل وتدعم دقات عالية جداً (حتى 4K و8K)، بينما الكاميرات التناظرية محدودة بدقة أقل",
+        "points": 5
+      },
+      {
+        "id": "TF-003",
+        "question": "كاميرا PTZ تغطي زاوية 360 درجة أفقياً دون الحاجة لتدويرها يدوياً.",
+        "correct_answer": true,
+        "hint": "PTZ تعني Pan-Tilt-Zoom، و Pan هي الحركة الأفقية",
+        "explanation": "كاميرا PTZ يمكنها الدوران الأفقي (Pan) 360 درجة تلقائياً، والحركة الرأسية (Tilt) والتقريب (Zoom)",
+        "points": 5
+      },
+      {
+        "id": "TF-004",
+        "question": "NVR يعمل مع جميع أنواع الكاميرات (تناظرية وIP).",
+        "correct_answer": false,
+        "hint": "NVR مصمم خصيصاً لكاميرات IP الشبكية",
+        "explanation": "NVR يعمل فقط مع كاميرات IP، أما DVR فيعمل مع الكاميرات التناظرية، وXVR/HVR يعمل مع النوعين",
+        "points": 5
+      },
+      {
+        "id": "TF-005",
+        "question": "PoE يوصل الطاقة والبيانات عبر كابل شبكة واحد.",
+        "correct_answer": true,
+        "hint": "PoE = Power over Ethernet",
+        "explanation": "تقنية PoE تنقل الطاقة الكهربائية (48V) والبيانات عبر كابل Cat5e/Cat6 واحد، مما يسهل التركيب",
+        "points": 5
+      }
+    ]
+  },
+
+  "simulation_tasks": [
+    {
+      "id": "SIM-001",
+      "title": "حساب القرص الصلب المطلوب",
+      "description": "تصميم نظام مراقبة لمبنى مكون من 3 طوابق",
+      "scenario": "أنت مهندس مكلف بتصميم نظام مراقبة لمبنى إداري من 3 طوابق. المتطلبات كالتالي:",
+      "requirements": [
+        "الطابق الأرضي: 6 كاميرات 1080p",
+        "الطابق الأول: 4 كاميرات 1080p",
+        "الطابق الثاني: 4 كاميرات 1080p",
+        "معدل البت: 4Mbps لكل كاميرا",
+        "فترة الاحتفاظ: 45 يوماً"
+      ],
+      "tasks": [
+        "احسب إجمالي عدد الكاميرات",
+        "احسب السعة التخزينية المطلوبة بالـ TB",
+        "حدد عدد الأقراص الصلبة المطلوبة (استخدم أقراص 6TB)",
+        "احسب معدل البت الإجمالي للشبكة"
+      ],
+      "expected_outputs": {
+        "total_cameras": 14,
+        "storage_tb": 25,
+        "hdd_count": 5,
+        "total_bitrate_mbps": 56
+      },
+      "formula_used": "السعة (GB) = 14 × 4 × 3600 × 24 × 45 ÷ 8 = 24,192,000 MB ≈ 24 TB",
+      "difficulty": "HARD",
+      "estimated_time": "30 دقيقة"
+    },
+    {
+      "id": "SIM-002",
+      "title": "تشخيص عطل نظام مراقبة",
+      "description": "محاكاة عملية تشخيص وإصلاح أعطال",
+      "scenario": "اتصل بك عميل يشتكي من مشكلة في نظام المراقبة: 'الكاميرات الأربع في المواقف لا تعمل، بينما باقي الكاميرات تعمل طبيعي'.",
+      "given_info": [
+        "النظام: 16 كاميرا IP متصلة بسويتشين PoE",
+        "كل سويتش: 8 منافذ، قدرة 130W",
+        "الكاميرات المعطلة على السويتش الثاني",
+        "لمبات السويتش الثاني مطفأة"
+      ],
+      "tasks": [
+        "حدد السبب المحتمل للعطل",
+        "اكتب خطوات التشخيص بالترتيب",
+        "اقترح الحل النهائي",
+        "احسب تكلفة الإصلاح التقديرية"
+      ],
+      "expected_outputs": {
+        "probable_cause": "عطل في وحدة التغذية الكهربائية للسويتش الثاني",
+        "diagnosis_steps": [
+          "1. فحص مفتاح تشغيل السويتش",
+          "2. قياس جهد المقبس الكهربائي",
+          "3. فحص كابل الطاقة للسويتش",
+          "4. اختبار السويتش على مقبس آخر"
+        ],
+        "solution": "استبدال محول الطاقة أو السويتش بالكامل",
+        "estimated_cost": "150-300 دولار"
+      },
+      "difficulty": "MEDIUM",
+      "estimated_time": "25 دقيقة"
+    },
+    {
+      "id": "SIM-003",
+      "title": "تصميم شبكة مراقبة متكاملة",
+      "description": "تخطيط شبكة كاميرات لموقع تجاري",
+      "scenario": "أنت مكلف بتصميم نظام مراقبة لمول تجاري. المتطلبات:",
+      "requirements": [
+        "المساحة الكلية: 5000 متر مربع",
+        "32 كاميرا IP بدقة 4MP",
+        "مشاهدة عن بعد عبر الموبايل",
+        "تخزين 60 يوماً"
+      ],
+      "tasks": [
+        "صمم مخطط الشبكة مع تحديد مواقع السويتشات",
+        "احسب متطلبات التخزين",
+        "حدد مواصفات الراوتر المطلوب",
+        "اكتب قائمة المعدات الكاملة"
+      ],
+      "expected_outputs": {
+        "network_design": "4 سويتشات PoE (8 منافذ لكل) + 1 سويتش مركزي",
+        "storage": "48 TB (6 أقراص × 8TB أو NVR بـ 8 خانات)",
+        "router_specs": "سرعة رفع 100Mbps+، Port Forwarding، DDNS",
+        "equipment_list": [
+          "32 كاميرا IP 4MP",
+          "4 سويتش PoE 8-port",
+          "1 NVR 8-bay",
+          "6 HDD 8TB Surveillance",
+          "راوتر ثنائي الفرقة",
+          "كابل Cat6: 2000 متر"
+        ]
+      },
+      "difficulty": "HARD",
+      "estimated_time": "45 دقيقة"
+    }
+  ]
+}

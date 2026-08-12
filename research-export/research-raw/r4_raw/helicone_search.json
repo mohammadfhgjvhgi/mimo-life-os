@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.helicone.ai",
+    "name": "Helicone / AI Gateway & LLM Observability",
+    "snippet": "LLM costs with the largest open-source API pricing database with 300+ models and providers such as OpenAI, Anthropic and more. 2025 Helicone, Inc",
+    "host_name": "www.helicone.ai",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.truefoundry.com/blog/helicone-pricing",
+    "name": "Helicone Pricing 2026: Plans, Costs, and What to Know",
+    "snippet": "Helicone pricing in 2026: free tier limits, Pro at $79/month, Team at $799/month, Pro costs $79 per month, while Team costs $799 per month. ...",
+    "host_name": "www.truefoundry.com",
+    "rank": 1,
+    "date": "Jun 26, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://latitude.so/blog/helicone-alternatives",
+    "name": "Best Helicone Alternatives for LLM Monitoring (2026)",
+    "snippet": "Pricing: Free: $0 — unlimited personal use (no corporate use) The proxy setup is fast, cost tracking is accurate, and caching can reduce API ...",
+    "host_name": "latitude.so",
+    "rank": 2,
+    "date": "Apr 9, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://nextfuture.io.vn/blog/langfuse-vs-helicone-i-tested-both-for-llm-observability-2026",
+    "name": "Langfuse vs Helicone: I Tested Both for LLM Observability",
+    "snippet": "Numbers are pulled from public docs and pricing pages as of April 2026; you pay for two free tiers and get the strengths of each. The main cost is one extra ...",
+    "host_name": "nextfuture.io.vn",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.firecrawl.dev/blog/best-llm-observability-tools",
+    "name": "Best LLM Observability Tools in 2026",
+    "snippet": "Helicone. Helicone LLM gateway dashboard with cost tracking, caching, and request logging. Helicone wins on simplicity. Change your base URL ...",
+    "host_name": "www.firecrawl.dev",
+    "rank": 4,
+    "date": "Jun 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.helicone.ai/guides/cookbooks/cost-tracking",
+    "name": "Cost Tracking & Optimization",
+    "snippet": "pricing for 300+ models. A support chat costs $0.12 on average with 5 API calls Document analysis workflows cost $0.45 with 12 API calls Quick queries cost $0. ...",
+    "host_name": "docs.helicone.ai",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/helicone/helicone",
+    "name": "Helicone/helicone: 🧊 Open source LLM observability",
+    "snippet": "Helicone is an AI Gateway & LLM Observability Platform. We have the largest open-source API pricing database with 300+ models and providers such as OpenAI, ...",
+    "host_name": "github.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://openobserve.ai/blog/llm-observability-tools",
+    "name": "Top Open Source LLM Observability Tools in 2026",
+    "snippet": "Helicone takes a fundamentally different approach: it is a proxy-first observability platform. Rather than adding an SDK, you simply change your ...",
+    "host_name": "openobserve.ai",
+    "rank": 7,
+    "date": "Jul 7, 2026",
+    "favicon": ""
+  }
+]

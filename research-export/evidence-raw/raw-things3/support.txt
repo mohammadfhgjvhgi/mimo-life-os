@@ -1,0 +1,247 @@
+
+
+Things Support
+
+[/things/] Things
+
+[/things/features/] 
+
+Features
+
+[/things/support/] 
+
+Support
+
+[/things/blog/] 
+
+Blog
+
+Frequent questions:
+ai tools
+new device
+discounts
+android
+
+Get Started
+
+[articles/2803552] 
+
+Getting the Apps
+
+Here’s how to get Things for each of your devices.
+
+[articles/2803586] 
+
+Syncing Your To-Dos
+
+Learn how to create a Things Cloud account and connect all your devices.
+
+[articles/2803551] Trying Things
+[articles/2803555] Importing Data From Other Apps
+
+The Basics
+
+[articles/2803579] 
+
+Scheduling To-Dos
+
+Learn how to use Today, Anytime, Upcoming and Someday.
+
+[articles/2803581] 
+
+Using Tags
+
+Sharpen your focus by using tags to categorize your to-dos.
+
+[articles/2803584] 
+
+Searching & Navigating with Quick Find
+
+Navigate to any list and find everything instantly.
+
+[articles/2803564] 
+
+Repeating To-Dos
+
+For anything you need to do every few days, weeks, or months.
+
+[articles/4438545] 
+
+Writing Notes in Things
+
+Capture all the extra details you need to get the task done.
+
+[articles/6378414] 
+
+Getting Productive with Things
+
+A quick guide to getting the most out of Things.
+
+Things Cloud
+
+[articles/2803586] 
+
+Syncing Your To-Dos
+
+Learn how to create a Things Cloud account and connect all your devices.
+
+[articles/2803588] Change Password
+[articles/2803589] Change Username
+[articles/2803590] Troubleshooting Things Cloud
+[articles/2803591] Delete Account & Data
+
+Discover Great Features
+
+[articles/2803583] 
+
+Calendar Integration
+
+See calendar events next to your to-dos as you plan your day.
+
+[articles/2785159] 
+
+Keyboard Shortcuts
+
+Be more productive with powerful keyboard shortcuts.
+
+[articles/2803582] 
+
+Gestures
+
+Learn about everything you can do with a swipe, drag, or tap.
+
+[articles/2877019] 
+
+Talk to Siri
+
+How to tell Siri to add a to-do or show a list.
+
+[articles/4651820] 
+
+Write Notes with Markdown
+
+Add style and structure to your notes with Markdown.
+
+[articles/2955145] 
+
+Apple Shortcuts
+
+Try our ready-made shortcuts to automate your workflows.
+
+[articles/2803573] 
+
+Things URL Scheme
+
+For advanced users, there are even more possibilities for automation.
+
+[articles/9780167] 
+
+Use Natural Language to Set Dates
+
+Just type to quickly schedule to-dos, add reminders, or set deadlines.
+
+[articles/2157909] 
+
+Using Things on Apple Watch
+
+See your to-dos on your wrist so you can mark them complete on the go.
+
+[articles/1059358] Show All
+
+Tips & Tricks
+
+[articles/3289315] 
+
+Prioritizing To-Dos
+
+Here’s how to use tags to prioritize to-dos in Things.
+
+[articles/4001304] 
+
+Understanding the Default Lists
+
+Learn how to best use Today, Upcoming, Anytime, and Someday.
+
+[articles/2237050] 
+
+Dealing with Waiting To-Dos
+
+Get pending to-dos out of Today and find them again quickly.
+
+[articles/8491676] 
+
+How to Get To-Dos Unstuck
+
+Turn intimidating goals into manageable chunks with projects & checklists.
+
+[articles/2693493] 
+
+How to Work With Templates
+
+Re-use checklists and projects to save time.
+
+Troubleshooting
+
+[articles/3614435] 
+
+Run into a problem?
+
+If something isn’t working as expected, you’ll find help here.
+
+[articles/2803590] Things Cloud
+[articles/4522602] App Store Issues
+[articles/2803593] Reinstalling Things
+[articles/2978194] Calendar Integration
+
+Didn’t find what you were looking for?
+
+[/contact/] Contact Us
+
+Products
+
+[/things/mac/] Things for Mac
+
+[/things/iphone/] Things for iPhone
+
+[/things/watch/] Things for Watch
+
+[/things/ipad/] Things for iPad
+
+[/things/vision/] Things for Vision
+
+Support
+
+[/things/support/] Help
+
+[/contact/] Contact
+
+[/things/guide/] Getting Productive
+
+News
+
+[/things/blog/] Blog
+
+[/mailinglist/subscribe/] Newsletter
+
+[/status/] Status Board
+
+[/follow/bluesky/] 
+[/follow/x/] 
+[/follow/threads/] 
+[/follow/instagram/] 
+[/follow/mastodon/] 
+
+Company
+
+[/about/] About Us
+
+[/jobs/] Jobs 
+
+[/privacy/] Privacy Policy
+
+[/terms/] Terms
+
+[/press/] Press
+
+[/] Cultured Code
+

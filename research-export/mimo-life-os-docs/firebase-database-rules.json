@@ -1,0 +1,23 @@
+{
+  "rules": {
+    ".read": "false",
+    ".write": "false",
+    "sync": {
+      "queue": {
+        ".read": "auth != null",
+        ".write": "auth != null",
+        ".indexOn": ["timestamp", "section", "operation", "synced", "deviceName"]
+      },
+      "status": {
+        ".read": "auth != null",
+        ".write": "auth != null",
+        ".indexOn": ["lastSeen"]
+      },
+      "media": {
+        ".read": "auth != null",
+        ".write": "auth != null",
+        ".indexOn": ["uploadedAt", "downloaded"]
+      }
+    }
+  }
+}

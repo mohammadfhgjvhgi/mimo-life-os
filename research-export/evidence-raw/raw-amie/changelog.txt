@@ -1,0 +1,1166 @@
+Amie Changelog
+
+[/] 
+
+Features
+
+[/pricing] Pricing
+
+[https://calendar.amie.so/login] Login[https://calendar.amie.so/login] Get started
+
+Changelog
+
+Amie update #129
+
+August 5, 2026
+
+outlook calendar sync — we're finally here 🎉
+
+we've been working on this for a while, and it's finally shipping. outlook is now a first-class calendar in amie, just like google.
+
+this means:
+
+full two-way sync with your outlook calendar
+
+microsoft sso support
+
+multi-account support (because some of you live in both ecosystems)
+
+native ms teams meeting links instead of defaulting to google meet
+
+gmail in your agent
+
+we've been quietly building gmail tools into Amie's MCP. you can now:
+
+search your email
+
+read full threads
+
+create drafts
+
+manage labels
+
+better booking links
+
+we've made amie.me the domain for your booking links. way cleaner than before.
+
+more improvements:
+
+fixed a performance issue in ai scheduling
+
+webhooks got more flexible — you can now send custom headers and templated bodies
+
+next:
+
+recording video from meetings
+
+Amie update #128
+
+July 14, 2026
+
+mcp server
+
+we're opening up Amie to agents. you can now connect Amie to claude, chatgpt, and other ai tools via our new mcp server.
+
+what does that mean? your ai assistants can now:
+
+see your calendar and events
+
+find people in your contacts
+
+create todos and manage your task lists
+
+view meeting notes
+
+head to settings > connect to set it up
+
+meeting notes on your computer
+
+you can now save meeting notes as local markdown files directly from Amie. especially great if you wanna integrate with obsidian.
+
+ai chat got smarter
+
+image and pdf attachments in the chat (finally!)
+
+recording & audio improvements
+
+fixed some annoying recorder quirks:
+
+bluetooth devices now work way more reliably (we standardized the audio format)
+
+recording errors are way less noisy in your logs (we filtered out expected cleanup messages)
+
+hotkey restored: the 'p' key toggles event privacy again
+
+todoist sync got a major upgrade
+
+we've been working hard to make todoist syncing bulletproof. here's what changed:
+
+webhook support means your tasks sync near-instantly now (no more waiting for the next batch)
+
+better error handling so we don't get stuck when todoist deletes tasks or hits rate limits
+
+more improvements:
+
+data export: you can now export your transcripts as readable monthly files
+
+share links: your booking page duration now matches what you set in the app
+
+external displays: recording notch stays pinned correctly on multi-monitor setups
+
+Amie update #127
+
+February 16, 2026
+
+hey!
+
+apple reminders support
+
+this was one of the most requested integrations! you can now have a bi-directional sync for todos with Apple Reminders :)
+
+we'll soon also let you post action items directly to Apple Reminders!
+
+head to settings > integrations
+
+private meeting notes without events
+
+you can now take meeting notes even if you don't have a calendar event linked. useful for those spontaneous conversations or calls that weren't planned.
+
+more improvements:
+
+custom speaker assignments now update across all segments (not just one)
+
+apple calendar events now show up properly in event-linking search
+
+better audio quality when recording from a bluetooth device
+
+as a reminder: [https://amie.so] Amie is an ai meeting note taker with full calendar integration. it works well alone, and even better with your team.
+
+Amie update #126
+
+February 10, 2026
+
+craft integration
+
+we now integrate directly with craft! you can push meeting notes or action items directly there.
+
+to set it up:
+
+in craft: find Imagine in the sidebar
+
+in craft: click New API Connection
+
+in craft: pick what you want to connect, easiest is: Connect All Documents
+
+in craft: copy the URL they provide you
+
+in Amie: go to Settings > Integrations
+
+in Amie: pick the matching craft integration
+
+in Amie: paste the URL into the input field and click connect
+
+more improvements:
+
+better browser call detection on macOS (now supports microsoft edge)
+
+better calendar sync for resource calendars and edge cases
+
+improved performance for calendar lookups
+
+Amie update #125
+
+January 30, 2026
+
+webhooks got a major upgrade (Early Access)
+
+we added titles and metadata to webhooks, moved everything to a dedicated API page, and made the whole experience clearer. if you're using webhooks to connect Amie to your other tools, this should feel way better now.
+
+note: webhooks are currently in Early Access. head to settings > integrations > API to check it out.
+
+new integrations + fixes
+
+clickup integration — finally here! connect your tasks
+
+linear integration — fixed some bugs that were sneaking around
+
+pdf downloads
+
+you can now download transcripts and summaries as PDFs. throw them into chatgpt, share with your team, whatever you need 📄
+
+custom ai prompts
+
+want Amie to summarize meetings your way? you can now create custom prompts that shape how we generate summaries and action items.
+
+smaller things we fixed:
+
+ai chat can edit events — change draft events directly from the chat
+
+better transcript labeling and speaker detection improvements
+
+improved menubar — cleaner logo, better time display, smarter character limits
+
+fixed meeting room dropdown width (the little things matter)
+
+notch positioning on macOS is now correct
+
+you can skip adhoc event creation if you don't need it
+
+Amie update #124
+
+November 24, 2025
+
+we're giga motivated atm to fix papercuts and things that create friction. most of the below were customer requests!
+
+allow changes to draft events from ai chat
+
+you were able to make our ai chat to schedule meetings. but when you asked for edits, it would fail. now you can keep asking for changes, and we edit the draft.
+
+action items sync to linear
+
+we now assign the ticket to the relevant person.
+
+and we also let you pick Triage instead of a project directly
+
+better notch handling
+
+we fixed a bug with macOS sonoma where the notch would appear in the center of the screen.
+
+there seem to be some more cases, that we're eagerly investigating rn.
+
+more improvements:
+
+webhooks (early access): added event titles, allowed sending webhooks manually, moved to dedicated api page
+
+when adding action items, the UI would expand incorrectly if the project name was too long
+
+better sync reliability across emails and todos
+
+next:
+
+launch attio + webhook
+
+video recording
+
+clickup integration
+
+Amie update #123
+
+November 14, 2025
+
+we're so back with a list of small improvements, before we start launching big things in the next weeks/months! lmk if you want to try our attio integration or webhook support 🙏🏼
+
+share link improvements
+
+multi-calendar availability so guests can see openings across all your enabled calendars
+
+better slot deletion with improved hotkey support
+
+QoL tweaks to make calendar interactions smoother
+
+audio playback just got better
+
+we added floating playback controls so you can scrub through recordings without losing your place in the notes.
+
+timestamp links are now shareable
+
+you can now copy transcript timestamps as links and share them with your team. click a moment in the transcript and grab the link to send to someone else (they'll jump right to that spot)
+
+preferred meeting language
+
+in settings > meetings you can now tell us which languages you typically use during meetings. this is useful to avoid your transcript is in the right language or dialect (eg. en_uk)
+
+under the hood stuff we fixed
+
+upgraded our language detection to be more robust
+
+upgraded transcription model
+
+fix notion integration error (more fixes coming!)
+
+in general: we're very eager to make QoL fixes right now. let us know!
+
+next up:
+
+launch attio + webhook
+
+video recording
+
+clickup integration
+
+Amie update #122
+
+May 30, 2025
+
+ai action items v2
+
+we now separate action items into the different speakers (and we made under the hood prompt improvements too!)
+
+qq: do you wanna add action items directly to your colleagues list?
+
+integrations
+
+we confused lots of people with our two integrations pages. one for the workspace, one for your personal account.
+
+this is all in one page now. with (hopefully) clearer explanations.
+
+better language detection:
+
+we often interpreted recording starting with minutes of silence (eg waiting for someone) as korean (haha).
+
+it's A LOT more robust now. please complain if you see us using the wrong language :)
+
+more improvements:
+
+hide notch when sharing full screen we now avoid the notch being visible 🥸
+
+remember selected mic: if you switched your mic (because you don't use the default one), we remember that
+
+next:
+
+record video from meetings ← this will be huge, already released internally
+
+next version of our smart pages
+
+either: attio integration or webhook (pls lmk)
+
+Amie update #121
+
+May 14, 2025
+
+better speaker labeling
+
+most bot-free meeting note takers only separate between "you" and "them". but many of you understand: knowing who said what is key.
+
+two improvements:
+
+in 1o1s, we'll auto-infer the 2nd person
+--- you just need to label yourself once (we remember you from there on)
+
+the summary uses speaker labels much more now
+
+pro tip:
+if you've never labeled anyone, head to the transcript section and click "Speaker 2". afterwards you can use the chat and ask "what did dieter say about the UX?"
+
+custom words
+
+if there's special terms you use that we transcribe incorrectly, this is for you. you can now bias our ai to use your custom words :)
+☝️ head to settings > meetings to add them
+
+ai chat handles names better
+
+when you ask "what did dieter rams say?" we're now able to get results way more reliably!
+
+ai scheduling fix
+
+there were cases where ai scheduled todos still overlapped → no more :)
+
+next:
+
+better action items from meetings
+
+record video from meetings
+
+next version of our smart pages
+
+Amie update #120
+
+May 7, 2025
+
+Amie + ChatGPT
+
+you can now export the summary/transcript as a PDF. sounds like a small deal, but rich context like this makes your GPT projects 10x more powerful.
+
+better summary
+
+we improved our summary models! and will continue for the next weeks.
+
+please text me if you have examples of what we should do better, and we will! 🫂
+
+11 event colors
+
+we finally did it, after years of painstaking work: you can now choose from not 8 but all 11 colors gcal supports! (they support 16 for calendars, but only 11 for events)
+
+(if they aren't showing yet, press ⌘⇧R once :)
+
+btw: in settings > feature requests you can request + vote 🙏🏼
+
+next:
+
+better action items from meetings
+
+record video from meetings
+
+next version of our smart pages (lmk if you have wishes)
+
+Amie update #119
+
+April 29, 2025
+
+we had a nasty character limit on the private notes, this is now FIXED. feel free to write novels in there now 🤣
+
+pro tip: we use the private notes to focus the summary on your points.
+
+also, you can now change your primary account 🙏🏼
+
+btw, if you wanna help with the roadmap, head to settings > feature requests. there you can create new ideas + vote on others.
+
+other small thing you asked us for. you can now:
+
+search the transcript (⌘+F)
+
+delete smart pages and we won't re-generate them
+
+drag-n-drop notes into pages
+
+discard recordings (click the arrow on stop)
+
+and here's what's next:
+
+allow downloading transcript/summary as .pdf (to add to chatgpt etc)
+
+better action items from meetings (we'll differentiate between yours + other people's)
+
+record video as well (not just audio)
+
+Amie update #119
+
+April 19, 2025
+
+feature requests
+
+in settings > feature requests you can now upvote ideas + submit your own!
+
+our goal is to build them ordered by upvotes! (exceptions apply hehe)
+
+proper changelog coming shortly! and check out the new amie.so if you haven't yet.
+
+Amie update #118
+
+March 28, 2025
+
+we've been busy 🐝
+
+massively improved the ai summary quality. i think it's a night and day difference
+
+the ai chat gets 3 new features daily right now
+
+we now support 84 more languages, eg: danish, norwegian, swedish, arabic, serbian, croatian.
+
+we fixed bugs
+
+highlights from the ai chat:
+
+Personal plan user can now use it
+
+create many events at once
+
+support google maps location + video links
+
+search through shared workspace recordings
+
+support for all day and recurring events
+
+a few examples you can ask:
+
+meet dennis 3pm at klub kitchen, watch football 9pm 2h, [more examples]
+
+what did liza say in the last demo?
+
+now draft a changelog
+
+a lot more ha, send feedback if you have wishes
+
+as a reminder, languages we support already:
+
+english, spanish, french, german, italian, portuguese, dutch, hindi, japanese, chinese, finnish, korean, polish, russian, turkish, ukrainian, vietnamese
+
+important bugs we fixed:
+
+private notes don't lose content anymore (for now we only support a limited amount of characters)
+
+we stopped creating contacts in hubspot for people on your domain
+
+☀️ dennis
+
+Amie update #117
+
+February 12, 2025
+
+many asked: "why don't you update the changelog? did you stop improving Amie?"
+
+truth is: we kept shipping every day. but went into a rabbit hole of "we'll send an update later". recently, we gave early access to a new UI. the feedback was super mixed. so we did something better! and it's live now.
+
+little big change:
+
+for todos + cal nothing really changes.
+
+ai notes (in sidebar) have gotten so damn powerful. so we gave them their dedicated place.
+
+pages are my fav feature:
+
+see how a recurring meeting evolved over time
+
+same with a specific customer/prospect/person
+
+with that super rich context, we can do busy work for you: draft follow-up emails, tickets, notion docs, sync to hubspot...
+
+short summary of everything else we shipped since then:
+
+new pricing plans:
+
+Personal (todo + cal) for $6 or 10 (yearly/monthly)
+
+Pro (15 ai notes) for $15 or $20 (y/m)
+
+Business (unlimited ai notes) for $21 or $30 (y/m)
+
+ai notes:
+
+no bot joining (works on macOS and windows)
+
+records any video call provider (zoom, meet, slack, webex, teams,...)
+
+gives you the summary + transcript with different speaker
+
+generates action items (pro tip: let Amie ai-schedule these)
+
+chat to talk to your notes
+
+we can generate emails, meetings, linear tickets,...
+
+upload audio file as recording
+
+workspaces to collab with your team
+
+integrations with linear, notion, slack, hubspot, pipedrive
+
+centralized billing
+
+fair to say: we're so back
+
+Amie update #116
+
+September 4, 2024
+
+apple calendar for iOS
+
+long promised, finally here. in settings > integrations, you can connect your apple calendar.
+
+this means it now fully works on desktop and iOS. so so happy to ship this heavy requested feature.
+
+repeating todos
+
+almost as heavily requested, also there now! on iOS and desktop you can setup todos to repeat daily, every tuesday and wednesday, twice a month,...
+
+you can also decide if we should add those todos to the calendar. and also when they should be re-created.
+
+design upgrade
+
+our dock and calendar navigation got a glow-up 💅
+
+hover events to get a quick preview and add a private note quickly
+
+we now have an agenda/list view for the calendar
+
+todos
+
+we built a little demo for ai scheduling. head to settings > todos to check it
+
+you can now archive lists
+
+and pick from double the possible colors for lists
+
+new event sync
+
+ideally you never even noticed! we spent months rebuilding the event sync to be fully reliable. many many small calendar issues should be a thing of the past, hehe.
+
+if you still run into small issues, please send feedback and we'll get it fixed!
+
+improvements
+
+you can now pick which calendars our menubar shows in settings > calendars.
+
+and we did many small fixes around todo descriptions, the todoist integration etc.
+
+coming up soon™
+
+Amie for Teams. our ai meeting notes (no bot) are the hero feature. just lmk if you're interested, can tell you the features etc.
+
+first teams onboarded! next 20 teams get 50% discount for 12 months.
+
+Amie update #115
+
+July 4, 2024
+
+joining meetings
+
+we brought back our Obtrusive Island™, (or picture-in-picture calendar, a little floating window).
+
+enable in settings > menu bar. speaking of which:
+
+we now show today + tomorrow in the menu bar
+
+events should now be more up-to-date as well
+
+and we've made joinable meetings more prominent in the dock
+
+btw, you can now also use ⌥+Control+A to open Amie from anywhere, both on macOS and Windows.
+
+windows
+
+we shipped a ton of small improvements for our new windows app :)
+
+we now have a custom title bar and email notifications.
+
+we also fixed bugs around the app only opening from system tray.
+
+coming up soon™
+
+new: recurring todos (ETA: in the next 1-2w)
+
+new: ai meeting notes (ETA: late july, beta tests earlier)
+
+new: iOS apple calendar support for Amie Pro (july)
+
+bug fixes
+
+ai scheduling: upcoming todos were being rescheduled multiple times, small issues with the preferred times
+
+ai scheduled todos don't flicker anymore on app launch
+
+auto save todo description (so no data is lost when you close the app with the todo description open)
+
+allow to disconnect Zoom integration directly from Amie
+
+imported email signature spacing is corrected
+
+if you overrode a calendar name outside Amie, we display it correctly
+
+event details sometimes closed when changing the start date of a recurrent event
+
+show event confirmation modal correctly when event contain attendees
+
+Amie update #114
+
+June 18, 2024
+
+ai scheduling
+
+it's more responsive now and also supported on iOS. but that's just the entrée.
+
+the main: in settings > general, you can now set preferred times™. just use natural language to create even complex preferences. this gives you full customizability.
+
+and for dessert: you can now schedule all todos in a list (no longer only prio or deadline todos)
+
+you can make both these changes in settings > lists. each list can have it's own scheduling preferences.
+
+pomodoro timers
+
+long overdue! for our favorite pro(modoro) users, we now display timers in the menubar. AND we now show a notification when it finishes. AND we also play a soothing short sound. no jumpscare like with the OG iPhone alarm, promise.
+
+windows
+
+good things come to those who wait, right?
+
+well, now you can download our windows app on the website. or by clicking [https://calendar.amie.so/api/download?os=windows&arch=x64&channel=latest] here
+
+have fun and lemme know what you think
+
+coming up soon™
+
+new: recurring todos (ETA: june)
+
+new: more AI Chat glow-up (june)
+
+new: iOS apple calendar support for Amie Pro (july)
+
+new improvements
+
+added setting to hide todos in the all-day section
+
+show event location preview in event card
+
+when deleting an email, we now focus on the next email
+
+auto-assignee yourself when creating todos via Notion integration
+
+we now import subtodos from Things (not yet from Amie → Things)
+
+priority todos now show at the top of their sublist
+
+bug fixes
+
+all day events from apple calendar don't show empty
+
+creating events in apple calendar won't fail
+
+clicking outside the calendar will now also close the event
+
+event display correctly when opening from search
+
+event privacy when created from todo correctly respects your preference
+
+no more push notifications for events in background calendars
+
+what should we do next? just email dennis@
+
+☀️ dennis
+
+Amie update #113
+
+May 30, 2024
+
+todo glow-up
+
+we shipped a few small settings that together have big impact
+
+hide todos scheduled with a date but no time (so the ones in all-day)
+
+decide if scheduled todos should by visible or private
+
+decide if scheduled todos should by free, busy or based on priority/deadline
+
+email attachments
+
+.pdf, .jpg, .ami, whatever it is. you can now upload files on desktop 🙏 (inline images coming tomorrow)
+
+or view attachments on iOS. uploading there from next week :)
+
+new improvements
+
+right-click to unschedule a todo in your calendar
+
+desktop app now has native context menu
+
+set up to 5 reminders per event
+
+booking page now jumps to the first available day
+
+made finding available days easier
+
+the calendar grid now performs faster (iOS)
+
+bug fixes
+
+microsoft teams links can now always be joined directly
+
+todoist dates don't get imported anymore if option is off
+
+todos don't get double-created anymore if list is connected to linear
+
+selection now resets after scheduling a todo
+
+background calendars now don't overlap anymore
+
+dropdown to select todo time now scrolls correctly
+
+todo list progress icons are correct on low screen resolutions
+
+marking email as done via button now proceeds to next
+
+fix events overlapping
+
+event colors now update instantly after changing the calendar's color
+
+when adding tasks in Today list, we no longer jump to Inbox
+
+when rescheduling a todo, we now keep the duration
+
+newly created events now appear immediately (iOS)
+
+coming up soon™
+
+new: windows app (very soon)
+
+new: AI Chat glow-up (next week)
+
+new: apple calendar support for Amie Pro (iOS ETA: june)
+
+new: recurring todos (ETA: june)
+
+big changelog, hope you had fun with it
+🌸
+
+Amie update #112
+
+May 16, 2024
+
+email attachments
+
+you can FINALLY view inline attachments on iOS and desktop.
+
+and you can view/download file attachments on desktop. (for emails imported
+recently, old email support coming). we're shipping the same on iOS in the next
+week.
+
+attaching files yourself is coming next 😈
+
+we keep shaping up our email experience to be fully-fletched. what else are you missing?
+
+ai scheduling
+
+we added two todo settings:
+
+schedule them private by default
+
+schedule them free/busy by default
+
+next we're shipping two highly requested improvements:
+
+set personal/work/... schedule and use that to schedule
+
+we'll ai schedule todos scheduled for a day (without time)
+
+new improvements
+
+Notion: Sync only items assigned to you
+
+Notion: Sync items based on their status
+
+upgraded our AI model
+
+added sorting for Inbox and Today lists
+
+play recently listened Spotify songs
+
+bug fixes
+
+duration are aligned on iOS and web
+
+emails don't have too-big linebreaks
+
+better performance of calendar (iOS)
+
+duration gets used correctly when moving events (iOS)
+
+no more sync delay when creating event (iOS)
+
+coming up soon™
+
+new: attachments for emails (ETA: may)
+
+new: apple calendar support for Amie Pro (iOS ETA: mid may)
+
+new: recurring todos (ETA: may)
+
+see you soon
+
+🤭
+
+Amie update #111
+
+May 7, 2024
+
+ai scheduling
+
+one of our biggest features in a while. and boy have you requested it! 🤣
+
+todos with a priority/deadline will now be auto scheduled. and if your plans change, they auto reschedule.
+
+we give you a 15min break by default between todos (change it in settings if you like)
+
+the next steps for us are:
+
+handle ai scheduling ALL todos
+
+offer different schedules (not just work hours, so your personal todos can be done in personal time)
+
+ai suggest durations, priority and schedules
+
+allow doing one todo across multiple events
+
+new improvements
+
+the event overlapping should be wayyy clearer now
+
+made it easier to manage your calendars in settings
+
+change todo's duration from context menu (right-click)
+
+todo title now supports up to 3 lines
+
+set default free/busy for scheduled todos
+
+add deadlines (iOS)
+
+bug fixes
+
+app could get stuck in event resize mode
+
+some all-day and multi-day events were presented incorrectly
+
+the scheduled date was wrong when adding a time (iOS)
+
+the app crashes less when you have many emails or sleep sessions
+
+items deleted in notion now get deleted in Amie
+
+coming up soon™
+
+new: attachments for emails (ETA: mid may)
+
+new: apple calendar support for Amie Pro (iOS ETA: mid may)
+
+new: recurring todos (ETA: may)
+
+see you soon
+
+🤭
+
+Amie update #110
+
+April 23, 2024
+
+email push notifications
+
+yes! finally push notifications directly open the email 🙌
+
+we also added options to mark done (archive) and mark them a priority :)
+
+new improvements
+
+we now remember your last "Notify guests" selection (a personal favorite ha)
+
+set todo durations (iOS)
+
+set reminder duration faster with preset options
+
+remember whether All day section was open (iOS)
+
+set email push notification settings (iOS)
+
+you can now hide apple calendars from your menu bar
+
+bug fixes
+
+emails open faster (iOS)
+
+mark unread works again
+
+todo descriptions were cut off at the end
+
+default reminders work again
+
+coming up soon™
+
+new: ai auto-scheduling for todos (ETA: beta end of this week)
+
+new: attachments for emails (ETA: early may)
+
+new: apple calendar support for Amie Pro (iOS ETA: mid may)
+
+excited for the next weeks ❤️‍🔥
+☀️ dennis
+
+Amie update #109
+
+April 15, 2024
+
+todo deadlines
+
+you can now set a deadline for your todos. this will be especially helpful for the ai scheduling, we're building right now 😈
+
+coming to iOS later this week!
+
+fixes and improvements
+
+new: align today in view, you can now left-align today, not just monday/sunday
+
+new: you can now drag-n-drop todos into a day in the monthly view
+
+fix: we don't send email push notifications for old but not-yet-imported emails anymore
+
+fix: we improved handling of scheduling todos in an Apple calendar
+
+fix: we improved not being able to scroll a long todo description
+
+fix: we improved visual alignment in the email list overview
+
+fix: double-click to create an event in the monthly view works properly
+
+see you soon
+
+🤭
+
+Amie update #108
+
+April 10, 2024
+
+priorities on iOS
+
+go ahead and mark todos as priority or super priority (long-press for that)
+
+apple calendar improvement (on macOS)
+
+it's pretty much ready for prime time now
+
+fix: join video calls
+
+fix: you can now edit guests of apple calendar events in Amie
+
+fix: show events only once if they exist in google and apple calendar
+
+last thing we'll do: allow editing recurring events
+
+fixes and improvements
+
+improvement: lists can now be managed from settings
+
+improvement: booking links show a nice preview image
+
+improvement: sort todo lists by title, priority, newest and oldest (on iOS)
+
+improvement: push notifications are now shown when app is in foreground (on iOS)
+
+fix: todo name is now autofocused again when pressing Enter
+
+coming up soon™
+
+new: attachments for emails (ETA: in 1.5w)
+
+new: ai auto-scheduling for todos (ETA: mid-end april)
+
+new: apple calendar support for Amie Pro (iOS ETA: mid may)
+
+enjoy the updates and the week
+🐻‍❄️
+
+Amie update #107
+
+April 2, 2024
+
+hey, thanks to all of you who trialed Amie Pro after the last changelog 🫡
+
+apple calendar on macOS!
+
+one of the biggest requests ever is rolling out for macOS! ❤️‍🔥
+
+it says alpha but 95% already works. pro users can enable it in settings > integrations.
+
+the last missing bits are coming this week:
+
+adding guests within Amie
+
+join video calls
+
+edit recurrence
+
+change an event's calendar from apple to google.
+
+calendar crusher
+
+you gotta find out whether or not this is a joke. and the best way to find out is pressing ⌘+K and look for calendar crusher.
+
+have fun 🤣
+
+fixes and improvements
+
+improvement: clearer flows to notify guests (on iOS)
+
+fix: durations don't get reset anymore via todoist
+
+fix: after coming back online, todos will be synced immediately
+
+coming up soon™
+
+new: todo priorities on iOS (ETA: wednesday)
+
+new: attachments for emails (ETA: in 2w)
+
+new: ai auto-scheduling for todos (ETA: mid-end april)
+
+new: apple calendar support for Amie Pro (iOS ETA: mid may)
+
+happy tue, wed, thu, fri, sat, sun (whenever you read this, really)
+🧤
+
+Amie update #106
+
+March 25, 2024
+
+hey, thanks to all of you who trialed Amie Pro after the last changelog 🫡
+
+email push notifications
+
+you can now get push notifications for emails on desktop and iOS! 💌
+
+in desktop settings: turn them on/off for Email, Other or Calendar emails (this will be reflected on iOS too). we'll soon open the email directly from the push.
+
+question: how could we improve our email routing for you? (ie. Email, Other, Calendar)
+
+email signatures (once more)
+
+signatures now get added for emails/replies on iOS :)
+
+new: you can update signatures from within Amie (on desktop)
+
+fix: we now handle complex signatures correctly
+
+Private notes (for Amie Pro)
+
+ever wanted to prepare for a meeting but not share that with guests? or take your own notes during a call? no?
+
+well, now you can! (my personal fav use case: take notes during an interview. makes them super easy to find later)
+
+fixes and improvements
+
+improvement: when deleting a list, decide if you want to keep its todos (on iOS, desktop had this)
+
+fix: we fixed 12 issues with todo creation and updating! there should be (nearly) no more issues ❤️‍🔥
+
+fix: we fixed a bug where we removed the recurrence on todoist todos
+
+coming up soon™
+
+new: todo priorities on iOS (ETA: this week)
+
+new: apple calendar support for Amie Pro (macOS ETA: next week, iOS ETA: tbd!)
+
+new: attachments for emails (ETA: early-mid april)
+
+new: ai auto-scheduling for todos (ETA: tbd, just started)
+
+lets all have a great week, ok?
+🫦
+
+Amie update #105
+
+March 18, 2024
+
+P1-P3: Set Priority or Super Priority
+
+You can now add priority and super priority to todos and emails. So happy they actually feel like ✨ Amie ✨. Priorities in other tools always felt like Work.
+
+We made it so that you can only set 3 Super Priority across lists to make them meaningful. Also, we shipped a ridiculous easter egg, let's see if you can find it.
+
+Email Signatures
+
+We heard you! Signatures are important. Compose an email and we'll append your signature (it needs to be set in Gmail). We're just waiting on Google right now to also be able to create/update signatures.
+
+This is working on Desktop, and will be included in the next iOS release too.
+
+Fixes and Improvements
+
+Improvement: Create todos from the iOS Share Sheet
+
+Improvement: Allow hiding snoozed todos (until the time has come)
+
+Fix: Made the Send email entry point clear
+
+Fix: Ask to send notifications when drag-n-dropping an event (iOS)
+
+Stop taking notes during meetings
+
+Let Amie do it for you.
+[https://calendar.amie.so] Start a free trial now
+
+[/blog] Blog[/stories] Our Story[/calendar] Calendar[/changelog] Changelog[/tools] Tools[/templates] Templates[/alternatives] Alternatives[/best] Best Apps[/mcp] MCP Server[/recording-api] Recording API[/routines] Routines[/tools/ai-response-generator] AI Response Generator
+
+[/contact] Contact us[/download] Download[/affiliate] Affiliates[/reviews] Reviews[/art] Art
+
+[https://www.linkedin.com/company/tryamie/] LinkedIn[https://www.instagram.com/tryamie/] Instagram[https://x.com/tryamie] x.com
+
+[/privacy] Privacy Policy[/terms] Terms of use[/imprint] Imprint
+© Amie 2026
+

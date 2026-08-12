@@ -1,0 +1,14 @@
+Reflect Blog Reflect Product Pricing Company Blog Changelog Login Start Free Trial Open main menu Product Pricing Company Blog Changelog Login Start Free Trial Reflect Blog Learn how to think better by taking notes.
+Improve your note-taking with AI, learn new workflows, and see how notable founders and builders setup their work environments.
+All Tags 🛠️ Toolshed Interviews 🧠 Reflect Workflows 💡 Articles 🏗️ Product Updates 🏗️ Product Updates • Jul 14, 2026 Reflect Open - a new chapter for Reflect Reflect is now open-source, markdown first, and AI native.
+🏗️ Product Updates • Apr 28, 2026 Reflect Update: Edit your notes with coding agents We&#x27;ve expanded MCP functionality to let you edit your notes through these coding agents as well.
+This new functionality unlocks a ton of new workflows if you use coding agents.
+🏗️ Product Updates • Mar 10, 2026 Reflect Update: MCP support for coding agents Reflect notes now has an MCP server to access and search your notes directly from within Claude and Codex.
+🏗️ Product Updates • Sep 23, 2025 Reflect Update: AI summaries for saved links We&#x27;ve shipped a few updates to Reflect, our AI powered note-taking app.
+🏗️ Product Updates • Aug 19, 2025 Reflect Update: Advanced Search on Mobile Last year, we added Advanced Search to our desktop app, making it easier and faster to find exactly what you’re looking for.
+Now, that same powerful filtering is available on mobile.
+🏗️ Product Updates • Jul 8, 2025 Reflect Update: Custom prompt editor and more Inside your preferences, we&#x27;ve added a new tab for Prompt Templates.
+From here you can create, copy, edit and delete any of your custom AI prompt templates.
+Load More Join our newsletter Email Subscribe Unsubscribe at any time.
+Reflect Twitter YouTube Reflect App, LLC.
+All rights reserved.

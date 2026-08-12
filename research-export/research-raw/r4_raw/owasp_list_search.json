@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications",
+    "name": "OWASP Top 10 for Large Language Model Applications",
+    "snippet": "LLM01 : Prompt Injection Manipulating LLMs via crafted inputs can lead to unauthorized access, data breaches, and compromised decision-making.",
+    "host_name": "owasp.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection",
+    "name": "LLM01:2025 Prompt Injection - OWASP Gen AI Security Project",
+    "snippet": "LLM02:2025 Sensitive Information Disclosure . Sensitive information can affect both the LLM and its application context. This includes personal identifiable ... Read more",
+    "host_name": "genai.owasp.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://genai.owasp.org/llmrisk/llm02-insecure-output-handling",
+    "name": "LLM02:2025 Sensitive Information Disclosure",
+    "snippet": "LLM Top 10. LLM01:2025 Prompt Injection . A Prompt Injection Vulnerability occurs when user prompts alter the LLM's behavior or output in unintended ways. Read more",
+    "host_name": "genai.owasp.org",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://trydeepteam.com/docs/frameworks-owasp-top-10-for-llms",
+    "name": "OWASP Top 10 for LLMs 2025",
+    "snippet": "Jun 9, 2026 — OWASP Top 10 for LLMs 2025 · 1. Prompt Injection (LLM01:2025 ) · 2. Sensitive Information Disclosure (LLM02:2025) · 3. Supply Chain (LLM03:2025) · 4. Read more",
+    "host_name": "trydeepteam.com",
+    "rank": 3,
+    "date": "Jun 9, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://aembit.io/blog/owasp-top-10-llm-risks-explained",
+    "name": "OWASP Top 10 for LLM Applications (2025)",
+    "snippet": "Sensitive Information Disclosure (LLM02) LLMs can memorize and reproduce fragments of their training data , including personally identifiable information,",
+    "host_name": "aembit.io",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.promptfoo.dev/docs/red-team/owasp-llm-top-10",
+    "name": "OWASP LLM Top 10",
+    "snippet": "Aug 6, 2024 — OWASP LLM Top 10. The current top 10 are: LLM01: Prompt Injection ; LLM02: Sensitive Information Disclosure; LLM03: Supply Chain Vulnerabilities ... Read more",
+    "host_name": "www.promptfoo.dev",
+    "rank": 5,
+    "date": "Aug 6, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://genai.owasp.org/llm-top-10",
+    "name": "LLMRisks Archive - OWASP Gen AI Security Project",
+    "snippet": "Prompt Injection A Prompt Injection Vulnerability occurs when user prompts . Sensitive information can affect both the LLM and its application...",
+    "host_name": "genai.owasp.org",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.giskard.ai/knowledge/owasp-top-10-for-llm-2025-understanding-the-risks-of-large-language-models",
+    "name": "OWASP Top 10 for LLM 2025: Understanding the Risks",
+    "snippet": "Nov 24, 2025 — OWASP Top 10 for LLM 2025: Understanding the Risks of Large Language Models · Watch: LLM01: Prompt Injection · Watch: LLM02: Sensitive Information ... Read more",
+    "host_name": "www.giskard.ai",
+    "rank": 7,
+    "date": "Nov 24, 2025",
+    "favicon": ""
+  }
+]

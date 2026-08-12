@@ -1,0 +1,72 @@
+Explore the Craft Blog Product Imagine Community Pricing Learn Download Log in Try Craft Free Try Craft Free Blog Building Craft → Life at Craft → News → Community Stories → Future of Work → What&#x27;s New → Craft Update - Tags, Quality of Life improvements, Summer Survey July 21, 2026 Craft Update - Summer Sale, Major Tasks update, Performance improvements, and better Windows app! July 7, 2026 Craft Update - More Flexible Assistant, Bring Your Own Key, MCP v2, and Performance Improvements June 5, 2026 Craft update - Improvements all around - Collections, Web, and Windows! May 19, 2026 Craft update - Sidebar customization, Reminders and 15+ other improvements May 4, 2026 Craft update - Kanban boards, Performance improvements, Spring Sale, and our first SF meetup April 13, 2026 Craft update - A smarter Craft Assistant, easier imports, and more March 9, 2026 Craft update - Gallery View, Offline mode, Lunar New Year Sale and more! February 17, 2026 How we hire in 2026 February 3, 2026 Introducing Craft Agents — The Open Source Agent Interface February 3, 2026 Craft update - Major UX improvements, Windows tabs, and Craft Agents January 28, 2026 Craft update - OCR, Web offline mode beta, Winter Deal and more December 15, 2025 Craft Update - Tags, Quality of Life improvements, Summer Survey July 21, 2026 Craft Update - Summer Sale, Major Tasks update, Performance improvements, and better Windows app! July 7, 2026 Craft Update - More Flexible Assistant, Bring Your Own Key, MCP v2, and Performance Improvements June 5, 2026 Craft update - Improvements all around - Collections, Web, and Windows! May 19, 2026 Craft update - Sidebar customization, Reminders and 15+ other improvements May 4, 2026 Craft update - Kanban boards, Performance improvements, Spring Sale, and our first SF meetup April 13, 2026 Craft update - A smarter Craft Assistant, easier imports, and more March 9, 2026 Craft update - Gallery View, Offline mode, Lunar New Year Sale and more! February 17, 2026 How we hire in 2026 February 3, 2026 Introducing Craft Agents — The Open Source Agent Interface February 3, 2026 Craft update - Major UX improvements, Windows tabs, and Craft Agents January 28, 2026 Craft update - OCR, Web offline mode beta, Winter Deal and more December 15, 2025 What’s New in Craft All updates → July 2026 Craft Update - Tags, Quality of Life improvements, Summer Survey Introducing improvements for Tags, more flexible date search for Tasks, quick actions for Tables, and our annual Summer Survey.
+July 2026 Craft Update - Summer Sale, Major Tasks update, Performance improvements, and better Windows app! We’re excited to share the next major step in our Spring (and now Summer) cleanup effort.
+This is easily the biggest update we’ve released as part of this initiative so far.
+June 2026 Craft Update - More Flexible Assistant, Bring Your Own Key, MCP v2, and Performance Improvements This release is all about making Craft Assistant more flexible, more personal, and entirely on your terms.
+More Posts Grid List Feb 3 How we hire in 2026 AI has changed how we work at Craft.
+Now it&#x27;s changing how we hire.
+Feb 3 Introducing Craft Agents — The Open Source Agent Interface A better, more opinionated way of working with the most powerful AI agents.
+Document-centric workflows, zero-config integrations, and a beautiful UI.
+Nov 27, 2025 Your content is yours - and that’s more empowering than ever Read Balint’s vision on our core philosophy “Your content is yours”, and how it shapes the way we build Craft.
+Jun 4, 2025 BlurHash Meets Metal: Supercharge Your App’s Image Loading Experience BlurHash got a metal-powered upgrade.
+Instant previews, zero lag, and blazing-fast performance that shows what’s possible when image decoding meets GPU acceleration.
+Mar 18, 2025 How we hire? A behind-the-scenes look at how we approach hiring at Craft.
+Jan 31, 2025 Introducing on device AI capabilities inside the Craft Assistant A first look at the future of on-device AI models integrated into productivity tools Dec 30, 2024 The story of Craft&#x27;s in-house sync protocol Join us to learn more about how we built our own sync protocol to enable seamless collaboration across devices and support future growth.
+Nov 28, 2024 Craft 3: Introducing Collections A new and incredibly powerful and flexible way to collect all your ideas and items in one place.
+Nov 28, 2024 Craft 3: Introducing Styling Express your unique style in a brand new experience and capabilities.
+Nov 28, 2024 Craft 3: Introducing Tasks A brand new experience of creating, managing and completing your tasks.
+Nov 28, 2024 Introducing Craft 3 Our biggest update in years and a showcase of our vision for Craft&#x27;s future.
+Nov 5, 2024 Collaborative Editing Learn about the fundamental concepts of collaborative software and the common approaches to its implementation.
+Sep 5, 2024 Going the Extra Mile — Beyond CSS We love small finishing touches.
+In this article, we&#x27;ll showcase a few examples where we&#x27;ve gone the extra mile to deliver an outstanding experience for our web and Windows users.
+Even if not immediately obvious, these subtle enhancements make the difference.
+Aug 21, 2024 Csabi&#x27;s journey Today we bring you Csaba Szabó’s story, who’s a Senior Product Engineer at Craft.
+He tells us about his journey before and since joining Craft; from barely passing a programming class, all the way to being a successful independent contributor (IC) who manages two people today.
+Csaba also reveals his take on what makes a successful Product Engineer at Craft.
+🤫 Aug 9, 2024 Thinking outside of the WKWebView It is almost impossible to use a native Appkit web view inside a macCatalyst application.
+In this article, we show you how the Craft team overcame this obstacle so that users can have a better whiteboard-editing experience.
+Jul 26, 2024 Design Team Offsites – Going the extra mile, literally ✈️ At Craft, the design team is the only one which operates mostly as remote.
+Despite the distance, we seamlessly collaborate using a variety of digital tools – chats, video calls, Figma sessions, and Craft docs, of course.
+Yet, while these digital interactions are efficient, they often lack the nuanced dynamics of in-person collaboration.
+Jul 8, 2024 The beginnings of Craft on Apple Vision Pro How Craft&#x27;s new Vision Pro App was born is the topic of an interesting chat involving two of our App engineers, Kristóf Gruber and Péter Wiesner, and Artom Konovalov from our design team.
+May 15, 2024 How we crafted a first class visionOS experience from our existing code base at Craft Entering a new platform only happens a few times in a developers life.
+It is a rare and delicious event, when you step in the realm of something genuenly new.
+If you are fast, you can feel yourself like the explorers in old times.
+Everything is new, and flexible; the new platform doesn’t yet have estabilished patterns, which gives you plenty of space to experiment.
+May 15, 2024 The Challenges of Cross-App Copy-Paste and Our Solutions The simple user interaction of copy pasting, hides complex logic, edge cases, and fighting with the system under the hood.
+I will give context and explain how we solve these problems in Craft.
+Feb 28, 2024 How we designed sound in a productivity app like Craft At Craft, we’ve always strived to strike the right balance between a tool that&#x27;s empowering and delightful — as we say: “form and function must come hand-in-hand”.
+In this post we take a look at the process around the latest delightful dimension we&#x27;ve added to Craft — sound design.
+Oct 13, 2023 Craftathon 2023: Celebrating innovation at Craft At Craft, we celebrate innovation and passion.
+Last week we held our own hackathon — Craftathon, where teams came up with brilliant ideas on how to harness the power of AI and machine learning.
+The event embodied the spirit of innovation and collaboration that defines Craft&#x27;s culture — and we celebrated it all in our new office in Krausz Palace in Budapest.
+Sep 21, 2023 New Craft research finds that meeting-first culture is letting hybrid workers down Discover the surprising truths about today&#x27;s work meetings from Craft&#x27;s comprehensive study on 2000 hybrid workers.
+And download the full report to learn actionable strategies to combat meeting fatigue and boost productivity with the right balance of async communication and intentional meetings.
+Sep 1, 2023 Crafted by the community: 6 templates you won&#x27;t want to miss From movie tracking to billion-dollar-memos: discover six of our favorite templates built by the Craft community.
+Aug 8, 2023 Using Dungeons & Dragons to transform the lives of kids (with a little help from Craft) An educator from the US makes a big impact on his students&#x27; lives by bringing the famous Dungeons and Dragons game into the classroom.
+Jul 6, 2023 How Daily Notes transformed our experience of remote work: Insights from Craft’s VP of Marketing Discover how Craft’s VP of Marketing revolutionized remote work with the power of Daily Notes.
+Learn how this simple workflow fosters transparency, improves collaboration and enhances productivity in a hybrid work environment.
+May 17, 2023 Artificial Intelligence 101: A Beginner&#x27;s Guide to the World of AI Discover what artificial intelligence is and how it can transform the way you work.
+This beginner&#x27;s guide offers an introduction to anyone new to the world of AI.
+Apr 18, 2023 SOC 2 Type 2: our ongoing commitment to privacy and security We&#x27;re proud to announce that Craft has achieved SOC 2 Type 2 compliance, which demonstrates our commitment to delivering a secure and reliable platform.
+Apr 18, 2023 The Beginner’s Guide to Craft&#x27;s AI Assistant Discover how, in a few easy steps, you can get started with Craft&#x27;s AI Assistant.
+Use the power of artificial intelligence to help improve your productivity and work better.
+Mar 22, 2023 How to make a living from your iPhone: Clifford Pickett on being a creative consultant nomad Clifford Pickett shares how he makes a living from his iPhone as a creative consultant, photographer, and full-time digital nomad.
+Jan 27, 2023 Craft is the cure for writer&#x27;s block says Shapr3D CEO Ever struggle to get your words down? Shapr3D&#x27;s CEO on how Craft cured his writer&#x27;s block Jan 25, 2023 Introducing Page Breaks: A Brand New Way To Structure Your Craft Docs Organize your documents better and make them easier to read and follow with page breaks Jan 23, 2023 Could this be the best code editor in a writing app? Craft introduces a brand new code editor which makes using code effortless in Craft Jan 3, 2023 How a freelancer translator uses Craft to manage projects and workflows Jan Salomonsson, a freelance translator and editor based in Stockholm, reveals how he uses Craft to manage his translation projects and workflows Dec 13, 2022 Piff-Paff, Poker & Bull’s Blood Our winter &#x27;22 offsite adventure in Eger, Hungary.
+Dec 12, 2022 10 Exciting Use-Cases of the New Craft AI Assistant We recently launched our new AI Assistant and we&#x27;ve already started to see some very creative ways that people are using it.
+Dec 8, 2022 How an author writes best selling books with Craft How indie author Adam Eccles uses Craft to write books (+ his tips on how to sell more) Nov 28, 2022 Craft AI Assistant is here The vast power of advanced AI, now inside Craft.
+Go faster, catapult your creativity, and optimize information in seconds.
+Productivity, elevated.
+Nov 28, 2022 Craft&#x27;s New Assistant and the Future of AI We believe that AI has now reached the point where it’s more than just a novelty.
+Here&#x27;s why we built an AI Assistant inside Craft.
+Nov 14, 2022 The Ex-Apple Creative Crafting a Californian Retreat Ex-Apple Creative Anita Stubenrauch on building The Land of Make+Believe and how Craft helps bring ideas to life Nov 14, 2022 Crafting in the Himalayas: How Craft Helps a WHO Health Professional Discover how a public health professional in Nepal uses Craft for his work with the WHO, UNICEF, and governments around the world Sep 6, 2022 1 million installs | Craft for Windows | Series B raise: Autumn ‘22 Update We take a look at how far Craft has already come, and what the future holds Sep 5, 2022 New: Craft for Windows launched After three years and thousands of requests, we&#x27;re excited to announce that Craft is now available for Windows.
+Sep 5, 2022 Craft raises $12m in Series B round We just closed a successful series B funding round that puts us in a strong position to make Craft even better Aug 22, 2022 Craft for Students: from class notes to party planning Craft is helping students around the world to learn, write, plan (and throw great parties!).
+See how you can use Craft to get ahead in your studies and student life.
+Aug 1, 2022 Craft for HR and People Teams: how we do it Craft enables you to create beautiful HR documents to share with your team.
+We reveal how we do it at Craft HQ.
+Jul 18, 2022 Craft those Travel Plans this Summer! From dreaming of far-flung places, to organizing every detail of your trip.
+From capturing stunning holiday spectacles, to keeping your nearest and dearest up to date, Craft really is tremendous for travel! Jun 16, 2022 Lasers, Racers & Extreme Sailors Our Offsite Adventure on Lake Balaton Nov 1, 2021 Craft - The Origin Story Every product has it&#x27;s story - and we&#x27;re happy to share ours.
+Hear the details behind the inception of Craft from Balint Orosz, Founder and CEO of Craft.
+Nov 1, 2021 Your Data is Yours - Our thoughts on Data Ownership and Accessibility Data Ownership and Accessibility is a question of high importance for both our users and us, one we take very seriously.
+Learn more about the details here.
+Footer Product Product Releases Features Write Plan Organize Customize Imagine With Craft Pricing Education Plan Community Slack Reddit Community X / Twitter Learn Compare Craft Getting Started Guide Template Gallery Support Help Center Contact Support Company About us Blog Careers Affiliate Program Media Legal Terms Privacy Policy Security ESG Responsible Disclosure Download Craft for iPhone Craft for iPad Craft for Mac Craft for Windows Windows x64 Windows ARM64 Craft for Vision Pro Craft for Android English Instagram YouTube X LinkedIn © 2026 Craft Docs Limited, Inc.
+All rights reserved.

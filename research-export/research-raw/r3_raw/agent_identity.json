@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://arxiv.org/html/2511.02841v1",
+    "name": "AI Agents with Decentralized Identifiers and Verifiable",
+    "snippet": "[Huang et al., 2025 ] propose a zero- trust identity framework built on verifiable agent identities using DIDs and VCs, directly addressing shortcomings of ... Read more",
+    "host_name": "arxiv.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://eco.com/support/en/articles/15192005-agent-identity-verification-how-ai-agents-authenticate-purchases-in-2026",
+    "name": "How AI Agents Authenticate Purchases in 2026 | Support - Eco",
+    "snippet": "Jul 16, 2026 — Agent Payments Protocol (AP2) uses W3C Verifiable Credentials to make user consent cryptographically auditable.",
+    "host_name": "eco.com",
+    "rank": 1,
+    "date": "Jul 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://cheqd.io/blog/how-verifiable-ai-enables-trust-for-ai-agent-adoption",
+    "name": "How Verifiable AI Enables Trust for AI Agent Adoption",
+    "snippet": "Mar 26, 2025 — Verifiable AI leverages a combination of Decentralised Identifiers (DIDs), Verifiable Credentials (VCs), Trust Registries, and Zero Knowledge ... Read more",
+    "host_name": "cheqd.io",
+    "rank": 2,
+    "date": "Mar 26, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.w3.org/community/agent-identity",
+    "name": "Agent Identity Registry Protocol Community Group",
+    "snippet": "Apr 24, 2026 — The group's work addresses how AI agents can present cryptographically verifiable credentials that bind them to their controlling organizations, ... Read more",
+    "host_name": "www.w3.org",
+    "rank": 3,
+    "date": "Apr 24, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://ethresear.ch/t/anonymous-credentials-for-trustless-agents-acta/24797",
+    "name": "Anonymous Credentials for Trustless Agents (ACTA)",
+    "snippet": "May 5, 2026 — The agent generates a proof that its credential satisfies all three predicates simultaneously. The protocol verifies the proof on-chain. One ...",
+    "host_name": "ethresear.ch",
+    "rank": 4,
+    "date": "May 5, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://indicio.tech/blog/why-verifiable-credentials-will-power-ai-in-2026",
+    "name": "Why Verifiable Credentials Will Power Real-world AI In 2026",
+    "snippet": "Jan 7, 2026 — Verifiable Credentials provide a trust layer for AI systems , allowing consume authenticated data and act in a dynamic way with provable ...",
+    "host_name": "indicio.tech",
+    "rank": 5,
+    "date": "Jan 7, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.dock.io/post/ai-agent-digital-identity-verification",
+    "name": "AI Agent Digital Identity Verification: How to Trust",
+    "snippet": "Dec 4, 2025 — Verifiable credentials make agent identity and authority portable across systems, partners, and ecosystems.",
+    "host_name": "www.dock.io",
+    "rank": 6,
+    "date": "Dec 4, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.universalwalletinfra.com/blogs/ai-s-next-leap-built-on-verifiable-agents-and-trusted-data-with-uwi",
+    "name": "AI's Next Leap: Built on Verifiable Agents and Trusted Data",
+    "snippet": "Jun 28, 2025 — By applying identity principles, each agent can be issued an identity and a set of Verifiable Credentials (VCs). These credentials define the ... Read more",
+    "host_name": "www.universalwalletinfra.com",
+    "rank": 7,
+    "date": "Jun 28, 2025",
+    "favicon": ""
+  }
+]

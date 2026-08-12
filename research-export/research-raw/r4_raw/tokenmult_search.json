@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://medium.com/@ravi.myakala/ai-agents-dont-scale-like-chatbots-2434e4fbe321",
+    "name": "AI Agents Don't Scale Like Chatbots | by Ravi Myakala",
+    "snippet": "Tokens per step = tokens consumed in each reasoning cycle; Retry multiplier = amplification caused by tool failures; Burst factor = volatility ... Read more",
+    "host_name": "medium.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://digitaleconomy.stanford.edu/news/how-are-ai-agents-spending-your-tokens",
+    "name": "How are AI agents spending your tokens?",
+    "snippet": "May 5, 2026 — The high cost is in input tokens rather than output. In code reasoning , the user gives a task, the model reasons, and outputs an answer. But an ... Read more",
+    "host_name": "digitaleconomy.stanford.edu",
+    "rank": 1,
+    "date": "May 5, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/AI_Agents/comments/1o40630/do_ai_agents_waste_more_tokens_and_time_during",
+    "name": "Do AI agents waste more tokens and time during multi-step",
+    "snippet": "I’ve been experimenting with agent-based AI systems lately, and I’m noticing that they often use more tokens and take longer to finish tasks compared ...",
+    "host_name": "www.reddit.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.bigeye.com/blog/how-to-track-ai-agent-costs-and-token-usage",
+    "name": "How to track AI agent costs and token usage",
+    "snippet": "May 19, 2026 — AI agents consume 5-30x more tokens per task than standard chatbots , and average enterprise AI spending grew 483% from 2024 to 2026.",
+    "host_name": "www.bigeye.com",
+    "rank": 3,
+    "date": "May 19, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/jiaxin-pei-632b07147_why-are-ai-agents-so-expensive-do-more-tokens-activity-7455300849523740672-PC8i",
+    "name": "Analyzing AI Agent Token Consumption and Cost Prediction",
+    "snippet": "A few findings that surprised us: Agentic coding tasks consume ~1000× more tokens than chat or reasoning workloads . And input tokens, not ... Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://iternal.ai/token-usage-guide",
+    "name": "Token Usage Guide 2026: How Many Tokens AI Really Uses",
+    "snippet": "Token Multiplier Effect Agentic systems require 5-30x more tokens per task than a standard chat interaction. Token usage exhibits large variance across runs",
+    "host_name": "iternal.ai",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cockroachlabs.com/blog/agentic-ai-costs-at-scale",
+    "name": "The Bill Arrives: How to Manage Agentic AI Costs at Scale",
+    "snippet": "Jun 10, 2026 — Learn how to manage agentic AI costs at scale by reducing retries, controlling context, and improving infrastructure for better performance.",
+    "host_name": "www.cockroachlabs.com",
+    "rank": 6,
+    "date": "Jun 10, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.spheron.network/blog/agentic-ai-inference-cost-2026",
+    "name": "Agentic AI Inference Cost: Why Agents Burn 5-30x Tokens",
+    "snippet": "Jul 16, 2026 — Agentic AI inference cost runs 5-30x higher than chat because tool-calling loops re-send full context on every step. Here's the math, and ...",
+    "host_name": "www.spheron.network",
+    "rank": 7,
+    "date": "Jul 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://arxiv.org/abs/2604.22750",
+    "name": "How Do AI Agents Spend Your Money? Analyzing and",
+    "snippet": "by L Bai · 2026 · Cited by 16 — We find that: (1) agentic tasks are uniquely expensive, consuming 1000x more tokens than code reasoning and code chat, with input tokens rather ... Read more",
+    "host_name": "arxiv.org",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  }
+]

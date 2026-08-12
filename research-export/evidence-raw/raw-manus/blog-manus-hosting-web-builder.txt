@@ -1,0 +1,163 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Introducing Hosting Modes: Match Your Server to Your Project 
+- 
+- 
+- 
+- 
+
+Features
+Solutions
+Resources
+Events
+Team
+Pricing
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+Get started 
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+Manus is now part of Meta — bringing AI to businesses worldwide
+
+Product · Wednesday, June 24 
+
+# Introducing Hosting Modes: Match Your Server to Your Project
+
+Not every website works the same way. 
+
+When you build a standard landing page, traffic might spike during a launch and then drop to zero overnight. But when you build a live-streaming dashboard, a real-time webcam viewer, or a Discord bot, your server needs to stay awake 24/7, holding connections open and processing data without interruption. 
+
+Traditionally, moving a project from a standard auto-scaling setup to an always-on persistent server meant dealing with complex cloud configurations, adjusting deployment pipelines, and managing infrastructure. 
+
+With the introduction of Hosting Modes in Manus Website Builder, you can now toggle between a flexible, cost-efficient server and a dedicated, always-on engine with a single click. 
+
+## Take Control of How Your App Runs 
+
+Hosting Modes give you the power to dictate exactly how your web application behaves behind the scenes. Whether you are optimizing for zero-cost downtime or ensuring a continuous data stream never drops, you can choose the engine that fits your build. 
+
+## Two Engines for Different Workloads 
+
+• Autoscale (The Smart Default): This mode scales from zero to five instances based on traffic. It is incredibly cost-efficient because you are billed only for active request duration—when your site is idle, it costs $0. 
+
+• Reserved (The Always-On Engine): This mode runs on a single persistent instance. There are no cold starts, no request timeouts, and the server stays warm continuously. It is built for workloads that cannot afford to sleep. 
+
+## Pick the Right Mode for Your Build 
+
+The real power of Hosting Modes lies in matching the server to the project. If you are only using Autoscale, you might be missing out on building entirely different categories of applications. Here's a quick gut-check for each. 
+
+﻿ 
+
+Stick with Autoscale when your app responds on request. It's the right fit when traffic comes in bursts and the server can rest in between: 
+
+1 . A product landing page or portfolio that sees a spike during a launch, then sits idle overnight at $0. 
+
+2 . A dashboard or internal reporting tool that only computes when someone opens it. 
+
+3 . A form-based app or lightweight API that fires a response per click and never needs to stay awake. 
+
+Switch to Reserved when your app has to stay awake. It's built for anything that holds a live connection or runs in the background: 
+
+1 . A live-streaming dashboard pushing scores, prices, or telemetry to viewers in real time. 
+
+2 . A real-time webcam viewer that keeps a continuous video feed open without dropping the connection. 
+
+3 . A chatbot or background worker (think a Discord bot or a message queue) that needs to run and listen 24/7. 
+
+## How to Switch Your Hosting Mode 
+
+Changing your hosting engine takes seconds, and you don't need to touch a single line of code. 
+
+1 . Open the Hosting mode dialog from your published project's settings. 
+
+2 . Compare the two cards—Autoscale for everyday sites and general workloads, or Reserved for background jobs, long-running tasks, and persistent connections. 
+
+3 . Pick the mode you want and click Save. (Need the fine print? Tap View full specs in documentation right inside the dialog.) 
+
+## Availability 
+
+Hosting Modes are available now for all users. Each account includes a complimentary monthly $10 budget of credits shared between hosting and database cloud usage. 
+
+## Common Questions About Hosting Modes 
+
+Q: Will my site go offline when I switch hosting modes?A: No. Manus handles the transition smoothly behind the scenes, ensuring your application remains accessible while the new hosting configuration is applied. 
+
+Q: How much does the Reserved mode cost?A: Reserved hosting is billed by actual CPU and memory consumption, up to approximately $36/month at full utilization. Remember, your $10 monthly complimentary credit applies toward this usage. 
+
+Q: Can I use WebSockets on Autoscale?A: While possible, it is not recommended. Autoscale instances spin down when idle, which will drop persistent WebSocket connections. For real-time features, you should use Reserved mode. 
+
+## Build Beyond the Basics 
+
+Hosting Modes are more than just a technical toggle; they are an invitation to build more ambitious applications. We are excited to see the real-time tools, bots, and streaming platforms you create next. 
+
+﻿ 
+
+References 
+
+• [1] Manus Documentation: Publishing & Hosting Modes - https://manus.im/docs/website-builder/publishing#hosting-modes 
+
+• [2] Introducing Manus Projects - https://manus.im/blog/manus-projects 
+
+### Download desktop & mobile app
+Access Manus anytime, anywhere.
+
+macOS Windows iOS Android 
+
+## Less structure,
+more intelligence.
+
+### Product
+Pricing Web app AI design AI slides AI image generator AI music generator Manus browser operator Wide Research Mail Manus Slack integration 
+
+### Resources
+Download Blog Docs Updates Help center Trust center API Team plan Startups Playbook Brand assets 
+
+### Community
+Events Fellows 
+
+### Compare
+VS ChatGPT VS Lovable VS Replit 
+
+### Download
+Mobile app Desktop app My Browser 
+
+### Team
+Team plan SSO API 
+
+### Company
+About us Careers For media Terms of service Privacy policy 
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+© 2026 Meta

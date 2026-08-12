@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://outliner.tana.inc/blog/tana-current-monthly-update-october-2025",
+    "name": "Tana Current Monthly Update (October 2025)",
+    "snippet": "Oct 10, 2025 — Tana's vision for agents goes back to 2021 when the team committed to building an AI-powered knowledge graph. We're not there yet, but we've ...",
+    "host_name": "outliner.tana.inc",
+    "rank": 0,
+    "date": "Oct 10, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://outliner.tana.inc/learn/features/ai-command-nodes",
+    "name": "AI command nodes - Tana Outliner",
+    "snippet": "AI command nodes are reusable actions that send your notes to an AI model with a prompt you define, then write the result back into Tana Outliner.",
+    "host_name": "outliner.tana.inc",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=E1bJVHHYw5Y",
+    "name": "The AI Agent That Automatically Organises My Second Brain",
+    "snippet": "Build an AI agent in Tana that automatically organizes your voice notes into tasks, ideas, and projects without any manual sorting.",
+    "host_name": "www.youtube.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://outliner.tana.inc/learn/features/tana-ai",
+    "name": "Tana AI - Tana Outliner Learn",
+    "snippet": "Tana Outliner lets you build a knowledge graph where you can add information to help AI understand what content means and how it's connected, through Supertags ...",
+    "host_name": "outliner.tana.inc",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/TanaInc/comments/1iel4ey/20250131_jam_packed_update_node",
+    "name": "2025/01/31 Jam packed Update Node : r/TanaInc",
+    "snippet": "2025 /01/31 Jam packed Update Node · New Claude from Anthropic is now available as a custom model in commands where you can configure model. · Info ...",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@fisfraga/tana-a-knowledge-base-integrated-with-ai-to-give-you-superpowers-8da18cd46c36",
+    "name": "Tana: A Knowledge Base Integrated With AI to Give You",
+    "snippet": "Tana is an interconnected knowledge base for your notes . Tana is a Knowledge Graph, or a Knowledge Base. By definition, a graph — G(V,E) — has ...",
+    "host_name": "medium.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://vantaige.io/ai-tool/tana",
+    "name": "Tana - AI Knowledge Graph with Supertags - Vantaige",
+    "snippet": "Tana replaces folders with a node-based graph where every bullet point becomes typed, In February 2025, Tana announced a $25M Series A led by Tola Capital at a ...",
+    "host_name": "vantaige.io",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://outliner.tana.inc/knowledge-graph",
+    "name": "Knowledge graph. Write information, not documents.",
+    "snippet": "Tana Outliner is a knowledge graph with the feel of an outline editor. Connect notes, tasks, and projects in a graph so you, and AI, can actually work with ...",
+    "host_name": "outliner.tana.inc",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

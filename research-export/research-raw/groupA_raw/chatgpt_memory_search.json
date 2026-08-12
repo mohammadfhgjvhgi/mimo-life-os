@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://simonwillison.net/2025/May/21/chatgpt-new-memory",
+    "name": "I really don't like ChatGPT's new memory dossier",
+    "snippet": "Free‑tier users have access to Saved memories only. Update: The new memory feature started rolling out to free users on June 3rd 2025. This ...",
+    "host_name": "simonwillison.net",
+    "rank": 0,
+    "date": "May 21, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://openai.com/index/memory-and-new-controls-for-chatgpt",
+    "name": "Memory and new controls for ChatGPT",
+    "snippet": "June 3, 2025 update: Memory improvements are starting to roll out for free users. In addition to the saved memories that were there before, ...\nJune 3, 2025 update: Memory improvements are starting to roll out for free users. In addition to the saved memories that were there before, ChatGPT now references your recent conversations to provide more personalized responses. Free users have a lightweight version of memory improvements that provides short term continuity across conversations.",
+    "host_name": "openai.com",
+    "rank": 1,
+    "date": "Feb 13, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.mindstudio.ai/blog/chatgpt-memory-dreaming-update-audit-optimize",
+    "name": "ChatGPT Memory Dreaming Update: How to Audit and",
+    "snippet": "ChatGPT's new Dreaming memory update changes how it learns from past chats. Learn how to review, correct, and optimize your memory summary.",
+    "host_name": "www.mindstudio.ai",
+    "rank": 2,
+    "date": "Jun 7, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/OpenAI/comments/1ks72x3/current_state_of_memory_in_chatgpt_as_of_may_2025",
+    "name": "Current State of Memory in ChatGPT (as of May 2025)?",
+    "snippet": "Sorry if this is already been answered, but I'm curious if someone explain to me how memory is supposed to work as of today?\n\nI'm actually really confused ...",
+    "host_name": "www.reddit.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://embracethered.com/blog/posts/2025/chatgpt-how-does-chat-history-memory-preferences-work",
+    "name": "How ChatGPT Remembers You: A Deep Dive into Its",
+    "snippet": "Recently OpenAI added an additional memory feature called “chat history”, which allows ChatGPT to reference past conversations.",
+    "host_name": "embracethered.com",
+    "rank": 4,
+    "date": "May 4, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.facebook.com/groups/evolutionunleashedai/posts/24248675764753513",
+    "name": "Chat GPT's new memory type feature for projects",
+    "snippet": "Small detail.\n\nBig impact.\n\nWhen you create a new project in Chat GPT, you can now choose the **memory type**.\n\nBy default, GPT uses cross-memories - meaning ...",
+    "host_name": "www.facebook.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

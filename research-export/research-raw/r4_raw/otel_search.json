@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai",
+    "name": "Moved: Generative AI semantic conventions",
+    "snippet": "GenAI semantic conventions have moved to the OpenTelemetry GenAI semantic conventions repository. This page has moved and is no longer maintained in this ... Read more",
+    "host_name": "opentelemetry.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/open-telemetry/semantic-conventions-genai",
+    "name": "open-telemetry/semantic-conventions-genai",
+    "snippet": "This repository extends the OpenTelemetry Semantic Conventions with GenAI-specific conventions , using Weaver to manage dependencies on the core semantic ... Read more",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to/x4nent/opentelemetry-genai-semantic-conventions-the-standard-for-llm-observability-1o2a",
+    "name": "OpenTelemetry GenAI Semantic Conventions",
+    "snippet": "Mar 28, 2026 — OpenTelemetry GenAI semantic conventions fundamentally solve the observability problem for LLM applications . Without vendor-specific attributes,",
+    "host_name": "dev.to",
+    "rank": 2,
+    "date": "Mar 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://greptime.com/blogs/2026-05-09-opentelemetry-genai-semantic-conventions",
+    "name": "How OpenTelemetry Traces LLM Calls, Agent Reasoning",
+    "snippet": "May 21, 2026 — OpenTelemetry GenAI Semantic Conventions standardize observability for LLM apps , agent orchestration, MCP tool calling, content capture, and ... Read more",
+    "host_name": "greptime.com",
+    "rank": 3,
+    "date": "May 21, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/open-telemetry/semantic-conventions/blob/main/docs/gen-ai/gen-ai-spans.md",
+    "name": "gen-ai-spans.md - open-telemetry/semantic-conventions",
+    "snippet": "GenAI semantic conventions have moved to the OpenTelemetry GenAI semantic conventions repository. This page has moved and is no longer maintained in this ... Read more",
+    "host_name": "github.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://mlflow.org/docs/latest/genai/tracing/opentelemetry/genai-semconv",
+    "name": "OpenTelemetry GenAI Semantic Conventions",
+    "snippet": "OpenTelemetry Semantic Conventions for GenAI define a standard schema for describing AI and LLM telemetry , backed by the Cloud Native Computing Foundation (CNCF) ... Read more",
+    "host_name": "mlflow.org",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://pypi.org/project/opentelemetry-semantic-conventions-ai",
+    "name": "opentelemetry-semantic-conventions-ai",
+    "snippet": "This is an extension of the standard OpenTelemetry Semantic Conventions for gen AI applications. It defines additional attributes for spans that are useful for ... Read more",
+    "host_name": "pypi.org",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.datadoghq.com/blog/llm-otel-semantic-convention",
+    "name": "Datadog Agent Observability natively supports",
+    "snippet": "Dec 1, 2025 — OTel GenAI Semantic Conventions establishes a standard schema for tracking prompts , model responses, token usage, tool/agent calls, and provider ... Read more",
+    "host_name": "www.datadoghq.com",
+    "rank": 7,
+    "date": "Dec 1, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.dynatrace.com/t5/OTel/OpenLLMetry-semantic-conventions-are-now-part-of-OpenTelemetry/td-p/267984",
+    "name": "New GenAI Semantic Conventions in OpenTelemetry",
+    "snippet": "Jan 21, 2025 — By integrating our semantic conventions with OpenTelemetry, you'll benefit from: Enhanced Observability : Gain deeper insights into your LLM ... Read more",
+    "host_name": "community.dynatrace.com",
+    "rank": 8,
+    "date": "Jan 21, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://opentelemetry.io/docs/specs/semconv/registry/attributes/gen-ai",
+    "name": "Gen AI",
+    "snippet": "Moved to the OpenTelemetry GenAI semantic conventions repository. string, Free-form description of the GenAI agent provided by the application. Read more",
+    "host_name": "opentelemetry.io",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

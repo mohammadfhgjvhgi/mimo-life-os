@@ -1,0 +1,41 @@
+TITLE: Codex CLI
+DESCRIPTION: Pair with Codex in your terminal
+
+Codex CLI is OpenAI’s coding agent that you can run locally from your terminal. It can read, change, and run code on your machine in the selected directory.
+It’s open source and built in Rust for speed and efficiency.
+
+Codex is included with ChatGPT Plus, Pro, Business, Edu, and Enterprise plans. Learn more about what’s included .
+
+# CLI setup
+
+Choose your package manager npm Homebrew 
+
+- 1 
+### Install
+
+Install the Codex CLI with npm .
+npm install command npm i -g @openai/codex Copy 
+
+- 2 
+### Run
+
+Run Codex in a terminal. It can inspect your repository, edit files, and run commands.
+Run Codex command codex Copy 
+
+The first time you run Codex, you'll be prompted to sign in. Authenticate with your ChatGPT account or an API key.
+See the pricing page if you're not sure which plans include Codex access.
+
+- 3 
+### Upgrade
+
+New versions of the Codex CLI are released regularly. See the changelog for release notes. To upgrade with npm , run:
+npm upgrade command npm i -g @openai/codex@latest Copy 
+
+The Codex CLI is available on macOS and Linux. Windows support is
+experimental. For the best Windows experience, use Codex in a WSL workspace
+and follow our Windows setup guide .
+
+# Work with the Codex CLI
+
+### Run Codex interactively 
+Run codex to start an interactive terminal UI (TUI) session.

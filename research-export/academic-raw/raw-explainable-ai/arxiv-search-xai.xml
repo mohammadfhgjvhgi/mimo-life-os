@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/VT3ELOCuXMrjmNm0vcm6OVf+JmY</id>
+  <title>arXiv Query: search_query=all:"explainable AI" AND cat:cs.HC&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-08-07T14:57:19Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22explainable+AI%22+AND+cat:cs.HC&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>420</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.25423v1</id>
+    <title>From Dyad to Triad: Eliciting XAI Requirements in Stroke Rehabilitation</title>
+    <updated>2026-07-28T08:20:56Z</updated>
+    <link href="https://arxiv.org/abs/2607.25423v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.25423v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Eliciting explainable AI (XAI) requirements from stroke survivors presents a methodological challenge with direct implications for the design of trustworthy brain-computer interfaces for rehabilitation. How can patients and caregivers articulate preferences about algorithmic transparency when they lack conceptual frameworks for explainability, and when standard elicitation approaches are structurally inadequate for users with acquired communication disorders? We present a video-based scaffolding protocol for XAI requirements elicitation, developed and piloted in a rehabilitation context. In a formative study with three stroke survivors (two with moderate-to-severe aphasia) and three caregivers, facilitators employed four scaffolding approaches alongside the videos: 1) analogical bridging mapping AI states to familiar systems, 2) projective personas depersonalising sensitive topics, 3) binary forcing reducing cognitive load, and 4) extended response time. These approaches successfully surfaced heterogeneous, sometimes conflicting XAI needs across participants. Reflexive analysis additionally revealed three systematic facilitation biases, namely, normative bias, hypothesis confirmation bias, and presence effect, where scaffolding inadvertently shaped responses. We present these as protocol risk guidelines for practitioners. Together, the protocol and guidelines constitute a reusable methodological contribution for eliciting patient-facing XAI requirements in rehabilitation, arguing that such elicitation is a necessary prerequisite for trustworthy human-machine systems design, not an optional preliminary.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-28T08:20:56Z</published>
+    <arxiv:comment>AI and Cognitive Computing for Trustworthy Human Machine Systems Session, IEEE International Conference on Systems, Man, and Cybernetics (IEEE SMC 2026)</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Param Rajpura</name>
+    </author>
+    <author>
+      <name>Yogesh Kumar Meena</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.24601v1</id>
+    <title>Evaluating the Impact of Explainable AI on Trust in AI-Assisted Code Review</title>
+    <updated>2026-07-27T16:04:24Z</updated>
+    <link href="https://arxiv.org/abs/2607.24601v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.24601v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Background: Large language models (LLMs) are increasingly used to automate code review, but the reasoning behind their decisions remains hard to understand. Developers struggle to assess the validity of LLM-generated reviews, making it difficult to gauge how much trust to place in them. The role of Explainable AI (XAI) in code review and its impact on trust remain underexplored.
+  Objective: We study the influence of XAI on developer trust in AI-assisted code reviews.
+  Method: We conducted a within-subjects user study with 34 participants, comparing three LLM-based code review systems with varying levels of XAI support: Condition A (detailed explanation and review feedback), Condition B (review feedback only), and Condition C (no explanations). Participants reviewed real-world code change requests alongside the AI-generated reviews. We measured trust perceptions, agreement with the AI recommendation, the reasoning given for each decision, and the time taken.
+  Results: The level of explanation significantly influences both trust and agreement with AI recommendations, but in different ways. Full explanations (A) yield the highest perceived trust (M = 3.99/5) but not the highest agreement, whereas moderate explanations (B) achieve the highest agreement (89.22%). This could suggest that more explanation prompts developers to question AI recommendations more frequently. No explanations (C) results in the lowest trust and agreement. Explanation level did not significantly affect review time. The most commonly cited reasons for decisions were code readability and correctness.
+  Conclusion: Incorporating XAI into code review significantly changes trust perceptions and agreement with AI recommendations. These results inform the design and evaluation of trustworthy AI-based code review systems, as well as studies on the human factors of AI-assisted software development.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-27T16:04:24Z</published>
+    <arxiv:comment>23 pages, 4 figures, 5 tables. To appear in Proceedings of the ACM on Software Engineering (PACMSE), Vol. 3, No. ISSTA, Article ISSTA093 (ISSTA 2026). Published under CC BY 4.0. Replication package: https://doi.org/10.5281/zenodo.21457282</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Zhenhan Gao</name>
+    </author>
+    <author>
+      <name>Marvin Muñoz Barón</name>
+    </author>
+    <author>
+      <name>Umm-e Habiba</name>
+    </author>
+    <author>
+      <name>Daniel Graziotin</name>
+    </author>
+    <author>
+      <name>Stefan Wagner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.23309v1</id>
+    <title>Explainable AI through the Lens of Material Agency: Enabling Musical Interface Design with Neural Audio Models</title>
+    <updated>2026-07-25T17:50:14Z</updated>
+    <link href="https://arxiv.org/abs/2607.23309v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.23309v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent work in Human-Computer Interaction (HCI) increasingly treats AI models as design materials that have distinctive computational properties to shape design artifacts. Artists learn to work with the model "at play" to explore their emerging properties. The aim of explainability, in this view, is to make visible a crafting and hacking space to enable sustained creative practices with AI. In this chapter, we propose material explainability as a range of activities and artifacts that transform AI models into accessible and inclusive design materials in the workspace of artists, designers, and makers. We present a case study of building a repository of resources to enable artistic explorations of neural audio models in New Interfaces for Musical Expression (NIME) design. Reflecting on our community-building journey and the making of a collection of musical interface designs with a group of artists, we raise three recommendations on enabling the exploration of AI as materials in artistic practices to inspire future XAI design for artists.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-25T17:50:14Z</published>
+    <arxiv:comment>Under review for "Explainable AI for the Arts" (N. Bryan-Kinns, Ed.), Springer</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Shuoyang Jasper Zheng</name>
+    </author>
+    <author>
+      <name>Anna Xambó Sedó</name>
+    </author>
+    <author>
+      <name>Nick Bryan-Kinns</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.22428v1</id>
+    <title>Unboxing Diffusion Models for the Arts: Interactive Model Bending and Practice-Based Explainability</title>
+    <updated>2026-07-24T15:48:38Z</updated>
+    <link href="https://arxiv.org/abs/2607.22428v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.22428v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Explainable AI (XAI) in creative practice can be less about technocentric explanation and more about enabling artists to inspect modify and debug models as part of making Yet largescale texttoimage diffusion systems are typically presented as opaque endtoend tools limiting this kind of material engagement We argue that even large models can function as creative materials when their internal structure is made visible and manipulable To support this we propose a handson approach to explainability centred on experimentation and intervention We instantiate this approach with a model bending and an interactive (inspection) interface integrated into ComfyUIs nodebased workflow including interactive layer selection and intervention controls Through qualitative and quantitative analysis of bending interventions in Stable Diffusion 15 we show how manipulating specific components of a diffusion pipeline produces relatively consistent families of visual effects allowing artists to build practical layerlevel intuition about how different parts of the model shape generated images</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-24T15:48:38Z</published>
+    <arxiv:comment>Under review for "Explainable AI for the Arts" (N. Bryan-Kinns, Ed.), Springer</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Ahmed M. Abuzuraiq</name>
+    </author>
+    <author>
+      <name>Philippe Pasquier</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.20131v1</id>
+    <title>Proceedings of The Fourth International Workshop on eXplainable AI for the Arts (XAIxArts 4)</title>
+    <updated>2026-07-22T13:35:28Z</updated>
+    <link href="https://arxiv.org/abs/2607.20131v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.20131v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The fourth workshop on Explainable AI for the Arts (XAIxArts) continues to bring together and expand a community of researchers and creative practitioners in Human-Computer Interaction (HCI), Interaction Design, AI, eXplainable AI (XAI), and Digital Arts to explore the role of XAI for the Arts. XAI is a key concern of Responsible and Human-Centred AI, emphasising HCI techniques that make opaque AI models more understandable to people. XAIxArts offers a distinctive lens to examine explainability through creative and artistic domains. The previous workshops explored the landscape and the speculative futures of AI in creative processes. To respond to emerging challenges and contribute to creative and societal transformation more broadly, this workshop focuses on the operationalisation of XAI in the Arts. Specifically, we will: i) critically reflect on emerging practices that encourage diversity and inclusivity in XAI; ii) collectively ideate a library of missing projects to encourage future collaborations and speculations; iii) scope the development of a resource hub for open XAIxArts projects to archive tangible XAI interventions and facilitate future community building with the wider discourse on Human-Centred AI.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-22T13:35:28Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Shuoyang Jasper Zheng</name>
+    </author>
+    <author>
+      <name>Terence Broad</name>
+    </author>
+    <author>
+      <name>Elizabeth Wilson</name>
+    </author>
+    <author>
+      <name>Adam Cole</name>
+    </author>
+    <author>
+      <name>Ziqing Xu</name>
+    </author>
+    <author>
+      <name>Jia-Rey Chang</name>
+    </author>
+    <author>
+      <name>Gabriel Vigliensoni</name>
+    </author>
+    <author>
+      <name>Jeba Rezwana</name>
+    </author>
+    <author>
+      <name>Lanxi Xiao</name>
+    </author>
+    <author>
+      <name>Michael Clemens</name>
+    </author>
+    <author>
+      <name>Makayla Lewis</name>
+    </author>
+    <author>
+      <name>Alan Chamberlain</name>
+    </author>
+    <author>
+      <name>Helen Kennedy</name>
+    </author>
+    <author>
+      <name>Corey Ford</name>
+    </author>
+    <author>
+      <name>Nick Bryan-Kinns</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.14152v1</id>
+    <title>"Trust Junk" Leads to Unjustified Support for Highly Discriminatory Predictive Models</title>
+    <updated>2026-07-14T17:48:35Z</updated>
+    <link href="https://arxiv.org/abs/2607.14152v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.14152v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The persuasive power of data visualizations can go awry: for instance, in an explainable AI (XAI) context, visualizations can produce over-trust of predictive models. In this paper, we use a crowdsourced study to show that providing accurate (but superfluous or irrelevant) data in a model explanation can, in fact, result in unjustified trust and other positive beliefs about a model, even when the model is patently discriminatory and unfair. Our results suggest that XAI designers and developers need to consider the implicit or explicit rhetorics of their work, and beware of the potential of visualizations to imbue models with unearned trust.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-14T17:48:35Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Michael Correll</name>
+    </author>
+    <author>
+      <name>Lucy Havens</name>
+    </author>
+    <author>
+      <name>Mahsan Nourani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.24622v1</id>
+    <title>Themis: An explainable AI-enabled framework for Reinforcement Learning with Human Feedback</title>
+    <updated>2026-06-23T14:20:42Z</updated>
+    <link href="https://arxiv.org/abs/2606.24622v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.24622v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Training safe Reinforcement Learning (RL) systems is inherently challenging, with no guarantee of avoiding unwanted behaviors. The most effective defenses against this are (i) transparency through explainability and (ii) alignment via human feedback. While both show promising results, no publicly available framework currently combines them. To address this, we introduce Themis, an XAI-enabled testing and evaluation framework for Reinforcement Learning from Human Feedback. Themis supports over 200 widely used environments and is easily configurable for experiments in RL, transparency, and alignment. Our results show that Themis can train reward models that match or outperform the environment's true reward signal using human preferences. We also provide a cloud-based platform for collecting human feedback and managing experiments. It is user-friendly, auto-scalable, and supports large participant groups across multiple experiments without extra development overhead. Tests show Themis can support one thousand users in back-to-back experiments on a modest commercial machine.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-23T14:20:42Z</published>
+    <arxiv:comment>The extended version of a paper published at the 2026 IEEE Conference on Artificial Intelligence (CAI). Includes an additional appendix with extended derivations and supplementary results. The main paper has 8 pages, 6 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <arxiv:journal_ref>Proc. 2026 IEEE Conference on Artificial Intelligence (CAI), Granada, Spain, 2026, pp. 98-105</arxiv:journal_ref>
+    <author>
+      <name>Andreas Chouliaras</name>
+    </author>
+    <author>
+      <name>Luke Connolly</name>
+    </author>
+    <author>
+      <name>Dimitris Chatzpoulos</name>
+    </author>
+    <arxiv:doi>10.1109/CAI68641.2026.11536497</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/CAI68641.2026.11536497" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.17646v1</id>
+    <title>SketchXplain: Intuitive Visual Explanations of Image Classifiers with Sketches</title>
+    <updated>2026-06-16T08:05:26Z</updated>
+    <link href="https://arxiv.org/abs/2606.17646v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.17646v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Saliency map visualizations explain image-based AI predictions by pointing to regions, but these are often unintuitive and semantically unclear, leaving an interpretability gap. We argue that AI explanations should be intuitive -- coherent to user knowledge, yet simple and selective to accelerate interpretation. Inspired by artistic drawings, we propose SketchXplain to generate sketch-based visual explanations for intuitive image-based explainable AI (XAI). Combining techniques in saliency maps, concept-bottleneck models, and sketch optimization, SketchXplain integrates saliency to select coherent observation artifacts, concepts for knowledge coherence, cues to represent them, and abstraction for simplicity. Evaluating on face expression recognition, modeling and user studies showed that SketchXplain supported quicker interpretation with more aligned visualizations than saliency maps or simple drawings. Further evaluation on skin lesion diagnosis found that SketchXplain more coherently visualized disease symptoms, better supporting lay diagnosis. Thus, this work illustrates the value of sketches for intuitive, simple, coherent, and quick image-based XAI visualizations.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-16T08:05:26Z</published>
+    <arxiv:comment>14 pages, 6 figures, 4 tables. Submitted to TVCG</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Wencan Zhang</name>
+    </author>
+    <author>
+      <name>Mario Michelessa</name>
+    </author>
+    <author>
+      <name>Xuejun Zhao</name>
+    </author>
+    <author>
+      <name>Brian Y. Lim</name>
+    </author>
+  </entry>
+</feed>

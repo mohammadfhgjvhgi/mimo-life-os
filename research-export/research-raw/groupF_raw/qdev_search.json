@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://aws.amazon.com/q/developer",
+    "name": "Coding Assistant - Amazon Q Developer",
+    "snippet": "Accelerate software development with Amazon Q Developer — an AI coding assistant that writes, debugs, and refactors code natively in your IDE.",
+    "host_name": "aws.amazon.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://aws.amazon.com/q/developer/build",
+    "name": "Amazon Q Developer: Your AI code assistant",
+    "snippet": "Q Developer is an agentic coding experience that helps you accomplish your tasks easily. It automatically reads and writes files locally,",
+    "host_name": "aws.amazon.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.superblocks.com/blog/amazon-qdeveloper-pricing",
+    "name": "Amazon Q Developer: Pricing, Features and Alternatives in",
+    "snippet": "Aug 11, 2025 — Amazon Q Developer is a generative AI–powered coding assistant designed to support software developers throughout the entire development ... Read more",
+    "host_name": "www.superblocks.com",
+    "rank": 2,
+    "date": "Aug 11, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/devops/april-2025-amazon-q-developer",
+    "name": "April 2025: A month of innovation for Amazon Q Developer",
+    "snippet": "May 1, 2025 — April 2025 has been a transformative month for Amazon Q Developer , with launches spanning global expansion, IDE enhancements, and deeper ... Read more",
+    "host_name": "aws.amazon.com",
+    "rank": 3,
+    "date": "May 1, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://mstone.ai/tools-wizard/amazon-q-developer",
+    "name": "What Is Amazon Q Developer? Key Features & Pricing",
+    "snippet": "Aug 11, 2025 — Amazon Q Developer is AWS's IDE‑native generative AI assistant that writes code, upgrades legacy stacks, and answers AWS questions without ... Read more",
+    "host_name": "mstone.ai",
+    "rank": 4,
+    "date": "Aug 11, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/pulse/amazon-codewhisperer-vs-q-developer-ramachandrarao-pamidimarri-r0cqc",
+    "name": "Amazon CodeWhisperer vs. Amazon Q Developer",
+    "snippet": "Both Amazon CodeWhisperer and Amazon Q Developer are AI-powered tools designed to assist developers, but they serve different purposes and ...",
+    "host_name": "www.linkedin.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://aws.amazon.com/video/watch/50a3d784916",
+    "name": "Amazon CodeWhisperer: AI-Powered Code Generation",
+    "snippet": "Amazon CodeWhisperer is a machine learning-powered service that enhances developer productivity by providing contextual code recommendations.",
+    "host_name": "aws.amazon.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=h5BDhrk9BIc",
+    "name": "AWS re:Invent 2025 - Maximize Productivity with the Amazon",
+    "snippet": "Explore the different ways that the Amazon Q Developer CLI agent can be used to save time and effort when working in the command line.",
+    "host_name": "www.youtube.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,6 @@
+TITLE: Zed — Your last next editor
+DESCRIPTION: Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.
+
+## Breadcrumbs
+A breadcrumb trail below the tab bar that shows the path to the current file along with a summary of the containing syntax nodes 
+A breadcrumb trail is displayed at the top of multi-buffers and singleton buffers with the path of the file containing the cursor along with a summary of the containing syntax nodes. This can be especially helpful in multi-buffers or within large functions.

@@ -1,0 +1,437 @@
+TITLE: Introducing Plan Mode · Cursor
+
+- 
+- 
+- 
+- 
+- 
+- Introducing Plan Mode · Cursor 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+Skip to content Cursor 
+
+- Models 
+- Grok 
+
+- Composer 
+
+- Evals 
+
+- Product ↓ 
+- Agents 
+
+- Cloud 
+
+- Mobile 
+
+- Automations 
+
+- CLI 
+
+- Marketplace  ↗ 
+
+- Review 
+
+- Enterprise 
+
+- Pricing 
+
+- Resources ↓ 
+- Changelog 
+
+- Blog 
+
+- Docs 
+
+- Community 
+
+- Help  ↗ 
+
+- Workshops 
+
+- Forum  ↗ 
+
+- Careers 
+
+- Models  → 
+
+- Product  → 
+
+- Enterprise 
+
+- Pricing 
+
+- Resources  → 
+
+Sign in Contact Contact sales Download 
+
+Blog / product 
+
+Oct 7, 2025 · product 
+Introducing Plan Mode
+
+Jai Smith · 2 min read 
+
+Cursor can now create plans, research your codebase, and run longer agents.
+
+Plan mode gives the model new tools to create and update plans, as well as an interactive editor to modify plans inline. Most new features at Cursor now begin with Agent writing a plan. We’ve seen this significantly improve the code generated.
+
+When you prompt Agent to create a plan, Cursor researches your codebase to find relevant files, review docs, and ask clarifying questions. When you’re happy with the plan, it creates a Markdown file with file paths and code references. You can edit the plan directly, including adding or removing to-dos.
+
+# How to use Plan Mode
+
+- 
+Start planning by pressing Shift + Tab in the agent input.
+
+- 
+Answer clarifying questions on your requirements for the best output quality.
+
+- 
+Review or edit the detailed plan, then build directly from your plan when ready.
+
+- 
+Optionally, save the plan as a Markdown file in your repository for future reference.
+
+Cursor will also suggest plan mode automatically when you describe complex tasks.
+
+Try Plan Mode in our latest release.
+
+Filed under: product 
+Author : Jai Smith
+
+Related posts
+
+Oct 31, 2025 · Product 
+Introducing Cursor for Enterprise
+
+Cursor Team · 5 min read 
+
+Oct 29, 2025 · Product 
+Introducing Cursor 2.0 and Composer
+
+Cursor Team · 3 min read 
+
+Jan 9, 2026 · Product 
+Best practices for coding with agents
+
+Lee Robinson · 17 min read 
+
+View more posts → 
+
+Product
+
+- Agents 
+
+- Teams 
+
+- Enterprise 
+
+- Pricing 
+
+- Code Review 
+
+- CLI 
+
+- Cloud Agents 
+
+- Composer 
+
+- Marketplace  ↗ 
+
+Resources
+
+- Download 
+
+- Changelog 
+
+- Docs 
+
+- Learn  ↗ 
+
+- Value Calculator 
+
+- Forum  ↗ 
+
+- Help  ↗ 
+
+- Workshops 
+
+- Status  ↗ 
+
+Company
+
+- Careers 
+
+- Blog 
+
+- Community 
+
+- Students 
+
+- Brand 
+
+- Future 
+
+- Anysphere  ↗ 
+
+Legal
+
+- Terms of Service 
+
+- Privacy Policy 
+
+- Data Use 
+
+- Security 
+
+Connect
+
+- X  ↗ 
+
+- LinkedIn  ↗ 
+
+- YouTube  ↗ 
+
+© 2026 Anysphere, Inc. 🛡 SOC 2 Certified 
+🌐 English ↓ 
+- English ✓ 
+
+- 简体中文 
+
+- 日本語 
+
+- 繁體中文 
+
+- Español 
+
+- Français 
+
+- Português 
+
+- 한국어 
+
+- Deutsch 
+
+- हिन्दी 
+
+Skip to content Cursor 
+
+- Models 
+- Grok 
+
+- Composer 
+
+- Evals 
+
+- Product ↓ 
+- Agents 
+
+- Cloud 
+
+- Mobile 
+
+- Automations 
+
+- CLI 
+
+- Marketplace  ↗ 
+
+- Review 
+
+- Enterprise 
+
+- Pricing 
+
+- Resources ↓ 
+- Changelog 
+
+- Blog 
+
+- Docs 
+
+- Community 
+
+- Help  ↗ 
+
+- Workshops 
+
+- Forum  ↗ 
+
+- Careers 
+
+- Models  → 
+
+- Product  → 
+
+- Enterprise 
+
+- Pricing 
+
+- Resources  → 
+
+Sign in Contact Contact sales Download 
+
+Blog / product 
+
+Oct 7, 2025 · product 
+Introducing Plan Mode
+
+Jai Smith · 2 min read 
+
+Cursor can now create plans, research your codebase, and run longer agents.
+
+Plan mode gives the model new tools to create and update plans, as well as an interactive editor to modify plans inline. Most new features at Cursor now begin with Agent writing a plan. We’ve seen this significantly improve the code generated.
+
+When you prompt Agent to create a plan, Cursor researches your codebase to find relevant files, review docs, and ask clarifying questions. When you’re happy with the plan, it creates a Markdown file with file paths and code references. You can edit the plan directly, including adding or removing to-dos.
+
+# How to use Plan Mode
+
+- 
+Start planning by pressing Shift + Tab in the agent input.
+
+- 
+Answer clarifying questions on your requirements for the best output quality.
+
+- 
+Review or edit the detailed plan, then build directly from your plan when ready.
+
+- 
+Optionally, save the plan as a Markdown file in your repository for future reference.
+
+Cursor will also suggest plan mode automatically when you describe complex tasks.
+
+Try Plan Mode in our latest release.
+
+Filed under: product 
+Author : Jai Smith
+
+Related posts
+
+Oct 31, 2025 · Product 
+Introducing Cursor for Enterprise
+
+Cursor Team · 5 min read 
+
+Oct 29, 2025 · Product 
+Introducing Cursor 2.0 and Composer
+
+Cursor Team · 3 min read 
+
+Jan 9, 2026 · Product 
+Best practices for coding with agents
+
+Lee Robinson · 17 min read 
+
+View more posts → 
+
+Product
+
+- Agents 
+
+- Teams 
+
+- Enterprise 
+
+- Pricing 
+
+- Code Review 
+
+- CLI 
+
+- Cloud Agents 
+
+- Composer 
+
+- Marketplace  ↗ 
+
+Resources
+
+- Download 
+
+- Changelog 
+
+- Docs 
+
+- Learn  ↗ 
+
+- Value Calculator 
+
+- Forum  ↗ 
+
+- Help  ↗ 
+
+- Workshops 
+
+- Status  ↗ 
+
+Company
+
+- Careers 
+
+- Blog 
+
+- Community 
+
+- Students 
+
+- Brand 
+
+- Future 
+
+- Anysphere  ↗ 
+
+Legal
+
+- Terms of Service 
+
+- Privacy Policy 
+
+- Data Use 
+
+- Security 
+
+Connect
+
+- X  ↗ 
+
+- LinkedIn  ↗ 
+
+- YouTube  ↗ 
+
+© 2026 Anysphere, Inc. 🛡 SOC 2 Certified 
+🌐 English ↓ 
+- English ✓ 
+
+- 简体中文 
+
+- 日本語 
+
+- 繁體中文 
+
+- Español 
+
+- Français 
+
+- Português 
+
+- 한국어 
+
+- Deutsch 
+
+- हिन्दी

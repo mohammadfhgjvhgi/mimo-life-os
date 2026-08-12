@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+    "name": "Authorization",
+    "snippet": "Nov 25, 2025 — A protected MCP server acts as an OAuth 2.1 resource server, capable of accepting and responding to protected resource requests using access ...",
+    "host_name": "modelcontextprotocol.io",
+    "rank": 0,
+    "date": "Nov 25, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://aembit.io/blog/mcp-oauth-2-1-pkce-and-the-future-of-ai-authorization",
+    "name": "MCP, OAuth 2.1, PKCE, and the Future of AI Authorization",
+    "snippet": "The MCP authorization specification is a strong foundation for securing agentic AI workflows. It offers a consistent, secure, and interoperable method",
+    "host_name": "aembit.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.descope.com/blog/post/mcp-auth-spec",
+    "name": "Diving Into the MCP Authorization Specification",
+    "snippet": "Jul 28, 2026 — The MCP Authorization Specification establishes a framework based on OAuth 2.1 to secure interactions between MCP clients and servers. Read more",
+    "host_name": "www.descope.com",
+    "rank": 2,
+    "date": "Jul 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://auth0.com/blog/an-introduction-to-mcp-and-authorization",
+    "name": "An Introduction to MCP and Authorization",
+    "snippet": "Apr 7, 2025 — The new specification enables MCP clients and servers to make use of OAuth 2.1 , to delegate authorization . MCP servers implementing the new  ...",
+    "host_name": "auth0.com",
+    "rank": 3,
+    "date": "Apr 7, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.logto.io/mcp-auth-spec-review-2025-03-26",
+    "name": "In-Depth review of the MCP authorization spec (2025-03-",
+    "snippet": "Apr 7, 2025 — As an authorization framework based on OAuth 2.1 , this specification aims to solve the key problem of how Remote MCP Server accesses user ... Read more",
+    "host_name": "blog.logto.io",
+    "rank": 4,
+    "date": "Apr 7, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/poem-web/poem/issues/1108",
+    "name": "Add OAuth 2.1 Authorization Support per MCP Specification",
+    "snippet": "Oct 19, 2025 — The Model Context Protocol (MCP) specification defines authorization capabilities for HTTP-based transports , enabling MCP clients to make ...",
+    "host_name": "github.com",
+    "rank": 5,
+    "date": "Oct 19, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.christianposta.com/understanding-mcp-authorization-step-by-step-part-two",
+    "name": "Understanding MCP Authorization, Step by Step, Part Two",
+    "snippet": "Jun 30, 2025 — In this post (part two of three), we'll dig into the June 2025 MCP Authorization specification more closely. See Part One for setting up the ...",
+    "host_name": "blog.christianposta.com",
+    "rank": 6,
+    "date": "Jun 30, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://kane.mx/posts/2025/mcp-authorization-oauth-rfc-deep-dive",
+    "name": "A Deep Dive into OAuth 2.1 and IETF RFC Specifications",
+    "snippet": "Nov 12, 2025 — MCP's authorization model is not a generic application of OAuth 2.0 but a sophisticated implementation of the emerging OAuth 2.1 standard.",
+    "host_name": "kane.mx",
+    "rank": 7,
+    "date": "Nov 12, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://workos.com/blog/mcp-authorization-in-5-easy-oauth-specs",
+    "name": "MCP Authorization in 5 easy OAuth specs",
+    "snippet": "Jun 16, 2025 — Technically, MCP expects you to implement OAuth 2.1 , but we aren't going to get into the differences here. If we start by assuming most MCP ... Read more",
+    "host_name": "workos.com",
+    "rank": 8,
+    "date": "Jun 16, 2025",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="awa-expId" content="cv-downloadv2:1227264;" />
+	<meta name="awa-env" content="prod" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="hNs7DXrTySP_X-0P_AC0WulAXvUwgSXEmgfcO2r79dw" />
+
+	<!-- Twitter and Facebook OpenGraph Metadata-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@code" />
+
+	<meta name="description" content="Learn about Visual Studio Code workspaces" />
+<meta name="keywords" content="" />
+<meta name="ms.prod" content="vs-code" />
+<meta name="ms.TOCTitle" content="" />
+<meta name="ms.ContentId" content="0144ad9a-14df-41b5-9629-cbba7dbfc396" />
+<meta name="ms.date" content="8/5/2026" />
+<meta name="ms.topic" content="conceptual" />
+<!-- Twitter and Facebook OpenGraph Metadata-->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:url" content="https://code.visualstudio.com/docs/editing/workspaces/workspaces" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What is a VS Code workspace?" />
+<meta property="og:description" content="Learn about Visual Studio Code workspaces" />
+
+<meta property="og:image" content="https://code.visualstudio.com/opengraphimg/generated/docs/editing/workspaces/workspaces.webp" />
+
+
+
+	<link rel="shortcut icon" href="/assets/favicon.ico" sizes="128x128" />
+	<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+	<title>What is a VS Code workspace?</title>
+
+	<link rel="stylesheet" href="/dist/style.css">
+
+	<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
+	<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-4.min.js"></script>
+	
+	<script type="text/javascript">
+	// Leave as var; siteConsent is initialized and referenced elsewhere.
+	var siteConsent = null;
+	
+	const GPC_DataSharingOptIn = false;
+	WcpConsent.onInitCallback(function () {
+		window.appInsights = new oneDS.ApplicationInsights();
+		window.appInsights.initialize({
+			instrumentationKey: "1a3eb3104447440391ad5f2a6ee06a0a-62879566-bc58-4741-9650-302bf2af703f-7103",
+			propertyConfiguration: {
+				userConsented: false,
+				gpcDataSharingOptIn: false,
+				callback: {
+					userConsentDetails: siteConsent ? siteConsent.getConsent : undefined
+				},
+			},
+			cookieCfg: {
+				ignoreCookies: ["MSCC"]
+			},
+			webAnalyticsConfiguration:{ // Web Analytics Plugin configuration
+				urlCollectQuery: true,
+				urlCollectHash: true,
+				autoCapture: {
+					scroll: true,
+					pageView: true,
+					onLoad: true,
+					onUnload: true,
+					click: true,
+					resize: true,
+					jsError: true
+				}
+			}
+		}, []);
+	
+		window.appInsights.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = GPC_DataSharingOptIn;
+	});
+	</script>
+	<link rel="alternate" type="application/atom+xml" title="RSS Feed for code.visualstudio.com" href="/feed.xml" />
+</head>
+
+<body >
+	<!-- Setting theme here to avoid FOUC -->
+	<script>
+		function setTheme(themeName) {
+			if (themeName === 'dark') {
+				document.documentElement.removeAttribute('data-theme'); // dark is default, so no data-theme attribute needed
+			}
+
+			if (themeName === 'light') {
+				document.documentElement.setAttribute('data-theme', themeName);
+			}
+			return;
+		}
+
+		// Determine initial theme: user preference or system preference
+		let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		setTheme(theme); // Apply the initial theme
+
+		// Listen for changes in the system theme preference
+		window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+			if (!localStorage.getItem('theme')) { // Only if no user preference is saved
+				setTheme(e.matches ? 'dark' : 'light');
+			}
+		});
+	</script>
+
+	<div id="main">
+		<div class="navbar-fixed-container">
+			<div class="navbar navbar-inverse navbar-fixed-top ">
+				<div id='cookie-banner'></div>		<nav role="navigation" aria-label="Top Level">
+					<div class="container">
+						<div class="nav navbar-header">
+							<a class="navbar-brand" href="/"><span>Visual Studio Code</span></a>
+						</div>
+						<div class="navbar-collapse collapse">
+							<ul class="nav navbar-nav navbar-left" data-m='{"cN":"top-navbar","aN":"navigation"}'>
+								<li class="nav-dropdown">
+									<a id="nav-features" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Features","aN":"navigation","cT":"toggle"}'>
+										Features <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/features/agents" data-m='{"cN":"Agents","aN":"navigation - Features"}'>Agents</a></li>
+									</ul>
+								</li>
+								<li class="nav-dropdown active">
+									<a id="nav-docs" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Docs","aN":"navigation","cT":"toggle"}'>
+										Docs <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/docs" data-m='{"cN":"Documentation","aN":"navigation - Docs"}'>Documentation</a></li>
+										<li role="none"><a role="menuitem" href="/api" data-m='{"cN":"API","aN":"navigation - Docs"}'>API</a></li>
+										<li role="none"><a role="menuitem" id="nav-faqs" href="/docs/supporting/faq" data-m='{"cN":"FAQ","aN":"navigation - Docs"}'>FAQ</a></li>
+									</ul>
+								</li>
+								<li ><a id="nav-updates" href="/updates" data-m='{"cN":"Release Notes"}'>Release Notes</a>
+								</li>
+								<li ><a id="nav-blogs" href="/blogs" data-m='{"cN":"Blog"}'>Blog</a></li>
+								<li ><a id="nav-learn" href="/learn" data-m='{"cN":"Learn"}'>Learn</a></li>
+								<li><a id="nav-events" href="https://aka.ms/vscode/live" target="_blank" rel="noopener" data-m='{"cN":"Events"}'>Events<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+								<li class="nav-dropdown">
+									<a id="nav-resources" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Resources","aN":"navigation","cT":"toggle"}'>
+										Resources <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="https://marketplace.visualstudio.com/VSCode" target="_blank" rel="noopener"
+												id="nav-extensions" data-m='{"cN":"Extensions","aN":"navigation - Resources"}'>Extensions<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+										<li role="none"><a role="menuitem" id="nav-mcp" href="/mcp" target="_blank" rel="noopener" data-m='{"cN":"MCP","aN":"navigation - Resources"}'>MCP<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right" role="presentation">
+								<li>
+									<a class="link-button" href="/download" id="nav-download">
+										<span>Download</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="navbar-actions">
+							<div class="search" role="presentation">
+								<div class="nav-search search-control" role="button" tabindex="0" aria-label="Open search dialog">
+									<div class="input-group" role="presentation">
+										<span class="input-group-btn">
+											<span class="btn search-icon-container" aria-hidden="true">
+												<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="" />
+												<img class="search-icon-light" src="/assets/icons/search.svg" alt="" />
+											</span>
+										</span>
+										<span class="search-box form-control" aria-hidden="true" role="presentation"></span>
+										<span class="search-shortcut-placeholder">Search</span>
+										<span class="search-shortcut-overlay"></span>
+									</div>
+								</div>					</div>
+							<button type="button" class="theme-switch" id="theme-toggle">
+								<img class="theme-icon-light" src="/assets/icons/theme-light.svg" alt="Switch to the dark theme" />
+								<img class="theme-icon-dark" src="/assets/icons/theme-dark.svg" alt="Switch to the light theme" />
+							</button>
+							<a class="link-button navbar-actions-download" href="/Download">
+								<span>Download</span>
+							</a>
+						</div>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
+							aria-label="Expand and Collapse Menu">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</div>		<div data-announcement-version="2026-06-01-vscode-live-build" class="updates-banner ">
+			<div class="container">
+				<p class="message"><a href="https://aka.ms/VSCode/Livestage?source=vsc-website-banner" target="_blank" rel="noopener">📼 Rewatch VS Code Live at MS Build 2026</a></p>
+			</div>
+			<div tabindex="0" role="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn"><span class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span></div>
+		</div>
+		<script>
+			// Hide the banner synchronously (before first paint) if this version was
+			// already dismissed, to avoid a flicker/layout shift once the main bundle loads.
+			(function () {
+				try {
+					var banner = document.currentScript.previousElementSibling;
+					if (banner && localStorage.getItem('dismissedAnnouncementVersion') === banner.getAttribute('data-announcement-version')) {
+						banner.classList.add('js-hidden');
+					}
+				} catch (e) { /* ignore */ }
+			})();
+		</script>
+		<!-- This div wraps around the entire site -->
+		<!-- The body itself should already have a main tag -->
+		<main id="main-content">
+			<script>
+    function closeReportIssue() {
+        var element = document.getElementById('surveypopup');
+        element.parentElement.removeChild(element);
+    }
+
+    function reportIssue(tutorial, page) {
+        var div = document.createElement('div');
+        div.innerHTML = '<div id="surveypopup" class="overlay visible"><div class="surveypopup"><div id="surveytitle">Tell us more<a href="javascript:void(0)" onclick="closeReportIssue()">X</a></div><div id="surveydiv"><iframe frameBorder="0" scrolling="0" src="https://www.research.net/r/PWZWZ52?tutorial=' + tutorial + '&step=' + page + '"></iframe></div></div></div>';
+        document.body.appendChild(div.children[0]);
+    }
+</script>
+
+<div class="body-content docs docs-github-layout">
+    <div class="docs-layout-wrapper">
+        <!-- Left sidebar - Table of Contents -->
+        <aside class="docs-left-sidebar">
+            <nav id="docs-navbar" aria-label="Topics" class="docs-nav visible-md visible-lg" data-m='{"cN":"docs-left-nav","aN":"navigation"}'>
+              <div class="docs-nav-back">
+                <a class="area" href="/docs" aria-label="Back to all documentation"><span class="codicon codicon-arrow-left" aria-hidden="true"></span><span>All Docs</span></a>
+              </div>
+              <h4>Core Editor</h4>
+              <ul class="nav" id="main-nav">
+              <li >
+                <a href="/docs/core-editor/overview" data-m='{"cN":"Overview"}' >Overview</a>
+              </li>
+              
+            <li class="panel active expanded">
+              <a class="area" role="button" href="#editing-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Write code","cT":"toggle"}'>Write code</a>
+              <ul id="editing-articles" class="collapse in">
+            
+                    <li >
+                      <a href="/docs/editing/getting-started" data-m='{"cN":"Tutorial","aN":"Write code"}' >Tutorial</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/userinterface" data-m='{"cN":"User Interface","aN":"Write code"}' >User Interface</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/tips-and-tricks" data-m='{"cN":"Tips and Tricks","aN":"Write code"}' >Tips and Tricks</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/codebasics" data-m='{"cN":"Basic Editing","aN":"Write code"}' >Basic Editing</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/intellisense" data-m='{"cN":"IntelliSense","aN":"Write code"}' >IntelliSense</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/ai-powered-suggestions" data-m='{"cN":"Inline Suggestions","aN":"Write code"}' >Inline Suggestions</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/copilot-smart-actions" data-m='{"cN":"Smart Actions","aN":"Write code"}' >Smart Actions</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/editingevolved" data-m='{"cN":"Code Navigation","aN":"Write code"}' >Code Navigation</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/refactoring" data-m='{"cN":"Refactoring","aN":"Write code"}' >Refactoring</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/userdefinedsnippets" data-m='{"cN":"Snippets","aN":"Write code"}' >Snippets</a>
+                    </li>
+                      
+            <li class="panel active expanded">
+              <a class="area" role="button" href="#editing-workspaces-articles" data-toggle="collapse" data-m='{"cN":"Workspaces","aN":"Write code","cT":"toggle"}'>Workspaces</a>
+              <ul id="editing-workspaces-articles" class="collapse in">
+            
+                    <li class="active">
+                      <a href="/docs/editing/workspaces/workspaces" data-m='{"cN":"Overview","aN":"Write code - Workspaces"}' aria-label="Current Page: Overview">Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/workspaces/multi-root-workspaces" data-m='{"cN":"Multi-Root Workspaces","aN":"Write code - Workspaces"}' >Multi-Root Workspaces</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/workspaces/workspace-trust" data-m='{"cN":"Workspace Trust","aN":"Write code - Workspaces"}' >Workspace Trust</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+              </ul>
+            </li>
+                
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Configure the editor","cT":"toggle"}'>Configure the editor</a>
+              <ul id="configure-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/locales" data-m='{"cN":"Display Language","aN":"Configure the editor"}' >Display Language</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/custom-layout" data-m='{"cN":"Layout","aN":"Configure the editor"}' >Layout</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/keybindings" data-m='{"cN":"Keyboard Shortcuts","aN":"Configure the editor"}' >Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/settings" data-m='{"cN":"Settings","aN":"Configure the editor"}' >Settings</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/settings-sync" data-m='{"cN":"Settings Sync","aN":"Configure the editor"}' >Settings Sync</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-extensions-articles" data-toggle="collapse" data-m='{"cN":"Extensions","aN":"Configure the editor","cT":"toggle"}'>Extensions</a>
+              <ul id="configure-extensions-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/extensions/extensions" data-m='{"cN":"Overview","aN":"Configure the editor - Extensions"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/extensions/extension-marketplace" data-m='{"cN":"Extension Marketplace","aN":"Configure the editor - Extensions"}' >Extension Marketplace</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/extensions/extension-runtime-security" data-m='{"cN":"Extension Runtime Security","aN":"Configure the editor - Extensions"}' >Extension Runtime Security</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li >
+                      <a href="/docs/configure/themes" data-m='{"cN":"Themes","aN":"Configure the editor"}' >Themes</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/profiles" data-m='{"cN":"Profiles","aN":"Configure the editor"}' >Profiles</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-accessibility-articles" data-toggle="collapse" data-m='{"cN":"Accessibility","aN":"Configure the editor","cT":"toggle"}'>Accessibility</a>
+              <ul id="configure-accessibility-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/accessibility/accessibility" data-m='{"cN":"Overview","aN":"Configure the editor - Accessibility"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/accessibility/voice" data-m='{"cN":"Voice Interactions","aN":"Configure the editor - Accessibility"}' >Voice Interactions</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li >
+                      <a href="/docs/configure/command-line" data-m='{"cN":"Command Line Interface","aN":"Configure the editor"}' >Command Line Interface</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/telemetry" data-m='{"cN":"Telemetry","aN":"Configure the editor"}' >Telemetry</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#reference-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Reference","cT":"toggle"}'>Reference</a>
+              <ul id="reference-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/reference/default-keybindings" data-m='{"cN":"Default Keyboard Shortcuts","aN":"Reference"}' >Default Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/default-settings" data-m='{"cN":"Default Settings","aN":"Reference"}' >Default Settings</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/variables-reference" data-m='{"cN":"Substitution Variables","aN":"Reference"}' >Substitution Variables</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/tasks-appendix" data-m='{"cN":"Tasks Schema","aN":"Reference"}' >Tasks Schema</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+              </ul>
+            </nav>
+            
+            <nav id="small-nav" aria-label="Topics" class="docs-nav hidden-md hidden-lg">
+              <label class="faux-h4" for="small-nav-dropdown-core-editor">Topics</label>
+              <select id="small-nav-dropdown-core-editor" aria-label="topics">
+                <option value="/docs/core-editor/overview" >Overview</option>
+            
+              <optgroup label="Write code">
+            
+                    <option value="/docs/editing/getting-started" >Tutorial</option>
+                    
+                    <option value="/docs/editing/userinterface" >User Interface</option>
+                    
+                    <option value="/docs/editing/tips-and-tricks" >Tips and Tricks</option>
+                    
+                    <option value="/docs/editing/codebasics" >Basic Editing</option>
+                    
+                    <option value="/docs/editing/intellisense" >IntelliSense</option>
+                    
+                    <option value="/docs/editing/ai-powered-suggestions" >Inline Suggestions</option>
+                    
+                    <option value="/docs/editing/copilot-smart-actions" >Smart Actions</option>
+                    
+                    <option value="/docs/editing/editingevolved" >Code Navigation</option>
+                    
+                    <option value="/docs/editing/refactoring" >Refactoring</option>
+                    
+                    <option value="/docs/editing/userdefinedsnippets" >Snippets</option>
+                    
+                    <option disabled>Workspaces</option>
+            
+                    <option value="/docs/editing/workspaces/workspaces" selected>    Overview</option>
+                    
+                    <option value="/docs/editing/workspaces/multi-root-workspaces" >    Multi-Root Workspaces</option>
+                    
+                    <option value="/docs/editing/workspaces/workspace-trust" >    Workspace Trust</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Configure the editor">
+            
+                    <option value="/docs/configure/locales" >Display Language</option>
+                    
+                    <option value="/docs/configure/custom-layout" >Layout</option>
+                    
+                    <option value="/docs/configure/keybindings" >Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/configure/settings" >Settings</option>
+                    
+                    <option value="/docs/configure/settings-sync" >Settings Sync</option>
+                    
+                    <option disabled>Extensions</option>
+            
+                    <option value="/docs/configure/extensions/extensions" >    Overview</option>
+                    
+                    <option value="/docs/configure/extensions/extension-marketplace" >    Extension Marketplace</option>
+                    
+                    <option value="/docs/configure/extensions/extension-runtime-security" >    Extension Runtime Security</option>
+                    
+                    <option value="/docs/configure/themes" >Themes</option>
+                    
+                    <option value="/docs/configure/profiles" >Profiles</option>
+                    
+                    <option disabled>Accessibility</option>
+            
+                    <option value="/docs/configure/accessibility/accessibility" >    Overview</option>
+                    
+                    <option value="/docs/configure/accessibility/voice" >    Voice Interactions</option>
+                    
+                    <option value="/docs/configure/command-line" >Command Line Interface</option>
+                    
+                    <option value="/docs/configure/telemetry" >Telemetry</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Reference">
+            
+                    <option value="/docs/reference/default-keybindings" >Default Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/reference/default-settings" >Default Settings</option>
+                    
+                    <option value="/docs/reference/variables-reference" >Substitution Variables</option>
+                    
+                    <option value="/docs/reference/tasks-appendix" >Tasks Schema</option>
+                    
+              </optgroup>
+              
+              </select>
+            </nav>        </aside>
+        
+        <!-- Content wrapper contains main content + right sidebar -->
+        <div class="docs-content-wrapper">
+            <!-- Right sidebar - On This Page -->
+            <aside class="docs-right-sidebar hidden-xs">
+                <div class="docs-markdown-actions">
+                    <div class="docs-markdown-dropdown" data-raw-url="/raw/docs/editing/workspaces/workspaces.md">
+                        <button type="button" class="docs-markdown-btn-main" data-action="copy-markdown" aria-label="Copy as Markdown">
+                            <span class="codicon codicon-copy" aria-hidden="true"></span>
+                            <span>Copy as Markdown</span>
+                        </button>
+                        <button type="button" class="docs-markdown-btn-trigger" aria-haspopup="true" aria-expanded="false" aria-label="More Markdown options">
+                            <span class="codicon codicon-chevron-down docs-markdown-chevron" aria-hidden="true"></span>
+                        </button>
+                        <ul class="docs-markdown-menu" role="menu" aria-label="Markdown options">
+                            <li role="menuitem" tabindex="0" data-action="copy-markdown">
+                                <span class="codicon codicon-copy" aria-hidden="true"></span>
+                                <span>Copy as Markdown</span>
+                            </li>
+                            <li role="menuitem" tabindex="0" data-action="view-markdown">
+                                <span class="codicon codicon-file" aria-hidden="true"></span>
+                                <span>View as Markdown</span>
+                                <span class="codicon codicon-link-external" aria-hidden="true"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav id="docs-subnavbar" aria-label="On Page">
+                    
+                    <h4><span class="sr-only">On this page there are 6 sections</span><span
+                            aria-hidden="true">On this page</span></h4>
+                    <ul class="nav">
+                        
+                        <li><a href="#_how-do-i-open-a-vs-code-workspace">How do I open a VS Code "workspace"?</a></li>
+                        
+                        <li><a href="#_single-folder-workspaces">Single-folder workspaces</a></li>
+                        
+                        <li><a href="#_multi-root-workspaces">Multi-root workspaces</a></li>
+                        
+                        <li><a href="#_workspace-settings">Workspace settings</a></li>
+                        
+                        <li><a href="#_workspace-tasks-and-launch-configurations">Workspace tasks and launch configurations</a></li>
+                        
+                        <li><a href="#_common-questions">Common questions</a></li>
+                        
+                    </ul>
+                    
+                </nav>
+                
+            </aside>
+            
+            <!-- Main article content -->
+            <main class="docs-main-content body">
+                <h1>What is a VS Code workspace?</h1>
+<p>A Visual Studio Code <em>workspace</em> is the collection of one or more folders that are opened in a VS Code window (instance). In most cases, you will have a single folder opened as the workspace. However, depending on your development workflow, you can include more than one folder, using an advanced configuration called <a href="#_multiroot-workspaces">Multi-root workspaces</a>.</p>
+<p>The concept of a workspace enables VS Code to:</p>
+<ul>
+<li>Configure settings that only apply to a specific folder or folders but not others.</li>
+<li>Persist <a href="/docs/debugtest/tasks">task</a> and <a href="/docs/debugtest/debugging">debugger launch</a> configurations that are only valid in the context of that workspace.</li>
+<li>Store and restore UI state associated with that workspace (for example, the files that are opened).</li>
+<li>Selectively enable or disable extensions only for that workspace.</li>
+</ul>
+<p>You may see the terms &quot;folder&quot; and &quot;workspace&quot; used interchangeably in VS Code documentation, issues, and community discussions. Think of a workspace as the root of a project that has extra VS Code knowledge and capabilities.</p>
+<blockquote><p><strong>Note:</strong> It is also possible to open VS Code without a workspace. For example, when you open a new VS Code window by selecting a file from your platform's <strong>File</strong> menu, you will not be inside a workspace. In this mode, some of VS Code's capabilities are reduced but you can still open text files and edit them.</p>
+</blockquote><h2 id="_how-do-i-open-a-vs-code-workspace" data-needslink="_how-do-i-open-a-vs-code-workspace">How do I open a VS Code &quot;workspace&quot;?</h2>
+<p>You can open a workspace by using the <strong>File</strong> &gt; <strong>Open Folder...</strong> menu, and then selecting a folder.</p>
+<p>Alternatively, if you launch VS Code from a terminal, you can pass the path to a folder as the first argument to the <code>code</code> command for opening. For example, use the following command to open the current folder (<code>.</code>) with VS Code:</p>
+<pre class="shiki" data-lang="bash" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">code</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> .</span></span>
+<span class="line"></span></code></pre>
+<h2 id="_single-folder-workspaces" data-needslink="_single-folder-workspaces">Single-folder workspaces</h2>
+<p>You don't have to do anything for a folder to become a VS Code workspace other than open the folder with VS Code. Once you open a folder, VS Code automatically keeps track of configuration, such as your open files or editor layout. When you reopen that folder in VS Code, the editor will be as you left it previously.</p>
+<p>You can also add other folder-specific configurations, such as workspace-specific <a href="/docs/configure/settings">settings</a> (versus global user settings), <a href="/docs/debugtest/tasks">task definitions</a>, and <a href="/docs/debugtest/debugging">debugging launch</a> files (see below in the <a href="#_workspace-settings">workspace settings</a> section).</p>
+<p><img src="/assets/docs/editing/workspaces/workspaces/single-folder-workspace.png" alt="Single-folder workspace" loading="lazy"></p>
+<p><em>A single-folder workspace opened inside VS Code</em></p>
+<h2 id="_multi-root-workspaces" data-needslink="_multi-root-workspaces">Multi-root workspaces</h2>
+<p><a href="/docs/editing/workspaces/multi-root-workspaces">Multi-root workspaces</a> are an advanced capability of VS Code that allows you to configure multiple distinct folders to be part of the same workspace. Instead of opening a folder as workspace, you open a <code>&lt;name&gt;.code-workspace</code> JSON file that lists all folders of the workspace. For example:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "folders"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">      "path"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"my-folder-a"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    },</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">      "path"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"my-folder-b"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">  ]</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<p><img src="/assets/docs/editing/workspaces/workspaces/multi-root-workspace.png" alt="Multi-root workspace" loading="lazy"></p>
+<p><em>A multi-root workspace opened in VS Code</em></p>
+<blockquote><p><strong>Note:</strong> The visual difference of having a folder opened versus opening a <code>.code-workspace</code> file can be subtle. To give you a hint that a <code>.code-workspace</code> file has been opened, some areas of the user interface (for example, the root of the File Explorer) show an extra <strong>(Workspace)</strong> suffix next to the name.</p>
+</blockquote><h3 id="_untitled-multi-root-workspaces" data-needslink="_untitled-multi-root-workspaces">Untitled multi-root workspaces</h3>
+<p>You can flexibly add or remove folders in your workspace. Start off by opening a folder in VS Code, and then later add more folders as you see fit.</p>
+<p><img src="/assets/docs/editing/workspaces/workspaces/add-remove-folder-in-workspace.png" alt="File Explorer context menu, highlighting options to add or remove folders to the workspace" loading="lazy"></p>
+<p><em>File Explorer context menu for adding or removing a folder in a workspace</em></p>
+<p>Unless you have already opened a <code>.code-workspace</code> file, the first time you add a second folder to a workspace, VS Code automatically creates an <em>untitled</em> workspace. In the background, VS Code automatically maintains a <code>untitled.code-workspace</code> file for you that contains all the folders and workspace settings from your current session. The workspace remains <em>untitled</em> until you decide to save it to disk.</p>
+<p><img src="/assets/docs/editing/workspaces/workspaces/untitled-workspace.png" alt="Untitled multi-root workspace" loading="lazy"></p>
+<p><em>An untitled multi-root workspace opened in VS Code</em></p>
+<blockquote><p><strong>Note:</strong> There is no difference between an untitled workspace and a saved workspace, other than the fact that an untitled workspace is automatically created for you for your convenience, and will always restore until you save it. VS Code automatically deletes untitled workspaces (after asking you for confirmation) when you close a window in which an untitled workspace is opened.</p>
+</blockquote><h2 id="_workspace-settings" data-needslink="_workspace-settings">Workspace settings</h2>
+<p>Workspace settings enable you to configure settings in the context of the workspace you have opened. Workspace settings always override the global user settings. They are physically stored in a JSON file and their location depends on whether you opened a folder as a workspace, or whether you opened a <code>.code-workspace</code> file.</p>
+<p>Refer to the <a href="/docs/configure/settings">settings</a> documentation for a comprehensive explanation of setting scopes and their file locations.</p>
+<h3 id="_single-folder-workspace-settings" data-needslink="_single-folder-workspace-settings">Single-folder workspace settings</h3>
+<p>Workspace settings are stored in <code>.vscode/settings.json</code> when you open a folder as a workspace.</p>
+<p><img src="/assets/docs/editing/workspaces/workspaces/single-folder-settings.png" alt="Single-folder workspace settings" loading="lazy"></p>
+<p><em>The Settings editor when a folder is opened as workspace</em></p>
+<h3 id="_multi-root-workspace-settings" data-needslink="_multi-root-workspace-settings">Multi-root workspace settings</h3>
+<p>When you open a <code>.code-workspace</code> as workspace, all workspace settings are added into the <code>.code-workspace</code> file.</p>
+<p>You can still configure settings per root folder, and the Settings editor will present a third setting scope called <strong>Folder Settings</strong>:</p>
+<p><img src="/assets/docs/editing/workspaces/workspaces/multi-root-settings.png" alt="Multi-root settings" loading="lazy"></p>
+<p><em>The Settings editor when a multi-root workspace is opened</em></p>
+<p>Settings configured per folder override settings defined in the <code>.code-workspace</code>.</p>
+<h2 id="_workspace-tasks-and-launch-configurations" data-needslink="_workspace-tasks-and-launch-configurations">Workspace tasks and launch configurations</h2>
+<p>Similar to how <a href="#_workspace-settings">workspace settings</a> are specific to a workspace, tasks and launch configurations can also be scoped to a workspace.</p>
+<p>Depending on whether you have a folder opened as workspace or a <code>.code-workspace</code> file, the location of workspace task and launch configurations is either inside the <code>.vscode</code> folder, or inside the <code>.code-workspace</code> file. In addition, task and launch configurations can always be defined at the level of a folder, even when you have opened a <code>.code-workspace</code> file.</p>
+<p>Refer to <a href="/docs/debugtest/tasks">tasks</a> and <a href="/docs/debugtest/debugging">debugging</a> chapters for a more comprehensive overview of how to use tasks and launch configurations in VS Code.</p>
+<h2 id="_common-questions" data-needslink="_common-questions">Common questions</h2>
+<h3 id="_what-is-the-benefit-of-multi-root-workspace-over-a-folder" data-needslink="_what-is-the-benefit-of-multi-root-workspace-over-a-folder">What is the benefit of multi-root workspace over a folder?</h3>
+<p>The most obvious advantage is that a multi-root workspace allows you to work with multiple projects that may not be stored inside the same parent folder on disk. You can pick folders from anywhere to add to the workspace.</p>
+<p>Even if you are mainly working in a single-folder-based project, you can benefit from using <code>.code-workspace</code> files. You can store multiple <code>.code-workspace</code> files inside the folder to provide a scoped folder-view of certain aspects of the project depending on the scenario (for example <code>client.code-workspace</code>, <code>server.code-workspace</code> to filter out unrelated folders from the File Explorer). Since <code>.code-workspace</code> files support relative paths for the <code>folders</code> section, these workspace files work for everyone, independent of where the folder is stored.</p>
+<p>Finally, if for some projects you want to apply the same set of workspace settings or tasks/launch configurations, consider adding these into a <code>.code-workspace</code> file and add or remove these folders from that workspace.</p>
+<h3 id="_why-is-vs-code-restoring-all-untitled-workspaces-on-a-restart" data-needslink="_why-is-vs-code-restoring-all-untitled-workspaces-on-a-restart">Why is VS Code restoring all untitled workspaces on a restart?</h3>
+<p>Untitled workspaces are designed to be something you must explicitly decide to keep or not. The first time an untitled workspace is created, VS Code adds the specified folders into the workspace file and also adds all existing workspace settings. This user data is always restored and displayed in a VS Code window until the untitled workspace is saved or deleted.</p>
+<h3 id="_how-do-i-delete-an-untitled-workspace" data-needslink="_how-do-i-delete-an-untitled-workspace">How do I delete an untitled workspace?</h3>
+<p>You can delete an untitled workspace by closing its window and dismissing the prompt to save the untitled workspace.</p>
+<h3 id="_can-i-use-a-multi-root-workspace-without-folders" data-needslink="_can-i-use-a-multi-root-workspace-without-folders">Can I use a multi-root workspace without folders?</h3>
+<p>It is possible to leave the <code>folders</code> section of a <code>.code-workspace</code> file empty so that you end up with an instance of VS Code that does not show any root folders. You can still store workspace settings and even tasks or launch configurations in this case.</p>
+<h3 id="_does-vs-code-support-projects-or-solutions" data-needslink="_does-vs-code-support-projects-or-solutions">Does VS Code support projects or solutions?</h3>
+<p>VS Code doesn't have the concept of a &quot;project&quot; or &quot;solution&quot; as they are sometimes defined in other development tools, such as Visual Studio IDE. You might see the term &quot;project&quot; used in VS Code documentation, but it usually means &quot;the thing you're working on&quot;. Depending on your programming language or framework, the toolset itself might support something called a &quot;project&quot; to help define build configurations or enumerate included files.</p>
+
+                <div class="feedback" data-edit-url="https://vscode.dev/github/microsoft/vscode-docs/blob/main/docs/editing/workspaces/workspaces.md"></div>
+                
+                <div class="body-footer">8/5/2026</div>
+                
+            </main>
+        </div>
+        
+        <!-- Mobile connect widget -->
+        <div class="docs-mobile-widgets visible-xs">
+            <div class="connect-widget"></div>
+        </div>
+    </div>
+</div>
+		</main>
+	</div>
+
+	<div id="search-popup-overlay" class="search-popup-overlay" role="dialog" aria-modal="true" aria-label="Search">
+		<div class="search-popup-container">
+			<div class="search-popup-header">
+				<form class="search-popup-form">
+					<div class="input-group">
+						<input type="text" name="q" class="search-box form-control" placeholder="Search the website"
+							aria-label="Search text" role="combobox" aria-expanded="false"
+							aria-autocomplete="list" aria-controls="search-results-listbox"
+							aria-activedescendant="" />
+						<span class="input-group-btn">
+							<button tabindex="0" class="btn" type="submit" aria-label="Search">
+								<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="Search" />
+								<img class="search-icon-light" src="/assets/icons/search.svg" alt="Search" />
+							</button>
+						</span>
+					</div>
+				</form>
+				<button class="search-popup-close" type="button" aria-label="Close search"><i class="codicon codicon-close" aria-hidden="true"></i></button>
+			</div>
+			<div class="search-popup-results">
+				<ul class="search-popup-results-list" id="search-results-listbox" role="listbox" aria-label="Search results"></ul>
+			</div>
+			<div class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="search-popup-status"></div>
+		</div>
+	</div>
+
+
+	<footer role="contentinfo" class="container">
+		<div class="footer-container">
+			<div class="footer-row">
+				<div class="footer-social">
+					<ul class="links">
+						<li>
+							<a href="https://github.com/microsoft/vscode"><img src="/assets/icons/github-icon.svg" alt="VS Code on Github"></a>
+						</li>
+						<li>
+							<a href="https://go.microsoft.com/fwlink/?LinkID=533687"><img src="/assets/icons/x-icon.svg" class="x-icon" alt="Follow us on X"></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/showcase/vs-code"><img src="/assets/icons/linkedin-icon.svg" alt="VS Code on LinkedIn"></a>
+						</li>
+						<li>
+							<a href="https://bsky.app/profile/vscode.dev"><img src="/assets/icons/bluesky-icon.svg" alt="VS Code on Bluesky"></a>
+						</li>
+						<li>
+							<a href="https://www.reddit.com/r/vscode/"><img src="/assets/icons/reddit-icon.svg" alt="Join the VS Code community on Reddit"></a>
+						</li>
+						<li>
+							<a href="https://www.vscodepodcast.com"><img src="/assets/icons/podcast-icon.svg" alt="The VS Code Insiders Podcast"></a>
+						</li>
+						<li>
+							<a href="https://www.tiktok.com/@vscode"><img src="/assets/icons/tiktok-icon.svg" alt="VS Code on TikTok"></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@code"><img src="/assets/icons/youtube-icon.svg" alt="VS Code on YouTube"></a>
+						</li>
+						<script>
+							function manageConsent() {
+								if (siteConsent && siteConsent.isConsentRequired) {
+									siteConsent.manageConsent();
+								}
+							}
+						</script>
+					</ul>
+					<a id="footer-microsoft-link" class="microsoft-logo" href="https://www.microsoft.com">
+						<img src="/assets/icons/microsoft.svg" alt="Microsoft homepage" />
+					</a>
+				</div>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li><a id="footer-support-link" href="https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=d66407ed-3967-b000-4cfb-2c318cad363d"
+						target="_blank" rel="noopener" title="Get support for VS Code"
+						aria-label="Get support for VS Code (opens in new tab)">Support</a></li>
+					<li><a id="footer-privacy-link" href="https://go.microsoft.com/fwlink/?LinkId=521839"
+						target="_blank" rel="noopener" title="View the Microsoft privacy statement"
+						aria-label="Microsoft privacy statement (opens in new tab)">Privacy</a></li>
+					<li style="display: none;"><a id="footer-cookie-link" style="cursor: pointer;" onclick="manageConsent()"
+						target="_blank" rel="noopener">Manage Cookies</a></li>
+					<li><a id="footer-terms-link" href="https://www.microsoft.com/legal/terms-of-use"
+						target="_blank" rel="noopener" title="View the Microsoft Terms of Use"
+						aria-label="Microsoft Terms of Use (opens in new tab)">Terms of Use</a></li>
+					<li><a id="footer-license-link" href="/License"
+						target="_blank" rel="noopener" title="View the Visual Studio Code license"
+						aria-label="Visual Studio Code license (opens in new tab)">License</a></li>
+				</ul>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li>
+						<svg class="privacy-choices" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43">
+							<title>Your Privacy Choices Opt-Out Icon</title>
+							<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+							<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+							<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+							<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+						</svg>
+						<a id="footer-privacy-choices-link" href="https://aka.ms/YourCaliforniaPrivacyChoices"
+						target="_blank" rel="noopener" title="View Your Privacy Choices"
+						aria-label="Your Privacy Choices (opens in new tab)">Your Privacy Choices</a></li>
+					<li><a id="footer-consumer-health-privacy-link" href="https://go.microsoft.com/fwlink/?linkid=2259814"
+						target="_blank" rel="noopener" title="View the Microsoft Consumer Health Privacy policy"
+						aria-label="Microsoft Consumer Health Privacy policy (opens in new tab)">Consumer Health Privacy</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="module">
+		document.addEventListener('DOMContentLoaded', () => {
+			const copilotDeepLinks = document.querySelectorAll('.copilot-deep-link');
+			if (copilotDeepLinks.length === 0) {
+				return;
+			}
+			if (window.innerWidth < 992) {
+				for (const link of copilotDeepLinks) {
+					link.href = 'https://aka.ms/vscode-activatecopilotfree';
+				}
+			}
+		});
+	</script>
+
+	<script src="/dist/index.js"></script>
+
+	
+
+	<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type" : "SoftwareApplication",
+			"name" : "Visual Studio Code",
+			"softwareVersion": "1.132",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			},
+			"applicationCategory": "DeveloperApplication",
+			"applicationSubCategory": "AI Code Editor",
+			"description": "Visual Studio Code is a free, open source AI code editor for agent-first development. Build with AI agents, manage multi-agent workflows, and code across any environment.",
+			"alternateName": "VS Code",
+			"datePublished": "2021-11-03",
+			"operatingSystem": "Mac, Linux, Windows",
+			"logo": "https://code.visualstudio.com/assets/apple-touch-icon.png",
+			"screenshot": "https://code.visualstudio.com/assets/images/product-screenshot.png",
+			"releaseNotes": "https://code.visualstudio.com/updates",
+			"downloadUrl": "https://code.visualstudio.com/download",
+			"license": "https://code.visualstudio.com/license",
+			"softwareRequirements": "https://code.visualstudio.com/docs/supporting/requirements",
+			"url" : "https://code.visualstudio.com",
+			"author": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"maintainer": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://code.visualstudio.com/Search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			},
+			"sameAs" : [
+				"https://en.wikipedia.org/wiki/Visual_Studio_Code",
+				"https://twitter.com/code",
+				"https://www.youtube.com/code",
+				"https://www.tiktok.com/@vscode",
+				"https://github.com/microsoft/vscode"
+			]
+		}
+	</script>
+</body>
+
+</html>

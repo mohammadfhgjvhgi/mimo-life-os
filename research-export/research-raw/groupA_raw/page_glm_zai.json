@@ -1,0 +1,45 @@
+{
+  "code": 200,
+  "data": {
+    "description": "",
+    "html": "",
+    "httpStatus": 200,
+    "httpStatusText": "",
+    "metadata": {
+      "Author": "Physics Department",
+      "CreationDate": "D:20250728065713Z",
+      "Creator": "LaTeX with Beamer class",
+      "Custom": {
+        "PTEX.Fullbanner": "This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) kpathsea version 6.4.0"
+      },
+      "EncryptFilterName": null,
+      "IsAcroFormPresent": false,
+      "IsCollectionPresent": false,
+      "IsLinearized": true,
+      "IsSignaturesPresent": false,
+      "IsXFAPresent": false,
+      "Keywords": "",
+      "Language": null,
+      "ModDate": "D:20250728065713Z",
+      "PDFFormatVersion": "1.5",
+      "Producer": "pdfTeX-1.40.26",
+      "Subject": "",
+      "Title": "Maxwell's Equations - The Foundation of Electromagnetism",
+      "Trapped": {
+        "name": "False"
+      }
+    },
+    "publishedTime": "Mon, 28 Jul 2025 13:28:03 GMT",
+    "title": "Maxwell's Equations - The Foundation of Electromagnetism",
+    "url": "https://z.ai/blog/glm-4.5",
+    "usage": {
+      "tokens": 0
+    }
+  },
+  "meta": {
+    "usage": {
+      "tokens": 0
+    }
+  },
+  "status": 200
+}

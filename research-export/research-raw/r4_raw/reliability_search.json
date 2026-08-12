@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://zylos.ai/research/2026-02-20-graceful-degradation-ai-agent-systems",
+    "name": "Graceful Degradation Patterns in AI Agent Systems",
+    "snippet": "Feb 20, 2026 — The discipline of graceful degradation addresses how agents detect, contain, and recover . The field has matured significantly in 2025-2026.  ...",
+    "host_name": "zylos.ai",
+    "rank": 0,
+    "date": "Feb 20, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@wasowski.jarek/building-reliable-ai-agents-catalog-of-15-production-patterns-agentic-design-patterns-3cff554cbb70",
+    "name": "15 Production Design Patterns for Agentic AI Systems",
+    "snippet": "A catalog of 15 production design patterns for AI agentic systems — circuit breaker , blast radius, orchestration, reasoning observability.",
+    "host_name": "medium.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/pulse/when-your-ai-should-stop-talking-circuit-breaker-pattern-sinha-eeolc",
+    "name": "Circuit Breaker Pattern for AI Agents in Product Reliability",
+    "snippet": "The Circuit Breaker Pattern is the missing reliability primitive for GenAI agents . ... We need predefined fallbacks to ensure graceful degradation ... Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.litellm.ai/blog/redis-circuit-breaker",
+    "name": "Making the AI Gateway Resilient to Redis Failures",
+    "snippet": "Apr 11, 2026 — The circuit breaker pattern ensures infrastructure degradation stays contained — the right failure mode is a temporary cache miss rate bump, ...",
+    "host_name": "docs.litellm.ai",
+    "rank": 3,
+    "date": "Apr 11, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.syntaxia.com/insights/ai-agent-safety-circuit-breakers-for-autonomous-systems",
+    "name": "AI Agent Safety: Circuit Breakers for Autonomous Systems",
+    "snippet": "Design critical circuit breakers , rollback systems, and escalation policies for safe and accountable deployment of autonomous AI agents.",
+    "host_name": "www.syntaxia.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.buildmvpfast.com/blog/graceful-degradation-ai-agents-fallback-model-unavailable-2026",
+    "name": "Graceful Degradation for AI Agents | 2026 Guide",
+    "snippet": "Apr 22, 2026 — Build AI agents that fail gracefully with model fallbacks, cached responses, checkpoints, degraded UX, and human escalation patterns .",
+    "host_name": "www.buildmvpfast.com",
+    "rank": 5,
+    "date": "Apr 22, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://brandonlincolnhendricks.com/research/graceful-degradation-ai-agent-rate-limits",
+    "name": "Graceful Degradation Strategies for AI Agents Hitting Rate",
+    "snippet": "Mar 30, 2026 — Circuit breakers prevent cascading failures when AI services struggle. The pattern monitors failure rates and proactively stops attempts: ...",
+    "host_name": "brandonlincolnhendricks.com",
+    "rank": 6,
+    "date": "Mar 30, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://harnessengineering.academy/blog/building-resilient-ai-agents-implementing-retry-logic-fallback-patterns-and-graceful-degradation-for-unreliable-tools",
+    "name": "Building Resilient AI Agents: Implementing Retry Logic",
+    "snippet": "Jun 9, 2026 — We'll cover retry logic with exponential backoff , fallback patterns that keep your agent moving forward, and graceful degradation strategies.  ...",
+    "host_name": "harnessengineering.academy",
+    "rank": 7,
+    "date": "Jun 9, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.jztan.com/ai-agent-error-handling-patterns",
+    "name": "AI Agent Error Handling: 5 Patterns to Catch Silent Failures",
+    "snippet": "Feb 12, 2026 — But now: the circuit breaker catches quality degradation within three calls instead of six hours. The validation gate blocks any write where ... Read more",
+    "host_name": "blog.jztan.com",
+    "rank": 8,
+    "date": "Feb 12, 2026",
+    "favicon": ""
+  }
+]

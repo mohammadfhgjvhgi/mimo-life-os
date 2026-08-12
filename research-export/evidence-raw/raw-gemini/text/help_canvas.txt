@@ -1,0 +1,323 @@
+Create docs, apps & more with Canvas - Computer - Gemini Apps Help Skip to main content 
+
+Gemini Apps Help 
+
+Sign in 
+
+Google Help 
+
+Help Center
+Community
+Gemini Apps 
+
+Privacy Policy
+Terms of Service
+Submit feedback
+
+Send feedback on...
+
+This help content & information 
+
+General Help Center experience 
+
+Next 
+
+Help Center 
+Community 
+Privacy Hub 
+
+Gemini Apps 
+
+Create docs, apps & more with Canvas
+You can collaborate with Gemini in Canvas to create or edit a doc, app, slides, or code. You can also turn your creation into an Audio Overview, quiz, or other format.
+
+Important: To use this feature, you must be signed in to Gemini Apps. Learn how to sign in to Gemini Apps .
+
+Start a new chat with Canvas
+
+Go to gemini.google.com .
+
+Below the text box at the bottom, click Add Files Canvas .
+
+In the text box, enter your prompt.
+
+Tip: To have Gemini use a specific format or document type, like a slide deck, include this instruction in your prompt. Check examples for Canvas prompts .
+
+Optional: To upload files or an image with your prompt, click Add files .
+
+Learn more about uploading files in Gemini Apps .
+
+Click Submit .
+
+Examples 
+
+Create a slide presentation about…
+
+Create a quiz to test me on…
+
+What you can do with apps in Canvas
+
+Edit apps & code
+
+You can use the prompt text box to ask Gemini to make updates to your app or directly edit the code. Changes in Canvas are auto-saved.
+
+Open the code & find errors, logs, and recent changes 
+
+To open and edit the code, at the top right of the Canvas panel, click Code . You can edit the code directly in the Code view.
+
+To find errors and logs from the preview, at the top right of the Canvas panel, click Show console .
+
+To find recent changes in the code, at the top right of the Canvas panel, click Code Show recent changes .
+
+Ask Gemini to help edit selections 
+
+Open the chat with the app you want to edit.
+
+At the bottom right of the Canvas panel, click Select & ask .
+
+Use the cursor to select the section that you want to edit.
+
+In the text box, enter a prompt for how you want the text to be updated.
+
+Press Enter.
+
+Add AI to your app 
+
+Important: To add AI to your app, you must be signed in to Gemini Apps and be 18 or over.
+
+You can add Gemini-powered features to your app, like text and image generation.
+
+Open the chat with the app you want to edit.
+
+At the bottom right of the Canvas panel, click Add Gemini features .
+
+In the chat on the left, Gemini will provide an overview of what AI feature was added to the app. You can respond in the text box and ask Gemini to make additional changes.
+
+What you can do with docs in Canvas
+
+Edit docs in Canvas
+
+In the Canvas space, you can directly edit the text or ask Gemini to help you in the prompt box. Changes are auto-saved.
+
+Ask Gemini to help edit selections 
+
+​​​​​​Open the chat you want to edit.
+
+In the Canvas panel, use the cursor to select the text that you want to edit.
+
+In the text box, enter a prompt for what you want updated.
+
+Press Enter.
+
+Tip: Once you select the text you want to edit, you can also click Suggest edits to have Gemini recommend changes.
+
+Ask Gemini to make quick edits 
+
+​​​​​​Open the chat you want to edit. 
+
+In the Canvas panel on the right, choose how you want to change it:
+
+To adjust the length of text: Click Change length and select your desired length.
+
+To adjust the tone of text: Click Change tone and select how casual or formal you want it to be.
+
+Edit text style & format in a doc 
+
+Open the chat you want to edit.
+
+In the Canvas panel, use the cursor to select the text that you want to edit.
+
+At the top, use the toolbar to edit your text. You can:
+
+Stylize headings
+
+Bold text .
+
+Italicize text .
+
+Create bulleted lists .
+
+Create numbered lists .
+
+Tips: 
+
+If you can’t find the full toolbar, click More .
+
+To view your saved versions, at the top, click Previous Version or Next Version .
+
+Add LaTeX to a document 
+
+LaTeX is a document preparation system widely used in academic, scientific, and technical fields to create high-quality documents with complex formatting, such as mathematical equations, tables, and multi-column layouts.
+
+To add LaTeX to any doc in Canvas:
+
+Open the chat with the doc you want to edit.
+
+At the top right of the Canvas panel, click Create.
+
+To select LaTeX, click LaTeX .
+
+Click on the formula within Canvas
+
+Exporting or sharing docs including LaTeX
+
+You can export a doc that includes LaTeX as a PDF with the ability to preview before you download it. 
+
+You can also copy any Gemini response that includes LaTeX and it will include the unrendered LaTeX code. 
+
+Create something based on a Canvas doc
+
+Important: For now, this feature isn’t available to users under 18.
+
+Open the chat with the doc you want to edit.
+
+On the top right of the Canvas panel, click Create.
+
+Select what you want to create:
+
+To create a slide show, custom visual or app, in the text box, enter a prompt that describes what you want to turn your report or doc into.
+
+To generate an Audio Overview, click Audio Overview . Learn more about Audio Overviews in Gemini Apps. 
+
+To create and take a quiz, click Quiz .
+
+To generate an infographic, click Infographic .
+
+To create a web page, click Web page . 
+
+Share, copy & export from Canvas
+
+Share an app or content from Canvas 
+
+Open the chat with the doc you want to share.
+
+At the top right of the Canvas panel, click Share & export Share .
+
+If you are sharing an app, review the app info.
+
+Choose how you want to share:
+
+To share the link: At the top, next to the g.co/gemini/share link, click Copy link . Then paste it where you want to share, like in a messaging app, an email draft, or a forum thread.
+
+To share on an available social platform: At the bottom, click the social platform and follow the on-screen instructions.
+
+Review app info
+
+When you create a shareable public link for your app, you’ll be able to review info about your app. Anyone with that public link can view and edit data associated with the app. You can ask Gemini to make changes and Gemini will apply updates to your app’s code. 
+
+Share data between users. 
+
+Use Gemini-powered features. For example, if you want your app to use AI to generate text and images.
+
+Save data across sessions and devices. For example, if you create an app to track something over time.
+
+Copy or export from Canvas 
+
+On your computer, open the chat with the Canvas content or app you want to copy or export.
+
+At the top right of the Canvas panel, click Share & export .
+
+Choose if you want to export or copy the content:
+
+To open text in a new Google Doc: Click Export to Docs . 
+
+To open slides in Google Slides: Click Export to Slides . You can also choose to export slides as a PDF.
+
+To copy the text: Click Copy contents .
+
+Export Python code to Colab 
+
+On your computer, open the chat with the python code you want to export.
+
+At the top of the Canvas panel, click Export to Colab .
+
+At the bottom left, tap Open Colab .
+
+Copy & edit shared Canvas content
+
+Important: 
+
+For now, this feature isn’t available to users under 18.
+
+Shared links only open in gemini.google.com . You can’t open shared Canvas content in the Gemini mobile app.
+
+When you open a public link to someone else’s shared Canvas content, you can make a copy and continue editing it with Canvas on your own. If your Keep Activity setting is on, the shared Canvas content will be stored in your Gemini Apps Activity. Learn how to manage and delete your Gemini Apps activity .
+
+Click the public link.
+
+At the bottom, click Copy Canvas. 
+
+Related resources
+
+Use Gemini Apps for in-depth research 
+
+Generate Audio Overviews in Gemini Apps 
+
+Share your chats from Gemini Apps 
+
+Computer Android iPhone & iPad More 
+
+Need more help?
+Try these next steps:
+
+Post to the help community Get answers from community members 
+
+true
+Help 
+1 of 10
+Generate videos with Gemini Apps 
+2 of 10
+Generate & edit images with Gemini Apps 
+3 of 10
+Generate music with Gemini Apps 
+4 of 10
+Create and use an avatar in Gemini Apps 
+5 of 10
+Generate Audio Overviews in Gemini Apps 
+6 of 10
+Create docs, apps & more with Canvas 
+7 of 10
+Use Deep Research in Gemini Apps 
+8 of 10
+Create quizzes, flashcards, practice tests & more in Gemini Apps 
+9 of 10
+Create an illustrated storybook in Gemini Apps 
+10 of 10
+Use learning tools in Gemini Apps 
+
+©2026 Google Privacy Policy 
+Terms of Service 
+
+Language Afrikaans&lrm; azərbaycan&lrm; bosanski&lrm; català&lrm; dansk&lrm; Deutsch&lrm; eesti&lrm; English (United Kingdom)&lrm; español&lrm; español (Latinoamérica)&lrm; euskara&lrm; Filipino&lrm; français&lrm; français (Canada)&lrm; galego&lrm; hrvatski&lrm; Indonesia&lrm; isiZulu&lrm; italiano&lrm; Kiswahili&lrm; latviešu&lrm; lietuvių&lrm; magyar&lrm; Melayu&lrm; Nederlands&lrm; norsk&lrm; o‘zbek&lrm; polski&lrm; português&lrm; português (Brasil)&lrm; română&lrm; shqip&lrm; slovenčina&lrm; slovenščina&lrm; suomi&lrm; svenska&lrm; Tiếng Việt&lrm; Türkçe&lrm; íslenska&lrm; čeština&lrm; Ελληνικά&lrm; беларуская&lrm; български&lrm; македонски&lrm; монгол&lrm; русский&lrm; српски&lrm; українська&lrm; қазақ тілі&lrm; հայերեն&lrm; &rlm; עברית &rlm; اردو &rlm; العربية &rlm; فارسی नेपाली&lrm; मराठी&lrm; हिन्दी&lrm; অসমীয়া&lrm; বাংলা&lrm; ਪੰਜਾਬੀ&lrm; ଓଡ଼ିଆ&lrm; தமிழ்&lrm; తెలుగు&lrm; ไทย&lrm; ລາວ&lrm; ქართული&lrm; አማርኛ&lrm; ខ្មែរ&lrm; 中文（简体）&lrm; 中文（繁體）&lrm; 中文（香港）&lrm; 日本語&lrm; 한국어&lrm; English&lrm; Enable Dark Mode
+
+Send feedback on...
+This help content & information General Help Center experience 
+
+Search
+Clear search
+Close search
+Google apps
+Main menu
+
+9272801919255125866
+true
+
+Search Help Center
+false
+true
+
+true
+
+true
+
+true
+true
+5295044
+false
+
+false
+
+false
+false
+
+false

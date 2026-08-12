@@ -1,0 +1,410 @@
+- 
+- 
+- 
+- 
+- 
+- Sandbox | v0 Docs 
+- 
+- 
+- 
+- 
+- 
+- 
+
+- Docs 
+
+- API 
+
+Search… ⌘ K Ask AI Ask AI 
+Search… ⌘ K 
+Docs API 
+
+- Getting Started 
+
+- What is v0? 
+
+- Agentic features 
+
+- Sandbox 
+
+- Vercel Integration 
+
+- Quickstart 
+
+- FAQs 
+
+- Prompt 
+
+- Text Prompting 
+
+- Screenshots and Files 
+
+- Figma 
+
+- Iterate 
+
+- Code editing 
+
+- Terminal commands 
+
+- Design mode 
+
+- Design Systems 2.0 
+
+- Images, videos, and file uploads 
+
+- Versions 
+
+- Integrate 
+
+- AI models 
+
+- Databases 
+
+- Snowflake 
+
+- Shopify 
+
+- External APIs 
+
+- GitHub 
+
+- MCP Integrations 
+
+- Pre-installed Agents 
+
+- Slack 
+
+- Ship 
+
+- Deployments 
+
+- Custom domain 
+
+- Sharing 
+
+- Templates 
+
+- Manage 
+
+- Account 
+
+- Enterprise 
+
+- Instructions 
+
+- Folders 
+
+- Projects 
+
+- Pricing 
+
+- Usage & Activity 
+
+- Teams 
+
+- Security 
+
+- Guides 
+
+- Full-stack apps 
+
+- Prototyping 
+
+- PRD design 
+
+- 
+
+- Compare 
+
+Menu 
+
+# Sandbox
+Copy page Copy page 
+
+VM-backed chats run your project inside an isolated Vercel Sandbox that hosts your code, dev server, terminal, and agent tools.
+Copy for LLM View Markdown Ask AI about this page 
+
+VM-backed chats in v0 run inside an isolated virtual machine that hosts your project files, runs the live preview you see in the chat, and executes commands on your behalf. State from one chat never leaks into another.
+
+## What the sandbox is 
+
+v0's sandbox is powered by Vercel Sandbox , a lightweight virtual machine that runs a full Node.js environment in seconds. It replaces the older browser-based preview, which couldn't run server code, API routes, or real database connections. Because the sandbox runs a real Node.js environment, the preview behaves the same way your project will once deployed to Vercel.
+
+## Where you see the sandbox 
+
+The sandbox surfaces in three places inside a VM-backed chat:
+
+- Preview tab : your app running in the sandbox. The dev server inside the sandbox serves this URL.
+
+- Console panel : tabs for Logs (the dev server's output) and Terminal (a shell where you can run commands directly, in addition to anything v0 runs through its Bash tool ).
+
+- Code editor : a built-in editor attached to the same filesystem, so edits from the editor, v0, or the terminal all read and write the same files.
+
+## What runs inside 
+
+Every sandbox includes:
+
+- Node.js , with pnpm , npm , yarn , and bun available out of the box. You can install any dependency your project needs.
+
+- A framework-aware dev server . v0 detects Next.js, Vite, and generic Node.js projects and starts the right command on the right port.
+
+- Environment variables from your connected Vercel project, available to both your app and any agent tool that runs in the sandbox.
+
+This is the same environment v0's Bash tool and pre-installed agents operate in.
+
+## Isolation boundaries 
+
+Sandboxes are isolated along three axes:
+
+Boundary What it means 
+Per chat Each VM-backed chat has its own sandbox. Files, env vars, and running processes never cross from one chat to another. 
+Per user or team A sandbox belongs to the chat's owner. Other users can't reach it unless you share the chat . 
+From production A sandbox is never the same machine as your deployed app. Deployments run on separate Vercel infrastructure with their own environment variables. 
+
+On top of these boundaries, Sandbox Network Policy controls which outbound hosts the sandbox is allowed to reach. The default is allow-all . Team owners configure this from team settings .
+
+## Lifecycle 
+
+For a VM-backed chat, v0 creates a sandbox the first time the chat needs one, for example when you generate code that needs a server or import a repository.
+
+After that:
+
+- The filesystem persists between sessions for the same chat. Files you or v0 wrote remain when you come back later.
+
+- A pooled sandbox starts with a 30-minute lifetime. This is the initial timeout assigned when v0 provisions or claims it, not the maximum time you can work.
+
+- Active, running sandboxes are extended automatically. Status checks and the agent's keep-alive heartbeat add 10 minutes when the sandbox has five minutes or less remaining.
+
+- A sandbox can run for at most 24 hours from its creation. Automatic extensions never cross this absolute cap.
+
+- Inactive or stopped sandboxes are not revived by a keep-alive. On your next visit or action, v0 reuses the sandbox if it is still available or recreates it if it has expired. You don't need to start or stop it manually.
+
+- Starting a new VM-backed chat creates a new sandbox. State doesn't carry over from older chats unless you explicitly fork or import.
+
+Learn how v0 runs commands inside the sandbox
+
+Previous Agentic features Next Vercel Integration 
+
+On this page
+What the sandbox is Where you see the sandbox What runs inside Isolation boundaries Lifecycle 
+
+Scroll to top Give feedback 
+
+## Product
+
+- Home 
+
+- Enterprise 
+
+- Pricing 
+
+- v0 for Students 
+
+## Company
+
+- Terms 
+
+- AI Policy 
+
+- Privacy 
+
+- Cookies 
+
+## Resources
+
+- FAQs 
+
+- Docs 
+
+- Vercel Community 
+
+- Vercel 
+
+## Social
+
+- Twitter 
+
+- LinkedIn 
+
+## Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Workflows 
+
+- Connect New 
+
+- Passport New 
+
+- eve New 
+
+## Core Platform
+
+- CI/CD 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+## Security
+
+- Platform Security 
+
+- WAF 
+
+- Bot Management 
+
+- Bot ID 
+
+## Tools
+
+- Vercel Drop New 
+
+- Vercel Agent 
+
+- Vercel Plugin New 
+
+- Agent Skills 
+
+- Next.js 
+
+- Domains 
+
+- v0 
+
+## Frameworks
+
+- eve New 
+
+- Nuxt 
+
+- SvelteKit 
+
+- Nitro 
+
+- Turborepo 
+
+- Tanstack Start 
+
+- FastAPI 
+
+- xmcp 
+
+- All frameworks 
+
+## SDKs
+
+- Vercel SDK 
+
+- Workflow SDK New 
+
+- Flags SDK 
+
+- Chat SDK New 
+
+- Queues SDK New 
+
+- Streamdown 
+
+## Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+- Platform Engineers 
+
+- Design Engineers 
+
+## Learn
+
+- Docs 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+- Academy 
+
+- Articles 
+
+- Community 
+
+## Explore
+
+- Customers 
+
+- Marketplace 
+
+- Templates 
+
+- Partner Finder 
+
+- Vercel + AWS 
+
+## Company
+
+- About 
+
+- Careers 
+
+- Press 
+
+- Events 
+
+- Startups 
+
+- Shipped on Vercel 
+
+- Open Source Program 
+
+- Enterprise 
+
+- Pricing 
+
+- Help 
+
+## Legal & Trust
+
+- Privacy Policy 
+
+- Terms of Service 
+
+- Cookie Policy 
+
+- DPA 
+
+- Acceptable Use Policy 
+
+- Legal 
+
+- Trust Center 
+
+- Status 
+
+## Social
+
+- GitHub 
+
+- X 
+
+- LinkedIn 
+
+- YouTube 
+
+- Instagram

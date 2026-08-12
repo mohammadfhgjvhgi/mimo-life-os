@@ -1,0 +1,351 @@
+# Multiplayer AI
+
+## Docs
+
+- [Archive agent configuration](https://docs.dust.tt/api-reference/agents/archive-agent-configuration.md): Archive the agent configuration identified by {sId} in the workspace identified by {wId}. The agent is soft-archived and triggers/editor-group memberships associated with it are disabled.
+- [Export agent configuration as YAML](https://docs.dust.tt/api-reference/agents/export-agent-configuration-as-yaml.md): Download the agent configuration identified by {sId} as a YAML file.
+- [Get agent configuration](https://docs.dust.tt/api-reference/agents/get-agent-configuration.md): Retrieve the agent configuration identified by {sId} in the workspace identified by {wId}.
+- [Import agent configuration](https://docs.dust.tt/api-reference/agents/import-agent-configuration.md): Create a new agent configuration from a JSON body matching the agent config schema.
+- [List agents](https://docs.dust.tt/api-reference/agents/list-agents.md): Get the agent configurations for the workspace identified by {wId}.
+- [Search agents by name](https://docs.dust.tt/api-reference/agents/search-agents-by-name.md): Search for agent configurations by name in the workspace identified by {wId}.
+- [Update agent configuration](https://docs.dust.tt/api-reference/agents/update-agent-configuration.md): Update the agent configuration identified by {sId} in the workspace identified by {wId}.
+- [Create an app run](https://docs.dust.tt/api-reference/apps/create-an-app-run.md): Create and execute a run for an app in the space specified by {spaceId}.
+- [Get an app run](https://docs.dust.tt/api-reference/apps/get-an-app-run.md): Retrieve a run for an app in the space identified by {spaceId}.
+- [List apps](https://docs.dust.tt/api-reference/apps/list-apps.md): Get all apps in the space identified by {spaceId}.
+- [Answer a user question in a conversation message](https://docs.dust.tt/api-reference/conversations/answer-a-user-question-in-a-conversation-message.md): Submits an answer to a question asked by an agent in a specific message
+- [Cancel message generation in a conversation](https://docs.dust.tt/api-reference/conversations/cancel-message-generation-in-a-conversation.md)
+- [Create a content fragment](https://docs.dust.tt/api-reference/conversations/create-a-content-fragment.md): Create a new content fragment in the workspace identified by {wId}.
+- [Create a file upload URL](https://docs.dust.tt/api-reference/conversations/create-a-file-upload-url.md)
+- [Create a message](https://docs.dust.tt/api-reference/conversations/create-a-message.md): Create a message in the workspace identified by {wId} in the conversation identified by {cId}.
+- [Create a new conversation](https://docs.dust.tt/api-reference/conversations/create-a-new-conversation.md): Create a new conversation in the workspace identified by {wId}.
+- [Download a conversation-scoped file by path](https://docs.dust.tt/api-reference/conversations/download-a-conversation-scoped-file-by-path.md): Download a file from a conversation's file system by its scoped path. Pass the canonical `filePath` surfaced in a message action's `generatedFiles` (the legacy `conversation/foo.pdf` form is also accepted). The file content is streamed directly from the conversation mount.
+- [Edit an existing message in a conversation](https://docs.dust.tt/api-reference/conversations/edit-an-existing-message-in-a-conversation.md)
+- [Get a conversation](https://docs.dust.tt/api-reference/conversations/get-a-conversation.md): Get a conversation in the workspace identified by {wId}. Supports optional pagination of message content via limit and lastValue query parameters.
+- [Get events for a message](https://docs.dust.tt/api-reference/conversations/get-events-for-a-message.md): Get events for a message in the workspace identified by {wId}.
+- [Get the events for a conversation](https://docs.dust.tt/api-reference/conversations/get-the-events-for-a-conversation.md): Get the events for a conversation in the workspace identified by {wId}.
+- [Update a conversation](https://docs.dust.tt/api-reference/conversations/update-a-conversation.md): Update a conversation's title or mark it as read or unread in the workspace identified by {wId}.
+- [Validate an action in a conversation message](https://docs.dust.tt/api-reference/conversations/validate-an-action-in-a-conversation-message.md): Approves or rejects an action taken in a specific message in a conversation
+- [Check the upsert queue status for a data source](https://docs.dust.tt/api-reference/datasources/check-the-upsert-queue-status-for-a-data-source.md): Returns the number of running document upsert workflows for this data source. This endpoint is only accessible with system API keys (e.g., from connectors).
+- [Delete a document from a data source](https://docs.dust.tt/api-reference/datasources/delete-a-document-from-a-data-source.md): Delete a document from a data source in the workspace identified by {wId}.
+- [Delete a row](https://docs.dust.tt/api-reference/datasources/delete-a-row.md): Delete a row in the table identified by {tId} in the data source identified by {dsId} in the workspace identified by {wId}.
+- [Delete a table](https://docs.dust.tt/api-reference/datasources/delete-a-table.md): Delete a table in the data source identified by {dsId} in the workspace identified by {wId}.
+- [Get a row](https://docs.dust.tt/api-reference/datasources/get-a-row.md): Get a row in the table identified by {tId} in the data source identified by {dsId} in the workspace identified by {wId}.
+- [Get a table](https://docs.dust.tt/api-reference/datasources/get-a-table.md): Get a table in the data source identified by {dsId} in the workspace identified by {wId}.
+- [Get data sources](https://docs.dust.tt/api-reference/datasources/get-data-sources.md): Get data sources in the workspace identified by {wId}.
+- [Get documents](https://docs.dust.tt/api-reference/datasources/get-documents.md): Get documents in the data source identified by {dsId} in the workspace identified by {wId}.
+- [Get tables](https://docs.dust.tt/api-reference/datasources/get-tables.md): Get tables in the data source identified by {dsId} in the workspace identified by {wId}.
+- [List rows](https://docs.dust.tt/api-reference/datasources/list-rows.md): List rows in the table identified by {tId} in the data source identified by {dsId} in the workspace identified by {wId}.
+- [Retrieve a document from a data source](https://docs.dust.tt/api-reference/datasources/retrieve-a-document-from-a-data-source.md): Retrieve a document from a data source identified by {dsId} in the workspace identified by {wId}.
+- [Search the data source](https://docs.dust.tt/api-reference/datasources/search-the-data-source.md): Search the data source identified by {dsId} in the workspace identified by {wId}.
+- [Update the parents of a document](https://docs.dust.tt/api-reference/datasources/update-the-parents-of-a-document.md): Update the parents of a document in the data source identified by {dsId} in the workspace identified by {wId}.
+- [Upsert a document in a data source](https://docs.dust.tt/api-reference/datasources/upsert-a-document-in-a-data-source.md): Upsert a document in a data source in the workspace identified by {wId}.
+- [Upsert a table](https://docs.dust.tt/api-reference/datasources/upsert-a-table.md): Upsert a table in the data source identified by {dsId} in the workspace identified by {wId}.
+- [Upsert rows](https://docs.dust.tt/api-reference/datasources/upsert-rows.md): Upsert rows in the table identified by {tId} in the data source identified by {dsId} in the workspace identified by {wId}.
+- [Delete a data source view](https://docs.dust.tt/api-reference/datasourceviews/delete-a-data-source-view.md)
+- [Get a data source view](https://docs.dust.tt/api-reference/datasourceviews/get-a-data-source-view.md)
+- [List Data Source Views](https://docs.dust.tt/api-reference/datasourceviews/list-data-source-views.md): Retrieves a list of data source views for the specified space
+- [Search the data source view](https://docs.dust.tt/api-reference/datasourceviews/search-the-data-source-view.md): Search the data source view identified by {dsvId} in the workspace identified by {wId}.
+- [Update a data source view](https://docs.dust.tt/api-reference/datasourceviews/update-a-data-source-view.md)
+- [Delete feedback for a specific message](https://docs.dust.tt/api-reference/feedbacks/delete-feedback-for-a-specific-message.md): Delete user feedback for a specific message in a conversation. Requires authentication and update:conversation scope.
+- [Get feedbacks for a conversation](https://docs.dust.tt/api-reference/feedbacks/get-feedbacks-for-a-conversation.md): Retrieves all feedback entries for a specific conversation. Requires authentication and read:conversation scope.
+- [Submit feedback for a specific message in a conversation](https://docs.dust.tt/api-reference/feedbacks/submit-feedback-for-a-specific-message-in-a-conversation.md): Submit user feedback (thumbs up/down) for a specific message in a conversation. Requires authentication and update:conversation scope.
+- [Deregister a client-side MCP server](https://docs.dust.tt/api-reference/mcp/deregister-a-client-side-mcp-server.md): [Documentation](https://docs.dust.tt/docs/client-side-mcp-server) Remove a previously registered client-side MCP server registration.
+- [Register a client-side MCP server](https://docs.dust.tt/api-reference/mcp/register-a-client-side-mcp-server.md): [Documentation](https://docs.dust.tt/docs/client-side-mcp-server) Register a client-side MCP server to Dust. The registration is scoped to the current user and workspace. A serverId identifier is generated and returned in the response.
+- [Stream MCP tool requests for a workspace](https://docs.dust.tt/api-reference/mcp/stream-mcp-tool-requests-for-a-workspace.md): [Documentation](https://docs.dust.tt/docs/client-side-mcp-server) Server-Sent Events (SSE) endpoint that streams MCP tool requests for a workspace. This endpoint is used by client-side MCP servers to listen for tool requests in real-time. The connection will remain open and events will be sent as ne…
+- [Submit MCP tool execution results](https://docs.dust.tt/api-reference/mcp/submit-mcp-tool-execution-results.md): [Documentation](https://docs.dust.tt/docs/client-side-mcp-server) Endpoint for client-side MCP servers to submit the results of tool executions. This endpoint accepts the output from tools that were executed locally.
+- [Update heartbeat for a client-side MCP server](https://docs.dust.tt/api-reference/mcp/update-heartbeat-for-a-client-side-mcp-server.md): [Documentation](https://docs.dust.tt/docs/client-side-mcp-server) Update the heartbeat for a previously registered client-side MCP server. This extends the TTL for the server registration.
+- [Get mention suggestions](https://docs.dust.tt/api-reference/mentions/get-mention-suggestions.md): Get suggestions for mentions (agents and users) based on a query string.
+- [Get mention suggestions for a conversation](https://docs.dust.tt/api-reference/mentions/get-mention-suggestions-for-a-conversation.md): Get suggestions for mentions (agents and users) based on a query string, scoped to a specific conversation.
+- [Parse mentions in markdown text](https://docs.dust.tt/api-reference/mentions/parse-mentions-in-markdown-text.md): Parses pasted text containing @ mentions and converts them to the proper mention format. Matches @agentName or @userName patterns against available agents and users.
+- [Create an agent configuration](https://docs.dust.tt/api-reference/private-agents/create-an-agent-configuration.md): Creates a new agent configuration in the workspace.
+- [List agent configurations](https://docs.dust.tt/api-reference/private-agents/list-agent-configurations.md): Returns all agent configurations in the workspace.
+- [Resolve a conversation go template draft](https://docs.dust.tt/api-reference/private-assistant/resolve-a-conversation-go-template-draft.md): Fetches a Contentful conversation go template by slug and returns a composer-ready draft with optional pre-uploaded attachments.
+- [Exchange code or refresh token](https://docs.dust.tt/api-reference/private-authentication/exchange-code-or-refresh-token.md): Exchanges an authorization code or refresh token for access tokens via WorkOS.
+- [Initiate WorkOS login](https://docs.dust.tt/api-reference/private-authentication/initiate-workos-login.md): Redirects to WorkOS AuthKit for authentication. Supports PKCE flow for extensions.
+- [Revoke a session](https://docs.dust.tt/api-reference/private-authentication/revoke-a-session.md): Revokes a WorkOS session by session ID. Used by the Chrome extension for logout.
+- [Add a participant to a conversation](https://docs.dust.tt/api-reference/private-conversations/add-a-participant-to-a-conversation.md): Adds the authenticated user as a participant to a specific conversation.
+- [Cancel a wake-up](https://docs.dust.tt/api-reference/private-conversations/cancel-a-wake-up.md): Cancel a scheduled wake-up. Only the wake-up owner or a workspace admin can cancel.
+- [Cancel message generation](https://docs.dust.tt/api-reference/private-conversations/cancel-message-generation.md): Cancels the generation of messages in a conversation.
+- [Compact a conversation](https://docs.dust.tt/api-reference/private-conversations/compact-a-conversation.md): Trigger compaction of a conversation, summarizing older messages into a compaction message. Requires a model to use for summary generation.
+- [Create a content fragment](https://docs.dust.tt/api-reference/private-conversations/create-a-content-fragment.md): Post a new content fragment to an existing conversation.
+- [Create a conversation](https://docs.dust.tt/api-reference/private-conversations/create-a-conversation.md): Create a new conversation, optionally with an initial user message and content fragments.
+- [Delete or leave a conversation](https://docs.dust.tt/api-reference/private-conversations/delete-or-leave-a-conversation.md): Delete a conversation or leave it if it is shared.
+- [Get a conversation](https://docs.dust.tt/api-reference/private-conversations/get-a-conversation.md): Retrieve a specific conversation by its ID.
+- [Get conversation feedbacks](https://docs.dust.tt/api-reference/private-conversations/get-conversation-feedbacks.md): Retrieve all feedbacks for a conversation submitted by the authenticated user.
+- [Get conversation participants](https://docs.dust.tt/api-reference/private-conversations/get-conversation-participants.md): Returns the participants of a specific conversation.
+- [List conversations](https://docs.dust.tt/api-reference/private-conversations/list-conversations.md): Retrieve a paginated list of conversations for the authenticated user in the workspace.
+- [List wake-ups for a conversation](https://docs.dust.tt/api-reference/private-conversations/list-wake-ups-for-a-conversation.md): Retrieve all wake-ups scheduled in a conversation (any status).
+- [Update a conversation](https://docs.dust.tt/api-reference/private-conversations/update-a-conversation.md): Update a conversation's title, mark it as read, move it to a different space, or control URL access mode.
+- [Stream conversation events](https://docs.dust.tt/api-reference/private-events/stream-conversation-events.md): Stream real-time conversation events using Server-Sent Events (SSE). This endpoint is redirected to /api/sse/ for SSE traffic routing.
+- [Stream message events](https://docs.dust.tt/api-reference/private-events/stream-message-events.md): Stream real-time events for a specific agent message using Server-Sent Events (SSE). Only available for agent messages. This endpoint is redirected to /api/sse/ for SSE traffic routing.
+- [Stream sandbox function invocation events](https://docs.dust.tt/api-reference/private-events/stream-sandbox-function-invocation-events.md): Stream real-time events for a sandbox function invocation using Server-Sent Events (SSE). This endpoint is redirected to /api/sse/ for SSE traffic routing.
+- [Get extension configuration](https://docs.dust.tt/api-reference/private-extension/get-extension-configuration.md): Returns the extension configuration for the workspace, including blacklisted domains.
+- [Create a file upload](https://docs.dust.tt/api-reference/private-files/create-a-file-upload.md): Creates a file record and returns a pre-signed upload URL. The file content should then be uploaded to the returned URL.
+- [Delete a file](https://docs.dust.tt/api-reference/private-files/delete-a-file.md): Delete a file from the workspace.
+- [Get or download a file](https://docs.dust.tt/api-reference/private-files/get-or-download-a-file.md): View or download a file. Use query parameters `version` (original, processed, public) and `action` (view, download).
+- [Upload file content](https://docs.dust.tt/api-reference/private-files/upload-file-content.md): Process and store the uploaded file content.
+- [Get mention suggestions](https://docs.dust.tt/api-reference/private-mentions/get-mention-suggestions.md): Returns mention suggestions for the workspace.
+- [Delete a message](https://docs.dust.tt/api-reference/private-messages/delete-a-message.md): Soft-delete a user or agent message from a conversation.
+- [Delete message feedback](https://docs.dust.tt/api-reference/private-messages/delete-message-feedback.md): Remove the authenticated user's feedback for a specific agent message.
+- [Edit a message](https://docs.dust.tt/api-reference/private-messages/edit-a-message.md): Edit the content and mentions of an existing user message in a conversation.
+- [Get a message](https://docs.dust.tt/api-reference/private-messages/get-a-message.md): Retrieve a specific message by its ID within a conversation.
+- [Get a single action](https://docs.dust.tt/api-reference/private-messages/get-a-single-action.md): Retrieve a single action by its ID within an agent message, along with the message status.
+- [List messages in a conversation](https://docs.dust.tt/api-reference/private-messages/list-messages-in-a-conversation.md): Retrieve a paginated list of messages for a specific conversation.
+- [Post a message to a conversation](https://docs.dust.tt/api-reference/private-messages/post-a-message-to-a-conversation.md): Post a new user message to an existing conversation, triggering agent responses.
+- [Retry an agent message](https://docs.dust.tt/api-reference/private-messages/retry-an-agent-message.md): Retry generating an agent message response, optionally retrying only blocked actions.
+- [Submit message feedback](https://docs.dust.tt/api-reference/private-messages/submit-message-feedback.md): Create or update feedback (thumbs up/down) for a specific agent message.
+- [Create a data source view](https://docs.dust.tt/api-reference/private-spaces/create-a-data-source-view.md): Creates a new data source view in a specific space.
+- [Create a space](https://docs.dust.tt/api-reference/private-spaces/create-a-space.md): Creates a new space in the workspace.
+- [Delete a data source view](https://docs.dust.tt/api-reference/private-spaces/delete-a-data-source-view.md): Deletes a specific data source view.
+- [Delete a space](https://docs.dust.tt/api-reference/private-spaces/delete-a-space.md): Deletes a specific space from the workspace.
+- [Get a data source view](https://docs.dust.tt/api-reference/private-spaces/get-a-data-source-view.md): Returns the details of a specific data source view.
+- [Get a space](https://docs.dust.tt/api-reference/private-spaces/get-a-space.md): Returns the details of a specific space including categories, members, and permissions.
+- [Get project notification preference](https://docs.dust.tt/api-reference/private-spaces/get-project-notification-preference.md): Returns the current user's notification preference for a project space.
+- [List data source views](https://docs.dust.tt/api-reference/private-spaces/list-data-source-views.md): Returns all data source views in a specific space.
+- [List spaces](https://docs.dust.tt/api-reference/private-spaces/list-spaces.md): Returns all spaces in the workspace.
+- [Set project notification preference](https://docs.dust.tt/api-reference/private-spaces/set-project-notification-preference.md): Sets the current user's notification preference for a project space.
+- [Update a data source view](https://docs.dust.tt/api-reference/private-spaces/update-a-data-source-view.md): Updates a specific data source view.
+- [Update a space](https://docs.dust.tt/api-reference/private-spaces/update-a-space.md): Updates the properties of a specific space.
+- [Get current user](https://docs.dust.tt/api-reference/private-user/get-current-user.md): Returns the authenticated user with their workspaces and subscriber hash.
+- [Update current user](https://docs.dust.tt/api-reference/private-user/update-current-user.md): Update the authenticated user's profile (name, job type, favorite platforms, image).
+- [Get workspace feature flags](https://docs.dust.tt/api-reference/private-workspace/get-workspace-feature-flags.md): Returns the list of enabled feature flags for the workspace.
+- [Search for nodes in the workspace](https://docs.dust.tt/api-reference/search/search-for-nodes-in-the-workspace.md): Search for nodes in the workspace
+- [Search for nodes in the workspace (streaming)](https://docs.dust.tt/api-reference/search/search-for-nodes-in-the-workspace-streaming.md): Search for nodes in the workspace with SSE streaming
+- [Upload a tool file](https://docs.dust.tt/api-reference/search/upload-a-tool-file.md): Download and upload a file from a tool (MCP server) to Dust
+- [Import skills from uploaded files](https://docs.dust.tt/api-reference/skills/import-skills-from-uploaded-files.md): Imports skills from uploaded files or ZIP archives into the workspace.
+- [List skills](https://docs.dust.tt/api-reference/skills/list-skills.md): Retrieves the custom skills in the workspace. Active skills are returned by default.
+- [List available spaces.](https://docs.dust.tt/api-reference/spaces/list-available-spaces.md): Retrieves a list of accessible spaces for the authenticated workspace.
+- [List available MCP server views.](https://docs.dust.tt/api-reference/tools/list-available-mcp-server-views.md): Retrieves a list of enabled MCP server views (aka tools) for a specific space of the authenticated workspace.
+- [Receive external webhook to trigger flows](https://docs.dust.tt/api-reference/triggers/receive-external-webhook-to-trigger-flows.md): Skeleton endpoint that verifies workspace and webhook source and logs receipt.
+- [Export workspace analytics](https://docs.dust.tt/api-reference/workspace/export-workspace-analytics.md): Export analytics data for the workspace identified by {wId} in CSV or JSON format. Requires an admin-scoped API key. Builder-scoped and read-only API keys are rejected.
+- [Get workspace usage data](https://docs.dust.tt/api-reference/workspace/get-workspace-usage-data.md): Deprecated: this endpoint will be removed after 2026-07-22. Use GET /api/v1/w/{wId}/analytics/export instead.
+- [Changelog](https://docs.dust.tt/docs/changelog.md): New updates and improvements to Dust
+- [Chunks and Documents](https://docs.dust.tt/docs/developer-platform/core-concepts/chunks-and-documents.md)
+- [Datasources](https://docs.dust.tt/docs/developer-platform/core-concepts/datasources.md)
+- [Rate Limits](https://docs.dust.tt/docs/developer-platform/core-concepts/rate-limits.md)
+- [OpenAPI & Postman](https://docs.dust.tt/docs/developer-platform/dust-api-documentation/openapi-and-postman.md)
+- [Dust CLI](https://docs.dust.tt/docs/developer-platform/dust-cli/dust-cli.md)
+- [Dust-Labs repository](https://docs.dust.tt/docs/developer-platform/dust-labs/dust-labs-repository.md)
+- [Core Blocks](https://docs.dust.tt/docs/developer-platform/legacy-dust-apps/blocks/core-blocks.md)
+- [Build your first Dust App](https://docs.dust.tt/docs/developer-platform/legacy-dust-apps/build-your-first-dust-app.md)
+- [Dust Apps: Core Concepts](https://docs.dust.tt/docs/developer-platform/legacy-dust-apps/dust-apps-core-concepts.md)
+- [What is a Dust App?](https://docs.dust.tt/docs/developer-platform/legacy-dust-apps/what-is-a-dust-app.md)
+- [Developer platform](https://docs.dust.tt/docs/developer-platform/overview/developer-platform.md)
+- [JavaScript SDK](https://docs.dust.tt/docs/developer-platform/overview/javascript-sdk.md)
+- [Access Controls and Permissions](https://docs.dust.tt/docs/user-documentation/admins/admin-governance/access-controls-and-permissions.md)
+- [Memberships & Roles](https://docs.dust.tt/docs/user-documentation/admins/admin-governance/memberships-and-roles.md)
+- [SAML SSO](https://docs.dust.tt/docs/user-documentation/admins/admin-governance/single-sign-on-sso/saml-sso.md)
+- [Single Sign-On (SSO)](https://docs.dust.tt/docs/user-documentation/admins/admin-governance/single-sign-on-sso/single-sign-on-sso.md)
+- [Users and groups provisioning](https://docs.dust.tt/docs/user-documentation/admins/admin-governance/users-and-groups-provisioning.md)
+- [Workspace Governance: Roles, Groups & Permissions ](https://docs.dust.tt/docs/user-documentation/admins/admin-governance/workspace-governance-roles-groups-and-permissions.md)
+- [Troubleshooting](https://docs.dust.tt/docs/user-documentation/admins/admin-troubleshooting/admin-troubleshooting.md)
+- [Slack Troubleshooting](https://docs.dust.tt/docs/user-documentation/admins/admin-troubleshooting/slack-troubleshooting.md)
+- [Agents management](https://docs.dust.tt/docs/user-documentation/admins/agents-management.md)
+- [Audit Logs](https://docs.dust.tt/docs/user-documentation/admins/audit-logs/audit-logs.md)
+- [Audit Logs: Events Reference](https://docs.dust.tt/docs/user-documentation/admins/audit-logs/audit-logs-events-reference.md)
+- [Subscriptions & Payments](https://docs.dust.tt/docs/user-documentation/admins/billing/subscriptions-and-payments.md)
+- [BigQuery](https://docs.dust.tt/docs/user-documentation/admins/connections-management/bigquery.md)
+- [Confluence](https://docs.dust.tt/docs/user-documentation/admins/connections-management/confluence.md)
+- [Github](https://docs.dust.tt/docs/user-documentation/admins/connections-management/github.md)
+- [Gong](https://docs.dust.tt/docs/user-documentation/admins/connections-management/gong.md)
+- [Google Drive](https://docs.dust.tt/docs/user-documentation/admins/connections-management/google-drive.md)
+- [Connections Management](https://docs.dust.tt/docs/user-documentation/admins/connections-management/index.md)
+- [Intercom](https://docs.dust.tt/docs/user-documentation/admins/connections-management/intercom.md)
+- [Microsoft](https://docs.dust.tt/docs/user-documentation/admins/connections-management/microsoft.md)
+- [Notion](https://docs.dust.tt/docs/user-documentation/admins/connections-management/notion.md)
+- [Slack](https://docs.dust.tt/docs/user-documentation/admins/connections-management/slack.md)
+- [Snowflake](https://docs.dust.tt/docs/user-documentation/admins/connections-management/snowflake.md)
+- [Zendesk](https://docs.dust.tt/docs/user-documentation/admins/connections-management/zendesk.md)
+- [Quickstart](https://docs.dust.tt/docs/user-documentation/admins/quickstart.md)
+- [Spaces management](https://docs.dust.tt/docs/user-documentation/admins/spaces-management.md)
+- [Adding an MCP Server](https://docs.dust.tt/docs/user-documentation/admins/tools-management/adding-an-mcp-server.md)
+- [Computer admin setup](https://docs.dust.tt/docs/user-documentation/admins/tools-management/computer-admin-setup.md)
+- [Managing Microsoft tools](https://docs.dust.tt/docs/user-documentation/admins/tools-management/managing-microsoft-tools.md)
+- [Personal vs Shared Credentials for Tools & MCP Servers](https://docs.dust.tt/docs/user-documentation/admins/tools-management/personal-vs-shared-credentials.md)
+- [Salesforce](https://docs.dust.tt/docs/user-documentation/admins/tools-management/salesforce/salesforce.md)
+- [Salesforce - Notes on API limit and permissions](https://docs.dust.tt/docs/user-documentation/admins/tools-management/salesforce/salesforce-notes-on-api-limit-and-permissions.md)
+- [Credit management](https://docs.dust.tt/docs/user-documentation/admins/usage-seats-and-credits/credit-management.md)
+- [Credits](https://docs.dust.tt/docs/user-documentation/admins/usage-seats-and-credits/credits.md)
+- [Optimize credit consumption](https://docs.dust.tt/docs/user-documentation/admins/usage-seats-and-credits/optimize-credit-consumption.md)
+- [Seat management](https://docs.dust.tt/docs/user-documentation/admins/usage-seats-and-credits/seat-management.md)
+- [Train your team on credit optimization](https://docs.dust.tt/docs/user-documentation/admins/usage-seats-and-credits/train-team-credit-optimization.md)
+- [Workspace analytics](https://docs.dust.tt/docs/user-documentation/admins/workspace-analytics.md)
+- [@sidekick agent](https://docs.dust.tt/docs/user-documentation/agents/agent-builder-sidekick.md)
+- [Branch a Conversation](https://docs.dust.tt/docs/user-documentation/agents/branch-a-conversation.md)
+- [Context Compaction](https://docs.dust.tt/docs/user-documentation/agents/context-compaction.md)
+- [Create your first agent](https://docs.dust.tt/docs/user-documentation/agents/create-your-first-agent.md)
+- [@deep-dive Agent](https://docs.dust.tt/docs/user-documentation/agents/deep-dive-agent.md)
+- [Discover Knowledge](https://docs.dust.tt/docs/user-documentation/agents/discover-knowledge.md): Give agents access to company documents and data warehouse analysis.
+- [Discover Skills](https://docs.dust.tt/docs/user-documentation/agents/discover-skills.md): Let agents find and enable relevant workspace skills during a conversation.
+- [Discover Tools](https://docs.dust.tt/docs/user-documentation/agents/discover-tools.md): Let agents find and enable specialized tools when a task requires them.
+- [Dust Support](https://docs.dust.tt/docs/user-documentation/agents/dust-support.md): Get help with Dust using public docs, open-source issues, and community knowledge.
+- [White-labeled Frames](https://docs.dust.tt/docs/user-documentation/agents/frames/white-labeled-frames.md)
+- [Go Deep](https://docs.dust.tt/docs/user-documentation/agents/go-deep.md)
+- [Browser Extension (Chrome, Firefox & Chromium-based browsers)](https://docs.dust.tt/docs/user-documentation/agents/integrations/browser-extension.md)
+- [[Beta] Slack Auto-Join](https://docs.dust.tt/docs/user-documentation/agents/integrations/dust-in-slack/slack-auto-join.md)
+- [Slack workflows](https://docs.dust.tt/docs/user-documentation/agents/integrations/dust-in-slack/slack-workflows.md)
+- [Dust in Teams](https://docs.dust.tt/docs/user-documentation/agents/integrations/dust-in-teams.md)
+- [Dust in Zendesk](https://docs.dust.tt/docs/user-documentation/agents/integrations/dust-in-zendesk.md)
+- [Dust MCP Server](https://docs.dust.tt/docs/user-documentation/agents/integrations/dust-mcp-server.md)
+- [Google Sheets Add-on](https://docs.dust.tt/docs/user-documentation/agents/integrations/google-sheets-add-on.md)
+- [Make.com](https://docs.dust.tt/docs/user-documentation/agents/integrations/make-com.md)
+- [Meeting transcripts](https://docs.dust.tt/docs/user-documentation/agents/integrations/meeting-transcripts.md)
+- [n8n](https://docs.dust.tt/docs/user-documentation/agents/integrations/n8n.md)
+- [Power Automate](https://docs.dust.tt/docs/user-documentation/agents/integrations/power-automate.md)
+- [Raycast Extension](https://docs.dust.tt/docs/user-documentation/agents/integrations/raycast-extension.md)
+- [Send and Forward Email to Agents](https://docs.dust.tt/docs/user-documentation/agents/integrations/send-and-forward-email-to-agents.md)
+- [Zapier](https://docs.dust.tt/docs/user-documentation/agents/integrations/zapier.md)
+- [Extract data](https://docs.dust.tt/docs/user-documentation/agents/knowledge/extract-data.md)
+- [Include data](https://docs.dust.tt/docs/user-documentation/agents/knowledge/include-data.md)
+- [Knowledge](https://docs.dust.tt/docs/user-documentation/agents/knowledge/index.md)
+- [Search data sources](https://docs.dust.tt/docs/user-documentation/agents/knowledge/search-data-sources.md)
+- [Table queries](https://docs.dust.tt/docs/user-documentation/agents/knowledge/table-queries.md)
+- [Choosing the Right AI Model for Your Dust Agent](https://docs.dust.tt/docs/user-documentation/agents/llm-best-practices/choosing-the-right-ai-model.md)
+- [How to write effective instructions](https://docs.dust.tt/docs/user-documentation/agents/llm-best-practices/how-to-write-effective-instructions.md)
+- [Understanding LLM Limitations: Counting and Parsing Structured Data](https://docs.dust.tt/docs/user-documentation/agents/llm-best-practices/understanding-llm-limitations.md)
+- [Understanding LLMs Context Windows](https://docs.dust.tt/docs/user-documentation/agents/llm-best-practices/understanding-llms-context-windows.md)
+- [Understanding Retrieval Augmented Generation (RAG) and the search method in Dust](https://docs.dust.tt/docs/user-documentation/agents/llm-best-practices/understanding-rag.md)
+- [Self Improving Skills](https://docs.dust.tt/docs/user-documentation/agents/self-improving-skills.md)
+- [Skill Availability](https://docs.dust.tt/docs/user-documentation/agents/skill-availability.md)
+- [Skill Examples](https://docs.dust.tt/docs/user-documentation/agents/skills/skill-examples.md)
+- [Overview](https://docs.dust.tt/docs/user-documentation/agents/skills/skills-overview.md): Reusable packages of instructions, knowledge, and tools you can share across multiple agents.
+- [Steering: Conversations that keep up with you](https://docs.dust.tt/docs/user-documentation/agents/steering-conversations.md)
+- [Structured output format](https://docs.dust.tt/docs/user-documentation/agents/structured-output-format.md)
+- [Templates](https://docs.dust.tt/docs/user-documentation/agents/templates.md)
+- [Agent Memory](https://docs.dust.tt/docs/user-documentation/agents/tools/agent-memory.md)
+- [Airtable](https://docs.dust.tt/docs/user-documentation/agents/tools/airtable.md)
+- [Asana](https://docs.dust.tt/docs/user-documentation/agents/tools/asana.md)
+- [Ashby](https://docs.dust.tt/docs/user-documentation/agents/tools/ashby.md)
+- [Attio](https://docs.dust.tt/docs/user-documentation/agents/tools/attio.md)
+- [Canva](https://docs.dust.tt/docs/user-documentation/agents/tools/canva.md)
+- [Computer](https://docs.dust.tt/docs/user-documentation/agents/tools/computer.md)
+- [Confluence](https://docs.dust.tt/docs/user-documentation/agents/tools/confluence.md)
+- [Databricks](https://docs.dust.tt/docs/user-documentation/agents/tools/databricks.md)
+- [Fathom](https://docs.dust.tt/docs/user-documentation/agents/tools/fathom.md)
+- [File Generation](https://docs.dust.tt/docs/user-documentation/agents/tools/file-generation.md)
+- [Freshservice](https://docs.dust.tt/docs/user-documentation/agents/tools/freshservice.md)
+- [Front](https://docs.dust.tt/docs/user-documentation/agents/tools/front.md)
+- [GitHub](https://docs.dust.tt/docs/user-documentation/agents/tools/github.md)
+- [Gmail](https://docs.dust.tt/docs/user-documentation/agents/tools/gmail.md)
+- [Gong](https://docs.dust.tt/docs/user-documentation/agents/tools/gong.md)
+- [Google Calendar](https://docs.dust.tt/docs/user-documentation/agents/tools/google-calendar.md)
+- [Google Drive](https://docs.dust.tt/docs/user-documentation/agents/tools/google-drive.md)
+- [[Deprecated] Google Sheets](https://docs.dust.tt/docs/user-documentation/agents/tools/google-sheets-deprecated.md)
+- [HubSpot](https://docs.dust.tt/docs/user-documentation/agents/tools/hubspot.md)
+- [Image Generation](https://docs.dust.tt/docs/user-documentation/agents/tools/image-generation.md)
+- [Tools](https://docs.dust.tt/docs/user-documentation/agents/tools/index.md)
+- [Jira](https://docs.dust.tt/docs/user-documentation/agents/tools/jira.md)
+- [JIT tools](https://docs.dust.tt/docs/user-documentation/agents/tools/jit-tools.md)
+- [Microsoft Excel](https://docs.dust.tt/docs/user-documentation/agents/tools/microsoft-excel.md)
+- [Microsoft Outlook (Mail, Calendar)](https://docs.dust.tt/docs/user-documentation/agents/tools/microsoft-outlook.md)
+- [Microsoft Sharepoint and OneDrive tools](https://docs.dust.tt/docs/user-documentation/agents/tools/microsoft-sharepoint-and-onedrive.md)
+- [Microsoft Teams](https://docs.dust.tt/docs/user-documentation/agents/tools/microsoft-teams.md)
+- [Miro](https://docs.dust.tt/docs/user-documentation/agents/tools/miro.md)
+- [Monday](https://docs.dust.tt/docs/user-documentation/agents/tools/monday-com.md)
+- [NetSuite](https://docs.dust.tt/docs/user-documentation/agents/tools/netsuite.md)
+- [Notion](https://docs.dust.tt/docs/user-documentation/agents/tools/notion.md)
+- [Power BI](https://docs.dust.tt/docs/user-documentation/agents/tools/power-bi.md)
+- [Productboard](https://docs.dust.tt/docs/user-documentation/agents/tools/productboard.md)
+- [Run agent](https://docs.dust.tt/docs/user-documentation/agents/tools/run-agent.md)
+- [Salesloft](https://docs.dust.tt/docs/user-documentation/agents/tools/salesloft.md)
+- [Semrush](https://docs.dust.tt/docs/user-documentation/agents/tools/semrush.md)
+- [Slab](https://docs.dust.tt/docs/user-documentation/agents/tools/slab.md)
+- [Slack tools](https://docs.dust.tt/docs/user-documentation/agents/tools/slack-tools.md)
+- [Snowflake](https://docs.dust.tt/docs/user-documentation/agents/tools/snowflake.md)
+- [Statuspage](https://docs.dust.tt/docs/user-documentation/agents/tools/statuspage.md)
+- [UKG Ready](https://docs.dust.tt/docs/user-documentation/agents/tools/ukg-ready.md)
+- [Val Town](https://docs.dust.tt/docs/user-documentation/agents/tools/val-town.md)
+- [Vanta](https://docs.dust.tt/docs/user-documentation/agents/tools/vanta.md)
+- [Voice and sound generation](https://docs.dust.tt/docs/user-documentation/agents/tools/voice-and-sound-generation.md)
+- [Wake-ups](https://docs.dust.tt/docs/user-documentation/agents/tools/wake-ups.md)
+- [Web Search & Browse](https://docs.dust.tt/docs/user-documentation/agents/tools/web-search-and-browse.md)
+- [Zendesk](https://docs.dust.tt/docs/user-documentation/agents/tools/zendesk.md)
+- [Schedules](https://docs.dust.tt/docs/user-documentation/agents/triggers/schedules.md)
+- [Filter webhooks payload](https://docs.dust.tt/docs/user-documentation/agents/triggers/webhooks/filter-webhooks-payload.md)
+- [Rate Limiting](https://docs.dust.tt/docs/user-documentation/agents/triggers/webhooks/rate-limiting.md)
+- [Troubleshooting your agent](https://docs.dust.tt/docs/user-documentation/agents/troubleshooting-your-agent.md)
+- [Connections](https://docs.dust.tt/docs/user-documentation/data-sources/connections.md)
+- [Conversation Files](https://docs.dust.tt/docs/user-documentation/data-sources/conversation-files/conversation-files.md)
+- [Read images](https://docs.dust.tt/docs/user-documentation/data-sources/conversation-files/read-images.md)
+- [[Beta] Import Dropbox Files](https://docs.dust.tt/docs/user-documentation/data-sources/custom-connections/beta-import-dropbox-files.md)
+- [[Beta] Import Front Conversations](https://docs.dust.tt/docs/user-documentation/data-sources/custom-connections/beta-import-front-conversations.md)
+- [[Beta] Import Guru Cards](https://docs.dust.tt/docs/user-documentation/data-sources/custom-connections/beta-import-guru-cards.md)
+- [[Beta] Import Hubspot Data](https://docs.dust.tt/docs/user-documentation/data-sources/custom-connections/beta-import-hubspot-data.md)
+- [[Beta] Import Jira issues](https://docs.dust.tt/docs/user-documentation/data-sources/custom-connections/beta-import-jira-issues.md)
+- [[Beta] Import Linear Issues](https://docs.dust.tt/docs/user-documentation/data-sources/custom-connections/beta-import-linear-issues.md)
+- [[Beta] Import Salesforce Data](https://docs.dust.tt/docs/user-documentation/data-sources/custom-connections/beta-import-salesforce-data.md)
+- [[Zapier] Automatically add any datasource to Dust](https://docs.dust.tt/docs/user-documentation/data-sources/custom-connections/zapier-automatically-add-datasource.md)
+- [Folders](https://docs.dust.tt/docs/user-documentation/data-sources/folders.md)
+- [Overview](https://docs.dust.tt/docs/user-documentation/data-sources/overview.md)
+- [Websites](https://docs.dust.tt/docs/user-documentation/data-sources/websites.md)
+- [Dev : pre-configuring a custom MCP server](https://docs.dust.tt/docs/user-documentation/deprecated/dev-pre-configuring-a-custom-mcp-server.md)
+- [Allowing an agent to send an email](https://docs.dust.tt/docs/user-documentation/deprecated/legacy-dust-apps/allowing-an-agent-to-send-an-email.md)
+- [Creating Google Calendar events from a Dust agent](https://docs.dust.tt/docs/user-documentation/deprecated/legacy-dust-apps/creating-google-calendar-events-from-a-dust-agent.md)
+- [Client Side MCP Server (Preview)](https://docs.dust.tt/docs/user-documentation/developers/client-side-mcp-server.md)
+- [Admin guide: set up your Dust workspace](https://docs.dust.tt/docs/user-documentation/getting-started/dust-rollout-guide/admin-guide-set-up-your-dust-workspace.md)
+- [Build your builder community](https://docs.dust.tt/docs/user-documentation/getting-started/dust-rollout-guide/build-your-builder-community.md)
+- [Designing use cases](https://docs.dust.tt/docs/user-documentation/getting-started/dust-rollout-guide/designing-use-cases.md)
+- [Educate & activate](https://docs.dust.tt/docs/user-documentation/getting-started/dust-rollout-guide/educate-activate.md)
+- [Dust Rollout Guide](https://docs.dust.tt/docs/user-documentation/getting-started/dust-rollout-guide/index.md)
+- [Launch strategy](https://docs.dust.tt/docs/user-documentation/getting-started/dust-rollout-guide/launch-strategy.md)
+- [Measure & expand](https://docs.dust.tt/docs/user-documentation/getting-started/dust-rollout-guide/measure-expand.md)
+- [Team onboarding material](https://docs.dust.tt/docs/user-documentation/getting-started/dust-rollout-guide/team-onboarding-material.md)
+- [Welcome to Dust](https://docs.dust.tt/docs/user-documentation/getting-started/dust-rollout-guide/welcome-to-dust.md)
+- [File size limits](https://docs.dust.tt/docs/user-documentation/getting-started/faq/file-size-limits.md)
+- [How does Dust handle user data?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/general-questions/how-does-dust-handle-user-data.md)
+- [What AI models are available in Dust?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/general-questions/what-ai-models-are-available-in-dust.md)
+- [What are the pricing plans for Dust?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/general-questions/what-are-the-pricing-plans-for-dust.md)
+- [What data sources can be connected to Dust?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/general-questions/what-data-sources-can-be-connected-to-dust.md)
+- [What tools are available in Dust?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/general-questions/what-tools-are-available-in-dust.md)
+- [How to Change Your Email Address in Dust](https://docs.dust.tt/docs/user-documentation/getting-started/faq/how-to-change-your-email-address-in-dust.md)
+- [FAQ](https://docs.dust.tt/docs/user-documentation/getting-started/faq/index.md)
+- [Can agents create a new file or document directly into Notion, Google Drive or other connected platforms?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/managing-agents/can-agents-create-a-new-file-or-document-directly-into-notion-google-drive-or-other-connected-platforms.md)
+- [Can I delete or rename a conversation?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/managing-agents/can-i-delete-or-rename-a-conversation.md)
+- [Can I share a conversation?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/managing-agents/can-i-share-a-conversation.md)
+- [Can I use the Dust agents in different languages?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/managing-agents/can-i-use-the-dust-agents-in-different-languages.md)
+- [Do the agents have access to the internet?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/managing-agents/do-the-agents-have-access-to-the-internet.md)
+- [Does the Dust agent give accurate and safe responses?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/managing-agents/does-the-dust-agent-give-accurate-and-safe-responses.md)
+- [How can I find the ID of an agent?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/managing-agents/how-can-i-find-the-id-of-an-agent.md)
+- [How do I edit a custom agent?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/managing-agents/how-do-i-edit-a-custom-agent.md)
+- [I don't know how to start creating an agent, what should I do?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/managing-agents/i-dont-know-how-to-start-creating-an-agent-what-should-i-do.md)
+- [Is there a Dust conversation API?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/managing-agents/is-there-a-dust-conversation-api.md)
+- [What data do the agents have access to?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/managing-agents/what-data-do-the-agents-have-access-to.md)
+- [What settings / model should I use?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/managing-agents/what-settings-model-should-i-use.md)
+- [Can Dust remember and incorporate my feedback in the future?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/troubleshooting-and-limitations/can-dust-remember-and-incorporate-my-feedback-in-the-future.md)
+- [I haven't received a login, or I am having trouble logging in](https://docs.dust.tt/docs/user-documentation/getting-started/faq/troubleshooting-and-limitations/i-havent-received-a-login-or-i-am-having-trouble-logging-in.md)
+- [I try to create an agent using the Table Query tool, but it doesn't work](https://docs.dust.tt/docs/user-documentation/getting-started/faq/troubleshooting-and-limitations/i-try-to-create-an-agent-using-the-table-query-tool-but-it-doesnt-work.md)
+- [Is Dust down?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/troubleshooting-and-limitations/is-dust-down.md)
+- [The agent is producing links that don't work and falsely claiming something untrue, what's going on?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/troubleshooting-and-limitations/the-agent-is-producing-links-that-dont-work-and-falsely-claiming-something-untrue-whats-going-on.md)
+- [When asking a question about data within Slack, the link to the thread isn't always the right one](https://docs.dust.tt/docs/user-documentation/getting-started/faq/troubleshooting-and-limitations/when-asking-a-question-about-data-within-slack-the-link-to-the-thread-isnt-always-the-right-one.md)
+- [Why doesn't the agent remember what I said earlier in a conversation?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/troubleshooting-and-limitations/why-doesnt-the-agent-remember-what-i-said-earlier-in-a-conversation.md)
+- [Why is Dust slow or my agent taking too long to respond?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/troubleshooting-and-limitations/why-is-dust-slow-or-my-agent-taking-too-long-to-respond.md)
+- [Why isn't my recently updated document showing in agent responses?](https://docs.dust.tt/docs/user-documentation/getting-started/faq/troubleshooting-and-limitations/why-isnt-my-recently-updated-document-showing-in-agent-responses.md)
+- [Intro to Dust](https://docs.dust.tt/docs/user-documentation/getting-started/intro-to-dust.md)
+- [🧑‍🤝‍🧑 Collaboration](https://docs.dust.tt/docs/user-documentation/getting-started/use-cases-and-guides/collaboration.md)
+- [🏆 Customer Support](https://docs.dust.tt/docs/user-documentation/getting-started/use-cases-and-guides/customer-support.md)
+- [📈 Data Analytics](https://docs.dust.tt/docs/user-documentation/getting-started/use-cases-and-guides/data-analytics.md)
+- [🤖 Engineering](https://docs.dust.tt/docs/user-documentation/getting-started/use-cases-and-guides/engineering.md)
+- [Use Cases & Guides](https://docs.dust.tt/docs/user-documentation/getting-started/use-cases-and-guides/index.md)
+- [📖 Knowledge](https://docs.dust.tt/docs/user-documentation/getting-started/use-cases-and-guides/knowledge.md)
+- [📣 Marketing & Content](https://docs.dust.tt/docs/user-documentation/getting-started/use-cases-and-guides/marketing.md)
+- [📦 Product](https://docs.dust.tt/docs/user-documentation/getting-started/use-cases-and-guides/product-and-design.md)
+- [👥 Recruiting & People](https://docs.dust.tt/docs/user-documentation/getting-started/use-cases-and-guides/recruiting-and-people.md)
+- [🤝 Sales](https://docs.dust.tt/docs/user-documentation/getting-started/use-cases-and-guides/sales.md)
+- [Admin controls](https://docs.dust.tt/docs/user-documentation/pods/admin-controls.md)
+- [Conversations](https://docs.dust.tt/docs/user-documentation/pods/conversations.md)
+- [Competitive intelligence](https://docs.dust.tt/docs/user-documentation/pods/examples/competitive-intelligence.md)
+- [Content and editorial production](https://docs.dust.tt/docs/user-documentation/pods/examples/content-and-editorial-production.md)
+- [Initiative and project management](https://docs.dust.tt/docs/user-documentation/pods/examples/initiative-and-project-management.md)
+- [One Pod per customer](https://docs.dust.tt/docs/user-documentation/pods/examples/one-pod-per-customer.md)
+- [Personal second brain](https://docs.dust.tt/docs/user-documentation/pods/examples/personal-second-brain.md)
+- [Shared asset library](https://docs.dust.tt/docs/user-documentation/pods/examples/shared-asset-library.md)
+- [Ticket handling and support knowledge](https://docs.dust.tt/docs/user-documentation/pods/examples/ticket-handling-and-support-knowledge.md)
+- [Files](https://docs.dust.tt/docs/user-documentation/pods/files.md)
+- [Frames](https://docs.dust.tt/docs/user-documentation/pods/frames.md)
+- [Members and roles](https://docs.dust.tt/docs/user-documentation/pods/members-and-roles.md)
+- [Overview](https://docs.dust.tt/docs/user-documentation/pods/overview.md): Pods are shared workspaces where humans and agents collaborate around conversations, tasks, and files.
+- [Tasks](https://docs.dust.tt/docs/user-documentation/pods/tasks.md)
+
+## OpenAPI Specs
+
+- [openapi](https://docs.dust.tt/docs/developer-platform/dust-api-documentation/openapi.json)

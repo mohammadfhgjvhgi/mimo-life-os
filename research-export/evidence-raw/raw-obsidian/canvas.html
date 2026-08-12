@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<script>
+	(function(){
+		var defined = ["en","ar","bn","de","es","fr","it","ja","ko","pl","pt-BR","ro","ru","sv","zh"];
+		var dflt = 'en';
+		var cur = 'en';
+		var pref = null;
+		try { pref = localStorage.getItem('lang'); } catch(e) {}
+		if (!pref && cur === dflt) return;
+		if (pref && pref === cur) return;
+		var target = pref;
+		if (!target) {
+			var langs = (navigator.languages || [navigator.language || '']);
+			for (var i = 0; i < langs.length; i++) {
+				var code = langs[i].toLowerCase().split('-')[0];
+				if (defined.indexOf(code) !== -1) { target = code; break; }
+			}
+		}
+		if (!target || target === cur) return;
+		var p = location.pathname;
+		// Strip any locale prefix from path
+		p = p.replace(new RegExp('^/(' + defined.join('|') + ')(/|$)'), '/');
+		// Don't redirect app routes
+		if (/^\/(account|buy)(\/|$)/.test(p)) return;
+		// Add target locale prefix
+		if (target !== dflt) p = '/' + target + (p === '/' ? '/' : p);
+		if (p.replace(/\/$/, '') === location.pathname.replace(/\/$/, '')) return;
+		location.replace(p + location.search + location.hash);
+	})();
+	</script>
+	<title>Obsidian Canvas - Visualize your ideas</title>
+	<meta name="description" content="Obsidian Canvas gives you infinite space to research, brainstorm, diagram, and lay out your ideas.">
+	<meta name="copyright" content="Obsidian">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="i18n-hash" content="95affe3b">
+
+	<link rel="stylesheet" href="/tailwind.css?v=9d5102ea">
+	<link rel="icon" href="/favicon.ico" sizes="32x32">
+	<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+	<link rel="alternate" type="application/atom+xml" href="/feed.xml" title="Obsidian Blog">
+	<link rel="alternate" type="application/feed+json" href="/feed.json" title="Obsidian Blog">
+	<link rel="alternate" type="application/atom+xml" href="/changelog.xml" title="Obsidian Changelog">
+	<link rel="alternate" type="application/feed+json" href="/changelog.json" title="Obsidian Changelog">
+
+	<meta property="og:site_name" content="Obsidian">
+	<meta property="og:title" content="Obsidian Canvas - Visualize your ideas">
+	<meta property="og:description" content="Obsidian Canvas gives you infinite space to research, brainstorm, diagram, and lay out your ideas.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://obsidian.md/images/banner.png">
+
+	<meta name="twitter:title" content="Obsidian Canvas - Visualize your ideas">
+	<meta name="twitter:description" content="Obsidian Canvas gives you infinite space to research, brainstorm, diagram, and lay out your ideas.">
+	<meta name="twitter:site" content="@obsdmd">
+	<meta name="twitter:domain" content="obsidian.md">
+	<meta name="twitter:creator" content="@obsdmd">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://obsidian.md/images/banner.png">
+
+</head>
+<body class="theme-dark">
+<div class="header-height"></div>
+<header class="header">
+	
+	
+	<div class="container flex items-center">
+		<div class="flex items-center">
+			<a class="header-logo me-4 flex items-center gap-x-2 transition-colors -mt-[3px]" href="/" aria-label="Go to the Obsidian home page">
+				<svg alt="Obsidian" height="22" viewBox="0 0 143 25" width="126" xmlns="http://www.w3.org/2000/svg"><path fill="#A88BFA" d="m6.91927 14.5955c.64053-.1907 1.67255-.4839 2.85923-.5565-.71191-1.7968-.88376-3.3691-.74554-4.76905.15962-1.61678.72977-2.9662 1.28554-4.11442.1186-.24501.2326-.47313.3419-.69198.1549-.30984.3004-.60109.4365-.8953.2266-.48978.3948-.92231.4798-1.32416.0836-.39515.0841-.74806-.0148-1.08657-.099-.338982-.3093-.703864-.7093-1.1038132-.5222-.1353116-1.1017-.0165173-1.53613.3742922l-5.15591 4.638241c-.28758.25871-.47636.60929-.53406.99179l-.44455 2.94723c.69903.6179 2.42435 2.41414 3.47374 4.90644.09364.2224.1819.4505.26358.6838z"/><path fill="#A88BFA" d="m2.97347 10.3512c-.02431.1037-.05852.205-.10221.3024l-2.724986 6.0735c-.279882.6238-.15095061 1.3552.325357 1.8457l4.288349 4.4163c2.1899-3.2306 1.87062-6.2699.87032-8.6457-.75846-1.8013-1.90801-3.2112-2.65683-3.9922z"/><path fill="#A88BFA" d="m5.7507 23.5094c.07515.012.15135.0192.2281.0215.81383.0244 2.18251.0952 3.29249.2997.90551.1669 2.70051.6687 4.17761 1.1005 1.1271.3294 2.2886-.5707 2.4522-1.7336.1192-.8481.343-1.8075.7553-2.6869l-.0095.0033c-.6982-1.9471-1.5865-3.2044-2.5178-4.0073-.9284-.8004-1.928-1.1738-2.8932-1.3095-1.60474-.2257-3.07497.1961-4.00103.4682.55465 2.3107.38396 5.0295-1.48417 7.8441z"/><path fill="#A88BFA" d="m17.3708 19.3102c.9267-1.3985 1.5868-2.4862 1.9352-3.0758.1742-.295.1427-.6648-.0638-.9383-.5377-.7126-1.5666-2.1607-2.1272-3.5015-.5764-1.3785-.6624-3.51876-.6673-4.56119-.0019-.39626-.1275-.78328-.3726-1.09465l-3.3311-4.23183c-.0117.19075-.0392.37998-.0788.56747-.1109.52394-.32 1.04552-.5585 1.56101-.1398.30214-.3014.62583-.4646.95284-.1086.21764-.218.4368-.3222.652-.5385 1.11265-1.0397 2.32011-1.1797 3.73901-.1299 1.31514.0478 2.84484.8484 4.67094.1333.0113.2675.0262.4023.0452 1.1488.1615 2.3546.6115 3.4647 1.5685.9541.8226 1.8163 2.0012 2.5152 3.6463z"/><path fill="currentColor" d="m39.752 4.5038c-5.952 0-10.248 3.744-10.248 8.88s4.296 8.88 10.248 8.88c5.928 0 10.224-3.744 10.224-8.88s-4.296-8.88-10.224-8.88zm0 3.47999c3.576 0 6.144 2.13601 6.144 5.40001s-2.568 5.4-6.144 5.4c-3.6 0-6.168-2.136-6.168-5.4s2.568-5.40001 6.168-5.40001z"/><path fill="currentColor" d="m55.4847 20.5598c.864.936 2.472 1.704 4.584 1.704 4.32 0 6.8401-2.976 6.8401-6.576 0-3.624-2.5201-6.60001-6.8401-6.60001-2.112 0-3.72.79201-4.584 1.70401v-6.02401h-3.84v17.23201h3.84zm-.12-4.944c0-1.992 1.704-3.432 3.912-3.432 2.112 0 3.888 1.248 3.888 3.504s-1.776 3.48-3.888 3.48c-2.208 0-3.912-1.416-3.912-3.408z"/><path fill="currentColor" d="m67.3181 19.9118c1.464 1.488 4.272 2.352 7.2 2.352 3.96 0 6.936-1.44 6.936-4.392 0-2.88-2.832-3.432-6.072-3.816-2.736-.312-3.576-.384-3.576-1.08 0-.648.864-1.056 2.496-1.056 1.968 0 3.672.6 4.824 1.656l1.992-2.304c-1.272-1.224-3.648-2.18401-6.624-2.18401-4.008 0-6.48 1.72801-6.48 4.32001 0 2.712 2.52 3.312 5.544 3.696 2.832.336 4.032.336 4.032 1.176 0 .792-1.056 1.128-2.784 1.128-2.16 0-4.152-.672-5.664-2.064z"/><path fill="currentColor" d="m82.8395 8.05579h3.912v-3.288h-3.912zm3.864 1.29601h-3.84v12.648h3.84z"/><path fill="currentColor" d="m99.8264 20.5598v1.44h3.8396v-17.23201h-3.8396v6.02401c-.864-.912-2.472-1.70401-4.584-1.70401-4.32 0-6.84 2.97601-6.84 6.60001 0 3.6 2.52 6.576 6.84 6.576 2.112 0 3.72-.768 4.584-1.704zm.12-4.944v.144c0 1.992-1.704 3.408-3.912 3.408-2.112 0-3.888-1.224-3.888-3.48s1.776-3.504 3.888-3.504c2.208 0 3.912 1.44 3.912 3.432z"/><path fill="currentColor" d="m105.996 8.05579h3.912v-3.288h-3.912zm3.864 1.29601h-3.84v12.648h3.84z"/><path fill="currentColor" d="m116.863 22.2638c2.232 0 4.056-.648 5.208-1.656.648 1.2 2.184 1.92 4.992 1.392v-2.832c-1.344.288-1.632-.024-1.632-.696v-4.608c0-3.168-2.376-4.77601-6.408-4.77601-3.48 0-6.264 1.51201-7.056 3.79201l3.456.936c.384-.984 1.704-1.704 3.432-1.704 2.04 0 2.856.768 2.856 1.728v.072l-5.04.456c-2.976.288-5.16 1.512-5.16 3.984 0 2.496 2.232 3.912 5.352 3.912zm4.848-5.112c0 1.464-2.184 2.304-4.152 2.304-1.488 0-2.328-.432-2.328-1.248 0-.84.672-1.152 1.992-1.272l4.488-.456z"/><path fill="currentColor" d="m128.379 21.9998h3.84v-6.048c0-2.184 1.2-3.456 3.288-3.456 1.968 0 3 1.296 3 3.432v6.072h3.84v-7.2c0-3.504-2.232-5.71201-5.52-5.71201-2.04 0-3.624.76801-4.608 1.80001v-1.536h-3.84z"/></svg>
+			</a>
+		</div>
+		<div class="group w-full">
+			<ul class="text-sm hidden md:flex items-center">
+				<li><a class="px-3 py-2 rounded-lg font-medium hover:text-white text-muted hover:bg-gray-800" href="/download">Download</a></li>
+				<li><a class="px-3 py-2 rounded-lg font-medium hover:text-white text-muted hover:bg-gray-800" href="/pricing">Pricing</a></li>
+				<li><a class="px-3 py-2 rounded-lg font-medium hover:text-white text-muted hover:bg-gray-800" href="/sync">Sync</a></li>
+				<li><a class="px-3 py-2 rounded-lg font-medium hover:text-white text-muted hover:bg-gray-800" href="/publish">Publish</a></li>
+				<li class="hidden lg:block"><a class="px-3 py-2 rounded-lg font-medium hover:text-white text-muted hover:bg-gray-800" href="/enterprise">Enterprise</a></li>
+				<li class="flex-grow" aria-hidden="true"></li>
+				<li class="relative" data-lang-picker>
+					<button type="button" data-lang-toggle class="header-lang-toggle px-2 py-2 me-2 rounded-lg ring-1 ring-inset ring-white/10 text-muted hover:text-white hover:bg-gray-800 flex items-center gap-1" aria-label="Change language">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+						<i data-lucide="chevron-down" class="icon-xs"></i>
+					</button>
+					<div data-lang-menu data-search-placeholder="Switch language..." data-no-results="No results" class="lang-menu hidden absolute end-0 top-full mt-1 bg-gray-800 ring-1 ring-inset ring-white/10 rounded-lg min-w-[12rem] shadow-xl z-50 flex flex-col">
+						<ul class="flex flex-col gap-0.5 p-1 min-h-0 overflow-y-auto">
+							
+							<li><a href="/canvas" data-search="English English en" aria-current="true" onclick="try{localStorage.setItem('lang','en');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">English</a></li>
+							
+							<li><a href="/ar/canvas" data-search="العربية Arabic ar" onclick="try{localStorage.setItem('lang','ar');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">العربية</a></li>
+							
+							<li><a href="/bn/canvas" data-search="বাংলা Bengali Bangla bn" onclick="try{localStorage.setItem('lang','bn');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">বাংলা</a></li>
+							
+							<li><a href="/de/canvas" data-search="Deutsch German de" onclick="try{localStorage.setItem('lang','de');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Deutsch</a></li>
+							
+							<li><a href="/es/canvas" data-search="Español Spanish Castilian es" onclick="try{localStorage.setItem('lang','es');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Español</a></li>
+							
+							<li><a href="/fr/canvas" data-search="Français French fr" onclick="try{localStorage.setItem('lang','fr');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Français</a></li>
+							
+							<li><a href="/it/canvas" data-search="Italiano Italian it" onclick="try{localStorage.setItem('lang','it');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Italiano</a></li>
+							
+							<li><a href="/ja/canvas" data-search="日本語 Japanese ja" onclick="try{localStorage.setItem('lang','ja');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">日本語</a></li>
+							
+							<li><a href="/ko/canvas" data-search="한국어 Korean ko" onclick="try{localStorage.setItem('lang','ko');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">한국어</a></li>
+							
+							<li><a href="/pl/canvas" data-search="Polski Polish pl" onclick="try{localStorage.setItem('lang','pl');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Polski</a></li>
+							
+							<li><a href="/pt-BR/canvas" data-search="Português (Brasil) Portuguese Brazilian pt-BR" onclick="try{localStorage.setItem('lang','pt-BR');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Português (Brasil)</a></li>
+							
+							<li><a href="/ro/canvas" data-search="Română Romanian ro" onclick="try{localStorage.setItem('lang','ro');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Română</a></li>
+							
+							<li><a href="/ru/canvas" data-search="Русский Russian ru" onclick="try{localStorage.setItem('lang','ru');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Русский</a></li>
+							
+							<li><a href="/sv/canvas" data-search="Svenska Swedish sv" onclick="try{localStorage.setItem('lang','sv');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Svenska</a></li>
+							
+							<li><a href="/zh/canvas" data-search="简体中文 Chinese Simplified Mandarin zh" onclick="try{localStorage.setItem('lang','zh');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">简体中文</a></li>
+							
+						</ul>
+					</div>
+				</li>
+				<li><a class="px-3 py-2 rounded-lg font-medium hover:text-white text-muted hover:bg-gray-800" href="https://community.obsidian.md">Community</a></li>
+				<li><a class="px-3 py-2 rounded-lg font-medium text-muted hover:text-white hover:bg-gray-800" href="/account">Account</a></li>
+			</ul>
+		</div>
+		<div class="ms-auto md:hidden z-10 flex items-center gap-4">
+			<div class="relative" data-lang-picker>
+				<button type="button" data-lang-toggle class="header-lang-toggle-mobile px-2 py-2 text-gray-400 flex items-center gap-1" aria-label="Change language">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+					
+				</button>
+				<div data-lang-menu data-search-placeholder="Switch language..." data-no-results="No results" class="lang-menu hidden absolute end-0 top-full mt-1 bg-gray-800 ring-1 ring-inset ring-white/10 rounded-lg min-w-[12rem] shadow-xl z-50 flex flex-col">
+					<ul class="flex flex-col gap-0.5 p-1 min-h-0 overflow-y-auto">
+						
+						<li><a href="/canvas" data-search="English English en" aria-current="true" onclick="try{localStorage.setItem('lang','en');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">English</a></li>
+						
+						<li><a href="/ar/canvas" data-search="العربية Arabic ar" onclick="try{localStorage.setItem('lang','ar');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">العربية</a></li>
+						
+						<li><a href="/bn/canvas" data-search="বাংলা Bengali Bangla bn" onclick="try{localStorage.setItem('lang','bn');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">বাংলা</a></li>
+						
+						<li><a href="/de/canvas" data-search="Deutsch German de" onclick="try{localStorage.setItem('lang','de');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Deutsch</a></li>
+						
+						<li><a href="/es/canvas" data-search="Español Spanish Castilian es" onclick="try{localStorage.setItem('lang','es');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Español</a></li>
+						
+						<li><a href="/fr/canvas" data-search="Français French fr" onclick="try{localStorage.setItem('lang','fr');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Français</a></li>
+						
+						<li><a href="/it/canvas" data-search="Italiano Italian it" onclick="try{localStorage.setItem('lang','it');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Italiano</a></li>
+						
+						<li><a href="/ja/canvas" data-search="日本語 Japanese ja" onclick="try{localStorage.setItem('lang','ja');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">日本語</a></li>
+						
+						<li><a href="/ko/canvas" data-search="한국어 Korean ko" onclick="try{localStorage.setItem('lang','ko');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">한국어</a></li>
+						
+						<li><a href="/pl/canvas" data-search="Polski Polish pl" onclick="try{localStorage.setItem('lang','pl');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Polski</a></li>
+						
+						<li><a href="/pt-BR/canvas" data-search="Português (Brasil) Portuguese Brazilian pt-BR" onclick="try{localStorage.setItem('lang','pt-BR');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Português (Brasil)</a></li>
+						
+						<li><a href="/ro/canvas" data-search="Română Romanian ro" onclick="try{localStorage.setItem('lang','ro');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Română</a></li>
+						
+						<li><a href="/ru/canvas" data-search="Русский Russian ru" onclick="try{localStorage.setItem('lang','ru');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Русский</a></li>
+						
+						<li><a href="/sv/canvas" data-search="Svenska Swedish sv" onclick="try{localStorage.setItem('lang','sv');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Svenska</a></li>
+						
+						<li><a href="/zh/canvas" data-search="简体中文 Chinese Simplified Mandarin zh" onclick="try{localStorage.setItem('lang','zh');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">简体中文</a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<a class="header-mobile-nav text-gray-200 hover:text-gray-100" href="#" aria-label="Open the navigation menu">
+				<div class="header-mobile-nav-button">
+					<div class="header-mobile-nav-button-inner"></div>
+				</div>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div class="header-mobile-nav-menu fixed top-0 right-0 bottom-0 left-0 overflow-scroll overscroll-contain block md:hidden">
+	<div class="container py-4">
+		<ul class="text-xl font-medium grid sm:grid-cols-2 pb-4 border-b border-gray-800">
+			<li><a class="flex py-1 items-center gap-2" href="/download">
+				Download</a></li>
+			<li><a class="flex py-1 items-center gap-2" href="/account">
+				Account</a></li>
+			<li><a class="flex py-1 items-center gap-3" href="/sync">
+				Sync</a></li>
+			<li><a class="flex py-1 items-center gap-3" href="/publish">
+				Publish</a></li>
+			<li><a class="flex py-1 items-center gap-3" href="/pricing">
+				Pricing</a></li>
+			<li><a class="flex py-1 items-center gap-3" href="https://community.obsidian.md">
+				Plugins</a></li>
+			<li><a class="flex py-1 items-center gap-2" href="/enterprise">
+				Enterprise</a></li>
+			<li><a class="flex py-1 items-center gap-2" href="/clipper">
+				Web Clipper</a></li>
+		</ul>
+		<div class="text-muted mt-6">Learn more</div>
+		<ul class="font-medium grid grid-cols-2 my-2 pb8">
+			<li><a class="block py-1" href="https://obsidian.md/help/">Help</a></li>
+			<li><a class="block py-1" href="/about">About</a></li>
+
+			<li><a class="block py-1" href="/blog">Blog</a></li>
+			<li><a class="block py-1" href="https://discord.gg/obsidianmd" rel="noopener noreferrer" target="_blank">Discord</a></li>
+
+			<li><a class="block py-1" href="/changelog">Changelog</a></li>
+			<li><a class="block py-1" href="https://community.obsidian.md">Community</a></li>
+
+			<li><a class="block py-1" href="/roadmap">Roadmap</a></li>
+			<li><a class="block py-1" href="/security">Security</a></li>
+
+			<li><a class="block py-1" href="/softwear">Merch store</a></li>
+			<li><a class="block py-1" href="/privacy">Privacy</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="overflow-hidden">
+	<div class="pt-24 relative overflow-hidden">
+		<div class="container">
+			<div class="mb-6">
+				<div class="max-w-xl">
+					<p class="mb-2 text-accent flex items-center gap-x-2">
+						<svg alt="Obsidian Canvas" class="aspect-ratio[4] h-6 sm:h-8" viewBox="0 0 102 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M.5 10.4C.5 4.8 5.2.8 11.5.8c4.9 0 8.4 2.4 9.7 6l-2 1.2c-1.2-3-3.8-5-7.7-5C6.6 3 3 6 3 10.4 3 15 6.6 18 11.5 18c3.9 0 6.5-2 7.6-5l2.1 1.1c-1.3 3.7-4.8 6.1-9.7 6.1-6.3 0-11-4-11-9.7Zm27.4 9.7c-3 0-5.5-1.4-5.5-4s2.2-4 5.4-4.3l6-.7v-.3c0-1.7-1.4-2.9-4-2.9-2.4 0-4.3 1.1-5 2.7l-1.9-1c.9-2.2 3.7-3.7 7-3.7 3.9 0 6.2 1.8 6.2 5v6c0 1.1.7 1.4 2.2 1v2c-2.6.4-4-.5-4.2-2.1v-.2c-1.3 1.6-3.6 2.5-6.2 2.5Zm6-5.7V13l-5.8.7c-2 .2-3.4.7-3.4 2.3 0 1.4 1.3 2.2 3.4 2.2 2.7 0 5.7-1.3 5.7-3.8Zm6.1 5.4V6.2h2.4v2.4c1-1.5 2.9-2.7 5.4-2.7 3.8 0 6 2.6 6 6.3v7.6h-2.4v-7.2C51.4 10 50 8 47.1 8a4.6 4.6 0 0 0-4.8 4.8v7H40Zm24 0h-2.3l-7-13.6h2.6l5.6 11 5.6-11h2.6l-7 13.6Zm12.3.3c-3 0-5.5-1.4-5.5-4s2.2-4 5.5-4.3l6-.7v-.3c0-1.7-1.4-2.9-4-2.9-2.4 0-4.4 1.1-5 2.7l-2-1c1-2.2 3.8-3.7 7-3.7 4 0 6.3 1.8 6.3 5v6c0 1.1.7 1.4 2.2 1v2c-2.6.4-4-.5-4.3-2.1v-.2c-1.2 1.6-3.6 2.5-6.2 2.5Zm6-5.7V13l-5.7.7c-2 .2-3.5.7-3.5 2.3 0 1.4 1.4 2.2 3.4 2.2 2.7 0 5.8-1.3 5.8-3.8Zm4.7 2.2 1.8-1.4c1.2 2 3.3 3 6 3 2.3 0 4.1-.7 4.1-2.3 0-1.6-1.6-1.7-5-2-3.3-.4-6-1-6-3.8C87.9 7.6 90.4 6 94 6c3.3 0 5.7 1.3 6.8 3l-1.6 1.4C98.3 8.7 96.4 8 94 8s-3.8.8-3.8 2c0 1.4 1.3 1.5 4.3 1.9 3.6.4 6.8.7 6.8 4 0 2.8-3.1 4.3-6.5 4.3-3.5 0-6.4-1.2-7.8-3.5Z"/>
+						</svg>
+					</p>
+					<h1 class="text-title mb-6">
+						Visualize your ideas.
+					</h1>
+					<p class="text-2xl text-muted mb-6">
+						Infinite space to research, brainstorm, diagram, and lay out your ideas. Canvas comes free with Obsidian.
+					</p>
+				</div>
+
+				<div class="py-6">
+					<a class="button button-primary text-lg py-4 px-6"
+						href="/download">Get Obsidian</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="container mt-16 ">
+			<video autoplay muted loop width="100%" class="bg-secondary full block rounded-xl ring-1 ring-gray-600/10 shadow-2xl" src="/images/canvas/canvas-hero.mp4" alt="Obsidian Canvas">
+		</div>
+	</div>
+
+
+	<div class="container">
+		<div class="py-16">
+			<div class="text-xl sm:text-2xl text-gray-400 max-w-2xl mx-auto">
+				<h2 class="text-3xl text-normal font-semibold sm:text-4xl">A playground for thought</h2>
+				<p class="my-6">
+					Canvas allows you to organize notes visually — an infinite space to research, brainstorm, diagram and lay out your ideas.
+				</p>
+				<p class="my-6">
+					Embed your notes alongside images, PDFs, videos, audio, and even fully interactive web pages.
+				</p>
+			</div>
+			<div class="mt-12 w-[50rem] overflow-hidden max-w-none md:w-auto lg:mx-auto">
+				<img class="" src="/images/canvas/obsidian-canvas-cookies.png"
+					alt="Obsidian 1.0 for desktop and mobile">
+			</div>
+		</div>
+
+		<div class="py-16">
+			<div class="text-xl sm:text-2xl text-gray-400 max-w-2xl mx-auto">
+				<h2 class="text-3xl text-normal font-semibold sm:text-4xl">A new way to think</h2>
+				<p class="my-6">
+					Effortlessly add existing notes and media from your vault, and edit them within a Canvas view.
+				</p>
+				<p class="my-6">
+					Canvas views can be embedded in notes, and even nested within another Canvas.
+				</p>
+			</div>
+			<div class="mt-12 w-[50rem] overflow-hidden max-w-none md:w-auto lg:mx-auto">
+				<img class="rounded-xl" src="/images/canvas/demo-help-vault.png"
+					alt="Obsidian 1.0 for desktop and mobile">
+			</div>
+		</div>
+
+		<div class="py-16 sm:py-24">
+			<div class="text-xl sm:text-2xl text-gray-400 max-w-2xl mx-auto">
+				<h2 class="text-3xl text-normal font-semibold sm:text-4xl">Extensible and interoperable<h2>
+				<p class="my-6">
+					Like everything else in Obsidian, Canvas is extensible and designed to be durable. Our API makes it easy to create plugins that add new capabilities to Canvas.
+				</p>
+				<p class="my-6">
+					Your Canvas files are stored locally using the open <a href="https://jsoncanvas.org" target="_blank" class="text-accent font-medium">JSON Canvas file format</a> that we designed to work with other tools. Apps, scripts, and plugins can easily enhance Canvas by adding or modifying cards and connections.
+				</p>
+			</div>
+			<div class="mt-12 w-[50rem] overflow-hidden max-w-none md:w-auto lg:mx-auto">
+				<img class="mobile-hero-screenshot mod-universal" src="/images/canvas/canvas-hero.png" alt="Obsidian 1.0 for desktop and mobile">
+			</div>
+		</div>
+	</div>
+
+	<div class="container py-16 hidden lg:block" id="protips">
+		<div class="text-xl sm:text-2xl text-gray-400 max-w-2xl mx-auto">
+			<h2 class="text-3xl text-normal font-semibold sm:text-4xl">Flexible and intuitive</h2>
+			<p class="my-6">
+				Canvas is packed with functionality. This collection of tips will help you discover how you can use Canvas to its fullest.
+			</p>
+		</div>
+		<div class="mx-auto flex gap-2 mt-12 bg-secondary rounded-xl p-2 overflow-hidden">
+			<div class="tutorial-video-container grow rounded-lg bg-white">
+				<video autoplay muted loop src="/videos/01-create-canvas-from-ribbon.mp4" class="rounded-lg overflow-hidden h-[480px]"></video>
+			</div>
+			<div class="tutorial-toc bg-secondary w-[280px] min-w-[280px] h-[440px]">
+				<div class="tutorial-toc-tools px-3 pt-2 pb-4">
+					<input class="tutorial-toc-search w-full" type="text" placeholder="Search tips...">
+				</div>
+				<div class="tutorial-toc-inner flex flex-col gap-4 text-sm px-3 pb-4 overflow-auto h-[415px]">
+					<div class="tutorial-toc-section">
+						<div class="tutorial-toc-section-title text-muted py-1 px-2" data-title="Create canvas">
+							Create a canvas (3 tips)
+						</div>
+						<div class="tutorial-toc-section-items">
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="01-create-canvas-from-ribbon">From ribbon
+							</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="03-create-canvas-from-folder">Create in
+								folder</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="02-create-canvas-from-command">From
+								command
+								palette</div>
+						</div>
+					</div>
+					<div class="tutorial-toc-section">
+						<div class="tutorial-toc-section-title text-muted py-1 px-2" data-title="Card types">
+							Card types (6 tips)
+						</div>
+						<div class="tutorial-toc-section-items">
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="04-type-of-card-text">Text card</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="05-type-of-card-markdown">Markdown file
+								embed
+							</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="06-type-of-card-image-video">Image &
+								video
+							</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="07-type-of-card-pdf">PDF file</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="08-type-of-card-website">Webpage</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="09-type-of-card-canvas">Nested canvas
+							</div>
+						</div>
+					</div>
+					<div class="tutorial-toc-section">
+						<div class="tutorial-toc-section-title text-muted py-1 px-2" data-title="Create cards">
+							Create cards (10 tips)
+						</div>
+						<div class="tutorial-toc-section-items">
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="10-create-card">Click toolbar to create
+								text
+								card</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="11-create-card">Click toolbar to create
+								note
+								card</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="12-create-card-double-click">Double click
+								to
+								create</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="13-create-card-drag-toolbar">Drag from
+								toolbar to create</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="14-create-card-right-click">Right click
+								to
+								create</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="15-create-card-from-connection">Connect
+								and
+								create</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="16-create-card-from-paste">Paste text to
+								create</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="17-create-card-from-paste-url">Create
+								website
+								by pasting URL</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="18-create-card-from-youtube">Create
+								YouTube
+								embed</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="19-create-card-from-folder">Bulk create
+								cards
+								from folder</div>
+						</div>
+					</div>
+					<div class="tutorial-toc-section">
+						<div class="tutorial-toc-section-title text-muted py-1 px-2" data-title="Modify cards">
+							Modify cards (7 tips)
+						</div>
+						<div class="tutorial-toc-section-items">
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="20-modify-swap">Swap file for card</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="21-modify-convert-card-to-file">Convert
+								text
+								card to file</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="22-modify-narrow">Narrow down to headings
+							</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="23-modify-change-url">Change URL of
+								webpage
+								card</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="24-modify-auto-size-cards">Smart
+								auto-resize
+								cards</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="25-modify-resize-card">Manually resize
+								cards
+							</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="26-modify-delete-card">Delete card</div>
+						</div>
+					</div>
+					<div class="tutorial-toc-section">
+						<div class="tutorial-toc-section-title text-muted py-1 px-2" data-title="Connections">
+							Connections (7 tips)
+						</div>
+						<div class="tutorial-toc-section-items">
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="27-connection-connect-cards">Connect two
+								cards</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="28-connection-add-label">Add label to
+								connection</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="29-connection-remove-label">Remove label
+								from
+								connection</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="30-connection-color-connection">Add color
+								to
+								connection</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="31-connection-connect-to-group">Connect
+								to a
+								group</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="32-connection-change-target">Update
+								connection target</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="33-connection-delete-connection">Delete
+								connection</div>
+						</div>
+					</div>
+					<div class="tutorial-toc-section">
+						<div class="tutorial-toc-section-title text-muted py-1 px-2" data-title="Pan and scroll">
+							Pan and scroll (4 tips)
+						</div>
+						<div class="tutorial-toc-section-items">
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="34-pan-wheel-up-down">Scroll up and down
+							</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="35-pan-shift-wheel-left-right">Hold Shift
+								to
+								scroll left and right</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="36-pan-space-pan">Hold Space and drag to
+								pan
+							</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="37-pan-middle-or-right-click-pan">Hold
+								middle
+								or right click to pan</div>
+						</div>
+					</div>
+					<div class="tutorial-toc-section">
+						<div class="tutorial-toc-section-title text-muted py-1 px-2" data-title="Zoom">
+							Zoom (6 tips)
+						</div>
+						<div class="tutorial-toc-section-items">
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="38-pan-ctrl-scroll-to-zoom">Hold Ctrl or
+								Cmd and scroll</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="39-zoom-space-wheel">Hold Space and
+								scroll</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="40-zoom-zoom-to-fit">Zoom to fit all
+								cards</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="42-zoom-zoom-to-fit-hotkey">Zoom to fit
+								all cards with hotkey</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="43-zoom-zoom-to-selection">Zoom to
+								selection</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="44-zoom-zoom-to-selection-hotkey">Zoom to
+								selection with hotkey</div>
+						</div>
+					</div>
+					<div class="tutorial-toc-section">
+						<div class="tutorial-toc-section-title text-muted py-1 px-2" data-title="Select cards">
+							Select cards (5 tips)
+						</div>
+						<div class="tutorial-toc-section-items">
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="45-selection-click-to-select">Select a single card</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="46-selection-drag-to-select">Drag to select multiple cards</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="47-selection-shift-click-to-add-remove">Add or remove one card from selection</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="48-selection-shift-drag-to-select">Add or remove multiple cards from selection</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="49-selection-ctrl-a-select-all">Select all cards in the canvas</div>
+						</div>
+					</div>
+					<div class="tutorial-toc-section">
+						<div class="tutorial-toc-section-title text-muted py-1 px-2" data-title="Arrange cards">
+							Arrange cards (10 tips)
+						</div>
+						<div class="tutorial-toc-section-items">
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="50-arrange-drag-to-move">Move cards</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="51-arrange-ctrl-drag-to-duplicate">Duplicate cards</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="52-arrange-shift-drag-to-move-on-one-axis">Move card along an axis</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="53-arrange-snap-to-grid">Snap card to grid</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="54-arrange-snap-to-object">Snap card to align with other cards</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="55-arrange-disable-snap-with-space">Move card without aligning</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="56-arrange-align">Align selected cards on one end</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="59-arrange-justify">Align selected cards on both ends</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="57-arrange-arrange">Bulk arrange selected cards</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="58-arrange-distribute">Spread selected cards evenly</div>
+						</div>
+					</div>
+					<div class="tutorial-toc-section">
+						<div class="tutorial-toc-section-title text-muted py-1 px-2" data-title="Group cards">
+							Group cards (6 tips)
+						</div>
+						<div class="tutorial-toc-section-items">
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="60-group-create-right-click">Right click to create group</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="61-group-create-ctrl-drag">Create group of a certain size</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="62-group-create-from-selection">Create group around cards</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="63-group-rename">Rename a group</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="64-group-select-group">Select a group</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="65-group-nesting">Nest groups</div>
+						</div>
+					</div>
+					<div class="tutorial-toc-section">
+						<div class="tutorial-toc-section-title text-muted py-1 px-2" data-title="Colors">
+							Colors (6 tips)
+						</div>
+						<div class="tutorial-toc-section-items">
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="66-color-cards">Add color to card</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="67-color-group">Add color to group</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="68-color-connection">Add color to connection</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="69-color-custom">Pick a custom color</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="70-color-remove">Remove color</div>
+						</div>
+					</div>
+					<div class="tutorial-toc-section">
+						<div class="tutorial-toc-section-title text-muted py-1 px-2" data-title="Export">
+							Export (2 tips)
+						</div>
+						<div class="tutorial-toc-section-items">
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="71-export-image-viewport">Export what you see to image</div>
+							<div class="tutorial-toc-item px-2 py-0.5 rounded cursor-pointer hover:bg-gray-700" data-video="72-export-image-detailed">Export entire canvas to image</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container py-24">
+		<div class="text-xl sm:text-2xl text-gray-400 max-w-2xl mx-auto mb-12">
+			<h2 class="text-3xl text-normal font-semibold sm:text-4xl">Community demos</h2>
+			<p class="my-6">
+				Explore how members of the Obsidian community are using Canvas for the personal life and at work.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="bg-secondary p-2 rounded-xl">
+				<iframe class="rounded-lg" width="100%" height="300" src="https://www.youtube.com/embed/rPescoJzcFA?modestbranding=1"
+					title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="bg-secondary p-2 rounded-xl">
+				<iframe class="rounded-lg" width="100%" height="300" src="https://www.youtube.com/embed/HFK3D7zeyTA?modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="bg-secondary p-2 rounded-xl">
+				<iframe class="rounded-lg" width="100%" height="300" src="https://www.youtube.com/embed/eHI-Szjpafk?modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+			<div class="bg-secondary p-2 rounded-xl hidden md:block">
+				<iframe class="rounded-lg" width="100%" height="300" src="https://www.youtube.com/embed/vLBd_ADeKIw?modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+
+</div>
+<footer class="container flex flex-row-reverse flex-wrap pt-24 pb-12 sm:pt-24 md:pb-32">
+	<div class="grid grid-cols-2 gap-3 gap-y-6 md:grid-cols-3 justify-between w-full mb-24 ms-auto md:w-3/5 lg:w-1/2 md:mb-0 leading-tight md:ps-6 [&_li]:mt-2">
+
+		<div>
+			<ul class="">
+				<li class="text-faint mb-3">Get started</li>
+				<li><a class="font-medium" href="/download">Download</a></li>
+				<li><a class="font-medium" href="/pricing">Pricing</a></li>
+				<li><a class="font-medium" href="/enterprise">Enterprise</a></li>
+				<li><a class="font-medium" href="/account">Account</a></li>
+			</ul>
+			<ul class="mt-8">
+				<li class="text-faint mb-3">Obsidian</li>
+				<li><a class="font-medium" href="/">Overview</a></li>
+				<li><a class="font-medium" href="/sync">Sync</a></li>
+				<li><a class="font-medium" href="/publish">Publish</a></li>
+				<li><a class="font-medium" href="/canvas">Canvas</a></li>
+				<li><a class="font-medium" href="/mobile">Mobile</a></li>
+				<li><a class="font-medium" href="/clipper">Web Clipper</a></li>
+				<li><a class="font-medium" href="/cli">CLI</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<ul class="">
+				<li class="text-faint mb-3">Learn</li>
+				<li><a class="font-medium" href="https://obsidian.md/help/">Help</a></li>
+				<li><a class="font-medium" href="https://docs.obsidian.md/" target="_blank">Developers</a></li>
+				<li><a class="font-medium" href="/changelog">Changelog</a></li>
+				<li><a class="font-medium" href="/about">About</a></li>
+				<li><a class="font-medium" href="/roadmap">Roadmap</a></li>
+				<li><a class="font-medium" href="/blog">Blog</a></li>
+			</ul>
+			<ul class="mt-8">
+				<li class="text-faint mb-3">Resources</li>
+				<li><a class="font-medium" href="https://status.obsidian.md" rel="noopener noreferrer">System status</a></li>
+				<li><a class="font-medium" href="/license">License overview</a></li>
+				<li><a class="font-medium" href="/terms">Terms of service</a></li>
+				<li><a class="font-medium" href="/privacy">Privacy policy</a></li>
+				<li><a class="font-medium" href="/security">Security</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<ul class="">
+				<li class="text-faint mb-3">Community</li>
+				<li><a class="font-medium" href="https://community.obsidian.md/plugins">Plugins</a></li>
+				<li><a class="font-medium" href="https://community.obsidian.md/themes">Themes</a></li>
+				<li><a class="font-medium" href="https://discord.gg/obsidianmd" rel="noopener noreferrer" target="_blank">Discord</a></li>
+				<li><a class="font-medium" href="https://forum.obsidian.md" target="_blank">Forum</a> <span class="text-gray-600">/</span> <a class="font-medium" href="https://forum-zh.obsidian.md" target="_blank">中文论坛</a></li>
+				<li><a class="font-medium" href="/softwear">Merch store</a></li>
+				<li><a class="font-medium" href="/brand">Brand guidelines</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="me-auto w-full sm:w-auto">
+		<a class="header-logo me-4 flex items-center gap-x-2 transition-colors" href="/" aria-label="Go to the Obsidian home page">
+			<svg alt="Obsidian" height="22" viewBox="0 0 143 25" width="126" xmlns="http://www.w3.org/2000/svg"><path fill="#A88BFA" d="m6.91927 14.5955c.64053-.1907 1.67255-.4839 2.85923-.5565-.71191-1.7968-.88376-3.3691-.74554-4.76905.15962-1.61678.72977-2.9662 1.28554-4.11442.1186-.24501.2326-.47313.3419-.69198.1549-.30984.3004-.60109.4365-.8953.2266-.48978.3948-.92231.4798-1.32416.0836-.39515.0841-.74806-.0148-1.08657-.099-.338982-.3093-.703864-.7093-1.1038132-.5222-.1353116-1.1017-.0165173-1.53613.3742922l-5.15591 4.638241c-.28758.25871-.47636.60929-.53406.99179l-.44455 2.94723c.69903.6179 2.42435 2.41414 3.47374 4.90644.09364.2224.1819.4505.26358.6838z"/><path fill="#A88BFA" d="m2.97347 10.3512c-.02431.1037-.05852.205-.10221.3024l-2.724986 6.0735c-.279882.6238-.15095061 1.3552.325357 1.8457l4.288349 4.4163c2.1899-3.2306 1.87062-6.2699.87032-8.6457-.75846-1.8013-1.90801-3.2112-2.65683-3.9922z"/><path fill="#A88BFA" d="m5.7507 23.5094c.07515.012.15135.0192.2281.0215.81383.0244 2.18251.0952 3.29249.2997.90551.1669 2.70051.6687 4.17761 1.1005 1.1271.3294 2.2886-.5707 2.4522-1.7336.1192-.8481.343-1.8075.7553-2.6869l-.0095.0033c-.6982-1.9471-1.5865-3.2044-2.5178-4.0073-.9284-.8004-1.928-1.1738-2.8932-1.3095-1.60474-.2257-3.07497.1961-4.00103.4682.55465 2.3107.38396 5.0295-1.48417 7.8441z"/><path fill="#A88BFA" d="m17.3708 19.3102c.9267-1.3985 1.5868-2.4862 1.9352-3.0758.1742-.295.1427-.6648-.0638-.9383-.5377-.7126-1.5666-2.1607-2.1272-3.5015-.5764-1.3785-.6624-3.51876-.6673-4.56119-.0019-.39626-.1275-.78328-.3726-1.09465l-3.3311-4.23183c-.0117.19075-.0392.37998-.0788.56747-.1109.52394-.32 1.04552-.5585 1.56101-.1398.30214-.3014.62583-.4646.95284-.1086.21764-.218.4368-.3222.652-.5385 1.11265-1.0397 2.32011-1.1797 3.73901-.1299 1.31514.0478 2.84484.8484 4.67094.1333.0113.2675.0262.4023.0452 1.1488.1615 2.3546.6115 3.4647 1.5685.9541.8226 1.8163 2.0012 2.5152 3.6463z"/><path fill="currentColor" d="m39.752 4.5038c-5.952 0-10.248 3.744-10.248 8.88s4.296 8.88 10.248 8.88c5.928 0 10.224-3.744 10.224-8.88s-4.296-8.88-10.224-8.88zm0 3.47999c3.576 0 6.144 2.13601 6.144 5.40001s-2.568 5.4-6.144 5.4c-3.6 0-6.168-2.136-6.168-5.4s2.568-5.40001 6.168-5.40001z"/><path fill="currentColor" d="m55.4847 20.5598c.864.936 2.472 1.704 4.584 1.704 4.32 0 6.8401-2.976 6.8401-6.576 0-3.624-2.5201-6.60001-6.8401-6.60001-2.112 0-3.72.79201-4.584 1.70401v-6.02401h-3.84v17.23201h3.84zm-.12-4.944c0-1.992 1.704-3.432 3.912-3.432 2.112 0 3.888 1.248 3.888 3.504s-1.776 3.48-3.888 3.48c-2.208 0-3.912-1.416-3.912-3.408z"/><path fill="currentColor" d="m67.3181 19.9118c1.464 1.488 4.272 2.352 7.2 2.352 3.96 0 6.936-1.44 6.936-4.392 0-2.88-2.832-3.432-6.072-3.816-2.736-.312-3.576-.384-3.576-1.08 0-.648.864-1.056 2.496-1.056 1.968 0 3.672.6 4.824 1.656l1.992-2.304c-1.272-1.224-3.648-2.18401-6.624-2.18401-4.008 0-6.48 1.72801-6.48 4.32001 0 2.712 2.52 3.312 5.544 3.696 2.832.336 4.032.336 4.032 1.176 0 .792-1.056 1.128-2.784 1.128-2.16 0-4.152-.672-5.664-2.064z"/><path fill="currentColor" d="m82.8395 8.05579h3.912v-3.288h-3.912zm3.864 1.29601h-3.84v12.648h3.84z"/><path fill="currentColor" d="m99.8264 20.5598v1.44h3.8396v-17.23201h-3.8396v6.02401c-.864-.912-2.472-1.70401-4.584-1.70401-4.32 0-6.84 2.97601-6.84 6.60001 0 3.6 2.52 6.576 6.84 6.576 2.112 0 3.72-.768 4.584-1.704zm.12-4.944v.144c0 1.992-1.704 3.408-3.912 3.408-2.112 0-3.888-1.224-3.888-3.48s1.776-3.504 3.888-3.504c2.208 0 3.912 1.44 3.912 3.432z"/><path fill="currentColor" d="m105.996 8.05579h3.912v-3.288h-3.912zm3.864 1.29601h-3.84v12.648h3.84z"/><path fill="currentColor" d="m116.863 22.2638c2.232 0 4.056-.648 5.208-1.656.648 1.2 2.184 1.92 4.992 1.392v-2.832c-1.344.288-1.632-.024-1.632-.696v-4.608c0-3.168-2.376-4.77601-6.408-4.77601-3.48 0-6.264 1.51201-7.056 3.79201l3.456.936c.384-.984 1.704-1.704 3.432-1.704 2.04 0 2.856.768 2.856 1.728v.072l-5.04.456c-2.976.288-5.16 1.512-5.16 3.984 0 2.496 2.232 3.912 5.352 3.912zm4.848-5.112c0 1.464-2.184 2.304-4.152 2.304-1.488 0-2.328-.432-2.328-1.248 0-.84.672-1.152 1.992-1.272l4.488-.456z"/><path fill="currentColor" d="m128.379 21.9998h3.84v-6.048c0-2.184 1.2-3.456 3.288-3.456 1.968 0 3 1.296 3 3.432v6.072h3.84v-7.2c0-3.504-2.232-5.71201-5.52-5.71201-2.04 0-3.624.76801-4.608 1.80001v-1.536h-3.84z"/></svg>
+		</a>
+		<div class="mt-6 text-base md:text-sm text-faint mb-3 md:mb-2">Follow us</div>
+		<div class="text-base md:text-sm grid gap-y-2 grid-cols-2 gap-x-4 md:gap-y-1 mb-4">
+			<a class="font-medium" href="https://discord.com/invite/obsidianmd" rel="noopener noreferrer" target="_blank">Discord</a>
+			<a class="font-medium" href="https://x.com/obsdmd" rel="noopener noreferrer" target="_blank">Twitter</a>
+			<a class="font-medium" href="https://bsky.app/profile/obsidian.md" rel="me noopener noreferrer" target="_blank">Bluesky</a>
+			<a class="font-medium" href="https://www.threads.net/@obsdmd" rel="me noopener noreferrer" target="_blank">Threads</a>
+			<a class="font-medium" href="https://mas.to/@obsidian" rel="me noopener noreferrer" target="_blank">Mastodon</a>
+			<a class="font-medium" href="https://www.youtube.com/@obsdmd" rel="noopener noreferrer" target="_blank">YouTube</a>
+			<a class="font-medium" href="https://github.com/obsidianmd" rel="noopener noreferrer" target="_blank">GitHub</a>
+		</div>
+		<details class="relative text-sm mb-4 group">
+			<summary class="list-none cursor-pointer text-faint hover:text-normal flex items-center gap-1.5 select-none px-3 py-3 sm:py-1.5 rounded-lg ring-1 ring-inset ring-white/10 hover:bg-gray-800 min-w-[10rem] whitespace-nowrap">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+				English
+				<i data-lucide="chevron-down" class="icon-xs ms-auto"></i>
+			</summary>
+			<ul class="absolute bottom-full start-0 mb-1 bg-gray-800 ring-1 ring-inset ring-white/10 rounded-lg p-1 min-w-[10rem] shadow-xl flex flex-col gap-0.5">
+				
+				<li><a href="/canvas" onclick="try{localStorage.setItem('lang','en');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-normal font-medium bg-gray-700 hover:text-normal">English</a></li>
+				
+				<li><a href="/ar/canvas" onclick="try{localStorage.setItem('lang','ar');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">العربية</a></li>
+				
+				<li><a href="/bn/canvas" onclick="try{localStorage.setItem('lang','bn');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">বাংলা</a></li>
+				
+				<li><a href="/de/canvas" onclick="try{localStorage.setItem('lang','de');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Deutsch</a></li>
+				
+				<li><a href="/es/canvas" onclick="try{localStorage.setItem('lang','es');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Español</a></li>
+				
+				<li><a href="/fr/canvas" onclick="try{localStorage.setItem('lang','fr');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Français</a></li>
+				
+				<li><a href="/it/canvas" onclick="try{localStorage.setItem('lang','it');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Italiano</a></li>
+				
+				<li><a href="/ja/canvas" onclick="try{localStorage.setItem('lang','ja');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">日本語</a></li>
+				
+				<li><a href="/ko/canvas" onclick="try{localStorage.setItem('lang','ko');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">한국어</a></li>
+				
+				<li><a href="/pl/canvas" onclick="try{localStorage.setItem('lang','pl');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Polski</a></li>
+				
+				<li><a href="/pt-BR/canvas" onclick="try{localStorage.setItem('lang','pt-BR');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Português (Brasil)</a></li>
+				
+				<li><a href="/ro/canvas" onclick="try{localStorage.setItem('lang','ro');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Română</a></li>
+				
+				<li><a href="/ru/canvas" onclick="try{localStorage.setItem('lang','ru');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Русский</a></li>
+				
+				<li><a href="/sv/canvas" onclick="try{localStorage.setItem('lang','sv');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Svenska</a></li>
+				
+				<li><a href="/zh/canvas" onclick="try{localStorage.setItem('lang','zh');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">简体中文</a></li>
+				
+			</ul>
+		</details>
+		<div class="text-sm text-faint">&copy; 2026 Obsidian</div>
+	</div>
+</footer>
+<script>
+document.addEventListener('click', function(e) {
+	document.querySelectorAll('footer details[open]').forEach(function(d) {
+		if (!d.contains(e.target)) d.removeAttribute('open');
+	});
+});
+</script>
+
+</div>
+	<style>
+		.tutorial-toc-item.is-active {
+			font-weight: 600;
+		}
+	</style>
+	<script src="/static.js?v=4f322412"></script>
+	<script>
+		let tutorialItems = fishAll('.tutorial-toc-item');
+
+		let sections = fishAll('.tutorial-toc-section');
+		let videoEl = fish('.tutorial-video-container video');
+		tutorialItems.forEach(el => {
+			el.addEventListener('click', () => {
+				let videoId = el.getAttribute('data-video');
+				videoEl.setAttribute('src', `/videos/${videoId}.mp4`);
+				let currentActive = fish('.tutorial-toc-item.is-active');
+				currentActive && currentActive.removeClass('is-active');
+				el.addClass('is-active');
+			});
+		});
+
+		let tutorialSearch = fish('.tutorial-toc-search');
+		tutorialSearch.addEventListener('input', () => {
+			let value = tutorialSearch.value;
+
+			tutorialItems.forEach(el => {
+				if (value === '') {
+					el.show();
+				}
+				else {
+					el.toggle(el.getText().toLowerCase().contains(value.toLowerCase()));
+				}
+			});
+
+			for (let section of sections) {
+				let titleEl = section.find('.tutorial-toc-section-title');
+				let sectionItems = section.findAll('.tutorial-toc-item');
+
+				let numVisibleItems = sectionItems.filter(el => el.isShown()).length;
+				let title = titleEl.getAttribute('data-title');
+				titleEl.innerText = title + ' (' + numVisibleItems + ')';
+				titleEl.toggle(numVisibleItems > 0);
+			}
+		});
+	</script>
+</body>
+
+</html>

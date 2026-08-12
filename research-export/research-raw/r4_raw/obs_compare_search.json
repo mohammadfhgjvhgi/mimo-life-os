@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://langfuse.com/resources/engineering/langsmith-alternative",
+    "name": "LangSmith Alternative? Langfuse vs.",
+    "snippet": "Langfuse is the open-source LangSmith alternative . Updated July 2026 comparison of open source, self-hosting, storage architecture, evals, alerting, ...",
+    "host_name": "langfuse.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://langfuse.com/resources/engineering/best-phoenix-arize-alternatives",
+    "name": "Langfuse vs. Arize AX / Arize Phoenix",
+    "snippet": "This article compares Langfuse and Arize AI and Arize Phoenix for LLM observability, analytics, evaluations, testing, and annotation.",
+    "host_name": "langfuse.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/LangChain/comments/1b2y18p/langsmith_started_charging_time_to_compare",
+    "name": "Langsmith started charging. Time to compare alternatives.",
+    "snippet": "Langfuse looks to be more focused on representation of the data out of the box, while Phoenix does not have pretty dashboard and such, but ...",
+    "host_name": "www.reddit.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.digitalapplied.com/blog/agent-observability-platforms-langsmith-langfuse-arize-2026",
+    "name": "Agent Observability: LangSmith, Langfuse, Arize 2026",
+    "snippet": "Apr 28, 2026 — Langfuse is the self-host leader (Postgres + ClickHouse, fully OSS-compatible). Arize Phoenix self-hosts as OSS; Arize cloud is enterprise. Read more",
+    "host_name": "www.digitalapplied.com",
+    "rank": 3,
+    "date": "Apr 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://openobserve.ai/blog/langsmith-alternatives",
+    "name": "LangSmith Alternatives: The Best Open Source Options",
+    "snippet": "Jul 24, 2026 — 7 LangSmith alternatives compared for 2026 : audited licenses, real self - hosting limits, and which tools survived the year's acquisitions.",
+    "host_name": "openobserve.ai",
+    "rank": 4,
+    "date": "Jul 24, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.braintrust.dev/articles/langfuse-alternatives-2026",
+    "name": "Langfuse alternatives: Top 5 competitors compared (2026)",
+    "snippet": "Jun 21, 2026 — Arize offers Phoenix (open-source) Phoenix provides self-hosted LLM observability with no licensing costs. Free for open-source self-hosting.",
+    "host_name": "www.braintrust.dev",
+    "rank": 5,
+    "date": "Jun 21, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://latitude.so/blog/best-llm-observability-tools-agents-latitude-vs-langfuse-langsmith",
+    "name": "Best LLM Observability Tools for AI Agents - Latitude.so",
+    "snippet": "Mar 27, 2026 — Langfuse remains the best choice for self - hosted , open - source , minimal-overhead observability. LangSmith remains the right default for LangChain ... Read more",
+    "host_name": "latitude.so",
+    "rank": 6,
+    "date": "Mar 27, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.morphllm.com/comparisons/langfuse-vs-langsmith",
+    "name": "Langfuse vs LangSmith (2026): Pricing Math, Self-Host, and",
+    "snippet": "Jun 15, 2026 — Langfuse Cloud is free to 50k units/mo, the core repo is MIT, and self - hosting is free. LangSmith gives 5k traces, then $2.50 per 1k.",
+    "host_name": "www.morphllm.com",
+    "rank": 7,
+    "date": "Jun 15, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://qaskills.sh/blog/langfuse-vs-arize-phoenix",
+    "name": "Langfuse vs Arize Phoenix: Open-Source LLM",
+    "snippet": "Jul 13, 2026 — This guide compares them across the dimensions that decide adoption in 2026 : the tracing model, evals, local-first versus self - host , ... Read more",
+    "host_name": "qaskills.sh",
+    "rank": 8,
+    "date": "Jul 13, 2026",
+    "favicon": ""
+  }
+]

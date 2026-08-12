@@ -1,0 +1,355 @@
+- 
+- 
+- 
+- 
+- 
+- Versions | v0 Docs 
+- 
+- 
+- 
+- 
+- 
+- 
+
+- Docs 
+
+- API 
+
+Search… ⌘ K Ask AI Ask AI 
+Search… ⌘ K 
+Docs API 
+
+- Getting Started 
+
+- What is v0? 
+
+- Agentic features 
+
+- Sandbox 
+
+- Vercel Integration 
+
+- Quickstart 
+
+- FAQs 
+
+- Prompt 
+
+- Text Prompting 
+
+- Screenshots and Files 
+
+- Figma 
+
+- Iterate 
+
+- Code editing 
+
+- Terminal commands 
+
+- Design mode 
+
+- Design Systems 2.0 
+
+- Images, videos, and file uploads 
+
+- Versions 
+
+- Integrate 
+
+- AI models 
+
+- Databases 
+
+- Snowflake 
+
+- Shopify 
+
+- External APIs 
+
+- GitHub 
+
+- MCP Integrations 
+
+- Pre-installed Agents 
+
+- Slack 
+
+- Ship 
+
+- Deployments 
+
+- Custom domain 
+
+- Sharing 
+
+- Templates 
+
+- Manage 
+
+- Account 
+
+- Enterprise 
+
+- Instructions 
+
+- Folders 
+
+- Projects 
+
+- Pricing 
+
+- Usage & Activity 
+
+- Teams 
+
+- Security 
+
+- Guides 
+
+- Full-stack apps 
+
+- Prototyping 
+
+- PRD design 
+
+- 
+
+- Compare 
+
+Menu 
+
+# Versions
+Copy page Copy page 
+
+Copy for LLM View Markdown Ask AI about this page 
+
+Each time v0 updates a code block from a message, it creates a new version. Non-message actions (such as editing code or modifying files directly) do not generate new versions.
+
+Restoring an old version creates a new, most recent version using the restored code to maintain a linear version history.
+
+When deploying, the latest version of the code is used. If you want to deploy a previous version, you can restore it and then deploy.
+
+Once more than one version has been created, you can switch between versions using the dropdown in the top-right corner of the interface. This dropdown shows how many versions have been created (for example, v2 ). You can also scroll through your chat with and click ↩ to restore an earlier generation.
+
+Previous Images, videos, and file uploads Next AI models 
+
+Scroll to top Give feedback 
+
+## Product
+
+- Home 
+
+- Enterprise 
+
+- Pricing 
+
+- v0 for Students 
+
+## Company
+
+- Terms 
+
+- AI Policy 
+
+- Privacy 
+
+- Cookies 
+
+## Resources
+
+- FAQs 
+
+- Docs 
+
+- Vercel Community 
+
+- Vercel 
+
+## Social
+
+- Twitter 
+
+- LinkedIn 
+
+## Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Workflows 
+
+- Connect New 
+
+- Passport New 
+
+- eve New 
+
+## Core Platform
+
+- CI/CD 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+## Security
+
+- Platform Security 
+
+- WAF 
+
+- Bot Management 
+
+- Bot ID 
+
+## Tools
+
+- Vercel Drop New 
+
+- Vercel Agent 
+
+- Vercel Plugin New 
+
+- Agent Skills 
+
+- Next.js 
+
+- Domains 
+
+- v0 
+
+## Frameworks
+
+- eve New 
+
+- Nuxt 
+
+- SvelteKit 
+
+- Nitro 
+
+- Turborepo 
+
+- Tanstack Start 
+
+- FastAPI 
+
+- xmcp 
+
+- All frameworks 
+
+## SDKs
+
+- Vercel SDK 
+
+- Workflow SDK New 
+
+- Flags SDK 
+
+- Chat SDK New 
+
+- Queues SDK New 
+
+- Streamdown 
+
+## Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+- Platform Engineers 
+
+- Design Engineers 
+
+## Learn
+
+- Docs 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+- Academy 
+
+- Articles 
+
+- Community 
+
+## Explore
+
+- Customers 
+
+- Marketplace 
+
+- Templates 
+
+- Partner Finder 
+
+- Vercel + AWS 
+
+## Company
+
+- About 
+
+- Careers 
+
+- Press 
+
+- Events 
+
+- Startups 
+
+- Shipped on Vercel 
+
+- Open Source Program 
+
+- Enterprise 
+
+- Pricing 
+
+- Help 
+
+## Legal & Trust
+
+- Privacy Policy 
+
+- Terms of Service 
+
+- Cookie Policy 
+
+- DPA 
+
+- Acceptable Use Policy 
+
+- Legal 
+
+- Trust Center 
+
+- Status 
+
+## Social
+
+- GitHub 
+
+- X 
+
+- LinkedIn 
+
+- YouTube 
+
+- Instagram

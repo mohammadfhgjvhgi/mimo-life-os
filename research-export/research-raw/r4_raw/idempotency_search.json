@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://www.motomtech.com/blog-post/ai-agent-retries-idempotency-tool-failures",
+    "name": "AI Agent Retries and Idempotency: Tool Failure Patterns",
+    "snippet": "The retry patterns that work for an HTTP client ( exponential backoff , retry on 5xx, give up after three attempts) do not translate directly to agent tool calls. Read more",
+    "host_name": "www.motomtech.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/arpitbhayani_ai-agents-will-retry-they-will-always-retry-activity-7474080563595870209-74UJ",
+    "name": "Idempotency Keys for Reliable Agents",
+    "snippet": "AI agents will retry . They will always retry. We have to be ready for it. Given how long-running agentic loops are, network drops, timeouts, ...",
+    "host_name": "www.linkedin.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://agentsmith.ch/academy/courses/ai-agentic-workflows/lessons/tool-idempotency-retries",
+    "name": "Idempotency, retries, backoff, and rate limits - Agent Smith",
+    "snippet": "Exponential backoff means each successive retry waits longer than the last , typically doubling: 1 second, 2 seconds, 4 seconds, 8 seconds.",
+    "host_name": "agentsmith.ch",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/AI_Agents/comments/1v9vjp2/your_agents_retry_logic_dies_when_the_agent_does",
+    "name": "Your agent's retry logic dies when the agent does",
+    "snippet": "Polling with exponential backoff is the only path that survives provider flakiness . Webhooks sound cleaner until the provider silently stops ... Read more",
+    "host_name": "www.reddit.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@komalbaparmar007/8-retry-patterns-that-make-agent-actions-auditable-not-chaotic-9ea121b66d8c",
+    "name": "8 retry patterns that make agent actions auditable, not chaotic",
+    "snippet": "8 production retry patterns for AI agents : idempotency , backoff , ledgers, sagas, and audit trails that prevent duplicate actions and chaos. Read more",
+    "host_name": "medium.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.padiso.co/blog/building-idempotent-tools-for-long-running-agents",
+    "name": "Building Idempotent Tools for Long-Running Agents",
+    "snippet": "May 15, 2026 — Master idempotent tool design for production AI agents. Learn retry patterns , deduplication, side-effect logging, and safe agent restarts.",
+    "host_name": "www.padiso.co",
+    "rank": 5,
+    "date": "May 15, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://pub.towardsai.net/building-retries-in-agents-how-to-build-ai-agents-that-survive-failures-32eedd2623f0",
+    "name": "Building Retries in Agents: How to",
+    "snippet": "Apr 6, 2026 — LLM retry with exponential backoff handles transient API errors. Error-returning tools let the LLM reason about failures and adapt. Message ... Read more",
+    "host_name": "pub.towardsai.net",
+    "rank": 6,
+    "date": "Apr 6, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.buildmvpfast.com/blog/idempotent-ai-agent-retry-safe-patterns-production-workflow-2026",
+    "name": "Idempotent AI Agents: Retry-Safe Patterns for Production",
+    "snippet": "Apr 2, 2026 — Make AI agent workflows retry-safe with idempotency keys, dedup tables, checkpointing, and durable execution. Prevent duplicate charges ...",
+    "host_name": "www.buildmvpfast.com",
+    "rank": 7,
+    "date": "Apr 2, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.restguide.info/idempotency",
+    "name": "REST API Idempotency",
+    "snippet": "Apr 22, 2026 — Exponential Backoff for Retries. Always use exponential backoff with jitter when retrying idempotent operations . Retrying immediately at full ... Read more",
+    "host_name": "www.restguide.info",
+    "rank": 8,
+    "date": "Apr 22, 2026",
+    "favicon": ""
+  }
+]

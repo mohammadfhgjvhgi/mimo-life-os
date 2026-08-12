@@ -1,0 +1,539 @@
+- 
+- 
+- 
+- 
+- 
+- Quickstart | v0 Docs 
+- 
+- 
+- 
+- 
+- 
+- 
+
+- Docs 
+
+- API 
+
+Search… ⌘ K Ask AI Ask AI 
+Search… ⌘ K 
+Docs API 
+
+- Getting Started 
+
+- What is v0? 
+
+- Agentic features 
+
+- Sandbox 
+
+- Vercel Integration 
+
+- Quickstart 
+
+- FAQs 
+
+- Prompt 
+
+- Text Prompting 
+
+- Screenshots and Files 
+
+- Figma 
+
+- Iterate 
+
+- Code editing 
+
+- Terminal commands 
+
+- Design mode 
+
+- Design Systems 2.0 
+
+- Images, videos, and file uploads 
+
+- Versions 
+
+- Integrate 
+
+- AI models 
+
+- Databases 
+
+- Snowflake 
+
+- Shopify 
+
+- External APIs 
+
+- GitHub 
+
+- MCP Integrations 
+
+- Pre-installed Agents 
+
+- Slack 
+
+- Ship 
+
+- Deployments 
+
+- Custom domain 
+
+- Sharing 
+
+- Templates 
+
+- Manage 
+
+- Account 
+
+- Enterprise 
+
+- Instructions 
+
+- Folders 
+
+- Projects 
+
+- Pricing 
+
+- Usage & Activity 
+
+- Teams 
+
+- Security 
+
+- Guides 
+
+- Full-stack apps 
+
+- Prototyping 
+
+- PRD design 
+
+- 
+
+- Compare 
+
+Menu 
+
+# Quickstart
+Copy page Copy page 
+
+An overview of v0's features and workflows
+Copy for LLM View Markdown Ask AI about this page 
+
+Welcome to v0! This guide will walk you through v0's main features and workflows.
+
+- Visit v0.app and sign in
+
+- Start a new chat or create a project
+
+- Describe your idea in natural language
+
+- Review the generated app and iterate as needed
+
+## Prompt: Describe your idea 
+
+Start by describing what you want to build in your preferred language. v0 will generate a working application based on your description.
+
+Try these simple prompts to get started:
+
+- "A todo app with add, edit, and delete functionality" 
+
+- "A landing page for a SaaS product with hero section and pricing" 
+
+- "A dashboard showing user analytics with charts" 
+
+- "A contact form that sends emails" 
+
+Learn more about text prompting
+
+## Iterate: Refine your application 
+
+Once v0 generates your initial application, you can iterate and improve it through conversation.
+
+### Edit the Code 
+
+- Switch to Code view by clicking the "Code" tab
+
+- Make direct edits to the generated code
+
+- Ask for changes in natural language: "Add a search bar to the product list"
+
+Learn more about code editing
+
+### Design Mode 
+
+- Enable design mode from the cursor button in the chat input, or press Option + D / Alt + D 
+
+- Select elements in the preview to tweak their styles visually or with natural-language instructions
+
+- Click Apply to commit your edits back to your source code as a new chat version
+
+Learn more about design mode
+
+## Integrate: Connect external services 
+
+Add real functionality to your application by integrating with databases, APIs, and external services.
+
+Open Project Menu ... → Integrations to install integrations, or prompt v0 directly: "Connect a database to my app".
+
+### Databases 
+
+Install database integrations directly from the Project Menu ... → Integrations menu:
+
+- Neon - Serverless PostgreSQL
+
+- Supabase - PostgreSQL with auth and realtime
+
+- Upstash for Redis - Serverless Redis
+
+- Blob - File storage
+
+Learn more about database integrations
+
+### AI Models 
+
+v0 includes Vercel AI Gateway integration, which automatically configures your API key using your Vercel account. This gives you access to hundreds of AI models through a single endpoint.
+
+Install AI providers from Project Menu ... → Integrations with one click:
+
+- Grok - xAI models
+
+- fal - Image generation
+
+- Deep Infra - Open source models
+
+You can also use other third-party providers like OpenAI or Anthropic by prompting v0 and adding your API keys in Vars .
+
+Learn more about AI integrations
+
+### Payments 
+
+Add payment processing to your application:
+
+- Stripe - Accept payments and manage subscriptions
+
+### External APIs 
+
+- Describe the integration : "Connect to Twilio for SMS notifications"
+
+- v0 will generate the necessary API calls and error handling
+
+- The integration wizard will prompt you to add your API keys after generation
+
+- To edit or add keys manually , follow the link to your Vercel project from the Project Menu ... → Environment Variables .
+
+Learn more about API integrations
+
+## Ship: Publish to production 
+
+Publish your application to the web with one click using Vercel's enterprise-grade infrastructure.
+
+- Click "Publish" in the top right corner
+
+- Click "Publish to Production" 
+
+- Wait for publishing - usually 30-60 seconds
+
+- Get your live URL - your app is now accessible worldwide
+
+- Make changes to your code or chat with v0
+
+- Click "Publish Changes" to update Production
+
+Learn more about deployments
+
+### Add a custom domain 
+
+Add a custom domain directly from v0:
+
+- From Publish : Click Publish → Customize Domain 
+
+- From Settings : Click Project Menu ... → Domains 
+
+Customize your default domain (your-domain.vercel.app) or connect a custom domain. You can also purchase domains via Vercel Domains .
+
+Learn more about custom domains
+
+## Management and collaboration 
+
+Manage your projects and collaborate with your team.
+
+### Project Settings 
+
+Use the Project Menu ... button to manage your project:
+
+- Vercel Project - View your connected Vercel project and manage the visibility of Production deployments.
+
+- Integrations - Connect and manage your project's integrations.
+
+- Environment Variables - Manage your environment variables from Vercel.
+
+- GitHub - Create a GitHub repository for your project.
+
+- Template - Publish your project as a template.
+
+- Domains - Manage your project's domains.
+
+- Analytics - Enable Vercel analytics for project traffic insights.
+
+Note that project settings are shared between all chats under the same project.
+
+Learn more about projects
+
+### Team collaboration 
+
+Press the Share button to open chat collaboration settings where you can:
+
+- Invite individual team members.
+
+- Manage team members' view and edit permissions.
+
+- Share your chat with your team or anyone else.
+
+Learn more about teams
+
+Learn more about pricing
+
+## Next steps 
+
+Now that you understand the basics, try building a simple app or explore the community templates .
+
+## Need help? 
+
+- Community Forum : Ask questions in the community forum 
+
+- Vercel Support : Contact support at vercel.com/help 
+
+- X Community : Join the v0 community on X 
+
+Ready to start building?
+
+Previous Vercel Integration Next FAQs 
+
+On this page
+Prompt: Describe your idea Iterate: Refine your application Edit the Code Design Mode Integrate: Connect external services Databases AI Models Payments External APIs Ship: Publish to production Add a custom domain Management and collaboration Project Settings Team collaboration Next steps Need help? 
+
+Scroll to top Give feedback 
+
+## Product
+
+- Home 
+
+- Enterprise 
+
+- Pricing 
+
+- v0 for Students 
+
+## Company
+
+- Terms 
+
+- AI Policy 
+
+- Privacy 
+
+- Cookies 
+
+## Resources
+
+- FAQs 
+
+- Docs 
+
+- Vercel Community 
+
+- Vercel 
+
+## Social
+
+- Twitter 
+
+- LinkedIn 
+
+## Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Workflows 
+
+- Connect New 
+
+- Passport New 
+
+- eve New 
+
+## Core Platform
+
+- CI/CD 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+## Security
+
+- Platform Security 
+
+- WAF 
+
+- Bot Management 
+
+- Bot ID 
+
+## Tools
+
+- Vercel Drop New 
+
+- Vercel Agent 
+
+- Vercel Plugin New 
+
+- Agent Skills 
+
+- Next.js 
+
+- Domains 
+
+- v0 
+
+## Frameworks
+
+- eve New 
+
+- Nuxt 
+
+- SvelteKit 
+
+- Nitro 
+
+- Turborepo 
+
+- Tanstack Start 
+
+- FastAPI 
+
+- xmcp 
+
+- All frameworks 
+
+## SDKs
+
+- Vercel SDK 
+
+- Workflow SDK New 
+
+- Flags SDK 
+
+- Chat SDK New 
+
+- Queues SDK New 
+
+- Streamdown 
+
+## Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+- Platform Engineers 
+
+- Design Engineers 
+
+## Learn
+
+- Docs 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+- Academy 
+
+- Articles 
+
+- Community 
+
+## Explore
+
+- Customers 
+
+- Marketplace 
+
+- Templates 
+
+- Partner Finder 
+
+- Vercel + AWS 
+
+## Company
+
+- About 
+
+- Careers 
+
+- Press 
+
+- Events 
+
+- Startups 
+
+- Shipped on Vercel 
+
+- Open Source Program 
+
+- Enterprise 
+
+- Pricing 
+
+- Help 
+
+## Legal & Trust
+
+- Privacy Policy 
+
+- Terms of Service 
+
+- Cookie Policy 
+
+- DPA 
+
+- Acceptable Use Policy 
+
+- Legal 
+
+- Trust Center 
+
+- Status 
+
+## Social
+
+- GitHub 
+
+- X 
+
+- LinkedIn 
+
+- YouTube 
+
+- Instagram

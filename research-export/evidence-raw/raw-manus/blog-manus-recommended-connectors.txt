@@ -1,0 +1,128 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- New: Manus Now Recommends Connectors For You 
+- 
+- 
+- 
+- 
+
+Features
+Solutions
+Resources
+Events
+Team
+Pricing
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+Get started 
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+Manus is now part of Meta — bringing AI to businesses worldwide
+
+Product · Tuesday, May 05 
+
+# New: Manus Now Recommends Connectors For You
+
+Work in Manus usually starts with a clear goal: update a Notion page, or summarize customer feedback from Gmail. But the real friction often hits before you even begin — the connector you need is not enabled yet. 
+
+Previously, you had to leave the conversation, find the right connector in settings, complete authorization, and come back to continue. Now you don't have to. Manus can recognize which connector your task needs during the conversation, recommend it to you, and help enable it after you confirm. The whole process happens without leaving the current conversation. 
+
+## How It Works 
+
+Here is an example: you ask Manus to send an update to Slack, but the Slack connector is not enabled yet. Manus will recognize the requirement, show you the recommended connector, and help enable it after you review and approve. If the connector requires login or additional authorization, you still need to complete that flow — Manus will never bypass any permission controls. 
+
+﻿ 
+
+When a task needs a service that is not yet connected, Manus recommends the corresponding connector. 
+
+﻿ 
+
+After you approve, Manus enables the connector and continues with the task. 
+
+In short, you just describe the outcome you want — no need to know which connector to use beforehand. Manus will tell you when one is needed, and the final decision is always yours. 
+
+## Prompts to Try 
+
+Connector Recommendations appear when your task involves an app or service that is not yet connected. For example: 
+
+• "Update our launch notes in Notion with the final positioning from this conversation." 
+
+• "Find the latest customer feedback in Gmail and summarize the top requests." 
+
+• "Pull the Q4 planning document from Google Drive and turn it into a project brief." 
+
+## Common Questions 
+
+Q: Can Manus enable connectors without my approval? 
+A: No. Manus only recommends — enabling requires your confirmation. If the connector needs authorization, you must complete that flow before it can be used. 
+
+Q: Which connectors can Manus recommend? 
+A: Manus can recommend from your connector list. Recommendations are based on each connector's description and what your current task needs. 
+
+Connector Recommendations are available across all Manus tasks, including on mobile. This is a step toward making Manus better understand your work context — it helps maintain the setup so you can focus on the work itself. 
+
+### Download desktop & mobile app
+Access Manus anytime, anywhere.
+
+macOS Windows iOS Android 
+
+## Less structure,
+more intelligence.
+
+### Product
+Pricing Web app AI design AI slides AI image generator AI music generator Manus browser operator Wide Research Mail Manus Slack integration 
+
+### Resources
+Download Blog Docs Updates Help center Trust center API Team plan Startups Playbook Brand assets 
+
+### Community
+Events Fellows 
+
+### Compare
+VS ChatGPT VS Lovable VS Replit 
+
+### Download
+Mobile app Desktop app My Browser 
+
+### Team
+Team plan SSO API 
+
+### Company
+About us Careers For media Terms of service Privacy policy 
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+© 2026 Meta

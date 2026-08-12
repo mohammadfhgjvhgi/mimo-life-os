@@ -1,0 +1,180 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Introducing Plan Mode: A New Way to Work with Manus 
+- 
+- 
+- 
+- 
+
+Features
+Solutions
+Resources
+Events
+Team
+Pricing
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+Get started 
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+Manus is now part of Meta — bringing AI to businesses worldwide
+
+Product · Wednesday, July 22 
+
+# Introducing Plan Mode: A New Way to Work with Manus
+
+## Most AI Mistakes Happen Because No One Reviewed the Approach 
+
+You write a prompt. You wait while Manus builds a full website. When it finishes, you realize it picked the wrong layout, missed the payment integration, or targeted the wrong audience. You spend the next hour correcting it message by message. 
+
+The problem isn't capability. It's alignment. Plan Mode introduces a review step before execution begins. Manus pauses, runs a feasibility check, and surfaces the approach as a structured document. You read it, edit it, and approve it. The mistake gets caught before any code is written, before any time is invested in the wrong direction. 
+
+﻿ 
+
+## Manus Thinks First, Then Builds 
+
+The idea behind Plan Mode isn't new. It's the same principle behind project kickoff docs and design reviews: align on the work before the work begins. 
+
+Plan Mode is manual. It stays out of your way until you call it. On web, type / and select Plan. On mobile, tap + and choose Plan Mode. Once active, Manus evaluates your request. If context is missing, it asks clarifying questions. If the path is clear, it generates the plan immediately: a full Markdown document with goals, steps, and constraints. 
+
+You can click into the document and rewrite anything. You can ask Manus to edit it for you. When you hit Confirm, that plan becomes the source of truth. Manus follows it precisely. 
+
+One critical detail: Manus will not start building until you confirm or dismiss the plan. This prevents any unintended changes to your website, slides, or video. You stay in control. 
+
+## Enable It Anytime, Even Mid-Task 
+
+Plan Mode isn't limited to the start of a task. You can enable or disable it flexibly at any point during the process. If Manus is already building and you want to pause, regroup, and plan the next iteration, just activate Plan Mode mid-task. Manus stops, generates a plan for the next phase, and waits for your approval before continuing. 
+
+This makes it natural to work in stages. Let Manus finish phase one, then turn on Plan Mode to scope phase two before it begins. 
+
+## Plan Mode Is Built for Development 
+
+Plan Mode is most powerful in development scenarios. You describe what you want to build, and Manus uses the planning process to surface what you haven't considered yet: edge cases hidden in your requirements, business logic conflicts buried in the flow, and assumptions that haven't been clarified. 
+
+In practice, the planning process simulates the development process itself. Manus walks through your requirements the way a developer would during a technical review. The difference is that catching these issues in a plan costs far less than catching them after the build is live. 
+
+This is where the real value sits: avoiding misalignment that leads to over-investment in the wrong direction, and surfacing hidden edge cases early so you spend less time polishing during acceptance. You see the plan in minutes, not the build in hours. Nothing changes until you confirm. And when you want Manus to revise what it already shipped, just edit the plan again. 
+
+## One Prompt Is All You Need 
+
+With Plan Mode, a single sentence is enough to kick off a full website build. You don't need to front-load every detail into your prompt because the plan fills in the gaps for you. Manus takes your brief input, expands it into a structured approach, and presents it for review. If you want to add more context, you can. But you don't have to. The planning process removes the pressure to prompt-engineer perfectly. 
+
+Here's what that looks like in practice: 
+
+"Build a landing page for my SaaS product." 
+That's the entire prompt. Plan Mode expands it into target audience, hero copy angle, component stack, and integrations (Stripe, analytics). You glance at the plan, edit one line to prioritize developer signups over enterprise demos, and confirm. Manus builds the right site the first time. 
+
+"Build a task manager with user accounts and a database." 
+One sentence. Plan Mode maps the data schema, auth flow, and API routes. You spot a flat table where you need relational joins. You fix the schema in plain text. The app launches with the right architecture. 
+
+"Add a testimonial section and change the CTA on my live site." 
+Plan Mode shows exactly where the new section goes and which components it touches. You confirm. The update ships without breaking the existing layout. 
+
+"Deploy my app and set up analytics tracking." 
+Plan Mode lists the hosting config, the events it will instrument, and the pages it will tag. You add one missing conversion event. The deploy goes out with complete tracking from day one. 
+
+## Beyond Plan Mode: More Ways to Reduce Trial and Error 
+
+Plan Mode is one part of a broader set of tools designed to lower the cost of iteration. If the latest changes to your website don't work out, you can roll back to a previous version. If you want to experiment without risk, make a copy of your site and try things on the duplicate. And during the planning stage itself, you can use branches to explore multiple different requirement paths before committing to one. Together, these give you room to iterate without fear of breaking what already works. 
+
+## How to activate plan mode 
+
+1 . Type / and select Plan from the command menu. 
+
+2 . If Manus needs more context, answer the clarifying questions. 
+
+3 . Review the generated plan. 
+
+4 . Edit directly or ask Manus to revise it. 
+
+5 . Click Confirm. Manus builds exactly what you approved. 
+
+## Available Now on Web and Mobile for All Users 
+
+Plan Mode is live today for every Manus user on both web and mobile 
+
+## Common Questions 
+
+Q: Does Plan Mode activate automatically? 
+A: No. It's manual-only. Your quick tasks stay quick. 
+
+Q: How do I turn it on? 
+A: Type / and select Plan. 
+Q: Can I enable Plan Mode in the middle of a task? 
+A: Yes. You can turn it on at any point. Manus will pause, generate a plan for the next phase, and wait for your confirmation before continuing. 
+
+Q: Can I edit the plan multiple times before confirming? 
+A: Yes. Rewrite it as many times as you need until you're satisfied with the approach. 
+
+Q: Will Manus start building before I approve? 
+A: Never. Manus will not execute until you confirm or dismiss the plan. Your existing website, slides, and video remain untouched until you say go. 
+
+Q: Can I change the plan after I've already confirmed it? 
+A: Yes. Edit the plan again later in the session and Manus will adapt its work. 
+
+Q: Why not just let Manus start building immediately? 
+A: Complex builds involve hidden edge cases and unstated assumptions. Reviewing a plan takes minutes. Catching a misalignment in text is vastly cheaper than catching it hours later in a deployed site. 
+
+### Download desktop & mobile app
+Access Manus anytime, anywhere.
+
+macOS Windows iOS Android 
+
+## Less structure,
+more intelligence.
+
+### Product
+Pricing Web app AI design AI slides AI image generator AI music generator Manus browser operator Wide Research Mail Manus Slack integration 
+
+### Resources
+Download Blog Docs Updates Help center Trust center API Team plan Startups Playbook Brand assets 
+
+### Community
+Events Fellows 
+
+### Compare
+VS ChatGPT VS Lovable VS Replit 
+
+### Download
+Mobile app Desktop app My Browser 
+
+### Team
+Team plan SSO API 
+
+### Company
+About us Careers For media Terms of service Privacy policy 
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+© 2026 Meta

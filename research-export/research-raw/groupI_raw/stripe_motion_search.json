@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://stripe.com/blog/connect-front-end-experience",
+    "name": "Connect: behind the front-end experience",
+    "snippet": "Jun 19, 2017 — There's no hard limit on the exact animation duration as it depends on the effect and the curve, but in most cases you'll want to stay under 500 ... Read more",
+    "host_name": "stripe.com",
+    "rank": 0,
+    "date": "Jun 19, 2017",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Q32_JlcPP-c",
+    "name": "Recreating Stripe's Fancy Hover Animation with Framer Motion",
+    "snippet": "Today we'll recreate one of about a million awesome effects from this site, a logo grid which animates clip-paths on hover. We'll use ReactJS , ...",
+    "host_name": "www.youtube.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://m3.material.io/styles/motion/easing-and-duration",
+    "name": "Easing and duration",
+    "snippet": "Material easing and durations create responsive and expressive motion . The easing and duration system is still used for transitions … a transition with easing ...",
+    "host_name": "m3.material.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=aW6AcSR1Oyg",
+    "name": "Working with Stripe Elements and Checkout Sessions",
+    "snippet": "Stripe provides the building blocks for you to build your own custom payment experiences or make use of one of the hosted options as well.",
+    "host_name": "www.youtube.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/ssewell_how-does-stripe-do-that-really-cool-morphing-activity-7124834671783288832-rFjh?trk=public_profile_like_view",
+    "name": "How does Stripe do that really cool morphing animation",
+    "snippet": "If menu element exists, we're going to set the pump over height to the elements offset height as in the height of the element when rendered. Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.designlang.app/gallery/stripe-com/stripe-com-motion.html",
+    "name": "stripe.com — motion lab",
+    "snippet": "Every easing curve, duration and keyframe animation designlang read off the live stripe .com page — drawn, timed and replayed.",
+    "host_name": "www.designlang.app",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

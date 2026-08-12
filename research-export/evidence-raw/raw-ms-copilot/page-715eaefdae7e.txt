@@ -1,0 +1,211 @@
+TITLE: Secure & Governed Data Foundation for Microsoft 365 Copilot - Foundational Deployment Guidance | Microsoft Learn
+
+Secure & Governed Data Foundation for Microsoft 365 Copilot - Foundational Deployment Guidance | Microsoft Learn 
+
+- 
+
+- 
+
+Skip to main content
+
+Skip to Ask Learn chat experience
+
+This browser is no longer supported.
+
+Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+
+Download Microsoft Edge
+
+More info about Internet Explorer and Microsoft Edge
+
+Table of contents 
+
+Exit editor mode 
+
+Ask Learn 
+
+Ask Learn 
+
+Reading mode 
+
+Table of contents 
+
+Read in English 
+
+Add 
+
+Add to Plans 
+
+Edit 
+
+Copy Markdown 
+
+Print 
+
+Note 
+
+Access to this page requires authorization. You can try signing in or changing directories .
+
+Access to this page requires authorization. You can try changing directories .
+
+Secure and govern Microsoft 365 Copilot: Foundational deployment guidance
+
+- Applies to: ✅ Microsoft 365 Copilot
+
+Feedback 
+
+Summarize this article for me
+
+In this article
+
+Microsoft 365 Copilot can accelerate how people find information, summarize content, and get work done by grounding responses in the data users already have permission to access. To realize that value confidently, organizations require a foundation that is both secure and well-governed, with robust safeguards in place, including measures to protect interactions when using Copilot and meeting AI regulatory standards.
+
+How this blueprint can help you secure and govern Microsoft 365 Copilot
+
+This deployment blueprint outlines the essential steps for establishing a secure and governed foundation for Copilot by remediating oversharing, implementing reliable guardrails, and fulfilling AI-related regulatory obligations, delivering a straightforward, approachable path to help every organization get started with confidence.
+
+This blueprint is organized into three pillars:
+
+- Remediate oversharing
+
+- Set up guardrails
+
+- Meet regulations
+
+https://aka.ms/Copilot/SecureGovernBlueprintPDF 
+
+For a more detailed walkthrough of these steps, see Configure a secure and governed foundation for Microsoft 365 Copilot .
+
+What the blueprint covers
+
+The blueprint covers the following areas:
+
+- A practical framework to reduce Copilot exposure quickly, then harden your environment with enforceable defaults
+
+- Guidance powered by:
+
+- Microsoft Purview , which enables a secure and governed Copilot deployment by providing tools to prevent data loss, mitigate insider risk, and ensure compliance with organizational and regulatory requirements, for both Copilot at runtime and Microsoft 365 data referenced by Copilot
+
+- SharePoint Advanced Management (SAM), which is included with your Microsoft 365 Copilot license. SAM provides capabilities for managing sharing, access, and governance across SharePoint.
+
+- Recommended admin actions to identify high-risk sites and files, apply interim access restrictions if needed, fix access issues, and continuously enforce secure guardrails.
+
+- Identifying and closing gaps in AI regulatory requirements, defining audit and legal requirements, and enhancing data hygiene for sites and files.
+
+Download the blueprint and documentation
+
+Deployment model 
+Description 
+
+Use this blueprint to remediate oversharing, enforce guardrails, and meet AI regulations for a Microsoft 365 Copilot deployment.
+
+Includes: 
+- Blueprint overview and activities: PDF 
+- PowerPoint 
+
+Related guidance
+
+- Configure a secure and governed foundation for Microsoft 365 Copilot 
+
+- Microsoft Purview blueprint: Secure by default 
+
+- Microsoft Purview 
+
+- SharePoint Advanced Management 
+
+- Microsoft Zero Trust Assessment 
+
+Feedback
+
+Was this page helpful?
+
+Yes 
+
+No 
+
+No 
+
+Need help with this topic?
+
+Want to try using Ask Learn to clarify or guide you through this topic?
+
+Ask Learn 
+
+Ask Learn 
+
+Suggest a fix? 
+
+Additional resources
+
+- 
+
+Last updated on 
+2026-05-06
+
+In this article
+
+Was this page helpful?
+
+Need help with this topic?
+
+Want to try using Ask Learn to clarify or guide you through this topic?
+
+Ask Learn 
+
+Ask Learn 
+
+Suggest a fix? 
+
+en-us 
+
+Your Privacy Choices 
+
+Theme 
+
+- 
+
+Light 
+
+- 
+
+Dark 
+
+- 
+
+High contrast 
+
+- 
+
+- 
+
+AI Disclaimer 
+
+- 
+
+Previous Versions 
+
+- 
+
+Blog 
+
+- 
+
+Contribute 
+
+- 
+
+Privacy 
+
+- 
+
+Consumer Health Privacy 
+
+- 
+
+Terms of Use 
+
+- 
+
+Trademarks 
+
+- © Microsoft 2026

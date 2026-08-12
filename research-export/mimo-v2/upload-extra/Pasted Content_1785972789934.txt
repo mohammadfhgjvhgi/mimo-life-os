@@ -1,0 +1,1280 @@
+import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+/* ═══════════════════════════════════════════════════════════════════
+   NOVA AI v4.0 ULTRA — Flagship Personal AI OS (2026)
+   ═══════════════════════════════════════════════════════════════════
+   Chat + Reasoning + Research + Artifacts + Canvas + Analytics
+   + Memory + Agents + Tasks + Voice + Image Gen + Prompts + Charts
+   All-in-one · No external libs (except framer-motion)
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ─────────── Assets ─────────── */
+const LOGO = 'https://image.qwenlm.ai/public_source/c46ab075-e08a-403e-87ea-e12d2c0a41c4/11d5dae77-0015-4e50-bb39-33d31e026563.png';
+const HERO = 'https://image.qwenlm.ai/public_source/c46ab075-e08a-403e-87ea-e12d2c0a41c4/1b046b66e-c6d0-4cbb-b6b0-417ac800342f.png';
+
+/* ─────────── Icons (SVG — zero deps) ─────────── */
+const Ic = ({ d, size = 18, fill = false, ...rest }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24"
+    fill={fill ? 'currentColor' : 'none'}
+    stroke={fill ? 'none' : 'currentColor'}
+    strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...rest}>
+    {Array.isArray(d) ? d.map((x, i) => <path key={i} d={x} />) : <path d={d} />}
+  </svg>
+);
+
+const I = {
+  Plus:      (p) => <Ic {...p} d="M12 5v14M5 12h14" />,
+  Search:    (p) => <Ic {...p} d={["M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z", "m21 21-4.35-4.35"]} />,
+  Send:      (p) => <Ic {...p} fill d="M3.4 20.4l17.45-7.48a1 1 0 0 0 0-1.84L3.4 3.6a.993.993 0 0 0-1.39.91L2 9.12c0 .5.37.93.87.99L17 12 2.87 13.88c-.5.07-.87.5-.87 1l.01 4.61c0 .71.73 1.2 1.39.91z" />,
+  Stop:      (p) => <Ic {...p} fill d="M8 6h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" />,
+  Mic:       (p) => <Ic {...p} d={["M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z", "M19 10v2a7 7 0 0 1-14 0v-2", "M12 19v3"]} />,
+  Paperclip: (p) => <Ic {...p} d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" />,
+  Globe:     (p) => <Ic {...p} d={["M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z", "M2 12h20", "M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"]} />,
+  Brain:     (p) => <Ic {...p} d={["M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z", "M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2z"]} />,
+  Sparkles:  (p) => <Ic {...p} fill d="M12 2l2.09 6.26L20 10l-5.91 1.74L12 18l-2.09-6.26L4 10l5.91-1.74L12 2zm7 13l1.04 3.13L23 19l-2.96.87L19 23l-1.04-3.13L15 19l2.96-.87L19 15zM5 15l1.04 3.13L9 19l-2.96.87L5 23l-1.04-3.13L1 19l2.96-.87L5 15z" />,
+  Research:  (p) => <Ic {...p} d={["M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z", "M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"]} />,
+  Canvas:    (p) => <Ic {...p} d={["M12 19l7-7 3 3-7 7-3-3z", "M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z", "M2 2l7.586 7.586", "M11 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"]} />,
+  Code:      (p) => <Ic {...p} d={["m16 18 6-6-6-6", "m8 6-6 6 6 6"]} />,
+  Image:     (p) => <Ic {...p} d={["M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z", "M8.5 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z", "m21 15-5-5L5 21"]} />,
+  File:      (p) => <Ic {...p} d={["M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z", "M14 2v6h6"]} />,
+  Copy:      (p) => <Ic {...p} d={["M20 9h-9a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2z", "M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"]} />,
+  Check:     (p) => <Ic {...p} d="M20 6 9 17l-5-5" />,
+  ChevronD:  (p) => <Ic {...p} d="m6 9 6 6 6-6" />,
+  X:         (p) => <Ic {...p} d="M18 6 6 18M6 6l12 12" />,
+  Menu:      (p) => <Ic {...p} d="M4 6h16M4 12h16M4 18h16" />,
+  Sun:       (p) => <Ic {...p} d={["M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z", "M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"]} />,
+  Moon:      (p) => <Ic {...p} d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />,
+  Trash:     (p) => <Ic {...p} d={["M3 6h18", "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"]} />,
+  Msg:       (p) => <Ic {...p} d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />,
+  Chart:     (p) => <Ic {...p} d={["M3 3v18h18", "M18 17V9", "M13 17V5", "M8 17v-3"]} />,
+  Bot:       (p) => <Ic {...p} d={["M12 8V4H8", "M4 8h16v12H4z", "M9 13v2m6-2v2"]} />,
+  Memory:    (p) => <Ic {...p} d={["M6 2h12v20H6z", "M6 7h12M6 12h12M6 17h12", "M9 2v5M15 2v5"]} />,
+  Zap:       (p) => <Ic {...p} fill d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />,
+  Clock:     (p) => <Ic {...p} d={["M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z", "M12 6v6l4 2"]} />,
+  Settings:  (p) => <Ic {...p} d={["M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z", "M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"]} />,
+  Refresh:   (p) => <Ic {...p} d={["M3 12a9 9 0 0 1 15-6.7L21 8", "M21 3v5h-5", "M21 12a9 9 0 0 1-15 6.7L3 16", "M3 21v-5h5"]} />,
+  ThumbUp:   (p) => <Ic {...p} d={["M7 10v12", "M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88z"]} />,
+  ThumbDown: (p) => <Ic {...p} d={["M17 14V2", "M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88z"]} />,
+  Download:  (p) => <Ic {...p} d={["M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", "M7 10l5 5 5-5", "M12 15V3"]} />,
+  Share:     (p) => <Ic {...p} d={["M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8", "M16 6l-4-4-4 4", "M12 2v13"]} />,
+  Command:   (p) => <Ic {...p} d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />,
+  Play:      (p) => <Ic {...p} fill d="M8 5v14l11-7z" />,
+  Eye:       (p) => <Ic {...p} d={["M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z", "M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"]} />,
+  Tasks:     (p) => <Ic {...p} d={["M9 11l3 3L22 4", "M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"]} />,
+  Prompt:    (p) => <Ic {...p} d={["M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z", "M8 9h8M8 13h5"]} />,
+  Terminal:  (p) => <Ic {...p} d={["m4 17 6-6-6-6", "M12 19h8"]} />,
+  Star:      (p) => <Ic {...p} fill d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />,
+  Pencil:    (p) => <Ic {...p} d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />,
+  User:      (p) => <Ic {...p} d={["M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2", "M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"]} />,
+};
+
+/* ─────────── CSS (نظام التصميم الكامل + Responsive) ─────────── */
+const CSS = `
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-sans-arabic@5.0.0/index.css');
+:root{
+  --bg:#fafafa;--bg2:#fff;--bg3:#f4f4f5;--bg4:#ececee;
+  --tx:#18181b;--tx2:#52525b;--tx3:#a1a1aa;
+  --bd:#e4e4e7;--pr:#7c3aed;--pr2:#a855f7;--ac:#ec4899;
+  --grad:linear-gradient(135deg,#7c3aed,#a855f7 50%,#ec4899);
+  --gsoft:linear-gradient(135deg,rgba(124,58,237,.08),rgba(236,72,153,.08));
+  --ssm:0 1px 3px rgba(0,0,0,.06);
+  --smd:0 4px 20px rgba(0,0,0,.08);
+  --slg:0 12px 40px rgba(0,0,0,.14);
+  --glass:rgba(255,255,255,.72);
+}
+[data-theme=dark]{
+  --bg:#09090b;--bg2:#111113;--bg3:#1a1a1e;--bg4:#232329;
+  --tx:#fafafa;--tx2:#a1a1aa;--tx3:#52525b;--bd:#27272a;
+  --gsoft:linear-gradient(135deg,rgba(124,58,237,.16),rgba(236,72,153,.12));
+  --ssm:0 1px 3px rgba(0,0,0,.3);
+  --smd:0 4px 20px rgba(0,0,0,.4);
+  --slg:0 12px 40px rgba(0,0,0,.55);
+  --glass:rgba(17,17,19,.72);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+.nv{font-family:'IBM Plex Sans Arabic','Segoe UI',sans-serif;width:100%;height:100vh;background:var(--bg);color:var(--tx);display:flex;overflow:hidden;direction:rtl;transition:background .3s,color .3s}
+.nv button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.nv input,.nv textarea{font-family:inherit}
+.nv ::-webkit-scrollbar{width:6px;height:6px}
+.nv ::-webkit-scrollbar-thumb{background:var(--bd);border-radius:3px}
+.nv ::-webkit-scrollbar-track{background:transparent}
+
+.sb{width:288px;height:100%;background:var(--bg2);border-left:1px solid var(--bd);display:flex;flex-direction:column;flex-shrink:0}
+.sb-top{padding:14px 14px 8px}
+.brand{display:flex;align-items:center;gap:10px;padding:0 4px 12px}
+.brand img{width:40px;height:40px;border-radius:12px;object-fit:cover;box-shadow:0 4px 14px rgba(124,58,237,.4)}
+.brand-n{font-size:17px;font-weight:800}
+.brand-n b{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.brand-t{font-size:10px;color:var(--tx3);margin-top:2px}
+.newchat{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;border-radius:12px;background:var(--grad);color:#fff;font-size:13.5px;font-weight:700;box-shadow:0 4px 16px rgba(124,58,237,.3);transition:transform .15s}
+.newchat:hover{transform:translateY(-1px)}
+.searchbox{position:relative;margin-top:10px}
+.searchbox input{width:100%;padding:9px 34px 9px 12px;border:1px solid var(--bd);border-radius:10px;background:var(--bg3);color:var(--tx);font-size:12.5px;outline:none;transition:border .2s}
+.searchbox input:focus{border-color:var(--pr)}
+.searchbox svg{position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--tx3)}
+.navsec{padding:10px 14px 4px;font-size:10px;font-weight:800;color:var(--tx3);letter-spacing:.6px;text-transform:uppercase}
+.navitem{display:flex;align-items:center;gap:10px;margin:0 8px;padding:9px 10px;border-radius:10px;font-size:13px;font-weight:600;color:var(--tx2);transition:all .15s;border:1px solid transparent}
+.navitem:hover{background:var(--bg3);color:var(--tx)}
+.navitem.on{background:var(--gsoft);color:var(--pr);border-color:rgba(124,58,237,.2)}
+.navitem .cnt{margin-right:auto;font-size:10px;background:var(--bg4);padding:2px 7px;border-radius:20px;color:var(--tx2)}
+.convlist{flex:1;overflow-y:auto;padding:0 8px 8px}
+.conv{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:10px;margin-bottom:2px;transition:background .15s;border:1px solid transparent}
+.conv:hover{background:var(--bg3)}
+.conv.on{background:var(--gsoft);border-color:rgba(124,58,237,.2)}
+.conv .t{flex:1;font-size:12.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.conv .meta{font-size:9.5px;color:var(--tx3);margin-top:2px}
+.conv .del{opacity:0;color:var(--tx3);padding:4px;border-radius:6px;display:flex;transition:opacity .15s}
+.conv:hover .del{opacity:1}
+.conv .del:hover{color:#ef4444;background:rgba(239,68,68,.1)}
+.userstrip{padding:10px 14px;border-top:1px solid var(--bd);display:flex;align-items:center;gap:10px}
+.uav{width:34px;height:34px;border-radius:11px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+
+.mn{flex:1;display:flex;flex-direction:column;min-width:0;position:relative}
+.top{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--bd);background:var(--glass);backdrop-filter:blur(12px);z-index:10;flex-wrap:wrap}
+.icb{color:var(--tx2);padding:8px;border-radius:9px;display:flex;align-items:center;transition:all .15s}
+.icb:hover{background:var(--bg3);color:var(--tx)}
+.pill{display:flex;align-items:center;gap:7px;padding:7px 13px;border-radius:11px;background:var(--bg3);border:1px solid var(--bd);font-size:12.5px;font-weight:700;color:var(--tx);transition:background .15s}
+.pill:hover{background:var(--bg4)}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--grad)}
+.tabs{display:flex;gap:3px;background:var(--bg3);padding:3px;border-radius:11px}
+.tab{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;background:transparent;color:var(--tx2);font-size:12px;font-weight:700;transition:all .15s}
+.tab.on{background:var(--bg2);color:var(--tx);box-shadow:var(--ssm)}
+.tright{margin-right:auto;display:flex;align-items:center;gap:6px}
+
+.msgs{flex:1;overflow-y:auto;scroll-behavior:smooth}
+.mwrap{max-width:820px;margin:0 auto;padding:26px 22px}
+.msg{margin-bottom:28px}
+.ubub{max-width:75%;padding:12px 17px;background:var(--grad);color:#fff;border-radius:18px 18px 4px 18px;font-size:14px;line-height:1.7;box-shadow:0 3px 14px rgba(124,58,237,.25)}
+.airow{display:flex;gap:13px}
+.aiav{width:36px;height:36px;border-radius:11px;flex-shrink:0;overflow:hidden;box-shadow:0 3px 12px rgba(124,58,237,.3)}
+.aiav img{width:100%;height:100%;object-fit:cover}
+.aibody{flex:1;min-width:0}
+.aict{font-size:14.5px;line-height:1.85;color:var(--tx)}
+.aict strong{font-weight:800;color:var(--pr)}
+.aict h2{font-size:19px;font-weight:800;margin:14px 0 8px;color:var(--tx)}
+.aict h3{font-size:16px;font-weight:800;margin:12px 0 6px;color:var(--pr)}
+.aict ul{margin:6px 0;padding-right:20px}
+.aict li{margin:3px 0}
+.aict code{background:var(--bg3);padding:2px 6px;border-radius:5px;font-family:'Courier New',monospace;font-size:12.5px;color:var(--pr)}
+.aict pre{background:#1e1e2e;color:#e4e4f0;padding:14px;border-radius:11px;overflow-x:auto;direction:ltr;text-align:left;margin:10px 0;font-family:'Courier New',monospace;font-size:12.5px;line-height:1.7;border:1px solid rgba(255,255,255,.08)}
+.aict table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12.5px}
+.aict th,.aict td{border:1px solid var(--bd);padding:6px 9px;text-align:right}
+.aict th{background:var(--bg3);font-weight:700}
+.aict blockquote{border-right:4px solid var(--pr);padding:8px 12px;margin:8px 0;color:var(--tx2);background:var(--gsoft);border-radius:0 8px 8px 0}
+.aict a{color:var(--pr);text-decoration:underline}
+
+.think{margin:10px 0 14px;border-radius:14px;background:var(--bg3);border:1px solid var(--bd);overflow:hidden}
+.think-h{display:flex;align-items:center;gap:9px;padding:11px 14px;font-size:12.5px;font-weight:700;color:var(--tx2);cursor:pointer;transition:background .15s}
+.think-h:hover{background:var(--bg4)}
+.think-h .ic{width:24px;height:24px;border-radius:7px;background:var(--gsoft);color:var(--pr);display:flex;align-items:center;justify-content:center}
+.think-h .tm{margin-right:auto;font-size:11px;color:var(--tx3);font-weight:400}
+.tstep{display:flex;gap:11px;padding:7px 14px;font-size:12.5px;color:var(--tx2)}
+.tstep .n{width:20px;height:20px;border-radius:50%;flex-shrink:0;background:var(--gsoft);color:var(--pr);display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:800}
+
+.res{margin:10px 0 14px;border-radius:14px;border:1px solid var(--bd);background:var(--bg2);overflow:hidden}
+.res-h{padding:12px 15px;background:var(--gsoft);display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700}
+.rstep{display:flex;gap:11px;padding:8px 15px;align-items:flex-start}
+.rstep .rc{width:21px;height:21px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.rstep.done .rc{background:rgba(34,197,94,.15);color:#22c55e}
+.rstep.act .rc{background:var(--gsoft);color:var(--pr)}
+.rstep .rt{font-size:12.5px;color:var(--tx2)}
+.rstep.done .rt{color:var(--tx3);text-decoration:line-through}
+.rstep.act .rt{color:var(--tx);font-weight:600}
+
+.cites{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.cite{display:flex;align-items:center;gap:7px;padding:6px 11px;border-radius:9px;background:var(--bg3);border:1px solid var(--bd);font-size:11.5px;color:var(--tx2);cursor:pointer;transition:all .15s}
+.cite:hover{border-color:var(--pr);color:var(--pr)}
+.cite .cn{width:17px;height:17px;border-radius:5px;background:var(--gsoft);color:var(--pr);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800}
+
+.macts{display:flex;gap:4px;margin-top:12px;opacity:0;transition:opacity .2s;flex-wrap:wrap}
+.msg:hover .macts{opacity:1}
+.act{color:var(--tx3);padding:6px;border-radius:7px;display:flex;align-items:center;transition:all .15s}
+.act:hover{background:var(--bg3);color:var(--tx)}
+
+.typing{display:flex;gap:5px;padding:10px 0;align-items:center}
+.typing span{width:8px;height:8px;border-radius:50%;background:var(--pr);animation:tp 1.2s infinite}
+.typing span:nth-child(2){animation-delay:.2s}
+.typing span:nth-child(3){animation-delay:.4s}
+@keyframes tp{0%,60%,100%{transform:translateY(0);opacity:.35}30%{transform:translateY(-6px);opacity:1}}
+.cur{display:inline-block;width:8px;height:16px;background:var(--pr);border-radius:2px;animation:bl 1s infinite;vertical-align:middle;margin-right:3px}
+@keyframes bl{0%,50%{opacity:1}51%,100%{opacity:0}}
+
+.empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 22px;text-align:center;overflow-y:auto}
+.empty .hero{width:100%;max-width:520px;border-radius:20px;margin-bottom:22px;box-shadow:var(--slg);border:1px solid var(--bd);object-fit:cover;aspect-ratio:16/9}
+.empty h1{font-size:28px;font-weight:800;margin-bottom:8px;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.empty p{color:var(--tx2);font-size:13.5px;margin-bottom:26px}
+.caps{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;max-width:680px}
+.cap{display:flex;align-items:center;gap:9px;padding:11px 15px;border-radius:14px;background:var(--bg2);border:1px solid var(--bd);font-size:13px;color:var(--tx);box-shadow:var(--ssm);transition:all .2s}
+.cap:hover{border-color:rgba(124,58,237,.4);transform:translateY(-2px);box-shadow:var(--smd)}
+.cap .ci{width:32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+.inarea{padding:10px 22px 16px}
+.inbox{max-width:820px;margin:0 auto;background:var(--bg2);border:1.5px solid var(--bd);border-radius:24px;box-shadow:var(--smd);transition:border .2s,box-shadow .2s}
+.inbox:focus-within{border-color:var(--pr);box-shadow:0 0 0 4px rgba(124,58,237,.1),var(--smd)}
+.inbox textarea{width:100%;border:none;background:transparent;padding:15px 18px 6px;font-size:14.5px;color:var(--tx);resize:none;outline:none;max-height:200px;line-height:1.6}
+.inbox textarea::placeholder{color:var(--tx3)}
+.tools{display:flex;align-items:center;gap:3px;padding:8px 12px 12px;flex-wrap:wrap}
+.tbtn{color:var(--tx3);padding:8px;border-radius:10px;display:flex;align-items:center;transition:all .15s}
+.tbtn:hover{background:var(--bg3);color:var(--tx)}
+.tbtn.on{background:var(--gsoft);color:var(--pr)}
+.sendb{margin-right:auto;width:38px;height:38px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:var(--grad);color:#fff;transition:all .2s;box-shadow:0 3px 12px rgba(124,58,237,.3)}
+.sendb:hover:not(:disabled){transform:scale(1.06)}
+.sendb:disabled{opacity:.35;cursor:not-allowed;box-shadow:none}
+.sendb.stop{background:#ef4444}
+.hint{text-align:center;font-size:11px;color:var(--tx3);margin-top:9px}
+.hint b{color:var(--tx2)}
+
+.rp{width:430px;height:100%;flex-shrink:0;background:var(--bg2);border-right:1px solid var(--bd);display:flex;flex-direction:column}
+.rp-h{display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid var(--bd)}
+.rp-h .tt{font-size:13.5px;font-weight:800;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rp-b{flex:1;overflow-y:auto;padding:16px}
+.codeblk{border-radius:13px;overflow:hidden;background:#1a1a2e;border:1px solid rgba(255,255,255,.08);margin-bottom:14px}
+.code-h{display:flex;align-items:center;justify-content:space-between;padding:9px 14px;background:#252540;font-size:11.5px;color:#a5a5c0}
+.code-b{padding:14px;font-family:'Courier New',monospace;font-size:12.5px;line-height:1.7;color:#e4e4f0;overflow-x:auto;direction:ltr;text-align:left;white-space:pre}
+.termblk{border-radius:13px;background:#0d1117;border:1px solid #21262d;padding:14px;font-family:'Courier New',monospace;font-size:12px;color:#58a6ff;direction:ltr;text-align:left;margin-bottom:14px}
+
+.view{flex:1;overflow-y:auto;padding:24px}
+.vhead{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.vhead h2{font-size:20px;font-weight:800}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:20px}
+.card{background:var(--bg2);border:1px solid var(--bd);border-radius:16px;padding:16px;box-shadow:var(--ssm);transition:all .15s}
+.card:hover{border-color:var(--pr);transform:translateY(-2px);box-shadow:var(--smd)}
+.card .lb{font-size:11.5px;color:var(--tx2);font-weight:600;display:flex;align-items:center;gap:7px}
+.card .vl{font-size:24px;font-weight:800;margin-top:6px}
+.card .sub{font-size:11px;color:var(--tx3);margin-top:3px}
+.chartbox{background:var(--bg2);border:1px solid var(--bd);border-radius:16px;padding:16px;margin-bottom:16px}
+.chartbox h3{font-size:13.5px;font-weight:700;margin-bottom:12px}
+.charts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+
+.agent{background:var(--bg2);border:1px solid var(--bd);border-radius:14px;padding:14px;margin-bottom:12px;display:flex;gap:12px;align-items:flex-start;transition:all .15s}
+.agent:hover{border-color:var(--pr);transform:translateY(-1px)}
+.agent .aic{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.agent .nm{font-size:13.5px;font-weight:700}
+.agent .st{font-size:11px;display:flex;align-items:center;gap:5px;margin-top:2px}
+.agent .st .d{width:7px;height:7px;border-radius:50%}
+.agent .ds{font-size:12px;color:var(--tx2);margin-top:6px;line-height:1.6}
+
+.mem{background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;margin-bottom:10px;display:flex;gap:11px;align-items:center;transition:all .15s}
+.mem:hover{border-color:var(--pr)}
+.mem .ic{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mem .tt{font-size:13px;font-weight:600}
+.mem .ss{font-size:11px;color:var(--tx3);margin-top:2px}
+
+.taskrow{background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;margin-bottom:10px;display:flex;gap:11px;align-items:center;transition:all .15s}
+.taskrow:hover{border-color:var(--pr)}
+.taskrow.done{opacity:.55}
+.taskrow .cb{width:22px;height:22px;border-radius:7px;border:2px solid var(--bd);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s;background:transparent}
+.taskrow.done .cb{background:var(--grad);border-color:transparent}
+
+.modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.5);backdrop-filter:blur(6px)}
+.modal-card{background:var(--bg2);border:1px solid var(--bd);border-radius:20px;box-shadow:var(--slg);width:min(600px,92vw);max-height:86vh;overflow-y:auto}
+.modal-h{display:flex;align-items:center;gap:10px;padding:16px 20px;border-bottom:1px solid var(--bd)}
+.modal-h .tt{font-size:15px;font-weight:800;flex:1}
+.modal-b{padding:20px}
+
+.pal{position:fixed;inset:0;z-index:110;display:flex;justify-content:center;padding-top:10vh;background:rgba(0,0,0,.5);backdrop-filter:blur(6px)}
+.pal-card{background:var(--bg2);border:1px solid var(--bd);border-radius:16px;box-shadow:var(--slg);width:min(580px,92vw);height:fit-content;overflow:hidden}
+.pal-in{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--bd)}
+.pal-in input{flex:1;border:none;background:transparent;outline:none;font-size:14px;color:var(--tx)}
+.pal-item{display:flex;align-items:center;gap:11px;padding:11px 16px;font-size:13.5px;color:var(--tx2);transition:background .12s;cursor:pointer}
+.pal-item:hover{background:var(--gsoft);color:var(--pr)}
+.pal-item kbd{margin-right:auto;font-size:9px;color:var(--tx3);background:var(--bg3);padding:2px 6px;border-radius:4px}
+
+.voice{position:fixed;inset:0;z-index:120;background:radial-gradient(circle at 50% 30%,#1a1030,#09090b);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff}
+.voice .orb{width:150px;height:150px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;box-shadow:0 0 80px rgba(168,85,247,.6)}
+.voice .orb img{width:84px;height:84px;border-radius:50%;object-fit:cover}
+.voice .wave{display:flex;align-items:center;gap:4px;height:60px;margin:34px 0 14px}
+.voice .wave span{width:5px;border-radius:3px;background:#a855f7;animation:wv 1s ease-in-out infinite}
+@keyframes wv{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1.1)}}
+.voice .st{font-size:15px;color:#c4b5fd}
+.voice .tx{margin-top:18px;max-width:520px;text-align:center;font-size:17px;line-height:1.8;color:#e9d5ff;min-height:56px;padding:0 20px}
+
+.imggrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.imgcard{border-radius:14px;overflow:hidden;border:1px solid var(--bd);position:relative;aspect-ratio:1;background:var(--bg3)}
+.imgcard img{width:100%;height:100%;object-fit:cover}
+.imgcard .gen{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--gsoft)}
+
+.toasts{position:fixed;bottom:20px;right:50%;transform:translateX(50%);z-index:200;display:flex;flex-direction:column;gap:8px;align-items:center;pointer-events:none}
+.toast{background:var(--bg2);border:1px solid var(--bd);border-radius:12px;box-shadow:var(--smd);padding:10px 16px;font-size:13px;display:flex;align-items:center;gap:9px;color:var(--tx);pointer-events:auto}
+
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:40;display:none}
+
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.legend span{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--tx2)}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+.badge{font-size:9px;padding:2px 7px;border-radius:20px;font-weight:800}
+.priohigh{background:rgba(239,68,68,.15);color:#ef4444}
+.priomed{background:rgba(245,158,11,.15);color:#f59e0b}
+.priolow{background:rgba(34,197,94,.15);color:#22c55e}
+
+.modelmenu{position:absolute;top:calc(100% + 6px);right:0;background:var(--bg2);border:1px solid var(--bd);border-radius:14px;box-shadow:var(--slg);z-index:60;width:280;overflow:hidden;max-height:400px;overflow-y:auto}
+
+@media(max-width:960px){
+  .sb{position:fixed;right:0;top:0;z-index:50;box-shadow:var(--slg)}
+  .overlay.show{display:block}
+  .rp{display:none}
+  .cards{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .cards{grid-template-columns:1fr}
+  .charts-grid{grid-template-columns:1fr}
+}
+`;
+
+/* ─────────── Data Constants ─────────── */
+const MODELS = [
+  { id: 'ultra',    name: 'Nova Ultra',    icon: '⚡', badge: 'الأقوى', desc: 'أداء خارق للمهام المعقدة' },
+  { id: 'pro',      name: 'Nova Pro',      icon: '🚀', badge: 'سريع',   desc: 'توازن السرعة والجودة' },
+  { id: 'research', name: 'Nova Research', icon: '🔬', badge: 'بحث',    desc: 'بحث أكاديمي عميق' },
+  { id: 'code',     name: 'Nova Code',     icon: '💻', badge: 'كود',    desc: 'هندسة برمجية متقدمة' },
+  { id: 'vision',   name: 'Nova Vision',   icon: '👁️', badge: 'رؤية',   desc: 'تحليل صور وفيديو' },
+  { id: 'arduino',  name: 'Nova IoT',      icon: '🔌', badge: 'صناعي',  desc: 'متخصص Arduino و PLC' },
+];
+
+const THINK = [
+  'تحليل السؤال وفهم النية الحقيقية...',
+  'تقسيم المشكلة إلى أجزاء قابلة للحل...',
+  'استدعاء المعرفة والسياق ذي الصلة...',
+  'تقييم الحلول وترتيبها حسب الجودة...',
+  'صياغة الإجابة النهائية بدقة عالية...',
+];
+
+const RES = [
+  'تحديد نطاق البحث والكلمات المفتاحية',
+  'مسح المصادر الأكاديمية والموثوقة',
+  'تحليل وتقييم مصداقية المصادر',
+  'استخراج المعلومات الرئيسية',
+  'تجميع النتائج وصياغة التقرير النهائي',
+];
+
+const ACTIVITY = [
+  { d: 'سبت', v: 42, m: 30 }, { d: 'أحد', v: 58, m: 44 }, { d: 'اثنين', v: 71, m: 52 },
+  { d: 'ثلاثاء', v: 64, m: 47 }, { d: 'أربعاء', v: 83, m: 61 }, { d: 'خميس', v: 76, m: 58 }, { d: 'جمعة', v: 49, m: 36 },
+];
+
+const CATS = [
+  { name: 'برمجة', value: 38, c: '#7c3aed' },
+  { name: 'دراسة', value: 27, c: '#a855f7' },
+  { name: 'مشاريع', value: 20, c: '#ec4899' },
+  { name: 'أخرى', value: 15, c: '#f59e0b' },
+];
+
+const SKILLS = [
+  { s: 'Arduino', v: 90 }, { s: 'React', v: 82 }, { s: 'IoT', v: 78 },
+  { s: 'Python', v: 70 }, { s: 'AI', v: 75 }, { s: 'Git', v: 85 },
+];
+
+const AGENTS = [
+  { n: 'وكيل البحث', d: 'يبحث في المصادر ويلخص النتائج تلقائياً', st: 'نشط', c: '#22c55e', ic: I.Research, col: '#7c3aed' },
+  { n: 'وكيل الكود', d: 'يكتب ويصلح الأكواد في الخلفية', st: 'يعمل', c: '#22c55e', ic: I.Code, col: '#06b6d4' },
+  { n: 'وكيل الجدولة', d: 'ينظم مهامك ويذكرك بالمواعيد المهمة', st: 'بانتظار', c: '#f59e0b', ic: I.Clock, col: '#f59e0b' },
+  { n: 'وكيل المراقبة', d: 'يراقب بياناتك ويكتشف الأنماط والتنبيهات', st: 'نشط', c: '#22c55e', ic: I.Eye, col: '#ec4899' },
+  { n: 'وكيل الذاكرة', d: 'يحفظ ملخصات المحادثات كذاكرة طويلة المدى', st: 'نشط', c: '#22c55e', ic: I.Memory, col: '#a855f7' },
+];
+
+const MEMS = [
+  { t: 'تفضل مشاريع Arduino و IoT', s: 'تم الاستنتاج من 12 محادثة', ic: I.Zap, c: '#f59e0b' },
+  { t: 'طالب توجيهي صناعي — تكنولوجيا المباني الذكية', s: 'معلومة شخصية أساسية', ic: I.File, c: '#7c3aed' },
+  { t: 'يفضل الردود المباشرة والعملية', s: 'نمط تواصل مفضل', ic: I.Msg, c: '#06b6d4' },
+  { t: 'يهدف للعمل في الخليج بعد التخرج', s: 'هدف مهني طويل المدى', ic: I.Chart, c: '#ec4899' },
+  { t: 'شخصية ENTJ-A قيادية', s: 'تحليل شخصية', ic: I.Brain, c: '#a855f7' },
+  { t: 'مشروع MiMo Life OS — 77 قسم', s: 'المشروع الرئيسي الحالي', ic: I.Code, c: '#22c55e' },
+];
+
+const SUGGESTIONS = [
+  { ic: I.Research, l: 'ابحث بعمق عن أي موضوع', p: 'ابحث بعمق عن أنظمة التحكم PID في المباني الذكية', c: '#7c3aed' },
+  { ic: I.Code, l: 'اكتب كود Arduino ذكي', p: 'اكتب كود Arduino لنظام تحكم بالإضاءة حسب الحركة', c: '#06b6d4' },
+  { ic: I.Canvas, l: 'أنشئ مقالاً احترافياً', p: 'اكتب مقال عن مستقبل تكنولوجيا المباني الذكية', c: '#ec4899' },
+  { ic: I.Brain, l: 'حلل بياناتي وضع خطة', p: 'حلل بياناتي وضع لي خطة تطوير أسبوعية', c: '#f59e0b' },
+  { ic: I.Terminal, l: 'شغّل كود JavaScript', p: 'شغّل كود: احسب متوسط مصاريف الشهر', c: '#22c55e' },
+  { ic: I.Image, l: 'ولّد صورة إبداعية', p: 'ولّد صورة لمبنى ذكي مستقبلي', c: '#a855f7' },
+];
+
+const INITIAL_TASKS = [
+  { id: 't1', text: 'مراجعة كود PLC لمشروع التخرج', prio: 'high', done: false },
+  { id: 't2', text: 'تلخيص محاضرة أنظمة التحكم', prio: 'medium', done: false },
+  { id: 't3', text: 'اختبار حساس DHT22 مع ESP32', prio: 'high', done: true },
+  { id: 't4', text: 'تجهيز عرض مشروع MiMo Life OS', prio: 'medium', done: false },
+];
+
+const PROMPTS = [
+  { t: 'محلل الأكواد', d: 'افحص هذا الكود وابحث عن الأخطاء واقترح تحسينات', c: '#06b6d4' },
+  { t: 'ملخص المحاضرات', d: 'لخّص هذه المحاضرة في نقاط رئيسية + أسئلة مراجعة', c: '#7c3aed' },
+  { t: 'مخطط المشاريع', d: 'قسّم هذا المشروع إلى مراحل مع جدول زمني واقعي', c: '#ec4899' },
+  { t: 'مدرب المقابلات', d: 'اسألني أسئلة مقابلة عمل في تخصصي وقيّم إجاباتي', c: '#f59e0b' },
+];
+
+/* ─────────── SVG Charts (بدون مكتبات خارجية) ─────────── */
+const AreaChartSVG = ({ data }) => {
+  const W = 300, H = 110, MAX = 100;
+  const px = (i) => (i / (data.length - 1)) * W;
+  const py = (v) => H - (v / MAX) * H;
+  const line = data.map((p, i) => `${px(i)},${py(p.v)}`).join(' ');
+  const area = `0,${H} ${line} ${W},${H}`;
+  const line2 = data.map((p, i) => `${px(i)},${py(p.m)}`).join(' ');
+  return (
+    <div>
+      <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', height: 140 }} preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="ag" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#7c3aed" stopOpacity=".45" />
+            <stop offset="100%" stopColor="#7c3aed" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        {[0.25, 0.5, 0.75].map((f) => (
+          <line key={f} x1="0" x2={W} y1={H * f} y2={H * f} stroke="var(--bd)" strokeDasharray="4 4" strokeWidth="1" />
+        ))}
+        <polygon points={area} fill="url(#ag)" />
+        <polyline points={line} fill="none" stroke="#7c3aed" strokeWidth="2.5" strokeLinejoin="round" />
+        <polyline points={line2} fill="none" stroke="#ec4899" strokeWidth="2" strokeDasharray="5 4" strokeLinejoin="round" />
+        {data.map((p, i) => <circle key={i} cx={px(i)} cy={py(p.v)} r="3.2" fill="#7c3aed" />)}
+      </svg>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 6 }}>
+        {data.map((p, i) => <span key={i} style={{ fontSize: 10, color: 'var(--tx3)' }}>{p.d}</span>)}
+      </div>
+      <div className="legend">
+        <span><i style={{ background: '#7c3aed' }} /> الإنتاجية</span>
+        <span><i style={{ background: '#ec4899' }} /> التركيز</span>
+      </div>
+    </div>
+  );
+};
+
+const DonutSVG = ({ data }) => {
+  const total = data.reduce((s, x) => s + x.value, 0);
+  const C = 2 * Math.PI * 40;
+  let acc = 0;
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
+      <svg viewBox="0 0 100 100" style={{ width: 150, height: 150, flexShrink: 0 }}>
+        {data.map((x, i) => {
+          const frac = x.value / total;
+          const el = (
+            <circle key={i} cx="50" cy="50" r="40" fill="none" stroke={x.c} strokeWidth="14"
+              strokeDasharray={`${Math.max(frac * C - 2, 0)} ${C}`} strokeDashoffset={-acc * C}
+              transform="rotate(-90 50 50)" />
+          );
+          acc += frac;
+          return el;
+        })}
+        <text x="50" y="47" textAnchor="middle" style={{ fill: 'var(--tx)', fontSize: 15, fontWeight: 800 }}>{total}%</text>
+        <text x="50" y="60" textAnchor="middle" style={{ fill: 'var(--tx3)', fontSize: 7 }}>الإجمالي</text>
+      </svg>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 7 }}>
+        {data.map((x, i) => (
+          <span key={i} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 11.5, color: 'var(--tx2)' }}>
+            <i style={{ width: 10, height: 10, borderRadius: 3, background: x.c }} /> {x.name} · {x.value}%
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const RadarSVG = ({ data }) => {
+  const cx = 60, cy = 55, R = 38;
+  const pt = (i, r) => {
+    const a = (Math.PI * 2 * i) / data.length - Math.PI / 2;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+  const valPts = data.map((d, i) => pt(i, (R * d.v) / 100).join(',')).join(' ');
+  return (
+    <svg viewBox="0 0 120 110" style={{ width: '100%', maxWidth: 260, margin: '0 auto', display: 'block' }}>
+      {[0.33, 0.66, 1].map((f) => (
+        <polygon key={f} points={data.map((_, i) => pt(i, R * f).join(',')).join(' ')} fill="none" stroke="var(--bd)" strokeWidth="1" />
+      ))}
+      {data.map((_, i) => {
+        const [x, y] = pt(i, R);
+        return <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke="var(--bd)" strokeWidth="1" />;
+      })}
+      <polygon points={valPts} fill="#a855f7" fillOpacity=".3" stroke="#a855f7" strokeWidth="2" />
+      {data.map((d, i) => {
+        const [x, y] = pt(i, (R * d.v) / 100);
+        return <circle key={i} cx={x} cy={y} r="2.5" fill="#a855f7" />;
+      })}
+      {data.map((d, i) => {
+        const [x, y] = pt(i, R + 9);
+        return <text key={i} x={x} y={y + 2} textAnchor="middle" style={{ fill: 'var(--tx2)', fontSize: 7.5, fontWeight: 600 }}>{d.s}</text>;
+      })}
+    </svg>
+  );
+};
+
+const BarSVG = ({ data }) => {
+  const W = 300, H = 100, MAX = 130;
+  const bw = W / data.length - 8;
+  return (
+    <div>
+      <svg viewBox={`0 0 ${W} ${H + 16}`} style={{ width: '100%', height: 130 }}>
+        <defs>
+          <linearGradient id="ag2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#ec4899" stopOpacity=".45" />
+            <stop offset="100%" stopColor="#ec4899" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        {data.map((p, i) => {
+          const h = (p.v / MAX) * H;
+          const x = i * (W / data.length) + 4;
+          return (
+            <g key={i}>
+              <rect x={x} y={H - h} width={bw} height={h} rx="5" fill="url(#ag2)" opacity=".9" />
+              <rect x={x} y={H - h} width={bw} height={h} rx="5" fill="none" stroke="#ec4899" strokeWidth="1" opacity=".5" />
+              <text x={x + bw / 2} y={H + 12} textAnchor="middle" style={{ fontSize: 9, fill: 'var(--tx3)' }}>{p.d}</text>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+  );
+};
+
+/* ─────────── Smart Reply Generator ─────────── */
+const genReply = (msg, mode) => {
+  const m = msg.toLowerCase();
+
+  if (/شغل|run|نفذ|terminal/i.test(m) || mode === 'run') return {
+    text: 'تم تشغيل الكود بنجاح! ⚡\nراجع نتائج التنفيذ في لوحة الطرفية (Terminal) ←',
+    cites: [],
+    art: {
+      type: 'run', title: 'تشغيل الكود',
+      code: '// كود تجريبي\nconst expenses = [120, 85, 200, 45, 150];\nconst avg = expenses.reduce((a,b) => a+b, 0) / expenses.length;\nconsole.log("عدد المعاملات:", expenses.length);\nconsole.log("المتوسط:", avg.toFixed(1), "شيكل");\nconsole.log("الإجمالي:", expenses.reduce((a,b)=>a+b,0));',
+      output: 'عدد المعاملات: 5\nالمتوسط: 120.0 شيكل\nالإجمالي: 600\n✓ اكتمل التنفيذ في 0.04s'
+    }
+  };
+
+  if (/صوره|صورة|ولّد|generate.*image/i.test(m)) return {
+    text: 'تم توليد الصورة بنجاح! 🎨\nالصورة جاهزة في معرض الصور — يمكنك فتحه من أيقونة الصورة في الأعلى.',
+    cites: [], art: null, openImg: true
+  };
+
+  if (/arduino|اردوينو|esp32|plc|حساس|sensor/i.test(m) || mode === 'arduino') return {
+    text: 'تم بناء نظام التحكم الذكي! 🔌\nقمت بتطوير **كود Arduino/ESP32 متكامل**:\n• قراءة الحساسات كل ثانية\n• تحكم تلقائي ذكي\n• مراقبة عبر Serial Monitor\n\nالكود جاهز في لوحة Artifacts ←',
+    cites: [],
+    art: {
+      type: 'code', lang: 'C++ (Arduino)', title: 'smart-lighting.ino',
+      code: '// 💡 نظام إضاءة ذكي بحساس حركة\nconst int PIR_PIN = 2;\nconst int RELAY_PIN = 8;\nconst int LUX_PIN = A0;\nunsigned long lastMotion = 0;\n\nvoid setup() {\n  Serial.begin(115200);\n  pinMode(PIR_PIN, INPUT);\n  pinMode(RELAY_PIN, OUTPUT);\n  Serial.println("✅ النظام جاهز");\n}\n\nvoid loop() {\n  int motion = digitalRead(PIR_PIN);\n  int lux = analogRead(LUX_PIN);\n  \n  if (motion == HIGH && lux < 500) {\n    digitalWrite(RELAY_PIN, HIGH);\n    lastMotion = millis();\n    Serial.println("💡 إضاءة: ON");\n  }\n  \n  if (millis() - lastMotion > 30000) {\n    digitalWrite(RELAY_PIN, LOW);\n  }\n  \n  delay(100);\n}'
+    }
+  };
+
+  if (mode === 'research') return {
+    text: `# 📊 تقرير البحث الشامل\n\nبعد البحث المعمق في **"${msg}"**، إليك النتائج:\n\n## 🔍 النتائج الرئيسية\n\n**1. التعريف والمفهوم**\nالموضوع يشمل جوانب أساسية يجب فهمها قبل التعمق.\n\n**2. التطور والتاريخ**\nمرّ الموضوع بمراحل تطور مهمة شكلت واقعه الحالي.\n\n**3. التطبيقات العملية**\nتوجد تطبيقات واسعة في الصناعة والمباني الذكية.\n\n## 💡 التوصيات\n• ابدأ بالأساسيات قبل التعمق\n• راجع المصادر المرفقة\n• طبق المفاهيم عملياً على مشروعك`,
+    cites: [
+      { t: 'IEEE Xplore — ورقة بحثية', d: 'ieee.org' },
+      { t: 'دراسة حديثة 2026', d: 'sciencedirect.com' },
+      { t: 'تقرير تقني مفصل', d: 'arxiv.org' }
+    ],
+    art: null
+  };
+
+  if (mode === 'code' || /كود|code|برمج|دالة|function/i.test(m)) return {
+    text: 'تم بناء الحل البرمجي! 🎉\nقمت بتطوير **نظام ذكي متكامل** بأفضل الممارسات:\n• تصميم معماري نظيف (Clean Architecture)\n• معالجة أخطاء شاملة\n• قابل للتوسع والصيانة\n\nالكود جاهز في لوحة Artifacts ←',
+    cites: [],
+    art: {
+      type: 'code', lang: 'JavaScript', title: 'smart-home-controller.js',
+      code: '// 🏠 نظام تحكم بالمباني الذكية\nclass SmartBuilding {\n  constructor(name) {\n    this.name = name;\n    this.sensors = new Map();\n    this.automation = [];\n  }\n  \n  addSensor(id, type) {\n    this.sensors.set(id, { type, value: 0 });\n    console.log("✅ Sensor:", id);\n  }\n  \n  automate(trigger, action) {\n    this.automation.push({ trigger, action });\n  }\n  \n  tick(readings) {\n    for (const [id, val] of Object.entries(readings)) {\n      const s = this.sensors.get(id);\n      if (s) s.value = val;\n    }\n    this.automation.forEach(r => r.trigger(this) && r.action(this));\n  }\n}\n\nconst building = new SmartBuilding("MiMo Tower");\nbuilding.addSensor("temp-1", "temperature");\nbuilding.automate(\n  b => b.sensors.get("temp-1").value > 30,\n  () => console.log("❄️ تشغيل التكييف")\n);\nbuilding.tick({ "temp-1": 33 });'
+    }
+  };
+
+  if (/خطه|خطة|تحليل|حلل/i.test(m)) return {
+    text: '# 🎯 خطتك الاستراتيجية المخصصة\n\nبناءً على تحليل بياناتك وأهدافك:\n\n## 📈 الأولويات\n**1. الهدف الأهم** — خصص له 70% من طاقتك\n**2. المهارات المطلوبة** — طورها بالتوازي\n**3. المتابعة الأسبوعية** — راجع تقدمك كل جمعة\n\n## ⚡ خطوات فورية\n• ابدأ بأصعب مهمة صباحاً\n• تقنية بومودورو (25 دقيقة تركيز)\n• سجل إنجازاتك يومياً\n\n## 📅 الجدول المقترح\n| اليوم | المهمة | الوقت |\n|-------|--------|-------|\n| السبت | المهمة الرئيسية | 3 ساعات |\n| الأحد | تطوير المهارات | ساعتين |\n| الاثنين | مراجعة ومتابعة | ساعة |',
+    cites: [], art: null
+  };
+
+  if (/مقال|اكتب|مستند/i.test(m)) return {
+    text: 'تم إنشاء المستند! ✍️\nصغتُ **مقالاً احترافياً** متكاملاً:\n• مقدمة جذابة\n• محتوى منظم ومنطقي\n• خاتمة مؤثرة\n\nالمستند مفتوح في لوحة Canvas للتحرير ←',
+    cites: [],
+    art: {
+      type: 'doc', title: 'مقال: مستقبل المباني الذكية',
+      content: '# مستقبل المباني الذكية\n\nفي عصر تتسارع فيه الخطى نحو المستقبل، أصبحت التكنولوجيا جزءاً لا يتجزأ من حياتنا. من الذكاء الاصطناعي الذي يغير طريقة عملنا، إلى إنترنت الأشياء الذي يربط كل ما حولنا، نعيش ثورة رقمية غير مسبوقة.\n\n## التحديات والفرص\nمع هذه التطورات تظهر تحديات جديدة تتعلق بالخصوصية والأمان الرقمي، لكن الفرص أكبر بكثير — من تحسين كفاءة الطاقة إلى راحة السكان.\n\n## نظرة نحو المستقبل\nالعقد القادم سيشهد تحولات جذرية في طريقة عيشنا وعملنا. الاستعداد لهذه التغييرات هو مفتاح النجاح.'
+    }
+  };
+
+  if (/من انت|عرف نفسك|شو انت|nova/i.test(m)) return {
+    text: 'أنا **Nova Ultra** — نظام التشغيل الذكي الشخصي الخاص بك! 🌟\n\nقدراتي الكاملة:\n• 🔬 **بحث عميق** مع مصادر موثوقة\n• 🧠 **تفكير عميق** خطوة بخطوة\n• 💻 **كتابة وتشغيل الكود** (JS + Arduino)\n• 🎨 **توليد الصور** الإبداعية\n• 📊 **تحليل البيانات** برسوم بيانية\n• 🤖 **5 وكلاء أذكياء** يعملون بالخلفية\n• 💾 **ذاكرة طويلة المدى** تتعلم منك\n\nجرّب كل شيء من شريط الأدوات! 🚀',
+    cites: [], art: null
+  };
+
+  return {
+    text: 'أهلاً بك! 👋 أنا **Nova**، نظامك الذكي المتكامل.\n\nأستطيع مساعدتك في:\n• 🔬 **بحث عميق** — مصادر موثوقة وتقارير شاملة\n• 💻 **برمجة** — كتابة وشرح وتشغيل الأكواد\n• ✍️ **كتابة** — مقالات ومحتوى إبداعي\n• 📊 **تحليل** — رؤى ورسوم بيانية من بياناتك\n• 🤖 **وكلاء** — مهام تلقائية في الخلفية\n• 🔌 **Arduino/IoT** — أكواد جاهزة لأنظمتك الذكية\n\nجرّب **التفكير العميق** 🧠 أو **البحث** 🔬 من شريط الأدوات!',
+    cites: [], art: null
+  };
+};
+
+/* ═══════════════════════════════════════════════════ */
+export default function App() {
+  const [theme, setTheme] = useState('dark');
+  const [view, setView] = useState('chat');
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [panelOpen, setPanelOpen] = useState(false);
+  const [convs, setConvs] = useState([{ id: 'c1', title: 'مرحباً بك في Nova Ultra', messages: [], createdAt: Date.now() }]);
+  const [activeId, setActiveId] = useState('c1');
+  const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState('');
+  const [mode, setMode] = useState('chat');
+  const [model, setModel] = useState('ultra');
+  const [modelMenu, setModelMenu] = useState(false);
+  const [deepThink, setDeepThink] = useState(false);
+  const [webSearch, setWebSearch] = useState(false);
+  const [copiedId, setCopiedId] = useState(null);
+  const [artifact, setArtifact] = useState(null);
+  const [thinkOpen, setThinkOpen] = useState(true);
+  const [palette, setPalette] = useState(false);
+  const [palQ, setPalQ] = useState('');
+  const [settings, setSettings] = useState(false);
+  const [voice, setVoice] = useState(false);
+  const [imgGen, setImgGen] = useState(false);
+  const [genning, setGenning] = useState(false);
+  const [genImgs, setGenImgs] = useState([LOGO, HERO]);
+  const [toasts, setToasts] = useState([]);
+  const [canvasText, setCanvasText] = useState('# مستندي الجديد\nابدأ الكتابة هنا...\n\n## نقطة أولى\nهذا محرر مستندات متكامل مع **معاينة حية**.');
+  const [voiceLine, setVoiceLine] = useState('');
+  const [tasks, setTasks] = useState(INITIAL_TASKS);
+  const [newTask, setNewTask] = useState('');
+  const [mems, setMems] = useState(MEMS);
+
+  const endRef = useRef(null);
+  const taRef = useRef(null);
+  const abortRef = useRef(false);
+  const tms = useRef([]);
+
+  const active = convs.find((c) => c.id === activeId);
+  const messages = active ? active.messages : [];
+  const curModel = MODELS.find((mm) => mm.id === model) || MODELS[0];
+
+  const toast = useCallback((t) => {
+    const id = Date.now() + Math.random();
+    setToasts((p) => p.concat([{ id, t }]));
+    setTimeout(() => setToasts((p) => p.filter((x) => x.id !== id)), 2600);
+  }, []);
+
+  const updateConv = useCallback((id, fn) => setConvs((p) => p.map((c) => (c.id === id ? fn(c) : c))), []);
+
+  const newChat = useCallback(() => {
+    abortRef.current = true;
+    const id = 'c' + Date.now();
+    setConvs((p) => [{ id, title: 'محادثة جديدة', messages: [], createdAt: Date.now() }].concat(p));
+    setActiveId(id); setInput(''); setArtifact(null); setPanelOpen(false); setView('chat');
+  }, []);
+
+  useEffect(() => { if (endRef.current) endRef.current.scrollIntoView({ behavior: 'smooth' }); }, [messages, loading]);
+
+  useEffect(() => {
+    const el = taRef.current;
+    if (!el) return;
+    el.style.height = 'auto';
+    el.style.height = Math.min(el.scrollHeight, 200) + 'px';
+  }, [input]);
+
+  useEffect(() => () => { tms.current.forEach(clearTimeout); }, []);
+
+  useEffect(() => {
+    const h = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); setPalette((v) => !v); }
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'n') { e.preventDefault(); newChat(); }
+      if (e.key === 'Escape') { setPalette(false); setSettings(false); setVoice(false); setImgGen(false); setModelMenu(false); }
+    };
+    window.addEventListener('keydown', h);
+    return () => window.removeEventListener('keydown', h);
+  }, [newChat]);
+
+  useEffect(() => {
+    if (!voice) return;
+    const lines = ['جارٍ الاستماع إليك...', 'فهمت طلبك، أحلله الآن...', 'أنا Nova، مساعدك الذكي المتكامل.', 'يمكنني البحث، البرمجة، التحليل، والكتابة.', 'ماذا تريد أن نفعل اليوم؟'];
+    let i = 0;
+    setVoiceLine(lines[0]);
+    const iv = setInterval(() => { i = (i + 1) % lines.length; setVoiceLine(lines[i]); }, 2600);
+    return () => clearInterval(iv);
+  }, [voice]);
+
+  const delConv = (id, e) => {
+    e.stopPropagation();
+    setConvs((prev) => {
+      const n = prev.filter((c) => c.id !== id);
+      if (!n.length) { const nid = 'c' + Date.now(); setActiveId(nid); return [{ id: nid, title: 'محادثة جديدة', messages: [], createdAt: Date.now() }]; }
+      if (id === activeId) setActiveId(n[0].id);
+      return n;
+    });
+    toast('تم حذف المحادثة');
+  };
+
+  const copyMsg = (id, t) => {
+    if (navigator.clipboard) navigator.clipboard.writeText(t).catch(() => {});
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 1400);
+    toast('تم النسخ ✓');
+  };
+
+  const send = (text) => {
+    const trimmed = (text !== undefined ? text : input).trim();
+    if (!trimmed || loading) return;
+    const convId = activeId;
+    setView('chat');
+    updateConv(convId, (c) => ({
+      ...c,
+      title: c.messages.length === 0 ? trimmed.slice(0, 30) + (trimmed.length > 30 ? '…' : '') : c.title,
+      messages: c.messages.concat([{ id: 'm' + Date.now(), role: 'user', content: trimmed, time: Date.now() }]),
+    }));
+    setInput(''); setLoading(true); abortRef.current = false; setArtifact(null); setPanelOpen(false);
+
+    const isRes = mode === 'research' || webSearch;
+    const isThink = deepThink || mode === 'research';
+    const aiId = 'm' + (Date.now() + 1);
+    updateConv(convId, (c) => ({
+      ...c,
+      messages: c.messages.concat([{ id: aiId, role: 'ai', content: '', time: Date.now(), streaming: true, thinking: isThink, research: isRes, tp: 0, rp: 0 }]),
+    }));
+
+    const stream = () => {
+      if (abortRef.current) { setLoading(false); return; }
+      const reply = genReply(trimmed, mode);
+      const words = reply.text.split(' ');
+      let idx = 0;
+      const step = () => {
+        if (abortRef.current || idx >= words.length) {
+          updateConv(convId, (c) => ({
+            ...c,
+            messages: c.messages.map((mm) => mm.id === aiId ? { ...mm, streaming: false, cites: reply.cites, thinking: false, research: false } : mm),
+          }));
+          setLoading(false);
+          if (reply.art) { setArtifact(reply.art); setPanelOpen(true); }
+          if (reply.openImg) { setImgGen(true); }
+          return;
+        }
+        idx++;
+        const partial = words.slice(0, idx).join(' ');
+        updateConv(convId, (c) => ({ ...c, messages: c.messages.map((mm) => mm.id === aiId ? { ...mm, content: partial } : mm) }));
+        tms.current.push(setTimeout(step, 25 + Math.random() * 30));
+      };
+      step();
+    };
+
+    const startResearchOrReply = () => {
+      if (abortRef.current) { setLoading(false); return; }
+      if (isRes) {
+        let r = 0;
+        const ri = () => {
+          if (abortRef.current) return;
+          r++;
+          updateConv(convId, (c) => ({ ...c, messages: c.messages.map((mm) => mm.id === aiId ? { ...mm, rp: r } : mm) }));
+          if (r < RES.length) tms.current.push(setTimeout(ri, 600 + Math.random() * 400));
+          else tms.current.push(setTimeout(stream, 400));
+        };
+        tms.current.push(setTimeout(ri, 400));
+      } else stream();
+    };
+
+    if (isThink) {
+      let s = 0;
+      const ti = () => {
+        if (abortRef.current) return;
+        s++;
+        updateConv(convId, (c) => ({ ...c, messages: c.messages.map((mm) => mm.id === aiId ? { ...mm, tp: s } : mm) }));
+        if (s < THINK.length) tms.current.push(setTimeout(ti, 500 + Math.random() * 350));
+        else tms.current.push(setTimeout(startResearchOrReply, 400));
+      };
+      tms.current.push(setTimeout(ti, 450));
+    } else tms.current.push(setTimeout(startResearchOrReply, 650));
+  };
+
+  const stop = () => { abortRef.current = true; setLoading(false); toast('تم الإيقاف'); };
+  const onKey = (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } };
+
+  const genImage = () => { setGenning(true); setTimeout(() => { setGenning(false); setGenImgs((p) => [HERO, LOGO].concat(p).slice(0, 6)); toast('تم توليد الصورة ✨'); }, 1800); };
+
+  const addTask = () => {
+    if (!newTask.trim()) return;
+    setTasks((p) => p.concat([{ id: 't' + Date.now(), text: newTask.trim(), prio: 'medium', done: false }]));
+    setNewTask('');
+    toast('تمت إضافة المهمة ✓');
+  };
+
+  const toggleTask = (id) => setTasks((p) => p.map((t) => t.id === id ? { ...t, done: !t.done } : t));
+  const delTask = (id) => { setTasks((p) => p.filter((t) => t.id !== id)); toast('تم حذف المهمة'); };
+  const delMem = (i) => { setMems((p) => p.filter((_, idx) => idx !== i)); toast('تم حذف الذكرى'); };
+
+  const filtered = convs.filter((c) => c.title.toLowerCase().includes(search.toLowerCase()));
+
+  const PAL = [
+    { l: 'محادثة جديدة', ic: I.Plus, fn: newChat, k: 'Ctrl+N' },
+    { l: 'تبديل الثيم', ic: theme === 'dark' ? I.Sun : I.Moon, fn: () => setTheme(theme === 'dark' ? 'light' : 'dark'), k: '' },
+    { l: 'فتح التحليلات', ic: I.Chart, fn: () => setView('analytics'), k: '' },
+    { l: 'فتح الذاكرة', ic: I.Memory, fn: () => setView('memory'), k: '' },
+    { l: 'فتح الوكلاء', ic: I.Bot, fn: () => setView('agents'), k: '' },
+    { l: 'فتح المهام', ic: I.Tasks, fn: () => setView('tasks'), k: '' },
+    { l: 'فتح Canvas', ic: I.Canvas, fn: () => setView('canvas'), k: '' },
+    { l: 'مكتبة البرومبتات', ic: I.Prompt, fn: () => setView('prompts'), k: '' },
+    { l: 'وضع الصوت', ic: I.Mic, fn: () => setVoice(true), k: '' },
+    { l: 'توليد صورة', ic: I.Image, fn: () => setImgGen(true), k: '' },
+    { l: 'الإعدادات', ic: I.Settings, fn: () => setSettings(true), k: '' },
+  ].filter((a) => !palQ || a.l.includes(palQ));
+
+  const renderInline = (t) => t.split(/(\*\*[^*]+\*\*)/g).map((p, i) => p.startsWith('**') && p.endsWith('**') ? <strong key={i}>{p.slice(2, -2)}</strong> : p);
+
+  const renderContent = (text) => text.split('\n').map((l, i) => {
+    if (l.startsWith('# ')) return <h2 key={i} style={{ fontSize: 19, fontWeight: 800, margin: '14px 0 8px' }}>{l.slice(2)}</h2>;
+    if (l.startsWith('## ')) return <h3 key={i} style={{ fontSize: 16, fontWeight: 800, margin: '12px 0 6px', color: 'var(--pr)' }}>{l.slice(3)}</h3>;
+    if (l.startsWith('• ') || l.startsWith('- ')) return <div key={i} style={{ display: 'flex', gap: 8, margin: '3px 0', paddingRight: 6 }}><span style={{ color: 'var(--pr)', fontWeight: 800 }}>•</span><span>{renderInline(l.slice(2))}</span></div>;
+    if (l.startsWith('|')) return <div key={i} style={{ fontFamily: 'monospace', fontSize: 12.5, padding: '2px 8px', background: 'var(--bg3)', borderRadius: 6, margin: '2px 0', direction: 'ltr' }}>{l}</div>;
+    if (!l.trim()) return <div key={i} style={{ height: 8 }} />;
+    return <p key={i} style={{ margin: '3px 0' }}>{renderInline(l)}</p>;
+  });
+
+  const NAV = [
+    { id: 'chat', l: 'المحادثة', ic: I.Msg },
+    { id: 'analytics', l: 'التحليلات', ic: I.Chart },
+    { id: 'tasks', l: 'المهام الذكية', ic: I.Tasks },
+    { id: 'canvas', l: 'Canvas', ic: I.Canvas },
+    { id: 'memory', l: 'الذاكرة', ic: I.Memory },
+    { id: 'agents', l: 'الوكلاء', ic: I.Bot },
+    { id: 'prompts', l: 'البرومبتات', ic: I.Prompt },
+  ];
+
+  const doneCount = tasks.filter((t) => t.done).length;
+
+  return (
+    <div className="nv" data-theme={theme}>
+      <style>{CSS}</style>
+      <div className={'overlay' + (sidebarOpen ? ' show' : '')} onClick={() => setSidebarOpen(false)} />
+
+      {/* ═══ Sidebar ═══ */}
+      <AnimatePresence>
+        {sidebarOpen && (
+          <motion.aside className="sb" initial={{ marginRight: -288, opacity: 0 }} animate={{ marginRight: 0, opacity: 1 }} exit={{ marginRight: -288, opacity: 0 }} transition={{ duration: .22 }}>
+            <div className="sb-top">
+              <div className="brand">
+                <img src={LOGO} alt="Nova" />
+                <div>
+                  <div className="brand-n"><b>Nova</b> Ultra</div>
+                  <div className="brand-t">نظام التشغيل الشخصي · 2026</div>
+                </div>
+              </div>
+              <button className="newchat" onClick={newChat}><I.Plus size={16} /> محادثة جديدة</button>
+              <div className="searchbox"><input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="ابحث في المحادثات..." /><I.Search size={14} /></div>
+            </div>
+            <div className="navsec">التطبيقات</div>
+            <div style={{ overflowY: 'auto', maxHeight: 250 }}>
+              {NAV.map((n) => {
+                const NavIcon = n.ic;
+                return (
+                  <div key={n.id} className={'navitem' + (view === n.id ? ' on' : '')} onClick={() => setView(n.id)}>
+                    <NavIcon size={16} /> {n.l}
+                    {n.id === 'agents' && <span className="cnt">{AGENTS.length}</span>}
+                    {n.id === 'memory' && <span className="cnt">{mems.length}</span>}
+                    {n.id === 'tasks' && <span className="cnt">{doneCount}/{tasks.length}</span>}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="navsec">المحادثات</div>
+            <div className="convlist">
+              {filtered.map((c) => (
+                <div key={c.id} className={'conv' + (c.id === activeId ? ' on' : '')} onClick={() => { setActiveId(c.id); setView('chat'); setArtifact(null); }}>
+                  <I.Msg size={14} style={{ color: c.id === activeId ? 'var(--pr)' : 'var(--tx3)', flexShrink: 0 }} />
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <span className="t">{c.title}</span>
+                    <div className="meta">{c.messages.length} رسالة · {new Date(c.createdAt).toLocaleDateString('ar-SA', { day: 'numeric', month: 'short' })}</div>
+                  </div>
+                  <button className="del" onClick={(e) => delConv(c.id, e)}><I.Trash size={13} /></button>
+                </div>
+              ))}
+            </div>
+            <div className="userstrip">
+              <div className="uav">م</div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontSize: 12.5, fontWeight: 700 }}>محمد عادل</div>
+                <div style={{ fontSize: 10.5, color: 'var(--pr)', display: 'flex', alignItems: 'center', gap: 4 }}><I.Zap size={11} /> خطة Ultra</div>
+              </div>
+              <button className="icb" style={{ padding: 6 }} onClick={() => setSettings(true)}><I.Settings size={16} /></button>
+            </div>
+          </motion.aside>
+        )}
+      </AnimatePresence>
+
+      {/* ═══ Main ═══ */}
+      <main className="mn">
+        <div className="top">
+          <button className="icb" onClick={() => setSidebarOpen(!sidebarOpen)}><I.Menu size={18} /></button>
+          <div style={{ position: 'relative' }}>
+            <button className="pill" onClick={() => setModelMenu(!modelMenu)}><span className="dot" />{curModel.name}<I.ChevronD size={14} style={{ color: 'var(--tx3)' }} /></button>
+            <AnimatePresence>
+              {modelMenu && (
+                <motion.div initial={{ opacity: 0, y: -6, scale: .97 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -6, scale: .97 }} transition={{ duration: .15 }}
+                  style={{ position: 'absolute', top: 'calc(100% + 6px)', right: 0, background: 'var(--bg2)', border: '1px solid var(--bd)', borderRadius: 14, boxShadow: 'var(--slg)', zIndex: 60, width: 280, overflow: 'hidden' }}>
+                  {MODELS.map((mm) => (
+                    <button key={mm.id} onClick={() => { setModel(mm.id); setModelMenu(false); toast('تم التبديل إلى ' + mm.name); }}
+                      style={{ display: 'flex', alignItems: 'center', gap: 11, width: '100%', padding: '11px 14px', border: 'none', background: model === mm.id ? 'var(--gsoft)' : 'transparent', textAlign: 'right', transition: 'background .15s', cursor: 'pointer' }}>
+                      <span style={{ fontSize: 19 }}>{mm.icon}</span>
+                      <span style={{ flex: 1 }}>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 700, color: 'var(--tx)' }}>{mm.name}
+                          {mm.badge && <span style={{ fontSize: 9.5, padding: '2px 6px', borderRadius: 20, background: 'var(--grad)', color: '#fff', fontWeight: 800 }}>{mm.badge}</span>}
+                        </span>
+                        <span style={{ fontSize: 11, color: 'var(--tx2)' }}>{mm.desc}</span>
+                      </span>
+                      {model === mm.id && <I.Check size={15} style={{ color: 'var(--pr)' }} />}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          <div className="tabs">
+            <button className={'tab' + (mode === 'chat' ? ' on' : '')} onClick={() => setMode('chat')}><I.Msg size={14} /> دردشة</button>
+            <button className={'tab' + (mode === 'research' ? ' on' : '')} onClick={() => setMode('research')}><I.Research size={14} /> بحث</button>
+            <button className={'tab' + (mode === 'code' ? ' on' : '')} onClick={() => setMode('code')}><I.Code size={14} /> كود</button>
+          </div>
+          <div className="tright">
+            <button className="icb" title="لوحة الأوامر (Ctrl+K)" onClick={() => setPalette(true)}><I.Command size={17} /></button>
+            <button className="icb" title="توليد صورة" onClick={() => setImgGen(true)}><I.Image size={17} /></button>
+            <button className="icb" title="وضع الصوت" onClick={() => setVoice(true)}><I.Mic size={17} /></button>
+            <button className="icb" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>{theme === 'dark' ? <I.Sun size={17} /> : <I.Moon size={17} />}</button>
+          </div>
+        </div>
+
+        {/* ═══ Analytics ═══ */}
+        {view === 'analytics' && (
+          <div className="view">
+            <div className="vhead"><I.Chart size={22} style={{ color: 'var(--pr)' }} /><h2>التحليلات والرؤى</h2></div>
+            <div className="cards">
+              <div className="card"><div className="lb"><I.Zap size={14} style={{ color: '#f59e0b' }} /> نقاط الإنتاجية</div><div className="vl">8,540</div><div className="sub">+12% هذا الأسبوع</div></div>
+              <div className="card"><div className="lb"><I.Msg size={14} style={{ color: '#7c3aed' }} /> محادثات AI</div><div className="vl">{convs.length}</div><div className="sub">94% معدل الرضا</div></div>
+              <div className="card"><div className="lb"><I.Clock size={14} style={{ color: '#06b6d4' }} /> ساعات التركيز</div><div className="vl">46.5</div><div className="sub">متوسط 6.6 ساعة/يوم</div></div>
+              <div className="card"><div className="lb"><I.Tasks size={14} style={{ color: '#22c55e' }} /> المهام المنجزة</div><div className="vl">{doneCount}/{tasks.length}</div><div className="sub">{Math.round((doneCount / Math.max(tasks.length, 1)) * 100)}% نسبة الإنجاز</div></div>
+            </div>
+            <div className="charts-grid">
+              <div className="chartbox"><h3>النشاط الأسبوعي</h3><AreaChartSVG data={ACTIVITY} /></div>
+              <div className="chartbox"><h3>توزيع الفئات</h3><DonutSVG data={CATS} /></div>
+              <div className="chartbox"><h3>خريطة المهارات</h3><RadarSVG data={SKILLS} /></div>
+              <div className="chartbox"><h3>ساعات التركيز اليومية</h3><BarSVG data={ACTIVITY} /></div>
+            </div>
+          </div>
+        )}
+
+        {/* ═══ Tasks ═══ */}
+        {view === 'tasks' && (
+          <div className="view">
+            <div className="vhead"><I.Tasks size={22} style={{ color: 'var(--pr)' }} /><h2>المهام الذكية</h2>
+              <span style={{ marginRight: 'auto', fontSize: 12, color: 'var(--tx2)' }}>{doneCount} منجزة من {tasks.length}</span>
+            </div>
+            <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+              <input value={newTask} onChange={(e) => setNewTask(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') addTask(); }}
+                placeholder="أضف مهمة جديدة..." style={{ flex: 1, padding: '10px 14px', borderRadius: 12, border: '1px solid var(--bd)', background: 'var(--bg2)', color: 'var(--tx)', fontSize: 13, outline: 'none' }} />
+              <button className="newchat" style={{ width: 'auto', padding: '10px 18px' }} onClick={addTask}><I.Plus size={15} /> إضافة</button>
+            </div>
+            <AnimatePresence>
+              {tasks.map((t) => (
+                <motion.div key={t.id} className={'taskrow' + (t.done ? ' done' : '')} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, x: -30 }}>
+                  <button className="cb" onClick={() => toggleTask(t.id)}>{t.done && <I.Check size={13} style={{ color: '#fff' }} />}</button>
+                  <span style={{ flex: 1, fontSize: 13.5, textDecoration: t.done ? 'line-through' : 'none' }}>{t.text}</span>
+                  <span className={'badge ' + (t.prio === 'high' ? 'priohigh' : t.prio === 'medium' ? 'priomed' : 'priolow')}>
+                    {t.prio === 'high' ? 'عالية' : t.prio === 'medium' ? 'متوسطة' : 'منخفضة'}
+                  </span>
+                  <button className="icb" style={{ padding: 5 }} onClick={() => delTask(t.id)}><I.Trash size={14} /></button>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
+        )}
+
+        {/* ═══ Memory ═══ */}
+        {view === 'memory' && (
+          <div className="view">
+            <div className="vhead"><I.Memory size={22} style={{ color: 'var(--pr)' }} /><h2>الذاكرة طويلة المدى</h2></div>
+            <p style={{ fontSize: 13, color: 'var(--tx2)', marginBottom: 18 }}>كل ما تعلمه Nova عنك — يُستخدم لتخصيص كل إجابة.</p>
+            {mems.map((mm, i) => {
+              const MemIcon = mm.ic;
+              return (
+                <motion.div key={i} className="mem" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * .05 }}>
+                  <span className="ic" style={{ background: mm.c + '22', color: mm.c, width: 34, height: 34, borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}><MemIcon size={16} /></span>
+                  <div style={{ flex: 1 }}><div className="tt">{mm.t}</div><div className="ss">{mm.s}</div></div>
+                  <button className="icb" style={{ padding: 6 }} onClick={() => delMem(i)}><I.Trash size={14} /></button>
+                </motion.div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* ═══ Agents ═══ */}
+        {view === 'agents' && (
+          <div className="view">
+            <div className="vhead"><I.Bot size={22} style={{ color: 'var(--pr)' }} /><h2>الوكلاء الأذكياء</h2></div>
+            <p style={{ fontSize: 13, color: 'var(--tx2)', marginBottom: 18 }}>وكلاء مستقلون يعملون في الخلفية لإنجاز مهامك تلقائياً.</p>
+            {AGENTS.map((a, i) => {
+              const AgIcon = a.ic;
+              return (
+                <motion.div key={i} className="agent" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * .05 }}>
+                  <span className="aic" style={{ background: a.col + '22', color: a.col }}><AgIcon size={18} /></span>
+                  <div style={{ flex: 1 }}>
+                    <div className="nm">{a.n}</div>
+                    <div className="st" style={{ color: a.c }}><span className="d" style={{ background: a.c, animation: 'bl 1.6s infinite' }} />{a.st}</div>
+                    <div className="ds">{a.d}</div>
+                  </div>
+                  <button className="pill" style={{ fontSize: 11, padding: '6px 12px' }} onClick={() => toast('تشغيل ' + a.n + '...')}><I.Play size={12} /> تشغيل</button>
+                </motion.div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* ═══ Prompts ═══ */}
+        {view === 'prompts' && (
+          <div className="view">
+            <div className="vhead"><I.Prompt size={22} style={{ color: 'var(--pr)' }} /><h2>مكتبة البرومبتات</h2></div>
+            <p style={{ fontSize: 13, color: 'var(--tx2)', marginBottom: 18 }}>قوالب جاهزة لاستخدام Nova بفعالية أكبر.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 12 }}>
+              {PROMPTS.map((p, i) => (
+                <motion.div key={i} className="card" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * .05 }}
+                  style={{ cursor: 'pointer' }} onClick={() => { setInput(p.d); setView('chat'); toast('تم تحميل البرومبت ✓'); }}>
+                  <div style={{ width: 36, height: 36, borderRadius: 10, background: p.c + '22', color: p.c, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 10 }}><I.Star size={18} /></div>
+                  <div style={{ fontSize: 14, fontWeight: 700, marginBottom: 5 }}>{p.t}</div>
+                  <div style={{ fontSize: 12, color: 'var(--tx2)', lineHeight: 1.6 }}>{p.d}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ═══ Canvas ═══ */}
+        {view === 'canvas' && (
+          <div className="view">
+            <div className="vhead"><I.Canvas size={22} style={{ color: 'var(--pr)' }} /><h2>Canvas — محرر المستندات</h2>
+              <div style={{ marginRight: 'auto', display: 'flex', gap: 8 }}>
+                <button className="pill" onClick={() => { if (navigator.clipboard) navigator.clipboard.writeText(canvasText); toast('تم النسخ ✓'); }}><I.Copy size={14} /> نسخ</button>
+                <button className="pill" onClick={() => toast('تم الحفظ ✓')}><I.Download size={14} /> حفظ</button>
+              </div>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, height: 'calc(100% - 70px)' }}>
+              <textarea value={canvasText} onChange={(e) => setCanvasText(e.target.value)} dir="rtl"
+                style={{ background: 'var(--bg2)', border: '1px solid var(--bd)', borderRadius: 14, padding: 16, color: 'var(--tx)', fontSize: 14, lineHeight: 1.8, resize: 'none', outline: 'none' }} />
+              <div style={{ background: 'var(--bg2)', border: '1px solid var(--bd)', borderRadius: 14, padding: 16, overflowY: 'auto' }}>
+                <div className="aict">{renderContent(canvasText)}</div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ═══ Chat ═══ */}
+        {view === 'chat' && (messages.length === 0 ? (
+          <div className="empty">
+            <motion.img src={HERO} className="hero" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .5 }} alt="" />
+            <motion.h1 initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .1 }}>مرحباً، أنا Nova Ultra</motion.h1>
+            <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .18 }}>نظامك الذكي المتكامل — ابحث، برمج، حلل، ولّد الصور بذكاء خارق</motion.p>
+            <motion.div className="caps" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .26 }}>
+              {SUGGESTIONS.map((c, i) => {
+                const CapIcon = c.ic;
+                return (
+                  <button key={i} className="cap" onClick={() => send(c.p)}>
+                    <span className="ci" style={{ background: c.c + '18', color: c.c }}><CapIcon size={16} /></span>{c.l}
+                  </button>
+                );
+              })}
+            </motion.div>
+          </div>
+        ) : (
+          <div className="msgs"><div className="mwrap">
+            <AnimatePresence initial={false}>
+              {messages.map((msg) => (
+                <motion.div key={msg.id} className="msg" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .28 }}>
+                  {msg.role === 'user' ? (
+                    <div style={{ display: 'flex', justifyContent: 'flex-start' }}><div className="ubub">{msg.content}</div></div>
+                  ) : (
+                    <div className="airow">
+                      <div className="aiav"><img src={LOGO} alt="" /></div>
+                      <div className="aibody">
+                        {msg.thinking && msg.tp > 0 && (
+                          <div className="think">
+                            <div className="think-h" onClick={() => setThinkOpen(!thinkOpen)}>
+                              <span className="ic"><I.Brain size={13} /></span>التفكير العميق
+                              <span className="tm">{msg.tp >= THINK.length ? 'اكتمل ✓' : 'يفكر...'}</span>
+                              <I.ChevronD size={14} style={{ transform: thinkOpen ? 'rotate(180deg)' : 'none', transition: 'transform .2s' }} />
+                            </div>
+                            <AnimatePresence>{thinkOpen && (
+                              <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} style={{ overflow: 'hidden', paddingBottom: 8 }}>
+                                {THINK.slice(0, msg.tp).map((s, i) => <div key={i} className="tstep"><span className="n">{i + 1}</span><span>{s}</span></div>)}
+                              </motion.div>
+                            )}</AnimatePresence>
+                          </div>
+                        )}
+                        {msg.research && msg.rp > 0 && (
+                          <div className="res">
+                            <div className="res-h"><I.Research size={16} style={{ color: 'var(--pr)' }} />البحث العميق<span style={{ marginRight: 'auto', fontSize: 11, color: 'var(--tx3)' }}>{msg.rp}/{RES.length}</span></div>
+                            {RES.map((s, i) => {
+                              const done = i < msg.rp;
+                              const act = i === msg.rp;
+                              return (
+                                <div key={i} className={'rstep ' + (done ? 'done' : act ? 'act' : '')}>
+                                  <span className="rc">{done ? <I.Check size={12} /> : act ? <motion.span animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }} style={{ display: 'flex' }}><I.Refresh size={12} /></motion.span> : null}</span>
+                                  <span className="rt">{s}</span>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        )}
+                        {msg.content ? <div className="aict">{renderContent(msg.content)}{msg.streaming && <span className="cur" />}</div>
+                        : msg.streaming && !msg.thinking && !msg.research ? <div className="typing"><span /><span /><span /></div> : null}
+                        {msg.cites && msg.cites.length > 0 && !msg.streaming && (
+                          <div className="cites">{msg.cites.map((c, i) => <div key={i} className="cite" onClick={() => toast('فتح ' + c.d + '...')}><span className="cn">{i + 1}</span><span>{c.t}</span><span style={{ color: 'var(--tx3)', fontSize: 10.5 }}>{c.d}</span></div>)}</div>
+                        )}
+                        {!msg.streaming && msg.content && (
+                          <div className="macts">
+                            <button className="act" onClick={() => copyMsg(msg.id, msg.content)}>{copiedId === msg.id ? <I.Check size={15} style={{ color: 'var(--pr)' }} /> : <I.Copy size={15} />}</button>
+                            <button className="act" onClick={() => toast('شكراً لتقييمك 👍')}><I.ThumbUp size={15} /></button>
+                            <button className="act" onClick={() => toast('سنحسّن الإجابة 🙏')}><I.ThumbDown size={15} /></button>
+                            <button className="act" onClick={() => toast('إعادة التوليد...')}><I.Refresh size={15} /></button>
+                            <button className="act" onClick={() => toast('تمت المشاركة 🔗')}><I.Share size={15} /></button>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </AnimatePresence>
+            <div ref={endRef} />
+          </div></div>
+        ))}
+
+        {view === 'chat' && (
+          <div className="inarea">
+            <div className="inbox">
+              <textarea ref={taRef} rows={1} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={onKey}
+                placeholder={mode === 'research' ? 'ما الذي تريد البحث عنه بعمق؟' : mode === 'code' ? 'صف ما تريد بناءه...' : 'اسأل Nova Ultra أي شيء...'} />
+              <div className="tools">
+                <button className="tbtn" title="إرفاق ملف" onClick={() => toast('رفع الملفات قريباً 📎')}><I.Paperclip size={17} /></button>
+                <button className="tbtn" title="توليد صورة" onClick={() => setImgGen(true)}><I.Image size={17} /></button>
+                <button className={'tbtn' + (deepThink ? ' on' : '')} title="تفكير عميق" onClick={() => setDeepThink(!deepThink)}><I.Brain size={17} /></button>
+                <button className={'tbtn' + (webSearch ? ' on' : '')} title="بحث الويب" onClick={() => setWebSearch(!webSearch)}><I.Globe size={17} /></button>
+                <button className="tbtn" title="وضع الصوت" onClick={() => setVoice(true)}><I.Mic size={17} /></button>
+                <button className="tbtn" title="لوحة الأوامر" onClick={() => setPalette(true)}><I.Command size={17} /></button>
+                {loading ? <button className="sendb stop" onClick={stop}><I.Stop size={16} /></button>
+                : <button className="sendb" onClick={() => send()} disabled={!input.trim()}><I.Send size={16} style={{ transform: 'scaleX(-1)' }} /></button>}
+              </div>
+            </div>
+            <div className="hint"><b>{curModel.name}</b> قد يخطئ أحياناً · Ctrl+K للأوامر · Enter للإرسال</div>
+          </div>
+        )}
+      </main>
+
+      {/* ═══ Artifacts Panel ═══ */}
+      <AnimatePresence>
+        {panelOpen && artifact && (
+          <motion.aside className="rp" initial={{ marginLeft: -430, opacity: 0 }} animate={{ marginLeft: 0, opacity: 1 }} exit={{ marginLeft: -430, opacity: 0 }} transition={{ duration: .25 }}>
+            <div className="rp-h">
+              <span style={{ width: 28, height: 28, borderRadius: 8, background: 'var(--gsoft)', color: 'var(--pr)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {artifact.type === 'code' ? <I.Code size={15} /> : artifact.type === 'run' ? <I.Terminal size={15} /> : <I.Canvas size={15} />}
+              </span>
+              <span className="tt">{artifact.title}</span>
+              <button className="icb" style={{ padding: 6 }} onClick={() => { if (navigator.clipboard) navigator.clipboard.writeText(artifact.code || artifact.content); toast('تم النسخ ✓'); }}><I.Copy size={15} /></button>
+              <button className="icb" style={{ padding: 6 }} onClick={() => setPanelOpen(false)}><I.X size={15} /></button>
+            </div>
+            <div className="rp-b">
+              {artifact.type === 'code' && (
+                <div>
+                  <div className="codeblk">
+                    <div className="code-h"><span style={{ fontWeight: 800 }}>{artifact.lang}</span><span>{artifact.code.split('\n').length} سطر</span></div>
+                    <div className="code-b">{artifact.code}</div>
+                  </div>
+                  <div style={{ display: 'flex', gap: 8 }}>
+                    <button className="newchat" style={{ flex: 1 }} onClick={() => toast('تشغيل الكود... ⚡')}><I.Play size={14} /> تشغيل</button>
+                    <button className="pill" onClick={() => toast('تم الحفظ ✓')}><I.Download size={14} /></button>
+                  </div>
+                </div>
+              )}
+              {artifact.type === 'run' && (
+                <div>
+                  <div className="codeblk">
+                    <div className="code-h"><span style={{ fontWeight: 800 }}>الكود</span></div>
+                    <div className="code-b">{artifact.code}</div>
+                  </div>
+                  <div className="termblk">
+                    <div style={{ color: '#8b949e', marginBottom: 8 }}>➜ node script.js</div>
+                    {artifact.output.split('\n').map((l, i) => <div key={i}>{l}</div>)}
+                  </div>
+                </div>
+              )}
+              {artifact.type === 'doc' && (
+                <div style={{ background: 'var(--bg3)', border: '1px solid var(--bd)', borderRadius: 13, padding: 16 }}>
+                  <div className="aict">{renderContent(artifact.content)}</div>
+                </div>
+              )}
+            </div>
+          </motion.aside>
+        )}
+      </AnimatePresence>
+
+      {/* ═══ Command Palette ═══ */}
+      <AnimatePresence>{palette && (
+        <motion.div className="pal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setPalette(false)}>
+          <motion.div className="pal-card" initial={{ scale: .96, y: -10 }} animate={{ scale: 1, y: 0 }} exit={{ scale: .96, y: -10 }} onClick={(e) => e.stopPropagation()}>
+            <div className="pal-in"><I.Command size={16} style={{ color: 'var(--pr)' }} /><input autoFocus value={palQ} onChange={(e) => setPalQ(e.target.value)} placeholder="اكتب أمراً... (محادثة، تحليلات، مهام...)" /><kbd style={{ fontSize: 10, color: 'var(--tx3)', background: 'var(--bg3)', padding: '2px 6px', borderRadius: 5 }}>ESC</kbd></div>
+            <div style={{ maxHeight: 340, overflowY: 'auto' }}>
+              {PAL.map((a, i) => {
+                const PalIcon = a.ic;
+                return <div key={i} className="pal-item" onClick={() => { a.fn(); setPalette(false); setPalQ(''); }}><PalIcon size={16} />{a.l}{a.k && <kbd>{a.k}</kbd>}</div>;
+              })}
+            </div>
+          </motion.div>
+        </motion.div>
+      )}</AnimatePresence>
+
+      {/* ═══ Voice Mode ═══ */}
+      <AnimatePresence>{voice && (
+        <motion.div className="voice" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+          <motion.div className="orb" animate={{ scale: [1, 1.08, 1] }} transition={{ duration: 2, repeat: Infinity }}><img src={LOGO} alt="" /></motion.div>
+          <div className="wave">{Array.from({ length: 14 }).map((_, i) => <span key={i} style={{ animationDelay: (i * .08) + 's', height: 20 + (i % 5) * 9 }} />)}</div>
+          <div className="st">Nova يستمع ويتحدث...</div>
+          <motion.div className="tx" key={voiceLine} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>{voiceLine}</motion.div>
+          <button className="sendb stop" style={{ marginTop: 30, width: 52, height: 52, borderRadius: '50%' }} onClick={() => setVoice(false)}><I.Stop size={20} /></button>
+        </motion.div>
+      )}</AnimatePresence>
+
+      {/* ═══ Image Gen ═══ */}
+      <AnimatePresence>{imgGen && (
+        <motion.div className="modal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setImgGen(false)}>
+          <motion.div className="modal-card" initial={{ scale: .95, y: 14 }} animate={{ scale: 1, y: 0 }} exit={{ scale: .95, y: 14 }} onClick={(e) => e.stopPropagation()}>
+            <div className="modal-h"><I.Image size={18} style={{ color: 'var(--pr)' }} /><span className="tt">توليد الصور بالذكاء الاصطناعي</span><button className="icb" onClick={() => setImgGen(false)}><I.X size={16} /></button></div>
+            <div className="modal-b">
+              <button className="newchat" style={{ marginBottom: 16 }} onClick={genImage} disabled={genning}>{genning ? 'جارٍ التوليد...' : '✨ توليد صورة جديدة'}</button>
+              <div className="imggrid">
+                {genImgs.map((src, i) => (
+                  <div key={i} className="imgcard">{genning && i === 0 ? <div className="gen"><motion.span animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }} style={{ display: 'flex' }}><I.Refresh size={22} /></motion.span></div> : <img src={src} alt="" />}</div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}</AnimatePresence>
+
+      {/* ═══ Settings ═══ */}
+      <AnimatePresence>{settings && (
+        <motion.div className="modal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setSettings(false)}>
+          <motion.div className="modal-card" initial={{ scale: .95, y: 14 }} animate={{ scale: 1, y: 0 }} exit={{ scale: .95, y: 14 }} onClick={(e) => e.stopPropagation()}>
+            <div className="modal-h"><I.Settings size={18} style={{ color: 'var(--pr)' }} /><span className="tt">الإعدادات</span><button className="icb" onClick={() => setSettings(false)}><I.X size={16} /></button></div>
+            <div className="modal-b">
+              {[{ l: 'التفكير العميق افتراضياً', d: deepThink, f: () => setDeepThink(!deepThink) },
+                { l: 'بحث الويب التلقائي', d: webSearch, f: () => setWebSearch(!webSearch) },
+                { l: 'الوضع الداكن', d: theme === 'dark', f: () => setTheme(theme === 'dark' ? 'light' : 'dark') }].map((s, i) => (
+                <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 0', borderBottom: '1px solid var(--bd)' }}>
+                  <span style={{ fontSize: 13.5, fontWeight: 600 }}>{s.l}</span>
+                  <button onClick={s.f} style={{ width: 46, height: 26, borderRadius: 20, border: 'none', cursor: 'pointer', background: s.d ? 'var(--grad)' : 'var(--bg4)', position: 'relative', transition: 'background .2s' }}>
+                    <motion.span layout transition={{ type: 'spring', stiffness: 500, damping: 30 }} style={{ position: 'absolute', top: 3, width: 20, height: 20, borderRadius: '50%', background: '#fff', right: s.d ? 3 : 23 }} />
+                  </button>
+                </div>
+              ))}
+              <div style={{ marginTop: 16, fontSize: 12, color: 'var(--tx3)', textAlign: 'center' }}>Nova Ultra v4.0 · صُنع بواسطة محمد عادل 🇵🇸</div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}</AnimatePresence>
+
+      {/* ═══ Toasts ═══ */}
+      <div className="toasts">
+        <AnimatePresence>{toasts.map((t) => (
+          <motion.div key={t.id} className="toast" initial={{ opacity: 0, y: 14, scale: .95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, scale: .95 }}><I.Sparkles size={14} style={{ color: 'var(--pr)' }} />{t.t}</motion.div>
+        ))}</AnimatePresence>
+      </div>
+    </div>
+  );
+}

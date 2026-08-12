@@ -1,0 +1,122 @@
+Amie MCP Server: Calendar, Todos & Meeting Notes for AI Agents
+
+[/] 
+
+Features
+
+[/pricing] Pricing
+
+[https://calendar.amie.so/login] Login[https://calendar.amie.so/login] Get started
+
+The Amie MCP server.
+Your calendar, wherever your agent lives.
+
+Give Claude, Codex, Cursor, or any MCP-compatible agent your calendar, todos, and meeting notes. Schedule events, send invites, manage tasks, and search every transcript, straight from chat. Works across all your Gmail and Google Calendar accounts, not just one.
+
+[https://calendar.amie.so/login] Get startedWatch demo
+
+Connect in a minute
+
+Amie's MCP server is remote. Nothing to install, nothing to run. Point your agent at the URL, sign in with your Amie account when the OAuth prompt appears, and you're connected.
+
+Server URL
+
+https://mcp.amie.so
+
+Claude Code
+
+claude mcp add amie https://mcp.amie.so -t http
+
+Or paste this into any agent and let it set itself up
+
+Add the Amie MCP server: it's a remote MCP server named "amie" at https://mcp.amie.so (HTTP transport, sign in via OAuth when prompted). Then confirm it works by listing my next three calendar events.
+
+In Claude on web or desktop, go to Settings → Connectors → Add custom connector and paste the server URL. Cursor, Codex, and other MCP clients work the same way: add a remote HTTP server, approve the sign-in, done.
+
+All your accounts. One server.
+
+Most Gmail and Google Calendar MCP servers authenticate a single account, so your agent only ever sees part of your schedule. Amie supports multiple accounts: connect work and personal Gmail and Google Calendar, as many as you have, and your agent sees all of them through one connection. It checks availability across every calendar, books from the right account, and never asks you to reconnect just to switch contexts.
+
+What your agent can do
+
+One connection covers three surfaces. Your agent reads your meeting notes, transcripts, and action items. It creates, updates, and completes your todos. And it works your calendar for real: checking availability, creating events, sending invites, and RSVPing on your behalf.
+
+Search meeting notes
+
+Full transcripts
+
+Action items
+
+Create & complete todos
+
+Todo lists & labels
+
+Read your schedule
+
+Create events
+
+Send & suppress invites
+
+RSVP for you
+
+Contact lookup
+
+Google & Outlook
+
+Multiple Gmail & GCal accounts
+
+Calendar view in chat
+
+Works in any MCP client
+
+OAuth 2.1, scoped access
+
+Ask things like
+
+“What's on my work and personal calendars tomorrow? Decline the 4pm.”
+
+“Summarize the takeaways from my meeting with Alex yesterday.”
+
+“What action items did I commit to last week? Turn them into todos.”
+
+“Book 30 minutes with alex@example.com on Thursday morning.”
+
+Your agent resolves names to real contacts, checks your actual availability, and books the event, invites included. No copy-pasting schedules into chat, no hallucinated calendars.
+
+Secure by design
+
+The connection uses OAuth 2.1 with PKCE, and every tool call is checked against explicit scopes. Meeting notes are read-only, while todo and calendar access is granted separately. Tokens are stored hashed, expire hourly, and can be revoked anytime from Amie's settings. Your agent sees your account and nothing else, and Amie never logs your conversation content.
+
+Questions, answered
+
+What is the Amie MCP server?
+
+Which AI apps does it work with?
+
+What is MCP?
+
+Do I need a separate Google Calendar MCP or Gmail MCP server?
+
+Can I connect multiple Gmail and Google Calendar accounts?
+
+Is my data safe?
+
+How much does it cost?
+
+Setup guides
+
+[/mcp/claude-code] Claude Code MCP setup. One command, scopes explained →[/mcp/claude-desktop] Claude Desktop MCP setup. Connectors and the config file →[/mcp/chatgpt] ChatGPT MCP setup. Custom connectors in developer mode →[/mcp/codex] Codex MCP setup. config.toml and the CLI →[/mcp/cursor] Cursor MCP setup. mcp.json, global or per project →[/mcp/google-calendar] Google Calendar MCP. Self-hosted setup vs. the hosted route →
+
+Your agent is ready when you are.
+
+[https://calendar.amie.so/login] Get Amie
+
+[/blog] Blog[/stories] Our Story[/calendar] Calendar[/changelog] Changelog[/tools] Tools[/templates] Templates[/alternatives] Alternatives[/best] Best Apps[/mcp] MCP Server[/recording-api] Recording API[/routines] Routines[/tools/ai-response-generator] AI Response Generator
+
+[/contact] Contact us[/download] Download[/affiliate] Affiliates[/reviews] Reviews[/art] Art
+
+[https://www.linkedin.com/company/tryamie/] LinkedIn[https://www.instagram.com/tryamie/] Instagram[https://x.com/tryamie] x.com
+
+[/privacy] Privacy Policy[/terms] Terms of use[/imprint] Imprint
+© Amie 2026
+

@@ -1,0 +1,19 @@
+{
+  "name": "mimo-ai-core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MiMo Life OS — AI Core service (Agent System, ReAct loop, streaming). Port 3031 (planned standalone).",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot run index.ts",
+    "start": "bun run index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.11.1"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.4",
+    "typescript": "^5"
+  }
+}

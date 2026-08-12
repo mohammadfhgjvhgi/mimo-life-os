@@ -1,0 +1,401 @@
+- 
+- 
+- 
+- 
+- 
+- Code editing | v0 Docs 
+- 
+- 
+- 
+- 
+- 
+- 
+
+- Docs 
+
+- API 
+
+Search… ⌘ K Ask AI Ask AI 
+Search… ⌘ K 
+Docs API 
+
+- Getting Started 
+
+- What is v0? 
+
+- Agentic features 
+
+- Sandbox 
+
+- Vercel Integration 
+
+- Quickstart 
+
+- FAQs 
+
+- Prompt 
+
+- Text Prompting 
+
+- Screenshots and Files 
+
+- Figma 
+
+- Iterate 
+
+- Code editing 
+
+- Terminal commands 
+
+- Design mode 
+
+- Design Systems 2.0 
+
+- Images, videos, and file uploads 
+
+- Versions 
+
+- Integrate 
+
+- AI models 
+
+- Databases 
+
+- Snowflake 
+
+- Shopify 
+
+- External APIs 
+
+- GitHub 
+
+- MCP Integrations 
+
+- Pre-installed Agents 
+
+- Slack 
+
+- Ship 
+
+- Deployments 
+
+- Custom domain 
+
+- Sharing 
+
+- Templates 
+
+- Manage 
+
+- Account 
+
+- Enterprise 
+
+- Instructions 
+
+- Folders 
+
+- Projects 
+
+- Pricing 
+
+- Usage & Activity 
+
+- Teams 
+
+- Security 
+
+- Guides 
+
+- Full-stack apps 
+
+- Prototyping 
+
+- PRD design 
+
+- 
+
+- Compare 
+
+Menu 
+
+# Code editing
+Copy page Copy page 
+
+Edit v0's code output directly in the browser.
+Copy for LLM View Markdown Ask AI about this page 
+
+v0 includes a full-featured code editor with syntax highlighting, global search, diff views, split editing, and more.
+
+## Basic editing 
+
+Click the Code tab next to the preview to access the editor. You can edit any file directly. When you make changes, an "Unsaved Changes" banner appears where you can save or reset. Press Cmd+S (Mac) or Ctrl+S (Windows/Linux) to save.
+
+## Editor features 
+
+v0 integrates a capable IDE that includes many of the expected features along with their shortcuts, such as:
+
+- Syntax highlighting : Code is properly highlighted based on the file type
+
+- Line numbers : Easily navigate through your code with line numbers
+
+- Find and replace : Press Cmd+F / Ctrl+F to search within the current file
+
+- Global search : Press Shift+Cmd+F / Shift+Ctrl+F to search across all files. Filter results with "files to include" and "files to exclude" options
+
+- File Explorer : Press Cmd+B / Ctrl+B to toggle the file explorer panel
+
+### Diff view 
+
+View v0's changes in the diff view. This helps you understand exactly what was modified in each generation. Click the Toggle Diff View button in the editor toolbar to enable it.
+
+### Split view 
+
+Edit files side-by-side with split view. Click the Split Layout button in the editor toolbar to open a second editor panel. This is useful when you want to view v0's changes in diff view while making additional edits in another panel, or when working on related files like a component and its styles.
+
+### File management 
+
+You can create, rename, and delete files directly in the editor:
+
+- Create a file : Click the new file icon in the File Explorer header, or right-click in the file tree
+
+- Create a folder : Click the new folder icon in the File Explorer header, or right-click in the file tree
+
+- Rename a file : Right-click on a file and select "Rename"
+
+- Delete a file : Right-click on a file and select "Delete"
+
+### Toolbar actions 
+
+The editor toolbar provides quick access to common actions:
+
+- Copy File : Copy the current file's contents to your clipboard
+
+- Toggle Diff View : Show or hide the diff view for the current file
+
+- Split Layout : Toggle split view to edit two files side-by-side
+
+Previous Figma Next Terminal commands 
+
+On this page
+Basic editing Editor features Diff view Split view File management Toolbar actions 
+
+Scroll to top Give feedback 
+
+## Product
+
+- Home 
+
+- Enterprise 
+
+- Pricing 
+
+- v0 for Students 
+
+## Company
+
+- Terms 
+
+- AI Policy 
+
+- Privacy 
+
+- Cookies 
+
+## Resources
+
+- FAQs 
+
+- Docs 
+
+- Vercel Community 
+
+- Vercel 
+
+## Social
+
+- Twitter 
+
+- LinkedIn 
+
+## Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Workflows 
+
+- Connect New 
+
+- Passport New 
+
+- eve New 
+
+## Core Platform
+
+- CI/CD 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+## Security
+
+- Platform Security 
+
+- WAF 
+
+- Bot Management 
+
+- Bot ID 
+
+## Tools
+
+- Vercel Drop New 
+
+- Vercel Agent 
+
+- Vercel Plugin New 
+
+- Agent Skills 
+
+- Next.js 
+
+- Domains 
+
+- v0 
+
+## Frameworks
+
+- eve New 
+
+- Nuxt 
+
+- SvelteKit 
+
+- Nitro 
+
+- Turborepo 
+
+- Tanstack Start 
+
+- FastAPI 
+
+- xmcp 
+
+- All frameworks 
+
+## SDKs
+
+- Vercel SDK 
+
+- Workflow SDK New 
+
+- Flags SDK 
+
+- Chat SDK New 
+
+- Queues SDK New 
+
+- Streamdown 
+
+## Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+- Platform Engineers 
+
+- Design Engineers 
+
+## Learn
+
+- Docs 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+- Academy 
+
+- Articles 
+
+- Community 
+
+## Explore
+
+- Customers 
+
+- Marketplace 
+
+- Templates 
+
+- Partner Finder 
+
+- Vercel + AWS 
+
+## Company
+
+- About 
+
+- Careers 
+
+- Press 
+
+- Events 
+
+- Startups 
+
+- Shipped on Vercel 
+
+- Open Source Program 
+
+- Enterprise 
+
+- Pricing 
+
+- Help 
+
+## Legal & Trust
+
+- Privacy Policy 
+
+- Terms of Service 
+
+- Cookie Policy 
+
+- DPA 
+
+- Acceptable Use Policy 
+
+- Legal 
+
+- Trust Center 
+
+- Status 
+
+## Social
+
+- GitHub 
+
+- X 
+
+- LinkedIn 
+
+- YouTube 
+
+- Instagram

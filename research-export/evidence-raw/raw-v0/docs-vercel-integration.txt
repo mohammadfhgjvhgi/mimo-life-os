@@ -1,0 +1,406 @@
+- 
+- 
+- 
+- 
+- 
+- Vercel Integration | v0 Docs 
+- 
+- 
+- 
+- 
+- 
+- 
+
+- Docs 
+
+- API 
+
+Search… ⌘ K Ask AI Ask AI 
+Search… ⌘ K 
+Docs API 
+
+- Getting Started 
+
+- What is v0? 
+
+- Agentic features 
+
+- Sandbox 
+
+- Vercel Integration 
+
+- Quickstart 
+
+- FAQs 
+
+- Prompt 
+
+- Text Prompting 
+
+- Screenshots and Files 
+
+- Figma 
+
+- Iterate 
+
+- Code editing 
+
+- Terminal commands 
+
+- Design mode 
+
+- Design Systems 2.0 
+
+- Images, videos, and file uploads 
+
+- Versions 
+
+- Integrate 
+
+- AI models 
+
+- Databases 
+
+- Snowflake 
+
+- Shopify 
+
+- External APIs 
+
+- GitHub 
+
+- MCP Integrations 
+
+- Pre-installed Agents 
+
+- Slack 
+
+- Ship 
+
+- Deployments 
+
+- Custom domain 
+
+- Sharing 
+
+- Templates 
+
+- Manage 
+
+- Account 
+
+- Enterprise 
+
+- Instructions 
+
+- Folders 
+
+- Projects 
+
+- Pricing 
+
+- Usage & Activity 
+
+- Teams 
+
+- Security 
+
+- Guides 
+
+- Full-stack apps 
+
+- Prototyping 
+
+- PRD design 
+
+- 
+
+- Compare 
+
+Menu 
+
+# Vercel Integration
+Copy page Copy page 
+
+How v0 and Vercel work in tandem.
+Copy for LLM View Markdown Ask AI about this page 
+
+Vercel is a cloud platform that makes it easy to build, deploy, and scale modern web applications. Vercel enables you to deploy your v0 applications with a single click.
+
+Learn more about Vercel
+
+## How do v0 and Vercel accounts differ? 
+
+They’re one and the same - v0 accounts are just Vercel accounts. Both share the concept of accounts and teams, and manage projects (and chats in v0's case) within the teams you are a member of.
+
+Where v0 differs is that you can also create chats and projects in your account rather than only within teams. This is your Personal scope, which has access to either the v0 Free or v0 Premium plans.
+
+Most of your account details can be managed from your Vercel account settings (e.g. account email). Settings within v0 pertain almost exclusively to v0, with the exception of some, such as billing items (payment methods and invoices are shared with Vercel) and your default team setting (for Personal v0 scopes), which is linked to its respective Vercel setting .
+
+## What is a Vercel Project, and how does v0 connect to it? 
+
+Projects on Vercel represent applications that you have deployed to the Vercel platform. The first time you deploy a v0 chat, a corresponding Vercel Project is automatically created.
+
+v0 integrates with Vercel Projects in several ways:
+
+- Direct Deployment: Click the "Publish" button in v0 to deploy your chat directly to Vercel. This creates a new Vercel Project or updates an existing one.
+
+- Environment Variables: Environment variables are inherited from the connected Vercel project, where they can be managed from. When connecting an integration from v0, its necessary environment variables will be automatically added to the Vercel project and shared with v0.
+This means your app can use these integrations immediately while you're building and testing in v0, not just after deployment. The seamless experience lets you develop with live integrations right in the chat interface. 
+
+- The v0 preview window can only access variables from the Development environment. As such, sensitive environment variables are inaccessible to v0 previews.
+
+- GitHub Integration: v0 and your Vercel project will share the same GitHub repository connection, if one exists. See our page on how v0's GitHub connection works for more details.
+
+- Domains: Custom domains available to assign to your v0 application are inherited from your Vercel Project and team.
+
+## Do I need Vercel Pro to use v0? 
+
+No, Vercel Pro does not provide any additional v0 features. However, it does provide additional Vercel role options to your team members. This can provide greater control of their deployed v0 projects through the Vercel project dashboard.
+
+It's also important to be aware of Vercel limits that may impact your v0 use, such as project and deployment limits. For example, a team on the Vercel Hobby plan will be limited to a maximum of 200 projects.
+
+To cancel your Vercel Pro plan, you can choose to downgrade from your team's Vercel billing settings . Be aware that downgrading from Pro to Hobby will kick all other members from the team , regardless of their v0 access. After downgrading, they can be re-invited back as Viewers with the v0 Builder role.
+
+## Managing v0 access and roles via your Vercel team 
+
+### v0 Plus and Business plans 
+
+- The only v0 role you can assign is v0 Builder, which provides full v0 functionality.
+
+- The Vercel roles you can assign are dependent on your Vercel plan 
+
+- For example, if you are on v0 Plus with a Vercel Hobby plan, you will have one Owner, but every other member may only be a Viewer with the v0 Builder role.
+
+- It is not possible to invite or change the roles of members to one that is not covered by your Vercel plan, even if you pair it with the v0 Builder role.
+
+### v0 Enterprise plans 
+
+- You have the option of assigning three different v0 roles; v0 Builder, v0 Creator, and v0 Viewer. These can be managed from your team’s Vercel member settings or v0 member settings .
+
+- The Vercel roles you have available are still determined from your Vercel plan, which may be dependent on your contract. For clarification, contact your Account Executive.
+
+Previous Sandbox Next Quickstart 
+
+On this page
+How do v0 and Vercel accounts differ? What is a Vercel Project, and how does v0 connect to it? Do I need Vercel Pro to use v0? Managing v0 access and roles via your Vercel team v0 Plus and Business plans v0 Enterprise plans 
+
+Scroll to top Give feedback 
+
+## Product
+
+- Home 
+
+- Enterprise 
+
+- Pricing 
+
+- v0 for Students 
+
+## Company
+
+- Terms 
+
+- AI Policy 
+
+- Privacy 
+
+- Cookies 
+
+## Resources
+
+- FAQs 
+
+- Docs 
+
+- Vercel Community 
+
+- Vercel 
+
+## Social
+
+- Twitter 
+
+- LinkedIn 
+
+## Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Workflows 
+
+- Connect New 
+
+- Passport New 
+
+- eve New 
+
+## Core Platform
+
+- CI/CD 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+## Security
+
+- Platform Security 
+
+- WAF 
+
+- Bot Management 
+
+- Bot ID 
+
+## Tools
+
+- Vercel Drop New 
+
+- Vercel Agent 
+
+- Vercel Plugin New 
+
+- Agent Skills 
+
+- Next.js 
+
+- Domains 
+
+- v0 
+
+## Frameworks
+
+- eve New 
+
+- Nuxt 
+
+- SvelteKit 
+
+- Nitro 
+
+- Turborepo 
+
+- Tanstack Start 
+
+- FastAPI 
+
+- xmcp 
+
+- All frameworks 
+
+## SDKs
+
+- Vercel SDK 
+
+- Workflow SDK New 
+
+- Flags SDK 
+
+- Chat SDK New 
+
+- Queues SDK New 
+
+- Streamdown 
+
+## Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+- Platform Engineers 
+
+- Design Engineers 
+
+## Learn
+
+- Docs 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+- Academy 
+
+- Articles 
+
+- Community 
+
+## Explore
+
+- Customers 
+
+- Marketplace 
+
+- Templates 
+
+- Partner Finder 
+
+- Vercel + AWS 
+
+## Company
+
+- About 
+
+- Careers 
+
+- Press 
+
+- Events 
+
+- Startups 
+
+- Shipped on Vercel 
+
+- Open Source Program 
+
+- Enterprise 
+
+- Pricing 
+
+- Help 
+
+## Legal & Trust
+
+- Privacy Policy 
+
+- Terms of Service 
+
+- Cookie Policy 
+
+- DPA 
+
+- Acceptable Use Policy 
+
+- Legal 
+
+- Trust Center 
+
+- Status 
+
+## Social
+
+- GitHub 
+
+- X 
+
+- LinkedIn 
+
+- YouTube 
+
+- Instagram

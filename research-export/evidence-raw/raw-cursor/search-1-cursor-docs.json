@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://cursor.com",
+    "name": "Cursor: AI coding agent",
+    "snippet": "It's a demonstration of Cursor's IDE showing AI-powered coding assistance features . The interface is displayed over a subtle, solid brand background. Cursor.",
+    "host_name": "cursor.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://cursor.com/docs",
+    "name": "Cursor Docs — Agent, Rules, MCP, Skills & CLI",
+    "snippet": "Official Cursor documentation . Covers Agent mode, Rules, Skills, MCP servers, CLI, models, and Teams & Enterprise setup. Start building in minutes.",
+    "host_name": "cursor.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.cursor.com/t/tutorial-adding-full-repo-context-pdfs-and-other-docs/33925",
+    "name": "Tutorial: Adding full repo context, pdfs and other docs",
+    "snippet": "Dec 10, 2024 — Add to Cursor : In Cursor , use the @ Docs > Add New Doc feature to add the Gist link. Assign a name, set the entry point and prefix, and index the ...",
+    "host_name": "forum.cursor.com",
+    "rank": 2,
+    "date": "Dec 10, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.cursor.com/t/where-did-the-docs-go/161651",
+    "name": "Where did the @docs go? - Help",
+    "snippet": "May 26, 2026 — I updated Cursor (now on Version: 3.5.33) and now @ docs is completely gone. I also don't see the list of documentation I've indexed in ...",
+    "host_name": "forum.cursor.com",
+    "rank": 3,
+    "date": "May 26, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.cursor.com/t/auto-gen-dev-history-docs-with-code-changes-qa-system/138968",
+    "name": "Auto-gen dev history/docs with code changes->QA system",
+    "snippet": "Oct 26, 2025 — Cursor captures AI interactions and code diff . Prompt → AI Plan → Code Changes (summarized language) Visual context, e.g. flow diagrams or ...",
+    "host_name": "forum.cursor.com",
+    "rank": 4,
+    "date": "Oct 26, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.cursor.com/t/cursor-feature-deep-dive/13963",
+    "name": "Cursor Feature Deep Dive - Discussions",
+    "snippet": "Aug 31, 2024 — Codebase indexing and the vector embedding process · LLM selection and Cursor's custom models · Error and log checking · Custom Docs and crawling.",
+    "host_name": "forum.cursor.com",
+    "rank": 5,
+    "date": "Aug 31, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://cursor.com/blog/plan-mode",
+    "name": "Introducing Plan Mode",
+    "snippet": "Oct 7, 2025 — Plan mode gives the model new tools to create and update plans, as well as an interactive editor to modify plans inline.",
+    "host_name": "cursor.com",
+    "rank": 6,
+    "date": "Oct 7, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://cursor.com/blog/browser-visual-editor",
+    "name": "A visual editor for the Cursor Browser",
+    "snippet": "Dec 11, 2025 — You can drag elements around, inspect components and props directly, and describe changes while pointing and clicking. live color pickers that ...",
+    "host_name": "cursor.com",
+    "rank": 7,
+    "date": "Dec 11, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.cursor.com/t/understanding-cursors-ai-feature/7204",
+    "name": "Understanding Cursor's AI feature - Help",
+    "snippet": "Aug 7, 2024 — Understanding Cursor's AI feature · Ctrl + K for in-file code generation · Ctrl + L to open up an AI chat panel in the sidebar · Ctrl + I to create ...",
+    "host_name": "forum.cursor.com",
+    "rank": 8,
+    "date": "Aug 7, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.cursor.com/t/guide-how-to-handle-big-projects-with-cursor/70997",
+    "name": "Guide:How to Handle Big Projects With Cursor",
+    "snippet": "Mar 27, 2025 — 1. Create a PRD Document · 2. Establish Cursor Rules · 3. Create a Features Document · 4. Generate RFCs for Individual Features · 5. Implementation ...",
+    "host_name": "forum.cursor.com",
+    "rank": 9,
+    "date": "Mar 27, 2025",
+    "favicon": ""
+  }
+]

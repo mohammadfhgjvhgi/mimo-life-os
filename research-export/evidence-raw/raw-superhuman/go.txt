@@ -1,0 +1,266 @@
+Superhuman Go | The AI Assistant That Works Where You Do
+
+[/] 
+Products
+
+Solutions
+
+AI
+
+Resources
+
+[/plans] Pricing
+
+[/products/testimonials] Love
+
+[https://www.superhuman.com/contact-sales] Contact sales[https://superhuman.com/auth/signin] Log in[https://superhuman.com/auth/signup?screen_hint=signup] Sign up
+
+[/] 
+
+Products
+
+[/products/go-ai-assistant] Superhuman Go
+
+[/products/mail] Mail
+
+[/mail/calendar] Calendar
+
+[/docs] Docs
+
+[/databases] Databases
+
+Solutions
+
+For your team
+[/enterprise] Enterprises
+
+[/edu] Education
+
+[/teams/marketing] Marketing teams
+
+[/teams/it] IT teams
+
+Use cases
+[/docs/use-cases/project-management] Project management
+
+[/docs/use-cases/knowledge-hubs] Knowledge management
+
+[/docs/use-cases/collaborative-docs] Collaborative documents
+
+AI
+
+Agents
+[/products/grammarly] Grammarly
+
+[/store/agents] Agent Store
+
+Connections
+[/mail/features/email-mcp] Mail MCP
+
+[/docs/features/docs-mcp] Docs MCP
+
+Resources
+
+[https://help.superhuman.com] Help center
+
+[https://blog.superhuman.com] Company blog
+
+[/legal/trust] Trust
+
+[/partners] Partners
+
+[/plans] Pricing
+
+[/products/testimonials] Love
+
+[https://www.superhuman.com/contact-sales] Contact sales[https://superhuman.com/auth/signin] Log in[https://superhuman.com/auth/signup?screen_hint=signup] Sign up
+
+Superhuman Go. 
+Always with you. Already on it.
+
+Go is the proactive AI assistant that knows what you know and offers help without you even having to ask.
+
+[https://superhuman.com/auth/signup?screen_hint=signup] Get Superhuman
+
+Sorry, your browser doesn't support embedded videos.
+
+A user using Superhuman Go to get feedback on an e-mail
+
+Go is Superhuman Platform AI that works alongside you
+
+Works in every tab and tool
+
+Go works everywhere you work, so you don’t have to change how you work.
+
+Offers help before you even ask
+
+Go constantly looks for ways to help you say things better and take next steps faster.
+
+Connects to all of your apps
+
+Go integrates with 100+ apps, so it knows what you know and can take actions for you.
+
+An assistant that’s a step ahead
+
+Say the right thing, the right way
+
+You’re responding to an urgent customer email. Go pulls in account details and support tickets while polishing your tone. So you make your best impression in half the time.
+
+Schedule meetings without leaving the chat
+
+You’re deep in a chat thread that’s going nowhere—this needs a meeting. Go finds the details and books the meeting in the moment. So you can stay focused and in flow.
+
+Stay perfectly prepared with instant recall
+
+You’re prepping for a weekly 1:1. Go reminds you about your previous discussions, work you promised to finish, and topics you said you’d cover. So you never need to scramble again.
+
+Save your thinking for something else
+
+You’re dealing with an incoming customer issue and need a fix from engineering. Go summarizes the problem and files a bug. So you can get back to what only you can do.
+
+Makes sense of what you’re reading where you’re reading 
+
+You're deep in a news article or complex brief and hit a wall of jargon. Highlight it and Go will explain it, translate it, or unpack it—right where you’re reading.
+
+Be more creative, strategic, and impactful
+
+[https://superhuman.com/auth/signup?screen_hint=signup] Get Superhuman
+
+There’s an agent for that
+
+The Superhuman Agent Store has an ever-growing roster of agents—like Gmail, Google Calendar, Jira, and more—built by Superhuman and our partners. So you can build the team of AI collaborators that works for you.
+
+[https://www.superhuman.com/store/agents] Visit the Agent Store
+
+Build your own agents
+
+The Superhuman Agents SDK is in closed beta. Developers and organizations can start building agents that work across the 1 million+ apps and websites where Go works.
+
+[https://coda.io/packs/build/latest/agents/] Learn more
+
+Frequently asked questions
+
+What is Superhuman Go?
+
+Go is the AI assistant that works everywhere you work and helps before you even ask.
+
+How is Superhuman Go different from other AI assistants?
+
+Superhuman Go is the assistant that figures out what you need, when and where you need it. Go:
+
+Works wherever you work, understanding and collaborating on what you’re working on.
+
+Suggests edits, searches for context, and proposes next steps—all without you having to ask.
+
+Connects to all of your most important apps to give helpful suggestions without manually providing context.
+
+Orchestrates a team of AI agents to provide suggestions when and where they’re useful.
+
+What does Superhuman Go cost?
+
+You can get started with Superhuman Go for free by signing up for a Superhuman account. It’s included in all Superhuman plans. Visit our [https://superhuman.com/plans] pricing page to compare plans and find the option that best fits the way you work—whether you’re getting started on your own or for your team.
+
+Where does Superhuman Go work?
+
+Superhuman Go is available via the Superhuman Go for Chrome and Superhuman Go for Edge extensions. With a browser extension, you can use Go across the web-based tools you already rely on, including email, documents, customer systems, project tools, and internal apps. The Superhuman Go desktop app for Mac and Windows is coming soon.
+
+Does Superhuman Go require me to switch tools or platforms?
+
+Not at all. Superhuman Go is designed to fit your flow, not disrupt it. Go works within the tools and platforms you already use, quietly enhancing your experience rather than replacing it.
+
+What kind of help does Superhuman Go provide?
+
+Superhuman Go can:
+
+Help you sound clear and confident, everywhere you write
+
+Schedule meetings from any app
+
+Give you perfect memory that keeps you prepared
+
+Handle admin work so you can work on what only you can do
+
+What are “agents” in Superhuman Go?
+
+Agents are your team of AI collaborators, built for specific workflows—like summarizing long threads, drafting reports, or finding information across tools. Superhuman Go comes with a powerful set of default agents and lets developers build custom ones tailored to your team’s needs.
+
+Can I build my own agents?
+
+Yes! The Superhuman Agents SDK is in closed beta, giving developers the ability to build custom agents that plug into your organization’s unique tools, systems, and workflows. You can request early access directly from the landing page.
+
+Is my data secure with Superhuman Go?
+
+Superhuman Go is built with privacy at its core. For Business and Education users, AI training is off by default, and you’re always in control of your data. Go is designed to keep your information private, secure, and yours.
+
+How do I get started with Superhuman Go?
+
+You can start using Superhuman Go for free today by installing Grammarly for Chrome or Grammarly for Edge. Once installed, you’ll get access to Superhuman Go’s features anywhere you work on the web.
+
+Is Superhuman GDPR, CCPA, and FERPA compliant?
+
+Yes. We maintain safeguards and processes designed to support compliance with GDPR, California Consumer Privacy Act (CCPA), and Family Educational Rights and Privacy Act (FERPA) requirements. These efforts are part of our broader privacy program, which is designed to protect customer data and support global privacy and security obligations.
+
+Builders of Superhuman Platform apps
+
+Products
+
+[/products/go-ai-assistant] Superhuman Go
+
+[/products/mail] Mail
+
+[/mail/calendar] Calendar
+
+[/docs] Docs
+
+[/databases] Databases
+
+Company
+
+[/contact] Contact Us
+
+[/company/about] About
+
+[/company/values] Mission & Values
+
+[/company/careers] Careers
+
+[https://blog.superhuman.com] Blog
+
+[https://help.superhuman.com] Help Center
+
+[/status] Status
+
+[/partners] Partners
+
+[/community] Community
+
+[/superhuman-platform] Superhuman Platform
+
+Legal
+
+[/legal/terms] Terms
+
+[/legal/privacy-policy] Privacy Policy
+
+[/legal/trust] Trust
+
+[/legal/terms/customer-business-agreement] Customer Business Agreement
+
+[/legal/notices] Legal Notices
+
+Cookies Preferences Center
+
+Connect
+
+[https://www.linkedin.com/company/superhumanhq] LinkedIn
+
+[https://x.com/Superhuman] X
+
+[https://www.tiktok.com/@superhumanhq?lang=en] TikTok
+
+[https://www.instagram.com/superhuman__hq/?hl=en] Instagram
+
+[https://www.threads.com/@superhuman__hq] Threads
+
+[https://www.facebook.com/SuperhumanCo] Facebook
+

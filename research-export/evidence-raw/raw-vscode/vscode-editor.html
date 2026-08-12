@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="awa-expId" content="cv-downloadv2:1227264;" />
+	<meta name="awa-env" content="prod" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="hNs7DXrTySP_X-0P_AC0WulAXvUwgSXEmgfcO2r79dw" />
+
+	<!-- Twitter and Facebook OpenGraph Metadata-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@code" />
+
+	<meta name="description" content="Learn about the basic editing features of Visual Studio Code. Search, multiple selection, code formatting." />
+<meta name="keywords" content="" />
+<meta name="ms.prod" content="vs-code" />
+<meta name="ms.TOCTitle" content="" />
+<meta name="ms.ContentId" content="DE4EAE2F-4542-4363-BB74-BE47D64141E6" />
+<meta name="ms.date" content="8/5/2026" />
+<meta name="ms.topic" content="conceptual" />
+<!-- Twitter and Facebook OpenGraph Metadata-->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:url" content="https://code.visualstudio.com/docs/editing/codebasics" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Basic editing" />
+<meta property="og:description" content="Learn about the basic editing features of Visual Studio Code. Search, multiple selection, code formatting." />
+
+<meta property="og:image" content="https://code.visualstudio.com/opengraphimg/generated/docs/editing/codebasics.webp" />
+
+
+
+	<link rel="shortcut icon" href="/assets/favicon.ico" sizes="128x128" />
+	<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+	<title>Basic editing</title>
+
+	<link rel="stylesheet" href="/dist/style.css">
+
+	<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
+	<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-4.min.js"></script>
+	
+	<script type="text/javascript">
+	// Leave as var; siteConsent is initialized and referenced elsewhere.
+	var siteConsent = null;
+	
+	const GPC_DataSharingOptIn = false;
+	WcpConsent.onInitCallback(function () {
+		window.appInsights = new oneDS.ApplicationInsights();
+		window.appInsights.initialize({
+			instrumentationKey: "1a3eb3104447440391ad5f2a6ee06a0a-62879566-bc58-4741-9650-302bf2af703f-7103",
+			propertyConfiguration: {
+				userConsented: false,
+				gpcDataSharingOptIn: false,
+				callback: {
+					userConsentDetails: siteConsent ? siteConsent.getConsent : undefined
+				},
+			},
+			cookieCfg: {
+				ignoreCookies: ["MSCC"]
+			},
+			webAnalyticsConfiguration:{ // Web Analytics Plugin configuration
+				urlCollectQuery: true,
+				urlCollectHash: true,
+				autoCapture: {
+					scroll: true,
+					pageView: true,
+					onLoad: true,
+					onUnload: true,
+					click: true,
+					resize: true,
+					jsError: true
+				}
+			}
+		}, []);
+	
+		window.appInsights.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = GPC_DataSharingOptIn;
+	});
+	</script>
+	<link rel="alternate" type="application/atom+xml" title="RSS Feed for code.visualstudio.com" href="/feed.xml" />
+</head>
+
+<body >
+	<!-- Setting theme here to avoid FOUC -->
+	<script>
+		function setTheme(themeName) {
+			if (themeName === 'dark') {
+				document.documentElement.removeAttribute('data-theme'); // dark is default, so no data-theme attribute needed
+			}
+
+			if (themeName === 'light') {
+				document.documentElement.setAttribute('data-theme', themeName);
+			}
+			return;
+		}
+
+		// Determine initial theme: user preference or system preference
+		let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		setTheme(theme); // Apply the initial theme
+
+		// Listen for changes in the system theme preference
+		window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+			if (!localStorage.getItem('theme')) { // Only if no user preference is saved
+				setTheme(e.matches ? 'dark' : 'light');
+			}
+		});
+	</script>
+
+	<div id="main">
+		<div class="navbar-fixed-container">
+			<div class="navbar navbar-inverse navbar-fixed-top ">
+				<div id='cookie-banner'></div>		<nav role="navigation" aria-label="Top Level">
+					<div class="container">
+						<div class="nav navbar-header">
+							<a class="navbar-brand" href="/"><span>Visual Studio Code</span></a>
+						</div>
+						<div class="navbar-collapse collapse">
+							<ul class="nav navbar-nav navbar-left" data-m='{"cN":"top-navbar","aN":"navigation"}'>
+								<li class="nav-dropdown">
+									<a id="nav-features" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Features","aN":"navigation","cT":"toggle"}'>
+										Features <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/features/agents" data-m='{"cN":"Agents","aN":"navigation - Features"}'>Agents</a></li>
+									</ul>
+								</li>
+								<li class="nav-dropdown active">
+									<a id="nav-docs" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Docs","aN":"navigation","cT":"toggle"}'>
+										Docs <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/docs" data-m='{"cN":"Documentation","aN":"navigation - Docs"}'>Documentation</a></li>
+										<li role="none"><a role="menuitem" href="/api" data-m='{"cN":"API","aN":"navigation - Docs"}'>API</a></li>
+										<li role="none"><a role="menuitem" id="nav-faqs" href="/docs/supporting/faq" data-m='{"cN":"FAQ","aN":"navigation - Docs"}'>FAQ</a></li>
+									</ul>
+								</li>
+								<li ><a id="nav-updates" href="/updates" data-m='{"cN":"Release Notes"}'>Release Notes</a>
+								</li>
+								<li ><a id="nav-blogs" href="/blogs" data-m='{"cN":"Blog"}'>Blog</a></li>
+								<li ><a id="nav-learn" href="/learn" data-m='{"cN":"Learn"}'>Learn</a></li>
+								<li><a id="nav-events" href="https://aka.ms/vscode/live" target="_blank" rel="noopener" data-m='{"cN":"Events"}'>Events<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+								<li class="nav-dropdown">
+									<a id="nav-resources" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Resources","aN":"navigation","cT":"toggle"}'>
+										Resources <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="https://marketplace.visualstudio.com/VSCode" target="_blank" rel="noopener"
+												id="nav-extensions" data-m='{"cN":"Extensions","aN":"navigation - Resources"}'>Extensions<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+										<li role="none"><a role="menuitem" id="nav-mcp" href="/mcp" target="_blank" rel="noopener" data-m='{"cN":"MCP","aN":"navigation - Resources"}'>MCP<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right" role="presentation">
+								<li>
+									<a class="link-button" href="/download" id="nav-download">
+										<span>Download</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="navbar-actions">
+							<div class="search" role="presentation">
+								<div class="nav-search search-control" role="button" tabindex="0" aria-label="Open search dialog">
+									<div class="input-group" role="presentation">
+										<span class="input-group-btn">
+											<span class="btn search-icon-container" aria-hidden="true">
+												<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="" />
+												<img class="search-icon-light" src="/assets/icons/search.svg" alt="" />
+											</span>
+										</span>
+										<span class="search-box form-control" aria-hidden="true" role="presentation"></span>
+										<span class="search-shortcut-placeholder">Search</span>
+										<span class="search-shortcut-overlay"></span>
+									</div>
+								</div>					</div>
+							<button type="button" class="theme-switch" id="theme-toggle">
+								<img class="theme-icon-light" src="/assets/icons/theme-light.svg" alt="Switch to the dark theme" />
+								<img class="theme-icon-dark" src="/assets/icons/theme-dark.svg" alt="Switch to the light theme" />
+							</button>
+							<a class="link-button navbar-actions-download" href="/Download">
+								<span>Download</span>
+							</a>
+						</div>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
+							aria-label="Expand and Collapse Menu">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</div>		<div data-announcement-version="2026-06-01-vscode-live-build" class="updates-banner ">
+			<div class="container">
+				<p class="message"><a href="https://aka.ms/VSCode/Livestage?source=vsc-website-banner" target="_blank" rel="noopener">📼 Rewatch VS Code Live at MS Build 2026</a></p>
+			</div>
+			<div tabindex="0" role="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn"><span class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span></div>
+		</div>
+		<script>
+			// Hide the banner synchronously (before first paint) if this version was
+			// already dismissed, to avoid a flicker/layout shift once the main bundle loads.
+			(function () {
+				try {
+					var banner = document.currentScript.previousElementSibling;
+					if (banner && localStorage.getItem('dismissedAnnouncementVersion') === banner.getAttribute('data-announcement-version')) {
+						banner.classList.add('js-hidden');
+					}
+				} catch (e) { /* ignore */ }
+			})();
+		</script>
+		<!-- This div wraps around the entire site -->
+		<!-- The body itself should already have a main tag -->
+		<main id="main-content">
+			<script>
+    function closeReportIssue() {
+        var element = document.getElementById('surveypopup');
+        element.parentElement.removeChild(element);
+    }
+
+    function reportIssue(tutorial, page) {
+        var div = document.createElement('div');
+        div.innerHTML = '<div id="surveypopup" class="overlay visible"><div class="surveypopup"><div id="surveytitle">Tell us more<a href="javascript:void(0)" onclick="closeReportIssue()">X</a></div><div id="surveydiv"><iframe frameBorder="0" scrolling="0" src="https://www.research.net/r/PWZWZ52?tutorial=' + tutorial + '&step=' + page + '"></iframe></div></div></div>';
+        document.body.appendChild(div.children[0]);
+    }
+</script>
+
+<div class="body-content docs docs-github-layout">
+    <div class="docs-layout-wrapper">
+        <!-- Left sidebar - Table of Contents -->
+        <aside class="docs-left-sidebar">
+            <nav id="docs-navbar" aria-label="Topics" class="docs-nav visible-md visible-lg" data-m='{"cN":"docs-left-nav","aN":"navigation"}'>
+              <div class="docs-nav-back">
+                <a class="area" href="/docs" aria-label="Back to all documentation"><span class="codicon codicon-arrow-left" aria-hidden="true"></span><span>All Docs</span></a>
+              </div>
+              <h4>Core Editor</h4>
+              <ul class="nav" id="main-nav">
+              <li >
+                <a href="/docs/core-editor/overview" data-m='{"cN":"Overview"}' >Overview</a>
+              </li>
+              
+            <li class="panel active expanded">
+              <a class="area" role="button" href="#editing-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Write code","cT":"toggle"}'>Write code</a>
+              <ul id="editing-articles" class="collapse in">
+            
+                    <li >
+                      <a href="/docs/editing/getting-started" data-m='{"cN":"Tutorial","aN":"Write code"}' >Tutorial</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/userinterface" data-m='{"cN":"User Interface","aN":"Write code"}' >User Interface</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/tips-and-tricks" data-m='{"cN":"Tips and Tricks","aN":"Write code"}' >Tips and Tricks</a>
+                    </li>
+                      
+                    <li class="active">
+                      <a href="/docs/editing/codebasics" data-m='{"cN":"Basic Editing","aN":"Write code"}' aria-label="Current Page: Basic Editing">Basic Editing</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/intellisense" data-m='{"cN":"IntelliSense","aN":"Write code"}' >IntelliSense</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/ai-powered-suggestions" data-m='{"cN":"Inline Suggestions","aN":"Write code"}' >Inline Suggestions</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/copilot-smart-actions" data-m='{"cN":"Smart Actions","aN":"Write code"}' >Smart Actions</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/editingevolved" data-m='{"cN":"Code Navigation","aN":"Write code"}' >Code Navigation</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/refactoring" data-m='{"cN":"Refactoring","aN":"Write code"}' >Refactoring</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/userdefinedsnippets" data-m='{"cN":"Snippets","aN":"Write code"}' >Snippets</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#editing-workspaces-articles" data-toggle="collapse" data-m='{"cN":"Workspaces","aN":"Write code","cT":"toggle"}'>Workspaces</a>
+              <ul id="editing-workspaces-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/editing/workspaces/workspaces" data-m='{"cN":"Overview","aN":"Write code - Workspaces"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/workspaces/multi-root-workspaces" data-m='{"cN":"Multi-Root Workspaces","aN":"Write code - Workspaces"}' >Multi-Root Workspaces</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/workspaces/workspace-trust" data-m='{"cN":"Workspace Trust","aN":"Write code - Workspaces"}' >Workspace Trust</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+              </ul>
+            </li>
+                
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Configure the editor","cT":"toggle"}'>Configure the editor</a>
+              <ul id="configure-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/locales" data-m='{"cN":"Display Language","aN":"Configure the editor"}' >Display Language</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/custom-layout" data-m='{"cN":"Layout","aN":"Configure the editor"}' >Layout</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/keybindings" data-m='{"cN":"Keyboard Shortcuts","aN":"Configure the editor"}' >Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/settings" data-m='{"cN":"Settings","aN":"Configure the editor"}' >Settings</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/settings-sync" data-m='{"cN":"Settings Sync","aN":"Configure the editor"}' >Settings Sync</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-extensions-articles" data-toggle="collapse" data-m='{"cN":"Extensions","aN":"Configure the editor","cT":"toggle"}'>Extensions</a>
+              <ul id="configure-extensions-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/extensions/extensions" data-m='{"cN":"Overview","aN":"Configure the editor - Extensions"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/extensions/extension-marketplace" data-m='{"cN":"Extension Marketplace","aN":"Configure the editor - Extensions"}' >Extension Marketplace</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/extensions/extension-runtime-security" data-m='{"cN":"Extension Runtime Security","aN":"Configure the editor - Extensions"}' >Extension Runtime Security</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li >
+                      <a href="/docs/configure/themes" data-m='{"cN":"Themes","aN":"Configure the editor"}' >Themes</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/profiles" data-m='{"cN":"Profiles","aN":"Configure the editor"}' >Profiles</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-accessibility-articles" data-toggle="collapse" data-m='{"cN":"Accessibility","aN":"Configure the editor","cT":"toggle"}'>Accessibility</a>
+              <ul id="configure-accessibility-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/accessibility/accessibility" data-m='{"cN":"Overview","aN":"Configure the editor - Accessibility"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/accessibility/voice" data-m='{"cN":"Voice Interactions","aN":"Configure the editor - Accessibility"}' >Voice Interactions</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li >
+                      <a href="/docs/configure/command-line" data-m='{"cN":"Command Line Interface","aN":"Configure the editor"}' >Command Line Interface</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/telemetry" data-m='{"cN":"Telemetry","aN":"Configure the editor"}' >Telemetry</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#reference-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Reference","cT":"toggle"}'>Reference</a>
+              <ul id="reference-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/reference/default-keybindings" data-m='{"cN":"Default Keyboard Shortcuts","aN":"Reference"}' >Default Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/default-settings" data-m='{"cN":"Default Settings","aN":"Reference"}' >Default Settings</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/variables-reference" data-m='{"cN":"Substitution Variables","aN":"Reference"}' >Substitution Variables</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/tasks-appendix" data-m='{"cN":"Tasks Schema","aN":"Reference"}' >Tasks Schema</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+              </ul>
+            </nav>
+            
+            <nav id="small-nav" aria-label="Topics" class="docs-nav hidden-md hidden-lg">
+              <label class="faux-h4" for="small-nav-dropdown-core-editor">Topics</label>
+              <select id="small-nav-dropdown-core-editor" aria-label="topics">
+                <option value="/docs/core-editor/overview" >Overview</option>
+            
+              <optgroup label="Write code">
+            
+                    <option value="/docs/editing/getting-started" >Tutorial</option>
+                    
+                    <option value="/docs/editing/userinterface" >User Interface</option>
+                    
+                    <option value="/docs/editing/tips-and-tricks" >Tips and Tricks</option>
+                    
+                    <option value="/docs/editing/codebasics" selected>Basic Editing</option>
+                    
+                    <option value="/docs/editing/intellisense" >IntelliSense</option>
+                    
+                    <option value="/docs/editing/ai-powered-suggestions" >Inline Suggestions</option>
+                    
+                    <option value="/docs/editing/copilot-smart-actions" >Smart Actions</option>
+                    
+                    <option value="/docs/editing/editingevolved" >Code Navigation</option>
+                    
+                    <option value="/docs/editing/refactoring" >Refactoring</option>
+                    
+                    <option value="/docs/editing/userdefinedsnippets" >Snippets</option>
+                    
+                    <option disabled>Workspaces</option>
+            
+                    <option value="/docs/editing/workspaces/workspaces" >    Overview</option>
+                    
+                    <option value="/docs/editing/workspaces/multi-root-workspaces" >    Multi-Root Workspaces</option>
+                    
+                    <option value="/docs/editing/workspaces/workspace-trust" >    Workspace Trust</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Configure the editor">
+            
+                    <option value="/docs/configure/locales" >Display Language</option>
+                    
+                    <option value="/docs/configure/custom-layout" >Layout</option>
+                    
+                    <option value="/docs/configure/keybindings" >Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/configure/settings" >Settings</option>
+                    
+                    <option value="/docs/configure/settings-sync" >Settings Sync</option>
+                    
+                    <option disabled>Extensions</option>
+            
+                    <option value="/docs/configure/extensions/extensions" >    Overview</option>
+                    
+                    <option value="/docs/configure/extensions/extension-marketplace" >    Extension Marketplace</option>
+                    
+                    <option value="/docs/configure/extensions/extension-runtime-security" >    Extension Runtime Security</option>
+                    
+                    <option value="/docs/configure/themes" >Themes</option>
+                    
+                    <option value="/docs/configure/profiles" >Profiles</option>
+                    
+                    <option disabled>Accessibility</option>
+            
+                    <option value="/docs/configure/accessibility/accessibility" >    Overview</option>
+                    
+                    <option value="/docs/configure/accessibility/voice" >    Voice Interactions</option>
+                    
+                    <option value="/docs/configure/command-line" >Command Line Interface</option>
+                    
+                    <option value="/docs/configure/telemetry" >Telemetry</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Reference">
+            
+                    <option value="/docs/reference/default-keybindings" >Default Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/reference/default-settings" >Default Settings</option>
+                    
+                    <option value="/docs/reference/variables-reference" >Substitution Variables</option>
+                    
+                    <option value="/docs/reference/tasks-appendix" >Tasks Schema</option>
+                    
+              </optgroup>
+              
+              </select>
+            </nav>        </aside>
+        
+        <!-- Content wrapper contains main content + right sidebar -->
+        <div class="docs-content-wrapper">
+            <!-- Right sidebar - On This Page -->
+            <aside class="docs-right-sidebar hidden-xs">
+                <div class="docs-markdown-actions">
+                    <div class="docs-markdown-dropdown" data-raw-url="/raw/docs/editing/codebasics.md">
+                        <button type="button" class="docs-markdown-btn-main" data-action="copy-markdown" aria-label="Copy as Markdown">
+                            <span class="codicon codicon-copy" aria-hidden="true"></span>
+                            <span>Copy as Markdown</span>
+                        </button>
+                        <button type="button" class="docs-markdown-btn-trigger" aria-haspopup="true" aria-expanded="false" aria-label="More Markdown options">
+                            <span class="codicon codicon-chevron-down docs-markdown-chevron" aria-hidden="true"></span>
+                        </button>
+                        <ul class="docs-markdown-menu" role="menu" aria-label="Markdown options">
+                            <li role="menuitem" tabindex="0" data-action="copy-markdown">
+                                <span class="codicon codicon-copy" aria-hidden="true"></span>
+                                <span>Copy as Markdown</span>
+                            </li>
+                            <li role="menuitem" tabindex="0" data-action="view-markdown">
+                                <span class="codicon codicon-file" aria-hidden="true"></span>
+                                <span>View as Markdown</span>
+                                <span class="codicon codicon-link-external" aria-hidden="true"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav id="docs-subnavbar" aria-label="On Page">
+                    
+                    <h4><span class="sr-only">On this page there are 17 sections</span><span
+                            aria-hidden="true">On this page</span></h4>
+                    <ul class="nav">
+                        
+                        <li><a href="#_keyboard-shortcuts">Keyboard shortcuts</a></li>
+                        
+                        <li><a href="#_multiple-selections-multi-cursor">Multiple selections (multi-cursor)</a></li>
+                        
+                        <li><a href="#_column-box-selection">Column (box) selection</a></li>
+                        
+                        <li><a href="#_save-auto-save">Save / Auto Save</a></li>
+                        
+                        <li><a href="#_hot-exit">Hot Exit</a></li>
+                        
+                        <li><a href="#_find-and-replace">Find and replace</a></li>
+                        
+                        <li><a href="#_search-across-files">Search across files</a></li>
+                        
+                        <li><a href="#_search-editor">Search Editor</a></li>
+                        
+                        <li><a href="#_intellisense">IntelliSense</a></li>
+                        
+                        <li><a href="#_formatting">Formatting</a></li>
+                        
+                        <li><a href="#_folding">Folding</a></li>
+                        
+                        <li><a href="#_indentation">Indentation</a></li>
+                        
+                        <li><a href="#_file-encoding-support">File encoding support</a></li>
+                        
+                        <li><a href="#_overtype-mode">Overtype mode</a></li>
+                        
+                        <li><a href="#_compare-files">Compare files</a></li>
+                        
+                        <li><a href="#_next-steps">Next steps</a></li>
+                        
+                        <li><a href="#_common-questions">Common questions</a></li>
+                        
+                    </ul>
+                    
+                </nav>
+                
+            </aside>
+            
+            <!-- Main article content -->
+            <main class="docs-main-content body">
+                <h1>Basic editing</h1>
+<p>Visual Studio Code is an editor first and foremost, and includes the features you need for highly productive source code editing. This topic takes you through the basics of the editor and helps you get moving with your code.</p>
+<h2 id="_keyboard-shortcuts" data-needslink="_keyboard-shortcuts">Keyboard shortcuts</h2>
+<p>Being able to keep your hands on the keyboard when writing code is crucial for high productivity. VS Code has a rich set of default keyboard shortcuts as well as allowing you to customize them.</p>
+<ul>
+<li><a href="/docs/configure/keybindings#_keyboard-shortcuts-reference">Keyboard Shortcuts Reference</a> - Learn the most commonly used and popular keyboard shortcuts by downloading the reference sheet.</li>
+<li><a href="/docs/configure/keybindings#_keymap-extensions">Install a Keymap extension</a> - Use the keyboard shortcuts of your old editor (such as Sublime Text, Atom, and Vim) in VS Code by installing a Keymap extension.</li>
+<li><a href="/docs/configure/keybindings#_keyboard-shortcuts-editor">Customize Keyboard Shortcuts</a> - Change the default keyboard shortcuts to fit your style.</li>
+</ul>
+<h2 id="_multiple-selections-multi-cursor" data-needslink="_multiple-selections-multi-cursor">Multiple selections (multi-cursor)</h2>
+<p>VS Code supports multiple cursors for fast, simultaneous edits. You can add secondary cursors (rendered thinner) with <span class="keybinding">Alt+Click</span>. Each cursor operates independently based on the context it sits in. A common way to add more cursors is with <span class="dynamic-keybinding" data-commandId="editor.action.insertCursorBelow" data-osx="⌥⌘↓" data-win="Ctrl+Alt+Down" data-linux="Shift+Alt+Down"><span class="keybinding">⌥⌘↓</span> (Windows <span class="keybinding">Ctrl+Alt+Down</span>, Linux <span class="keybinding">Shift+Alt+Down</span>)</span> or <span class="dynamic-keybinding" data-commandId="editor.action.insertCursorAbove" data-osx="⌥⌘↑" data-win="Ctrl+Alt+Up" data-linux="Shift+Alt+Up"><span class="keybinding">⌥⌘↑</span> (Windows <span class="keybinding">Ctrl+Alt+Up</span>, Linux <span class="keybinding">Shift+Alt+Up</span>)</span> that insert cursors below or above.</p>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>Your graphics card driver (for example NVIDIA) might overwrite these default shortcuts.</p>
+</div><p><img src="/assets/docs/editing/codebasics/multicursor.gif" alt="Multi-cursor" loading="lazy"></p>
+<p><span class="dynamic-keybinding" data-commandId="editor.action.addSelectionToNextFindMatch" data-osx="⌘D" data-win="Ctrl+D" data-linux="Ctrl+D"><span class="keybinding">⌘D</span> (Windows, Linux <span class="keybinding">Ctrl+D</span>)</span> selects the word at the cursor, or the next occurrence of the current selection.</p>
+<div class="markdown-alert tip" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z">
+          </path>
+        </svg>
+        Tip
+      </span><p>You can skip the next matching occurrence while using multi-cursor find by running
+<span class="dynamic-keybinding" data-commandId="editor.action.moveSelectionToNextFindMatch" data-osx="⌘K ⌘D" data-win="Ctrl+K Ctrl+D" data-linux="Ctrl+K Ctrl+D"><span class="keybinding">⌘K ⌘D</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+D</span>)</span>. This helps you avoid adding unwanted
+selections when editing repeated text.</p>
+</div><p><img src="/assets/docs/editing/codebasics/multicursor-word.gif" alt="Multi-cursor-next-word" loading="lazy"></p>
+<div class="markdown-alert tip" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z">
+          </path>
+        </svg>
+        Tip
+      </span><p>You can also add more cursors with <span class="dynamic-keybinding" data-commandId="editor.action.selectHighlights" data-osx="⇧⌘L" data-win="Ctrl+Shift+L" data-linux="Ctrl+Shift+L"><span class="keybinding">⇧⌘L</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+L</span>)</span>, which will add a selection at each occurrence of the current selected text.</p>
+</div><h3 id="_multi-cursor-modifier" data-needslink="_multi-cursor-modifier">Multi-cursor modifier</h3>
+<p>If you'd like to change the modifier key for applying multiple cursors to <span class="keybinding">Cmd+Click</span> on macOS and <span class="keybinding">Ctrl+Click</span> on Windows and Linux, you can do so with the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.multiCursorModifier">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.multiCursorModifier
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> <a href="/docs/configure/settings">setting</a>. This lets users coming from other editors such as Sublime Text or Atom continue to use the keyboard modifier they are familiar with.</p>
+<p>The setting can be set to:</p>
+<ul>
+<li><code>ctrlCmd</code> - Maps to <span class="keybinding">Ctrl</span> on Windows and <span class="keybinding">Cmd</span> on macOS.</li>
+<li><code>alt</code> - The existing default <span class="keybinding">Alt</span>.</li>
+</ul>
+<p>There's also a menu item <strong>Selection</strong> &gt; <strong>Switch to Ctrl+Click for Multi-Cursor</strong> or <strong>Selection</strong> &gt; <strong>Switch to Alt+Click for Multi-Cursor</strong> to quickly toggle this setting.</p>
+<p>The <strong>Go to Definition</strong> and <strong>Open Link</strong> gestures will also respect this setting and adapt such that they do not conflict. For example, when the setting is <code>ctrlCmd</code>, multiple cursors can be added with <span class="keybinding">Ctrl/Cmd+Click</span>, and opening links or going to definition can be invoked with <span class="keybinding">Alt+Click</span>.</p>
+<h3 id="_shrinkexpand-selection" data-needslink="_shrinkexpand-selection">Shrink/expand selection</h3>
+<p>Quickly shrink or expand the current selection. Trigger it with <span class="dynamic-keybinding" data-commandId="editor.action.smartSelect.shrink" data-osx="⌃⇧⌘←" data-win="Shift+Alt+Left" data-linux="Shift+Alt+Left"><span class="keybinding">⌃⇧⌘←</span> (Windows, Linux <span class="keybinding">Shift+Alt+Left</span>)</span> and <span class="dynamic-keybinding" data-commandId="editor.action.smartSelect.expand" data-osx="⌃⇧⌘→" data-win="Shift+Alt+Right" data-linux="Shift+Alt+Right"><span class="keybinding">⌃⇧⌘→</span> (Windows, Linux <span class="keybinding">Shift+Alt+Right</span>)</span>.</p>
+<p>Here's an example of expanding the selection with <span class="dynamic-keybinding" data-commandId="editor.action.smartSelect.expand" data-osx="⌃⇧⌘→" data-win="Shift+Alt+Right" data-linux="Shift+Alt+Right"><span class="keybinding">⌃⇧⌘→</span> (Windows, Linux <span class="keybinding">Shift+Alt+Right</span>)</span>:</p>
+<p><img src="/assets/docs/editing/codebasics/expandselection.gif" alt="Expand selection" loading="lazy"></p>
+<h2 id="_column-box-selection" data-needslink="_column-box-selection">Column (box) selection</h2>
+<p>Place the cursor in one corner and then hold <span class="keybinding">Shift+Alt</span> while dragging to the opposite corner:</p>
+<p><img src="/assets/docs/editing/codebasics/column-select.gif" alt="Column text selection" loading="lazy"></p>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>This changes to <span class="keybinding">Shift+Ctrl/Cmd</span> when using <span class="keybinding">Ctrl/Cmd</span> as <a href="#_multi-cursor-modifier">multi-cursor modifier</a>.</p>
+</div><p>There are also default keyboard shortcuts for column selection on macOS and Windows, but not on Linux.</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Key</th>
+<th>Command</th>
+<th>Command ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="dynamic-keybinding" data-commandId="cursorColumnSelectDown" data-osx="⇧↓" data-win="Shift+Down" data-linux="Shift+Down"><span class="keybinding">⇧↓</span> (Windows, Linux <span class="keybinding">Shift+Down</span>)</span></td>
+<td>Column Select Down</td>
+<td><code>cursorColumnSelectDown</code></td>
+</tr>
+<tr>
+<td><span class="dynamic-keybinding" data-commandId="cursorColumnSelectUp" data-osx="⇧↑" data-win="Shift+Up" data-linux="Shift+Up"><span class="keybinding">⇧↑</span> (Windows, Linux <span class="keybinding">Shift+Up</span>)</span></td>
+<td>Column Select Up</td>
+<td><code>cursorColumnSelectUp</code></td>
+</tr>
+<tr>
+<td><span class="dynamic-keybinding" data-commandId="cursorColumnSelectLeft" data-osx="⇧←" data-win="Shift+Left" data-linux="Shift+Left"><span class="keybinding">⇧←</span> (Windows, Linux <span class="keybinding">Shift+Left</span>)</span></td>
+<td>Column Select Left</td>
+<td><code>cursorColumnSelectLeft</code></td>
+</tr>
+<tr>
+<td><span class="dynamic-keybinding" data-commandId="cursorColumnSelectRight" data-osx="⇧→" data-win="Shift+Right" data-linux="Shift+Right"><span class="keybinding">⇧→</span> (Windows, Linux <span class="keybinding">Shift+Right</span>)</span></td>
+<td>Column Select Right</td>
+<td><code>cursorColumnSelectRight</code></td>
+</tr>
+<tr>
+<td><span class="dynamic-keybinding" data-commandId="cursorColumnSelectPageDown" data-osx="⇧PageDown" data-win="Shift+PageDown" data-linux="Shift+PageDown"><span class="keybinding">⇧PageDown</span> (Windows, Linux <span class="keybinding">Shift+PageDown</span>)</span></td>
+<td>Column Select Page Down</td>
+<td><code>cursorColumnSelectPageDown</code></td>
+</tr>
+<tr>
+<td><span class="dynamic-keybinding" data-commandId="cursorColumnSelectPageUp" data-osx="⇧PageUp" data-win="Shift+PageUp" data-linux="Shift+PageUp"><span class="keybinding">⇧PageUp</span> (Windows, Linux <span class="keybinding">Shift+PageUp</span>)</span></td>
+<td>Column Select Page Up</td>
+<td><code>cursorColumnSelectPageUp</code></td>
+</tr>
+</tbody>
+</table>
+<p>You can <a href="/docs/configure/keybindings">edit</a> your <code>keybindings.json</code> to bind them to something more familiar if you want.</p>
+<h3 id="_column-selection-mode" data-needslink="_column-selection-mode">Column Selection mode</h3>
+<p>The user setting <strong>Editor: Column Selection</strong> controls this feature. Once this mode is entered, as indicated in the Status bar, the mouse gestures and the arrow keys will create a column selection by default. This global toggle is also accessible via the <strong>Selection</strong> &gt; <strong>Column Selection Mode</strong> menu item. In addition, one can also disable Column Selection mode from the Status bar.</p>
+<h2 id="_save-auto-save" data-needslink="_save-auto-save">Save / Auto Save</h2>
+<p>By default, VS Code requires an explicit action to save your changes to disk, <span class="dynamic-keybinding" data-commandId="workbench.action.files.save" data-osx="⌘S" data-win="Ctrl+S" data-linux="Ctrl+S"><span class="keybinding">⌘S</span> (Windows, Linux <span class="keybinding">Ctrl+S</span>)</span>.</p>
+<p>When an editor has unsaved changes, a dot indicator is displayed in the editor tab, and the Explorer view shows a badge indicating the number of unsaved files. These changes are not yet saved to disk, but VS Code automatically backs them up so they can be restored if the application closes unexpectedly (see <a href="#_hot-exit">Hot Exit</a>).</p>
+<p>However, it's easy to turn on <code>Auto Save</code>, which will save your changes after a configured delay or when focus leaves the editor. With this option turned on, there is no need to explicitly save the file. The easiest way to turn on <code>Auto Save</code> is with the <strong>File</strong> &gt; <strong>Auto Save</strong> toggle that turns on and off save after a delay.</p>
+<p>For more control over <code>Auto Save</code>, open User or Workspace <a href="/docs/configure/settings">settings</a> and find the associated settings:</p>
+<ul>
+<li><span class="setting"><span class="setting-dropdown" data-setting-id="files.autoSave">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      files.autoSave
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>: Can have the values:
+<ul>
+<li><code>off</code> - to disable auto save.</li>
+<li><code>afterDelay</code> - to save files after a configured delay (default 1000 ms).</li>
+<li><code>onFocusChange</code> - to save files when focus moves out of the editor of the dirty file.</li>
+<li><code>onWindowChange</code> - to save files when the focus moves out of the VS Code window.</li>
+</ul>
+</li>
+<li><span class="setting"><span class="setting-dropdown" data-setting-id="files.autoSaveDelay">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      files.autoSaveDelay
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>: Configures the delay in milliseconds when <span class="setting"><span class="setting-dropdown" data-setting-id="files.autoSave">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      files.autoSave
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> is configured to <code>afterDelay</code>. The default is 1000 ms.</li>
+</ul>
+<p>If you want to customize the <code>Auto Save</code> functionality for specific languages or file types, you can do so from the <code>settings.json</code> file by adding language-specific rules.</p>
+<p>For example, to disable <code>Auto Save</code> for LaTeX files:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">    "[latex]"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "files.autoSave"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"off"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    },</span></span>
+<span class="line"></span></code></pre>
+<h2 id="_hot-exit" data-needslink="_hot-exit">Hot Exit</h2>
+<p>By default, VS Code remembers unsaved changes to files when you exit. Hot exit is triggered when the application is closed via <strong>File</strong> &gt; <strong>Exit</strong> (<strong>Code</strong> &gt; <strong>Quit</strong> on macOS) or when the last window is closed.</p>
+<p>You can configure hot exit by setting <span class="setting"><span class="setting-dropdown" data-setting-id="files.hotExit">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      files.hotExit
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> to the following values:</p>
+<ul>
+<li><code>&quot;off&quot;</code>: Disable hot exit.</li>
+<li><code>&quot;onExit&quot;</code>: Hot exit will be triggered when the application is closed, that is when the last window is closed on Windows/Linux or when the <code>workbench.action.quit</code> command is triggered (from the <strong>Command Palette</strong>, keyboard shortcut or menu). All windows without folders opened will be restored upon next launch.</li>
+<li><code>&quot;onExitAndWindowClose&quot;</code>: Hot exit will be triggered when the application is closed, that is when the last window is closed on Windows/Linux or when the <code>workbench.action.quit</code> command is triggered (from the <strong>Command Palette</strong>, keyboard shortcut or menu), and also for any window with a folder opened regardless of whether it is the last window. All windows without folders opened will be restored upon next launch. To restore folder windows as they were before shutdown, set <span class="setting"><span class="setting-dropdown" data-setting-id="window.restoreWindows">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      window.restoreWindows
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> to <code>all</code>.</li>
+</ul>
+<p>If something goes wrong with hot exit, all backups are stored in the following folders for standard install locations:</p>
+<ul>
+<li><strong>Windows</strong> <code>%APPDATA%\Code\Backups</code></li>
+<li><strong>macOS</strong> <code>$HOME/Library/Application Support/Code/Backups</code></li>
+<li><strong>Linux</strong> <code>$HOME/.config/Code/Backups</code></li>
+</ul>
+<h2 id="_find-and-replace" data-needslink="_find-and-replace">Find and replace</h2>
+<p>VS Code allows you to quickly find and replace text in the currently opened file. Press <span class="dynamic-keybinding" data-commandId="actions.find" data-osx="⌘F" data-win="Ctrl+F" data-linux="Ctrl+F"><span class="keybinding">⌘F</span> (Windows, Linux <span class="keybinding">Ctrl+F</span>)</span> to open the Find control in the editor and type the search string. The search results are highlighted in the editor, overview ruler, and minimap.</p>
+<p>VS Code immediately starts searching as you type. To only start searching when you press <span class="keybinding">Enter</span>, clear the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.find.findOnType">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.find.findOnType
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting.</p>
+<p>To automatically close the Find control after a match is found and return focus to the editor, enable the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.find.closeOnResult">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.find.closeOnResult
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting.</p>
+<p>If there are multiple matches in the current file, press <span class="dynamic-keybinding" data-commandId="editor.action.nextMatchFindAction" data-osx="Enter" data-win="Enter" data-linux="Enter"><span class="keybinding">Enter</span></span> to go to the next result or <span class="dynamic-keybinding" data-commandId="editor.action.previousMatchFindAction" data-osx="⇧Enter" data-win="Shift+Enter" data-linux="Shift+Enter"><span class="keybinding">⇧Enter</span> (Windows, Linux <span class="keybinding">Shift+Enter</span>)</span> to go to the previous result while the find input box has focus.</p>
+<p>By default, VS Code saves the history of your find and replace queries for a workspace and restores it across restarts. You can configure this behavior with the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.find.history">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.find.history
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> and <span class="setting"><span class="setting-dropdown" data-setting-id="editor.find.replaceHistory">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.find.replaceHistory
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> settings. Set the value to <code>never</code> to disable saving the history.</p>
+<h3 id="_seed-search-string-from-selection" data-needslink="_seed-search-string-from-selection">Seed search string from selection</h3>
+<p>When the Find control is opened, it will automatically populate the selected text in the editor into the find input box. If the selection is empty, the word under the cursor will be inserted into the input box instead.</p>
+<p><img src="/assets/docs/editing/codebasics/seed-search-string-from-selection.gif" alt="Seed Search String From Selection" loading="lazy"></p>
+<p>This feature can be turned off by setting <span class="setting"><span class="setting-dropdown" data-setting-id="editor.find.seedSearchStringFromSelection">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.find.seedSearchStringFromSelection
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> to <code>&quot;never&quot;</code>.</p>
+<h3 id="_find-in-selection" data-needslink="_find-in-selection">Find in selection</h3>
+<p>By default, the find operations are run on the entire file in the editor. To limit the search to the text selection, select the <strong>Find in Selection</strong> icon on the Find control or press <span class="dynamic-keybinding" data-commandId="toggleFindInSelection" data-osx="⌥⌘L" data-win="Alt+L" data-linux="Alt+L"><span class="keybinding">⌥⌘L</span> (Windows, Linux <span class="keybinding">Alt+L</span>)</span>.</p>
+<p><img src="/assets/docs/editing/codebasics/find-in-selection.gif" alt="Find In Selection" loading="lazy"></p>
+<p>If you want it to be the default behavior of the Find control, you can set <span class="setting"><span class="setting-dropdown" data-setting-id="editor.find.autoFindInSelection">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.find.autoFindInSelection
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> to <code>always</code>, or to <code>multiline</code>, if you want it to be run on selected text only when multiple lines of content are selected.</p>
+<h3 id="_advanced-find-and-replace-options" data-needslink="_advanced-find-and-replace-options">Advanced find and replace options</h3>
+<p>For more advanced scenarios, the Find and Replace control has the following options:</p>
+<ul>
+<li>
+<p>Find control:</p>
+<ul>
+<li>Match Case</li>
+<li>Match Whole Word</li>
+<li>Regular Expression</li>
+</ul>
+</li>
+<li>
+<p>Replace control:</p>
+<ul>
+<li>Preserve case</li>
+</ul>
+</li>
+</ul>
+<p><img src="/assets/docs/editing/codebasics/search-replace-advanced-options.png" alt="Advanced Find and Replace Options" loading="lazy"></p>
+<h3 id="_multiline-support-and-find-control-resizing" data-needslink="_multiline-support-and-find-control-resizing">Multiline support and Find control resizing</h3>
+<p>You can search multiple line text by pasting the text into the Find input box and Replace input box. Pressing <span class="keybinding">Ctrl+Enter</span> inserts a new line in the input box.</p>
+<p><img src="/assets/docs/editing/codebasics/multiple-line-support.gif" alt="Multiple Line Support" loading="lazy"></p>
+<p>While searching long text, the default size of Find control might be too small. You can drag the left sash to enlarge the Find control or double click the left sash to maximize it or shrink it to its default size.</p>
+<p><img src="/assets/docs/editing/codebasics/resize-find-widget.gif" alt="Resize Find control" loading="lazy"></p>
+<h2 id="_search-across-files" data-needslink="_search-across-files">Search across files</h2>
+<p>VS Code allows you to quickly search over all files in the currently opened folder.  Press <span class="dynamic-keybinding" data-commandId="workbench.view.search" data-osx="⇧⌘F" data-win="Ctrl+Shift+F" data-linux="Ctrl+Shift+F"><span class="keybinding">⇧⌘F</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+F</span>)</span> and enter your search term. Search results are grouped into files containing the search term, with an indication of the hits in each file and its location. Expand a file to see a preview of all of the hits within that file. Then single-click on one of the hits to view it in the editor.</p>
+<p><img src="/assets/docs/editing/codebasics/search.png" alt="A simple text search across files" loading="lazy"></p>
+<div class="markdown-alert tip" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z">
+          </path>
+        </svg>
+        Tip
+      </span><p>VS Code also supports regular expression searching in the search box.</p>
+</div><p>You can configure advanced search options by selecting the ellipsis (<strong>Toggle Search Details</strong>) below the search box on the right (or press <span class="dynamic-keybinding" data-commandId="workbench.action.search.toggleQueryDetails" data-osx="⇧⌘J" data-win="Ctrl+Shift+J" data-linux="Ctrl+Shift+J"><span class="keybinding">⇧⌘J</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+J</span>)</span>). This shows additional fields to configure the search.</p>
+<div class="markdown-alert tip" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z">
+          </path>
+        </svg>
+        Tip
+      </span><p>You can use Quick Search to quickly find text across all files in the currently opened folder. Open the Command Palette (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>) and enter the <strong>Search: Quick Search</strong> command.</p>
+</div><h3 id="_advanced-search-options" data-needslink="_advanced-search-options">Advanced search options</h3>
+<p><img src="/assets/docs/editing/codebasics/searchadvanced-v2.png" alt="Advanced search options" loading="lazy"></p>
+<p>In the two input boxes below the search box, you can enter patterns to include or exclude from the search. If you enter <code>example</code>, that will match every folder and file named <code>example</code> in the workspace. If you enter <code>./example</code>, that will match the folder <code>example/</code> at the top level of your workspace. Use <code>,</code> to separate multiple patterns. Paths must use forward slashes. You can also use <a href="/docs/editor/glob-patterns">glob pattern</a> syntax, for example:</p>
+<ul>
+<li><code>*</code> to match zero or more characters in a path segment</li>
+<li><code>?</code> to match on one character in a path segment</li>
+<li><code>**</code> to match any number of path segments, including none</li>
+<li><code>{}</code> to group conditions (for example <code>{**/*.html,**/*.txt}</code> matches all HTML and text files)</li>
+<li><code>[]</code> to <strong>declare</strong> a range of characters to match (<code>example.[0-9]</code> to match on <code>example.0</code>, <code>example.1</code>, …)</li>
+<li><code>[!...]</code> to negate a range of characters to match (<code>example.[!0-9]</code> to match on <code>example.a</code>, <code>example.b</code>, but not <code>example.0</code>)</li>
+</ul>
+<p><strong>Note about case sensitivity:</strong> Glob patterns follow your operating system's file system rules. On Windows and macOS, patterns are case-insensitive (for example, <code>*.CS</code> matches <code>file.cs</code>). On Linux, patterns are case-sensitive. This is separate from the search text <strong>Match Case</strong> toggle, which controls whether the search text itself is case-sensitive. Learn more about <a href="/docs/editor/glob-patterns#_case-sensitivity">glob patterns</a>.</p>
+<p>VS Code excludes some folders by default to reduce the number of search results that you are not interested in (for example: <code>node_modules</code>). Open <a href="/docs/configure/settings">settings</a> to change these rules under the <span class="setting"><span class="setting-dropdown" data-setting-id="files.exclude">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      files.exclude
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> and <span class="setting"><span class="setting-dropdown" data-setting-id="search.exclude">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      search.exclude
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> section.</p>
+<p>Note that glob patterns in the Search view work differently than in settings such as <span class="setting"><span class="setting-dropdown" data-setting-id="files.exclude">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      files.exclude
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> and <span class="setting"><span class="setting-dropdown" data-setting-id="search.exclude">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      search.exclude
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>. In the settings, you must use <code>**/example</code> to match a folder named <code>example</code> in subfolder <code>folder1/example</code> in your workspace. In the Search view, the <code>**</code> prefix is assumed. The glob patterns in these settings are always evaluated relative to the path of the workspace folder.</p>
+<p>Also note the <strong>Use Exclude Settings and Ignore Files</strong> toggle button in the <strong>files to exclude</strong> box. The toggle determines whether to exclude files that are ignored by your <code>.gitignore</code> files and/or matched by your <span class="setting"><span class="setting-dropdown" data-setting-id="files.exclude">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      files.exclude
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> and <span class="setting"><span class="setting-dropdown" data-setting-id="search.exclude">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      search.exclude
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> settings.</p>
+<p>In the <strong>files to include</strong> box, you can use the <strong>Search only in changed files</strong> toggle button to restrict search results to files that have uncommitted source control changes. This toggle is disabled when there's no repository or no changes to search.</p>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>Patterns in <code>.gitignore</code> files are matched case-insensitively on Windows and macOS, and case-sensitively on Linux. Learn more about <a href="/docs/editor/glob-patterns#_case-sensitivity">glob pattern case sensitivity</a>.</p>
+</div><div class="markdown-alert tip" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z">
+          </path>
+        </svg>
+        Tip
+      </span><p>From the Explorer, you can right-click on a folder and select <strong>Find in Folder</strong> to search inside a folder only.</p>
+</div><h3 id="_search-and-replace" data-needslink="_search-and-replace">Search and replace</h3>
+<p>You can also Search and Replace across files. Expand the Search widget to display the Replace text box.</p>
+<p><img src="/assets/docs/editing/codebasics/global-search-replace.png" alt="search and replace" loading="lazy"></p>
+<p>When you type text into the Replace text box, you will see a diff display of the pending changes. You can replace across all files from the Replace text box, replace all in one file or replace a single change.</p>
+<p><img src="/assets/docs/editing/codebasics/search-replace-example.png" alt="search and replace diff view" loading="lazy"></p>
+<div class="markdown-alert tip" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z">
+          </path>
+        </svg>
+        Tip
+      </span><p>You can quickly reuse a previous search term by using <span class="dynamic-keybinding" data-commandId="history.showNext" data-osx="↓" data-win="Down" data-linux="Down"><span class="keybinding">↓</span> (Windows, Linux <span class="keybinding">Down</span>)</span> and <span class="dynamic-keybinding" data-commandId="history.showPrevious" data-osx="↑" data-win="Up" data-linux="Up"><span class="keybinding">↑</span> (Windows, Linux <span class="keybinding">Up</span>)</span> to navigate through your search term history.</p>
+</div><h3 id="_case-changing-in-regex-replace" data-needslink="_case-changing-in-regex-replace">Case changing in regex replace</h3>
+<p>VS Code supports changing the case of regex matching groups while doing Search and Replace in the editor or globally. This is done with the modifiers <code>\u\U\l\L</code>, where <code>\u</code> and <code>\l</code> will upper/lowercase a single character, and <code>\U</code> and <code>\L</code> will upper/lowercase the rest of the matching group.</p>
+<p>Example:</p>
+<p><img src="/assets/docs/editing/codebasics/case-change-replace.gif" alt="Changing case while doing find and replace" loading="lazy"></p>
+<p>The modifiers can also be stacked - for example, <code>\u\u\u$1</code> will uppercase the first three characters of the group, or <code>\l\U$1</code> will lowercase the first character, and uppercase the rest. The capture group is referenced by <code>$n</code> in the replacement string, where <code>n</code> is the order of the capture group.</p>
+<h2 id="_search-editor" data-needslink="_search-editor">Search Editor</h2>
+<p>Search Editors let you view workspace search results in a full-sized editor, complete with syntax highlighting and optional lines of surrounding context.</p>
+<p>Below is a search for the word 'SearchEditor' with two lines of text before and after the match for context:</p>
+<p><img src="/assets/docs/editing/codebasics/search-editor-overview.png" alt="Search Editor overview" loading="lazy"></p>
+<p>The <strong>Open Search Editor</strong> command opens an existing Search Editor if one exists, or to otherwise create a new one. The <strong>New Search Editor</strong> command will always create a new Search Editor.</p>
+<p>In the Search Editor, results can be navigated to using <strong>Go to Definition</strong> actions, such as <span class="dynamic-keybinding" data-commandId="editor.action.revealDefinition" data-osx="F12" data-win="F12" data-linux="F12"><span class="keybinding">F12</span></span> to open the source location in the current editor group, or <span class="dynamic-keybinding" data-commandId="editor.action.revealDefinitionAside" data-osx="⌘K F12" data-win="Ctrl+K F12" data-linux="Ctrl+K F12"><span class="keybinding">⌘K F12</span> (Windows, Linux <span class="keybinding">Ctrl+K F12</span>)</span> to open the location in an editor to the side. Additionally, you can configure the behavior for single-clicking or double-clicking a search result with the <span class="setting"><span class="setting-dropdown" data-setting-id="search.searchEditor.singleClickBehaviour">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      search.searchEditor.singleClickBehaviour
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> and <span class="setting"><span class="setting-dropdown" data-setting-id="search.searchEditor.doubleClickBehaviour">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      search.searchEditor.doubleClickBehaviour
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> settings. For example, to open a peek definition window or to open the source location.</p>
+<p>You can also use the <strong>Open New Search Editor</strong> button at the top of the Search view, and can copy your existing results from a Search view over to a Search Editor with the <strong>Open in editor</strong> link at the top of the results tree, or the <strong>Search Editor: Open Results in Editor</strong> command.</p>
+<p><img src="/assets/docs/editing/codebasics/search-editor-button.png" alt="Search Editor Button" loading="lazy"></p>
+<p>The Search Editor above was opened by selecting the <strong>Open New Search Editor</strong> button (third button) on the top of the Search view.</p>
+<h3 id="_search-editor-commands-and-arguments" data-needslink="_search-editor-commands-and-arguments">Search Editor commands and arguments</h3>
+<ul>
+<li><code>search.action.openNewEditor</code> - Opens the Search Editor in a new tab.</li>
+<li><code>search.action.openInEditor</code> - Copy the current Search results into a new Search Editor.</li>
+<li><code>search.action.openNewEditorToSide</code> - Opens the Search Editor in a new window next to the window you currently have opened.</li>
+</ul>
+<p>There are two arguments that you can pass to the Search Editor commands (<code>search.action.openNewEditor</code>, <code>search.action.openNewEditorToSide</code>) to allow keyboard shortcuts to configure how a new Search Editor should behave:</p>
+<ul>
+<li><code>triggerSearch</code> - Whether a search be automatically run when a Search Editor is opened. Default is true.</li>
+<li><code>focusResults</code> - Whether to put focus in the results of a search or the query input. Default is true.</li>
+</ul>
+<p>For example, the following keyboard shortcut runs the search when the Search Editor is opened but leaves the focus in the search query control.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ctrl+o"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"search.action.openNewEditor"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: { </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"query"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"VS Code"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"triggerSearch"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"focusResults"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">false</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<h3 id="_search-editor-context-default" data-needslink="_search-editor-context-default">Search Editor context default</h3>
+<p>The <span class="setting"><span class="setting-dropdown" data-setting-id="search.searchEditor.defaultNumberOfContextLines">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      search.searchEditor.defaultNumberOfContextLines
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting has a default value of 1, meaning one context line will be shown before and after each result line in the Search Editor.</p>
+<h3 id="_reuse-last-search-editor-configuration" data-needslink="_reuse-last-search-editor-configuration">Reuse last Search Editor configuration</h3>
+<p>The <span class="setting"><span class="setting-dropdown" data-setting-id="search.searchEditor.reusePriorSearchConfiguration">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      search.searchEditor.reusePriorSearchConfiguration
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting (default is <code>false</code>) lets you reuse the last active Search Editor's configuration when creating a new Search Editor.</p>
+<h2 id="_intellisense" data-needslink="_intellisense">IntelliSense</h2>
+<p>We'll always offer word completion, but for the rich <a href="/docs/languages/overview">languages</a>, such as JavaScript, JSON, HTML, CSS, SCSS, Less, C# and TypeScript, we offer a true IntelliSense experience. If a language service knows possible completions, the IntelliSense suggestions will pop up as you type. You can always manually trigger it with <span class="dynamic-keybinding" data-commandId="editor.action.triggerSuggest" data-osx="⌃Space" data-win="Ctrl+Space" data-linux="Ctrl+Space"><span class="keybinding">⌃Space</span> (Windows, Linux <span class="keybinding">Ctrl+Space</span>)</span>.  By default, <span class="keybinding">Tab</span> or <span class="keybinding">Enter</span> are the accept keyboard triggers but you can also <a href="/docs/configure/keybindings">customize these keyboard shortcuts</a>.</p>
+<div class="markdown-alert tip" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z">
+          </path>
+        </svg>
+        Tip
+      </span><p> The suggestions filtering supports CamelCase, so you can type the letters which are upper cased in a method name to limit the suggestions. For example, &quot;cra&quot; will quickly bring up &quot;createApplication&quot;.</p>
+</div><div class="markdown-alert tip" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z">
+          </path>
+        </svg>
+        Tip
+      </span><p>IntelliSense suggestions can be configured via the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.quickSuggestions">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.quickSuggestions
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> and <span class="setting"><span class="setting-dropdown" data-setting-id="editor.suggestOnTriggerCharacters">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.suggestOnTriggerCharacters
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> <a href="/docs/configure/settings">settings</a>.</p>
+</div><p>JavaScript and TypeScript developers can take advantage of the <a href="https://www.npmjs.com" class="external-link" target="_blank">npmjs</a> type declaration (typings) file repository to get IntelliSense for common JavaScript libraries (Node.js, React, Angular). You can find a good explanation on using type declaration files in the <a href="/docs/languages/javascript#_intellisense">JavaScript language</a> topic and the <a href="/docs/nodejs/nodejs-tutorial">Node.js</a> tutorial.</p>
+<p>Learn more in the <a href="/docs/editing/intellisense">IntelliSense document</a>.</p>
+<h2 id="_formatting" data-needslink="_formatting">Formatting</h2>
+<p>VS Code has great support for source code formatting. The editor has two explicit format actions:</p>
+<ul>
+<li><strong>Format Document</strong> (<span class="dynamic-keybinding" data-commandId="editor.action.formatDocument" data-osx="⇧⌥F" data-win="Shift+Alt+F" data-linux="Ctrl+Shift+I"><span class="keybinding">⇧⌥F</span> (Windows <span class="keybinding">Shift+Alt+F</span>, Linux <span class="keybinding">Ctrl+Shift+I</span>)</span>) - Format the entire active file.</li>
+<li><strong>Format Selection</strong> (<span class="dynamic-keybinding" data-commandId="editor.action.formatSelection" data-osx="⌘K ⌘F" data-win="Ctrl+K Ctrl+F" data-linux="Ctrl+K Ctrl+F"><span class="keybinding">⌘K ⌘F</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+F</span>)</span>) - Format the selected text.</li>
+</ul>
+<p>You can invoke these from the <strong>Command Palette</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>) or the editor context menu.</p>
+<p>VS Code has default formatters for JavaScript, TypeScript, JSON, HTML, and CSS. Each language has specific formatting options (for example, <span class="setting"><span class="setting-dropdown" data-setting-id="html.format.indentInnerHtml">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      html.format.indentInnerHtml
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>) which you can tune to your preference in your user or workspace <a href="/docs/configure/settings">settings</a>. You can also disable the default language formatter if you have another extension installed that provides formatting for the same language.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"html.format.enable"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">false</span></span>
+<span class="line"></span></code></pre>
+<p>Along with manually invoking code formatting, you can also trigger formatting based on user gestures such as typing, saving or pasting. These are off by default but you can enable these behaviors through the following <a href="/docs/configure/settings">settings</a>:</p>
+<ul>
+<li><span class="setting"><span class="setting-dropdown" data-setting-id="editor.formatOnType">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.formatOnType
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> - Format the line after typing.</li>
+<li><span class="setting"><span class="setting-dropdown" data-setting-id="editor.formatOnSave">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.formatOnSave
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> - Format a file on save.</li>
+<li><span class="setting"><span class="setting-dropdown" data-setting-id="editor.formatOnPaste">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.formatOnPaste
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> - Format the pasted content.</li>
+</ul>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>Not all formatters support format on paste as to do so they must support formatting a selection or range of text.</p>
+</div><p>In addition to the default formatters, you can find extensions on the Marketplace to support other languages or formatting tools. There is a <code>Formatters</code> category so you can easily search and find <a href="https://marketplace.visualstudio.com/search?target=VSCode&amp;category=Formatters&amp;sortBy=Installs" class="external-link" target="_blank">formatting extensions</a>. In the <strong>Extensions</strong> view search box, type 'formatters' or 'category:formatters' to see a filtered list of extensions within VS Code.</p>
+<h2 id="_folding" data-needslink="_folding">Folding</h2>
+<p>You can fold regions of source code using the folding icons on the gutter between line numbers and line start. Move the mouse over the gutter and click to fold and unfold regions. Use <span class="keybinding">Shift + Click</span> on the folding icon to fold or unfold the region and all regions inside.</p>
+<p><img src="/assets/docs/editing/codebasics/folding.png" alt="Folding" loading="lazy"></p>
+<p>You can also use the following actions:</p>
+<ul>
+<li>Fold (<span class="dynamic-keybinding" data-commandId="editor.fold" data-osx="⌥⌘[" data-win="Ctrl+Shift+[" data-linux="Ctrl+Shift+["><span class="keybinding">⌥⌘[</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+[</span>)</span>) folds the innermost uncollapsed region at the cursor.</li>
+<li>Unfold (<span class="dynamic-keybinding" data-commandId="editor.unfold" data-osx="⌥⌘]" data-win="Ctrl+Shift+]" data-linux="Ctrl+Shift+]"><span class="keybinding">⌥⌘]</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+]</span>)</span>) unfolds the collapsed region at the cursor.</li>
+<li>Toggle Fold (<span class="dynamic-keybinding" data-commandId="editor.toggleFold" data-osx="⌘K ⌘L" data-win="Ctrl+K Ctrl+L" data-linux="Ctrl+K Ctrl+L"><span class="keybinding">⌘K ⌘L</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+L</span>)</span>) folds or unfolds the region at the cursor.</li>
+<li>Fold Recursively (<span class="dynamic-keybinding" data-commandId="editor.foldRecursively" data-osx="⌘K ⌘[" data-win="Ctrl+K Ctrl+[" data-linux="Ctrl+K Ctrl+["><span class="keybinding">⌘K ⌘[</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+[</span>)</span>) folds the innermost uncollapsed region at the cursor and all regions inside that region.</li>
+<li>Unfold Recursively (<span class="dynamic-keybinding" data-commandId="editor.unfoldRecursively" data-osx="⌘K ⌘]" data-win="Ctrl+K Ctrl+]" data-linux="Ctrl+K Ctrl+]"><span class="keybinding">⌘K ⌘]</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+]</span>)</span>) unfolds the region at the cursor and all regions inside that region.</li>
+<li>Fold All (<span class="dynamic-keybinding" data-commandId="editor.foldAll" data-osx="⌘K ⌘0" data-win="Ctrl+K Ctrl+0" data-linux="Ctrl+K Ctrl+0"><span class="keybinding">⌘K ⌘0</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+0</span>)</span>) folds all regions in the editor.</li>
+<li>Unfold All (<span class="dynamic-keybinding" data-commandId="editor.unfoldAll" data-osx="⌘K ⌘J" data-win="Ctrl+K Ctrl+J" data-linux="Ctrl+K Ctrl+J"><span class="keybinding">⌘K ⌘J</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+J</span>)</span>) unfolds all regions in the editor.</li>
+<li>Fold Level X (<span class="dynamic-keybinding" data-commandId="editor.foldLevel2" data-osx="⌘K ⌘2" data-win="Ctrl+K Ctrl+2" data-linux="Ctrl+K Ctrl+2"><span class="keybinding">⌘K ⌘2</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+2</span>)</span> for level 2) folds all regions of level X, except the region at the current cursor position.</li>
+<li>Fold All Block Comments (<span class="dynamic-keybinding" data-commandId="editor.foldAllBlockComments" data-osx="⌘K ⌘/" data-win="Ctrl+K Ctrl+/" data-linux="Ctrl+K Ctrl+/"><span class="keybinding">⌘K ⌘/</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+/</span>)</span>) folds all regions that start with a block comment token.</li>
+</ul>
+<p>Folding regions are by default evaluated based on the indentation of lines. A folding region starts when a line has a smaller indent than one or more following lines, and ends when there is a line with the same or smaller indent.</p>
+<p>Folding regions can also be computed based on syntax tokens of the editor's configured language. The following languages already provide syntax aware folding: Markdown, HTML, CSS, LESS, SCSS, and JSON.</p>
+<p>If you prefer to switch back to indentation-based folding for one (or all) of the languages above, use:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">  "[html]"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "editor.foldingStrategy"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"indentation"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">  },</span></span>
+<span class="line"></span></code></pre>
+<p>Regions can also be defined by markers defined by each language. The following languages currently have markers defined:</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Language</th>
+<th>Start region</th>
+<th>End region</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bat</td>
+<td><code>::#region</code> or <code>REM #region</code></td>
+<td><code>::#endregion</code> or <code>REM #endregion</code></td>
+</tr>
+<tr>
+<td>C#</td>
+<td><code>#region</code></td>
+<td><code>#endregion</code></td>
+</tr>
+<tr>
+<td>C/C++</td>
+<td><code>#pragma region</code></td>
+<td><code>#pragma endregion</code></td>
+</tr>
+<tr>
+<td>CSS/Less/SCSS</td>
+<td><code>/*#region*/</code></td>
+<td><code>/*#endregion*/</code></td>
+</tr>
+<tr>
+<td>Coffeescript</td>
+<td><code>#region</code></td>
+<td><code>#endregion</code></td>
+</tr>
+<tr>
+<td>F#</td>
+<td><code>//#region</code> or <code>(#_region)</code></td>
+<td><code>//#endregion</code> or <code>(#_endregion)</code></td>
+</tr>
+<tr>
+<td>Java</td>
+<td><code>//#region</code> or <code>//&lt;editor-fold&gt;</code></td>
+<td><code>//#endregion</code> or <code>//&lt;/editor-fold&gt;</code></td>
+</tr>
+<tr>
+<td>Markdown</td>
+<td><code>&lt;!-- #region --&gt;</code></td>
+<td><code>&lt;!-- #endregion --&gt;</code></td>
+</tr>
+<tr>
+<td>Perl5</td>
+<td><code>#region</code> or <code>=pod</code></td>
+<td><code>#endregion</code> or <code>=cut</code></td>
+</tr>
+<tr>
+<td>PHP</td>
+<td><code>#region</code></td>
+<td><code>#endregion</code></td>
+</tr>
+<tr>
+<td>PowerShell</td>
+<td><code>#region</code></td>
+<td><code>#endregion</code></td>
+</tr>
+<tr>
+<td>Python</td>
+<td><code>#region</code> or <code># region</code></td>
+<td><code>#endregion</code> or <code># endregion</code></td>
+</tr>
+<tr>
+<td>TypeScript/JavaScript</td>
+<td><code>//#region</code></td>
+<td><code>//#endregion</code></td>
+</tr>
+<tr>
+<td>Visual Basic</td>
+<td><code>#Region</code></td>
+<td><code>#End Region</code></td>
+</tr>
+</tbody>
+</table>
+<p>To fold and unfold only the regions defined by markers use:</p>
+<ul>
+<li>Fold Marker Regions (<span class="dynamic-keybinding" data-commandId="editor.foldAllMarkerRegions" data-osx="⌘K ⌘8" data-win="Ctrl+K Ctrl+8" data-linux="Ctrl+K Ctrl+8"><span class="keybinding">⌘K ⌘8</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+8</span>)</span>) folds all marker regions.</li>
+<li>Unfold Marker Regions (<span class="dynamic-keybinding" data-commandId="editor.unfoldAllMarkerRegions" data-osx="⌘K ⌘9" data-win="Ctrl+K Ctrl+9" data-linux="Ctrl+K Ctrl+9"><span class="keybinding">⌘K ⌘9</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+9</span>)</span>) unfolds all marker regions.</li>
+</ul>
+<h3 id="_fold-selection" data-needslink="_fold-selection">Fold selection</h3>
+<p>The command <strong>Create Manual Folding Ranges from Selection</strong> (<span class="dynamic-keybinding" data-commandId="editor.createFoldingRangeFromSelection" data-osx="⌘K ⌘," data-win="Ctrl+K Ctrl+," data-linux="Ctrl+K Ctrl+,"><span class="keybinding">⌘K ⌘,</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+,</span>)</span>) creates a folding range from the currently selected lines and collapses it. That range is called a <strong>manual</strong> folding range that goes on top of the ranges computed by folding providers.</p>
+<p>Manual folding ranges can be removed with the command <strong>Remove Manual Folding Ranges</strong> (<span class="dynamic-keybinding" data-commandId="editor.removeManualFoldingRanges" data-osx="⌘K ⌘." data-win="Ctrl+K Ctrl+." data-linux="Ctrl+K Ctrl+."><span class="keybinding">⌘K ⌘.</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+.</span>)</span>).</p>
+<p>Manual folding ranges are especially useful for cases when there isn't programming language support for folding.</p>
+<h2 id="_indentation" data-needslink="_indentation">Indentation</h2>
+<p>VS Code lets you control text indentation and whether you'd like to use spaces or tab stops. By default, VS Code inserts spaces and uses 4 spaces per <span class="keybinding">Tab</span> key. If you'd like to use another default, you can modify the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.insertSpaces">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.insertSpaces
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> and <span class="setting"><span class="setting-dropdown" data-setting-id="editor.tabSize">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.tabSize
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> <a href="/docs/configure/settings">settings</a>.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">    "editor.insertSpaces"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">    "editor.tabSize"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">4</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"></span></code></pre>
+<h3 id="_auto-detection" data-needslink="_auto-detection">Auto-detection</h3>
+<p>VS Code analyzes your open file and determines the indentation used in the document. The auto-detected indentation overrides your default indentation settings. The detected setting is displayed on the right side of the Status Bar:</p>
+<p><img src="/assets/docs/editing/codebasics/indentation-detection.png" alt="auto detect indentation" loading="lazy"></p>
+<p>You can click on the Status Bar indentation display to bring up a dropdown with indentation commands allowing you to change the default settings for the open file or convert between tab stops and spaces.</p>
+<p><img src="/assets/docs/editing/codebasics/indentation-commands.png" alt="indentation commands" loading="lazy"></p>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>VS Code auto-detection checks for indentations of 2, 4, 6 or 8 spaces. If your file uses a different number of spaces, the indentation may not be correctly detected. For example, if your convention is to indent with 3 spaces, you may want to turn off <span class="setting"><span class="setting-dropdown" data-setting-id="editor.detectIndentation">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.detectIndentation
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> and explicitly set the tab size to 3.</p>
+</div><pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">    "editor.detectIndentation"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">false</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">    "editor.tabSize"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">3</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"></span></code></pre>
+<h2 id="_file-encoding-support" data-needslink="_file-encoding-support">File encoding support</h2>
+<p>Set the file encoding globally or per workspace by using the <span class="setting"><span class="setting-dropdown" data-setting-id="files.encoding">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      files.encoding
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting in <strong>User Settings</strong> or <strong>Workspace Settings</strong>.</p>
+<p><img src="/assets/docs/editing/codebasics/filesencodingsetting.png" alt="files.encoding setting" loading="lazy"></p>
+<p>You can view the file encoding in the status bar.</p>
+<p><img src="/assets/docs/editing/codebasics/fileencoding.png" alt="Encoding in status bar" loading="lazy"></p>
+<p>Click on the encoding button in the status bar to reopen or save the active file with a different encoding.</p>
+<p><img src="/assets/docs/editing/codebasics/encodingclicked.png" alt="Reopen or save with a different encoding" loading="lazy"></p>
+<p>Then choose an encoding.</p>
+<p><img src="/assets/docs/editing/codebasics/encodingselection.png" alt="Select an encoding" loading="lazy"></p>
+<h2 id="_overtype-mode" data-needslink="_overtype-mode">Overtype mode</h2>
+<p>Prior to release 1.96, VS Code only supported <em>insert</em> mode, where characters are inserted at the cursor position, unless you installed the Vim <a href="/docs/configure/keybindings#_keymap-extensions">keymap extension</a>.</p>
+<p>As of release 1.96, VS Code supports <em>overtype</em> mode, which lets you overwrite existing characters instead of inserting characters at the cursor position. By default, overtype mode is off.</p>
+<p>To switch between insert and overtype mode, run the <strong>Toggle Overtype/Insert Mode</strong> command in the Command Palette or press (<span class="dynamic-keybinding" data-commandId="editor.action.toggleOvertypeInsertMode" data-osx="⌥⌘O" data-win="Insert" data-linux="Insert"><span class="keybinding">⌥⌘O</span> (Windows, Linux <span class="keybinding">Insert</span>)</span>). When you're in overtype mode, a Status Bar indicator shows <code>OVR</code>.</p>
+<p>You can change the cursor style for overtype mode by configuring the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.overtypeCursorStyle">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.overtypeCursorStyle
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting.</p>
+<p>Use the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.overtypeOnPaste">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.overtypeOnPaste
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting to overwrite text when pasting. You need to be in overtype mode for this setting to take effect.</p>
+<h2 id="_compare-files" data-needslink="_compare-files">Compare files</h2>
+<p>VS Code supports several ways to compare the content of the current file or of any two files.</p>
+<p>When you have an active file open in the editor, you have the following compare options:</p>
+<ul>
+<li><strong>Compare with a workspace file</strong>: in the Command Palette, select <strong>File: Compare Active File With...</strong>, and then choose another file to compare with.</li>
+<li><strong>Compare with clipboard</strong>: in the Command Palette, select <strong>File: Compare Active File with Clipboard</strong> (<span class="dynamic-keybinding" data-commandId="workbench.files.action.compareWithClipboard" data-osx="⌘K C" data-win="Ctrl+K C" data-linux="Ctrl+K C"><span class="keybinding">⌘K C</span> (Windows, Linux <span class="keybinding">Ctrl+K C</span>)</span>) to compare the current file with the clipboard content.</li>
+<li><strong>Compare with saved</strong>: in the Command Palette, select <strong>File: Compare Active File with Saved</strong> (<span class="dynamic-keybinding" data-commandId="workbench.files.action.compareWithSaved" data-osx="⌘K D" data-win="Ctrl+K D" data-linux="Ctrl+K D"><span class="keybinding">⌘K D</span> (Windows, Linux <span class="keybinding">Ctrl+K D</span>)</span>) to compare the current file with the last saved version.</li>
+</ul>
+<p>To compare any two files:</p>
+<ul>
+<li>Right-click on a file in the Explorer view and select <strong>Select for Compare</strong>. Then, right-click on a second file and select <strong>Compare with Selected</strong>.</li>
+<li>To start a comparison between two empty editor windows, select <strong>File: Compare New Untitled Text Files</strong> from the Command Palette.</li>
+</ul>
+<div class="markdown-alert tip" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z">
+          </path>
+        </svg>
+        Tip
+      </span><p>You can start VS Code from the command line with the <code>--diff</code> option to compare two files. Learn more about the <a href="/docs/configure/command-line#_core-cli-options">VS Code command line interface</a>.</p>
+</div><h2 id="_next-steps" data-needslink="_next-steps">Next steps</h2>
+<p>You've covered the basic user interface - there is a lot more to VS Code.  Read on to find out about:</p>
+<ul>
+<li><a href="/docs/introvideos/basics">Intro Video - Setup and Basics</a> - Watch a tutorial on the basics of VS Code.</li>
+<li><a href="/docs/configure/settings">User/Workspace Settings</a> - Learn how to configure VS Code to your preferences through user and workspace settings.</li>
+<li><a href="/docs/editing/editingevolved">Code Navigation</a> - Peek and Goto Definition, and more.</li>
+<li><a href="/docs/terminal/basics">Integrated Terminal</a> - Learn about the integrated terminal for quickly performing command-line tasks from within VS Code.</li>
+<li><a href="/docs/editing/intellisense">IntelliSense</a> - VS Code brings smart code completions.</li>
+<li><a href="/docs/debugtest/debugging">Debugging</a> - This is where VS Code really shines.</li>
+</ul>
+<h2 id="_common-questions" data-needslink="_common-questions">Common questions</h2>
+<h3 id="_is-it-possible-to-globally-search-and-replace" data-needslink="_is-it-possible-to-globally-search-and-replace">Is it possible to globally search and replace?</h3>
+<p>Yes, expand the Search view text box to include a replace text field. You can search and replace across all the files in your workspace. Note that if you did not open VS Code on a folder, the search will only run on the currently open files.</p>
+<p><img src="/assets/docs/editing/codebasics/global-search-replace.png" alt="global search and replace" loading="lazy"></p>
+<h3 id="_how-do-i-turn-on-word-wrap" data-needslink="_how-do-i-turn-on-word-wrap">How do I turn on word wrap?</h3>
+<p>You can control word wrap through the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.wordWrap">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.wordWrap
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> <a href="/docs/configure/settings">setting</a>. By default, <span class="setting"><span class="setting-dropdown" data-setting-id="editor.wordWrap">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.wordWrap
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> is <code>off</code> but if you set to it to <code>on</code>, text will wrap on the editor's viewport width.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">    "editor.wordWrap"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"on"</span></span>
+<span class="line"></span></code></pre>
+<p>You can toggle word wrap for the VS Code session with <span class="dynamic-keybinding" data-commandId="editor.action.toggleWordWrap" data-osx="⌥Z" data-win="Alt+Z" data-linux="Alt+Z"><span class="keybinding">⌥Z</span> (Windows, Linux <span class="keybinding">Alt+Z</span>)</span>.</p>
+<p>You can also add vertical column rulers to the editor with the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.rulers">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.rulers
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting, which takes an array of column character positions where you'd like vertical rulers.</p>
+<p>As in other editors, commands such as <strong>Cut</strong> and <strong>Copy</strong> apply to the whole wrapped line. Triple-click selects the whole wrapped line. Pressing <span class="keybinding">Home</span> twice moves the cursor to the very beginning of the line. Pressing <span class="keybinding">End</span> twice moves the cursor to the very end of the line.</p>
+<h3 id="_how-can-i-avoid-placing-extra-cursors-in-word-wrapped-lines" data-needslink="_how-can-i-avoid-placing-extra-cursors-in-word-wrapped-lines">How can I avoid placing extra cursors in word wrapped lines?</h3>
+<p>If you'd like to ignore line wraps when adding cursors above or below your current selection, you can pass in <code>{ &quot;logicalLine&quot;: true }</code> to <code>args</code> on the keyboard shortcut like this:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"shift+alt+down"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.action.insertCursorBelow"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"textInputFocus"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: { </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"logicalLine"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">},</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"shift+alt+up"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.action.insertCursorAbove"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"textInputFocus"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: { </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"logicalLine"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">},</span></span>
+<span class="line"></span></code></pre>
+
+                <div class="feedback" data-edit-url="https://vscode.dev/github/microsoft/vscode-docs/blob/main/docs/editing/codebasics.md"></div>
+                
+                <div class="body-footer">8/5/2026</div>
+                
+            </main>
+        </div>
+        
+        <!-- Mobile connect widget -->
+        <div class="docs-mobile-widgets visible-xs">
+            <div class="connect-widget"></div>
+        </div>
+    </div>
+</div>
+		</main>
+	</div>
+
+	<div id="search-popup-overlay" class="search-popup-overlay" role="dialog" aria-modal="true" aria-label="Search">
+		<div class="search-popup-container">
+			<div class="search-popup-header">
+				<form class="search-popup-form">
+					<div class="input-group">
+						<input type="text" name="q" class="search-box form-control" placeholder="Search the website"
+							aria-label="Search text" role="combobox" aria-expanded="false"
+							aria-autocomplete="list" aria-controls="search-results-listbox"
+							aria-activedescendant="" />
+						<span class="input-group-btn">
+							<button tabindex="0" class="btn" type="submit" aria-label="Search">
+								<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="Search" />
+								<img class="search-icon-light" src="/assets/icons/search.svg" alt="Search" />
+							</button>
+						</span>
+					</div>
+				</form>
+				<button class="search-popup-close" type="button" aria-label="Close search"><i class="codicon codicon-close" aria-hidden="true"></i></button>
+			</div>
+			<div class="search-popup-results">
+				<ul class="search-popup-results-list" id="search-results-listbox" role="listbox" aria-label="Search results"></ul>
+			</div>
+			<div class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="search-popup-status"></div>
+		</div>
+	</div>
+
+
+	<footer role="contentinfo" class="container">
+		<div class="footer-container">
+			<div class="footer-row">
+				<div class="footer-social">
+					<ul class="links">
+						<li>
+							<a href="https://github.com/microsoft/vscode"><img src="/assets/icons/github-icon.svg" alt="VS Code on Github"></a>
+						</li>
+						<li>
+							<a href="https://go.microsoft.com/fwlink/?LinkID=533687"><img src="/assets/icons/x-icon.svg" class="x-icon" alt="Follow us on X"></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/showcase/vs-code"><img src="/assets/icons/linkedin-icon.svg" alt="VS Code on LinkedIn"></a>
+						</li>
+						<li>
+							<a href="https://bsky.app/profile/vscode.dev"><img src="/assets/icons/bluesky-icon.svg" alt="VS Code on Bluesky"></a>
+						</li>
+						<li>
+							<a href="https://www.reddit.com/r/vscode/"><img src="/assets/icons/reddit-icon.svg" alt="Join the VS Code community on Reddit"></a>
+						</li>
+						<li>
+							<a href="https://www.vscodepodcast.com"><img src="/assets/icons/podcast-icon.svg" alt="The VS Code Insiders Podcast"></a>
+						</li>
+						<li>
+							<a href="https://www.tiktok.com/@vscode"><img src="/assets/icons/tiktok-icon.svg" alt="VS Code on TikTok"></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@code"><img src="/assets/icons/youtube-icon.svg" alt="VS Code on YouTube"></a>
+						</li>
+						<script>
+							function manageConsent() {
+								if (siteConsent && siteConsent.isConsentRequired) {
+									siteConsent.manageConsent();
+								}
+							}
+						</script>
+					</ul>
+					<a id="footer-microsoft-link" class="microsoft-logo" href="https://www.microsoft.com">
+						<img src="/assets/icons/microsoft.svg" alt="Microsoft homepage" />
+					</a>
+				</div>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li><a id="footer-support-link" href="https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=d66407ed-3967-b000-4cfb-2c318cad363d"
+						target="_blank" rel="noopener" title="Get support for VS Code"
+						aria-label="Get support for VS Code (opens in new tab)">Support</a></li>
+					<li><a id="footer-privacy-link" href="https://go.microsoft.com/fwlink/?LinkId=521839"
+						target="_blank" rel="noopener" title="View the Microsoft privacy statement"
+						aria-label="Microsoft privacy statement (opens in new tab)">Privacy</a></li>
+					<li style="display: none;"><a id="footer-cookie-link" style="cursor: pointer;" onclick="manageConsent()"
+						target="_blank" rel="noopener">Manage Cookies</a></li>
+					<li><a id="footer-terms-link" href="https://www.microsoft.com/legal/terms-of-use"
+						target="_blank" rel="noopener" title="View the Microsoft Terms of Use"
+						aria-label="Microsoft Terms of Use (opens in new tab)">Terms of Use</a></li>
+					<li><a id="footer-license-link" href="/License"
+						target="_blank" rel="noopener" title="View the Visual Studio Code license"
+						aria-label="Visual Studio Code license (opens in new tab)">License</a></li>
+				</ul>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li>
+						<svg class="privacy-choices" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43">
+							<title>Your Privacy Choices Opt-Out Icon</title>
+							<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+							<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+							<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+							<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+						</svg>
+						<a id="footer-privacy-choices-link" href="https://aka.ms/YourCaliforniaPrivacyChoices"
+						target="_blank" rel="noopener" title="View Your Privacy Choices"
+						aria-label="Your Privacy Choices (opens in new tab)">Your Privacy Choices</a></li>
+					<li><a id="footer-consumer-health-privacy-link" href="https://go.microsoft.com/fwlink/?linkid=2259814"
+						target="_blank" rel="noopener" title="View the Microsoft Consumer Health Privacy policy"
+						aria-label="Microsoft Consumer Health Privacy policy (opens in new tab)">Consumer Health Privacy</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="module">
+		document.addEventListener('DOMContentLoaded', () => {
+			const copilotDeepLinks = document.querySelectorAll('.copilot-deep-link');
+			if (copilotDeepLinks.length === 0) {
+				return;
+			}
+			if (window.innerWidth < 992) {
+				for (const link of copilotDeepLinks) {
+					link.href = 'https://aka.ms/vscode-activatecopilotfree';
+				}
+			}
+		});
+	</script>
+
+	<script src="/dist/index.js"></script>
+
+	
+
+	<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type" : "SoftwareApplication",
+			"name" : "Visual Studio Code",
+			"softwareVersion": "1.132",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			},
+			"applicationCategory": "DeveloperApplication",
+			"applicationSubCategory": "AI Code Editor",
+			"description": "Visual Studio Code is a free, open source AI code editor for agent-first development. Build with AI agents, manage multi-agent workflows, and code across any environment.",
+			"alternateName": "VS Code",
+			"datePublished": "2021-11-03",
+			"operatingSystem": "Mac, Linux, Windows",
+			"logo": "https://code.visualstudio.com/assets/apple-touch-icon.png",
+			"screenshot": "https://code.visualstudio.com/assets/images/product-screenshot.png",
+			"releaseNotes": "https://code.visualstudio.com/updates",
+			"downloadUrl": "https://code.visualstudio.com/download",
+			"license": "https://code.visualstudio.com/license",
+			"softwareRequirements": "https://code.visualstudio.com/docs/supporting/requirements",
+			"url" : "https://code.visualstudio.com",
+			"author": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"maintainer": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://code.visualstudio.com/Search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			},
+			"sameAs" : [
+				"https://en.wikipedia.org/wiki/Visual_Studio_Code",
+				"https://twitter.com/code",
+				"https://www.youtube.com/code",
+				"https://www.tiktok.com/@vscode",
+				"https://github.com/microsoft/vscode"
+			]
+		}
+	</script>
+</body>
+
+</html>

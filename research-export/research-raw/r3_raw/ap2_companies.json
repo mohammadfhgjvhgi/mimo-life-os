@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol",
+    "name": "Announcing Agent Payments Protocol (AP2)",
+    "snippet": "Sep 16, 2025 — AP2 is designed as a universal protocol , providing security and trust for a variety of payments like stablecoins and cryptocurrencies. To ... Read more",
+    "host_name": "cloud.google.com",
+    "rank": 0,
+    "date": "Sep 16, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://eco.com/support/en/articles/15192002-ap2-protocol-explained-google-s-agentic-commerce-standard-2026",
+    "name": "AP2 Protocol Explained: Google's Agentic Commerce  - Eco",
+    "snippet": "Jul 16, 2026 — Google's open Agent Payments Protocol uses signed Intent, Cart, and Payment Mandates to let AI agents pay across cards and stablecoins.",
+    "host_name": "eco.com",
+    "rank": 1,
+    "date": "Jul 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/bellajbadr_this-is-huge-for-payment-google-has-just-activity-7374008638790717440-oFvE",
+    "name": "Google Announces Agent Payments Protocol (AP2) with",
+    "snippet": "AP2 extends existing protocols (A2A and MCP) to enable AI agents to carry out financial transactions in a secure, traceable, and verifiable way. Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://orium.com/blog/agentic-payments-acp-ap2-x402",
+    "name": "Agentic Payments Explained: ACP, AP2, and x402",
+    "snippet": "Sep 29, 2025 — These protocols define how an AI agent can securely authorize, execute, and record a payment on behalf of a user or an organization. The three ... Read more",
+    "host_name": "orium.com",
+    "rank": 3,
+    "date": "Sep 29, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.crossmint.com/learn/agentic-payments-protocols-compared",
+    "name": "Which is best for your AI agents? (MPP, ACP, AP2, x402)",
+    "snippet": "Mar 12, 2026 — AP2 is an open protocol developed by Google with more than 60 organizations, including Adyen , American Express, Mastercard , PayPal , Coinbase , ... Read more",
+    "host_name": "www.crossmint.com",
+    "rank": 4,
+    "date": "Mar 12, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/raosurapaneni_announcing-agent-payments-protocol-ap2-activity-7373714611243712512-ab6K",
+    "name": "Agent Payments Protocol (AP2) launched for AI commerce",
+    "snippet": "Agent Payments Protocol (AP2 ), an open protocol. AP2 is designed to provide the verifiable trust needed for agent-led commerce. Mastercard,  ...",
+    "host_name": "www.linkedin.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.coinbase.com/developer-platform/discover/launches/google_x402",
+    "name": "Google Agentic Payments Protocol + x402",
+    "snippet": "Sep 15, 2025 — As one of the first extensions to AP2 and the only stablecoin facilitator, x402 enables agents to monetize their own services, pay other agents , ... Read more",
+    "host_name": "www.coinbase.com",
+    "rank": 6,
+    "date": "Sep 15, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@gwrx2005/ai-agents-and-autonomous-payments-a-comparative-study-of-x402-and-ap2-protocols-e71b572d9838",
+    "name": "A Comparative Study of x402 and AP2 Protocols",
+    "snippet": "In 2025, two open protocols emerged independently to address this need: Coinbase's x402 and Google's Agent Payments Protocol ( AP2 ). Both aim ... Read more",
+    "host_name": "medium.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/bitrefill/awesome-agentic-payments",
+    "name": "bitrefill/awesome-agentic-payments: A curated list",
+    "snippet": "AP2 ( Agent Payments Protocol); UCP (Universal Commerce Protocol) ... Backed by 60+ organizations including Adyen , Mastercard , PayPal , Visa, and Coinbase . Read more",
+    "host_name": "github.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,191 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Introducing Manus in Your Chat : Your Personal Agent, Everywhere You Are 
+- 
+- 
+- 
+- 
+
+Features
+Solutions
+Resources
+Events
+Team
+Pricing
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+Get started 
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+Manus is now part of Meta — bringing AI to businesses worldwide
+
+Product · Monday, February 16 
+
+# Introducing Manus in Your Chat : Your Personal Agent, Everywhere You Are
+
+Today, we're introducing Manus Agents — a new way to access and use Manus directly inside your messaging apps. Telegram is the first supported channel. Manus Agents with Telegram support is available today to all users across all subscription tiers, with more platforms coming soon. 
+
+﻿ 
+
+The idea of a personal AI agent in chat isn't new — but in practice, most solutions require complex setup, ongoing maintenance, and unpredictable costs. That makes them hard for most people to actually use. 
+
+Manus Agents is designed to remove that overhead, so you can focus on what the agent can do, not how to run it. 
+
+### What Manus Agents Is 
+
+Just open the Agents tab, connect your account, and start chatting. 
+
+This is not a lightweight chatbot add-on. It's the same Manus — with full reasoning, tools, and multi-step task execution — now available through chat. Core web capabilities are supported here. 
+
+The goal is simple: your agent should be accessible wherever you already communicate — just one message away. 
+
+﻿ 
+
+### Key Capabilities 
+
+With Manus Agents, you can: 
+
+Connect in seconds 
+
+Open the Agents tab in your Manus workspace, scan a QR code, and link Telegram in about a minute. No command lines, configuration files, or API tokens required. 
+
+Run full Manus tasks from chat 
+
+Your agent can launch multi-step tasks using the same core Manus capabilities. From research and data processing to structured reports and PDFs, requests can be started — and results delivered — directly in chat. 
+
+﻿ 
+
+Work with voice, images, and files 
+
+Send voice messages, photos, and documents. Your agent can transcribe, understand intent, generate edits or variations, and return outputs directly in the conversation without manual file handling. 
+
+Set your communication style 
+
+You can specify how your agent should respond — concise, structured, or more conversational — and it will follow that preference across interactions. 
+
+Choose your model 
+
+Switch between Manus 1.6 Max for deeper reasoning and creative work, or Manus 1.6 Lite for faster everyday tasks. Both support end-to-end task completion, with different speed and depth tradeoffs. 
+
+(Manus 1.6 Max is optimized for complex, multi-step reasoning and creative tasks. Manus 1.6 Lite is built for speed — ideal for quick questions, summaries, and lightweight tasks. Both can deliver full results; you choose based on the complexity and urgency of the task.) 
+
+﻿ 
+
+### Real-World Use Cases 
+
+A few examples show how Manus Agents can be used in everyday workflows. 
+
+Weekly meeting prep 
+
+Send a voice request to set up a recurring task that reviews your email and summarizes upcoming meetings and preparation needs. Your agent can connect to your email tools and deliver scheduled summaries directly in chat. 
+
+Creative profile images 
+
+Share a photo and ask for profile picture variations. Your agent can generate multiple styled versions for different scenarios and return them ready to review and use. 
+
+Product content from a photo 
+
+Send a product image with a brief, and your agent can produce a structured launch video mockup concept — including scene ideas and visual directions — delivered through chat. 
+
+### How to Get Started 
+
+Getting started with Manus Agents takes four steps: 
+
+﻿ 
+
+1 . Open the Agents tab in your Manus workspace. 
+
+2 . Click Connect. 
+
+3 . Scan the QR code with your phone, or click the link to open the chat. 
+
+4 . Start messaging. Your agent is ready. 
+
+That is it. No terminal. No config files. No server. 
+
+Manus Agents is the beginning of a broader shift in how you interact with your personal AI. The agent should not live behind a login screen — it should be wherever you are, ready the moment you need it. 
+
+### For more questions, please check the following FAQ 
+
+Q: Is it safe? Can Manus read my other Telegram chats? 
+
+A: Your Manus agent only has access to the messages you send directly to it in your private chat. It cannot see, read, or interact with any of your other conversations, groups, or contacts. 
+
+Q: Can my agent handle tasks that require multiple steps or tools? 
+
+A: Yes. Your agent can orchestrate sub-tasks behind the scenes, each with access to the full Manus toolkit. A single request can trigger research, code execution, document generation, and delivery — all within the same chat thread. 
+
+Q: Can I send voice messages? 
+
+A: Yes. Your agent transcribes voice messages, interprets the request, and takes action. You can manage tasks, set up automations, or ask questions entirely by voice. 
+
+Q: What other messaging apps will be supported? 
+
+A: Telegram is our first supported channel. Support for additional messaging platforms is actively in development, and we will share updates as they become available. 
+
+### Download desktop & mobile app
+Access Manus anytime, anywhere.
+
+macOS Windows iOS Android 
+
+## Less structure,
+more intelligence.
+
+### Product
+Pricing Web app AI design AI slides AI image generator AI music generator Manus browser operator Wide Research Mail Manus Slack integration 
+
+### Resources
+Download Blog Docs Updates Help center Trust center API Team plan Startups Playbook Brand assets 
+
+### Community
+Events Fellows 
+
+### Compare
+VS ChatGPT VS Lovable VS Replit 
+
+### Download
+Mobile app Desktop app My Browser 
+
+### Team
+Team plan SSO API 
+
+### Company
+About us Careers For media Terms of service Privacy policy 
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+© 2026 Meta

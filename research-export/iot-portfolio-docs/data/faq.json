@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "keywords": ["خدمات", "خدمة", "services", "ماذا تقدمون", "ماذا تعملون", "tawfi3", "عرض", "offers", "what do you offer"],
+    "answer_ar": "نقدم 6 خدمات رئيسية:\n\n🏠 **أنظمة المنازل والمباني الذكية** — تحكم ذكي بالإضاءة، الأبواب، المراقبة، كشف الحريق\n☁️ **حلول IoT والتكامل السحابي** — ربط الأجهزة بـ Firebase ولوحات مراقبة حية\n🔐 **أنظمة أمان وحماية** — كاميرات، حساسات حركة، إنذارات ذكية\n📡 **شبكات حساسات لا سلكية** — ربط عشرات الحساسات بنظام مركزي\n⚙️ **أتمتة وتحكم صناعي** — أنظمة تحكم آلية للمصانع والمشاغل\n🛠️ **تصميم وبرمجة متحكمات** — برمجة Arduino, ESP32, STM32 بلغة C/C++",
+    "answer_en": "We offer 6 main services:\n\n🏠 **Smart Home & Building Automation** — Smart control for lighting, doors, monitoring, fire detection\n☁️ **IoT Solutions & Cloud Integration** — Connect devices to Firebase with live dashboards\n🔐 **Security & Protection Systems** — Cameras, motion sensors, smart alarms\n📡 **Wireless Sensor Networks** — Connect dozens of sensors to a central system\n⚙️ **Industrial Automation & Control** — Automated control systems for factories\n🛠️ **Microcontroller Design & Programming** — Arduino, ESP32, STM32 programming in C/C++"
+  },
+  {
+    "id": 2,
+    "keywords": ["مشاريع", "projects", "كم مشروع", "how many projects", "اعمال", "أعمال", "portfolio", "portoflio"],
+    "answer_ar": "أنجزنا **4 مشاريع حقيقية** حتى الآن:\n\n1. 🏠 **نظام المنزل الذكي** — تحكم شامل بالمنزل مع كشف حريق وأمان\n2. 🔐 **الخزنة الذكية** — نظام أمان متعدد المستويات مع PIN وتتبع\n3. 🏗️ **نظام أمان المنشآت** — مراقبة محيطية كاملة مع إنذارات ذكية\n4. 🎪 **نظام أتمتة الفعاليات** — تنظيم فعاليات تلقائي بالكامل\n\nكل مشروع تم اختباره في بيئة حقيقية وليس تجريبياً.",
+    "answer_en": "We have completed **4 real projects** so far:\n\n1. 🏠 **Smart Home System** — Full home control with fire detection & security\n2. 🔐 **Smart Safe System** — Multi-level security with PIN & tracking\n3. 🏗️ **Facility Security System** — Complete perimeter monitoring with smart alarms\n4. 🎪 **Event Automation System** — Fully automated event organization\n\nEvery project has been tested in a real production environment."
+  },
+  {
+    "id": 3,
+    "keywords": ["تقنيات", "technologies", "تقنية", "تقنياتكم", "استخدمتم", "tools", "أدوات", "stack", "hardware", "hardware", "عتاد"],
+    "answer_ar": "نستخدم مجموعة واسعة من التقنيات:\n\n**المتحكمات:** Arduino, ESP32, ESP8266, STM32\n**البرمجة:** C/C++, Assembly, Python, JavaScript\n**السحابة:** Firebase (Realtime DB, Firestore, Cloud Functions)\n**الاتصال:** Wi-Fi, Bluetooth, UART, SPI, I2C\n**الحساسات:** DHT22, PIR, MQ-2, Ultrasonic, RFID, IR\n**البروتوكولات:** MQTT, HTTP, WebSockets\n**التطبيقات:** Flutter, Android native\n**التصميم:** Figma, KiCad",
+    "answer_en": "We use a wide range of technologies:\n\n**Microcontrollers:** Arduino, ESP32, ESP8266, STM32\n**Programming:** C/C++, Assembly, Python, JavaScript\n**Cloud:** Firebase (Realtime DB, Firestore, Cloud Functions)\n**Communication:** Wi-Fi, Bluetooth, UART, SPI, I2C\n**Sensors:** DHT22, PIR, MQ-2, Ultrasonic, RFID, IR\n**Protocols:** MQTT, HTTP, WebSockets\n**Apps:** Flutter, Android native\n**Design:** Figma, KiCad"
+  },
+  {
+    "id": 4,
+    "keywords": ["انترنت", "بدون إنترنت", "offline", "wifi", "واي فاي", "اتصال", "connect", "لا يحتاج", "يعمل بدون"],
+    "answer_ar": "نعم! **جميع أنظمتنا تعمل بدون إنترنت.**\n\nهذا من مبادئنا الأساسية:\n\n🔹 **معالجة حافة (Edge Computing)** — العتاد يتخذ القرارات محلياً\n🔹 **استقلالية تامة** — الإنترنت ميزة إضافية وليس شرطاً\n🔹 **قرارات فورية** — كشف الحريق والإنذارات تعمل حتى لو انقطع الإنترنت\n🔹 **التكامل السحابي اختياري** — يتم تنشيطه عند توفر الإنترنت لمراقبة عن بُعد",
+    "answer_en": "Yes! **All our systems work without internet.**\n\nThis is one of our core principles:\n\n🔹 **Edge Computing** — Hardware makes decisions locally\n🔹 **Full Independence** — Internet is a feature, not a requirement\n🔹 **Instant Decisions** — Fire detection and alarms work even without internet\n🔹 **Cloud Integration is Optional** — Activated when internet is available for remote monitoring"
+  },
+  {
+    "id": 5,
+    "keywords": ["خزنة", "safe", "خزنة ذكية", "smart safe", "locker", "قفل", "lock"],
+    "answer_ar": "🔐 **الخزنة الذكية** نظام أمان متعدد المستويات:\n\n**المكونات:**\n• لوحة مفاتيح رقمية (4 أرقام)\n• قفل كهروميكانيكي\n• حساسات إنذار (حركة + صوت)\n• وحدة تحكم ESP32\n\n**المميزات:**\n• فتح بإدخال PIN صحيح أو عبر التطبيق\n• تتبع جميع محاولات الفتح\n• إنذار عند 3 محاولات خاطئة\n• تنبيه فوري عبر Firebase\n• يعمل بدون إنترنت",
+    "answer_en": "🔐 **Smart Safe System** — A multi-level security system:\n\n**Components:**\n• Digital keypad (4-digit PIN)\n• Electromechanical lock\n• Alarm sensors (motion + sound)\n• ESP32 controller\n\n**Features:**\n• Open via correct PIN or mobile app\n• Track all unlock attempts\n• Alarm after 3 failed attempts\n• Instant alert via Firebase\n• Works without internet"
+  },
+  {
+    "id": 6,
+    "keywords": ["فريق", "team", "من أنتم", "who are you", "أعضاء", "members", "عمار", "محمد", "ammar", "mohammad", "founders"],
+    "answer_ar": "فريقنا يتكون من شريكين مؤسسين:\n\n🟢 **عمار مشارقة** — مؤسس ومدير العمليات\n• إدارة المشاريع والتنسيق\n• التواصل مع العملاء\n• التخطيط الاستراتيجي\n\n🔵 **محمد عقيلي** — المؤسس والمهندس الرئيسي\n• تصميم الأنظمة المدمجة\n• تركيب القطع الإلكترونية\n• البرمجة بجميع أنواعها\n• معمارية متعددة المعالجات\n\n🇵🇸 فريق محلي من فلسطين!",
+    "answer_en": "Our team consists of two founding partners:\n\n🟢 **Ammar Masharqa** — Founder & Operations Manager\n• Project management & coordination\n• Client communication\n• Strategic planning\n\n🔵 **Mohammad Aqli** — Founder & Lead Engineer\n• Embedded systems design\n• Electronic component assembly\n• All types of programming\n• Multi-processor architecture\n\n🇵🇸 A local team from Palestine!"
+  },
+  {
+    "id": 7,
+    "keywords": ["تواصل", "contact", "اتواصل", "تواصل معكم", "reach", "contact you", "تليجرام", "telegram", "واتساب", "whatsapp"],
+    "answer_ar": "يمكنك التواصل معنا عبر عدة قنوات:\n\n📩 **تليجرام:** @Mashari3_AI_Arduino\n📩 **تليجرام 2:** @Arsuino1\n📱 **واتساب:** +972 56-XXX-XXXX\n📘 **فيسبوك:** صفحتنا على فيسبوك\n\n💡 **أسرع طريقة:** تليجرام — نرد خلال ساعات قليلة!\n\nيمكنك أيضاً استخدام نموذج الاتصال في أسفل الصفحة.",
+    "answer_en": "You can reach us through several channels:\n\n📩 **Telegram:** @Mashari3_AI_Arduino\n📩 **Telegram 2:** @Arsuino1\n📱 **WhatsApp:** +972 56-XXX-XXXX\n📘 **Facebook:** Our Facebook page\n\n💡 **Fastest way:** Telegram — we reply within hours!\n\nYou can also use the contact form at the bottom of the page."
+  },
+  {
+    "id": 8,
+    "keywords": ["حساسات", "sensors", "sensor", "كم حساس", "how many sensors", "أنواع حساسات", "types"],
+    "answer_ar": "نستخدم **+10 أنواع مختلفة من الحساسات**:\n\n🌡️ DHT22 — حرارة ورطوبة\n🔥 MQ-2 — كشف غاز ودخان\n👥 PIR — كشف حركة\n📏 Ultrasonic — قياس المسافة\n🏷️ RFID — تعريف لاسلكي\n📡 IR — استقبال وإرسال بالأشعة تحت الحمراء\n💡 LDR — مستوى الضوء\n💧 Soil Moisture — رطوبة التربة\n🔊 Microphone — كشف الصوت\n🔄 Rotary Encoder — وضع دوار\n\nونضيف حساسات جديدة حسب احتياج كل مشروع.",
+    "answer_en": "We use **10+ different sensor types**:\n\n🌡️ DHT22 — Temperature & humidity\n🔥 MQ-2 — Gas & smoke detection\n👥 PIR — Motion detection\n📏 Ultrasonic — Distance measurement\n🏷️ RFID — Wireless identification\n📡 IR — Infrared send/receive\n💡 LDR — Light level\n💧 Soil Moisture — Soil humidity\n🔊 Microphone — Sound detection\n🔄 Rotary Encoder — Rotary position\n\nAnd we add new sensors based on each project's needs."
+  },
+  {
+    "id": 9,
+    "keywords": ["منزل ذكي", "smart home", "home automation", "بيت ذكي", "house", "automation"],
+    "answer_ar": "🏠 **نظام المنزل الذكي** هو أول مشاريعنا وأكثرها تطوراً:\n\n**ما يتحكم فيه:**\n• الإضاءة (تشغيل/إيقاف + تعتيم)\n• الأبواب والنوافذ (فتح/إغلاق ذكي)\n• نظام التكييف (حسب درجة الحرارة)\n• كشف الحريق (إنذار فوري)\n• المراقبة الأمنية (كاميرات + حساسات)\n\n**المميزات:**\n• يعمل بدون إنترنت\n• تحكم عن بُعد عبر تطبيق الهاتف\n• جدولة زمنية تلقائية\n• لوحة مراقبة حية عبر Firebase\n• معمارية متعددة المعالجات",
+    "answer_en": "🏠 **Smart Home System** is our first and most advanced project:\n\n**What it controls:**\n• Lighting (on/off + dimming)\n• Doors & windows (smart open/close)\n• Air conditioning (temperature-based)\n• Fire detection (instant alarm)\n• Security monitoring (cameras + sensors)\n\n**Features:**\n• Works without internet\n• Remote control via mobile app\n• Automatic scheduling\n• Live dashboard via Firebase\n• Multi-processor architecture"
+  },
+  {
+    "id": 10,
+    "keywords": ["سعر", "تكلفة", "price", "cost", "كم يكلف", "كلفة", "أسعار", "prices", "budget"],
+    "answer_ar": "التكلفة تختلف حسب المشروع ومتطلباته:\n\n💰 **عوامل التسعير:**\n• نوع وعدد الحساسات والمتحكمات\n• تعقيد البرمجيات المطلوبة\n• التكامل السحابي (Firebase)\n• تصميم وتصنيع PCB\n• تطبيق هاتف مخصص\n\n💡 **نقدم استشارة مجانية** لتحديد احتياجاتك وتقديم عرض سعر دقيق.\n\n📩 تواصل معنا على تليجرام لمناقشة مشروعك!",
+    "answer_en": "Cost varies depending on the project and requirements:\n\n💰 **Pricing factors:**\n• Type and number of sensors & controllers\n• Software complexity\n• Cloud integration (Firebase)\n• PCB design & manufacturing\n• Custom mobile app\n\n💡 **We offer free consultation** to determine your needs and provide an accurate quote.\n\n📩 Contact us on Telegram to discuss your project!"
+  },
+  {
+    "id": 11,
+    "keywords": ["firebase", "سحابي", "cloud", "مراقبة", "monitoring", "dashboard", "لوحة"],
+    "answer_ar": "☁️ **التكامل مع Firebase** يتيح لك:\n\n📊 **لوحة مراقبة حية** — متابعة جميع البيانات في الوقت الحقيقي\n🔔 **تنبيهات فورية** — إشعارات عند حدوث أي حدث\n📱 **تحكم عن بُعد** — إدارة النظام من أي مكان\n📈 **تسجيل البيانات** — حفظ وتحليل البيانات التاريخية\n🔐 **مصادقة آمنة** — حماية الوصول للأذونات\n\nملاحظة: Firebase ميزة إضافية — النظام يعمل بشكل كامل بدون إنترنت.",
+    "answer_en": "☁️ **Firebase Integration** enables:\n\n📊 **Live Dashboard** — Monitor all data in real-time\n🔔 **Instant Alerts** — Notifications when events occur\n📱 **Remote Control** — Manage the system from anywhere\n📈 **Data Logging** — Save and analyze historical data\n🔐 **Secure Auth** — Protected access with permissions\n\nNote: Firebase is an optional feature — the system works fully without internet."
+  },
+  {
+    "id": 12,
+    "keywords": ["أمان", "security", "حماية", "protection", "كاميرا", "camera", "مراقبة", "surveillance"],
+    "answer_ar": "🔐 نحن نعطي **الأمان الأولوية الأولى**:\n\n**في مشاريعنا:**\n• أنظمة تعمل محلياً — لا تعتمد على الإنترنت للقرارات الحرجة\n• كشف الحريق والإنذارات تعمل فوراً 24/7\n• أنظمة أمان متعددة المستويات (PIN + حساسات + تتبع)\n\n**في الكود:**\n• كود نظيف ومقسم مع توثيق شامل\n• خوارزميات حماية مبتكرة\n• معمارية ثنائية ومتعددة المعالجات للاستقرار\n\nنؤمن بأن الأمان ليس خياراً بل أساس كل مشروع.",
+    "answer_en": "🔐 **Safety is our #1 priority**:\n\n**In our projects:**\n• Systems work locally — don't depend on internet for critical decisions\n• Fire detection & alarms work instantly 24/7\n• Multi-level security systems (PIN + sensors + tracking)\n\n**In our code:**\n• Clean, modular code with comprehensive documentation\n• Innovative protection algorithms\n• Dual and multi-processor architecture for stability\n\nWe believe safety isn't optional — it's the foundation of every project."
+  },
+  {
+    "id": 13,
+    "keywords": ["فعاليات", "events", "أتمتة فعاليات", "event automation", "تنظيم", "organization"],
+    "answer_ar": "🎪 **نظام أتمتة الفعاليات** ينظم الفعاليات تلقائياً:\n\n**المميزات:**\n• جدولة تلقائية بالكامل\n• إدارة الحضور والتحقق\n• عرض وسائط متعددة\n• أتمتة المهام المتكررة\n• تتبع وتقارير\n\nهذا المشروع يثبت قدرتنا على بناء أنظمة معقدة تتجاوز مجال إنترنت الأشياء التقليدي.",
+    "answer_en": "🎪 **Event Automation System** organizes events automatically:\n\n**Features:**\n• Fully automatic scheduling\n• Attendance management & verification\n• Multimedia display\n• Repetitive task automation\n• Tracking & reporting\n\nThis project demonstrates our ability to build complex systems beyond traditional IoT."
+  },
+  {
+    "id": 14,
+    "keywords": ["arduino", "esp32", "متحكم", "microcontroller", "STM32", "esp8266"],
+    "answer_ar": "نحن خبراء في **المتحكمات** والأنظمة المدمجة:\n\n🔵 **Arduino (UNO, Mega, Nano)** — مشاريع سريعة ونماذج أولية\n🟢 **ESP32** — Wi-Fi + Bluetooth + قوة معالجة عالية\n🟡 **ESP8266** — Wi-Fi اقتصادي للمشاريع البسيطة\n🔴 **STM32** — مشاريع صناعية واحترافية\n\n**ما نقدمه:**\n• تصميم المخططات الكهربائية\n• تركيب القطع واللحام\n• برمجة بلغة C/C++ و Assembly\n• اختبار وتصحيح الأخطاء\n• إعداد بروتوكولات الاتصال (UART, SPI, I2C)",
+    "answer_en": "We are experts in **microcontrollers** and embedded systems:\n\n🔵 **Arduino (UNO, Mega, Nano)** — Rapid prototyping\n🟢 **ESP32** — Wi-Fi + Bluetooth + high processing power\n🟡 **ESP8266** — Budget-friendly Wi-Fi for simple projects\n🔴 **STM32** — Industrial and professional projects\n\n**What we offer:**\n• Circuit design\n• Component assembly & soldering\n• C/C++ and Assembly programming\n• Testing & debugging\n• Communication protocol setup (UART, SPI, I2C)"
+  },
+  {
+    "id": 15,
+    "keywords": ["فلسطين", "palestine", "من أين", "where", "موقع", "location", "بلد", "country"],
+    "answer_ar": "🇵🇸 **نحن من فلسطين!**\n\nفريق محلي يفهم احتياجات السوق المحلي والإقليمي. نقدم:\n\n• دعم فني مباشر وسريع\n• أسعار مناسبة للسوق المحلي\n• تواصل بالعربية والإنجليزية\n• فهم عميق لتحديات البنية التحتية\n• حلول تعمل في ظروف مختلفة (انقطاع إنترنت، انقطاع كهرباء)\n\nنؤمن بأن فلسطين قادرة على إنتاج تقنيات عالمية! 💚",
+    "answer_en": "🇵🇸 **We are from Palestine!**\n\nA local team that understands local and regional market needs. We provide:\n\n• Direct and fast technical support\n• Competitive prices for the local market\n• Communication in Arabic and English\n• Deep understanding of infrastructure challenges\n• Solutions that work in various conditions (internet/power outages)\n\nWe believe Palestine can produce world-class technology! 💚"
+  },
+  {
+    "id": 16,
+    "keywords": ["مرحبا", "hello", "hi", "اهلا", "أهلا", "سلام", "salam", "hey", "هاي", "مرحباً"],
+    "answer_ar": "أهلاً وسهلاً! 👋\n\nأنا المساعد الذكي لفريق **مشاريع للأنظمة الذكية** 🟢\n\nيمكنني مساعدتك في:\n• معرفة خدماتنا ومشاريعنا\n• الاستفسار عن التقنيات المستخدمة\n• معلومات عن الفريق\n• كيفية التواصل معنا\n\nاسألني أي سؤال! 😊",
+    "answer_en": "Hello and welcome! 👋\n\nI'm the smart assistant for **Smart Systems Lab** 🟢\n\nI can help you with:\n• Learning about our services and projects\n• Inquiries about technologies we use\n• Information about our team\n• How to contact us\n\nAsk me anything! 😊"
+  },
+  {
+    "id": 17,
+    "keywords": ["شكرا", "thanks", "thank you", "مشكور", "شكراً", "thanku", "تسلم"],
+    "answer_ar": "العفو! 😊\n\nإذا كان لديك أي سؤال آخر، لا تتردد في السؤال. وإذا تريد التواصل مع الفريق مباشرة:\n\n📩 **تليجرام:** @Mashari3_AI_Arduino\n📱 **واتساب:** +972 56-XXX-XXXX\n\nنحن دائماً سعداء بمساعدتك! 🚀",
+    "answer_en": "You're welcome! 😊\n\nIf you have any other questions, don't hesitate to ask. If you'd like to reach the team directly:\n\n📩 **Telegram:** @Mashari3_AI_Arduino\n📱 **WhatsApp:** +972 56-XXX-XXXX\n\nWe're always happy to help! 🚀"
+  },
+  {
+    "id": 18,
+    "keywords": ["arduino smart home", "project code", "source code", "كود المشروع", "github", "open source", "مفتوح المصدر", "سورس كود"],
+    "answer_ar": "مشاريعنا ليست مفتوحة المصدر حالياً.\n\nلكننا نقدم:\n• **توثيق شامل** لكل مشروع\n• **شرح تفصيلي** للمكونات والبرمجيات\n• **دعم فني** مستمر للعملاء\n\nإذا كنت مهتماً بمشروع مشابه، تواصل معنا وسنصمم لك حلاً مخصصاً يتناسب مع احتياجاتك.\n\n📩 @Mashari3_AI_Arduino",
+    "answer_en": "Our projects are not open source at this time.\n\nHowever, we provide:\n• **Comprehensive documentation** for each project\n• **Detailed explanations** of components and software\n• **Ongoing technical support** for clients\n\nIf you're interested in a similar project, contact us and we'll design a custom solution for your needs.\n\n📩 @Mashari3_AI_Arduino"
+  }
+]

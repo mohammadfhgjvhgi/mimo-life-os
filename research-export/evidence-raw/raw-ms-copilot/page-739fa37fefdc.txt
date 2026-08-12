@@ -1,0 +1,204 @@
+TITLE: Learn how to use Microsoft Copilot | Microsoft Learn
+
+Learn how to use Microsoft Copilot | Microsoft Learn 
+
+- 
+
+- 
+
+Skip to main content
+
+This browser is no longer supported.
+
+Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+
+Download Microsoft Edge
+
+More info about Internet Explorer and Microsoft Edge
+
+Microsoft Copilot learning hub for IT Pros and Developers
+
+Explore our learning hub designed for IT professionals and developers. Our hub provides in-depth Microsoft Copilot information, helping you understand which Copilot is right for your needs. Access technical documentation, product references, and training modules to enhance your skills and knowledge. 
+Discover how to streamline your workflows, improve productivity, and bring AI-driven solutions to your organization. Start your journey today and unlock the full potential of AI in your work.
+
+Explore libraries and training
+
+Discover how Copilot is integrated within Microsoft products designed to enhance your productivity and streamline your workflows. Access the Copilot hub sites for technical information, product reference, and guidance. See filtered lists of training to gain the skills and knowledge you need to leverage these powerful tools effectively.
+
+- 
+
+Microsoft 365 Copilot
+
+Learn about Microsoft 365 Copilot and how your organization can use this for work.
+
+Microsoft 365 Copilot documentation 
+Microsoft 365 Copilot training 
+
+- 
+
+Copilot experiences in Dynamics 365
+
+Find Copilot and generative AI guidance for Dynamics 365 apps.
+
+Copilot in Dynamics 365 documentation 
+Copilot in Dynamics 365 training 
+
+- 
+
+Copilot experiences in Power Platform
+
+Get an overview of Copilot and generative AI uses in Power Platform.
+
+Copilot in Power Platform documentation 
+Copilot in Power Platform training 
+
+- 
+
+Microsoft Copilot Studio
+
+Explore how to build AI-driven solutions with Microsoft Copilot Studio.
+
+Copilot Studio documentation 
+Copilot Studio training 
+
+- 
+
+Microsoft Security Copilot
+
+Use Security Copilot to bring the full power of OpenAI architecture to defend your organization at machine speed and scale.
+
+Microsoft Security Copilot documentation 
+Microsoft Security Copilot training 
+
+- 
+
+Copilot in Microsoft Fabric
+
+Discover how Copilot in Microsoft Fabric and Power BI transforms data analysis, generates insights, and creates visualizations.
+
+Copilot in Microsoft Fabric documentation 
+Copilot in Microsoft Fabric training 
+
+- 
+
+Azure Copilot
+
+Manage operations from cloud to edge with an AI assistant and learn to be more effective in your work.
+
+Azure Copilot documentation 
+Azure Copilot training 
+
+- 
+
+GitHub Copilot
+
+Gain proficiency with GitHub Copilot to revolutionize your coding experience.
+
+GitHub Copilot documentation 
+GitHub Copilot training 
+
+More resources
+
+Curious about which Copilot to use and how to get started? Access the resources to understand Copilot use cases, the fundamentals, how to deploy, and how to extend in your own environments as a technical professional.
+
+- 
+
+Discover more about Copilot 
+
+Training to get started and deepen your understanding of Microsoft Copilot and Microsoft Foundry for developers and Microsoft Azure Copilot.
+
+- 
+
+Microsoft Copilot adoption in your organization 
+
+Explore adoption resources to help you deploy and drive user adoption of Microsoft Copilot and agents.
+
+- 
+
+Copilot learning hub video series 
+
+Watch videos to learn about Copilot and agents capabilities, deployment, and extensibility.
+
+- 
+
+Microsoft Security for AI 
+
+Explore documentation for securing, protecting, and governing your AI apps and data.
+
+- 
+
+FastTrack your Copilot deployment 
+
+Get personalized assistance from Microsoft experts to help you deploy Copilot in your organization.
+
+- 
+
+Build an Agent in a day 
+
+Join a hands-on, instructor-led workshop to learn how to build agents with Copilot Studio.
+
+- 
+
+Copilot Studio Agent Academy 
+
+Join this hands-on training and learn to build, scale, and deploy intelligent agents using real-world tools and use cases.
+
+- 
+
+AI in Action video series 
+
+Check out the Powering Up with Power Automate series where each video shares different AI experiences with Power Automate to enhance the way you work.
+
+en-us 
+
+Your Privacy Choices 
+
+Theme 
+
+- 
+
+Light 
+
+- 
+
+Dark 
+
+- 
+
+High contrast 
+
+- 
+
+- 
+
+AI Disclaimer 
+
+- 
+
+Previous Versions 
+
+- 
+
+Blog 
+
+- 
+
+Contribute 
+
+- 
+
+Privacy 
+
+- 
+
+Consumer Health Privacy 
+
+- 
+
+Terms of Use 
+
+- 
+
+Trademarks 
+
+- © Microsoft 2026

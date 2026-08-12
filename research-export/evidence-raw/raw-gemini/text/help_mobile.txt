@@ -1,0 +1,285 @@
+What you can do with your Gemini mobile app - Android - Gemini Apps Help Skip to main content 
+
+Gemini Apps Help 
+
+Sign in 
+
+Google Help 
+
+Help Center
+Community
+Gemini Apps 
+
+Privacy Policy
+Terms of Service
+Submit feedback
+
+Send feedback on...
+
+This help content & information 
+
+General Help Center experience 
+
+Next 
+
+Help Center 
+Community 
+Privacy Hub 
+
+Gemini Apps 
+
+What you can do with your Gemini mobile app
+Chat with Gemini to supercharge your ideas. Your Gemini mobile app gives you direct access to Google’s best family of AI models on your device so you can:
+
+Get help with writing, brainstorming, learning, and more
+
+Summarize and find quick info from Gmail or Google Drive
+
+Generate images on the fly
+
+Use text, voice, photos and your camera to get help in new ways
+
+On Android, say “Hey Google” to ask Gemini for help with what’s on your screen
+
+Make plans with Google Maps and Google Flights
+
+You can type, talk, use an image, or take a photo to get started.
+
+Note: 
+
+“Hey Google” and some features previously available in Google Assistant are not available in all languages and countries, or for supervised accounts. Learn more about which languages your Gemini mobile app is available in .
+
+If you have access to Gemini Apps with a work or school account, some Gemini mobile app features aren’t available. This includes features that are powered by Google Assistant, such quick voice action features. Learn how these users can access the Gemini mobile app .
+
+Before you use your Gemini mobile app
+
+Don’t rely on Gemini’s responses as medical, legal, financial, or other professional advice.
+
+Responses from Gemini don’t represent Google’s views, and should not be attributed to Google.
+
+You are responsible for your use of code, which may be subject to an open source license. Learn more about code and citations .
+
+Gemini may give inaccurate or inappropriate information, including about people, so double-check responses. Your feedback makes Gemini Apps more helpful and safe. Learn how to give feedback .
+
+Learn how to get started with your Gemini mobile app .
+
+Want to manage activations or remove Gemini? Learn how to manage or delete the Gemini app .
+
+What your Gemini mobile app can do
+
+You can type, talk, or use a photo to chat with Gemini. You can do things like:
+
+Learn in new ways and with a deeper understanding of an open ended topic through back and forth conversation.
+
+Ask questions about your surroundings. In the Gemini app, tap Camera , take a photo, and ask questions about it.
+
+Get help with writing, correcting grammar, and translating.
+
+Get inspiration for activities to do and visualize your plans on a map.
+
+Summarize or get an overview of a topic in any format you want, like a list, table, or chart.
+
+Find out what song is playing.
+
+On Android, when you use Gemini as your mobile assistant:
+
+You can ask questions related to what’s on your screen, like to summarize a webpage or get more info about something in a picture. Just activate Gemini over any app, including Chrome, tap Ask about screen or Ask about page , and then ask your questions.
+
+Use your voice to take quick actions, like sending a message or turning on your lights. 
+
+Start a routine by voice or typed commands, when you connect Google Home to Gemini Apps.
+
+Unsupported starters and actions: Some starters and actions aren’t supported when you use a routine with Gemini. If an action isn’t supported, Gemini tells you. This includes multi-step actions that require a back-and-forth chat, like when Gemini asks, "What time do you want the alarm set for?"
+
+Voice and text responses only: For actions, like asking for the weather, Gemini now responds with voice and text only. It no longer displays visual information cards, like maps or detailed weather graphs.
+
+Tip: 
+
+Gemini is still learning, so it might not always be able to help. If Gemini can’t help with something Google Assistant can do, you can switch to Google Assistant on your Android mobile device.
+
+Some features have age requirements and aren’t available for supervised accounts. Learn more about using Gemini with supervised accounts .
+
+How your Gemini mobile app and Google Assistant work together on Android devices
+
+On Android devices 
+
+On your Android device, when Gemini is your primary mobile assistant, it can help you with some of the same tasks as Google Assistant. Devices where the Gemini mobile app is unavailable, like Smart Displays, will still use Google Assistant.
+
+On Pixel Tablets 
+
+You may opt in to use Gemini on your Pixel Tablet by downloading the Gemini mobile app and choosing Gemini as your primary assistant. When your device is unlocked, Gemini will replace Google Assistant, and can help you with some of the same tasks as Assistant, like answering questions or planning travel. Google Assistant will fulfill your requests when your Pixel Tablet is locked, including when in Hub Mode.
+
+Important: If Google Assistant needs you to unlock your Pixel Tablet to complete a request, Assistant may pass your request to Gemini. For example, you’ll need to unlock your tablet to access your calendar or email account with voice commands.
+
+Some familiar features from Google Assistant may not be supported in Gemini, which is still evolving.
+
+Tip: If a feature you rely on isn’t supported in your Gemini mobile app, you can switch to Google Assistant .
+
+Using Gemini for calls and texts
+
+Learn more about how your data is used to make calls & send messages with connected apps in Gemini .
+
+Learn more about using communication apps with Gemini .
+
+How Gemini and Google Assistant use your data
+
+Learn more about where your data is saved when Gemini and Google Assistant work together .
+
+Use "Hey Google" and Voice Match with your Gemini mobile app 
+
+On Android, your Gemini mobile app gets help from Google Assistant for some familiar quick voice action features. You can also talk to Gemini with 'Hey Google' and Voice Match. On some devices, you can also complete certain tasks, like answering a call, with quick phrases that allow you to skip saying 'Hey Google'.
+
+Important: 
+
+These features are not available in the following languages: Bulgarian, Croatian, Estonian, Finnish, Greek, Hebrew, Hungarian, Latvian, Lithuanian, Romanian, Serbian, Slovak, Slovenian, Ukrainian.
+
+“Hey Google” and Voice Match with Gemini aren’t available for supervised accounts.
+
+Gemini is still learning, so Google Assistant will help power some familiar quick voice action features, depending on your settings.
+
+Tip: If a feature you rely on from Google Assistant isn’t supported in Gemini, you can switch to Google Assistant .
+
+Use your voice to get help from Gemini with “Hey Google” and Voice Match. 
+
+You can use your voice to get help from your Gemini mobile app with “Hey Google” and Voice Match. If you're already using "Hey Google" & Voice Match for Google Assistant on your Android device, when you switch to use your Gemini mobile app, you can start using "Hey Google" to access Gemini right away.
+
+For Android devices:
+
+When your device is unlocked, “Hey Google” lets you chat to your Gemini mobile app hands-free.
+
+With “Hey Google” and Voice Match turned on, you can also get some hands-free help with quick voice actions (like sending messages) when your device is locked, if your lock screen setting is turned on .
+
+When your device is locked, you can also quickly start a chat with your Gemini mobile app using “Hey Google,” but may need to unlock your device to get Gemini’s response.
+
+For Pixel Tablets:
+
+When your Pixel Tablet is unlocked, “Hey Google” lets you chat to your Gemini mobile app hands-free.
+
+When your Pixel Tablet is locked, “Hey Google” will use Google Assistant.
+
+If Google Assistant needs you to unlock your Pixel Tablet to complete a request, Assistant may pass your request to Gemini.
+
+To turn on “Hey Google” & Voice Match:
+
+Open your device's Gemini mobile app.
+
+Tap Menu your Profile picture or initial Manage your Google account Data & privacy Voice Match .
+
+Turn on Hey Google .
+
+To set up Voice Match, follow the prompts so your assistant can recognize when you say “Hey Google.”
+
+To find or delete the audio clips you recorded during Voice Match setup, go to g.co/assistant/enrollment-clips .
+
+To turn off “Hey Google”:
+
+Open your device's Gemini mobile app.
+
+Tap Menu your Profile picture or initial Manage your Google account Data & privacy Voice Match .
+
+Turn off Hey Google .
+
+To remove your Voice Match model from your device, tap Delete Voice Match model. You’ll have to set up Voice Match again if you want to turn “Hey Google” back on.
+
+How Google Assistant powers “Hey Google” & Voice Match for your Gemini mobile app
+
+You can use your voice to get help from your Gemini mobile app with “Hey Google” and Voice Match.
+
+When “Hey Google” is turned on, Google Assistant is designed to wait in standby mode until it detects an activation, like when it hears “Hey Google.” When in standby mode, Google Assistant won’t send what you are saying to Google or anyone else. Once Google Assistant detects an activation, and recognizes it’s you with Voice Match, it exits standby mode and sends your request to Google servers. This can also happen if there is a noise that sounds like “Hey Google.”
+
+“Hey Google” requires Voice Match to recognize it’s you. If you’ve consented to set up Voice Match, Google Assistant will create a unique model of your voice from clips you record during setup. This voice model is created on Google’s servers and then stored only on the devices where you’ve turned on Voice Match. When your device detects “Hey Google,” Google Assistant may send that detected audio and your voice model to Google servers temporarily to compare and determine if it’s you. Google deletes the voice model and comparison data from its servers immediately after processing. Keep in mind: a similar voice or recording could cause Voice Match to think it’s you. If you later decide Voice Match isn’t for you, you can remove your Voice Match model from your Android device or all your Assistant-connected devices from your “Hey Google” & Voice Match setting (accessible through your Gemini settings or Google Assistant settings).
+
+When you use “Hey Google” and Voice Match for your Gemini mobile app, Google Assistant detects the activation, recognizes you with Voice Match, routes your query to Gemini, and helps Gemini to fulfill your request if it is a quick voice action feature that Gemini is still learning to handle directly. When you interact with Gemini and Google Assistant is helping, your interactions are stored in Gemini Apps Activity. If your assistant activates when you didn’t intend it to and your Keep Activity setting is turned off, that interaction will not be stored in Gemini Apps Activity. If, however, your Keep Activity setting is on, your assistant interactions, including any unintended activations, will be stored and treated like normal activations. Your Gemini Apps activity is used to develop and improve Google services (including technologies that help reduce unintended activations), as explained in Google’s Privacy Policy. You can turn off your Keep Activity setting any time.
+
+Some features & services from Google Assistant are not supported in Gemini
+
+When you use Gemini as your primary mobile assistant, some features and services that you used in Google Assistant aren’t supported. This includes:
+
+Media service providers: Podcasts, news and radio stations, and some third-party music providers aren’t currently supported in Gemini.
+
+Interpreter mode: Switch to Google Assistant to use Interpreter mode.
+
+Note: Gemini is still learning. If a feature you rely on isn’t supported in your Gemini mobile app, you can switch to Google Assistant .
+
+Related resources
+
+Get started with the Gemini mobile app 
+
+Manage or delete the Gemini app on your Android device 
+
+Talk naturally with Gemini Live 
+
+Generate and edit images with Gemini Apps 
+
+Use & manage Connected Apps in Gemini 
+
+Android iPhone & iPad More 
+
+Need more help?
+Try these next steps:
+
+Post to the help community Get answers from community members 
+
+true
+Help 
+1 of 12
+Get started with the Gemini mobile app 
+2 of 12
+What you can do with your Gemini mobile app 
+3 of 12
+Gemini mobile app availability 
+4 of 12
+How your Gemini mobile app can help when your phone is locked 
+5 of 12
+Talk naturally with Gemini Live 
+6 of 12
+Manage or delete the Gemini app on your Android device 
+7 of 12
+Use Gemini on your headphones 
+8 of 12
+Use screen actions to chat with the Gemini mobile app 
+9 of 12
+Add & customize your Gemini widget 
+10 of 12
+Use Gemini on your smartwatch 
+11 of 12
+Ask Gemini to handle your multi-step tasks in select Android apps 
+12 of 12
+Get Started with Gemini Go 
+
+©2026 Google Privacy Policy 
+Terms of Service 
+
+Language Afrikaans&lrm; azərbaycan&lrm; bosanski&lrm; català&lrm; dansk&lrm; Deutsch&lrm; eesti&lrm; English (United Kingdom)&lrm; español&lrm; español (Latinoamérica)&lrm; euskara&lrm; Filipino&lrm; français&lrm; français (Canada)&lrm; galego&lrm; hrvatski&lrm; Indonesia&lrm; isiZulu&lrm; italiano&lrm; Kiswahili&lrm; latviešu&lrm; lietuvių&lrm; magyar&lrm; Melayu&lrm; Nederlands&lrm; norsk&lrm; o‘zbek&lrm; polski&lrm; português&lrm; português (Brasil)&lrm; română&lrm; shqip&lrm; slovenčina&lrm; slovenščina&lrm; suomi&lrm; svenska&lrm; Tiếng Việt&lrm; Türkçe&lrm; íslenska&lrm; čeština&lrm; Ελληνικά&lrm; беларуская&lrm; български&lrm; македонски&lrm; монгол&lrm; русский&lrm; српски&lrm; українська&lrm; қазақ тілі&lrm; հայերեն&lrm; &rlm; עברית &rlm; اردو &rlm; العربية &rlm; فارسی नेपाली&lrm; मराठी&lrm; हिन्दी&lrm; অসমীয়া&lrm; বাংলা&lrm; ਪੰਜਾਬੀ&lrm; ଓଡ଼ିଆ&lrm; தமிழ்&lrm; తెలుగు&lrm; ไทย&lrm; ລາວ&lrm; ქართული&lrm; አማርኛ&lrm; ខ្មែរ&lrm; 中文（简体）&lrm; 中文（繁體）&lrm; 中文（香港）&lrm; 日本語&lrm; 한국어&lrm; English&lrm; Enable Dark Mode
+
+Send feedback on...
+This help content & information General Help Center experience 
+
+Search
+Clear search
+Close search
+Google apps
+Main menu
+
+15870496810767075714
+true
+
+Search Help Center
+false
+true
+
+true
+
+true
+
+true
+true
+5295044
+false
+
+false
+
+false
+false
+
+false

@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://www.prefect.io/resources/mcp-vs-function-calling",
+    "name": "MCP vs Function Calling: When to Use Which",
+    "snippet": "Apr 14, 2026 — The key difference : with function calling , your application sends tool schemas to the LLM and handles execution. With MCP , a server handles both ... Read more",
+    "host_name": "www.prefect.io",
+    "rank": 0,
+    "date": "Apr 14, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/mcp/comments/1lxg4qx/i_am_still_confused_on_the_difference_between",
+    "name": "I am still confused on the difference between Model",
+    "snippet": "These are the things I grasp between both please correct me if I have not fully understood them well, I am still confused since these two are new to me: ...",
+    "host_name": "www.reddit.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@advait.darbare9/openai-function-calling-vs-langchain-tools-vs-mcp-whats-the-difference-d1689688d965",
+    "name": "OpenAI Function Calling vs LangChain Tools vs MCP",
+    "snippet": "OpenAI Function Calling excels when you need quick integration with OpenAI models . LangChain Tools excels in complex scenarios with multi-agent ... Read more",
+    "host_name": "medium.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://obot.ai/resources/learning-center/mcp-vs-function-calling",
+    "name": "MCP vs Function Calling: 7 Key Differences & Using Them",
+    "snippet": "Feb 10, 2026 — Function calling lets an LLM directly call predefined tools , while MCP (Model Context Protocol) standardizes how LLMs find, use, and manage ...",
+    "host_name": "obot.ai",
+    "rank": 3,
+    "date": "Feb 10, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/brijpandeyji_mcp-vs-a2a-vs-function-calling-a-quick-activity-7358340424752594945-dfjr",
+    "name": "MCP vs A2A vs Function Calling – A Quick Comparison",
+    "snippet": "Function Calling helps you use tools within a single model , MCP scales that across models, and A2A scales that across agents.",
+    "host_name": "www.linkedin.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/modelcontextprotocol/python-sdk/issues/835",
+    "name": "Fundamental Differences Between Function Calling and",
+    "snippet": "May 29, 2025 — MCP manages what context is available (decoupled infrastructure), while Function Calling handles how/when to use tools (coupled to LLM logic). Read more",
+    "host_name": "github.com",
+    "rank": 5,
+    "date": "May 29, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://zilliz.com/blog/function-calling-vs-mcp-vs-a2a-developers-guide-to-ai-agent-protocols",
+    "name": "Function Calling vs. MCP vs. A2A: Developer's Guide to AI",
+    "snippet": "Apr 25, 2025 — Compare Function Calling, MCP, and A2A protocols for AI agents. Learn which standard best fits your development needs and future-proof your ...",
+    "host_name": "zilliz.com",
+    "rank": 6,
+    "date": "Apr 25, 2025",
+    "favicon": ""
+  }
+]

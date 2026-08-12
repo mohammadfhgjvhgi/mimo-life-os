@@ -1,0 +1,377 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Wide Research - Manus Documentation 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
+## Documentation Index
+Fetch the complete documentation index at: /docs/llms.txt 
+Use this file to discover all available pages before exploring further.
+Skip to main content 
+Manus Documentation home page English 
+
+Search...
+
+⌘ K Ask Assistant 
+
+Search... 
+
+Navigation 
+Wide Research
+
+Introduction 
+Features 
+Website Builder 
+Integrations 
+
+- Projects 
+
+- Manus Skills 
+
+- Design View 
+
+- Wide Research 
+
+- Manus Slides 
+
+- Scheduled Tasks 
+
+- Data Analysis & Visualization 
+
+- Multimedia Processing 
+
+- Mail Manus 
+
+- Manus Collab 
+
+- Cloud browser 
+
+- Browser Operator 
+
+- Desktop 
+
+- Meeting minutes 
+
+## On this page 
+
+- What is Wide Research? 
+
+- The Context Window Problem 
+
+- How Wide Research Works 
+
+- Quick Start 
+- Simple Request 
+
+- Detailed Request 
+
+- Creative Request 
+
+- Real Examples 
+- Example 1: Researching 250 AI Researchers 
+
+- Example 2: Comparing 100 Sneaker Models 
+
+- Example 3: Analyzing AGI Timelines 
+
+- Example 4: Researching 20 Biographies 
+
+- Example 5: Batch Editing LinkedIn Profile Pics 
+
+- Example 6: Extract GitHub Prompt Library 
+
+- Use Cases by Category 
+
+- Why Wide Research vs. Other Tools 
+
+- When to Use Wide Research 
+
+- Tips for Better Results 
+
+- Common Questions 
+
+- 
+
+# Wide Research
+
+Parallel multi-agent system for large-scale research and processing tasks.
+
+## ​ 
+
+What is Wide Research? 
+
+Wide Research is Manus’s approach to handling tasks that involve processing many similar items—such as analyzing 100 products, researching 50 companies, or generating 20 pieces of content. Instead of using a single AI agent that processes items sequentially, Wide Research deploys hundreds of independent agents that work in parallel. 
+Each agent receives its own dedicated context and processes one item independently. This architecture solves the context window limitation that causes traditional AI systems to degrade in quality as the number of items increases. 
+
+## ​ 
+
+The Context Window Problem 
+
+Traditional AI systems, including most chatbots, operate with a fixed context window—a limit on how much information they can actively process at once. When asked to analyze many items sequentially: 
+
+- Items 1-5 : Detailed, thorough analysis with full context available
+
+- Items 10-20 : Descriptions become shorter as context fills up
+
+- Items 30+ : Generic summaries and increased errors as earlier context is compressed or lost
+
+This degradation occurs because the AI must keep all previous items in memory while processing new ones. Research shows this “fabrication threshold” typically occurs around 8-10 items for most AI systems. 
+
+## ​ 
+
+How Wide Research Works 
+
+Wide Research uses a fundamentally different architecture: 
+1. Task Decomposition : The main agent analyzes your request and breaks it into independent sub-tasks (e.g., “research company #1”, “research company #2”, etc.) 
+2. Parallel Agent Deployment : Each sub-task is assigned to a dedicated agent with its own fresh context window 
+3. Independent Processing : Agents work simultaneously, each conducting thorough research without competing for context space 
+4. Result Synthesis : The main agent collects all completed sub-tasks and assembles them into your requested format (table, report, dataset, etc.) 
+Result : Item #250 receives the same depth of analysis as item #1, because each has its own dedicated agent and full context window. 
+
+## ​ 
+
+Quick Start 
+
+### ​ 
+
+Simple Request 
+
+### ​ 
+
+Detailed Request 
+
+### ​ 
+
+Creative Request 
+
+## ​ 
+
+Real Examples 
+
+### ​ 
+
+Example 1: Researching 250 AI Researchers 
+
+Output : Complete database with 250 detailed profiles 
+Replay : https://manus.im/share/IXdMjxObbFKbIjUUkBk4EH?replay=1 
+Why This Works : 
+
+- No other AI tool can handle this scale
+
+- Each researcher gets independent, thorough research
+
+- Automatic table generation with all fields filled
+
+- Consistent quality from researcher #1 to #250
+
+### ​ 
+
+Example 2: Comparing 100 Sneaker Models 
+
+Output : Comprehensive market research table with 100 products 
+Replay : https://manus.im/share/3zvs5smekSmn4lS14n9QNg?replay=1 
+Why This Works : 
+
+- Deep-dive into each product independently
+
+- Structured data extraction at scale
+
+- Automatic organization and sorting
+
+- No quality degradation across 100 items
+
+### ​ 
+
+Example 3: Analyzing AGI Timelines 
+
+Output : Comprehensive analysis with data visualization 
+Replay : https://manus.im/share/GajPnKzrpM4pEbpcrKDmx0?replay=1 
+Why This Works : 
+
+- Synthesizes information from dozens of sources
+
+- Creates visual representations of findings
+
+- Identifies patterns and outliers
+
+- Provides evidence-based summary
+
+### ​ 
+
+Example 4: Researching 20 Biographies 
+
+Output : 20 comprehensive biographies with consistent structure 
+Replay : https://manus.im/share/ayLBetEJkfSIVuWKo2toPn?replay=1 
+Why This Works : 
+
+- Each biography gets thorough, independent research
+
+- Consistent structure across all profiles
+
+- Deep-dive into multiple sources per person
+
+- No shortcuts or generic content
+
+### ​ 
+
+Example 5: Batch Editing LinkedIn Profile Pics 
+
+Output : 50 professionally edited profile pictures 
+Replay : https://manus.im/share/5iT2464ldyvdf1FMxUOCsW?replay=1 
+Why This Works : 
+
+- Replaces micro-SaaS tools for batch image processing
+
+- Consistent editing applied to all images
+
+- Automated download and processing pipeline
+
+- Professional results at scale
+
+### ​ 
+
+Example 6: Extract GitHub Prompt Library 
+
+Output : Structured database of 100+ prompts 
+Replay : https://manus.ai/share/wxTg2q4hV6GN4YY4KnQeFx?replay=1 
+Why This Works : 
+
+- Extracts and structures information at scale
+
+- Automated categorization and tagging
+
+- Creates searchable, organized database
+
+- Handles complex web scraping tasks
+
+## ​ 
+
+Use Cases by Category 
+
+Category Example Tasks 
+Market Research Compare 100 products, analyze competitor pricing, survey customer reviews 
+Academic Research Literature review of 50 papers, analyze research trends, compare methodologies 
+Competitive Intelligence Profile 30 competitors, analyze feature sets, track pricing changes 
+Lead Generation Research 200 prospects, find contact info, qualify leads 
+Content Creation Generate 20 blog outlines, create 50 social posts, write 30 product descriptions 
+Data Extraction Scrape 100 websites, extract structured data, compile databases 
+Creative Production Generate 20 images, edit 50 photos, create consistent brand assets 
+Investment Research Analyze 40 startups, compare 30 funds, research 50 portfolio companie 
+
+## ​ 
+
+Why Wide Research vs. Other Tools 
+
+Aspect AI Chatbot Manus Wide Research 
+Approach Single AI helps you Parallel multi-agent orchestration 
+Speed Hours until context saturation Minutes regardless of scale 
+Scale Degrades beyond 8-10 items Scales to hundreds seamlessly 
+Quality Progressive degradation Uniform quality at any scale 
+Output Compressed summaries with detail loss Complete reports and datasets 
+
+## ​ 
+
+When to Use Wide Research 
+
+Perfect For : 
+
+- Competitive intelligence (analyze 50+ competitors)
+
+- Market research (compare 100+ products)
+
+- Academic research (review 30+ papers)
+
+- Lead generation (research 200+ prospects)
+
+- Content creation (generate 20+ similar items)
+
+- Data extraction (scrape and structure 100+ pages)
+
+- Batch processing (edit 50+ images/files)
+
+Not Ideal For : 
+
+- Single deep-dive analysis (use regular agent mode)
+
+- Tasks requiring sequential dependencies
+
+- Real-time interactive research
+
+- Tasks with fewer than 10 items
+
+## ​ 
+
+Tips for Better Results 
+
+Be specific about structure : 
+
+- ✅ “Create a table with columns: name, company, role, email, LinkedIn”
+
+- ❌ “Research these people”
+
+Specify the scale upfront : 
+
+- ✅ “Analyze all 100 companies in this list”
+
+- ❌ “Analyze some companies”
+
+Describe desired output format : 
+
+- ✅ “Organize in a sortable spreadsheet with filters”
+
+- ❌ “Give me the results”
+
+Include evaluation criteria : 
+
+- ✅ “Rate each product on: price, features, reviews, availability”
+
+- ❌ “Compare these products”
+
+## ​ 
+
+Common Questions 
+
+How many items can Wide Research handle? 
+
+Tested up to 250 items. Theoretically unlimited, but practical limit depends on task complexity. 
+
+How long does it take? 
+
+Depends on task complexity and scale. Typically minutes for 50-100 items, regardless of depth. 
+
+Can I refine results after?
+
+Yes. Ask for modifications: “Add a column for pricing” or “Re-research items 20-30 with more detail.” 
+
+Does it work for non-research tasks? 
+
+ Yes. Any task that involves processing multiple independent items: image editing, data extraction, content generation, etc. 
+
+## ​ 
+
+Design View
+Manus Slides
+⌘ I 
+
+instagram linkedin x youtube 
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform 
+
+Assistant 
+
+Responses are generated using AI and may contain mistakes.

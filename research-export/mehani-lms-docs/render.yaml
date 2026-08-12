@@ -1,0 +1,24 @@
+# Render Blueprint - Auto Deploy Configuration
+services:
+  - type: web
+    name: lms-smart-building
+    env: node
+    region: oregon
+    plan: free
+    branch: master
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PORT
+        value: 10000
+      - key: NEXT_PUBLIC_ADMIN_PASSWORD
+        value: admin_dev_2024_secure!
+      - key: NEXT_PUBLIC_DEVELOPER_PASSWORD
+        value: abd123443211
+      - key: NEXT_TELEMETRY_DISABLED
+        value: 1

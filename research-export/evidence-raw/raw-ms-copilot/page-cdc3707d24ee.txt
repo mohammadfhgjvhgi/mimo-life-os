@@ -1,0 +1,545 @@
+TITLE: Microsoft Copilot | AI Tools for Organizations
+
+- Microsoft Copilot | AI Tools for Organizations 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- This is the Trace Id: 757178970e3364771621f705bd786aff 
+
+- 
+
+- 
+
+Skip to main content 
+
+Copilot 
+
+Microsoft 365 Copilot 
+Download Microsoft 365 Copilot app 
+Microsoft Copilot Studio 
+Microsoft Security Copilot 
+Microsoft Copilot in Azure 
+GitHub Copilot 
+
+Agents 
+
+Customer stories 
+
+Get started with AI for your business 
+Copilot learning hub 
+Copilot 101 
+Microsoft AI 
+Copilot blog 
+
+For personal use 
+
+Try Copilot Chat 
+
+Microsoft Security 
+Azure 
+Dynamics 365 
+Microsoft 365 
+Microsoft Teams 
+Windows 365 
+
+Microsoft AI 
+Azure Space 
+Mixed reality 
+Microsoft HoloLens 
+Microsoft Viva 
+Quantum computing 
+Sustainability 
+
+Education 
+Automotive 
+Financial services 
+Government 
+Healthcare 
+Manufacturing 
+Retail 
+
+Find a partner 
+Become a partner 
+Partner Network 
+Microsoft Marketplace 
+Software companies 
+
+Blog 
+Microsoft Advertising 
+Developer Center 
+Documentation 
+Events 
+Licensing 
+Microsoft Learn 
+Microsoft Research 
+
+View Sitemap 
+
+Empower your organization with Copilot</h1> "> 
+- Empower your organization with Copilot 
+
+Powerful generative AI. Enterprise-grade security and privacy. Trusted by companies around the world. What will you achieve with an AI assistant? 
+
+Explore Microsoft 365 Copilot Try Copilot Chat 
+
+Empower your organization with Copilot</h1> "> Empower your organization with Copilot 
+
+Powerful generative AI. Enterprise-grade security and privacy. Trusted by companies around the world. What will you achieve with an AI assistant? 
+
+Explore Microsoft 365 Copilot Try Copilot Chat 
+
+AI-powered assistant 
+
+Need help finding a product or solution? Try the AI-powered assistant. 
+
+- How do I get started with Copilot? 
+
+- Can I customize Copilot to fit my needs? 
+
+- 
+
+What is Copilot 
+
+- What is Copilot</p> " data-bi-compnm="Secondary Sticky Nav" data-oc="oce4f9" data-bi-ct="Tab Nav" id="nt:unstructured-oce4f9" data-bi-sn="1" aria-label="What is Copilot"> 
+What is Copilot 
+
+- Solutions</p> " data-bi-compnm="Secondary Sticky Nav" data-oc="oc961a" data-bi-ct="Tab Nav" id="nt:unstructured-oc961a" data-bi-sn="2" aria-label="Solutions "> 
+Solutions 
+
+- 
+Customer stories 
+
+- 
+FAQ 
+
+- 
+Next steps 
+
+Try Copilot Chat 
+
+Try Copilot Chat 
+
+Supercharge your work with an AI assistant</h2> "> Supercharge your work with an AI assistant
+
+Watch the video 
+
+Advanced AI video 
+
+Advanced AI 
+
+Achieve more in less time with powerful generative AI 
+
+Provide a prompt and Copilot takes it from there—drafting content, providing insights, or handling tasks. 
+
+Seamlessly Integrated video 
+
+Seamlessly integrated 
+
+Amplify productivity with extra help right where you need it 
+
+Across apps, roles, and tasks—get AI-powered assistance directly in the flow of work. 
+
+Enterprise grade security video 
+
+Enterprise-grade security 
+
+Get ahead without compromising security 
+
+Copilot is built on a comprehensive approach to security and you can work confidently knowing your privacy is prioritized. 
+
+Find the right Copilot solution for your needs</h2> "> Find the right Copilot solution for your needs
+
+Make work faster and more enjoyable</h3> "> 
+Make work faster and more enjoyable
+
+A new era of AI-powered productivity is here. Check out the latest innovations in Microsoft 365 Copilot and see how it can help transform the way you work. 
+
+Explore Microsoft 365 Copilot Download the app 
+
+- 
+Previous Slide 
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+Next Slide 
+
+Microsoft Security Copilot 
+
+Protect your data at the scale of AI 
+
+Respond to cyberthreats quickly, process signals at machine speed, and assess risk exposure in minutes. 
+
+Explore Security Copilot 
+
+Copilot in Azure 
+
+Simplify your cloud management 
+
+Streamline how you design, operate, optimize, and troubleshoot apps and infrastructure from cloud to edge. 
+
+Explore Copilot for Azure 
+
+GitHub Copilot 
+
+Write code at warp speed 
+
+Boost developer agility with code suggestions and AI assistance. 
+
+Explore GitHub Copilot 
+
+Microsoft Copilot Studio 
+
+Create or customize your own AI agent 
+
+Use agents to enhance Microsoft 365 Copilot for your needs, or build your own agent to connect more deeply to your business data, apps, and workflows. 
+
+Explore Copilot Studio 
+
+Copilot in Power Apps 
+
+Build an app in seconds—for any business need 
+
+Create apps and automate everyday tasks with just a few clicks, making your work smoother and more efficient—no coding required. 
+
+Explore Copilot in Power Apps 
+
+Back to carousel navigation controls 
+
+Hear from our customers</h2> "> Hear from our customers
+
+See more customer stories 
+
+Previous Slide 
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+Next Slide 
+
+“Copilot has allowed us to punch above our weight. It’s not just a tool; it’s a partner in our mission to transform construction.” 
+Nick Masci, Principal and Cofounder, ICG 
+
+$500k 
+
+saved in avoided costs 
+
+20% 
+
+increase in gross margins 
+
+Products 
+
+- Microsoft 365 Copilot</a>"> 
+
+Microsoft 365 Copilot 
+
+- Microsoft Copilot Studio</a>"> 
+
+Microsoft Copilot Studio 
+
+Read the story 
+
+“I used to spend hours gathering data and reading reports. Now, Copilot shortens that process by presenting relevant insights and helping me ask new questions.” 
+Radhika Tawade, Innovation Specialist, Dow 
+
+Products 
+
+- Microsoft 365 Copilot</a>"> 
+
+Microsoft 365 Copilot 
+
+- Microsoft Copilot Studio</a>"> 
+
+Microsoft Copilot Studio 
+
+Read the story 
+
+“Copilot helps our lawyers to focus more time on delivering deeper, value-added insights and the strategic input that really matters to clients.” 
+Paul Greenwood, Chief Technology Officer, Clifford Chance 
+
+Products 
+
+- Microsoft 365 Copilot</a>"> 
+
+Microsoft 365 Copilot 
+
+- Microsoft Teams</a>"> 
+
+Microsoft Teams 
+
+Read the story 
+
+“Copilot is a game-changer—it can multiply your strengths and give you that partner to push ideas further and break out of your daily routine." 
+Jeremie Moritz, Global Consumer Engagement Sr. Director, Campari Group 
+
+Products 
+
+- Microsoft 365 Copilot</a>"> 
+
+Microsoft 365 Copilot 
+
+- Microsoft Viva</a>"> 
+
+Microsoft Viva 
+
+Read the story 
+
+“[T]eams are using this to really make sure they’re more productive .... Copilot is magic at work.” 
+Ryan Asdourian, Executive Vice President and Chief Marketing Officer, Lumen Technologies 
+
+Products 
+
+- Microsoft 365 Copilot</a>"> 
+
+Microsoft 365 Copilot 
+
+- Microsoft 365</a>"> 
+
+Microsoft 365 
+
+- Microsoft Teams</a>"> 
+
+Microsoft Teams 
+
+Read the story 
+
+“Copilot is very simple to use. You don’t really have to train people, and we’ve gotten tremendous response from whoever has tried it out.” 
+Deva Joseph, Vice President and Head of Digital Development, Air India 
+
+Products 
+
+- Microsoft 365 Copilot</a>"> 
+
+Microsoft 365 Copilot 
+
+- Microsoft 365</a>"> 
+
+Microsoft 365 
+
+- Microsoft Teams</a>"> 
+
+Microsoft Teams 
+
+Read the story 
+
+Back to Hear from our customers section 
+
+Frequently asked questions 
+
+Expand all
+
+Collapse all
+
+- 01/ 
+
+What are Copilots? 
+
+Copilots are chat-based generative AI interactions from Microsoft. They have specialized functionality based on their users and use cases. Some Copilots are experienced standalone, while others are integrated into Microsoft products, services, and devices.
+
+Included in this portfolio is Microsoft Copilot ,  Microsoft 365 Copilot , Microsoft Security Copilot , and GitHub Copilot , among other generative AI solutions and experiences. 
+
+- 02/ 
+
+What’s the difference between the Copilots Microsoft offers? 
+
+Microsoft Copilot is your digital companion for daily life designed to inform, entertain, and inspire. Using advanced AI, Copilot understands your questions and requests, provides direct answers, assists with writing, and even creates images.
+
+Microsoft 365 Copilot  is an AI assistant for work that’s built to support organizations and businesses. Copilot combines advanced language models with your business data and your everyday productivity apps—such as Word, Excel, PowerPoint, Outlook, and Teams.
+
+Microsoft Security Copilot  is an AI assistant for daily operations in security and IT—enabling teams to protect their organizations at the speed and scale of AI while maintaining compliance with responsible AI principles.
+
+GitHub Copilot  is an AI coding assistant that helps you write code faster and with less effort, allowing you to focus more energy on problem solving and collaboration. 
+
+- 03/ 
+
+Are Copilots free? What are the licensing requirements for using Copilots? 
+
+Microsoft offers a range of Copilots tailored for both work and life. Pricing and the licensing requirements depend on the specific solution and how you use it.
+
+For work, you can try Microsoft 365 Copilot Chat —which is included with eligible Microsoft 365 subscriptions  and offers enterprise-grade security and privacy.
+
+For personal use, you can try Microsoft Copilot on the web for free or download the app .​
+
+Learn more about  Microsoft 365 Copilot licensing ,  Microsoft Security Copilot licensing , and  GitHub Copilot licensing . 
+
+- 04/ 
+
+How does Microsoft protect my privacy and ensure confidentiality of sensitive data? 
+
+Microsoft Copilot remembers details that matter to your daily life while keeping your personal data secure and protecting your privacy. You can always manage your privacy preferences in your Copilot Privacy settings.
+
+When you’re using Copilots at work, all your existing security and compliance requirements are inherited, so only people with the right permissions can access the content it generates. Learn more about data, privacy, and security for Microsoft 365 Copilot. 
+
+As a company, Microsoft is committed to providing trustworthy AI—with decades of research, customer feedback, and learnings informing the capabilities that deliver privacy, safety, and security. Learn more about Microsoft’s trustworthy AI commitments. 
+
+- 05/ 
+
+How do I install and use Copilots? 
+
+If you’re looking to use Copilot outside of work, you can start using Microsoft Copilot for free right away at copilot.microsoft.com or by downloading the Microsoft Copilot app on your mobile device. 
+
+If you want to use Microsoft 365 Copilot at work , you’ll need to have an existing license for a qualifying Microsoft 365 plan and a license for Microsoft 365 Copilot. If you’re not an existing customer, you need to buy an eligible Microsoft 365 subscription. If you’re just starting out, you can also use Microsoft 365 Copilot Chat —an AI chat available at no additional cost with eligible Microsoft 365 subscriptions .
+
+Additional business and enterprise licenses for GitHub Copilot are available, as well as licensing plans for Microsoft Security Copilot . 
+
+- 06/ 
+
+Where can I find guidance, documentation, and tutorials on how to use Copilots effectively?  
+
+Use the Copilot learning hub to find trainings, documentation, and videos, and check out Microsoft Adoption for resources on implementing Microsoft 365 Copilot at your organization. 
+
+You can also find business best practices, resources, and insights here to get the most out of using Microsoft 365 Copilot. 
+
+- 07/ 
+
+How can I use Copilot in Word, Excel, PowerPoint, and Teams? 
+
+To have full access to Copilot in Word, Excel, PowerPoint, and Teams, you’ll need to have a license for a qualifying Microsoft 365 plan and a license for Microsoft 365 Copilot—even if you already use Copilot outside of work or have limited access in Word, Excel, PowerPoint, and Teams.
+
+Here are some ways you can use Copilot in Word, Excel, PowerPoint, and Teams:
+  
+- Writing and editing . Copilot in Word can provide prompts to help you start writing quickly, help edit existing documents, and help trim down and summarize longer texts.
+
+- Data analysis . Copilot in Excel can help analyze data, write formulas, and organize unstructured data into a more digestible format.
+
+- Creating presentations. Copilot in PowerPoint can help build presentations, edit notes, and rearrange slides.
+
+- Streamlining collaboration. Copilot in Teams can summarize meetings, provide transcripts, and share insights from discussions.
+
+Continue your AI journey</h2> "> Continue your AI journey
+
+Shape the future of your business with Copilot 
+
+Boost productivity, efficiency, and business outcomes with Microsoft 365 Copilot, your AI assistant for work. 
+
+Learn more about Copilot for work 
+
+Try Copilot Chat 
+
+If you don’t have Microsoft 365 Copilot licenses yet, explore a few ways you can use Microsoft 365 Copilot Chat. 
+
+Try Copilot Chat now 
+
+Get your organization AI-ready 
+
+Discover how to build your rollout strategy so you can accelerate usage and engagement with Copilot. 
+
+Get started 
+
+- 
+
+- 
+
+- 
+
+Follow Microsoft 365 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+Surface Pro 
+Surface Laptop 
+Surface Laptop Ultra 
+Surface RTX Spark Dev Box 
+Copilot for organizations 
+Copilot for personal use 
+Explore Microsoft products 
+Windows 11 apps 
+
+Account profile 
+Download Center 
+Microsoft Store support 
+Returns 
+Order tracking 
+Certified Refurbished 
+Microsoft Store Promise 
+Flexible Payments 
+
+Microsoft in education 
+Devices for education 
+Microsoft Teams for Education 
+Microsoft 365 Education 
+How to buy for your school 
+Educator training and development 
+Deals for students and parents 
+AI for education 
+
+Microsoft AI 
+Microsoft Security 
+Dynamics 365 
+Microsoft 365 
+Microsoft Power Platform 
+Microsoft Teams 
+Microsoft 365 Copilot 
+Small Business 
+
+Azure 
+Microsoft Developer 
+Microsoft Learn 
+Support for AI marketplace apps 
+Microsoft Tech Community 
+Microsoft Marketplace 
+Software companies 
+Visual Studio 
+
+Careers 
+About Microsoft 
+Company news 
+Privacy at Microsoft 
+Investors 
+Diversity and inclusion 
+Accessibility 
+Sustainability 
+
+English (United States) 
+
+Your Privacy Choices 
+
+Consumer Health Privacy 
+
+Sitemap 
+Contact Microsoft 
+Privacy 
+Manage cookies 
+Terms of use 
+Trademarks 
+Safety & eco 
+Recycling 
+About our ads 
+
+- 
+- 
+
+- 
+- 
+
+-

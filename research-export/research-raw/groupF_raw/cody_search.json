@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://sourcegraph.com/blog/anatomy-of-a-coding-assistant",
+    "name": "The anatomy of an AI coding assistant",
+    "snippet": "Jun 18, 2024 — You have autocomplete , which makes suggestions as you code that keep you in flow. Then there's chat, which allows you to ask questions of and ...",
+    "host_name": "sourcegraph.com",
+    "rank": 0,
+    "date": "Jun 18, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/sourcegraph/cody-public-snapshot",
+    "name": "sourcegraph/cody-public-snapshot:",
+    "snippet": "Aug 1, 2025 — Cody comes with a variety of AI-for-coding features , such as autocomplete, chat, Smart Apply, generating unit tests, and more.",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "Aug 1, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai",
+    "name": "Cody: AI Code Assistant",
+    "snippet": "Works with your favorite IDEs. Sourcegraph is available on the IDEs you use today. Get AI chat, autocomplete, and inline edit without changing your workflow.",
+    "host_name": "marketplace.visualstudio.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://sourcegraph.com/blog/cody-better-faster-stronger",
+    "name": "Cody - better, faster, stronger",
+    "snippet": "Feb 15, 2024 — You can interact with Cody in three ways: autocomplete, chat, and commands . Autocomplete / code completion. Autocomplete allows Cody to ...",
+    "host_name": "sourcegraph.com",
+    "rank": 3,
+    "date": "Feb 15, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ClaudeAI/comments/1ll0kow/sourcegraph_cody_discontinued_replaced_by_cody",
+    "name": "Replaced by Cody AMP is there Alternative? : r/ClaudeAI",
+    "snippet": "I tried their new product called AMP which is an Agentic AI Coding Assistant and its good, one thing i immediately noticed is that no more context limitations, ...",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=TALwI3J4asY",
+    "name": "I Cannot Believe How Good This VS Code AI Coding Assistant",
+    "snippet": "Cody answers technical questions and writes code directly in your IDE, including VS Code, using your code graph for context and accuracy.",
+    "host_name": "www.youtube.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.simular.ai/alternatives/best-ai-coding-assistants",
+    "name": "11 Best AI Coding Assistants in 2026: From Autocomplete",
+    "snippet": "Sourcegraph Cody combines Sourcegraph's code search engine with AI assistance. The result is the only coding assistant that can search across all your ...",
+    "host_name": "www.simular.ai",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.augmentcode.com/tools/sourcegraph-cody-alternatives-7-enterprise-ai-code-assistants-for-development-teams",
+    "name": "Sourcegraph Cody Alternatives: 7 Enterprise AI",
+    "snippet": "Sep 12, 2025 — Sourcegraph caught teams off guard by discontinuing new signups for Cody Free and Cody Pro plans effective June 25, 2025 , pushing developers ...",
+    "host_name": "www.augmentcode.com",
+    "rank": 7,
+    "date": "Sep 12, 2025",
+    "favicon": ""
+  }
+]

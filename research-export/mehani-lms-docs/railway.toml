@@ -1,0 +1,15 @@
+# =============================================
+# Railway Configuration for Mehani LMS Platform
+# =============================================
+
+[build]
+  builder = "nixpacks"
+  buildCommand = "bun run build"
+
+[deploy]
+  startCommand = "bun run start"
+  restartPolicyType = "on_failure"
+  restartPolicyMaxRetries = 3
+
+[environments.production]
+  PORT = "3000"

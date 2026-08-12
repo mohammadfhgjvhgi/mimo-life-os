@@ -1,0 +1,332 @@
+
+
+Things Blog - Cultured Code
+
+[/things/] Things
+
+[/things/features/] 
+
+Features
+
+[/things/support/] 
+
+Support
+
+[/things/blog/] 
+
+Blog
+
+September 15th, 2025
+
+[/things/blog/2025/09/things-for-os-26/] 
+Things for OS 26
+
+Things is ready for Apple’s OS 26, with a thoroughly refreshed
+interface, a new app icon, better windowing on iPad, and many more improvements. Available now in Things 3.22!
+
+Things gets a fresh new look on OS 26.
+
+A new icon
+
+The first thing you’ll spot is Things’ iconic blue box, refined and realigned to sit beautifully within OS 26. It’s familiar at a glance and unmistakably Things.
+
+This new icon is available in four variants – Default, Dark, Tinted, and Clear – to match whatever appearance style you choose for your device.
+
+New Icon
+
+Old Icon
+
+Fresh look & feel on OS 26
+
+We’ve tastefully refreshed Things’ interface. You’ll notice adjustments everywhere: in the curvature of windows, to-dos, dialogs, and controls; wider spacing
+that feels a bit more relaxed; and a touch of glass in the sidebar that lets a hint of color shine through. We think it’s the most beautiful version of Things
+yet!
+
+But it’s more than looks – it also feels new. Throughout the interface, you’ll interact with new glassy buttons that respond to your touch with a subtle glow
+and scale. A great example is the blue Magic Plus button. As you drag it around, notice its new liquid nature – it ever so slightly deforms its shape in response
+to your movements.
+
+iPhone
+
+iPad
+
+Mac
+
+iPad windows and menus
+
+On iPad, OS 26 brings some welcome Mac-like improvements. To try them out, you’ll need to switch to the new Windowed Apps mode in your device’s Settings.
+
+Things smartly adapts its layout for the new mode. Your windows get traffic light controls, and you can arrange them freely on your screen. To open a new window
+in Things, right-click a list and choose Open in New Window, or go to File → New Window.
+
+If you swipe down from the top edge of the screen, you’ll see that there’s also a new menu bar. We’ve updated Things’ menus to expose many powerful controls
+and [https://culturedcode.com/things/help/keyboard-shortcuts-ios/] keyboard shortcuts.
+
+Taken together, these improvements do a lot to make Things on the iPad feel more powerful and natural to use. We’re enjoying it a lot!
+
+Things inherits some Mac-like powers on iPadOS 26.
+
+New widget styles
+
+Last year, we updated Things’ widgets to support styles on iPhone and iPad. These styles are now available on the Mac as well. In addition to the
+Dark and Tinted styles, OS 26 introduces Clear – a glass-like style that lets your wallpaper shine through.
+
+Widget styles – including the new “Clear” – are now available across Mac, iPad, and iPhone.
+
+Quick controls on Mac and Watch
+
+Things’ handy Control Center controls are now available on Mac and Apple Watch.
+
+On Mac, Things offers Controls for New To-Do and List (you choose which list). You can place them in Control
+Center, or pin them to your menu bar for one-click access.
+
+On Apple Watch, Things’ New To-Do Control lets you capture a thought on the go, via swipe, type, or talk.
+
+And more
+
+Widgets on Vision Pro. We’ve brought Things’ widgets to Vision Pro. You can place as many as you like in your space and choose which list
+to show, such as Today, Deadlines, a project, or a tag.
+
+Writing Tools on Vision Pro. We’ve added support for Apple’s Writing Tools on Vision Pro. You can use it to quickly proofread, rewrite,
+summarize, or reformat the text in your notes.
+
+Spotlight on Mac can now create to-dos. Type “Create To-Do”, press Return, then enter your title. Your new to-do is created in your Inbox,
+even if Things isn’t running.
+
+Apple Shortcuts has a new Use Model action that lets you bring AI into your workflows with Things. Use on-device or cloud models
+to create new to-dos with AI-assisted writing, or pull data from Things via its Find Items action and pass it to the AI model as context. Learn more
+about [/things/support/articles/9596775/] Things’ actions for Apple Shortcuts.
+
+Get it now
+
+Things 3.22 is available today as a free update on the App Store for [https://culturedcode.com/things/mac/appstore/] Mac, [https://culturedcode.com/things/ipad/appstore/] iPad,
+[https://culturedcode.com/things/iphone/appstore/] iPhone, Watch, and [https://culturedcode.com/things/vision/appstore/] Vision Pro.
+Note that you’ll also need to install OS 26 for the new design and features to show up!
+
+We hope you enjoy the new look and other great refinements. ✨
+
+Posted by Mick
+
+May 19th, 2025
+
+[/things/blog/2025/05/a-swift-cloud/] 
+A Swift Cloud
+
+We’ve rebuilt Things Cloud from the ground up. The system that keeps your to-dos in sync is now faster, built with modern technology, and ready for the future.
+A behind the scenes look.
+
+For over a decade, Things Cloud has kept your to-dos in sync across devices. [/things/cloud/#feedback] Many of you have told us how much you appreciate
+its reliability – it just works. But behind the scenes, a major transformation has quietly taken place: we’ve rebuilt the entire service from the
+ground up.
+
+The new cloud is already up and running – and you didn’t notice a thing. That was by design. From the outside, everything appears the same. But under the hood,
+everything changed: the infrastructure, the architecture, and the language it’s written in.
+
+This post takes you behind the scenes: why we rebuilt Things Cloud, why we chose to write it in Swift, and how we transitioned without skipping a beat.
+
+This will be a bit more technical than usual. If that’s not your thing, the summary above is already the key takeaway: Things Cloud is now faster, more modern,
+and ready for the future.
+
+Why we rebuilt Things Cloud
+
+Fourteen years ago, we designed Things Cloud on a solid mathematical foundation. The core algorithms were crafted with care – capable of handling offline edits
+and resolving sync conflicts across multiple devices. Over time, we refined them and added features like [/things/blog/2021/08/remarkable-notes/#fractus] Fractus,
+our granular text-sync engine.
+
+That theoretical foundation has proven itself throughout the years, and we’ll continue to rely on it. However, the technology we used for its implementation
+began to show its age. Technology had evolved, as did our needs, and the system we built over a decade ago became increasingly difficult to maintain and extend.
+
+To address this, we carefully reviewed every layer of Things Cloud – its code, architecture, and infrastructure – and explored how modern technologies could
+help us move forward. It became clear to us that we needed more than gradual improvements – a full rebuild was necessary. Our goal wasn’t just to keep Things
+Cloud running, but to lay the groundwork for future improvements and unlock new possibilities in the years ahead.
+
+Why Swift?
+
+Swift has become Apple’s flagship programming language for building modern apps, and over the years we’ve adopted it for much of the code in Things itself.
+It’s fast, safe, and expressive. So four years ago, when we set out to rebuild Things Cloud, we saw a promising opportunity: to use Swift on the server, too.
+
+At the time, Swift was an unconventional choice. Unlike more mature server languages, it had a smaller ecosystem and fewer production-tested tools. That said,
+Apple had shown a strong commitment to server-side Swift, and there was a growing open-source community. The upsides were also very compelling: great performance,
+modern language features, and the ability to use the same language across both app and server code.
+
+To see how things would go, we started small, building out a few components in Swift. As the system grew, so did our confidence. There were no real hurdles
+– just steady progress. In the end, it’s clear that this was a great choice. The new codebase is clean and robust, development moves faster, and the system
+runs with rock-solid stability – all while delivering a fourfold speed boost when processing sync requests.
+
+For a deep dive into the technical details, check out [https://www.swift.org/blog/how-swifts-server-support-powers-things-cloud/] our post on Apple’s Swift.org blog.
+We also gave [https://www.youtube.com/watch?v=oJArLZIQF8w] a talk at last year’s Server-Side Swift Conference.
+
+[https://www.swift.org/blog/how-swifts-server-support-powers-things-cloud/] 
+
+Read all the technical details in our guest post on Swift.org
+
+[https://www.youtube.com/watch?v=oJArLZIQF8w] 
+
+Watch our talk at the Server-Side Swift Conference
+
+A seamless transition
+
+Rewriting a cloud service is one thing – switching it on without disrupting its users is another.
+
+To ensure a smooth transition, we ran the new cloud in parallel with the old one. While the old Things Cloud continued syncing everyone’s to-dos, the new cloud
+quietly processed the same data using its own logic and infrastructure. Every edge case and every corner of the sync model was tested under real-world conditions
+– without anyone ever noticing.
+
+Once we were confident in the new cloud, we flipped the switch and moved everyone over. That transition happened early last year – and the new Things Cloud
+has been running reliably ever since.
+
+With the migration done, we began taking advantage of the new architecture: refining our sync model, optimizing performance, and improving internal tooling
+and monitoring. That work wrapped up last month, marking the final step in this multi-year effort.
+
+Ready for the future
+
+The rewrite of Things Cloud didn’t change a thing on the surface – but it transformed everything beneath. The new cloud is faster, and easier to develop and
+maintain. Most importantly, it gives us a solid foundation to build on for the next decade and beyond.
+
+At Cultured Code, we strive to build software with craftsmanship and care. Whether it’s a new app feature or a cloud overhaul, our goal remains the same: to
+build software you can rely on every day, for years to come.
+
+Posted by Werner
+
+October 31st, 2024
+
+[/things/blog/2024/10/writing-tools/] 
+Writing Tools
+
+Apple has released a new feature called Writing Tools and you can use it in Things to edit your notes.
+
+Things has become a great place to write longer-form notes, offering options to [/things/blog/2021/08/remarkable-notes/] format text with Markdown and [/things/blog/2023/09/things-big-and-small/] adjust its size. Apple’s new Writing Tools take it a step further, providing a quick way to edit
+your writing. Using AI, it can proofread, rewrite, summarize, or reformat your text. You can invoke this feature right inside of Things.
+
+Edit notes in your to-dos and projects with Apple’s Writing Tools.
+
+Edit notes in your to-dos and projects with Apple’s Writing Tools.
+
+Mac
+
+iPhone
+
+To access Writing Tools in Things on your Mac, simply select text and click the blue button that appears to the side. On iPhone or iPad, select the text and
+choose Writing Tools from the edit bar. The text you selected is then sent to Writing Tools for processing.
+
+We’ve already updated Things for smooth integration with Writing Tools, but you’ll need to enable Apple Intelligence in the Settings app and restart Things
+(requires macOS 15.1, iOS 18.1, or iPadOS 18.1).
+
+Have fun writing! ✨️
+
+Writing Tools is part of Apple Intelligence, which is only available in some regions and requires modern hardware. Check [https://www.apple.com/apple-intelligence/] Apple’s website for more information. No data from Things is shared with Apple Intelligence unless you choose to invoke Writing Tools.
+
+Posted by Mick
+
+September 16th, 2024
+
+[/things/blog/2024/09/things-for-the-latest-os-releases/] 
+Things for the Latest OS Releases
+
+Today’s update fully supports Apple’s latest OS releases, introduces Control Center buttons, and adds support for the new Dark and Tinted Home Screen appearances.
+Plus, we’ve laid the groundwork for upcoming integration with Apple Intelligence.
+
+Dark & Tinted Home Screens
+
+Your entire Home Screen can go dark on iOS 18 and Things has a beautiful new app icon to match the aesthetic. To see how it looks on your device, simply switch
+to Dark Mode.
+
+Things’ app icon and widgets can also adapt to your color of choice in the new Tinted Mode. If you’d like to try it, just tap & hold on your Home Screen, then
+tap Edit → Customize → Tinted and pick a color.
+
+Control Center Buttons
+
+You can now add Things to your Control Center for quick access while using other apps. Simply swipe down from the top right corner of your screen, then press
+& hold to edit the view. You can rearrange the existing controls, or add new ones from the gallery.
+
+Things provides two types of controls: one to quickly create a new to-do, and another to jump into any list—Today, a project, an area, or even
+a tag. You can add as many of your Things lists as you like. To choose a list, flip the control over, just like you would when configuring a widget.
+
+New controls give you quick access to Things from Control Center. On iPhone, you can also add them to the bottom of your Lock Screen.
+
+Larger Widgets
+
+While customizing your Home Screen, consider trying the new Large setting. This hides the labels under widgets and app icons, providing a bit more room.
+The layout of Things’ widgets smartly adapts to the new size and shows more of your list in some configurations.
+
+Set your Home Screen to Large for slightly bigger widgets.
+
+Window Tiling
+
+A great new feature on macOS Sequoia is Window Tiling, which neatly sizes and arranges your windows for you. We’ve adjusted Things’ layout and behavior to
+work smoothly with this feature. Things’ windows will stay constrained to your chosen tile size, even if you’ve disabled “Preserve window width when resizing
+sidebar” in Things’ settings.
+
+Keyboard Language Recall
+
+We’ve got a neat little improvement for our multilingual users on iPhone and iPad: If you write one of your to-dos in a different language, Things will now
+remember and switch the keyboard back to that language when you next edit the to-do.
+
+Ready for Apple Intelligence
+
+We’re very excited for [https://www.apple.com/apple-intelligence/] Apple Intelligence, which is expected to roll out gradually over the coming
+months. Today’s update for Things already lays the groundwork, with support for Writing Tools and better conversations with Siri. We’ll tell you more about
+these features once Apple Intelligence enables support for them.
+
+Things 3.21 is out now and available as a free update on the App Store for [/things/mac/appstore/] Mac, [/things/ipad/appstore/] iPad,
+[/things/iphone/appstore/] iPhone, Apple Watch, and [https://culturedcode.com/things/vision/appstore/] Apple Vision Pro. Remember
+to update your OS to take advantage of all the new features!
+
+Posted by Mick
+
+Newer Posts
+
+[/things/blog/page/2] Older Posts
+
+Products
+
+[/things/mac/] Things for Mac
+
+[/things/iphone/] Things for iPhone
+
+[/things/watch/] Things for Watch
+
+[/things/ipad/] Things for iPad
+
+[/things/vision/] Things for Vision
+
+Support
+
+[/things/support/] Help
+
+[/contact/] Contact
+
+[/things/guide/] Getting Productive
+
+News
+
+[/things/blog/] Blog
+
+[/mailinglist/subscribe/] Newsletter
+
+[/status/] Status Board
+
+[/follow/bluesky/] 
+
+[/follow/x/] 
+
+[/follow/threads/] 
+
+[/follow/instagram/] 
+
+[/follow/mastodon/] 
+
+Company
+
+[/about/] About Us
+
+[/jobs/] Jobs 
+
+[/privacy/] Privacy Policy
+
+[/terms/] Terms
+
+[/press/] Press
+
+[/] Cultured Code
+

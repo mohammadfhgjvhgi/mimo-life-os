@@ -1,0 +1,255 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Introducing Cloud Computer: Lowering the Barrier to Building 
+- 
+- 
+- 
+- 
+
+Features
+Solutions
+Resources
+Events
+Team
+Pricing
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+Get started 
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+Manus is now part of Meta — bringing AI to businesses worldwide
+
+Product · Thursday, April 30 
+
+# Introducing Cloud Computer: Lowering the Barrier to Building
+
+Introducing the Cloud Computer for Manus—a dedicated machine in the cloud that runs your bots, Python scripts, and software around the clock. Now anyone can build and run anything. 
+
+﻿ 
+
+For decades, that kind of capability was locked behind a technical wall. If you wanted software to run 24/7, you had to understand "the cloud." 
+
+The cloud exists because your laptop isn't built for it. Laptops sleep, disconnect, and shut down. To keep a program running nonstop, you have to host it on a machine that never turns off. 
+
+Traditionally, that meant renting servers from AWS or Vercel, configuring an operating system, managing keys, and writing code. It was a process reserved for developers. 
+
+Building automations that never sleep was a developer's patent. Until today. 
+
+## Why Use a Cloud Computer? 
+
+A Cloud Computer gives you two things your laptop can't: 
+
+It never turns off. Your laptop sleeps, loses Wi-Fi, and eventually shuts down. A Cloud Computer doesn't. It runs around the clock, so anything Manus sets up on it keeps working even when you're asleep, on a plane, or away for the weekend. 
+
+Your files and setup stay put. Every regular Manus chat starts from a blank slate—it has no access to what you did yesterday. A Cloud Computer works more like your own laptop. Files Manus creates on it stay there. Tools Manus installs stay installed. If you want Manus to pick up where it left off last week, it can, because the work is still sitting on the machine. 
+
+Together, those two things change what's possible. You can set up a bot on Monday and trust it's still answering messages on Friday. You can ask Manus to build a database today, add to it next month, and pull a full report a year from now. You can build an ongoing project instead of a one-off task. 
+
+No servers to rent. No code to learn. No technical setup. You describe the outcome, and your Cloud Computer keeps it running. 
+
+## When to Use the Cloud Computer 
+
+Manus offers three environments, each built for different kinds of work. The Cloud Computer doesn't replace the others—it extends what's possible by adding always-on capability. Here's a quick guide on when to use which. 
+
+Scenario 
+Right Environment 
+
+Running a Python script, analysis, document, or building a web app or website 
+Temporary Sandbox 
+
+Organizing local files or controlling apps on your machine 
+Manus Desktop 
+
+Running a 24/7 bot (Slack, Discord, customer service) 
+Cloud Computer 
+
+Persistent knowledge base or live database (e.g., MySQL) 
+Cloud Computer 
+
+Self-hosting open-source tools (Home Assistant, Metabase) 
+Cloud Computer 
+
+Scheduled scrapers or reports (e.g., daily at 4 AM) 
+Cloud Computer 
+
+## What You Can Host and Automate 
+
+With the technical barrier gone, the only real limit is what you can imagine. A few examples: 
+
+### 1. Host Your Own 24/7 Bots 
+
+﻿ 
+
+Bots are powerful for any business—handling customer service on WhatsApp, triaging leads on Telegram, managing communities on Discord. The problem has always been the plumbing: a machine that never sleeps, secure credentials, and reliable API integrations. The Cloud Computer handles all of it. 
+
+Sample Prompt: 
+
+"I want to build a Slack bot that summarizes daily news for my team. Use the Manus API for the summarization, and walk me through connecting my Slack credentials step by step so it can run 24/7." 
+
+### 2. Build a Persistent Knowledge Base 
+
+The Cloud Computer's biggest unlock is its file system. In a regular Manus session, each task is isolated—Manus can't see files from yesterday's chat. On the same Cloud Computer, every task shares the same hard drive. Manus can search, read, and build on files you created earlier, which means you can run a live database or a continuous reporting system that learns from last week's, last month's, and last year's data. 
+
+Sample Prompt: 
+
+"Create a MySQL database to track our weekly sales data. Every Friday at 5 PM, read the new CSV I upload, update the database, and generate a trend report based on all historical data stored here." 
+
+### 3. Explore the World of Open-Source 
+
+﻿ 
+
+Deploy and host any open-source tool without wrestling with install docs or terminal commands. Want WordPress for a blog, Metabase for dashboards, Odoo for operations, or Plausible for analytics? Manus sets it up and gets it running. 
+
+Sample Prompt: 
+
+"I want to self-host Home Assistant. Install it, configure the basic setup, and give me the URL so I can log in and manage my smart home devices remotely." 
+
+### 4. Run Scheduled Scrapers 
+
+Tell Manus to scrape a competitor's site on a schedule and deliver a fresh report by the time you wake up. 
+
+Sample Prompt: 
+
+"Write a Python scraper that checks [Competitor Website] for pricing changes every morning at 4:00 AM. Save the results to a spreadsheet and highlight any price drops." 
+
+### 5. Use Powerful Developer Tools Without the Setup 
+
+Some of the most capable new AI tools are command-line tools —software you control by typing commands instead of clicking through an app. They are fast, flexible, and often more capable than their polished counterparts, but installing and configuring them yourself can be intimidating. Your Cloud Computer handles that for you. Manus installs the tool, configures the environment, and runs the commands on your behalf, so you get the power of professional-grade software without ever needing to touch a terminal. 
+
+Sample Prompt: 
+
+"Set up an open-source coding assistant on my Cloud Computer and use it to help me clean up the Python scripts I'll upload next. Walk me through the results in plain English." 
+
+## How to Access Your Cloud Computer 
+
+You don't have to decide when to use it. Manus will suggest and assign a Cloud Computer automatically whenever your task needs continuous uptime or a dedicated environment. 
+
+To set one up yourself: 
+
+1 . Go to Settings > My Computer . 
+
+2 . Click Create Cloud Computer . 
+
+3 . Pick a plan: Basic for simple Python scripts, Standard for active websites and APIs, or Advanced for team databases. 
+
+4 . Choose your location and storage. 
+
+Once it's running, you can monitor CPU, memory, and storage from the dashboard. 
+
+## Frequently Asked Questions 
+
+Q: How is the Cloud Computer different from the standard Manus sandbox? 
+
+A: The standard sandbox is temporary—it spins up for a task and disappears when the session ends. The Cloud Computer is persistent. It stays on 24/7, which is how it hosts bots, runs scheduled jobs, and keeps a searchable file system across tasks. 
+
+Q: When should I use Manus Desktop vs. Cloud Computer? 
+
+A: Use Manus Desktop when the task involves files or apps on your physical machine. Use the Cloud Computer when the task needs to run continuously in an isolated, always-on environment. 
+
+Q: Do I need to know how to code? 
+
+A: No. Describe your goal in plain English. Manus writes the code, configures the environment, and runs it. 
+
+Q: Is my local data safe? 
+
+A: Yes. The Cloud Computer is fully isolated from your personal machine and cannot access your local files. 
+
+Q: Can my team access my Cloud Computer? 
+
+A: Access is tightly controlled. Permissions are based on who sent the last message in a session, so historical files stay protected. 
+
+Q: What happens when I upgrade my plan? 
+
+A: The virtual machine restarts to apply the new resources. Any running projects pause briefly until it's back online. 
+
+Q: What happens if I stop paying? 
+
+A: The persistent sandbox closes and its working files are deleted. Any delivered outputs—reports, spreadsheets, and other final files—stay in your chat history. 
+
+Q: How do I access the Cloud Computer directly? 
+
+A: Via SSH from your local terminal, or through the web terminal in the Manus dashboard. 
+
+Q: What OS does it run? 
+
+A: Ubuntu—a free, open-source Linux distribution widely used on personal machines, servers, and in the cloud. 
+
+Q: Is there a graphical desktop interface? 
+
+A: Not currently. The Cloud Computer is command-line only, but that doesn't limit what Manus can build, deploy, or run on it. 
+
+Q: When a Cloud Computer is active, does Manus default to using it? 
+
+A: No. Every task starts in a temporary sandbox. Manus decides on a task-by-task basis whether to use the sandbox or the Cloud Computer based on what the task needs. 
+
+## The Future of Work is Always On 
+
+The Cloud Computer isn't just a new feature—it's a shift in how you work with AI. By removing the need for hardware, server configuration, and coding skills, Manus lets anyone build professional-grade, 24/7 automations. 
+
+Stop worrying about Python scripts and uptime. Available on web and mobile. Let your digital employee take the night shift. 
+
+### Download desktop & mobile app
+Access Manus anytime, anywhere.
+
+macOS Windows iOS Android 
+
+## Less structure,
+more intelligence.
+
+### Product
+Pricing Web app AI design AI slides AI image generator AI music generator Manus browser operator Wide Research Mail Manus Slack integration 
+
+### Resources
+Download Blog Docs Updates Help center Trust center API Team plan Startups Playbook Brand assets 
+
+### Community
+Events Fellows 
+
+### Compare
+VS ChatGPT VS Lovable VS Replit 
+
+### Download
+Mobile app Desktop app My Browser 
+
+### Team
+Team plan SSO API 
+
+### Company
+About us Careers For media Terms of service Privacy policy 
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+© 2026 Meta

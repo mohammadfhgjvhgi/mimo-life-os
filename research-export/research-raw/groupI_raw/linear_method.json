@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://news.ycombinator.com/item?id=44833834",
+    "name": "Linear sent me down a local-first rabbit hole",
+    "snippet": "You can sync as much, or as little as you want, any number of architectural choices along the way could impact perceived performance . cause noticeable latency.",
+    "host_name": "news.ycombinator.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://performance.dev/how-is-linear-so-fast-a-technical-breakdown",
+    "name": "How's Linear so fast? A technical breakdown",
+    "snippet": "Mutations apply locally first , then asynchronously push to the server, UI re-renders synchronously off the local , in-memory, update. local - first sync engine.  ...",
+    "host_name": "performance.dev",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://powersync.com/blog/developer-benefits-of-local-first",
+    "name": "Developer Benefits Of Local-First",
+    "snippet": "Aug 20, 2024 — The project management app Linear is a good example of where gains in speed and network resilience add up to significant time savings and ...",
+    "host_name": "powersync.com",
+    "rank": 2,
+    "date": "Aug 20, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://howworks.ai/blog/how-to-build-an-app-like-linear",
+    "name": "How to Build an App Like Linear: Architecture, Stack, and",
+    "snippet": "Feb 26, 2026 — Local-first patterns improve perceived speed but substantially increase sync complexity; choose based on your actual offline requirements.",
+    "host_name": "howworks.ai",
+    "rank": 3,
+    "date": "Feb 26, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://world.hey.com/zac.wood/our-journey-to-local-first-2ade26a5",
+    "name": "Our journey to local-first",
+    "snippet": "Jan 7, 2025 — This journey led us to the up and coming world of local - first sync engines. With a sync engine, the application's data is synced locally to the ...",
+    "host_name": "world.hey.com",
+    "rank": 4,
+    "date": "Jan 7, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://squads.com/blog/building-better-apps-with-local-first-principles",
+    "name": "Building Better Apps with Local-First Principles | by Squads",
+    "snippet": "May 12, 2024 — Explore how Local - First principles enhance app development with better data privacy, offline functionality, and user control, ...",
+    "host_name": "squads.com",
+    "rank": 5,
+    "date": "May 12, 2024",
+    "favicon": ""
+  }
+]

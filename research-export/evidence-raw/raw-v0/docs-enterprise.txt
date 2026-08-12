@@ -1,0 +1,455 @@
+- 
+- 
+- 
+- 
+- 
+- Enterprise | v0 Docs 
+- 
+- 
+- 
+- 
+- 
+- 
+
+- Docs 
+
+- API 
+
+Search… ⌘ K Ask AI Ask AI 
+Search… ⌘ K 
+Docs API 
+
+- Getting Started 
+
+- What is v0? 
+
+- Agentic features 
+
+- Sandbox 
+
+- Vercel Integration 
+
+- Quickstart 
+
+- FAQs 
+
+- Prompt 
+
+- Text Prompting 
+
+- Screenshots and Files 
+
+- Figma 
+
+- Iterate 
+
+- Code editing 
+
+- Terminal commands 
+
+- Design mode 
+
+- Design Systems 2.0 
+
+- Images, videos, and file uploads 
+
+- Versions 
+
+- Integrate 
+
+- AI models 
+
+- Databases 
+
+- Snowflake 
+
+- Shopify 
+
+- External APIs 
+
+- GitHub 
+
+- MCP Integrations 
+
+- Pre-installed Agents 
+
+- Slack 
+
+- Ship 
+
+- Deployments 
+
+- Custom domain 
+
+- Sharing 
+
+- Templates 
+
+- Manage 
+
+- Account 
+
+- Enterprise 
+
+- Instructions 
+
+- Folders 
+
+- Projects 
+
+- Pricing 
+
+- Usage & Activity 
+
+- Teams 
+
+- Security 
+
+- Guides 
+
+- Full-stack apps 
+
+- Prototyping 
+
+- PRD design 
+
+- 
+
+- Compare 
+
+Menu 
+
+# Enterprise
+Copy page Copy page 
+
+Learn how to manage v0 seats, access, and more in your Vercel Enterprise account.
+Copy for LLM View Markdown Ask AI about this page 
+
+## Managing seats and access 
+
+To manage v0 seats and grant access in your Vercel account, follow these steps.
+
+- Log in to your v0 account .
+
+- Select your team from the scope selector on the top-left corner.
+
+- Click on the scope selector again and select Manage Members . This navigates you to your Vercel team's members page.
+
+You can grant v0 access to team members by clicking the three dots to the right of their role and selecting Manage v0 role .
+
+### Assign or revoke access 
+
+- To assign access: Find the team member in the list and assign the desired v0 role.
+
+- To revoke access: Find the team member in the list and choose "No v0 access".
+
+### Choosing the right role 
+
+v0 has a role and access control system that is separate from your team roles in Vercel:
+
+- v0 Builder : v0 Creator access + can create deployments and manage environment variables on any Vercel project that's connected to v0.
+
+- v0 Creator : Can create chats + projects, add sources, and build in v0.
+
+- v0 Viewer : View-only access to collaborate on chats with other users.
+
+The v0 Builder role is team-wide : a Builder can create deployments and
+manage environment variables on every Vercel project in the team that
+is connected to v0, not only projects they were explicitly added to.
+Assign v0 Builder only to users who should be able to act on all v0-connected
+projects in the team.
+
+Note: Managing integrations requires the Integrations Manager permission, which is a separate team-level permission that can be selected separately when assigning members a v0 role. Members with the Vercel Member role inherently have this permission. To prevent integration access, assign the Viewer role on Vercel alongside the desired v0 role without Integration Manager selected.
+
+For Vercel team management:
+
+- Viewer : Assign the Viewer role with v0 access for most users.
+
+- Owner : Use the Owner role only for admins who need full control.
+
+Read the Vercel docs to learn how to manage user permissions at a more granular level
+
+## Activating your account 
+
+To use v0 with your Enterprise plan:
+
+Make sure you're logged into the correct Vercel account before accepting the invite.
+
+- Accept the invite.
+
+- Switch to your Enterprise team on the v0 navigation bar.
+
+## Configuring single sign-on (SSO) 
+
+Once v0 is enabled for your team, admins can manage access using Directory Sync and Access Groups to provision v0 roles from your identity provider (IdP).
+
+- Create an Access Group with a v0 role from your from your team's Access Group settings .
+
+- Map a Directory Sync group (e.g. from Okta SCIM) to the Access Group you created.
+
+- Everyone in the synced group will automatically receive the v0 access configured in that Access Group.
+
+### Configure Team Access and v0 roles in one Access Group 
+
+You can assign Team roles , Team permissions , Project roles , and v0 roles in the same Access Group so that a single IdP group grants both team and v0 permissions. Team access defined within an Access Group applies when the Access Group is managed via Directory Sync .
+
+- Create an Access Group from your from your team's Access Group settings . Specify the required Team Access and v0 Roles .
+
+- Map your IdP group to this Access Group via Directory Sync. Members mapped to the group default to Contributor unless another mapping assigns a different Team role.
+
+- All members in the synced group will automatically receive the v0 access and team role configured in the Access Group.
+
+Learn more about Access Groups in Vercel
+
+Learn more about v0's enterprise security features
+
+## Privacy settings 
+
+### Chats 
+
+Members can set chats to Private , Team , Unlisted , or Public .
+
+Owners on v0 Enterprise teams can disable Unlisted and Public sharing options using the Restrict Chat Sharing from workspace settings .
+
+- Private : Only the chat owner can view the chat.
+
+- Team : Makes the chat available to the entire team, with an option to specify this as view or edit access.
+
+- Unlisted : Anyone with the link can access the chat. It will not be indexed by search engines.
+
+- Public : Anyone can view the chat. It may be indexed by search engines and appear in public galleries.
+
+Members with the Vercel Owner team role can view, edit, and delete every chat owned by the team, including teammate Private chats, when they navigate to the chat directly. This is administrative access and is not surfaced in listings — Owners only see teammate chats they open by URL. See Team Owner access for details.
+
+Team members can also be added to the chat individually. This can be useful in tandem with the Private setting to configure chats that only a subset of team members can access.
+
+### Folders 
+
+Folders can be used to organize chats without requiring them to share the same Vercel project. Folder visibility can also be set to Private or shared with the team .
+
+Learn more about organizing v0 chats with Folders
+
+Previous Account Next Instructions 
+
+On this page
+Managing seats and access Assign or revoke access Choosing the right role Activating your account Configuring single sign-on (SSO) Configure Team Access and v0 roles in one Access Group Privacy settings Chats Folders 
+
+Scroll to top Give feedback 
+
+## Product
+
+- Home 
+
+- Enterprise 
+
+- Pricing 
+
+- v0 for Students 
+
+## Company
+
+- Terms 
+
+- AI Policy 
+
+- Privacy 
+
+- Cookies 
+
+## Resources
+
+- FAQs 
+
+- Docs 
+
+- Vercel Community 
+
+- Vercel 
+
+## Social
+
+- Twitter 
+
+- LinkedIn 
+
+## Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Workflows 
+
+- Connect New 
+
+- Passport New 
+
+- eve New 
+
+## Core Platform
+
+- CI/CD 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+## Security
+
+- Platform Security 
+
+- WAF 
+
+- Bot Management 
+
+- Bot ID 
+
+## Tools
+
+- Vercel Drop New 
+
+- Vercel Agent 
+
+- Vercel Plugin New 
+
+- Agent Skills 
+
+- Next.js 
+
+- Domains 
+
+- v0 
+
+## Frameworks
+
+- eve New 
+
+- Nuxt 
+
+- SvelteKit 
+
+- Nitro 
+
+- Turborepo 
+
+- Tanstack Start 
+
+- FastAPI 
+
+- xmcp 
+
+- All frameworks 
+
+## SDKs
+
+- Vercel SDK 
+
+- Workflow SDK New 
+
+- Flags SDK 
+
+- Chat SDK New 
+
+- Queues SDK New 
+
+- Streamdown 
+
+## Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+- Platform Engineers 
+
+- Design Engineers 
+
+## Learn
+
+- Docs 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+- Academy 
+
+- Articles 
+
+- Community 
+
+## Explore
+
+- Customers 
+
+- Marketplace 
+
+- Templates 
+
+- Partner Finder 
+
+- Vercel + AWS 
+
+## Company
+
+- About 
+
+- Careers 
+
+- Press 
+
+- Events 
+
+- Startups 
+
+- Shipped on Vercel 
+
+- Open Source Program 
+
+- Enterprise 
+
+- Pricing 
+
+- Help 
+
+## Legal & Trust
+
+- Privacy Policy 
+
+- Terms of Service 
+
+- Cookie Policy 
+
+- DPA 
+
+- Acceptable Use Policy 
+
+- Legal 
+
+- Trust Center 
+
+- Status 
+
+## Social
+
+- GitHub 
+
+- X 
+
+- LinkedIn 
+
+- YouTube 
+
+- Instagram

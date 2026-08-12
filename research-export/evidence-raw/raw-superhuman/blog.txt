@@ -1,0 +1,235 @@
+
+
+Superhuman Blog
+
+[https://superhuman.com] 
+
+Product
+
+[https://superhuman.com/products/go-ai-assistant] Superhuman Go
+
+[https://superhuman.com/products/grammarly] Grammarly
+
+[https://superhuman.com/docs] Superhuman Docs
+
+[https://superhuman.com/products/mail] Superhuman Mail
+
+[https://superhuman.com/store/agents] Agent Store
+
+[https://superhuman.com/solutions/enterprise] Enterprise
+
+[https://superhuman.com/edu] Education
+
+[https://superhuman.com/plans] Pricing
+
+[https://superhuman.com/contact-sales] Contact sales
+[https://superhuman.com/auth/signin] Log in
+[https://superhuman.com/auth/signup?screen_hint=signup] Sign up
+
+Search Superhuman Blog
+
+Discover news and trends from Superhuman
+
+Home
+
+[/] Blog home
+
+[/tag/news/] News
+
+[/tag/productivity/] Productivity
+
+[/tag/leadership/] Leadership
+
+[/tag/sales/] Sales
+
+[/where-does-the-work-actually-live/] 
+
+In a World Full of AI Tools, Where Does the Work Actually Live?
+
+AI in Practice
+
+Contributor:
+Superhuman Team
+
+[/advice-from-superhumans-cfo-ciso-and-vp-of-product/] 
+
+AI Blind Spots: Advice From Superhuman’s VP of Product, CISO, and CFO
+
+Most enterprise AI conversations happen about two steps removed from reality: in board decks and vendor pitches, where the story is always promising. Closer in—inside the actual workflows, budgets, and security decisions—the picture is more complicated: Spend is rising, adoption is uneven, and ROI is genuinely hard to
+
+[/why-people-dont-trust-ai/] 
+
+Why Most People Still Don’t Trust AI and What Companies Can Do Differently
+
+by Heather Breslow, Senior Director of Research at Superhuman
+
+There’s a well-documented pattern in psychology: The more we encounter something, the more we tend to like it. Songs grow on you. Faces you recognize feel more trustworthy. Familiar brands feel safer.
+
+When Pew Research identified familiarity as the
+
+[/ai-views-a-vibe-coding-tool-for-teamwork/] 
+
+The Making of Superhuman Docs: How We Designed AI Views, a Vibe Coding Tool for Teamwork
+
+by Jeremy Olson, Product Management Director
+
+I’ve been building productivity software for over 20 years, and creating AI views for the new Superhuman Docs has been the most fun I've ever had. The best shorthand I have for it is “a vibe coding tool for teamwork.”
+
+It
+
+[/how-we-rebuilt-the-ai-in-superhuman-docs/] 
+
+The Making of Superhuman Docs: How We Rebuilt the AI in Superhuman Docs From the Ground Up
+
+by Bharat Batra, Senior Product Manager
+
+The evolution from Coda to Superhuman Docs gave us the opportunity to completely reimagine Docs’ native AI from the ground up. I think about AI the way I think about a foundation. If it’s shaky, it doesn’t matter how great what’s
+
+[/superhuman-for-education-in-australia/] 
+
+Superhuman in Australia: What It Really Takes to Transform Higher Education With AI
+
+I've had a version of the AI-in-higher-ed conversation in a lot of different rooms. Each conversation tends to follow familiar beats—the anxiety, the cautious optimism, the question underneath every question: are we doing this right?
+
+When I had the opportunity to travel with the
+
+[/databases-the-foundation-for-your-data/] 
+
+The Making of Superhuman Docs: Building the Foundation for Your Most Important Data
+
+As we evolved Coda into Superhuman Docs, we knew that the data layer was one of the first things we wanted to transform and one of the most ambitious. Coda makers had spent years pushing tables and databases further than we could have ever anticipated—and in doing so, showed
+
+Your all-in-one AI toolkit
+
+Work with the suite of apps and agents that help you focus, write with confidence, collaborate more effectively, and save hours every week.
+
+[https://superhuman.com] Get Superhuman
+
+[/auto-drafts-2-0/] 
+
+Introducing: Auto Drafts 2.0 ✨
+
+The hardest part of writing is starting. That's why it's so much faster to edit than face a blank page.
+
+With Auto Drafts, you skip the cold start.
+
+We started with Auto Drafts for follow-up emails, so you could follow up on time, every time.
+
+[/introducing-superhuman-docs/] 
+
+Coda is now Superhuman Docs — the best place for teams and AI to work together
+
+TL;DR
+
+* Coda is now Superhuman Docs: All the same features you rely on, now with a new name and visual identity that bring us closer to a unified suite with Mail, Go, Grammarly, and more.
+* A new AI assistant, rebuilt from the ground up: Docs AI goes beyond a
+
+[/connect-docs-to-claude-and-chatgpt/] 
+
+New: Connect Your Docs to Claude and ChatGPT
+
+We’ve all been there. You open Claude or ChatGPT, start typing a question, and then realize: the AI has no idea what you’re actually working on. So you copy a meeting note. Paste a project brief. Summarize a Slack thread. By the time you’ve given the AI
+
+[/docs-new-visual-identity/] 
+
+The Making of Superhuman Docs: How We Brought a New Visual Identity to Docs
+
+Today, we announced Coda is becoming Superhuman Docs, the best place for AI and teams to work together. This is more than a name change; it’s the beginning of an entirely new chapter. Coda had spent a decade building a loyal, passionate user base, and bringing it into the
+
+[/superhuman-launches-superhuman-docs/] 
+
+Superhuman Launches Superhuman Docs, a Collaboration Surface for Teams to Write, Track, and Build With AI
+
+* New capabilities move AI beyond the chat window and into the documents teams rely on, enabling them to build with AI together and create custom tools connected to their data
+* Superhuman Databases launches in beta as a dedicated home for enterprise-scale data management
+
+SAN FRANCISCO — July 8, 2026 — Superhuman,
+
+[/what-3-superhuman-marketing-leaders-really-think-about-ai/] 
+
+What 3 Superhuman Marketing Leaders Really Think About AI
+
+When it comes to the promise of AI productivity, it's easy to feel two things at once: excitement about these tools’ potential…and a sense that we’re waiting for the other shoe to drop.
+
+With AI's help, people can certainly do more and create more.
+
+Load More
+
+AI that works everywhere you work
+
+Superhuman supports every aspect of your day and helps you move faster, think more deeply, and do the work only you can do.
+
+Sign up
+
+We care about your data in our [https://www.grammarly.com/privacy-policy] privacy policy.
+
+[https://superhuman.com] 
+
+Builders of Superhuman Platform apps
+
+Products
+
+[https://superhuman.com/products/go-ai-assistant] Superhuman Go
+
+[https://superhuman.com/products/grammarly] Grammarly
+
+[https://superhuman.com/docs] Superhuman Docs
+
+[https://superhuman.com/products/mail] Superhuman Mail
+
+[https://superhuman.com/store/agents] Agent Store
+
+Company
+
+[https://superhuman.com/contact] Contact Us
+
+[https://superhuman.com/company/about] About
+
+[https://superhuman.com/company/values] Mission & Values
+
+[https://superhuman.com/company/careers] Careers
+
+[https://superhuman.com/support] Help Center
+
+[https://superhuman.com/partners] Partners
+
+[https://superhuman.com/superhuman-platform] Superhuman Platform
+
+Legal
+
+[https://superhuman.com/legal/terms] Terms
+
+[https://www.grammarly.com/privacy-policy] Privacy Policy 
+
+[https://superhuman.com/legal/trust] Trust
+
+[https://superhuman.com/legal/terms/customer-business-agreement] Customer Business Agreement
+
+[https://superhuman.com/legal/notices] Legal Notices
+
+Cookie Preferences
+
+Connect
+
+[https://www.linkedin.com/company/superhumanhq] 
+LinkedIn
+
+[https://x.com/Superhuman] 
+X
+
+[https://www.tiktok.com/@superhumanhq] 
+TikTok
+
+[https://www.instagram.com/superhuman__hq/] 
+Instagram
+
+[https://www.threads.com/@superhuman__hq] 
+Threads
+
+[https://www.facebook.com/SuperhumanCo] 
+Facebook
+
+You're in! 💜
+
+We'll send you regular dispatches from Superhuman Mail — with exclusive content and productivity best practice.
+

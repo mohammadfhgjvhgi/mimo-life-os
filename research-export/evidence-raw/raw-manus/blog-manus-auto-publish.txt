@@ -1,0 +1,148 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Introducing Auto-Publish: Build Once, Ship Continuously 
+- 
+- 
+- 
+- 
+
+Features
+Solutions
+Resources
+Events
+Team
+Pricing
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+Get started 
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+Manus is now part of Meta — bringing AI to businesses worldwide
+
+Product · Monday, July 13 
+
+# Introducing Auto-Publish: Build Once, Ship Continuously
+
+## Stop publishing manually — your site updates the moment it is ready 
+
+Building a website with Manus is fast. You describe what you want, Manus writes the code, and a working version appears in seconds. But getting that version onto your live URL has always required a manual step: open the publish menu, confirm your settings, click Publish. Across an afternoon of iteration — fifteen small tweaks, fifteen manual publishes — that step accumulates into the thing that actually slows you down. 
+
+With auto-Publish, a single toggle inside the publish popover tells Manus: every time a build succeeds, deploy it. No confirmation needed for your live site stays in sync with the latest version you accepted, automatically. 
+
+﻿ 
+
+## Every successful build goes live instantly 
+
+When you enable the toggle, Manus treats every successful build as a deployment event. The moment your site finishes building, it goes live at your public URL. If you are iterating quickly — adjusting copy, swapping images, tuning layouts — each change lands on your domain as soon as it is ready. You stay in the conversation. The site stays current. 
+
+The toggle is off by default. This is intentional. Not every iteration is meant for the public. You might be experimenting with a layout you are not sure about, or testing a color scheme before committing. Auto-Publish is designed for the moments when you know the direction and want to move fast, when the distance between "looks good" and "it's live" should be zero. 
+
+You can turn it off at any time from the same publish popover. Nothing changes about your existing workflow unless you opt in. 
+
+## You know the direction — now you just need it shipped 
+
+Picture this. You are building a portfolio site for a freelance photography business. The first session gets the structure right: a grid gallery, an about page, a contact form. You publish it manually, share the link with the photographer, and get feedback overnight. 
+
+The next morning, you sit down with a list: swap the header font, add a client testimonials section, compress the gallery images, update the footer with social links, and fix the mobile nav breakpoint. You know exactly what you want. You are not exploring — you are finishing. 
+
+This is where you toggle Auto-Publish on. Each change Manus completes goes live immediately. The photographer can refresh the page between your messages and watch the site evolve in real time. By the time you finish your coffee, the site is done and live, without a single trip to the publish menu. 
+
+Auto-Publish is for sessions where you have already decided to ship. It removes the ceremony so you can focus on the work. 
+
+## One toggle, inside the publish popover 
+
+1 . Open your WebDev project and click the Publish button in the top-right corner. 
+
+2 . In the publish popover, scroll to the bottom. 
+
+3 . Toggle Auto publish when it is ready to on. 
+
+4 . Continue building. Every successful build will now deploy to your public URL automatically. 
+
+To stop auto-publishing, open the same popover and toggle it off. Your next build will wait for manual confirmation before going live. 
+
+## Go further: queue your changes and walk away 
+
+If you already know the full list of changes you want, you can queue multiple messages while Manus is still working on the current one. Combined with Auto-Publish, this means you can drop your entire to-do list into the chat, close your laptop, and come back to a finished, live site. Manus processes each request in order, builds the new version, and deploys it — all without you being present. 
+
+## Availability 
+
+Auto-Publish is available to all users on web, iOS, and Android starting today. 
+
+## Common Questions 
+
+Q: Is Auto-Publish on by default? A: No. The toggle is off by default. You opt in when you are ready to ship continuously. 
+
+Q: What if I share my URL with a client — will they see half-finished work? A: Only completed, successful builds are published. If a build fails or is still in progress, your live site remains on the last stable version. Your client always sees finished work. 
+
+Q: Can I cancel a publish that is already in progress? A: Yes. The interface shows a cancel option during deployment if you need to stop it. 
+
+Q: Does this work on mobile? A: Yes. The Auto-Publish toggle is available in the publish popover on both iOS and Android. 
+
+﻿ 
+
+We built Manus to handle complete work — not just write code, but deliver finished products. Auto-Publish removes the last manual step between creation and delivery: the moment you accept a change, it reaches your audience. 
+
+### Download desktop & mobile app
+Access Manus anytime, anywhere.
+
+macOS Windows iOS Android 
+
+## Less structure,
+more intelligence.
+
+### Product
+Pricing Web app AI design AI slides AI image generator AI music generator Manus browser operator Wide Research Mail Manus Slack integration 
+
+### Resources
+Download Blog Docs Updates Help center Trust center API Team plan Startups Playbook Brand assets 
+
+### Community
+Events Fellows 
+
+### Compare
+VS ChatGPT VS Lovable VS Replit 
+
+### Download
+Mobile app Desktop app My Browser 
+
+### Team
+Team plan SSO API 
+
+### Company
+About us Careers For media Terms of service Privacy policy 
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+© 2026 Meta

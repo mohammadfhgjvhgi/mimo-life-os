@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://docs.cloud.google.com/agent-registry/json-schemas",
+    "name": "JSON schemas | Agent Registry",
+    "snippet": "Jul 27, 2026 — When registering an A2A -compliant agent, your agent - card . json payload must adhere to the official Agent2Agent ( A2A ) specification . The maximum ... Read more",
+    "host_name": "docs.cloud.google.com",
+    "rank": 0,
+    "date": "Jul 27, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://gist.github.com/SecureAgentTools/0815a2de9cc31c71468afd3d2eef260a",
+    "name": "Agent Card v1.0 Schema Specification - Gist - GitHub",
+    "snippet": "The Agent Card is a JSON document that serves as the passport for autonomous agents in the AgentVault ecosystem. It provides essential metadata about an agent, ...",
+    "host_name": "gist.github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://agent2agent.info/docs/concepts/agentcard",
+    "name": "AgentCard - Agent2Agent Protocol",
+    "snippet": "The AgentCard is a JSON file describing an Agent's capabilities , acting as the Agent's “business card.” It enables clients (or other Agents) to discover and ... Read more",
+    "host_name": "agent2agent.info",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://aigrowthagent.co/articles/how-agent-cards-work",
+    "name": "How Agent Cards Work in the A2A Protocol",
+    "snippet": "An Agent Card is a JSON document published at a well-known URL that describes an autonomous agent's identity, capabilities, authentication requirements, and ... Read more",
+    "host_name": "aigrowthagent.co",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/a2aproject/A2A/blob/main/docs/specification.md",
+    "name": "A2A/docs/specification.md at main · a2aproject/A2A",
+    "snippet": "Nov 9, 2025 — Agent Card : A JSON metadata document published by an A2A Server, describing its identity, capabilities, skills, service endpoint, and ... Read more",
+    "host_name": "github.com",
+    "rank": 4,
+    "date": "Nov 9, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.capisc.io/reference/agent-card-schema",
+    "name": "Agent Card Schema Reference",
+    "snippet": "Dec 2, 2025 — The Agent Card is a JSON document that describes an A2A-compliant agent . This reference covers the complete JSON Schema specification. Read more",
+    "host_name": "docs.capisc.io",
+    "rank": 5,
+    "date": "Dec 2, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://tyk.io/learning-center/a2a-protocol-architecture-and-technical-specification",
+    "name": "A2A protocol: Architecture and technical specification",
+    "snippet": "Jun 4, 2026 — An Agent Card is a public JSON document served at the well-known URI /.well-known/ agent - card . json (per RFC 8615). It's an agent's technical ... Read more",
+    "host_name": "tyk.io",
+    "rank": 6,
+    "date": "Jun 4, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=4BOGuBU011E",
+    "name": "A2A Protocol & Agent Cards Explained | JSON Schema +",
+    "snippet": "What the A2A protocol How Agent Cards work and what they contain A detailed walkthrough of the Agent Card JSON schema",
+    "host_name": "www.youtube.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@saeedhajebi/a2a-protocol-an-in-depth-guide-78387f992f59",
+    "name": "A2A Protocol: An In-Depth Guide",
+    "snippet": "The Agent Card is a public metadata document (typically JSON ) describing a remote agent's identity, capabilities, skills, endpoint URL, and ... Read more",
+    "host_name": "medium.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  }
+]

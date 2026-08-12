@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.youtube.com/watch?v=ce2PVHyuRtA",
+    "name": "How To Add AI To Obsidian (Free Private Local) Smart",
+    "snippet": "I'm learning and talking about how you can integrate AI within Obsidian to augment your personal knowledge management system or your second brain.",
+    "host_name": "www.youtube.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://effortlessacademic.com/adding-ai-to-your-obsidian-notes-with-smartconnections-and-copilot",
+    "name": "Adding AI to your Obsidian Notes with SmartConnections",
+    "snippet": "Dec 17, 2025 — The two AI -powered plugins : Smart Connections and CoPilot greatly enhance the Obsidian experience, making it easier to find, organize, and ...",
+    "host_name": "effortlessacademic.com",
+    "rank": 1,
+    "date": "Dec 17, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.obsidian.md/t/ai-assistant-or-master/98235",
+    "name": "AI, Assistant or Master? - Plugins ideas",
+    "snippet": "Mar 14, 2025 — In terms of operation, various AI tools essentially embed AI features - from Copilot's dialog boxes to Smart Composer's automatic modifications ...",
+    "host_name": "forum.obsidian.md",
+    "rank": 2,
+    "date": "Mar 14, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://codeculture.store/blogs/developer-culture/obsidian-ai-plugin-comparison-2025?srsltid=AfmBOoo_WU8v7Q-Z1e4YMcyTK5q546MPG3bvKZBm2IGi35k4ecKA-K-N",
+    "name": "Obsidian + AI in 2025: Smart Connections vs. Copilot",
+    "snippet": "May 30, 2026 — The Copilot plugin sends your vault to OpenAI for RAG-based chat. The Obsidian Copilot plugin is a community-built plugin for Obsidian , It uses ...",
+    "host_name": "codeculture.store",
+    "rank": 3,
+    "date": "May 30, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ObsidianMD/comments/1ncx3lg/can_copilot_read_bases",
+    "name": "Can copilot read bases? : r/ObsidianMD",
+    "snippet": "I was hoping to select my files then have copilot go through them. Do you there is another to go the AI to only go certain files instead having ...",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ObsidianMD/comments/1l4sx07/first_look_at_the_obsidian_bases_core_plugin_full",
+    "name": "First Look At The Obsidian Bases Core Plugin Full Overview +",
+    "snippet": "Bases helps you effortlessly organize your notes by turning them into a database (without needing to understand syntax/code like with the ...",
+    "host_name": "www.reddit.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/obsidian-observer/obsidians-new-bases-feature-is-the-biggest-update-since-properties-2aad08a102eb",
+    "name": "Obsidian's New Bases Feature is The Biggest Update",
+    "snippet": "Obsidian's New Bases Feature is The Biggest Update Since Properties ; Build a Second Brain in 15 Minutes: Just Markdown, Git, and an AI Agent ...",
+    "host_name": "medium.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/logancyang/obsidian-copilot/discussions/1368",
+    "name": "Failed to initialize copilot database. some features may be",
+    "snippet": "I am having a problem with Copilot , where it cannot index notes for consultation. The AI chat plugin works well, but the note reading function gives me the ...",
+    "host_name": "github.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

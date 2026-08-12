@@ -1,0 +1,856 @@
+TITLE: Design and Development Videos - Apple Developer
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+Design and Development Videos - Apple Developer 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+View in English 
+
+- 
+
+- 
+
+Apple Developer 
+
+- 
+
+- 
+
+Get Started 
+
+- 
+
+Explore Get Started
+
+- Overview 
+
+- Learn 
+
+- Apple Developer Program 
+
+Stay Updated
+
+- Latest News 
+
+- Hello Developer 
+
+- 
+
+Platforms 
+
+- 
+
+Explore Platforms
+
+- Apple Platforms 
+
+- iOS 
+
+- iPadOS 
+
+- macOS 
+
+- tvOS 
+
+- visionOS 
+
+- watchOS 
+
+- App Store 
+
+Featured
+
+- Design 
+
+- Distribution 
+
+- Games 
+
+- Accessories 
+
+- Web 
+
+- Home 
+
+- CarPlay 
+
+- 
+
+Technologies 
+
+- 
+
+Explore Technologies
+
+- Overview 
+
+- Xcode 
+
+- Swift 
+
+- SwiftUI 
+
+Featured
+
+- Accessibility 
+
+- AI & Machine Learning 
+
+- App Intents 
+
+- Apple Intelligence 
+
+- Games 
+
+- Security 
+
+- Xcode Cloud 
+
+- 
+
+Community 
+
+- 
+
+Explore Community
+
+- Overview 
+
+- Meet with Apple events 
+
+- Community-driven events 
+
+- Developer Forums 
+
+- Open Source 
+
+Featured
+
+- WWDC 
+
+- Swift Student Challenge 
+
+- Developer Stories 
+
+- App Store Awards 
+
+- Apple Design Awards 
+
+- Apple Developer Centers 
+
+- 
+
+Documentation 
+
+- 
+
+Explore Documentation
+
+- Documentation Library 
+
+- Technology Overviews 
+
+- Sample Code 
+
+- Human Interface Guidelines 
+
+- Videos 
+
+Release Notes
+
+- Featured Updates 
+
+- iOS 
+
+- iPadOS 
+
+- macOS 
+
+- watchOS 
+
+- visionOS 
+
+- tvOS 
+
+- Xcode 
+
+- 
+
+Downloads 
+
+- 
+
+Explore Downloads
+
+- All Downloads 
+
+- Operating Systems 
+
+- Applications 
+
+- Design Resources 
+
+Featured
+
+- Xcode 
+
+- TestFlight 
+
+- Fonts 
+
+- SF Symbols 
+
+- Icon Composer 
+
+- 
+
+Support 
+
+- 
+
+Explore Support
+
+- Overview 
+
+- Help Guides 
+
+- Developer Forums 
+
+- Feedback Assistant 
+
+- Contact Us 
+
+Featured
+
+- Account Help 
+
+- App Review Guidelines 
+
+- App Store Connect Help 
+
+- Upcoming Requirements 
+
+- Agreements and Guidelines 
+
+- System Status 
+
+- 
+
+Quick Links
+
+- 
+
+Events 
+
+- 
+
+News 
+
+- 
+
+Forums 
+
+- 
+
+Sample Code 
+
+- 
+
+Videos 
+
+- 
+
+  
+
+- 
+
+Videos 
+
+Open Menu 
+
+Close Menu 
+
+- 
+Collections 
+
+- 
+All Videos 
+
+- 
+About 
+
+WWDC26 Featured Sessions 
+
+WWDC26 Featured Sessions
+
+- 
+
+13:26 
+
+What’s new in Apple In-App Purchase
+
+WWDC26 
+
+- 
+
+15:58 
+
+Design immersive environments for visionOS apps and the spatial web
+
+WWDC26 
+
+- 
+
+24:20 
+
+Code-along: Make your app available to Siri
+
+WWDC26 
+
+- 
+
+15:21 
+
+Code-along: Build powerful drag and drop in SwiftUI
+
+WWDC26 
+
+- 
+
+16:44 
+
+Iterate your spatial scenes faster with Reality Composer Pro 3
+
+WWDC26 
+
+- 
+
+25:46 
+
+Meet the Evaluations framework
+
+WWDC26 
+
+- 
+
+14:11 
+
+Create high-quality images using Image Playground
+
+WWDC26 
+
+- 
+
+28:00 
+
+Speedrun your game port with agentic coding
+
+WWDC26 
+
+WWDC26 Special Events 
+
+WWDC26 Special Events
+
+- 
+
+87:52 
+
+Inside Apple Intelligence and Xcode: Special Presentation
+
+WWDC26 
+
+- 
+
+1:31 
+
+Announcing Apple’s next big step for Siri and iPhone
+
+WWDC26 
+
+- 
+
+4:32 
+
+WWDC26 Platforms State of the Union Recap
+
+WWDC26 
+
+- 
+
+76:14 
+
+Keynote
+
+WWDC26 
+
+- 
+
+76:14 
+
+Keynote (ASL)
+
+WWDC26 
+
+- 
+
+61:38 
+
+Platforms State of the Union
+
+WWDC26 
+
+- 
+
+61:38 
+
+Platforms State of the Union (ASL)
+
+WWDC26 
+
+Explore WWDC26 
+
+Explore WWDC26
+
+- 
+
+32:45 
+
+What’s new in Swift
+
+WWDC26 
+
+- 
+
+21:13 
+
+What’s new in the Foundation Models framework
+
+WWDC26 
+
+- 
+
+21:43 
+
+Build agentic app experiences with the Foundation Models framework
+
+WWDC26 
+
+- 
+
+24:03 
+
+Xcode, agents, and you
+
+WWDC26 
+
+- 
+
+18:11 
+
+Create UI prototypes using agents in Xcode
+
+WWDC26 
+
+- 
+
+12:53 
+
+What’s new in SwiftData
+
+WWDC26 
+
+- 
+
+23:51 
+
+Explore advances in RealityKit
+
+WWDC26 
+
+- 
+
+32:35 
+
+Build next-generation experiences with visionOS 27
+
+WWDC26 
+
+- 
+
+27:23 
+
+Build intelligent Siri experiences with App Schemas
+
+WWDC26 
+
+- 
+
+24:08 
+
+Explore advanced App Intents features for Siri and Apple Intelligence
+
+WWDC26 
+
+- 
+
+13:26 
+
+What’s new in Apple In-App Purchase
+
+WWDC26 
+
+- 
+
+27:54 
+
+Bringing Cyberpunk 2077 to Mac
+
+WWDC26 
+
+- 
+
+13:37 
+
+Run local agentic AI on the Mac using MLX
+
+WWDC26 
+
+- 
+
+21:25 
+
+Migrate to Swift Testing
+
+WWDC26 
+
+- 
+
+26:43 
+
+Profile, fix, and verify: Improve app responsiveness with Instruments
+
+WWDC26 
+
+- 
+
+17:16 
+
+Principles of great design
+
+WWDC26 
+
+- 
+
+16:32 
+
+What’s new in WebKit for Safari 27
+
+WWDC26 
+
+- 
+
+18:01 
+
+Modernize your AppKit app
+
+WWDC26 
+
+- 
+
+17:45 
+
+Best practices for integrating visual intelligence in your app
+
+WWDC26 
+
+- 
+
+24:23 
+
+Make your game great with touch
+
+WWDC26 
+
+WWDC Collections 
+
+WWDC Collections
+
+WWDC26 
+
+WWDC25 
+
+WWDC24 
+
+WWDC23 
+
+WWDC22 
+
+WWDC21 
+
+WWDC20 
+
+Topics 
+
+Topics
+
+Accessibility & Inclusion
+
+AI & Machine Learning
+
+App Services
+
+App Store, Distribution & Marketing
+
+Audio & Video
+
+Business & Education
+
+Design
+
+Developer Tools
+
+Essentials
+
+Graphics & Games
+
+Health & Fitness
+
+Maps & Location
+
+Photos & Camera
+
+Privacy & Security
+
+Safari & Web
+
+Spatial Computing
+
+Swift
+
+SwiftUI & UI Frameworks
+
+System Services
+
+- 
+
+Developer Footer
+
+- Videos
+
+Platforms
+
+Open Menu 
+Close Menu 
+
+- iOS 
+
+- iPadOS 
+
+- macOS 
+
+- tvOS 
+
+- visionOS 
+
+- watchOS 
+
+- App Store 
+
+Tools
+
+Open Menu 
+Close Menu 
+
+- Swift 
+
+- SwiftUI 
+
+- Swift Playground 
+
+- TestFlight 
+
+- Xcode 
+
+- Xcode Cloud 
+
+- Icon Composer 
+
+- SF Symbols 
+
+Technologies
+
+Open Menu 
+Close Menu 
+
+- Accessibility 
+
+- Accessories 
+
+- AI & Machine Learning 
+
+- Apple Intelligence 
+
+- Audio & Video 
+
+- Augmented Reality 
+
+- Business 
+
+- Design 
+
+- Distribution 
+
+- Education 
+
+- Games 
+
+- Health & Fitness 
+
+- In-App Purchase 
+
+- Localization 
+
+- Maps & Location 
+
+- Security 
+
+- Safari & Web 
+
+Resources
+
+Open Menu 
+Close Menu 
+
+- Documentation 
+
+- Downloads 
+
+- Sample Code 
+
+- Videos 
+
+- Documentation Archive 
+
+Support
+
+Open Menu 
+Close Menu 
+
+- Help Guides & Articles 
+
+- Contact Us 
+
+- Forums 
+
+- Feedback & Bug Reporting 
+
+- System Status 
+
+Account
+
+Open Menu 
+Close Menu 
+
+- Apple Developer 
+
+- App Store Connect 
+
+- Certificates, IDs, & Profiles 
+
+- Feedback Assistant 
+
+Programs
+
+Open Menu 
+Close Menu 
+
+- Apple Developer Program 
+
+- Apple Developer Enterprise Program 
+
+- App Store Small Business Program 
+
+- MFi Program 
+
+- Mini Apps Partner Program 
+
+- News Partner Program 
+
+- Video Partner Program 
+
+- Security Bounty Program 
+
+- Security Research Device Program 
+
+Events
+
+Open Menu 
+Close Menu 
+
+- Meet with Apple 
+
+- Apple Developer Centers 
+
+- App Store Awards 
+
+- Apple Design Awards 
+
+- Apple Developer Academies 
+
+- WWDC 
+
+Read the latest news .
+Get the Apple Developer app .
+
+Light
+
+Dark
+
+Auto
+
+- 
+
+Copyright © 2026 Apple Inc. All rights reserved.
+
+Terms of Use 
+Privacy Policy 
+Agreements and Guidelines

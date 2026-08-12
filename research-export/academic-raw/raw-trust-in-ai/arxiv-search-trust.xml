@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/1lDLZcQV06+kTID+IiIPVaTqv0o</id>
+  <title>arXiv Query: search_query=all:"trust in AI" AND cat:cs.HC&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-08-07T14:57:20Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22trust+in+AI%22+AND+cat:cs.HC&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>146</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.24601v1</id>
+    <title>Evaluating the Impact of Explainable AI on Trust in AI-Assisted Code Review</title>
+    <updated>2026-07-27T16:04:24Z</updated>
+    <link href="https://arxiv.org/abs/2607.24601v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.24601v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Background: Large language models (LLMs) are increasingly used to automate code review, but the reasoning behind their decisions remains hard to understand. Developers struggle to assess the validity of LLM-generated reviews, making it difficult to gauge how much trust to place in them. The role of Explainable AI (XAI) in code review and its impact on trust remain underexplored.
+  Objective: We study the influence of XAI on developer trust in AI-assisted code reviews.
+  Method: We conducted a within-subjects user study with 34 participants, comparing three LLM-based code review systems with varying levels of XAI support: Condition A (detailed explanation and review feedback), Condition B (review feedback only), and Condition C (no explanations). Participants reviewed real-world code change requests alongside the AI-generated reviews. We measured trust perceptions, agreement with the AI recommendation, the reasoning given for each decision, and the time taken.
+  Results: The level of explanation significantly influences both trust and agreement with AI recommendations, but in different ways. Full explanations (A) yield the highest perceived trust (M = 3.99/5) but not the highest agreement, whereas moderate explanations (B) achieve the highest agreement (89.22%). This could suggest that more explanation prompts developers to question AI recommendations more frequently. No explanations (C) results in the lowest trust and agreement. Explanation level did not significantly affect review time. The most commonly cited reasons for decisions were code readability and correctness.
+  Conclusion: Incorporating XAI into code review significantly changes trust perceptions and agreement with AI recommendations. These results inform the design and evaluation of trustworthy AI-based code review systems, as well as studies on the human factors of AI-assisted software development.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-27T16:04:24Z</published>
+    <arxiv:comment>23 pages, 4 figures, 5 tables. To appear in Proceedings of the ACM on Software Engineering (PACMSE), Vol. 3, No. ISSTA, Article ISSTA093 (ISSTA 2026). Published under CC BY 4.0. Replication package: https://doi.org/10.5281/zenodo.21457282</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Zhenhan Gao</name>
+    </author>
+    <author>
+      <name>Marvin Muñoz Barón</name>
+    </author>
+    <author>
+      <name>Umm-e Habiba</name>
+    </author>
+    <author>
+      <name>Daniel Graziotin</name>
+    </author>
+    <author>
+      <name>Stefan Wagner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.06687v1</id>
+    <title>Exploring the Interaction of Explanation Styles, Context, and Trust of AI Privacy Redaction in AI-mediated Interactions</title>
+    <updated>2026-07-07T18:04:51Z</updated>
+    <link href="https://arxiv.org/abs/2607.06687v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.06687v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AI-mediated communication is increasingly being utilized to help facilitate interactions; however, in privacy sensitive domains, an AI mediator has the additional challenge of considering how to preserve privacy. In these contexts, a mediator may redact or withhold information, raising questions about how users perceive these interventions and whether explanations of system behavior can improve trust. In this work, we investigate how explanations of redaction operations can affect user trust in AI-mediated communication. We devise a scenario where a validated system removes sensitive content from messages and generates explanations of varying detail to communicate its decisions to recipients. We then conduct a user study with 180 participants that studies how user trust and preferences vary for cases with different amounts of redacted content and different levels of explanation detail. Our results show that participants believed our system was more effective at preserving privacy when explanations were provided (p&lt;0.05, Cohen's d ~ 0.3). We also found that contextual factors had an impact; participants relied more on explanations and found them more helpful when the system performed extensive redactions (p&lt;0.05, Cohen's f ~ 0.2). We also found that explanation preferences depended on individual differences as well, and factors such as age and baseline familiarity with AI affected user trust in our system. These findings highlight the importance and challenge of balancing transparency and privacy in AI-mediated communications and suggest that adaptive, context-aware explanations are essential for designing privacy-aware, trustworthy AI systems.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-07T18:04:51Z</published>
+    <arxiv:comment>Originally submitted to UIST, will be resubmitting</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Roshni Kaushik</name>
+    </author>
+    <author>
+      <name>Maarten Sap</name>
+    </author>
+    <author>
+      <name>Koichi Onoue</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.13854v1</id>
+    <title>SpheriCity: Designing Trustworthy Conversational AI for Sustainability Decision Support</title>
+    <updated>2026-06-11T19:32:42Z</updated>
+    <link href="https://arxiv.org/abs/2606.13854v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.13854v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present SpheriCity, an expert-grounded conversational prototype designed to support trustworthy knowledge sensemaking from sustainability reports. City-level circularity assessment reports contain rich information about materials, infrastructure, and policy interventions, yet their length and heterogeneous structure make cross-document synthesis and comparison difficult for practitioners and researchers working on circular economy initiatives. While large language models (LLM) promise faster knowledge access and synthesis, their opaque reasoning, hallucinations, and lack of source transparency introduce risks for trust and interpretability, and require verification in high-stakes sustainability contexts. SpheriCity addresses these challenges through a provenance-first conversational agent that foregrounds evidence traceability, structured synthesis, and interaction scaffolds to support exploratory querying and cross-document synthesis across sustainability reports. We conducted a formative expert review with six sustainability experts using representative queries spanning cross-city comparison, policy summarization, and recommendation-oriented tasks. Experts evaluated responses across dimensions and provided qualitative reflections on the system's usefulness for sustainability knowledge work. Our results reveal that transparent sourcing, contextual explanation, interpretability, and alignment with expert workflow strongly shape expert trust and judgments of system usefulness. This work contributes (1) a conversational prototype for sustainability knowledge sensemaking, (2) an expert-grounded evaluation framework for assessing AI responses in high-stakes knowledge domains, and (3) design insights into how provenance, uncertainty communication, and integration in workflow influence expert users' trust in AI assistance for sustainability decision support.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-11T19:32:42Z</published>
+    <arxiv:comment>Accepted to ACM SIGCAS/SIGCHI Conference on Computing and Sustainable Societies (COMPASS '26)</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Ahmed Qayyum</name>
+    </author>
+    <author>
+      <name>Madison Werner</name>
+    </author>
+    <author>
+      <name>Kathryn Youngblood</name>
+    </author>
+    <author>
+      <name>Jenna R. Jambeck</name>
+    </author>
+    <author>
+      <name>Tahiya Chowdhury</name>
+    </author>
+    <arxiv:doi>10.1145/3811242.3819112</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3811242.3819112" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.01228v1</id>
+    <title>Institutional Trust and the Domestic AI Advantage: Evidence from DeepSeek and ChatGPT Users in China</title>
+    <updated>2026-05-31T13:25:46Z</updated>
+    <link href="https://arxiv.org/abs/2606.01228v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.01228v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Public trust in generative artificial intelligence exhibits increasingly divergent patterns across national contexts, yet prevailing research largely overlooks the macro-structural forces underlying this divergence. This study argues that trust in AI is not merely a technical response to performance but a product of institutional refraction. We propose an ``Institutional Prism'' framework to demonstrate how institutional trust shapes user trust in domestic (DeepSeek) and global (ChatGPT) large language models. Drawing on Cognitive-Affective Trust Theory, we distinguish between cognitive and affective dimensions of trust and analyze survey data from 405 Chinese users. The findings show that higher institutional trust is positively associated with stronger affective trust in domestic AI models and shifts cognitive evaluations in a more favorable direction. While under lower institutional trust, this domestic advantage weakens. These findings reveal that institutional trust has emerged as a core dimension of AI trust formation. By linking micro-level psychological judgments with macro-level governance, this research contributes a new perspective to human-machine communication.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-31T13:25:46Z</published>
+    <arxiv:comment>48 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Jiashen Huang</name>
+    </author>
+    <author>
+      <name>Yu Jia</name>
+    </author>
+    <author>
+      <name>Xu Pan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.24755v1</id>
+    <title>Patterns of Learner-AI Interaction and Academic Performance in an Object-Oriented Programming Course</title>
+    <updated>2026-05-26T07:48:00Z</updated>
+    <link href="https://arxiv.org/abs/2607.24755v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.24755v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This full research paper examines how different forms of learner-AI interaction relate to learning outcomes in object-oriented programming (OOP) courses. Generative artificial intelligence (GenAI) tools are increasingly used by students in programming education, yet evidence on their educational impact remains mixed. In particular, little is known about how students integrate GenAI tools when learning OOP, and how different patterns of use relate to students' learning experiences and outcomes. This study investigates patterns of students' self-directed GenAI use and their relationship with academic performance, perceived difficulty, understanding, and trust. Survey data were collected from 210 undergraduate students enrolled in a first-year OOP course in which the use of GenAI tools was permitted for coursework but prohibited in assessments. Results show that students used GenAI significantly more often for explanation seeking and debugging than for code generation. Cluster analysis identified five distinct learner-AI interaction profiles, including a "smart" high-usage pattern characterized by low reliance on code generation and high use for conceptual support and debugging. While usage patterns were associated with differences in perceived assignment difficulty, self-assessed understanding, trust in AI-generated code, and norm-related attitudes, no significant differences in assessment performance were found across clusters. These findings suggest that self-directed GenAI use alone does not lead to measurable learning gains, underscoring the need for pedagogically guided and process-aware AI support. The study contributes empirical evidence on learner-AI interaction patterns and highlights the importance of pedagogically guided AI use in programming education.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-26T07:48:00Z</published>
+    <arxiv:comment>This work has been accepted for publication at the IEEE Frontiers in Education (FIE) 2026 Conference. Copyright may be transferred without notice, after which this version may no longer be accessible</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Marina Lepp</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.10930v2</id>
+    <title>Evaluating the False Trust Engendered by LLM Explanations</title>
+    <updated>2026-05-15T20:34:22Z</updated>
+    <link href="https://arxiv.org/abs/2605.10930v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.10930v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) and Large Reasoning Models (LRMs) are increasingly used for critical tasks, yet they provide no guarantees about the correctness of their solutions. Users must decide whether to trust the model's answer, aided by reasoning traces, their summaries, or post-hoc generated explanations. These reasoning traces, despite evidence that they are neither faithful representations of the model's computations nor necessarily semantically meaningful, are often interpreted as provenance explanations. It is unclear whether explanations or reasoning traces help users identify when the AI is incorrect, or whether they simply persuade users to trust the AI regardless. In this paper, we take a user-centered approach and develop an evaluation protocol to study how different explanation types affect users' ability to judge the correctness of AI-generated answers and engender false trust in the users. We conduct a between-subject user study, simulating a setting where users do not have the means to verify the solution and analyze the false trust engendered by commonly used LLM explanations - reasoning traces, their summaries and post-hoc explanations. We also test a contrastive dual explanation setting where we present arguments for and against the AI's answer. We find that reasoning traces and post-hoc explanations are persuasive but not informative: they increase user acceptance of LLM predictions regardless of their correctness. In contrast, dual explanation is the only condition that genuinely improves users' ability to distinguish correct from incorrect AI outputs.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-11T17:58:12Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Vardhan Palod</name>
+    </author>
+    <author>
+      <name>Upasana Biswas</name>
+    </author>
+    <author>
+      <name>Subbarao Kambhampati</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.23136v1</id>
+    <title>How Researchers Navigate Accountability, Transparency, and Trust When Using AI Tools in Early-Stage Research: A Think-Aloud Study</title>
+    <updated>2026-04-25T04:35:48Z</updated>
+    <link href="https://arxiv.org/abs/2604.23136v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.23136v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the early stages of scientific research, researchers rely on core scholarly judgments to identify relevant literature, assess credible evidence, and determine which directions merit pursuit. As AI tools become increasingly integrated into these early-stage workflows, the scholarly judgments that were once transparent and attributable to individual researchers become obscured, raising critical Responsible AI (RAI) concerns around accountability, transparency, and trust. Yet how these three dimensions manifest in real-time, in-situ scholarly practice remains largely unexplored. To address this gap, we conducted a think-aloud study with 15 researchers to examine how they used AI tools powered by large language models (LLMs) across early-stage research tasks, including literature exploration, synthesis, and research ideation. Our key findings address the tripartite constructs of accountability, transparency, and trust. First, the confident tone of AI outputs misrepresents epistemic uncertainty, making it more difficult for researchers (who are ultimately accountable) to identify which outputs require the greatest scrutiny. Second, opaque retrieval and content construction make provenance difficult to establish for transparency. Third, trust in AI is fragile, context-dependent, and easily eroded. In response, participant researchers were seen to develop compensatory strategies to restore scholarly judgment under uncertainty. Overall, our findings serve to contextualize AI-mediated research as a RAI problem grounded in lived researcher experience and motivate attention to deliberate AI integration that preserves accountability, supports transparency, and fosters informed trust.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-25T04:35:48Z</published>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Sanjana Gautam</name>
+    </author>
+    <author>
+      <name>Houjiang Liu</name>
+    </author>
+    <author>
+      <name>Yujin Choi</name>
+    </author>
+    <author>
+      <name>Matthew Lease</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.22356v2</id>
+    <title>Large Language Model Counterarguments in Older Adults: Cognitive Offloading or Susceptibility to Moral Persuasion?</title>
+    <updated>2026-08-06T06:01:39Z</updated>
+    <link href="https://arxiv.org/abs/2604.22356v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.22356v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This study examined whether counterarguments generated by large language models (LLMs) influence the moral judgments of younger and older adults, and whether these effects vary by dilemma type, cognitive functioning, trust in AI, and prior LLM experience. Using the switch and footbridge trolley dilemmas, 130 participants (56 younger adults and 74 older adults) were presented with ChatGPT-generated counterarguments that opposed their initial judgments. More than 30% of participants reversed their judgments in both dilemmas (32.31% in the switch dilemma and 36.92% in the footbridge dilemma). Older adults tended to be more likely than younger adults to reverse their judgments and showed a significantly greater degree of judgment change in the switch dilemma. In the emotionally aversive footbridge dilemma, older adults with lower cognitive functioning were significantly more likely to align with the LLM-generated counterargument. General trust in AI and prior LLM experience did not predict judgment reversal, whereas lower initial confidence and higher perceived task difficulty were associated with greater susceptibility to LLM influence. These findings suggest that LLMs may support cognitive offloading but increase susceptibility among individuals with limited cognitive resources. The ecological generalizability of these findings to everyday dilemma situations remains to be examined in future research.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-24T08:44:38Z</published>
+    <arxiv:comment>This paper has been published in Computers in Human Behavior. The final published version is available at https://doi.org/10.1016/j.chb.2026.109142</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Kou Tamura</name>
+    </author>
+    <author>
+      <name>Sayaka Ishibashi</name>
+    </author>
+    <author>
+      <name>Ayana Goma</name>
+    </author>
+    <author>
+      <name>Kenta Yamamoto</name>
+    </author>
+    <author>
+      <name>Kouhei Masumoto</name>
+    </author>
+  </entry>
+</feed>

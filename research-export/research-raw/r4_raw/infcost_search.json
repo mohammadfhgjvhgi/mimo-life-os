@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://www.truefoundry.com/blog/what-is-ai-cost-optimization",
+    "name": "AI Cost Optimization: A Practical Guide for 2026",
+    "snippet": "May 11, 2026 — Agent budget limits and loop detection are built into the execution path: Autonomous agent workloads run within configured inference budgets . Read more",
+    "host_name": "www.truefoundry.com",
+    "rank": 0,
+    "date": "May 11, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://flexprice.io/blog/best-tools-for-managing-ai-inference-costs",
+    "name": "Best Tools for Managing AI Inference Costs in 2025",
+    "snippet": "Nov 11, 2025 — In this blog, we'll cover the best tools for managing AI inference costs in 2025 , introduce a 3-layer framework for cost optimization, and ... Read more",
+    "host_name": "flexprice.io",
+    "rank": 1,
+    "date": "Nov 11, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/pulse/hidden-economics-ai-inference-cfos-perspective-what-actually-som-rout-6ymye",
+    "name": "The Hidden Economics of AI Inference: A CFO's",
+    "snippet": "CloudZero's State of AI Costs 2025 shows cloud-based AI tools consume 64% of AI budgets , yet attribution systems track primarily the LLM API ... Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://goclaw.sh/blog/ai-agent-cost-optimization",
+    "name": "10 AI Agent Cost Optimization Strategies for Budget  - GoClaw",
+    "snippet": "Apr 21, 2026 — AI Agent Cost Optimization is a set of techniques that help reduce token, API, and infrastructure costs when operating AI Agents. Read more",
+    "host_name": "goclaw.sh",
+    "rank": 3,
+    "date": "Apr 21, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://cloudchipr.com/blog/ai-agents-cost-management",
+    "name": "Managing Costs in the Age of AI Agents",
+    "snippet": "Agentic AI changes not just what AI does, but how costs are generated . Learn how to manage autonomous AI spend with cost-aware design, runtime guardrails, ...",
+    "host_name": "cloudchipr.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://alicelabs.ai/en/insights/ai-cost-optimization",
+    "name": "AI Cost Optimization: Cut LLM & Infrastructure Costs",
+    "snippet": "May 23, 2026 — AI FinOps applies cloud financial management principles to AI -specific spend categories — inference , fine-tuning, storage, and human review. Read more",
+    "host_name": "alicelabs.ai",
+    "rank": 5,
+    "date": "May 23, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://futureagi.com/blog/llm-cost-optimization-2025",
+    "name": "LLM Cost Optimization 2026: Cut Spend 30% in 90 Days",
+    "snippet": "Cutting LLM spend 30 percent in 90 days is a credible target for most production AI teams whose primary spend is on inference for chat, RAG, or agent workloads, ... Read more",
+    "host_name": "futureagi.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.finops.org/wg/optimizing-genai-usage",
+    "name": "Optimizing GenAI Usage: A FinOps Perspective on Cost,",
+    "snippet": "May 23, 2025 — This paper explores key optimization strategies, including choosing the right model size, improving GPU/CPU utilization, leveraging FinOps best ... Read more",
+    "host_name": "www.finops.org",
+    "rank": 7,
+    "date": "May 23, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://oplexa.com/ai-inference-cost-crisis-2026",
+    "name": "AI Inference Cost Crisis 2026: Why Your AI Bill Is Exploding",
+    "snippet": "AI inference costs are 85% of enterprise AI budgets in 2026 . Discover why bills are rising despite falling token prices — and how to fix your AI cost ...",
+    "host_name": "oplexa.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  }
+]

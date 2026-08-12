@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://www.tabnine.com",
+    "name": "Tabnine AI Code Assistant | Smarter AI Coding Agents. Total",
+    "snippet": "Tabnine is the AI code assistant that accelerates and simplifies software development while keeping your code private, secure, and compliant.",
+    "host_name": "www.tabnine.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Tabnine",
+    "name": "Tabnine",
+    "snippet": "Tabnine is a code completion tool which uses generative artificial intelligence to assist users by autocompleting code. It was created in 2018 by Jacob Jackson,",
+    "host_name": "en.wikipedia.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.gartner.com/reviews/product/tabnine",
+    "name": "Tabnine Reviews & Ratings 2026 | Gartner Peer Insights",
+    "snippet": "Tabnine is a software that provides AI-powered code completion capabilities for developers and software teams. It uses machine learning models to suggest code ...",
+    "host_name": "www.gartner.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=JgnIRWCKKEE",
+    "name": "How Tabnine delivers faster, safer AI-generated code for",
+    "snippet": "Tabnine helps companies move faster —without compromising compliance, security, or code quality. Unlike generic AI coding assistants, Tabnine is ...",
+    "host_name": "www.youtube.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/codota/TabNine",
+    "name": "codota/TabNine: AI Code Completions",
+    "snippet": "This is the repository for the backend of TabNine , the all-language autocompleter. There are no source files here because the backend is closed source. Read more",
+    "host_name": "github.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cio.com/video/4116798/how-tabnine-delivers-faster-safer-ai-generated-code-at-scale.html",
+    "name": "How Tabnine delivers faster, safer AI-generated code at scale",
+    "snippet": "Tabnine is designed to understand the full enterprise software environment.",
+    "host_name": "www.cio.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Same redirect shell as index.html, but served as a REAL 404.
+
+       Its existence is the load-bearing part: without a 404.html, Cloudflare
+       Pages falls back to SPA mode and answers ANY missing path with
+       index.html as HTTP 200 text/html. During a deploy's propagation
+       window, an edge colo that requests a brand-new hashed CSS URL a moment
+       too early caches that 200 HTML under the .css URL for up to a year —
+       users at that colo then get "Refused to apply style… MIME type
+       text/html" until the hash changes AND their colo doesn't lose the race
+       again. With this file present, missing assets are status-404 (edge
+       caches 4xx briefly, if at all), so a race self-heals in minutes and
+       can never poison a colo long-term. Visitors on unknown paths still get
+       bounced to bolt.new, same as before. -->
+  <link rel="icon" type="image/x-icon" href="/public-page-assets/favicon.ico">
+  <!-- Redirect only when top-level: inside an iframe (e.g. the CMS preview
+       pane hitting a dead draft URL) the bounce to bolt.new just produces an
+       X-Frame-Options refusal in the console — show a plain not-found
+       instead. JS-only so it can be conditional (no meta refresh). -->
+  <script>
+    if (window.top === window.self) window.location.href = "https://bolt.new/";
+    else document.addEventListener('DOMContentLoaded', function () {
+      document.body.innerHTML = '<p style="font-family:system-ui;color:#888;text-align:center;margin-top:40vh">Not found.</p>';
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>

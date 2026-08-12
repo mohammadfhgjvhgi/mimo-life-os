@@ -1,0 +1,831 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="country" content="us" />
+    <meta name="ms.lang" content="en" />
+    <meta name="ms.loc" content="us" />
+    <meta name="awa-cms" content="Contentful" />
+    <meta property="og:locale" content="en-us" />
+    <meta name="twitter:creator" content="@microsoft" />
+    <meta name="twitter:site" content="@MSFTCopilot" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Microsoft Copilot" />
+            <title>AI Prompting 101: How to Write the Best AI Prompts | Microsoft Copilot</title>
+            <meta name="Description" content="Learn how to write AI prompts for productivity, travel, and more. Follow tips for AI prompting like a pro, try out AI prompts examples, and start writing the best AI prompts possible." />
+    <meta property="og:title" content="AI Prompting 101: How to Write the Best AI Prompts | Microsoft Copilot" />
+    <meta property="og:description" content="Learn how to write AI prompts for productivity, travel, and more. Follow tips for AI prompting like a pro, try out AI prompts examples, and start writing the best AI prompts possible." />
+    <meta name="twitter:title" content="AI Prompting 101: How to Write the Best AI Prompts | Microsoft Copilot" />
+    <meta name="twitter:description" content="Learn how to write AI prompts for productivity, travel, and more. Follow tips for AI prompting like a pro, try out AI prompts examples, and start writing the best AI prompts possible." />
+        <meta name="awa-publishedDate" content="20231121" />
+        <meta property="og:image" content="//images.ctfassets.net/ri4db8kokucw/4FW6V0jy6KUY5NkW3iPmkh/364d24e985b22c863d98998fe48ba6d4/MSFT-A-screenshot-of-Bing-Chats-prompt-box1.png" />
+        <meta property="twitter:image" content="//images.ctfassets.net/ri4db8kokucw/4FW6V0jy6KUY5NkW3iPmkh/364d24e985b22c863d98998fe48ba6d4/MSFT-A-screenshot-of-Bing-Chats-prompt-box1.png" />
+        <meta property="og:url" content="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai/ai-prompt-writing" />
+        <meta name="twitter:url" content="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai/ai-prompt-writing" />
+        <link rel="canonical" href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai/ai-prompt-writing" />
+    
+        <meta name="robots" content="index, follow" />
+    <script src="/en-us/microsoft-copilot/for-individuals/js/ai.osplugin.3.4.3.min.js"></script>
+    <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+    <script type='text/javascript'>
+        window.formcode = "MA13KP";
+        window.gformcode = "MY02PE";
+        window.bformcode = "MY02PF";
+    </script>
+    <script src="https://assets.adobedtm.com/5ef092d1efb5/4d1d9f749fd3/launch-EN7b3d710ac67a4a1195648458258f97dd.min.js" async></script>
+
+
+<style>
+    uhf-header:not(:defined) {
+        display: block;
+        height: 54px;
+    }
+
+    uhf-brand:not(:defined),
+    uhf-contextual-nav:not(:defined),
+    uhf-actions:not(:defined),
+    uhf-global-nav:not(:defined),
+    uhf-search:not(:defined),
+    uhf-mecontrol:not(:defined),
+    uhf-cart:not(:defined),
+    uhf-dropdown:not(:defined),
+    uhf-popout:not(:defined) {
+        visibility: hidden;
+    }
+</style>
+<link rel="stylesheet" href="https://uhf.microsoft.com/statics/20260701.14.10/css/style-BpBYj3rT.css" />    <link rel="icon" type="image/x-icon" href="/en-us/microsoft-copilot/for-individuals/favicon.ico" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js" crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="></script>
+    <link rel="stylesheet" href="/en-us/microsoft-copilot/for-individuals/css/main.css" />
+    
+    
+        <link rel="stylesheet" href="/en-us/microsoft-copilot/for-individuals/css/global.min.css?v=fhbfAQ6MAyIkGKL1Ni5vVtqWE9eqZC2AeL3HDIFWBWc" />
+        <link rel="stylesheet" href="/en-us/microsoft-copilot/for-individuals/css/contentful.min.css?v=3MdpyMTgbO3N7J_0-QOoq4VCjIWSH-ybGFxDfN5PJ-U" />
+        
+    
+    <script type="text/javascript">!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
+src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", // The SDK URL Source
+crossOrigin: "anonymous", 
+cfg: { // Application Insights Configuration
+    connectionString: 'InstrumentationKey=bb2f46ba-5007-4642-81cf-b97b4eba9015;IngestionEndpoint=https://westus-0.in.applicationinsights.azure.com/;LiveEndpoint=https://westus.livediagnostics.monitor.azure.com/;ApplicationId=56b20ea9-f088-40fa-ae52-602eaddb056a'
+}});</script>
+    
+</head>
+<body style="background: #FFF6F0;--heading-color: #382032;--paragraph-color: #382032">
+    
+    <div id="msccBannerV2"></div>
+
+
+<uhf-header locale="en-us" partnerId="MSCopilotM" headerId="MSCopilotMHeader" theme="light">
+    <a slot="skip-link" class="uhf-skip-link" href="#mainContent" data-m='{"compnm": "UHF", "view": "UHF", "pa": "UniversalHeader", "hn": "SkipToMain", "cN": "Skip to content_nonnav", "ecn": "Skip to content_nonnav", "ehn": "SkipToMain"}'>Skip to main content</a>
+    
+<uhf-brand slot="brand">
+    <a href="https://www.microsoft.com" class="uhf-microsoft-logo" slot="microsoft-logo" aria-label="Microsoft" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Anchor&quot;, &quot;cN&quot;: &quot;GlobalNav_Logo_cont&quot;, &quot;ecn&quot;: &quot;GlobalNav_Logo_cont&quot;, &quot;ehn&quot;: &quot;Anchor&quot;}">
+        <img src="https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png" alt="Microsoft" />
+    </a>
+            <a href="https://www.microsoft.com/microsoft-copilot/for-individuals" class="uhf-site-logo" slot="brand-logo" aria-label="Copilot" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Anchor&quot;, &quot;cN&quot;: &quot;CatNav_Logo_cont&quot;, &quot;ecn&quot;: &quot;CatNav_Logo_cont&quot;, &quot;ehn&quot;: &quot;Anchor&quot;}">
+ <span>Copilot</span>             </a>
+</uhf-brand>
+
+
+<uhf-contextual-nav 
+    slot="contextual-nav" 
+    overflowText="More" 
+    brand="Copilot" 
+    homeUrl="https://www.microsoft.com/microsoft-copilot/for-individuals" 
+    homeText="Home"
+    data-nav-label="Contextual menu"
+    
+    >
+
+
+
+<uhf-dropdown 
+    text="Get started" 
+        id=""
+    data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Get started&quot;, &quot;cN&quot;: &quot;CatNav_Get started_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Get started_nav&quot;, &quot;ehn&quot;: &quot;Get started&quot;}"
+>
+    
+
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/microsoft-copilot/for-individuals/get-copilot" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Get started&quot;, &quot;cN&quot;: &quot;CatNav_Get started_How to get Copilot_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Get started_How to get Copilot_nav&quot;, &quot;ehn&quot;: &quot;Get started&quot;}">How to get Copilot</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/microsoft-copilot/for-individuals/features" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Get started&quot;, &quot;cN&quot;: &quot;CatNav_Get started_Features_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Get started_Features_nav&quot;, &quot;ehn&quot;: &quot;Get started&quot;}">Features</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://copilot.microsoft.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Get started&quot;, &quot;cN&quot;: &quot;CatNav_Get started_Try free version of Copilot_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Get started_Try free version of Copilot_nav&quot;, &quot;ehn&quot;: &quot;Get started&quot;}">Try free version of Copilot</a>
+
+
+</uhf-dropdown>
+
+
+<uhf-dropdown 
+    text="Products" 
+        id="Products"
+    data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Products&quot;, &quot;cN&quot;: &quot;CatNav_Products_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Products_nav&quot;, &quot;ehn&quot;: &quot;Products&quot;}"
+>
+    
+
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/windows/windows-11?wincampaign=copilot" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Products&quot;, &quot;cN&quot;: &quot;CatNav_Products_Copilot on Windows_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Products_Copilot on Windows_nav&quot;, &quot;ehn&quot;: &quot;Products&quot;}">Copilot on Windows</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/microsoft-copilot/for-individuals/copilot-labs" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Products&quot;, &quot;cN&quot;: &quot;CatNav_Products_Copilot Labs_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Products_Copilot Labs_nav&quot;, &quot;ehn&quot;: &quot;Products&quot;}">Copilot Labs</a>
+
+
+</uhf-dropdown>
+
+
+<uhf-dropdown 
+    text="Resources" 
+        id=""
+    data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Resources&quot;, &quot;cN&quot;: &quot;CatNav_Resources_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Resources_nav&quot;, &quot;ehn&quot;: &quot;Resources&quot;}"
+>
+    
+
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://microsoft.com/microsoft-copilot/for-individuals/ai-for-students" id="students" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Resources&quot;, &quot;cN&quot;: &quot;CatNav_Resources_Students_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Resources_Students_nav&quot;, &quot;ehn&quot;: &quot;Resources&quot;}">Students</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/microsoft-copilot/for-individuals/privacy" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Resources&quot;, &quot;cN&quot;: &quot;CatNav_Resources_Privacy &amp; security_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Resources_Privacy &amp; security_nav&quot;, &quot;ehn&quot;: &quot;Resources&quot;}">Privacy &amp; security</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Resources&quot;, &quot;cN&quot;: &quot;CatNav_Resources_Do more with Copilot_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Resources_Do more with Copilot_nav&quot;, &quot;ehn&quot;: &quot;Resources&quot;}">Do more with Copilot</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-art-prompting-guide" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Resources&quot;, &quot;cN&quot;: &quot;CatNav_Resources_AI art prompting guide_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Resources_AI art prompting guide_nav&quot;, &quot;ehn&quot;: &quot;Resources&quot;}">AI art prompting guide</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/microsoft-copilot/blog" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;Resources&quot;, &quot;cN&quot;: &quot;CatNav_Resources_Copilot blog_nav&quot;, &quot;ecn&quot;: &quot;CatNav_Resources_Copilot blog_nav&quot;, &quot;ehn&quot;: &quot;Resources&quot;}">Copilot blog</a>
+
+
+</uhf-dropdown>
+
+    <a class="uhf-nav-item uhf-nav-link" href="https://www.microsoft.com/microsoft-copilot/organizations" id="for-organizations" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;For organizations&quot;, &quot;cN&quot;: &quot;CatNav_For organizations_nav&quot;, &quot;ecn&quot;: &quot;CatNav_For organizations_nav&quot;, &quot;ehn&quot;: &quot;For organizations&quot;}">For organizations</a>
+</uhf-contextual-nav>    <uhf-actions slot="actions">
+        
+<uhf-global-nav slot="global-nav" text="All Microsoft"  data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_nonnav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_nonnav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}" data-nav-label="All Microsoft menu">
+    
+    <uhf-dropdown-header slot="header">
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/microsoft-365" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_M365_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_M365_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Microsoft 365</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://azure.microsoft.com/en-us?ocid=cmm4r4ppnhp" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_GlobalAzure_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_GlobalAzure_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Azure</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://copilot.microsoft.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_Copilot_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_Copilot_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Copilot</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/windows/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_Windows_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_Windows_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Windows</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/surface" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_Surface_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_Surface_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Surface</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.xbox.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_XBOX_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_XBOX_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">XBOX</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/store/b/sale?icid=DSM_TopNavDeals" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_Deals_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_Deals_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Deals</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/store/b/business" id="l0_SmallBusiness" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_Small Business_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_Small Business_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Small Business</a>
+            <a class="uhf-nav-item uhf-dropdown-link" href="https://support.microsoft.com/en-us" id="l1_support" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_Support_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_Support_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Support</a>
+    </uhf-dropdown-header>
+
+        <uhf-dropdown-column title="Software" show-tooltip="false" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://apps.microsoft.com/home" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_Windows Apps_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_More_Software_WindowsApps_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Windows Apps</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_Outlook_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_More_Software_Outlook_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Outlook</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_OneDrive_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_More_Software_OneDrive_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">OneDrive</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_Microsoft Teams_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_More_Software_Microsoft Teams_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Microsoft Teams</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_OneNote_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_More_Software_OneNote_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">OneNote</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/edge" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_Microsoft Edge_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_More_Software_Edge_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Microsoft Edge</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://support.microsoft.com/en-us/office/moving-from-skype-to-microsoft-teams-free-3c0caa26-d9db-4179-bcb3-930ae2c87570?icid=DSM_All_Skype" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_Moving from Skype to Teams_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Software_More_Software_Skype_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Moving from Skype to Teams</a>
+        </uhf-dropdown-column>
+        <uhf-dropdown-column title="PCs &amp; Devices  " show-tooltip="false" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/store/b/pc?icid=CNavDevicesPC" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_PCs &amp; Devices  _Computers_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_PCsAndDevices_More_PCsAndDevices_PCsAndTablets_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Computers</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/store/b/xbox?icid=DSM_All_ShopXbox" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_PCs &amp; Devices  _Shop XBOX_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_PCsAndDevices_More_PCsAndDevices_ShopXbox_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Shop XBOX</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/store/b/accessories?icid=CNavDevicesAccessories" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_PCs &amp; Devices  _Accessories_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_PCsAndDevices_More_PCsAndDevices_Accessories_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Accessories</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/store/b/virtualreality?icid=CNavVirtualReality" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_PCs &amp; Devices  _VR &amp; mixed reality_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_PCsAndDevices_More_PCsAndDevices_VMAndMixedReality_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">VR &amp; mixed reality</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/store/b/certified-refurbished-products" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_PCs &amp; Devices  _Certified Refurbished_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_PCsAndDevices_More_PCsAndDevicesCertifiedRefurbished_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Certified Refurbished</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/store/b/microsoft-trade-in" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_PCs &amp; Devices  _Trade-in for cash_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_PCsAndDevices_More_PCsAndDevices_Trade-in-for-cash_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Trade-in for cash</a>
+        </uhf-dropdown-column>
+        <uhf-dropdown-column title="Entertainment" show-tooltip="false" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.xbox.com/en-us/games/store/xbox-game-pass-ultimate/cfq7ttc0khs0?icid=DSM_All_XboxGamePassUltimate" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Entertainment_XBOX Game Pass Ultimate_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Entertainment_More_Entertainment_XboxGamePassUltimate_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">XBOX Game Pass Ultimate</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.xbox.com/en-us/games/store/pc-game-pass/cfq7ttc0kgq8?icid=CNavAllPCGamePass" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Entertainment_PC Game Pass_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Entertainment_More_Entertainment_PC_Game_Pass_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">PC Game Pass</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/store/b/xboxgames?icid=DSM_All_XboxGames" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Entertainment_XBOX games_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Entertainment_More_Entertainment_XboxGames_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">XBOX games</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://apps.microsoft.com/games" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Entertainment_PC games_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Entertainment_More_Entertainment_PCGames_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">PC games</a>
+        </uhf-dropdown-column>
+        <uhf-dropdown-column title="Business" show-tooltip="false" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/ai?icid=DSM_All_AI" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_Microsoft AI_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_More_Business_AI_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Microsoft AI</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/security" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_Microsoft Security_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_More_Business_Microsoft Security_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Microsoft Security</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/dynamics-365" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_Dynamics 365_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_More_Business_MicrosoftDynamics365_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Dynamics 365</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/microsoft-365/business" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_Microsoft 365 for business_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_More_Business_Microsoft365forbusiness_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Microsoft 365 for business</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/power-platform" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_Microsoft Power Platform_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_More_Business_MicrosoftPowerPlatform_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Microsoft Power Platform</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/windows-365" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_Windows 365_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_More_Business_Windows365_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Windows 365</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/store/b/business?icid=CNavBusinessStore" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_Small Business_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_More_Business_SmallBusiness_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Small Business</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/sovereignty?icid=DSM_More_Sovereignty" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_Digital Sovereignty_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Business_More_Business_Sovereignty_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Digital Sovereignty</a>
+        </uhf-dropdown-column>
+        <uhf-dropdown-column title="Developer &amp; IT  " show-tooltip="false" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://azure.microsoft.com/en-us/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _Azure_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _More_DeveloperAndIT_Azure_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Azure</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://developer.microsoft.com/en-us/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _Microsoft Developer_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _More_DeveloperAndIT_MicrosoftDeveloper_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Microsoft Developer</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://learn.microsoft.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _Microsoft Learn_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _More_DeveloperAndIT_MicrosoftLearn_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Microsoft Learn</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/software-development-companies/offers-benefits/isv-success?icid=DSM_All_SupportAIMarketplace&amp;ocid=cmm3atxvn98" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _Support for AI marketplace apps_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _More_DeveloperAndIT_SupportForAIMarketplaceApps_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Support for AI marketplace apps</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://techcommunity.microsoft.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _Microsoft Tech Community_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _More_DeveloperAndIT_MicrosoftTechCommunity_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Microsoft Tech Community</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://marketplace.microsoft.com?icid=DSM_All_Marketplace&amp;ocid=cmm3atxvn98" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _Microsoft Marketplace_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _More_DeveloperAndIT_Marketplace_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Microsoft Marketplace</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/software-development-companies?icid=DSM_All_SoftwareCompanies&amp;ocid=cmm3atxvn98" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _Software companies_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _Software companies_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Software companies</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://visualstudio.microsoft.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _Visual Studio_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Developer &amp; IT  _More_DeveloperAndIT_VisualStudio_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Visual Studio</a>
+        </uhf-dropdown-column>
+        <uhf-dropdown-column title="Other" show-tooltip="false" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/rewards" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Other_Microsoft Rewards_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Other_More_Other_Microsoft Rewards_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Microsoft Rewards</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/download" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Other_Free downloads &amp; security_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Other_More_Other_FreeDownloadsAndSecurity_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Free downloads &amp; security</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/education" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Other_Education_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Other_More_Other_Education_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Education</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/store/b/gift-cards?icid=DSM_All_GiftCards" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Other_Gift cards_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Other_More_Other_GiftCards_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Gift cards</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/licensing/" id="Licensing" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Other_Licensing_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Other_More_Other_Licensing_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Licensing</a>
+                    <a class="uhf-nav-item uhf-dropdown-link" href="https://unlocked.microsoft.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalHeader&quot;, &quot;hn&quot;: &quot;OneMicrosoftBar&quot;, &quot;cN&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Other_Unlocked stories_nav&quot;, &quot;ecn&quot;: &quot;GlobalNav_OneMicrosoftBar_AllMicrosoft_More_Other_More_Other_Unlocked_stories_nav&quot;, &quot;ehn&quot;: &quot;OneMicrosoftBar&quot;}">Unlocked stories</a>
+        </uhf-dropdown-column>
+
+    <uhf-dropdown-footer slot="footer">
+        <a class="uhf-nav-item uhf-dropdown-link" href="https://www.microsoft.com/en-us/sitemap" data-m="">View Sitemap</a>
+    </uhf-dropdown-footer>
+
+</uhf-global-nav>
+
+
+            <uhf-search 
+                slot="search" 
+                placeholder="Search Microsoft.com"
+                search-label="Search"
+                cancel-label="Cancel"
+                searchUrl="https://www.microsoft.com/en-us/search/explore"
+                autoSuggestUrl="https://www.microsoft.com/msstoreapiprod/api/autosuggest"
+                queryParameterName="q"
+                 clientId="7F27B536-CF6B-4C65-8638-A0F8CBDFCA65" productCount="1,5,5" source="Iris-Products,DCatAll-Products,Microsoft-Terms"            >
+            </uhf-search>
+    </uhf-actions>
+</uhf-header>    <main id="mainContent">
+        <div class="copilot-app do-more-with-ai copilot-article sticky-min-height">
+<div class="article-top-container">
+
+
+<div data-componentname="cf-breadcrumbs" id="article-breadcrumb" class="cmo-breadcrumb pb-5 pt-3" style="">
+    <nav class="container">
+        <ol class="breadcrumb">
+<li class="breadcrumb-item ">
+                    <a href="/en-us/microsoft-copilot/for-individuals/do-more-with-ai" target="_self" aria-label="Back to Home" data-bi-ecn="Home" data-bi-ehn="Home" data-bi-hn="Home" >
+                        Home
+                    </a>
+                </li>
+<li class="breadcrumb-item ">
+                    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai" target="_self" aria-label="Select all to see General AI articles" data-bi-ecn="General AI" data-bi-ehn="General AI" data-bi-hn="General AI" >
+                        General AI
+                    </a>
+                </li>
+<li class="breadcrumb-item active">
+                    <a href="/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai/ai-prompt-writing" target="_self" aria-label="AI Prompting 101: How to Write the Best AI Prompts " data-bi-ecn="AI Prompting 101: How to Write the Best AI Prompts " data-bi-ehn="AI Prompting 101: How to Write the Best AI Prompts " data-bi-hn="AI Prompting 101: How to Write the Best AI Prompts " aria-current=page>
+                        AI Prompting 101: How to Write the Best AI Prompts 
+                    </a>
+                </li>
+        </ol>
+    </nav>
+</div>
+
+        <script type="application/ld+json">
+            {
+             "@context": "https://schema.org",
+             "@type": "BreadcrumbList",
+             "itemListElement":
+             [
+              {"@type": "ListItem","position": 1, "name": "Home", "item":"/en-us/microsoft-copilot/for-individuals/do-more-with-ai"},{"@type": "ListItem","position": 2, "name": "General AI", "item":"https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai"},{"@type": "ListItem","position": 3, "name": "AI Prompting 101: How to Write the Best AI Prompts ", "item":"/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai/ai-prompt-writing"}
+             ]
+            }
+        </script>
+
+</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="article-left-container col-md-9">
+				
+
+<div data-componentname="cf-areaheading" class="area-heading  pl-md-5 py-2 text-left" style="">
+    <div class="container" style="">
+        <div class="row p-2 p-md-0">
+                <div class="col-12 col-md-8 mx-auto">
+
+    <span class="badge mb-2 rounded-lg transparant"><span>NOVEMBER 21, 2023</span> <span class="big-dot"></span> <span>4 MIN READ</span></span>
+
+<h1 class="pt-3" >
+    AI prompting 101: How to write the best AI prompts       
+</h1>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div data-componentname="cf-mediaimage" id="image1" class="copilot-hub-image py-3" style="">
+	<picture class="" style="">
+        <img data-src="//images.ctfassets.net/ri4db8kokucw/4FW6V0jy6KUY5NkW3iPmkh/364d24e985b22c863d98998fe48ba6d4/MSFT-A-screenshot-of-Bing-Chats-prompt-box1.png" src="https://images.ctfassets.net/ri4db8kokucw/5HTh2MFh6BS7rp4gSdT7Ty/4a82b3aa90e048a1ceba79b2fffe444f/placeholder-image.png" class="card-img img-object-cover lazy" alt="A screenshot of Bing Chat&#x2019;s prompt box" />
+	</picture>
+</div>
+
+    <div data-componentname="cf-socialshareversiontwo" class="stickysocial social-version2 pb-3" id="article-sticky-social-share">
+        <div class=" left social-pad-small">
+            <div class="social-links">
+                <ul>
+                        <li>
+                            <a href="https://www.facebook.com/sharer/sharer.php?m2w=&amp;s=100&amp;u=https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai/ai-prompt-writing/?form=MA13KP" target="_blank" aria-label="Share on Facebook" class="action-trigger text-decoration-none d-inline-block" data-bi-ecn="Facebook" data-bi-ehn="Facebook" data-bi-hn="Facebook">
+                                <img src="//images.ctfassets.net/ri4db8kokucw/116djJMMrc7vRPoZ3heN7u/af0ce6b0a3b285960617a0f8463a1329/RWMldc-Panel-Social-Icones-Facebook-content-placement.jpg" class="" alt="Facebook icon" title="Facebook" width="32" height="32">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/share?url=https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai/ai-prompt-writing/?form=MA13KP" target="_blank" aria-label="Share this page on X (formerly Twitter)" class="action-trigger text-decoration-none d-inline-block" data-bi-ecn="X (formerly Twitter)" data-bi-ehn="X (formerly Twitter)" data-bi-hn="X (formerly Twitter)">
+                                <img src="//images.ctfassets.net/ri4db8kokucw/7uMSP9g40SztfZsUH7PvbZ/d372728d8a80b90bc1176b09647f224e/RWMqnI-Panel-Social-Icones-Twitter-content-placement.jpg" class="" alt="X icon (formally twitter icon)" title="X (formerly Twitter)" width="32" height="32">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pinterest.com/pin/create/link/?url=https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai/ai-prompt-writing/?form=MA13KP" target="_blank" aria-label="Share on Pinterest" class="action-trigger text-decoration-none d-inline-block" data-bi-ecn="Pinterest" data-bi-ehn="Pinterest" data-bi-hn="Pinterest">
+                                <img src="//images.ctfassets.net/ri4db8kokucw/1p8CXGQT7OYRrUrMhURwa0/a1821a19f213cc6bbcc094c4e55a506e/RWMiDT-Panel-Social-Icones-Pinterest-content-placement.png" class="" alt="Fluorescent painted astronaut walking on planet in outer space" title="Pinterest" width="32" height="32">
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+				<div data-componentname="cf-articlebody" class="page-body p-0 m-0" id="richtext-article-content">
+					<contentful-rich-text><p>The information you can find and the things you can create with artificial intelligence (AI) are limitless when you harness the AI capabilities of
+
+    <a href="https://copilot.microsoft.com/" target="_blank" class=" inline-link common-cta" aria-label="Learn more about Copilot on this webpage" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>Copilot</span>
+    </a>. Whether you’re a seasoned AI enthusiast or just dipping your toes to try it, find out how easy it is to use these tools when you give&#160;Copilot detailed AI prompts. Learn the ins and outs of effective AI prompt writing so you can write the best AI prompts the first time you try.</p><h2>What is an AI prompt?</h2><p>Simply put, an AI prompt is a command, question, request, or statement that is used to direct an AI tool like
+
+    <a href="https://copilot.microsoft.com/" target="_blank" class=" inline-link common-cta" aria-label="Learn more about Copilot on this webpage" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>Copilot</span>
+    </a> to generate the response, text, or
+
+    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-art-prompting-guide" target="_self" class=" inline-link common-cta" aria-label="AI art guide" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>image</span>
+    </a> you want. The way you frame the AI prompt determines the quality and relevance of the results you receive. Once you’ve mastered the art of AI prompting writing, the sky’s the limit.</p><h2>How to write the best AI prompts</h2><p>Writing the best AI prompts requires a combination of creativity, precision, and clarity about results you want. Whether you want to use AI as a
+
+    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-art-and-creativity/how-to-create-ai-art-with-copilot" target="_self" class=" inline-link common-cta" aria-label="Learn more about using this free image generator in this article" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>free image generator</span>
+    </a>,
+
+    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/learning-and-education/how-check-your-grammar-using-copilot" target="_self" class=" inline-link common-cta" aria-label="Learn how to use Microsoft Copilot as your AI-powered grammar checker" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>grammar assistant</span>
+    </a>, or something else, here are some tips and tricks to help you excel with your AI prompting:</p><h3>1. Be clear and specific</h3><p>Outstanding outputs start with clear AI prompts. Follow these tips for staying specific:</p><ul><li><p>Ask for the <strong>format </strong>you want from
+
+    <a href="https://copilot.microsoft.com/" target="_blank" class=" inline-link common-cta" aria-label="Learn more about Copilot on this webpage" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>Copilot</span>
+    </a>, whether it&#39;s a paragraph, step-by-step instructions, or a list.</p></li><li><p>Avoid generic time references; instead, use <strong>specific dates or years</strong> to enhance precision.</p></li><li><p>Mention specific <strong>quantities or criteria</strong> when applicable.</p></li><li><p>Incorporate any <strong>constraints or preferences</strong> to narrow down the AI&#39;s response.</p></li><li><p>Make your prompt <strong>goal-oriented and practical</strong>.</p></li><li><p>Clearly <strong>define the scope</strong> of your request to guide the AI&#39;s response.</p></li><li><p>Always <strong>proofread</strong> your prompt to ensure it is well-structured and free from ambiguity.</p></li></ul><h3>2. Give context</h3><p>For even greater clarity, include the bigger picture in your AI prompt. Context guides the AI tool to create what you most need based on the wider-view details. Follow these tips for writing well-contextualized AI prompts:</p><ul><li><p>Include <strong>relevant context</strong>, such as the reason for the request or what you plan to do with the output, to help
+
+    <a href="https://copilot.microsoft.com/" target="_blank" class=" inline-link common-cta" aria-label="Learn more about Copilot on this webpage" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>Copilot</span>
+    </a> understand what you need.</p></li><li><p>Clearly <strong>outline</strong> the task or information you need from Copilot and say how it fits into any larger projects or goals in progress.</p></li><li><p>Ask for the <strong>type of response</strong> you want, whether that’s guidance, instructions, recommendations, or explanations.</p></li><li><p>Ensure your prompt conveys your <strong>intent</strong> and what you expect Copilot to deliver.</p></li></ul><h3>3. Experiment</h3><p>To write the best AI prompts, don’t be afraid to play and experiment. You’ll learn what works well for your purposes and maybe even discover Copilot uses you’d never considered. Follow these tips on experimenting with AI prompts:</p><ul><li><p><strong>Expand your thinking</strong> on what
+
+    <a href="https://copilot.microsoft.com/" target="_blank" class=" inline-link common-cta" aria-label="Learn more about Copilot on this webpage" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>Copilot</span>
+    </a> can do: it isn’t only helpful in 
+
+    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-for-daily-life/find-new-recipes-with-copilot" target="_self" class=" inline-link common-cta" aria-label="Find recipes with Copilot using AI" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>finding new recipes</span>
+    </a> or forms of entertainment, but it’s also useful in
+
+    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-for-daily-life/plan-the-perfect-trip-itinerary-with-ai" target="_self" class=" inline-link common-cta" aria-label="Learn more about planning vacations with Copilot" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>planning vacations</span>
+    </a>,&#160;getting personalized advice, translating foreign text,
+
+    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-art-and-creativity/make-ai-photos" target="_self" class=" inline-link common-cta" aria-label="Learn how to make AI photos" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>generating AI pictures</span>
+    </a>, and more. Experiment with&#160;Copilot by finding new ways to use it throughout your day at
+
+    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-for-daily-life" target="_self" class=" inline-link common-cta" aria-label="Read articles about Copilot for daily life" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>home</span>
+    </a>,
+
+    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-for-professional-life" target="_self" class=" inline-link common-cta" aria-label="Read articles about Copilot for professional life" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>work</span>
+    </a>, and beyond.</p><ul><li><p>Example: &quot;I need ideas for a romantic date night at home. Suggest creative activities, dinner recipes, and a romantic playlist.&quot;</p></li></ul></li><li><p>Tailor your prompts to various scenarios in your daily life.</p><ul><li><p>Example: &quot;I&#39;m working on a presentation about renewable energy. Can you help me gather recent statistics and compelling facts on solar power?&quot;</p></li></ul></li><li><p>Seek personalized advice or recommendations for your specific needs.</p><ul><li><p>Example: &quot;I have a job interview tomorrow. Provide tips on dressing professionally and handling common interview questions.&quot;</p></li></ul></li><li><p>Request assistance with tasks like translation or calculations.</p><ul><li><p>Example: &quot;Translate this English text into Spanish: &#39;Hello, how can I help you today?&#39;&quot;</p></li></ul></li><li><p>Experiment with different output formats for your information needs.</p><ul><li><p>Example: &quot;Can you provide a list of the top 10 sci-fi novels of all time, along with their average reader ratings in a downloadable spreadsheet?&quot;</p></li></ul></li><li><p>Continuously explore new ways to use&#160;Copilot in your daily routines.</p><ul><li><p>Example: &quot;I&#39;m hosting a virtual trivia night. Help me come up with a set of challenging trivia questions on famous landmarks.&quot;</p></li></ul></li><li><p>Be creative and open-minded in your requests.</p><ul><li><p>Example: &quot;Share interesting historical facts about ancient civilizations, focusing on their architectural achievements.&quot;</p></li></ul></li><li><p>Challenge Copilot with diverse tasks to discover its capabilities.</p><ul><li><p>Example: &quot;Find inspirational quotes from famous philosophers and match each quote with a relevant 
+
+    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-art-and-creativity/image-creator-improvements-dall-e-3" target="_self" class=" inline-link common-cta" aria-label="Learn more about creating AI images in this guide" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>AI image</span>
+    </a> for a motivational poster.&quot;</p></li></ul></li></ul><h3>4. Use keywords</h3><p>Keywords help Copilot understand your preferences and deliver more accurate results. They also help narrow down your search and get the information you need faster. Try these tips to use keywords that work in your AI prompts:</p><ul><li><p>Incorporate <strong>relevant keywords or phrases</strong> to clarify your intent in the AI prompt.</p></li><li><p>In professional contexts, use <strong>industry-specific terms</strong> to refine your AI prompts.</p></li><li><p>When discussing technology or software, use <strong>technical terms</strong> relevant to your task.</p></li><li><p>Inquire about products or services with keywords that identify your <strong>specific requirements</strong>.</p></li></ul><h2>Try these AI prompt examples</h2><p>Want to see these AI prompting tips in action? Here are a few example AI prompts that apply specificity, context, experimentation, and/or keywords. Use these yourself or alter them to ask
+
+    <a href="https://copilot.microsoft.com/" target="_blank" class=" inline-link common-cta" aria-label="Learn more about Copilot on this webpage" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>Copilot</span>
+    </a> for what you need.</p><h3>Travel planning prompt</h3><p>Help me plan a trip to Chicago from [location] for next summer. I need flight, lodging, transportation, and activity information. Provide a response that mixes text, tables, and images to give me the best info and fullest picture of what my trip can be. Use these keywords: best Chicago activities for kids, cheap airfare, and Chicago budget travel. Also, tell me three more ways you can help with this trip.</p><h3>Productivity prompt</h3><p>I want to save time on daily tasks at work. How can you help me do each of these tasks more quickly without losing the human touch: read and respond to emails, write proposals, manage three employees. Ask me any questions that would help you understand my specific needs, and then give me actionable guidance. Act as a productivity coach.</p><h3>Study plan prompt</h3><p>I need help learning high school calculus. Create a study plan that includes videos, a glossary, diagrams, and practice tests to help me master the foundational concepts. Also, keep my interest by making all examples practical. Provide additional resources related to calculus simplified, calculus in real life, and calculus help.</p><p>Once you understand AI prompting and know how to write an AI prompt that works well,, a world of possibility opens to you. By applying these tips to write detailed, well-structured prompts—from
+
+    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-art-prompting-guide/image-prompting-101" target="_self" class=" inline-link common-cta" aria-label="Learn more about image prompting" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>image prompts</span>
+    </a> to spreadsheet prompts—you can harness the power of AI to receive accurate and relevant results fast.
+
+    <a href="https://copilot.microsoft.com" target="_blank" class=" inline-link common-cta" aria-label="Try Copilot" data-bi-ecn="" data-bi-ehn="" data-bi-hn="" style="">
+        <span>Try Copilot</span>
+    </a> to master using AI for your everyday needs.</p>
+<div data-componentname="cf-footnotes" class="footnotes " id="footnotes" style="">
+    <div class="container">
+        <div class="row">
+            <section class="col-12 my-4 px-4 px-lg-0 small" role="region" aria-label="Footnotes">
+                        <p class="py-1 px-md-4 footnote-item mb-0"><contentful-rich-text><p><strong>DISCLAIMER</strong>: Features and functionality subject to change. Articles are written specifically for the United States market; features, functionality, and availability may vary by region.</p></contentful-rich-text></p>
+                <ul class="list-unstyled mb-0 px-md-4">
+                </ul>
+            </section>
+        </div>
+    </div>
+</div><p></p></contentful-rich-text>
+				</div>
+
+				<div data-componentname="areaheading" class="area-heading  pb-4 text-left pl-0 ml-0 pt-5" id="hero" style="" data-bi-name="hero" data-module-id="true">
+					<div class="container" style="">
+						<div class="row p-2 p-md-0">
+							<div class="col-12  mx-auto">
+								<h2 class="h2 m-0">
+									Mentioned in this article
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+
+<div data-componentname="cf-smallcards" id="cards2" class="small-content-cards copilot-hub-small-content-cards version2" style="">
+    <div class="fullbleed">
+        <div class="row row-cols-1 row-cols-md-2 ">
+                    <div class="col " style="">
+                        <div class="card mb-5  " data-mount=click-group>
+                            <div class="row d-flex align-items-center">
+                                <div class="col-3">
+                                    <picture class="" style="">
+                                        <img src="//images.ctfassets.net/ri4db8kokucw/0hfogN5yJhsCE2I9Z0fgP/ecabd884c16e0f6c2a05e9eda8a781b6/MSFT-Microsoft-Copilot-Logo-111x111.png" class="card-img img-object-cover" alt="Copilot logo">
+                                    </picture>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body ">
+                                        <h3 class="h4 pt-2 ">
+                                            Copilot
+                                        </h3>
+                                        <div class="card-footer pt-2">
+
+
+    <a href="https://copilot.microsoft.com" target="_blank" class="cta arrow lead font-weight-normal inline-link common-cta" aria-label="Try Copilot now" data-bi-ecn="Try Copilot" data-bi-ehn="Mentioned in this article" data-bi-hn="Mentioned in this article" style="">
+        <span>Try Copilot</span>
+            <svg class="arrow ml-2" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.10503 0.0791016C2.08803 0.0791016 1.2637 0.903491 1.2637 1.92044C1.2637 2.93739 2.08803 3.76178 3.10503 3.76178L25.9114 3.76178L0.53932 29.1339C-0.179773 29.853 -0.179773 31.0188 0.53932 31.738C1.2584 32.4571 2.42428 32.4571 3.14336 31.738L28.5155 6.36587L28.5155 29.1722C28.5155 30.1892 29.3398 31.0136 30.3568 31.0136C31.3738 31.0136 32.1982 30.1892 32.1982 29.1722V1.92044C32.1982 0.903491 31.3738 0.0791016 30.3568 0.0791016L3.10503 0.0791016Z" fill="currentColor"></path></svg>
+    </a>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col " style="">
+                        <div class="card mb-5  " data-mount=click-group>
+                            <div class="row d-flex align-items-center">
+                                <div class="col-3">
+                                    <picture class="" style="">
+                                        <img src="//images.ctfassets.net/ri4db8kokucw/0hfogN5yJhsCE2I9Z0fgP/ecabd884c16e0f6c2a05e9eda8a781b6/MSFT-Microsoft-Copilot-Logo-111x111.png" class="card-img img-object-cover" alt="Copilot logo">
+                                    </picture>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body ">
+                                        <h3 class="h4 pt-2 ">
+                                            Copilot app
+                                        </h3>
+                                        <div class="card-footer pt-2">
+
+
+    <a href="https://app.adjust.com/19i5ezb9?fallback=https%3A%2F%2Fwww.microsoft.com%2Fcopilot-app%3Fform%3DMA13MD%26OCID%3DMA13MD&amp;redirect_macos=https%3A%2F%2Fwww.microsoft.com%2Fcopilot-app%3Fform%3DMA13MD%26OCID%3DMA13MD" target="_blank" class="cta arrow lead font-weight-normal common-cta" aria-label="Download the Copilot app now" data-bi-ecn="Download now" data-bi-ehn="Mentioned in this article" data-bi-hn="Mentioned in this article" style="">
+        <span>Download now</span>
+            <svg class="arrow ml-2" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.10503 0.0791016C2.08803 0.0791016 1.2637 0.903491 1.2637 1.92044C1.2637 2.93739 2.08803 3.76178 3.10503 3.76178L25.9114 3.76178L0.53932 29.1339C-0.179773 29.853 -0.179773 31.0188 0.53932 31.738C1.2584 32.4571 2.42428 32.4571 3.14336 31.738L28.5155 6.36587L28.5155 29.1722C28.5155 30.1892 29.3398 31.0136 30.3568 31.0136C31.3738 31.0136 32.1982 30.1892 32.1982 29.1722V1.92044C32.1982 0.903491 31.3738 0.0791016 30.3568 0.0791016L3.10503 0.0791016Z" fill="currentColor"></path></svg>
+    </a>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col " style="">
+                        <div class="card mb-5  " data-mount=click-group>
+                            <div class="row d-flex align-items-center">
+                                <div class="col-3">
+                                    <picture class="" style="">
+                                        <img src="//images.ctfassets.net/ri4db8kokucw/0hfogN5yJhsCE2I9Z0fgP/ecabd884c16e0f6c2a05e9eda8a781b6/MSFT-Microsoft-Copilot-Logo-111x111.png" class="card-img img-object-cover" alt="Copilot logo">
+                                    </picture>
+                                </div>
+                                <div class="col-9">
+                                    <div class="card-body ">
+                                        <h3 class="h4 pt-2 ">
+                                            Copilot for individuals
+                                        </h3>
+                                        <div class="card-footer pt-2">
+
+
+    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/" target="_blank" class="cta arrow lead font-weight-normal common-cta" aria-label="Learn more about Copilot for individuals on our webpage" data-bi-ecn="Learn more" data-bi-ehn="Mentioned in this article" data-bi-hn="Mentioned in this article" style="">
+        <span>Learn more</span>
+            <svg class="arrow ml-2" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.10503 0.0791016C2.08803 0.0791016 1.2637 0.903491 1.2637 1.92044C1.2637 2.93739 2.08803 3.76178 3.10503 3.76178L25.9114 3.76178L0.53932 29.1339C-0.179773 29.853 -0.179773 31.0188 0.53932 31.738C1.2584 32.4571 2.42428 32.4571 3.14336 31.738L28.5155 6.36587L28.5155 29.1722C28.5155 30.1892 29.3398 31.0136 30.3568 31.0136C31.3738 31.0136 32.1982 30.1892 32.1982 29.1722V1.92044C32.1982 0.903491 31.3738 0.0791016 30.3568 0.0791016L3.10503 0.0791016Z" fill="currentColor"></path></svg>
+    </a>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+			</div>
+
+
+			<div class="article-right-container col-md-3 d-none d-md-block">
+				
+<div data-componentname="cf-articlecategories" id="search-articles-by-category" class="cmo-cards copilot-hub-sidebar pb-5 mb-5 version2 text-center">
+	<div class="fullbleed">
+		<div class="row row-cols-1 row-cols-md-1" style="">
+			<div class="col mt-3 " style="">
+				<div class="card-img-overlay  ">
+					<div class="card-background ">
+					</div>
+					<div class="card-foreground p-4">
+						<div class="card-body ">
+							<h2 class="h3">Search articles by category:</h2>
+						</div>
+						<div class="card-footer pt-2">
+							<div class="link-group">
+
+										<a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-for-daily-life" target="_self" class="common-cta" aria-label="Click to view more Daily Life articles" data-bi-ecn="Daily Life" data-bi-ehn="Search articles by category" data-bi-hn="Search articles by category">
+											<span class="">Daily Life</span>
+										</a>
+										<a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-art-and-creativity" target="_self" class="common-cta" aria-label="Click to view more AI Art &amp; Creativity articles" data-bi-ecn="AI Art &amp; Creativity" data-bi-ehn="Search articles by category" data-bi-hn="Search articles by category">
+											<span class="">AI Art &amp; Creativity</span>
+										</a>
+										<a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai" target="_self" class="common-cta" aria-label="Click to view more General AI articles" data-bi-ecn="General AI" data-bi-ehn="Search articles by category" data-bi-hn="Search articles by category">
+											<span class="">General AI</span>
+										</a>
+										<a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/learning-and-education" target="_self" class="common-cta" aria-label="Click to view more Learning &amp; Education articles" data-bi-ecn="Learning &amp; Education" data-bi-ehn="Search articles by category" data-bi-hn="Search articles by category">
+											<span class="">Learning &amp; Education</span>
+										</a>
+										<a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/ai-for-professional-life" target="_self" class="common-cta" aria-label="Click to view more Professional Life articles" data-bi-ecn="Professional Life" data-bi-ehn="Search articles by category" data-bi-hn="Search articles by category">
+											<span class="">Professional Life</span>
+										</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="article-bottom-container mt-5" style="background: transparent">
+
+
+			<div data-componentname="areaheading" class="area-heading  pt-4 half-width text-left cta-right version2" id="ah1" style="" data-bi-name="ah1" data-module-id="true">
+				<div class="container" style="">
+					<div class="row p-2 p-md-0">
+						<div class="col-sm-12 col-md-6 mx-auto pr-5">
+							<h2 class="h2">You may also like</h2>
+						</div>
+						<div class="col-sm-12 col-md-6 mx-auto">
+							
+
+    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/all-ai-articles" target="_self" class="cta chevron lead d-none d-md-inline-block float-md-right common-cta" aria-label="See all articles" data-bi-ecn="See all articles" data-bi-ehn="You may also like" data-bi-hn="You may also like" style="">
+        <span>See all articles</span>
+            <span class="glyph" aria-hidden="true"></span>
+    </a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+<div data-componentname="cf-relatedcards" id="related-cards" class="cmo-cards copilot-hub-cards equal-height">
+	<div class="container">
+		<div class="row row-cols-1 row-cols-md-3">
+			
+
+        <div data-componentname="cf-articles" class="col mt-3 mb-3">
+            <div class="card h-100" style="cursor: pointer;" data-mount="click-group">
+                <div data-componentname="cf-mediaimage" id="image1" class="copilot-hub-image py-3" style="">
+	<picture class="" style="">
+        <img data-src="//images.ctfassets.net/ri4db8kokucw/5r2kigM9oEO2d6BiHYD0GD/1f431284822b778bf392f7d0a38fba98/MSFT-COPILOT_Hero_What_Is_Copilot_and_How_Can_You_Use_New.png" src="https://images.ctfassets.net/ri4db8kokucw/5HTh2MFh6BS7rp4gSdT7Ty/4a82b3aa90e048a1ceba79b2fffe444f/placeholder-image.png" class="card-img img-object-cover lazy" alt="Talk to Copilot chat window with piano keys, and popsicle, and a hand in water" />
+	</picture>
+</div>
+                <div class="card-body ">
+                    <span class="badge mb-2 rounded-lg pl-0 pt-4 transparent text-uppercase">General AI - 4 MIN READ</span>
+                    <h3 class="h4">
+                        <a href="/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai/what-is-copilot" target="_self" aria-label="Learn about What is Copilot, and how can you use it?" data-bi-ecn="What is Copilot, and how can you use it?" data-bi-ehn="What is Copilot, and how can you use it?" data-bi-hn="What is Copilot, and how can you use it?">
+                            What is Copilot, and how can you use it?
+                        </a>
+                    </h3>
+                    <div class="mb-3">
+                        <p>Learn how you can use Copilot, your AI-companion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-componentname="cf-articles" class="col mt-3 mb-3">
+            <div class="card h-100" style="cursor: pointer;" data-mount="click-group">
+                <div data-componentname="cf-mediaimage" id="image1" class="copilot-hub-image py-3" style="">
+	<picture class="" style="">
+        <img data-src="//images.ctfassets.net/ri4db8kokucw/NXIEdepX4Vv7d16q2vwbN/a88af656aa66f6b8e87a7e847cfeaa98/MSFT-Smiling-female-entrepreneur-with-laptop-standing-in-office.png" src="https://images.ctfassets.net/ri4db8kokucw/5HTh2MFh6BS7rp4gSdT7Ty/4a82b3aa90e048a1ceba79b2fffe444f/placeholder-image.png" class="card-img img-object-cover lazy" alt="Smiling female entrepreneur with laptop standing in office" />
+	</picture>
+</div>
+                <div class="card-body ">
+                    <span class="badge mb-2 rounded-lg pl-0 pt-4 transparent text-uppercase">General AI - 4 MIN READ</span>
+                    <h3 class="h4">
+                        <a href="/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai/take-charge-of-your-copilot-experience" target="_self" aria-label="Learn about You&#x2019;re in charge of your Copilot experience" data-bi-ecn="You&#x2019;re in charge of your Copilot experience" data-bi-ehn="You&#x2019;re in charge of your Copilot experience" data-bi-hn="You&#x2019;re in charge of your Copilot experience">
+                            You&#x2019;re in charge of your Copilot experience
+                        </a>
+                    </h3>
+                    <div class="mb-3">
+                        <p>You decide what data you share and when.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-componentname="cf-articles" class="col mt-3 mb-3">
+            <div class="card h-100" style="cursor: pointer;" data-mount="click-group">
+                <div data-componentname="cf-mediaimage" id="image1" class="copilot-hub-image py-3" style="">
+	<picture class="" style="">
+        <img data-src="//images.ctfassets.net/ri4db8kokucw/sqSy8dBk6fNNM7gJmvoEY/e811991ff5fe6010e41a04bf2504b773/MLSD-COP_Hero_Copilot_Plan_Is_Right_for_You_1083x609.png" src="https://images.ctfassets.net/ri4db8kokucw/5HTh2MFh6BS7rp4gSdT7Ty/4a82b3aa90e048a1ceba79b2fffe444f/placeholder-image.png" class="card-img img-object-cover lazy" alt="Friends sitting around discussing what they need Copilot to do for them in their jobs" />
+	</picture>
+</div>
+                <div class="card-body ">
+                    <span class="badge mb-2 rounded-lg pl-0 pt-4 transparent text-uppercase">General AI - 4 MIN READ</span>
+                    <h3 class="h4">
+                        <a href="/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai/right-copilot-plan-for-you" target="_self" aria-label="Learn about 5 Reasons to use Copilot in GroupMe" data-bi-ecn="5 Reasons to use Copilot in GroupMe" data-bi-ehn="5 Reasons to use Copilot in GroupMe" data-bi-hn="5 Reasons to use Copilot in GroupMe">
+                            5 Reasons to use Copilot in GroupMe
+                        </a>
+                    </h3>
+                    <div class="mb-3">
+                        <p>Find a Copilot plan that works for you by exploring the different subscription options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		</div>
+	</div>
+</div>		<div data-componentname="cf-composerbar" id="composer" class="sticky-bar" style="opacity: 1; visibility: visible;">
+	<div class="pt-5 black-button not-bottom-sticky release-sticky">
+		<div class="position-relative bottom-sticky-wrapper">
+			<div class="live-text-ai composer-box" data-prompts='[]' >
+				<picture>
+					<img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/ST1262405%20Copilot%20Logo?scl=1&amp;fmt=png-alpha" class="card-img img-object-cover" alt="Rainbow Copilot icon">
+				</picture>
+				<input class="searchtext" title="Copilot" placeholder="Article Composer Bar CTA" readonly />
+				<div class="link-group">
+				<a href="https://copilot.microsoft.com/" target="_blank" class="copilot-search text-decoration-none font-weight-bold border-radius-30 article-composer-bar" aria-label="Article Composer Bar CTA" data-bi-ecn="Message Copilot" data-bi-ehn="Message Copilot" data-bi-hn="Message Copilot">
+						<span class=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Icon 24px" data-bi-name="Icon 24px" data-module-id="true"><path id="Shape" d="M4.20938 10.7327C3.92369 11.0326 3.93523 11.5074 4.23516 11.7931C4.53509 12.0787 5.00982 12.0672 5.29551 11.7673L11.25 5.516V20.25C11.25 20.6642 11.5858 21 12 21C12.4142 21 12.75 20.6642 12.75 20.25V5.51565L18.7048 11.7673C18.9905 12.0672 19.4652 12.0787 19.7652 11.7931C20.0651 11.5074 20.0766 11.0326 19.791 10.7327L12.7243 3.31379C12.5632 3.14474 12.3578 3.04477 12.1443 3.01386C12.0976 3.00477 12.0494 3 12 3C11.9503 3 11.9017 3.00483 11.8547 3.01406C11.6417 3.04518 11.4368 3.14509 11.2761 3.31379L4.20938 10.7327Z" fill="#33302E" data-bi-name="Shape" data-module-id="true"></path></g></svg></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+</div>
+
+<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Article",
+			"mainEntityOfPage": "https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/do-more-with-ai/general-ai/ai-prompt-writing/?form=MA13KP",
+			"headline": "AI prompting 101: How to write the best AI prompts",
+			"image": ["//images.ctfassets.net/ri4db8kokucw/4FW6V0jy6KUY5NkW3iPmkh/364d24e985b22c863d98998fe48ba6d4/MSFT-A-screenshot-of-Bing-Chats-prompt-box1.png"],
+			"datePublished": "2023-11-21T21:00:00Z",
+			"dateModified": "2023-11-21T21:00:00Z",
+			"author": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Microsoft",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://images.ctfassets.net/ri4db8kokucw/4ATBao6S9EsZLvnsfT7XZf/d38be4798efd66d0a3bf79ee707d74ba/MSFT-Logo.png"
+				}
+			}
+		}
+	</script>
+
+    </main>
+
+<uhf-footer locale="en-us" partnerId="MSCopilotM" footerId="MSCopilotMFooter" theme="light">
+    <script id="uhf-footer-ccpa">
+        (function () {
+            function checkThirdPartyAdsOptOutCookie() {
+                try {
+                    var match = document.cookie.match('(^|;)\\s*3PAdsOptOut\\s*=\\s*([^;]+)');
+                    return (match ? match[2] : '') !== '1';
+                } catch (e) {
+                    return true;
+                }
+            }
+            var globalPrivacyControlEnabled = navigator.globalPrivacyControl;
+            window.GPC_DataSharingOptIn = globalPrivacyControlEnabled ? false : checkThirdPartyAdsOptOutCookie();
+            if (typeof window.onGPCLoaded === 'function') {
+                window.onGPCLoaded();
+            }
+        })();
+    </script>
+    
+<uhf-footer-nav slot="uhf-footer-nav">
+            <div class="uhf-footer-nav-row">
+                    <uhf-footer-nav-group class="uhf-footer-nav-group" heading="What&#x27;s new" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_What&#x27;s new_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Whats_New_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/surface/devices/surface-pro" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_What&#x27;s new_Surface Pro_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Whats_New_Footer_WhatsNew_NewSurfacePro_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Surface Pro</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/surface/devices/surface-laptop" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_What&#x27;s new_Surface Laptop_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Whats_New_Footer_WhatsNew_SurfaceLaptop_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Surface Laptop</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra?icid=DSM_Footer_WhatsNew_SurfaceLaptopUltra" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_What&#x27;s new_Surface Laptop Ultra_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Whats_New_Footer_WhatsNew_Surface Laptop Ultra_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Surface Laptop Ultra</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/surface/devices/surface-rtx-spark-dev-box?icid=DSM_Footer_WhatsNew_SurfaceRTXSparkDevBox" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_What&#x27;s new_Surface RTX Spark Dev Box_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Whats_New_footer_whatsnew_SurfaceRTXSparksDevBox_nav_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Surface RTX Spark Dev Box</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/microsoft-copilot/organizations?icid=DSM_Footer_CopilotOrganizations" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_What&#x27;s new_Copilot for organizations_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Whats_New_Footer_WhatsNew_CopilotMicrosoft_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Copilot for organizations</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals?form=MY02PT&amp;OCID=GE_web_Copilot_Free_868g3t5nj" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_What&#x27;s new_Copilot for personal use_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Whats_New_Footer_WhatsNew_CopilotPersonal_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Copilot for personal use</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/microsoft-products-and-apps" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_What&#x27;s new_Explore Microsoft products_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Whats_New_Footer_WhatsNew_ExploreMicrosoftProducts_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Explore Microsoft products</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/windows/apps-for-windows?icid=DSM_Footer_WhatsNew_Windows11apps" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_What&#x27;s new_Windows 11 apps_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Whats_New_Footer_WhatsNew_Windows_11_apps_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Windows 11 apps</a>                            
+                    </uhf-footer-nav-group>
+                    <uhf-footer-nav-group class="uhf-footer-nav-group" heading="Microsoft Store" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Microsoft Store_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Store_and_Support_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">
+                                <a class="uhf-footer-link" href="https://account.microsoft.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Microsoft Store_Account profile_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Store_and_Support_Footer_StoreandSupport_AccountProfile_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Account profile</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/download" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Microsoft Store_Download Center_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Store_and_Support_Footer_StoreandSupport_DownloadCenter_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Download Center</a>                            
+                                <a class="uhf-footer-link" href="https://go.microsoft.com/fwlink/?linkid=2139749" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Microsoft Store_Microsoft Store support_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Store_and_Support_Footer_StoreandSupport_SalesAndSupport_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft Store support</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/store/b/returns" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Microsoft Store_Returns_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Store_and_Support_Footer_StoreandSupport_Returns_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Returns</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/store/b/order-tracking" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Microsoft Store_Order tracking_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Store_and_Support_Footer_StoreandSupport_OrderTracking_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Order tracking</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/store/b/certified-refurbished-products" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Microsoft Store_Certified Refurbished_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Store_and_Support_Footer_StoreandSupport_StoreLocations_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Certified Refurbished</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/store/b/why-microsoft-store?icid=footer_why-msft-store_7102020" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Microsoft Store_Microsoft Store Promise_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Store_and_Support_Footer_StoreandSupport_MicrosoftPromise_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft Store Promise</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/store/b/payment-financing-options?icid=footer_financing_vcc" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Microsoft Store_Flexible Payments_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Store_and_Support_Footer_StoreandSupport_Financing_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Flexible Payments</a>                            
+                    </uhf-footer-nav-group>
+                    <uhf-footer-nav-group class="uhf-footer-nav-group" heading="Education" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Education_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Education_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/education" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Education_Microsoft in education_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Education_Footer_Education_MicrosoftInEducation_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft in education</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/education/devices/overview" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Education_Devices for education_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Education_Footer_Education_DevicesforEducation_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Devices for education</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/education/products/teams" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Education_Microsoft Teams for Education_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Education_Footer_Education_MicrosoftTeamsforEducation_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft Teams for Education</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/education/products/microsoft-365" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Education_Microsoft 365 Education_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Education_Footer_Education_Microsoft365Education_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft 365 Education</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/education/how-to-buy" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Education_How to buy for your school_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Education_Footer_Howtobuyforyourschool_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">How to buy for your school</a>                            
+                                <a class="uhf-footer-link" href="https://education.microsoft.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Education_Educator training and development_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Education_Footer_Education_EducatorTrainingDevelopment_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Educator training and development</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/store/b/education" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Education_Deals for students and parents_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Education_Footer_Education_DealsForStudentsandParents_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Deals for students and parents</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/education/ai-in-education" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Education_AI for education_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Education_Footer_Education_Azureforstudents_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">AI for education</a>                            
+                    </uhf-footer-nav-group>
+            </div>
+            <div class="uhf-footer-nav-row">
+                    <uhf-footer-nav-group class="uhf-footer-nav-group" heading="Business" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Business_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Business_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/ai?icid=DSM_Footer_AI" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Business_Microsoft AI_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Business_Footer_Business_AI_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft AI</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/security" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Business_Microsoft Security_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Business_Footer_Business_Microsoft Security_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft Security</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/dynamics-365" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Business_Dynamics 365_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Business_Footer_Business_MicrosoftDynamics365_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Dynamics 365</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/microsoft-365/business" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Business_Microsoft 365_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Business_Footer_Business_M365_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft 365</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/power-platform" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Business_Microsoft Power Platform_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Business_Footer_DeveloperAndIT_Power Platform_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft Power Platform</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Business_Microsoft Teams_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Business_Footer_Business_Microsoft365_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft Teams</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/microsoft-365-copilot?icid=DSM_Footer_Microsoft365Copilot" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Business_Microsoft 365 Copilot_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Business_Footer_CopilotMicrosoft365 _nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft 365 Copilot</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/store/b/business?icid=CNavBusinessStore" id="Small-Business" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Business_Small Business_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Business_Footer_Business-SmallBusiness_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Small Business</a>                            
+                    </uhf-footer-nav-group>
+                    <uhf-footer-nav-group class="uhf-footer-nav-group" heading="Developer &amp; IT" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Developer &amp; IT_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Developer_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">
+                                <a class="uhf-footer-link" href="https://azure.microsoft.com/en-us/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Developer &amp; IT_Azure_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Developer_Footer_DeveloperAndIT_MicrosoftAzure_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Azure</a>                            
+                                <a class="uhf-footer-link" href="https://developer.microsoft.com/en-us/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Developer &amp; IT_Microsoft Developer_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Developer_Footer_DeveloperAndIT_MicrosoftDeveloper_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft Developer</a>                            
+                                <a class="uhf-footer-link" href="https://learn.microsoft.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Developer &amp; IT_Microsoft Learn_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Developer_Footer_DeveloperAndIT_MicrosoftLearn_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft Learn</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/software-development-companies/offers-benefits/isv-success?icid=DSM_Footer_SupportAIMarketplace&amp;ocid=cmm3atxvn98" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Developer &amp; IT_Support for AI marketplace apps_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Developer_Footer_DeveloperAndIT_SupportForAIMarketplaceApps_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Support for AI marketplace apps</a>                            
+                                <a class="uhf-footer-link" href="https://techcommunity.microsoft.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Developer &amp; IT_Microsoft Tech Community_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Developer_Footer_DeveloperAndIT_MicrosoftTechCommunity_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft Tech Community</a>                            
+                                <a class="uhf-footer-link" href="https://marketplace.microsoft.com?icid=DSM_Footer_Marketplace&amp;ocid=cmm3atxvn98" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Developer &amp; IT_Microsoft Marketplace_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Developer_Footer_DeveloperAndIT_Marketplace_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Microsoft Marketplace</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/software-development-companies?icid=DSM_Footer_SoftwareCompanies&amp;ocid=cmm3atxvn98" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Developer &amp; IT_Software companies_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Developer_Software companies_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Software companies</a>                            
+                                <a class="uhf-footer-link" href="https://visualstudio.microsoft.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Developer &amp; IT_Visual Studio_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Developer_Footer_DeveloperAndIT_MicrosoftVisualStudio_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Visual Studio</a>                            
+                    </uhf-footer-nav-group>
+                    <uhf-footer-nav-group class="uhf-footer-nav-group" heading="Company" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Company_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Company_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">
+                                <a class="uhf-footer-link" href="https://careers.microsoft.com/" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Company_Careers_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Company_Footer_Company_Careers_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Careers</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/about" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Company_About Microsoft_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Company_Footer_Company_AboutMicrosoft_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">About Microsoft</a>                            
+                                <a class="uhf-footer-link" href="https://news.microsoft.com/source/?icid=DSM_Footer_Company_CompanyNews" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Company_Company news_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Company_Footer_Company_CompanyNews_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Company news</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/privacy?icid=DSM_Footer_Company_Privacy" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Company_Privacy at Microsoft_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Company_Footer_Company_PrivacyAtMicrosoft_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Privacy at Microsoft</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/investor/default.aspx" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Company_Investors_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Company_Footer_Company_Investors_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Investors</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/diversity/default?icid=DSM_Footer_Company_Diversity" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Company_Diversity and inclusion_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Company_Footer_Company_DiversityAndInclusion_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Diversity and inclusion</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/accessibility" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Company_Accessibility_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Company_Footer_Company_Accessibility_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Accessibility</a>                            
+                                <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/corporate-responsibility/sustainability?icid=DSM_Footer_Sustainability" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;FooterNav&quot;, &quot;cN&quot;: &quot;FooterNav_Company_Sustainability_nav&quot;, &quot;ecn&quot;: &quot;FooterNav_Company_Footer_Company_Sustainability_nav&quot;, &quot;ehn&quot;: &quot;FooterNav&quot;}">Sustainability</a>                            
+                    </uhf-footer-nav-group>
+            </div>
+</uhf-footer-nav>
+        <a slot="uhf-footer-locale-picker" class="uhf-footer-link" href="https://www.microsoft.com/en-us/locale" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_English (United States)_nav&quot;, &quot;ecn&quot;: &quot;LegalNav_LocalePicker_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}" aria-label="Content Language Selector. Currently set to English (United States)">English (United States)</a>
+    <div slot="uhf-footer-california-privacy-link">
+        
+<a class="uhf-footer-link" href="https://aka.ms/yourcaliforniaprivacychoices" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_California Privacy_nav&quot;, &quot;ecn&quot;: &quot;LegalNav_CaliforniaPrivacy_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}">
+    <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43">
+    <title>Your Privacy Choices Opt-Out Icon</title>
+    <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"/>
+    <path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"/>
+    <path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"/>
+    <path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"/>
+    </svg>
+    <span>Your Privacy Choices</span>
+</a>
+        <noscript>
+            
+<a class="uhf-footer-link" href="https://aka.ms/yourcaliforniaprivacychoices" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_California Privacy_nav&quot;, &quot;ecn&quot;: &quot;LegalNav_CaliforniaPrivacy_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}">
+    <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43">
+    <title>Your Privacy Choices Opt-Out Icon</title>
+    <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"/>
+    <path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"/>
+    <path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"/>
+    <path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"/>
+    </svg>
+    <span>Your Privacy Choices</span>
+</a>
+        </noscript>
+    </div>
+    <a slot="uhf-footer-consumer-health-privacy-link" class="uhf-footer-link" href="https://go.microsoft.com/fwlink/?linkid=2259814" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_Consumer Health Privacy_nav&quot;, &quot;ecn&quot;: &quot;LegalNav_ConsumerHealthPrivacy_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}">Consumer Health Privacy</a>
+    
+<uhf-footer-menu slot="uhf-footer-menu" data-nav-label="Microsoft corporate links">
+            <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/sitemap1.aspx" id="uhf-Footer_Sitemap" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_Sitemap_nav&quot;, &quot;ecn&quot;: &quot;LegalNav_Footer_Sitemap_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}">Sitemap</a>
+            <a class="uhf-footer-link" href="https://support.microsoft.com/contactus" id="uhf-Footer_ContactUs" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_Contact Microsoft_nav&quot;, &quot;ecn&quot;: &quot;LegalNav_Footer_ContactUs_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}">Contact Microsoft</a>
+            <a class="uhf-footer-link" href="https://go.microsoft.com/fwlink/?LinkId=521839" id="uhf-Footer_PrivacyandCookies" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_Privacy _nav&quot;, &quot;ecn&quot;: &quot;LegalNav_Footer_PrivacyandCookies_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}">Privacy </a>
+            <a class="uhf-footer-link" href="#" id="uhf-Footer_ManageCookies" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_Manage cookies_nav&quot;, &quot;ecn&quot;: &quot;LegalNav_Footer_ManageCookies_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}">Manage cookies</a>
+            <a class="uhf-footer-link" href="https://go.microsoft.com/fwlink/?LinkID=206977" id="uhf-Footer_TermsOfUse" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_Terms of use_nav&quot;, &quot;ecn&quot;: &quot;LegalNav_Footer_TermsOfUse_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}">Terms of use</a>
+            <a class="uhf-footer-link" href="https://go.microsoft.com/fwlink/?linkid=2196228" id="uhf-Footer_Trademarks" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_Trademarks_nav&quot;, &quot;ecn&quot;: &quot;LegalNav_Footer_Trademarks_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}">Trademarks</a>
+            <a class="uhf-footer-link" href="https://go.microsoft.com/fwlink/?linkid=2196227" id="uhf-Footer_SafetyAndEco" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_Safety &amp; eco_nav&quot;, &quot;ecn&quot;: &quot;LegalNav_Footer_SafetyAndEco_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}">Safety &amp; eco</a>
+            <a class="uhf-footer-link" href="https://www.microsoft.com/en-us/legal/compliance/recycling" id="uhf-Recycling" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_Recycling_nav&quot;, &quot;ecn&quot;: &quot;LegalNav_Recycling_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}">Recycling</a>
+            <a class="uhf-footer-link" href="https://choice.microsoft.com" id="uhf-Footer_AboutourAds" data-m="{&quot;compnm&quot;: &quot;UHF&quot;, &quot;view&quot;: &quot;UHF&quot;, &quot;pa&quot;: &quot;UniversalFooter&quot;, &quot;hn&quot;: &quot;LegalNav&quot;, &quot;cN&quot;: &quot;LegalNav_About our ads_nav&quot;, &quot;ecn&quot;: &quot;LegalNav_Footer_AboutourAds_nav&quot;, &quot;ehn&quot;: &quot;LegalNav&quot;}">About our ads</a>
+</uhf-footer-menu>
+</uhf-footer>    <script type="module" src="https://www.microsoft.com/videoplayer/ump.mjs"></script>
+    <script src="/en-us/microsoft-copilot/for-individuals/js/bundle.js"></script>
+
+    
+
+    
+        <script src="/en-us/microsoft-copilot/for-individuals/js/global.min.js?v=uqSG7cz4PwcWQDBrgMeSDh9Krxj0bvzb_9MR_8L8ONU"></script>
+        <script src="/en-us/microsoft-copilot/for-individuals/js/contentful.min.js?v=t9EK5Eiwog8VCsWhchRDNXTXi2sc8zlR6TqLqgmCf3M"></script>
+    
+
+    <script src="/en-us/microsoft-copilot/for-individuals/js/SmoothScrolling.min.js"></script>
+
+<script type="module" src="https://uhf.microsoft.com/statics/20260701.14.10/js/entry.js"></script>
+    
+    <script type="text/javascript">_satellite.pageBottom();</script>
+</body>
+</html>

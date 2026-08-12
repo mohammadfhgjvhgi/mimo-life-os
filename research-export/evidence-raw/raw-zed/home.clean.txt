@@ -1,0 +1,499 @@
+TITLE: Zed — Your last next editor
+DESCRIPTION: Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.
+
+Early Access: DeltaDB, a new kind of version control → 
+
+# Your last next editor
+Zed is a minimal code editor crafted for speed and collaboration with humans and AI.
+
+Download now D Clone source C 
+Available for macOS, Linux, and Windows
+
+Fast
+Written from scratch in Rust to efficiently leverage multiple CPU cores and your GPU.
+
+Agentic
+Run agents in parallel to smoothly edit files, navigate code, and run tools at native speed.
+
+Collaborative
+Chat with teammates, code together, and share your screen and project.
+
+Search…
+
+zed 
+
+Add AccessKit support to GPUI elements 
+gpui-accesskit / main • 
+4m 
+
+Fix panic in buffer rope on large paste 
+rope-panic-fix • 
+12m 
+
+Add vim motion for surround pairs 
++ 23 - 2 • 
+48m 
+
+Workspace close button hidden with single tab 
+2h 
+
+GPUI text shaping perf regression 
+text-shaping-opt • 
+5h 
+
+LSP hover tooltip positioning off-screen 
+1d 
+
+Refactor project panel tree diffing 
+tree-diff-refactor • 
+2d 
+
+Add multicursor support in search replace 
+4d 
+
+cloud 
+
+Migrate billing endpoints to axum router 
+axum-billing • 
++ 43 - 11 • 
+8m 
+
+Add TanStack query keys for team settings 
++ 2 - 127 • 
+1h 
+
+Fix stale cache on org membership change 
+6h 
+
+Rust SDK pagination for collab sessions 
+sdk-pagination / first-pass • 
+1d 
+
+Dashboard table sorting with TanStack 
+3d 
+
+zed.dev 
+
+Break out page sections into components 
+parallel-agents-page • 
+2m 
+
+Fix hydration mismatch in blog layout 
+45m 
+
+Refactor email submit API route 
+api-route-cleanup • 
+3h 
+
+Add OG image generation for blog posts 
+8h 
+
+Tailwind v4 migration for global.css tokens 
+tailwind-v4 • 
+1d 
+
+Fix flaky MDX content loader tests 
+2d 
+
+Add dark mode toggle to theme preview 
+theme-builder-dark • 
+3d 
+
+personal-project 
+
+zed main / main 
+
+Add AccessKit support to GPUI elements 
+
+I want to add AccessKit support to GPUI so screen readers can traverse the element tree. Can you start by figuring out where the accessibility tree should be built and how elements currently expose their roles?
+Read crates/gpui/src/element.rs 
+Search "accessibility" in crates/gpui/ 
+List crates/gpui/src/platform/ 
+Let me look at the GPUI element trait and the window's paint cycle to understand where we can hook into the tree. I'll also check if there's any existing accessibility scaffolding.
+
+Write Claude Opus 4.6 
+
+scheduler.tsx
+
+catware.rs
+
+Uncommitted Changes
+
+panic
+
+src/components/scheduler.tsx 
+
+```
+1 "use client" 2 ​ 3 import * as React from "react" 4 import { format , addMinutes , isAfter } from "date-fns" 5 ​ 6 // Types for our "essential" meeting system 7 interface Meeting { 8 id : string 9 title : string 10 couldHaveBeenAnEmail : boolean 'couldHaveBeenAnEmail' is declared but its value is never read. 11 attendees : string [ ] 12 snacksProvided : boolean 13 actuallyStartsOnTime : number Type 'string' is not assignable to type 'number'. 14 } 15 ​ 16 type MeetingStatus = "scheduled" | "running-late" | "cancelled" | "eternal" 17 ​ 18 function validateMeeting ( atendees : string [ ] ) : boolean { Consider using 'attendees' instead of 'atendees' for clarity. 19 return atendees . length > 0 && atendees . length < 50 20 } 21 ​ 22 let agendaItem = "Discuss why we need more meetings" 'agendaItem' can be declared as 'const' since it is never reassigned. 23 ​ 24 const MEETING_EXCUSES = [ 25 "Sorry, I was on mute" , 26 "Can everyone see my screen?" , 27 "Let's take this offline" , 28 "Per my last email..." , 29 "I have a hard stop in 5 minutes" , 30 ] as const 31 ​ 32 /** Props for the world's most essential component */ 33 interface MeetingSchedulerProps { 34 defaultDuration ? : number 35 maxAttendees ? : number 36 requiresSnacks ? : boolean 37 onMeetingCreate ? : ( meeting : Meeting ) => void 38 onEscapeAttempt ? : ( ) => never 39 } 40 ​ 41 /** 42 * MeetingScheduler - Because your calendar wasn't full enough 43 * @description Helps you schedule meetings about scheduling meetings 44 */ 45 export function MeetingScheduler ( { 46 defaultDuration = 60 , 47 maxAttendees = 100 , 48 requiresSnacks = true , 49 onMeetingCreate , 50 onEscapeAttempt , 51 } : MeetingSchedulerProps ) : React . ReactElement { 52 const [ meetings , setMeetings ] = React . useState < Meeting [ ] > ( [ ] ) 53 const [ excuseIndex , setExcuseIndex ] = React . useState ( 0 ) 54 const [ isLoading , setIsLoading ] = React . useState < boolean > ( false ) 55 ​ 56 const formRef = React . useRef < HTMLFormElement > ( null ) 57 const sanityRef = React . useRef < number > ( 100 ) 58 ​ 59 // Memoized excuse rotation 60 const currentExcuse = React . useMemo ( ( ) => { 61 return MEETING_EXCUSES [ excuseIndex % MEETING_EXCUSES . length ] 62 } , [ excuseIndex ] ) 63 ​ 64 // Effect: Gradually decrease sanity 65 React . useEffect ( ( ) => { 66 const interval = setInterval ( ( ) => { 67 sanityRef . current = Math . max ( 0 , sanityRef . current - 1 ) 68 if ( sanityRef . current === 0 ) { 69 console . warn ( "Developer sanity depleted" ) 70 } 71 } , 60000 ) 72 ​ 73 return ( ) => clearInterval ( interval ) 74 } , [ ] ) 75 ​ 76 // Callback for creating meetings 77 const handleCreateMeeting = React . useCallback ( 78 async ( title : string , attendees : string [ ] ) => { 79 if ( ! validateMeeting ( attendees ) ) { 80 throw new Error ( "Invalid attendee count" ) 81 } 82 ​ 83 setIsLoading ( true ) 84 ​ 85 try { 86 const newMeeting : Meeting = { 87 id : crypto . randomUUID ( ) , 88 title : title || "Meeting about meetings" , 89 couldHaveBeenAnEmail : true , 90 attendees , 91 snacksProvided : requiresSnacks , 92 actuallyStartsOnTime : "never" , // This causes the error 93 } 94 ​ 95 setMeetings ( ( prev ) => [ ... prev , newMeeting ] ) 96 onMeetingCreate ?. ( newMeeting ) 97 setExcuseIndex ( ( i ) => i + 1 ) 98 } catch ( error ) { 99 console . error ( "Failed to create meeting:" , error ) 100 } finally { 101 setIsLoading ( false ) 102 } 103 } , 104 [ requiresSnacks , onMeetingCreate ] 105 ) 106 ​ 107 // Render the meeting madness 108 return ( 109 < div className = "meeting-scheduler p-6 bg-white rounded-lg shadow-xl" > 110 < header className = "mb-4 border-b pb-2" > 111 < h1 className = "text-2xl font-bold text-gray-900" > 112 📅 Meeting Scheduler Pro™ 113 </ h1 > 114 < p className = "text-sm text-gray-500 italic" > 115 " { currentExcuse } " 116 </ p > 117 </ header > 118 ​ 119 < form 120 ref = { formRef } 121 onSubmit = { ( e ) => { 122 e . preventDefault ( ) 123 handleCreateMeeting ( "Sync" , [ "everyone@company.com" ] ) 124 } } 125 className = "space-y-4" 126 > 127 < input 128 type = "text" 129 placeholder = "Meeting title (optional, like agendas)" 130 className = "w-full px-3 py-2 border rounded" 131 maxLength = { 255 } 132 /> 133 ​ 134 < select 135 defaultValue = { defaultDuration } 136 className = "w-full px-3 py-2 border rounded" 137 > 138 < option value = { 30 } > 30 min (ambitious) </ option > 139 < option value = { 60 } > 1 hour (realistic) </ option > 140 < option value = { 120 } > 2 hours (why?) </ option > 141 < option value = { 480 } > All day (send help) </ option > 142 </ select > 143 ​ 144 < button 145 type = "submit" 146 disabled = { isLoading } 147 className = "w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50" 148 > 149 { isLoading ? "Syncing calendars..." : "Schedule Meeting" } 150 </ button > 151 </ form > 152 ​ 153 { meetings . length > 0 && ( 154 < ul className = "mt-6 divide-y" > 155 { meetings . map ( ( meeting ) => ( 156 < li key = { meeting . id } className = "py-3" > 157 < span className = "font-medium" > { meeting . title } </ span > 158 < span className = "text-gray-400 ml-2" > 159 ( { meeting . attendees . length } victims) 160 </ span > 161 </ li > 162 ) ) } 163 </ ul > 164 ) } 165 </ div > 166 ) 167 } 168 ​ 169 export default MeetingScheduler 
+
+zed.dev — zsh
+
+```
+███████╗███████╗██████╗ 
+
+```
+╚══███╔╝██╔════╝██╔══██╗ 
+
+```
+███╔╝ █████╗ ██║ ██║ 
+
+```
+███╔╝ ██╔══╝ ██║ ██║ 
+
+```
+███████╗███████╗██████╔╝ 
+
+```
+╚══════╝╚══════╝╚═════╝ 
+
+Editor : Zed 
+Platform : macOS 
+
+1 5 
+Rust 
+
+## Trusted by world-class developers & industry leading teams
+
+Yes! Now I can have shortcuts to run and debug tests. Ever since snippets were added, Zed has all of the features I could ask for in an editor. JV 
+José Valim
+Creator of Elixir
+
+I've had my mind blown using Zed with Claude 3.5 Sonnet. I wrote up a few sentences around a research idea and Claude 3.5 Sonnet delivered a first pass in seconds. When I spotted some small mistakes, I highlighted the parts I wanted to change and shared feedback for it to fix. I was able to go from idea to running experiment code in half an hour —it was really easy and fun. EP 
+Ethan Perez
+Adversarial Robustness Research Lead
+
+This is obviously a product built with love and care. I can tell it from two minutes of using it. Kudos to the team. DA 
+Dan Abramov
+React Core Team Member
+
+My god it is so fast. Boot time, UI interaction, typing latency. I feel it. I knew VS Code always felt sluggish, but I didn't realize how good things could really be. I'm honestly astounded. MB 
+Matt Baker
+Principal Engineer
+
+I’ve started using Zed, and I love it. Lots of subtle innovations (multibuffers, inlay hints, collaboration). Thoughtful, precise design. And the speed, the speed! MB 
+Mike Bostock
+Creator of D3.js, founder of Observable
+
+## Zed Just Works
+Incredibly powerful out of the box. And it only gets better as, every week, there's always a new version.
+View Roadmap View Releases 
+
+Learn More → 
+
+Parallel Agents
+Run multiple threads of your favorite agents across several projects so you never leave your flow.
+
+Learn More → Expand Video Play Video 
+
+Debugger
+Built on the Debug Adapter Protocol (DAP), native support for debugging across multiple programming languages.
+
+Learn More → Expand Video Play Video 
+
+Agentic Editing
+Zed natively supports agentic editing, enabling fluent collaboration between humans and AI.
+
+Learn More → Expand Video Play Video 
+
+Native Git Support
+First-class support for staging, committing, pulling, pushing, viewing diffs, and many more Git operations.
+
+Learn More → Expand Video Play Video 
+
+Edit Prediction
+A tool that anticipates your next move. Powered by Zeta2, our open-weight language model.
+
+Parallel Agents
+Run multiple threads of your favorite agents across several projects so you never leave your flow.
+
+Debugger
+Built on the Debug Adapter Protocol (DAP), native support for debugging across multiple programming languages.
+
+Agentic Editing
+Zed natively supports agentic editing, enabling fluent collaboration between humans and AI.
+
+Native Git Support
+First-class support for staging, committing, pulling, pushing, viewing diffs, and many more Git operations.
+
+Edit Prediction
+A tool that anticipates your next move. Powered by Zeta2, our open-weight language model.
+
+Remote Development
+Your machine only runs the Zed UI, while the actual codebase runs on a remote server.
+
+Multibuffer editing
+Multibuffers compose excerpts from across the codebase in one editable surface.
+
+Vim-friendly
+First-class modal editing via Vim bindings, including features like text objects and marks.
+
+Loading…
+
+## AI that works the way you code
+Zed doesn't lock you into one model, it gives you the fastest way to collaborate with any agent.
+Learn about AI in Zed 
+Agentic Editing 
+
+### Agentic Editing
+
+Delegate work to the agent, follow their progress live and review changes with ease.
+Learn More Edit Prediction 
+
+### Edit Prediction
+
+An open-source, open-data language model that predicts what you'll type next.
+Learn More Inline Assistant 
+
+### Inline Assistant
+
+Easily transform your code in-line by sending selected code to a language model.
+Learn More Any Agent, Any Tool 
+
+### Any Agent, Any Tool
+
+Bring agents like Claude Agent, Codex, or OpenCode via ACP. Connect MCP servers for extending the agent's knowledge.
+Learn More 
+
+Expand Video Play Video 
+
+Expand Video Play Video 
+
+Expand Video Play Video 
+
+Expand Video Play Video 
+
+Agentic Editing
+Delegate work to the agent, follow their progress live and review changes with ease.
+
+Edit Prediction
+An open-source, open-data language model that predicts what you'll type next.
+
+Inline Assistant
+Easily transform your code in-line by sending selected code to a language model.
+
+Any Agent, Any Tool
+Bring agents like Claude Agent, Codex, or OpenCode via ACP. Connect MCP servers for extending the agent's knowledge.
+
+## Growing extensions ecosystem
+Boost your Zed experience by choosing from hundreds of extensions that broaden language support, offer different themes, and more.
+Create Extension View All Extensions 
+
+HTML
+6.2M
+
+HTML support.
+Isaac Clayton
+
+Git Firefly
+1.6M
+
+Provides Git Syntax Highlighting
+d1y, Peter Tripp
+
+TOML
+1.2M
+
+TOML support.
+Max Brunsfeld, Ammar Arif
+
+Java
+1.1M
+
+Java support.
+Java Extension Contributors
+
+Catppuccin
+968k
+
+🦀 Soothing pastel theme for Zed
+Catppuccin
+
+Dockerfile
+930k
+
+Dockerfile support.
+d1y, joshmeads
+
+SQL
+760k
+
+SQL language support.
+nervenes, notpeter, phileix, tammyxiong
+
+PHP
+709k
+
+PHP support.
+Piotr Osiewicz
+
+Vue
+643k
+
+Vue support.
+Zed Industries
+
+Ruby
+512k
+
+Ruby support.
+Vitaly Slobodin
+
+Catppuccin Icons
+476k
+
+🦊 Soothing pastel icons for Zed
+Catppuccin
+
+macOS Classic Theme
+466k
+
+A macOS native style theme, let it same like native app in macOS.
+Jason Lee
+
+SCSS & SASS
+443k
+
+SCSS and SASS support
+Raunak Raj
+
+Material Icon Theme
+403k
+
+Material Design icons.
+Zed Industries
+
+Make
+399k
+
+Makefile syntax highlighting
+Caius Durling, d1y, Marshall Bowers, Luke Naylor, Igor Támara, Michael Alexander, Donnie Adams
+
+Tokyo Night Themes
+398k
+
+Tokyo Night Themes
+ssaunderss
+
+C#
+394k
+
+C# support.
+fminkowski, Fabian Freimueller
+
+XML
+377k
+
+XML syntax support.
+sweetppro
+
+Lua
+348k
+
+Lua support.
+Max Brunsfeld
+
+Terraform
+292k
+
+Terraform support.
+Caius Durling, Daniel Banck
+
+## Built with ultimate care
+Every single feature in Zed has been designed to advance the state of the art. Anything less isn't worth building.
+Learn More 
+Language Server Protocol support 
+
+### Language Server Protocol support
+
+Fully integrate your language of choice.
+Learn More Outline view 
+
+### Outline view
+
+Navigate through a file's symbols.
+Learn More Text and line manipulation 
+
+### Text and line manipulation
+
+Code efficiently with advanced text editing capacities.
+Learn More 
+
+Expand Video Play Video 
+
+Expand Video Play Video 
+
+Expand Video Play Video 
+
+Language Server Protocol support
+Fully integrate your language of choice.
+
+Outline view
+Navigate through a file's symbols.
+
+Text and line manipulation
+Code efficiently with advanced text editing capacities.
+
+Helix Mode
+Feel at home with Helix and Vim.
+
+Diagnostics Multibuffer
+Project-wide errors and warnings.
+
+Dev Containers
+Consistent development environment.
+
+CLI
+Use Zed from the command line.
+
+Rainbow Brackets
+Easily move around deeply nested code.
+
+Built-in REPL
+Run code interactively through Jupyter kernels.
+
+Syntax-aware selections
+Efficiently select syntax nodes.
+
+Inlay Hints
+Peek through your code.
+
+A letter
+
+## From the team
+Programming and the tools we use to do so are changing. As the culmination of 15 years of work developing
+industry-leading tools for developers like Atom, Electron, 
+and Tree-sitter, Zed strives to be at the forefront of this transformation.
+We're confident that the future of software development lies in fluent collaboration between humans and AI. Crafted from the ground up, Zed is here to make this vision a reality.
+
+Zed Industries
+Nathan Sobo, Antonio Scandurra, Max Brunsfeld
+
+## The latest from Zed
+Check out recent announcements, the Zed Decoded series, and other in-depth posts about Zed behind the curtains. 
+View Blog 
+
+## Sandboxing
+Zed supports sandboxing to restrict what agents can do while using the terminal and fetch tools.
+
+Cameron Mcloughlin
+
+August 5th, 2026
+Newest
+
+## Hidden Gems: Part 4
+Favorite workflows and hidden features from the Zed team and community.
+
+Joseph Lyons
+
+June 23rd, 2026
+
+## Software Is Made Between Commits
+Agents turned the conversation into the real source of our software. DeltaDB is the version control built for it.
+
+Nathan Sobo
+
+June 11th, 2026
+
+## Daily drive with Zed
+Code at the speed of thought.
+Download now D Clone source C

@@ -1,0 +1,29 @@
+TITLE: Zed — Download
+DESCRIPTION: Download Zed, a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.
+
+# 1.14.2
+August 05, 2026
+
+View changelog →
+
+Stable Preview 
+macOS
+Apple Silicon Loading… Requires version 10.15 or later
+
+Windows
+Intel/AMD Loading… 
+Linux
+
+```
+curl -f https://zed.dev/install.sh | sh 
+
+You can also check other ways to install Zed on Linux →
+
+By downloading and using Zed, you agree to its
+terms and conditions .
+
+### Stay ahead with Zed
+Stay up to date with the latest Zed news and releases. Get only what you want. No spam.
+Release notes Beta invites Agentic Engineering 
+Email 
+Subscribe to Zed's newsletter

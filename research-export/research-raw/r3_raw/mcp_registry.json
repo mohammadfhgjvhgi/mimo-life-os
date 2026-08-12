@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://modelcontextprotocol.io/registry/about",
+    "name": "The MCP Registry - Model Context Protocol",
+    "snippet": "The MCP Registry is the official centralized metadata repository for publicly accessible MCP servers, backed by major trusted contributors to the MCP ecosystem The MCP Registry Ecosystem · Relationship with Server... · Trust and Security",
+    "host_name": "modelcontextprotocol.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/modelcontextprotocol/registry",
+    "name": "A community driven registry service for Model Context Protocol",
+    "snippet": "Oct 24, 2025 · The MCP registry provides MCP clients with a list of MCP servers, like an app store for MCP servers. Publish my MCP server | ⚡️ Live API ...",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://registry.modelcontextprotocol.io",
+    "name": "Official MCP Registry - Model Context Protocol",
+    "snippet": "MCP server for Model Context Protocol hosts. Read, write, list, and check files on Replit projects over SSH/SFTP, plus SSH key setup.",
+    "host_name": "registry.modelcontextprotocol.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://nordicapis.com/getting-started-with-the-official-mcp-registry-api",
+    "name": "Getting Started With the Official MCP Registry API - Nordic APIs",
+    "snippet": "Nov 19, 2025 · Learn how to call the Official MCP Registry API, explore its use cases, and understand its impact on MCP server discovery.",
+    "host_name": "nordicapis.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.modelcontextprotocol.io/posts/2025-09-08-mcp-registry-preview",
+    "name": "Introducing the MCP Registry | Model Context Protocol Blog",
+    "snippet": "Sep 8, 2025 · Today we are announcing that we've launched https://registry.modelcontextprotocol.io as the official MCP Registry. As part of the MCP project, ...",
+    "host_name": "blog.modelcontextprotocol.io",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "name": "modelcontextprotocol/servers: Model Context Protocol  - GitHub",
+    "snippet": "If you are looking for a list of MCP servers, you can browse published servers on the MCP Registry. The repository served by this README is dedicated to housing ...",
+    "host_name": "github.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://registry.modelcontextprotocol.io/docs",
+    "name": "Official MCP Registry Reference",
+    "snippet": "Official MCP Registry. Export. v1.0.0. A community driven registry service for Model Context Protocol (MCP) servers. GitHub repository | Documentation.",
+    "host_name": "registry.modelcontextprotocol.io",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://mcp.so",
+    "name": "MCP.so - MCP Marketplace",
+    "snippet": "Find MCP servers, clients, and integrations in one MCP marketplace. Use MCP.so as an MCP store, MCP server list, and curated directory for awesome MCP servers.",
+    "host_name": "mcp.so",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=1pm5srqCo5o",
+    "name": "Where to Find MCP Servers and the Official Registry - YouTube",
+    "snippet": "Sep 9, 2025 · ... official MCP registry specification is on the horizon — with a preview registry launching at modelcontextprotocol.io in September 2025. The ...",
+    "host_name": "www.youtube.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/mcp/comments/1nc4l7i/introducing_the_mcp_registry",
+    "name": "Introducing the MCP Registry - Reddit",
+    "snippet": "Sep 9, 2025 · Launching the MCP Registry in preview: an open catalog and API for discovering publicly available MCP servers. Open.",
+    "host_name": "www.reddit.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

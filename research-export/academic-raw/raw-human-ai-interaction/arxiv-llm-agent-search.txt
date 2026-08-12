@@ -1,0 +1,41 @@
+entries: 8
+---
+title: ArtAnno: Annotating Implicit Semantics in Artworks through LLM Agent-Driven Bidirectional Human-AI Augmentation
+date: 2026-08-05T16:30:12Z
+url: http://arxiv.org/abs/2608.05026v1
+abstract: High-quality annotation of artworks is essential for computational art research, yet extracting implicit semantics remains challenging due to the reliance on culturally grounded meanings and deep contextual knowledge behind the images. Current AI-assisted annotation tools often l
+---
+title: OneDayAgent: Towards a Long-Horizon Harness for Autonomous Agents
+date: 2026-08-04T17:55:41Z
+url: http://arxiv.org/abs/2608.05013v1
+abstract: LLM agents are increasingly applied to open-ended everyday requests that span work, study, and life. These tasks are long-horizon, cross-environment, and multimodal, forcing the agent to preserve goals and constraints across many steps while navigating heterogeneous tools and att
+---
+title: FedWorld: Scope-Aware Federation of Agent World Models
+date: 2026-08-03T00:37:52Z
+url: http://arxiv.org/abs/2608.01561v1
+abstract: Large language model (LLM) agents learn world dynamics from local interaction experience to support subsequent planning and action selection. However, the experience available to a single client is often incomplete, which motivates sharing knowledge across clients. Existing feder
+---
+title: OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding
+date: 2026-07-29T17:33:47Z
+url: http://arxiv.org/abs/2607.27155v1
+abstract: Large language model (LLM) agents are increasingly expected to assist users in completing tasks. However, existing benchmarks provide limited support for evaluating whether agents can carry out office-suite workflows at a reasonable cost. We introduce OmegaUse-OfficeVal, a benchm
+---
+title: Towards Reducing Foreign Language Anxiety Using Level-Appropriate Embodied Conversational Agents
+date: 2026-07-24T01:31:13Z
+url: http://arxiv.org/abs/2607.21887v1
+abstract: Foreign language anxiety (FLA) can be a major barrier to second language acquisition (SLA), especially in conversational contexts. With the proliferation of large language models (LLMs) throughout all areas of life, recent work suggests that interacting with LLM agents can be ins
+---
+title: HiMe: Real-Time Self-Hosted Personal Agent Platform for Health Insights with Wearable Devices
+date: 2026-07-23T08:05:21Z
+url: http://arxiv.org/abs/2607.21019v1
+abstract: Traditional approaches to wearable health signal analysis, such as smartwatches, are constrained by rigid analytical frameworks and limited personalisation. The emergence of LLM agents creates a new opportunity for Personal Health Agentic Analysis, where health insights can be ge
+---
+title: DevicesWorld: Benchmarking Cross-Device Agents in Heterogeneous Environments
+date: 2026-07-15T05:53:27Z
+url: http://arxiv.org/abs/2607.13465v1
+abstract: LLM-based agents have rapidly improved at operating individual digital environments such as mobile applications, desktop systems, and smart homes. However, real-world user goals often span multiple devices: information may come from a phone, be processed on a desktop, and the res
+---
+title: PaperRouter-Agent: A Content-Grounded LLM Agent for Personalized Hierarchical Paper Routing
+date: 2026-07-13T13:47:02Z
+url: http://arxiv.org/abs/2607.11564v1
+abstract: Researchers organize the papers they collect into personal folder hierarchies in reference managers, and route each new paper into the folder where it belongs. This task differs from standard hierarchical text classification. A user's folder hierarchy is not a fixed, shared taxon

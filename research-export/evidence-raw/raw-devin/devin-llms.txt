@@ -1,0 +1,566 @@
+# Devin Docs
+
+## Docs
+
+- [Billing](https://docs.devin.ai/admin/billing.md)
+- [Enterprise](https://docs.devin.ai/admin/billing/enterprise.md): How Devin Enterprise contracts are billed and how admins track ACU consumption
+- [Self-serve plans](https://docs.devin.ai/admin/billing/self-serve.md): Compare Devin's self-serve plans and understand usage quota and on-demand credits
+- [Usage](https://docs.devin.ai/admin/billing/usage.md): How Devin meters work, what counts toward consumption, and how to keep usage under control
+- [Common Issues](https://docs.devin.ai/admin/common-issues.md)
+- [Security at Cognition](https://docs.devin.ai/admin/security.md): We want Devin to be a core contributor in your organization, and have prioritized security, data privacy and compliance to make it possible
+- [Authentication](https://docs.devin.ai/api-reference/authentication.md): Understand principals, tokens, and how to authenticate with the Devin API
+- [Common Flows](https://docs.devin.ai/api-reference/common-flows.md): End-to-end workflow guides for common API use cases
+- [Pagination](https://docs.devin.ai/api-reference/concepts/pagination.md): How cursor-based pagination works across the Devin API
+- [Quick start: Enterprise](https://docs.devin.ai/api-reference/getting-started/enterprise-quickstart.md): Get started with the Devin API as an enterprise user with RBAC and multi-org support
+- [Migrating from v1/v2](https://docs.devin.ai/api-reference/getting-started/migration-guide.md): Migrate your integrations from API v1 or v2 to the current API
+- [Quick start: Teams](https://docs.devin.ai/api-reference/getting-started/teams-quickstart.md): Get started with the Devin API as a teams or standard organization user
+- [API Overview](https://docs.devin.ai/api-reference/overview.md): Learn how to programmatically interact with Devin using our REST APIs
+- [Personal Access Tokens](https://docs.devin.ai/api-reference/personal-access-tokens.md): Authenticate as yourself for programmatic API access
+- [API Release Notes](https://docs.devin.ai/api-reference/release-notes.md): Track changes, new features, and improvements to Devin's APIs
+- [Download an attachment](https://docs.devin.ai/api-reference/v1/attachments/download-attachment-files.md): Download attachment files that were previously uploaded. Returns a redirect to a presigned URL for secure file access.
+- [Upload an attachment](https://docs.devin.ai/api-reference/v1/attachments/upload-files-for-devin-to-work-with.md): Upload files for Devin to work with during sessions. Supports various file types including code, data, and documentation files.
+- [Create knowledge entry](https://docs.devin.ai/api-reference/v1/knowledge/create-knowledge.md): Create a new knowledge entry for the organization.
+- [Delete knowledge entry](https://docs.devin.ai/api-reference/v1/knowledge/delete-knowledge.md): Delete a knowledge entry from the organization.
+- [List all knowledge](https://docs.devin.ai/api-reference/v1/knowledge/list-knowledge.md): List all knowledge entries and folders for the organization.
+- [Update knowledge entry](https://docs.devin.ai/api-reference/v1/knowledge/update-knowledge.md): Update an existing knowledge entry.
+- [v1 API Overview (Legacy)](https://docs.devin.ai/api-reference/v1/overview.md): Core session management and automation with org-scoped access
+- [Create Playbook](https://docs.devin.ai/api-reference/v1/playbooks/create-playbook.md): Create a new team playbook
+- [Delete Playbook](https://docs.devin.ai/api-reference/v1/playbooks/delete-playbook.md): Delete a team playbook
+- [Get Playbook](https://docs.devin.ai/api-reference/v1/playbooks/get-playbook.md): Retrieve details of a specific playbook
+- [List Playbooks](https://docs.devin.ai/api-reference/v1/playbooks/list-playbooks.md): Retrieve all playbooks accessible to your organization
+- [Update Playbook](https://docs.devin.ai/api-reference/v1/playbooks/update-playbook.md): Update an existing team playbook
+- [Create Secret](https://docs.devin.ai/api-reference/v1/secrets/create-secret.md): Create a new secret in your organization
+- [Delete a secret](https://docs.devin.ai/api-reference/v1/secrets/delete-secret.md): Permanently delete a secret by its ID. This action cannot be undone.
+- [List secrets](https://docs.devin.ai/api-reference/v1/secrets/list-secrets.md): List metadata for all secrets in your organization. Does not return secret values.
+- [Create a new session](https://docs.devin.ai/api-reference/v1/sessions/create-a-new-devin-session.md): Create a new Devin session. You can optionally specify parameters like snapshot ID and session visibility.
+- [List sessions](https://docs.devin.ai/api-reference/v1/sessions/list-sessions.md): List all Devin sessions for your organization.
+- [Retrieve details about an existing session](https://docs.devin.ai/api-reference/v1/sessions/retrieve-details-about-an-existing-session.md): Retrieve detailed information about an existing Devin session, including its status, output, and metadata.
+- [Send a message to a session](https://docs.devin.ai/api-reference/v1/sessions/send-a-message-to-an-existing-devin-session.md): Send a message to an existing Devin session to provide additional instructions or information.
+- [Terminate a session](https://docs.devin.ai/api-reference/v1/sessions/terminate-a-session.md): Terminate an active Devin session. Once terminated, the session cannot be resumed.
+- [Update session tags](https://docs.devin.ai/api-reference/v1/sessions/update-session-tags.md): Update the tags associated with a Devin session.
+- [List API Keys](https://docs.devin.ai/api-reference/v2/api-keys/list-enterprise-api-keys.md): List API keys across an Enterprise
+- [Create a Service API Key](https://docs.devin.ai/api-reference/v2/api-keys/provision-service-key.md): Provision a service API key for an Organization in the Enterprise
+- [Revoke API Key](https://docs.devin.ai/api-reference/v2/api-keys/revoke-enterprise-api-key.md): Revoke a specific enterprise API key
+- [Get Audit Logs](https://docs.devin.ai/api-reference/v2/audit-logs.md): Retrieve audit logs for the entire enterprise.
+- [Consumption Cycles](https://docs.devin.ai/api-reference/v2/consumption/consumption-cycles.md): Generate a list of all billing cycles for the enterprise
+- [Daily Consumption](https://docs.devin.ai/api-reference/v2/consumption/daily-consumption.md): Return daily consumption for the current billing cycle
+- [PR Metrics](https://docs.devin.ai/api-reference/v2/consumption/pr-metrics.md): Get pull request metrics for your enterprise
+- [Searches Metrics](https://docs.devin.ai/api-reference/v2/consumption/searches-metrics.md): Get search count metrics for your enterprise
+- [Sessions Metrics](https://docs.devin.ai/api-reference/v2/consumption/sessions-metrics.md): Get sessions metrics for your enterprise
+- [Usage Metrics](https://docs.devin.ai/api-reference/v2/consumption/usage-metrics.md): Get usage metrics (sessions, searches, and PRs) for your enterprise
+- [User Daily Consumption](https://docs.devin.ai/api-reference/v2/consumption/user-daily-consumption.md): Return daily consumption for a specific user
+- [Get Group Details](https://docs.devin.ai/api-reference/v2/groups/get-group-details.md): Get details for a specific IdP group in this Enterprise
+- [List Enterprise Groups](https://docs.devin.ai/api-reference/v2/groups/list-enterprise-groups.md): List IdP groups in this Enterprise
+- [List Hypervisors](https://docs.devin.ai/api-reference/v2/infrastructure/list-enterprise-hypervisors.md): Get hypervisor status information for VPC monitoring
+- [Delete Enterprise Member](https://docs.devin.ai/api-reference/v2/members/delete-enterprise-member.md): Remove a user from an organization
+- [Get Member Details](https://docs.devin.ai/api-reference/v2/members/get-member-details.md): Get detailed information about a specific enterprise member
+- [Invite Enterprise Members](https://docs.devin.ai/api-reference/v2/members/invite-enterprise-members.md): Invite multiple users to the enterprise by email (bulk invite, max 100 users)
+- [List Enterprise Members](https://docs.devin.ai/api-reference/v2/members/list-enterprise-members.md): List paginated members in this enterprise
+- [List available roles](https://docs.devin.ai/api-reference/v2/members/list-roles.md): List all roles that are available to the user's enterprise
+- [User Organizations](https://docs.devin.ai/api-reference/v2/members/user-organizations.md): Get paginated list of organizations that this user has access to
+- [Get Organization Group Limits](https://docs.devin.ai/api-reference/v2/org-group-limits/get-org-group-limits.md): Get the current organization groups configuration
+- [Update Organization Group Limits](https://docs.devin.ai/api-reference/v2/org-group-limits/update-org-group-limits.md): Update the organization groups configuration
+- [Add Group to Organization](https://docs.devin.ai/api-reference/v2/organizations/add-group-to-organization.md): Add a new IdP group to an organization
+- [Add Organization Members](https://docs.devin.ai/api-reference/v2/organizations/add-organization-members.md): Bulk add users to one or more organizations within your enterprise
+- [Add Organization Permissions](https://docs.devin.ai/api-reference/v2/organizations/add-organization-permissions.md): Add git permissions to an organization
+- [Clone a Repository into an Organization](https://docs.devin.ai/api-reference/v2/organizations/clone-repository.md): Clone a repository into an organization's snapshot
+- [Create Organization](https://docs.devin.ai/api-reference/v2/organizations/create-organization.md): Create a new organization in this enterprise
+- [Delete Organization](https://docs.devin.ai/api-reference/v2/organizations/delete-organization.md): Delete an organization from this enterprise
+- [Delete Organization Permission](https://docs.devin.ai/api-reference/v2/organizations/delete-organization-permission.md): Remove a git permission from an organization
+- [Get Organization Details](https://docs.devin.ai/api-reference/v2/organizations/get-organization-details.md): Get details for a specific organization in this enterprise
+- [List Organizations](https://docs.devin.ai/api-reference/v2/organizations/list-organizations.md): List paginated organizations in this enterprise
+- [Organization Connections](https://docs.devin.ai/api-reference/v2/organizations/organization-connections.md): Get paginated list of git connections that this organization has access to
+- [Organization Groups](https://docs.devin.ai/api-reference/v2/organizations/organization-groups.md): Get paginated list of enterprise groups that are in this organization
+- [Organization Members](https://docs.devin.ai/api-reference/v2/organizations/organization-members.md): Get paginated list of users that are in this organization
+- [Organization Permissions](https://docs.devin.ai/api-reference/v2/organizations/organization-permissions.md): Get paginated list of git permissions that this organization has access to
+- [Remove User from Organization](https://docs.devin.ai/api-reference/v2/organizations/remove-user-from-organization.md): Remove a user from an organization
+- [Update Organization](https://docs.devin.ai/api-reference/v2/organizations/update-organization.md): Update an organization's ACU limit and/or display name
+- [Update organization member roles](https://docs.devin.ai/api-reference/v2/organizations/update-organization-member-roles.md): Update organization roles for specific members
+- [v2 API Overview (Legacy)](https://docs.devin.ai/api-reference/v2/overview.md): Enterprise-wide management, analytics, and compliance for administrators
+- [Create Enterprise Playbook](https://docs.devin.ai/api-reference/v2/playbooks/create-playbook.md): Create a new playbook in your enterprise
+- [List Enterprise Playbooks](https://docs.devin.ai/api-reference/v2/playbooks/list-playbooks.md): List all enterprise playbooks available to the authenticated user
+- [Bulk Index Repositories](https://docs.devin.ai/api-reference/v2/repositories/bulk-index-repositories.md): Index multiple repositories (up to 100) for use in Devin sessions.
+- [Get Repository Indexing Status](https://docs.devin.ai/api-reference/v2/repositories/get-repository-status.md): Retrieve the indexing status of repositories for a specific organization.
+- [Get Self](https://docs.devin.ai/api-reference/v2/self/get-self.md): Get information about the authenticated API key
+- [Get Enterprise Session](https://docs.devin.ai/api-reference/v2/sessions/get-enterprise-session.md): Get detailed information about a specific Devin session including analysis data and pull requests
+- [List Enterprise Sessions](https://docs.devin.ai/api-reference/v2/sessions/list-enterprise-sessions.md): Get a paginated list of Devin sessions for your enterprise
+- [List Enterprise Sessions (Insights)](https://docs.devin.ai/api-reference/v2/sessions/list-enterprise-sessions-insights.md): Get a paginated list of Devin sessions with detailed analysis data for your enterprise
+- [List Organization Sessions](https://docs.devin.ai/api-reference/v2/sessions/list-organization-sessions.md): Get a paginated list of Devin sessions for a specific organization
+- [List Organization Sessions (Insights)](https://docs.devin.ai/api-reference/v2/sessions/list-organization-sessions-insights.md): Get a paginated list of Devin sessions with detailed analysis data for a specific organization
+- [Get User Usage Analysis (Beta)](https://docs.devin.ai/api-reference/v2/user-usage/get-user-usage-analysis-beta.md): Get paginated user usage analysis with detailed ACU consumption metrics across different time periods
+- [Download an attachment](https://docs.devin.ai/api-reference/v3/attachments/get-organizations-attachments.md): Download a file attachment.
+- [Upload an attachment](https://docs.devin.ai/api-reference/v3/attachments/post-organizations-attachments.md): Upload a file attachment that can be used in Devin sessions.
+- [List Audit Logs](https://docs.devin.ai/api-reference/v3/audit-logs/enterprise-audit-logs.md): List audit logs for the enterprise.
+- [List Organization Audit Logs](https://docs.devin.ai/api-reference/v3/audit-logs/organizations-audit-logs.md): List audit logs for the organization.
+- [List Code Scan Findings](https://docs.devin.ai/api-reference/v3/code-scans/enterprise-code-scans-findings.md): List enterprise code scan findings
+- [Get Code Scan Metrics](https://docs.devin.ai/api-reference/v3/code-scans/enterprise-code-scans-metrics.md): Get metrics for enterprise code scans
+- [Remediate Code Scan Finding](https://docs.devin.ai/api-reference/v3/code-scans/enterprise-code-scans-remediate.md): Launch a Devin session to remediate a code scan finding
+- [List Consumption Cycles](https://docs.devin.ai/api-reference/v3/consumption/consumption-cycles.md)
+- [Get Daily Consumption](https://docs.devin.ai/api-reference/v3/consumption/consumption-daily.md): Get daily ACU consumption for the entire enterprise.
+- [Get Organization Daily Consumption](https://docs.devin.ai/api-reference/v3/consumption/consumption-daily-organizations.md): Get daily ACU consumption for a specific organization.
+- [Get Service User Daily Consumption](https://docs.devin.ai/api-reference/v3/consumption/consumption-daily-service-users.md): Get daily ACU consumption for a specific service user.
+- [Get Session Daily Consumption](https://docs.devin.ai/api-reference/v3/consumption/consumption-daily-sessions.md): Get daily ACU consumption for a specific session.
+- [Get User Daily Consumption](https://docs.devin.ai/api-reference/v3/consumption/consumption-daily-users.md): Get daily ACU consumption for a specific user.
+- [Get Daily Consumption](https://docs.devin.ai/api-reference/v3/consumption/organizations-consumption-daily.md): Get daily ACU consumption for the organization.
+- [Get Service User Daily Consumption](https://docs.devin.ai/api-reference/v3/consumption/organizations-consumption-daily-service-users.md): Get daily ACU consumption for a specific service user within the organization.
+- [Get Session Daily Consumption](https://docs.devin.ai/api-reference/v3/consumption/organizations-consumption-daily-sessions.md): Get daily ACU consumption for a specific session within the organization.
+- [Get User Daily Consumption](https://docs.devin.ai/api-reference/v3/consumption/organizations-consumption-daily-users.md): Get daily ACU consumption for a specific user within the organization.
+- [List repositories for a git connection](https://docs.devin.ai/api-reference/v3/git-connections/get-git-providers-connection-repositories.md)
+- [List Git Connections](https://docs.devin.ai/api-reference/v3/git-connections/git-providers-connections.md)
+- [Clear Git Permissions](https://docs.devin.ai/api-reference/v3/git-permissions/clear-organizations-git-providers-permissions.md)
+- [Delete Git Permission](https://docs.devin.ai/api-reference/v3/git-permissions/delete-organizations-git-providers-permissions.md)
+- [List Git Permissions](https://docs.devin.ai/api-reference/v3/git-permissions/organizations-git-providers-permissions.md): List git permissions for the organization.
+- [Update Git Permission](https://docs.devin.ai/api-reference/v3/git-permissions/patch-organizations-git-providers-permissions.md)
+- [Create Git Permissions](https://docs.devin.ai/api-reference/v3/git-permissions/post-organizations-git-providers-permissions.md)
+- [Replace Git Permissions](https://docs.devin.ai/api-reference/v3/git-permissions/put-organizations-git-providers-permissions.md)
+- [List Guardrail Violations](https://docs.devin.ai/api-reference/v3/guardrail-violations/enterprise-guardrail-violations.md): List guardrail violations across the enterprise.
+- [List Organization Guardrail Violations](https://docs.devin.ai/api-reference/v3/guardrail-violations/organizations-guardrail-violations.md): List guardrail violations for a specific organization.
+- [List Hypervisors](https://docs.devin.ai/api-reference/v3/hypervisors/hypervisors.md)
+- [Delete Account IDP Group](https://docs.devin.ai/api-reference/v3/idp-groups/delete-enterprise-idp-group.md): Remove a registered IDP group from this enterprise.
+- [Delete IDP Group](https://docs.devin.ai/api-reference/v3/idp-groups/delete-members-idp-groups.md)
+- [Delete Organization IDP Group](https://docs.devin.ai/api-reference/v3/idp-groups/delete-organizations-members-idp-groups.md): Remove idp_group from the organization.
+- [List Account IDP Groups](https://docs.devin.ai/api-reference/v3/idp-groups/enterprise-idp-groups.md): List IDP groups registered with this enterprise.
+- [Get IDP Group](https://docs.devin.ai/api-reference/v3/idp-groups/get-members-idp-group.md)
+- [List Organization IDP Groups](https://docs.devin.ai/api-reference/v3/idp-groups/list-organizations-members-idp-groups.md)
+- [List IDP Groups](https://docs.devin.ai/api-reference/v3/idp-groups/members-idp-groups.md)
+- [Get Organization IDP Group](https://docs.devin.ai/api-reference/v3/idp-groups/organizations-members-idp-groups.md)
+- [Update IDP Group](https://docs.devin.ai/api-reference/v3/idp-groups/patch-members-idp-groups.md)
+- [Update Organization IDP Group](https://docs.devin.ai/api-reference/v3/idp-groups/patch-organizations-members-idp-groups.md)
+- [Register Account IDP Groups](https://docs.devin.ai/api-reference/v3/idp-groups/post-enterprise-idp-groups.md): Bulk create IDP groups for this enterprise. Existing groups are ignored.
+- [Assign IDP Group](https://docs.devin.ai/api-reference/v3/idp-groups/post-members-idp-groups.md)
+- [Assign Organization IDP Group](https://docs.devin.ai/api-reference/v3/idp-groups/post-organizations-members-idp-groups.md)
+- [Add IPs to IP Access List](https://docs.devin.ai/api-reference/v3/ip-access-list/add-ip-access-list.md)
+- [Clear IP Access List](https://docs.devin.ai/api-reference/v3/ip-access-list/clear-ip-access-list.md)
+- [Get IP Access List](https://docs.devin.ai/api-reference/v3/ip-access-list/get-ip-access-list.md)
+- [Replace IP Access List](https://docs.devin.ai/api-reference/v3/ip-access-list/replace-ip-access-list.md)
+- [Get Active Users for Custom Date Range](https://docs.devin.ai/api-reference/v3/metrics/metrics-active-users.md): Get unique active users for a custom date range.
+- [Get Daily Active Users](https://docs.devin.ai/api-reference/v3/metrics/metrics-dau.md): Get daily active users for each day in the specified time range.
+- [Get Monthly Active Users](https://docs.devin.ai/api-reference/v3/metrics/metrics-mau.md): Get monthly active users for each month in the specified time range.
+- [Get PR Metrics](https://docs.devin.ai/api-reference/v3/metrics/metrics-prs.md): Get aggregated PR metrics for the enterprise account.
+- [Get Search Metrics](https://docs.devin.ai/api-reference/v3/metrics/metrics-searches.md): Get aggregated search metrics for the enterprise account.
+- [Get Session Metrics](https://docs.devin.ai/api-reference/v3/metrics/metrics-sessions.md): Get aggregated session metrics for the enterprise account.
+- [Get Session Metrics by Category](https://docs.devin.ai/api-reference/v3/metrics/metrics-sessions-by-category.md): Get session counts and ACU consumption grouped by category and subcategory.
+- [Get Usage Metrics](https://docs.devin.ai/api-reference/v3/metrics/metrics-usage.md): Get aggregated usage metrics for the enterprise account.
+- [Get Weekly Active Users](https://docs.devin.ai/api-reference/v3/metrics/metrics-wau.md): Get weekly active users for each week in the specified time range.
+- [Get Active Users for Custom Date Range](https://docs.devin.ai/api-reference/v3/metrics/organizations-metrics-active-users.md): Get unique active users for a custom date range.
+- [Get Daily Active Users](https://docs.devin.ai/api-reference/v3/metrics/organizations-metrics-dau.md): Get daily active users for each day in the specified time range.
+- [Get Monthly Active Users](https://docs.devin.ai/api-reference/v3/metrics/organizations-metrics-mau.md): Get monthly active users for each month in the specified time range.
+- [Get PR Metrics](https://docs.devin.ai/api-reference/v3/metrics/organizations-metrics-prs.md): Get aggregated PR metrics for the organization.
+- [Get Search Metrics](https://docs.devin.ai/api-reference/v3/metrics/organizations-metrics-searches.md): Get aggregated search metrics for the organization.
+- [Get Session Metrics](https://docs.devin.ai/api-reference/v3/metrics/organizations-metrics-sessions.md): Get aggregated session metrics for the organization.
+- [Get Organization Usage Metrics](https://docs.devin.ai/api-reference/v3/metrics/organizations-metrics-usage.md): Get aggregated usage metrics for the enterprise account.
+- [Get Usage Metrics](https://docs.devin.ai/api-reference/v3/metrics/organizations-metrics-usage-org.md): Get aggregated usage metrics for the organization.
+- [Get Weekly Active Users](https://docs.devin.ai/api-reference/v3/metrics/organizations-metrics-wau.md): Get weekly active users for each week in the specified time range.
+- [Delete a note](https://docs.devin.ai/api-reference/v3/notes/delete-enterprise-knowledge-notes-note-id.md)
+- [Delete an org-level note](https://docs.devin.ai/api-reference/v3/notes/delete-organizations-knowledge-notes-note-id.md): Delete a note for an organization.
+- [Get knowledge folder structure with note counts.](https://docs.devin.ai/api-reference/v3/notes/enterprise-knowledge-folders.md): Return the full folder tree with per-folder note counts.
+- [List all notes.](https://docs.devin.ai/api-reference/v3/notes/enterprise-knowledge-notes.md)
+- [Get a note by ID](https://docs.devin.ai/api-reference/v3/notes/get-enterprise-knowledge-note.md): Get a note by ID.
+- [Get an org-level note](https://docs.devin.ai/api-reference/v3/notes/get-organizations-knowledge-note.md): Get a note by ID for an organization.
+- [Get knowledge folder structure with note counts.](https://docs.devin.ai/api-reference/v3/notes/organizations-knowledge-folders.md): Return the full folder tree with per-folder note counts.
+- [List org-level notes](https://docs.devin.ai/api-reference/v3/notes/organizations-knowledge-notes.md): List notes for an organization.
+- [Create an enterprise-level note](https://docs.devin.ai/api-reference/v3/notes/post-enterprise-knowledge-notes.md)
+- [Create an org-level note](https://docs.devin.ai/api-reference/v3/notes/post-organizations-knowledge-notes.md): Create a note for an organization.
+- [Update a note](https://docs.devin.ai/api-reference/v3/notes/put-enterprise-knowledge-notes-note-id.md)
+- [Update an org-level note](https://docs.devin.ai/api-reference/v3/notes/put-organizations-knowledge-notes-note-id.md): Update a note for an organization.
+- [Get Organization Group Limits](https://docs.devin.ai/api-reference/v3/org-group-limits/get-org-group-limits.md): Get the current organization groups configuration
+- [Update Organization Group Limits](https://docs.devin.ai/api-reference/v3/org-group-limits/update-org-group-limits.md): Update the organization groups configuration
+- [Delete Organization](https://docs.devin.ai/api-reference/v3/organizations/delete-organizations.md): Delete an organization from this enterprise
+- [Get Organization](https://docs.devin.ai/api-reference/v3/organizations/get-enterprise-organization.md): Get details for a specific organization in the enterprise.
+- [List Organizations](https://docs.devin.ai/api-reference/v3/organizations/organizations.md): List organizations in the enterprise.
+- [Update Organization](https://docs.devin.ai/api-reference/v3/organizations/patch-organizations.md): Update an organization's name and/or ACU limits
+- [Create Organization](https://docs.devin.ai/api-reference/v3/organizations/post-organizations.md): Create a new organization in this enterprise
+- [Permissions & RBAC](https://docs.devin.ai/api-reference/v3/overview.md): Permission reference for the Devin API
+- [Delete a playbook](https://docs.devin.ai/api-reference/v3/playbooks/delete-enterprise-playbooks-playbook-id.md)
+- [Delete an org-level playbook](https://docs.devin.ai/api-reference/v3/playbooks/delete-organizations-playbooks-playbook-id.md): Delete a playbook for an organization.
+- [List all playbooks.](https://docs.devin.ai/api-reference/v3/playbooks/enterprise-playbooks.md)
+- [Get a playbook by ID.](https://docs.devin.ai/api-reference/v3/playbooks/get-enterprise-playbook.md): Get a specific playbook by ID.
+- [Get an org-level playbook by ID](https://docs.devin.ai/api-reference/v3/playbooks/get-organizations-playbook.md): Get a specific playbook by ID for an organization.
+- [List org-level playbooks](https://docs.devin.ai/api-reference/v3/playbooks/organizations-playbooks.md): List playbooks for an organization.
+- [Create an enterprise-level playbook](https://docs.devin.ai/api-reference/v3/playbooks/post-enterprise-playbooks.md)
+- [Create an org-level playbook](https://docs.devin.ai/api-reference/v3/playbooks/post-organizations-playbooks.md): Create a playbook for an organization.
+- [Update a playbook](https://docs.devin.ai/api-reference/v3/playbooks/put-enterprise-playbooks-playbook-id.md)
+- [Update an org-level playbook](https://docs.devin.ai/api-reference/v3/playbooks/put-organizations-playbooks-playbook-id.md): Update a playbook for an organization.
+- [Get latest Devin Review status](https://docs.devin.ai/api-reference/v3/pr-reviews/get-enterprise-pr-reviews.md): Return the latest Devin Review for a PR scoped to the enterprise.
+- [Get latest Devin Review status](https://docs.devin.ai/api-reference/v3/pr-reviews/get-organizations-pr-reviews.md): Return the latest Devin Review for a PR scoped to the organization.
+- [Trigger Devin Review](https://docs.devin.ai/api-reference/v3/pr-reviews/post-enterprise-pr-reviews.md): Trigger a Devin Review for a pull/merge request.
+- [Trigger Devin Review](https://docs.devin.ai/api-reference/v3/pr-reviews/post-organizations-pr-reviews.md): Trigger a Devin Review for a pull/merge request.
+- [Get Queue](https://docs.devin.ai/api-reference/v3/queue/enterprise-queue.md): Get the queue status for an enterprise.
+- [Bulk remove repositories from indexing](https://docs.devin.ai/api-reference/v3/repositories/delete-organizations-bulk-remove-repositories.md): Disables indexing and clears configured branches for a batch of repositories.
+- [Remove a branch from indexing](https://docs.devin.ai/api-reference/v3/repositories/delete-organizations-remove-branch.md)
+- [Remove a repository from indexing](https://docs.devin.ai/api-reference/v3/repositories/delete-organizations-remove-repository.md): Disables indexing and clears configured branches for a single repository.
+- [Get indexing status for a repository](https://docs.devin.ai/api-reference/v3/repositories/get-organizations-repository-indexing-status.md)
+- [List indexed repositories](https://docs.devin.ai/api-reference/v3/repositories/list-organizations-indexed-repositories.md)
+- [List repositories available to an organization](https://docs.devin.ai/api-reference/v3/repositories/list-organizations-repositories.md)
+- [Bulk index repositories](https://docs.devin.ai/api-reference/v3/repositories/put-organizations-bulk-index-repositories.md): Idempotently enables indexing for a batch of repositories and triggers indexing jobs.
+- [Index a repository](https://docs.devin.ai/api-reference/v3/repositories/put-organizations-index-repository.md): Idempotently enables indexing for a single repository and triggers indexing jobs.
+- [List Roles](https://docs.devin.ai/api-reference/v3/roles/roles.md): Get roles for this enterprise
+- [Delete schedule](https://docs.devin.ai/api-reference/v3/schedules/delete-organizations-schedule.md): Soft delete a schedule.
+- [Get schedule](https://docs.devin.ai/api-reference/v3/schedules/get-organizations-schedule.md): Get a specific schedule by ID.
+- [List schedules](https://docs.devin.ai/api-reference/v3/schedules/organizations-schedules.md): List all schedules for the organization.
+- [Update schedule](https://docs.devin.ai/api-reference/v3/schedules/patch-organizations-schedule.md): Update an existing schedule.
+- [Create schedule](https://docs.devin.ai/api-reference/v3/schedules/post-organizations-schedules.md): Create a new scheduled session.
+- [Delete an org-level secret](https://docs.devin.ai/api-reference/v3/secrets/delete-organizations-secrets.md): Delete a secret for an organization.
+- [List org-level secrets](https://docs.devin.ai/api-reference/v3/secrets/organizations-secrets.md): List secrets for an organization.
+- [Create an org-level secret](https://docs.devin.ai/api-reference/v3/secrets/post-organizations-secrets.md): Create a secret for an organization.
+- [Get Self](https://docs.devin.ai/api-reference/v3/self/self.md)
+- [Revoke API key for service user](https://docs.devin.ai/api-reference/v3/service-users/delete-enterprise-service-user-api-key.md): Revoke an API key for a service user.
+- [Delete Service User](https://docs.devin.ai/api-reference/v3/service-users/delete-members-service-users.md)
+- [Delete Organization Service User](https://docs.devin.ai/api-reference/v3/service-users/delete-organizations-members-service-users.md): Remove service user from the organization.
+- [List API keys for service user](https://docs.devin.ai/api-reference/v3/service-users/get-enterprise-service-user-api-keys.md): List API keys for a service user, optionally filtered by status.
+- [Get Service User](https://docs.devin.ai/api-reference/v3/service-users/get-members-service-user.md): Get a service user by ID.
+- [List Service Users](https://docs.devin.ai/api-reference/v3/service-users/members-service-users.md): List service users in the enterprise.
+- [List Organization Service Users](https://docs.devin.ai/api-reference/v3/service-users/organizations-members-service-users.md): List service users in the organization.
+- [Update Service User](https://docs.devin.ai/api-reference/v3/service-users/patch-members-service-users.md): Update enterprise role for service user.
+- [Update Organization Service User](https://docs.devin.ai/api-reference/v3/service-users/patch-organizations-members-service-users.md): Update organization role for service user.
+- [Create API key for service user](https://docs.devin.ai/api-reference/v3/service-users/post-enterprise-service-user-api-keys.md): Create a new API key for a service user.
+- [Assign Service User](https://docs.devin.ai/api-reference/v3/service-users/post-members-service-users.md): Assign enterprise role to service user.
+- [Assign Organization Service User](https://docs.devin.ai/api-reference/v3/service-users/post-organizations-members-service-users.md): Assign organization role to service user.
+- [Rotate API key for service user](https://docs.devin.ai/api-reference/v3/service-users/rotate-enterprise-service-user-api-key.md): Rotate an API key for a service user.
+- [Terminate Session](https://docs.devin.ai/api-reference/v3/sessions/delete-organizations-sessions.md): Terminate session
+- [List sessions for account](https://docs.devin.ai/api-reference/v3/sessions/enterprise-sessions.md): List all sessions across the enterprise.
+- [List sessions with insights](https://docs.devin.ai/api-reference/v3/sessions/enterprise-sessions-insights.md): List sessions with detailed insights including message counts, session size classification, and AI-generated analysis.
+- [Get session details](https://docs.devin.ai/api-reference/v3/sessions/get-enterprise-session.md): Get details of a specific session.
+- [List session attachments](https://docs.devin.ai/api-reference/v3/sessions/get-enterprise-session-attachments.md): List all attachments for a session.
+- [Get session insights](https://docs.devin.ai/api-reference/v3/sessions/get-enterprise-session-insights.md): Get detailed insights for a specific session, including message counts, session size classification, and AI-generated analysis.
+- [List session messages](https://docs.devin.ai/api-reference/v3/sessions/get-enterprise-session-messages.md): List all messages for a session with cursor-based pagination, ordered chronologically.
+- [Get session tags](https://docs.devin.ai/api-reference/v3/sessions/get-enterprise-session-tags.md): Get the tags for a specific session.
+- [Get Session](https://docs.devin.ai/api-reference/v3/sessions/get-organizations-session.md): Get details of a specific session.
+- [List session attachments](https://docs.devin.ai/api-reference/v3/sessions/get-organizations-session-attachments.md): List all attachments for a session.
+- [Get session insights](https://docs.devin.ai/api-reference/v3/sessions/get-organizations-session-insights.md): Get detailed insights for a specific session, including message counts, session size classification, and AI-generated analysis.
+- [List session messages](https://docs.devin.ai/api-reference/v3/sessions/get-organizations-session-messages.md): List all messages for a session with cursor-based pagination, ordered chronologically.
+- [Get session tags](https://docs.devin.ai/api-reference/v3/sessions/get-organizations-session-tags.md): Get the tags for a specific session.
+- [List Sessions](https://docs.devin.ai/api-reference/v3/sessions/organizations-sessions.md): List sessions.
+- [List sessions with insights](https://docs.devin.ai/api-reference/v3/sessions/organizations-sessions-insights.md): List sessions with detailed insights including message counts, session size classification, and AI-generated analysis.
+- [Generate session insights](https://docs.devin.ai/api-reference/v3/sessions/post-enterprise-session-insights-generate.md): Trigger on-demand generation of session insights.
+- [Append session tags](https://docs.devin.ai/api-reference/v3/sessions/post-enterprise-session-tags.md): Append tags to a session (deduplicating with existing tags).
+- [Send a message to a session](https://docs.devin.ai/api-reference/v3/sessions/post-enterprise-sessions-messages.md): Send a message to an active session. The session will be automatically resumed if suspended.
+- [Generate session insights](https://docs.devin.ai/api-reference/v3/sessions/post-organizations-session-insights-generate.md): Trigger on-demand generation of session insights.
+- [Append session tags](https://docs.devin.ai/api-reference/v3/sessions/post-organizations-session-tags.md): Append tags to a session (deduplicating with existing tags).
+- [Create Session](https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions.md): Create a new session
+- [Archive Session](https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions-archive.md): Archive session and put it to sleep if currently running
+- [Send a message to a session](https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions-messages.md): Send a message to an active session. The session will be automatically resumed if suspended.
+- [Replace session tags](https://docs.devin.ai/api-reference/v3/sessions/put-enterprise-session-tags.md): Replace all tags on a session.
+- [Replace session tags](https://docs.devin.ai/api-reference/v3/sessions/put-organizations-session-tags.md): Replace all tags on a session.
+- [Delete the enterprise blueprint (soft-delete)](https://docs.devin.ai/api-reference/v3/snapshot-setup/delete-enterprise-blueprint.md)
+- [Delete an enterprise blueprint file](https://docs.devin.ai/api-reference/v3/snapshot-setup/delete-enterprise-blueprint-file.md)
+- [Soft-delete a blueprint](https://docs.devin.ai/api-reference/v3/snapshot-setup/delete-organizations-blueprint.md)
+- [Delete a blueprint file](https://docs.devin.ai/api-reference/v3/snapshot-setup/delete-organizations-blueprint-file.md)
+- [Unpin a build (no-op if not pinned)](https://docs.devin.ai/api-reference/v3/snapshot-setup/delete-organizations-build-pin.md): Unpin the org if and only if it is currently pinned to ``build_id``.
+- [Get the enterprise blueprint](https://docs.devin.ai/api-reference/v3/snapshot-setup/get-enterprise-blueprint.md)
+- [Presigned URL for the enterprise blueprint YAML](https://docs.devin.ai/api-reference/v3/snapshot-setup/get-enterprise-blueprint-contents.md)
+- [Get a single blueprint](https://docs.devin.ai/api-reference/v3/snapshot-setup/get-organizations-blueprint.md)
+- [Presigned URL for the blueprint's YAML](https://docs.devin.ai/api-reference/v3/snapshot-setup/get-organizations-blueprint-contents.md)
+- [Get a single build](https://docs.devin.ai/api-reference/v3/snapshot-setup/get-organizations-build.md)
+- [Presigned URL for the build's log file](https://docs.devin.ai/api-reference/v3/snapshot-setup/get-organizations-build-logs.md)
+- [List enterprise blueprint files](https://docs.devin.ai/api-reference/v3/snapshot-setup/list-enterprise-blueprint-files.md)
+- [List enterprise-tier blueprints](https://docs.devin.ai/api-reference/v3/snapshot-setup/list-enterprise-blueprints.md)
+- [List blueprint files](https://docs.devin.ai/api-reference/v3/snapshot-setup/list-organizations-blueprint-files.md)
+- [List org- and repo-tier blueprints](https://docs.devin.ai/api-reference/v3/snapshot-setup/list-organizations-blueprints.md)
+- [List builds for the org](https://docs.devin.ai/api-reference/v3/snapshot-setup/list-organizations-builds.md)
+- [Update a blueprint's contents and/or position](https://docs.devin.ai/api-reference/v3/snapshot-setup/patch-organizations-blueprint.md): Partial update for a single blueprint. Does NOT auto-trigger a build.
+- [Upload an enterprise blueprint file](https://docs.devin.ai/api-reference/v3/snapshot-setup/post-enterprise-blueprint-file.md): Upload a file attachment (env-var substitution material) to the blueprint.
+- [Create the enterprise-tier blueprint](https://docs.devin.ai/api-reference/v3/snapshot-setup/post-enterprise-blueprints.md): Create the single enterprise-tier blueprint.
+- [Upload a blueprint file](https://docs.devin.ai/api-reference/v3/snapshot-setup/post-organizations-blueprint-file.md)
+- [Create an org- or repo-tier blueprint](https://docs.devin.ai/api-reference/v3/snapshot-setup/post-organizations-blueprints.md): Create a blueprint.  ``type`` is inferred from ``repo_name``.
+- [Cancel an in-flight build](https://docs.devin.ai/api-reference/v3/snapshot-setup/post-organizations-build-cancel.md)
+- [Pin the org to a specific successful build](https://docs.devin.ai/api-reference/v3/snapshot-setup/post-organizations-build-pin.md): Pin a successful build (less than 7 days old).
+- [Trigger a manual build](https://docs.devin.ai/api-reference/v3/snapshot-setup/post-organizations-builds.md): Manually trigger a snapshot build using the org's current blueprints.
+- [Replace the enterprise blueprint's YAML contents](https://docs.devin.ai/api-reference/v3/snapshot-setup/put-enterprise-blueprint.md)
+- [Clear Organization Default Tag](https://docs.devin.ai/api-reference/v3/tags/delete-enterprise-organizations-default-tag.md): Clear the default tag for an organization.
+- [Clear Organization Tags](https://docs.devin.ai/api-reference/v3/tags/delete-organizations-tags.md): Clear all allowed session tags for an organization.
+- [Remove Organization Tag](https://docs.devin.ai/api-reference/v3/tags/delete-organizations-tags-tag.md): Remove a single tag from the allowed session tags for an organization.
+- [Get Organization Default Tag](https://docs.devin.ai/api-reference/v3/tags/get-enterprise-organizations-default-tag.md): Get the current default tag for an organization.
+- [Get Organization Allowed Tags](https://docs.devin.ai/api-reference/v3/tags/organizations-tags.md): Get the allowed session tags for an organization.
+- [Append Organization Tags](https://docs.devin.ai/api-reference/v3/tags/post-organizations-tags.md): Append tags to the allowed session tags for an organization.
+- [Set Organization Default Tag](https://docs.devin.ai/api-reference/v3/tags/put-enterprise-organizations-default-tag.md): Set the default tag for an organization. The tag must exist in the allowed tags list.
+- [Replace Organization Allowed Tags](https://docs.devin.ai/api-reference/v3/tags/put-organizations-tags.md): Replace the full set of allowed session tags for an organization.
+- [Delete User](https://docs.devin.ai/api-reference/v3/users/delete-members-users.md)
+- [Delete Organization User](https://docs.devin.ai/api-reference/v3/users/delete-organizations-members-users.md)
+- [Get User](https://docs.devin.ai/api-reference/v3/users/get-members-user.md): Get a user by ID. Returns both direct and IDP-group-derived role assignments.
+- [Get Organization User](https://docs.devin.ai/api-reference/v3/users/get-organization-user.md): Get an organization member by ID. Returns both direct and IDP-group-derived role assignments.
+- [List Organization IDP Group Users](https://docs.devin.ai/api-reference/v3/users/list-organization-idp-users.md): List users whose organization membership is derived from IDP group assignments.
+- [List Organization Users](https://docs.devin.ai/api-reference/v3/users/list-organization-users.md): List users with direct membership in the organization.
+- [List IDP Group Users](https://docs.devin.ai/api-reference/v3/users/members-idp-users.md): List users whose enterprise membership is derived from IDP group assignments.
+- [List Users](https://docs.devin.ai/api-reference/v3/users/members-users.md)
+- [List Organization IDP Group Users](https://docs.devin.ai/api-reference/v3/users/organizations-members-idp-users.md): List users whose organization membership is derived from IDP group assignments.
+- [List Organization Users](https://docs.devin.ai/api-reference/v3/users/organizations-members-users.md)
+- [Update User](https://docs.devin.ai/api-reference/v3/users/patch-members-users.md)
+- [Update Organization User](https://docs.devin.ai/api-reference/v3/users/patch-organizations-members-users.md)
+- [Invite Users](https://docs.devin.ai/api-reference/v3/users/post-members-users.md)
+- [Assign Organization User](https://docs.devin.ai/api-reference/v3/users/post-organizations-members-users.md)
+- [JetBrains](https://docs.devin.ai/cli/acp/jetbrains.md): Run Devin inside JetBrains IDEs from AI Chat using the Agent Client Protocol (ACP), including JetBrains Remote Development.
+- [Xcode](https://docs.devin.ai/cli/acp/xcode.md): Run Devin inside Xcode's coding assistant via the Agent Client Protocol (ACP), or give the Devin CLI access to your Xcode project through Xcode's MCP bridge.
+- [Zed](https://docs.devin.ai/cli/acp/zed.md): Run Devin CLI inside the Zed editor as a custom ACP agent in the Agent Panel.
+- [Adaptive](https://docs.devin.ai/cli/adaptive.md): Adaptive is Cognition's intelligent model router that automatically selects the best AI model for each task.
+- [Changelog (Stable)](https://docs.devin.ai/cli/changelog/stable.md): Release notes for the stable channel
+- [Controls](https://docs.devin.ai/cli/enterprise/controls.md): Devin CLI is a local agent like Cascade, but does not yet implement all of the same features and controls.
+- [Devin Auth](https://docs.devin.ai/cli/enterprise/devin-auth.md): Authenticate to Devin CLI using your existing Devin account
+- [System Configuration](https://docs.devin.ai/cli/enterprise/system-config.md): Pin Devin CLI login and proxy settings across managed devices with an MDM-distributed system.json policy
+- [Team Settings](https://docs.devin.ai/cli/enterprise/team-settings.md): Configure team-wide settings to control your users' Devin CLI usage
+- [Legacy Windsurf Auth](https://docs.devin.ai/cli/enterprise/windsurf-auth.md): Authenticate to Devin CLI using your existing legacy Windsurf enterprise account
+- [Essential Commands](https://docs.devin.ai/cli/essential-commands.md): If you remember nothing else...
+- [Configuration](https://docs.devin.ai/cli/extensibility/configuration.md): How to configure Devin CLI behavior with config files
+- [Lifecycle Hooks](https://docs.devin.ai/cli/extensibility/hooks/lifecycle-hooks.md): Understanding hook events and the data available at each stage
+- [Hooks](https://docs.devin.ai/cli/extensibility/hooks/overview.md): Run custom logic when specific events occur during a session
+- [Extensibility Overview](https://docs.devin.ai/cli/extensibility/index.md): Customize and extend Devin CLI with rules, skills, and MCP servers
+- [MCP Configuration](https://docs.devin.ai/cli/extensibility/mcp/configuration.md): How to add, configure, and manage MCP servers
+- [MCP Overview](https://docs.devin.ai/cli/extensibility/mcp/overview.md): Extend Devin CLI with external tool servers using the Model Context Protocol
+- [Plugins](https://docs.devin.ai/cli/extensibility/plugins/overview.md): Reference for installing, authoring, and governing plugins across Devin cloud sessions, the CLI, and Devin Desktop.
+- [Quickstart: team marketplace](https://docs.devin.ai/cli/extensibility/plugins/quickstart.md): Stand up a shared plugin marketplace for your team in five steps
+- [Rules & AGENTS.md](https://docs.devin.ai/cli/extensibility/rules.md): Provide always-on instructions and context that guide the agent in every session
+- [Creating Skills](https://docs.devin.ai/cli/extensibility/skills/creating-skills.md): Full reference for the SKILL.md format and frontmatter options
+- [Skills Overview](https://docs.devin.ai/cli/extensibility/skills/overview.md): Create reusable prompts and workflows that extend the agent's capabilities
+- [Hand off to cloud Devins](https://docs.devin.ai/cli/handoff.md): Hand off a task from the Devin CLI to a cloud Devin session with /handoff.
+- [Quickstart](https://docs.devin.ai/cli/index.md): Get up and running in 2 minutes with Devin CLI, a local command-line coding agent with deep Devin Cloud integration.
+- [Models](https://docs.devin.ai/cli/models.md): Available models and how to configure them
+- [Commands & Flags](https://docs.devin.ai/cli/reference/commands.md): Complete reference for command arguments, subcommands, and interactive slash commands
+- [Configuration File](https://docs.devin.ai/cli/reference/configuration/config-file.md): Complete reference for the Devin CLI config file format
+- [Configuration Precedence](https://docs.devin.ai/cli/reference/configuration/global-vs-local.md): How global, project, and local settings interact
+- [Configuration Import](https://docs.devin.ai/cli/reference/configuration/read-config-from.md): Control how Devin CLI imports settings from Cursor, Windsurf, Claude Code, GitHub Copilot, OpenCode, VS Code, and Zed
+- [Keyboard Shortcuts](https://docs.devin.ai/cli/reference/keyboard-shortcuts.md): Common keyboard shortcuts in Devin CLI
+- [Permissions](https://docs.devin.ai/cli/reference/permissions.md): Control what the agent can do with fine-grained permission rules
+- [Terminal Compatibility](https://docs.devin.ai/cli/reference/terminal-compatibility.md): Supported terminals and recommendations for the best Devin CLI experience
+- [Sandbox](https://docs.devin.ai/cli/sandbox.md): OS-level isolation for Devin CLI sessions: how the sandbox works, network filtering, and enterprise enforcement.
+- [Shell Integration [Feature Preview]](https://docs.devin.ai/cli/shell-integration.md): Wrap your shell with Devin to invoke it instantly and give Devin visibility into your recent commands.
+- [Subagents](https://docs.devin.ai/cli/subagents.md): Delegate tasks to independent subagents that work in the foreground or background
+- [Troubleshooting](https://docs.devin.ai/cli/troubleshooting.md): Common issues and how to fix them
+- [Orchestration](https://docs.devin.ai/cloud/outposts/orchestration.md): Provision machines and run workers automatically as sessions queue
+- [Devin Outposts](https://docs.devin.ai/cloud/outposts/overview.md): Run Devin sessions on your own infrastructure
+- [Outposts partner integrations](https://docs.devin.ai/cloud/outposts/partners.md): Connect an outpost from a partner platform with a PKCE code exchange
+- [Quickstart](https://docs.devin.ai/cloud/outposts/quickstart.md): Create an outpost and serve sessions from a single machine
+- [Reference](https://docs.devin.ai/cloud/outposts/reference.md): CLI commands, fleet API endpoints, and the worker spawn contract
+- [Analytics](https://docs.devin.ai/desktop/accounts/analytics.md): View individual user analytics, team analytics, usage patterns, and metrics for your Devin Desktop usage including code completion stats and AI-written code percentage.
+- [Analytics API](https://docs.devin.ai/desktop/accounts/api-reference/analytics-api-introduction.md): Enterprise analytics API for querying Devin Desktop usage data including autocomplete, chat, command, and Cascade metrics.
+- [Analytics API v2](https://docs.devin.ai/desktop/accounts/api-reference/analytics-v2-introduction.md): Next-generation analytics API for querying consumption data with Bearer-token authentication, flexible grouping, and cursor-based pagination.
+- [API Reference](https://docs.devin.ai/desktop/accounts/api-reference/api-introduction.md): Enterprise API for querying Devin Desktop usage data and managing configurations with service key authentication.
+- [Get Cascade Analytics](https://docs.devin.ai/desktop/accounts/api-reference/cascade-analytics.md): Query Cascade-specific usage metrics including lines suggested/accepted, model usage, credit consumption, and tool usage statistics.
+- [Custom Analytics Query](https://docs.devin.ai/desktop/accounts/api-reference/custom-analytics.md): Flexible analytics querying with custom selections, filters, and aggregations for autocomplete, chat, command, and PCW data.
+- [Error Handling](https://docs.devin.ai/desktop/accounts/api-reference/errors.md): Common error messages and debugging tips for the Analytics API including authentication, query structure, and rate limiting errors.
+- [Get Active Users](https://docs.devin.ai/desktop/accounts/api-reference/get-active-users.md): Query the number of distinct active users for your team, with optional time granularity and per-user grouping.
+- [Get Consumption](https://docs.devin.ai/desktop/accounts/api-reference/get-consumption.md): Query credit or ACU consumption analytics with flexible filtering, grouping, and pagination.
+- [Get Team Credit Balance](https://docs.devin.ai/desktop/accounts/api-reference/get-team-credit-balance.md): Retrieve the current credit balance for your team, including prompt credits per seat, add-on credits, and billing cycle information.
+- [Get Usage Configuration](https://docs.devin.ai/desktop/accounts/api-reference/get-usage-config.md): Retrieve per-user add-on credit cap configuration, queried by team, group, or individual user scope for enterprise billing management.
+- [Set Usage Configuration](https://docs.devin.ai/desktop/accounts/api-reference/usage-config.md): Set or clear per-user add-on credit caps, with the ability to apply them across a team, group, or individual user for enterprise billing management.
+- [Get User Page Analytics](https://docs.devin.ai/desktop/accounts/api-reference/user-page-analytics.md): Retrieve user activity statistics including names, emails, last activity times, active days, and prompt credits used from the teams page.
+- [Domain Verification](https://docs.devin.ai/desktop/accounts/domain-verification.md): Verify your organization's domain ownership with DNS TXT records to enable SSO, user management, and automatic team invitations in Devin Desktop.
+- [Quota-Based Usage](https://docs.devin.ai/desktop/accounts/quota.md): Learn how Devin Desktop's quota-based usage system works, including daily and weekly allowances, extra usage, and migration details for existing subscribers.
+- [Role Based Access & Management](https://docs.devin.ai/desktop/accounts/rbac-role-management.md): Configure RBAC permissions, create custom roles, and manage user access for Devin Desktop Enterprise plans.
+- [Setting up SSO & SCIM](https://docs.devin.ai/desktop/accounts/sso-scim.md): Configure Single Sign-On (SSO) and SCIM provisioning for your organization using Google Workspace, Microsoft Entra ID, Okta, or other SAML identity providers.
+- [Getting started with Teams and Enterprise](https://docs.devin.ai/desktop/accounts/teams-getting-started.md): Set up Devin Desktop Teams and Enterprise plans with team management, SSO, analytics, user groups, and priority support for your organization.
+- [Plans and Usage](https://docs.devin.ai/desktop/accounts/usage.md): Understand Devin Desktop pricing plans, usage tracking, and how to upgrade from Free to Pro, Teams, or Enterprise.
+- [Agent Client Protocol](https://docs.devin.ai/desktop/acp.md): Run third-party agents inside the Devin Desktop Agent Command Center via ACP.
+- [Building a custom ACP agent](https://docs.devin.ai/desktop/acp-custom.md): Build a custom agent that runs inside Devin Desktop via the Agent Client Protocol.
+- [Adaptive](https://docs.devin.ai/desktop/adaptive.md): Adaptive is Cognition's intelligent model router that automatically selects the best AI model for each task.
+- [Advanced Configuration](https://docs.devin.ai/desktop/advanced.md): Advanced Devin Desktop configurations including SSH support, Dev Containers, WSL, extension marketplace settings, diff zones, and gitignore access for Cascade.
+- [Agent Command Center](https://docs.devin.ai/desktop/agent-command-center.md): Manage all of your Devin Desktop agents — local and cloud — from a single Kanban-style view inside Devin Desktop.
+- [AI Commit Messages](https://docs.devin.ai/desktop/ai-commit-message.md): Generate meaningful git commit messages automatically with AI by analyzing your code changes with a single click in Devin Desktop.
+- [Autocomplete Overview](https://docs.devin.ai/desktop/autocomplete/overview.md): AI-powered code autocomplete with single-line and multi-line suggestions, keyboard shortcuts, and customizable speed settings.
+- [Autocomplete Tips](https://docs.devin.ai/desktop/autocomplete/tips.md): Tips for getting the most out of Devin Desktop Autocomplete including inline comments, Fill In The Middle (FIM), and snooze functionality.
+- [Prompt Engineering](https://docs.devin.ai/desktop/best-practices/prompt-engineering.md): Best practices for crafting effective prompts to get high-quality code from Devin Desktop, including clear objectives, context, and constraints.
+- [Common Use Cases](https://docs.devin.ai/desktop/best-practices/use-cases.md): Common use cases for Devin Desktop including code generation, unit test generation, code documentation, API integration, and code refactoring.
+- [AGENTS.md](https://docs.devin.ai/desktop/cascade/agents-md.md): Create AGENTS.md files to provide directory-scoped instructions to Cascade. Instructions automatically apply based on file location in your project.
+- [App Deploys](https://docs.devin.ai/desktop/cascade/app-deploys.md): Deploy web applications directly from Devin Desktop to Netlify with public URLs, automatic builds, and project claiming for Next.js, React, Vue, and Svelte.
+- [Arena Mode](https://docs.devin.ai/desktop/cascade/arena.md): Run multiple Cascade instances in parallel using arena mode to explore different approaches simultaneously.
+- [Cascade Overview](https://docs.devin.ai/desktop/cascade/cascade.md): Cascade is Devin Desktop's agentic AI assistant with Code/Chat modes, tool calling, voice input, checkpoints, real-time awareness, and linter integration.
+- [Cascade Hooks](https://docs.devin.ai/desktop/cascade/hooks.md): Execute custom shell commands at key points in Cascade's workflow for logging, security controls, validation, and enterprise governance with pre and post hooks.
+- [Model Context Protocol (MCP)](https://docs.devin.ai/desktop/cascade/mcp.md): Integrate MCP servers with Cascade to access custom tools like GitHub, databases, and APIs. Configure stdio, HTTP, and SSE transports with admin controls for Teams.
+- [Memories & Rules](https://docs.devin.ai/desktop/cascade/memories.md): Persist context across Cascade conversations with auto-generated memories and user-defined rules at global, workspace, and system levels for enterprise teams.
+- [Cascade Modes](https://docs.devin.ai/desktop/cascade/modes.md): Devin Desktop offers multiple distinct agent modes, each optimized for different types of tasks.
+- [Skills](https://docs.devin.ai/desktop/cascade/skills.md): Skills help Cascade handle complex, multi-step tasks.
+- [Web and Docs Search](https://docs.devin.ai/desktop/cascade/web-search.md): Search the web and documentation directly from Cascade using @web and @docs mentions, URL parsing, and real-time context from web pages.
+- [Workflows](https://docs.devin.ai/desktop/cascade/workflows.md): Automate repetitive tasks in Cascade with reusable workflows defined as markdown files. Create PR review, deployment, testing, and code formatting workflows.
+- [Worktrees](https://docs.devin.ai/desktop/cascade/worktrees.md): Automatically set up git worktrees for parallel Cascade tasks
+- [Changelog](https://docs.devin.ai/desktop/changelog.md): Release notes for Devin Desktop (Windsurf).
+- [Changelog (Next)](https://docs.devin.ai/desktop/changelog-next.md): Release notes for Devin Desktop (Windsurf) Next builds.
+- [Chat Models](https://docs.devin.ai/desktop/chat/models.md): Available AI models for Devin Desktop Chat including Base Model, Devin Desktop Premier, GPT-4o, and Claude 3.5 Sonnet with different access levels.
+- [Chat Overview](https://docs.devin.ai/desktop/chat/overview.md): Chat with your codebase using Devin Desktop Chat in VS Code and JetBrains. Use @-mentions, persistent context, pinned files, and inline citations.
+- [Codemaps](https://docs.devin.ai/desktop/codemaps.md): Create shareable hierarchical maps of your codebase to visualize code execution flow and component relationships. Navigate and share with teammates.
+- [Command Overview](https://docs.devin.ai/desktop/command/plugins-overview.md): Use Devin Desktop Command for AI-powered inline code edits in VS Code and JetBrains. Generate or edit code with natural language prompts using Cmd/Ctrl+I.
+- [Refactors, Docstrings, and More](https://docs.devin.ai/desktop/command/related-features.md): Use Command-powered features like code lenses for refactoring, docstring generation, and Smart Paste for cross-language code translation.
+- [Command](https://docs.devin.ai/desktop/command/windsurf-overview.md): Use Devin Desktop Command (Cmd/Ctrl+I) for inline code generation and edits with natural language. No premium credits required.
+- [Code Lenses](https://docs.devin.ai/desktop/command/windsurf-related-features.md): Use Devin Desktop code lenses for quick Explain, Refactor, and Docstring operations on functions and classes directly in the editor.
+- [Fast Context](https://docs.devin.ai/desktop/context-awareness/fast-context.md): Fast Context is a specialized subagent that retrieves relevant code from your codebase up to 20x faster using SWE-grep models for rapid code retrieval.
+- [Context Awareness Overview](https://docs.devin.ai/desktop/context-awareness/overview.md): Devin Desktop's RAG-based context engine indexes your codebase for intelligent suggestions. Learn about context pinning, knowledge base, and M-Query retrieval.
+- [Remote Indexing](https://docs.devin.ai/desktop/context-awareness/remote-indexing.md): Index remote repositories from GitHub, GitLab, and BitBucket for enterprise teams without storing code locally.
+- [Devin Desktop Ignore](https://docs.devin.ai/desktop/context-awareness/windsurf-ignore.md): Configure which files and directories Devin Desktop should ignore during indexing using .devinignore or .codeiumignore files with gitignore-style syntax.
+- [Context Awareness for Devin Desktop](https://docs.devin.ai/desktop/context-awareness/windsurf-overview.md): Devin Desktop's RAG-based context engine indexes your codebase for intelligent code suggestions. Supports remote repositories for Teams and Enterprise.
+- [C#, .NET, and CPP](https://docs.devin.ai/desktop/csharp-cpp.md): Setup guide for C#, .NET Core, .NET Framework (Mono), and C++ development in Devin Desktop using open-source tooling like OmniSharp, clangd, and LLDB.
+- [DeepWiki](https://docs.devin.ai/desktop/deepwiki.md): Get AI-powered explanations of code symbols with DeepWiki. Hover over functions, variables, and classes to understand unfamiliar code in your codebase.
+- [Devin in Devin Desktop](https://docs.devin.ai/desktop/devin.md): Delegate work to Devin, an autonomous cloud agent, directly from Devin Desktop — and review its PRs without leaving your editor.
+- [Devin Desktop FAQ](https://docs.devin.ai/desktop/devin-desktop-faq.md): Frequently asked questions about the transition from Windsurf to Devin Desktop.
+- [Devin Local Agent](https://docs.devin.ai/desktop/devin-local.md): Use the same agent harness as Devin CLI directly inside Devin Desktop.
+- [Enterprise Policies](https://docs.devin.ai/desktop/enterprise-policies.md): Manage Devin Desktop settings centrally with enterprise policies. Configure extension allowlists, update modes, and other settings on Windows, macOS, and Linux using group policies, configuration profiles, and JSON policy files.
+- [Welcome to Devin Desktop](https://docs.devin.ai/desktop/getting-started.md): Download and install Devin Desktop IDE for Mac, Windows, or Linux. Import VS Code or Cursor settings, configure themes, and start coding with AI-powered assistance.
+- [Guide for Admins](https://docs.devin.ai/desktop/guide-for-admins.md): Enterprise admin guide for deploying Devin Desktop at scale. Configure SSO, SCIM, RBAC, analytics, and team management for large organizations.
+- [Install Devin Desktop](https://docs.devin.ai/desktop/install.md): Install Devin Desktop on Mac, Windows, or Linux, including apt and yum package repositories for Debian, Ubuntu, Fedora, and RHEL.
+- [AI Models](https://docs.devin.ai/desktop/models.md): Available AI models in Devin Desktop including SWE-1.7, Claude, and GPT. Compare model capabilities, credit costs, and performance.
+- [Devin Desktop Previews](https://docs.devin.ai/desktop/previews.md): Preview your web app locally in Devin Desktop IDE or browser with element selection, error capture, and direct integration with the agent for rapid iteration.
+- [Quick Review](https://docs.devin.ai/desktop/quick-review.md): Quick Review runs an agentic code review on your local changes using AI models.
+- [Recommended Extensions](https://docs.devin.ai/desktop/recommended-extensions.md): Popular Open VSX extensions for Devin Desktop including Python, Java, C#, GitLens, and more. Replicate familiar IDE experiences from VS Code, Eclipse, or Visual Studio.
+- [Releases](https://docs.devin.ai/desktop/releases.md): Download Devin Desktop (Windsurf) releases.
+- [Releases (Next)](https://docs.devin.ai/desktop/releases-next.md): Download Devin Desktop (Windsurf) Next builds.
+- [Reporting Security Concerns](https://docs.devin.ai/desktop/security/reporting.md): Report security vulnerabilities to Devin Desktop securely via email with GPG encryption. Learn about our coordinated disclosure policy and safe harbor.
+- [FedRAMP Security Admin Guide](https://docs.devin.ai/desktop/security/security-admin-guide.md): Devin Desktop FedRAMP Security Admin Guide for securely setting up, configuring, operating, and decommissioning top-level administrative accounts. Includes role definitions, account lifecycle procedures, and a reference table of all admin-controlled security settings.
+- [Spaces](https://docs.devin.ai/desktop/spaces.md): Spaces group all of the agent sessions, PRs, files, and context for a task or project into a single view in the Agent Command Center.
+- [Devin Desktop Tab](https://docs.devin.ai/desktop/tab/overview.md): Devin Desktop Tab provides AI-powered code suggestions with Tab to Jump, Tab to Import, and inline suggestions, powered by our custom model.
+- [Terminal](https://docs.devin.ai/desktop/terminal.md): Use Devin Desktop's enhanced terminal with Command mode, agent integration, Turbo mode for auto-execution, and allow/deny lists for command control.
+- [Gathering Devin Desktop Logs](https://docs.devin.ai/desktop/troubleshooting/logs.md): How to download diagnostic logs from Devin Desktop Editor using the Command Palette or Cascade panel for troubleshooting support.
+- [General Issues](https://docs.devin.ai/desktop/troubleshooting/plugins-common-issues.md): Common Devin Desktop plugin issues including subscription problems, cancellation, telemetry settings, account deletion, and chat panel troubleshooting.
+- [Eclipse Troubleshooting](https://docs.devin.ai/desktop/troubleshooting/plugins-enterprise/eclipse.md): Troubleshoot Eclipse plugin issues including startup problems, empty chat screen, WebView2, and certificate errors with Java keystore solutions.
+- [JetBrains Troubleshooting](https://docs.devin.ai/desktop/troubleshooting/plugins-enterprise/jetbrains.md): Troubleshoot JetBrains plugin issues including JCEF errors, certificate problems, custom workspaces, and extension diagnostics.
+- [Proxy Configuration for Devin Desktop in JetBrains IDEs](https://docs.devin.ai/desktop/troubleshooting/plugins-enterprise/jetbrains-proxy.md): Configure HTTP/HTTPS proxy settings for Devin Desktop plugin in JetBrains IDEs including remote development and Gateway environments.
+- [Visual Studio Troubleshooting](https://docs.devin.ai/desktop/troubleshooting/plugins-enterprise/visualstudio.md): Troubleshoot Visual Studio plugin issues including IntelliCode conflicts, Tab key bindings, and marketplace visibility problems.
+- [Visual Studio Code (VSCode) Troubleshooting](https://docs.devin.ai/desktop/troubleshooting/plugins-enterprise/vscode.md): Troubleshoot VS Code extension issues including proxy settings, certificate errors, API server configuration, and chat response problems.
+- [Gathering Plugin Logs](https://docs.devin.ai/desktop/troubleshooting/plugins-gathering-logs.md): How to collect diagnostic logs from JetBrains, VS Code, Eclipse, Visual Studio, and NeoVim for troubleshooting Devin Desktop plugin issues.
+- [Common Devin Desktop Issues](https://docs.devin.ai/desktop/troubleshooting/windsurf-common-issues.md): Troubleshoot common Devin Desktop Editor issues including rate limiting, MacOS security warnings, Windows updates, Linux crashes, and terminal problems.
+- [Language Server Fails with 'No Space Left on Device' on Linux](https://docs.devin.ai/desktop/troubleshooting/windsurf-inotify-limits.md): Resolve Linux language server startup failures caused by exhausted inotify watch/instance limits (ENOSPC). Includes symptoms, diagnosis commands, and sysctl fixes.
+- [Proxy Configuration in Devin Desktop Editor](https://docs.devin.ai/desktop/troubleshooting/windsurf-proxy-configuration.md): Configure HTTP/HTTPS proxy settings for Devin Desktop Editor in corporate networks. Includes auto-detect, manual configuration, and SSH remote proxy setup.
+- [TLS / SSL Inspection Issues in Devin Desktop](https://docs.devin.ai/desktop/troubleshooting/windsurf-ssl-inspection.md): Configure enterprise environments where SSL inspection (e.g., Zscaler) causes TLS certificate validation or protocol negotiation failures. Includes how to capture Console errors and what to request from IT/security.
+- [WSL Known Issues](https://docs.devin.ai/desktop/troubleshooting/windsurf-wsl-performance.md): Troubleshoot known Devin Desktop issues when running in Windows Subsystem for Linux (WSL), including slow performance from Plan 9 (9P) filesystem saturation and connection failures caused by VPN or zero-trust network software.
+- [Vibe and Replace](https://docs.devin.ai/desktop/vibe-and-replace.md): AI-powered find and replace that applies natural language prompts to each match. Use Smart mode for careful changes or Fast mode for quick transformations.
+- [Dedicated Deployment Private Networking](https://docs.devin.ai/enterprise/deployment/dedicated_saas_private_networking.md)
+- [Enterprise Deployment](https://docs.devin.ai/enterprise/deployment/overview.md): Learn about Devin's enterprise deployment options: Enterprise Cloud and Customer Dedicated Deployment architectures.
+- [Best practices](https://docs.devin.ai/enterprise/environment-management/best-practices.md): Enterprise best practices for organizing blueprints, managing secrets, monitoring builds, pinning, and migration at scale.
+- [Enterprise environment overview](https://docs.devin.ai/enterprise/environment-management/overview.md): Enterprise-wide environment management: blueprint hierarchy, enterprise blueprint configuration, secrets, and enterprise-wide rebuilds.
+- [Migrating your enterprise](https://docs.devin.ai/enterprise/environment-management/rollout.md): Progressive rollout of declarative environment configuration across your enterprise: rollout states, per-org overrides, phased migration playbook, and monitoring.
+- [AI Guardrails](https://docs.devin.ai/enterprise/features/ai-guardrails.md): Configure safety guardrails to screen user messages and protect against prompt injection, data exfiltration, and policy violations
+- [Attribution Filtering](https://docs.devin.ai/enterprise/features/attribution-filtering.md): Screen Devin-generated code against public repositories and block matches before they are written to your codebase
+- [Getting Started with Devin Enterprise](https://docs.devin.ai/enterprise/getting-started/get-started.md): Step-by-step guide for configuring Devin Enterprise, including organizations, user roles, SSO, and integrations.
+- [Understanding Organizations](https://docs.devin.ai/enterprise/getting-started/organizations.md): Learn how to structure and manage organizations in Devin Enterprise
+- [Artifacts](https://docs.devin.ai/enterprise/integrations/artifacts/overview.md): Accessing Your Artifacts
+- [Azure DevOps](https://docs.devin.ai/enterprise/integrations/azure-devops.md): Work with Devin directly in your Azure DevOps repositories
+- [Azure DevOps (Service Principal)](https://docs.devin.ai/enterprise/integrations/azure-devops-service-principal.md): Connect Devin to Azure DevOps using a Microsoft Entra service principal
+- [Git Integrations](https://docs.devin.ai/enterprise/integrations/git-integrations.md): Connect Devin with your source code repositories
+- [GitHub Enterprise Server Integration](https://docs.devin.ai/enterprise/integrations/github-enterprise-server.md): Connect Devin with GitHub Enterprise Server or GitHub Enterprise Cloud with Data Residency
+- [GitLab Self-Managed Integration](https://docs.devin.ai/enterprise/integrations/gitlab-self-managed.md): Connect Devin with your self-managed GitLab instance
+- [Local Agent Controls](https://docs.devin.ai/enterprise/local/controls.md): Configure Devin Desktop and Devin CLI settings across your enterprise with a root-level baseline and per-organization overrides.
+- [Custom Roles & RBAC](https://docs.devin.ai/enterprise/security-access/custom-roles.md): Configure fine-grained access control with custom roles and role-based access control (RBAC) in Devin Enterprise.
+- [IdP Group Integration](https://docs.devin.ai/enterprise/security-access/idp-groups.md): Configure Identity Provider (IdP) group integration for streamlined user access management in Devin Enterprise.
+- [IP Access Lists](https://docs.devin.ai/enterprise/security-access/ip-access-lists.md): Restrict API and webapp access to specific IP addresses or CIDR ranges
+- [Personal Analytics](https://docs.devin.ai/enterprise/security-access/personal-analytics.md): Let users view their own ACU consumption and usage analytics across your enterprise.
+- [SCIM Setup](https://docs.devin.ai/enterprise/security-access/scim.md): Automatically provision and deprovision users and groups from your identity provider using SCIM 2.0.
+- [Customer Managed Keys](https://docs.devin.ai/enterprise/security-access/security/customer-managed-keys.md): Use your own AWS KMS key to encrypt data at rest in your Devin Enterprise Dedicated deployment.
+- [Enterprise security](https://docs.devin.ai/enterprise/security-access/security/enterprise-security.md)
+- [Entra ID SSO Setup](https://docs.devin.ai/enterprise/security-access/sso/azure.md): Configure Single Sign-On with Microsoft Entra ID (formerly Azure AD)
+- [SSO Onboarding Guide](https://docs.devin.ai/enterprise/security-access/sso/guide.md): End-to-end guide for setting up SSO, provisioning users, and configuring IdP groups with Devin Enterprise.
+- [OIDC SSO Setup](https://docs.devin.ai/enterprise/security-access/sso/oidc.md): Configure Single Sign-On with a Generic OpenID Connect Identity Provider
+- [Okta SSO Setup](https://docs.devin.ai/enterprise/security-access/sso/okta.md): Configure Single Sign-On with Okta
+- [SAML SSO Setup](https://docs.devin.ai/enterprise/security-access/sso/saml.md): Configure Single Sign-On with a SAML Identity Provider
+- [Trust Center](https://docs.devin.ai/enterprise/security-access/trust-center.md): Security practices, compliance certifications, and data privacy commitments
+- [Good vs. Bad Instructions](https://docs.devin.ai/essential-guidelines/good-vs-bad-instructions.md): What works and what doesn't
+- [Instructing Devin Effectively](https://docs.devin.ai/essential-guidelines/instructing-devin-effectively.md): How to achieve optimal results.
+- [Prompt Templates Cheat Sheet](https://docs.devin.ai/essential-guidelines/prompt-templates-cheat-sheet.md): Ready-to-use prompt templates for common tasks
+- [How does Devin fit into my existing SDLC?](https://docs.devin.ai/essential-guidelines/sdlc-integration.md): Understanding how Devin integrates with your software development lifecycle
+- [When to Use Devin](https://docs.devin.ai/essential-guidelines/when-to-use-devin.md)
+- [ACU Limits](https://docs.devin.ai/federal/acu-limits.md): Set team, group, and user ACU limits for federal deployments.
+- [User ACU Caps](https://docs.devin.ai/federal/api/acu-caps.md): Read and set per-user ACU limit overrides via the service-key API.
+- [ACU Consumption](https://docs.devin.ai/federal/api/acu-consumption.md): Query team, group, and per-user ACU consumption over a historical window or the current billing cycle.
+- [Group Management](https://docs.devin.ai/federal/api/group-management.md): Create and manage groups, membership, model availability, and group ACU caps via the service-key API.
+- [API Overview](https://docs.devin.ai/federal/api/overview.md): Service-key API for ACU analytics, group management, and ACU limits on federal deployments.
+- [Python SDK](https://docs.devin.ai/federal/api/python-sdk.md): Query analytics and manage groups and ACU limits from the command line with the Python SDK.
+- [Compliance and Availability](https://docs.devin.ai/federal/compliance.md): Compliance frameworks and certifications.
+- [FAQs](https://docs.devin.ai/federal/faqs.md): Frequently asked questions for federal customers.
+- [Getting Started](https://docs.devin.ai/federal/getting-started.md): Get up and running with Devin in your environment.
+- [Groups](https://docs.devin.ai/federal/groups.md): Manage team membership, model availability, and ACU limits by group.
+- [Introduction](https://docs.devin.ai/federal/introduction.md): The AI software engineering platform for government.
+- [Model Provisioning](https://docs.devin.ai/federal/model-provisioning.md): Control Cascade, Command, and CLI model availability by team and group.
+- [Security](https://docs.devin.ai/federal/security.md): Security practices and controls for Devin Desktop in federal deployments.
+- [Billing and Procurement](https://docs.devin.ai/federal/usage-and-billing.md): How usage and billing work for federal customers.
+- [Introducing Devin](https://docs.devin.ai/get-started/devin-intro.md): Devin is the AI software engineer, built to help ambitious engineering teams crush their backlogs.
+- [Your First Session](https://docs.devin.ai/get-started/first-run.md): Start your first session and see what Devin can do
+- [Bitbucket](https://docs.devin.ai/integrations/bitbucket.md): Work with Devin directly in your Bitbucket repositories
+- [GitHub](https://docs.devin.ai/integrations/gh.md): Work with Devin directly in your repos
+- [GitLab](https://docs.devin.ai/integrations/gitlab.md): Work with Devin directly in your GitLab repositories
+- [Jira](https://docs.devin.ai/integrations/jira.md): Assign Jira tickets to Devin and turn them into PRs
+- [Linear](https://docs.devin.ai/integrations/linear.md): Assign Linear tickets to Devin and turn them into PRs
+- [Microsoft Teams](https://docs.devin.ai/integrations/microsoft-teams.md): Chat and collaborate with Devin directly in Microsoft Teams
+- [Integrations Overview](https://docs.devin.ai/integrations/overview.md): Connect Devin to your existing tools and workflows
+- [GitHub Pull Request Templates](https://docs.devin.ai/integrations/pr-templates.md): How Devin discovers and uses GitHub-style pull request templates, including the custom Devin template filename.
+- [Self-Hosted SCM & Artifacts](https://docs.devin.ai/integrations/self-hosted-scm-artifacts.md): Connect Devin to your self-hosted source code management and artifact repositories
+- [Slack](https://docs.devin.ai/integrations/slack.md): Chat and collaborate with Devin directly in your company Slack
+- [Tutorial Library](https://docs.devin.ai/learn-about-devin/workflows.md): Videos on how to use Devin by the team
+- [AGENTS.md](https://docs.devin.ai/onboard-devin/agents-md.md): Add AGENTS.md files to provide context and instructions for Devin
+- [Environment configuration](https://docs.devin.ai/onboard-devin/environment.md): Configure Devin's environment so every session starts with your repos cloned, tools installed, and dependencies ready.
+- [Android emulator support](https://docs.devin.ai/onboard-devin/environment/android-emulation.md): Build and run Android applications on a full emulator running on Devin's own machine
+- [Blueprint reference](https://docs.devin.ai/onboard-devin/environment/blueprint-reference.md): Complete field reference for blueprints: sections, step types, GitHub Actions, environment variables, secrets, and file attachments.
+- [Declarative configuration](https://docs.devin.ai/onboard-devin/environment/blueprints.md): Define your environment in YAML blueprints. Builds run automatically to produce snapshots that every session boots from.
+- [Windows support](https://docs.devin.ai/onboard-devin/environment/windows-support.md): Run Devin on Windows with blueprints and sessions.
+- [Index a Repository](https://docs.devin.ai/onboard-devin/index-repo.md): Enable Ask Devin and DeepWiki by indexing your repositories
+- [Knowledge Onboarding](https://docs.devin.ai/onboard-devin/knowledge-onboarding.md): Knowledge is a collection of instructions and advice that Devin can reference in all sessions. Think of it as onboarding a new employee with the relevant organizational context.
+- [Classic configuration](https://docs.devin.ai/onboard-devin/repo-setup.md): Configure Devin's environment through the classic interactive wizard.
+- [VPN Configuration](https://docs.devin.ai/onboard-devin/vpn.md): Configure VPN access for Devin to connect to your internal network
+- [Auto-triage](https://docs.devin.ai/product-guides/auto-triage.md): A persistent Devin that monitors your Slack channel and automatically triages incoming bugs
+- [Automations](https://docs.devin.ai/product-guides/automations.md): Set up event-driven workflows that trigger Devin sessions automatically
+- [Autofix Settings - Bot Comments](https://docs.devin.ai/product-guides/bot-comment-settings.md): Control which bots Devin responds to on pull requests
+- [Creating Playbooks](https://docs.devin.ai/product-guides/creating-playbooks.md): Build a library of reusable prompts for your organization
+- [Deployments](https://docs.devin.ai/product-guides/deployment-capabilities.md): Devin's abilities and limitations in deploying frontend and backend applications.
+- [Invite your Team](https://docs.devin.ai/product-guides/invite-team.md): Only available for Team and Enterprise plans
+- [Knowledge](https://docs.devin.ai/product-guides/knowledge.md): Share important context and knowledge to help Devin get onboarded
+- [Cloud Authentication with OIDC](https://docs.devin.ai/product-guides/oidc.md): Give Devin short-lived, keyless access to your cloud services via OpenID Connect
+- [Set up your plugin ecosystem](https://docs.devin.ai/product-guides/plugin-ecosystem.md): Build, host, and govern a shared set of Devin plugins for your whole org or enterprise
+- [Plugin marketplace](https://docs.devin.ai/product-guides/plugins.md): Install and require bundles of skills for everyone in your org or enterprise from the Devin web app
+- [Scheduled Sessions](https://docs.devin.ai/product-guides/scheduled-sessions.md): Automate recurring or one-time Devin sessions that run on a schedule
+- [Secrets & Site Cookies](https://docs.devin.ai/product-guides/secrets.md): Securely share credentials with Devin so it can access any tool
+- [Session Insights](https://docs.devin.ai/product-guides/session-insights.md): Analyze your Devin sessions and get actionable feedback to improve future interactions
+- [Skills](https://docs.devin.ai/product-guides/skills.md): Teach Devin reusable procedures by committing SKILL.md files to your repos
+- [Using Playbooks](https://docs.devin.ai/product-guides/using-playbooks.md)
+- [2024](https://docs.devin.ai/release-notes/2024.md)
+- [2025](https://docs.devin.ai/release-notes/2025.md)
+- [2026](https://docs.devin.ai/release-notes/2026.md)
+- [Recent Updates](https://docs.devin.ai/release-notes/overview.md)
+- [Best Practices](https://docs.devin.ai/use-cases/best-practices.md): How to structure work for Devin to maximize efficiency and ROI
+- [Data & Analysis](https://docs.devin.ai/use-cases/data-analysis.md)
+- [Clear Engineering Backlogs](https://docs.devin.ai/use-cases/examples/clear-engineering-backlogs.md): Let Devin tackle your engineering backlogs
+- [COBOL Modernization](https://docs.devin.ai/use-cases/examples/cobol-modernization.md): Modernize legacy COBOL systems to contemporary technologies
+- [Java Upgrades](https://docs.devin.ai/use-cases/examples/java-upgrades.md): Upgrade your Java applications to the latest versions with ease
+- [JavaScript to TypeScript Migration](https://docs.devin.ai/use-cases/examples/javascript-to-typescript.md): Migrate JavaScript codebases to TypeScript for improved type safety and developer experience
+- [NoSQL to SQL Migration](https://docs.devin.ai/use-cases/examples/nosql-to-sql.md): Migrate from NoSQL databases to SQL for improved data consistency and relational integrity
+- [SAS to PySpark Migration](https://docs.devin.ai/use-cases/examples/sas-to-pyspark.md): Migrate SAS analytics workflows to modern PySpark infrastructure
+- [Use Cases](https://docs.devin.ai/use-cases/gallery/index.md)
+- [Overview](https://docs.devin.ai/use-cases/index.md): Proven use cases deployed across hundreds of enterprises
+- [Interactive Applications](https://docs.devin.ai/use-cases/interactive-applications.md)
+- [Migration & Modernization](https://docs.devin.ai/use-cases/migration-modernization.md)
+- [Testing & Refactoring](https://docs.devin.ai/use-cases/testing-refactoring.md)
+- [API Integration](https://docs.devin.ai/use-cases/tutorials/api-integration.md): Devin can integrate, configure, and test third party APIs in your applications.
+- [Code Coverage](https://docs.devin.ai/use-cases/tutorials/code-coverage.md): Devin can analyze your codebase's test suite and write additional tests to increase code coverage for your team.
+- [Containerization](https://docs.devin.ai/use-cases/tutorials/containerization.md): In this tutorial, we’ll show you how Devin can configure a Docker container to standardize your team’s dev environment.
+- [Managing Frontend Components](https://docs.devin.ai/use-cases/tutorials/frontend-components.md): Devin can work with frontend libraries and share visuals with you during its sessions.
+- [MCP Use Cases](https://docs.devin.ai/use-cases/tutorials/mcp-use-cases.md)
+- [Web Scraping & Automation](https://docs.devin.ai/use-cases/web-scraping.md)
+- [Cascade Overview](https://docs.devin.ai/windsurf/plugins/cascade/cascade-overview.md): Cascade brings agentic AI coding to JetBrains with Write/Chat modes, voice input, tool access, turbo mode, and real-time collaboration.
+- [Model Context Protocol (MCP)](https://docs.devin.ai/windsurf/plugins/cascade/mcp.md): Configure MCP servers to extend Cascade with custom tools and services using stdio, HTTP, or SSE transports with admin controls for Teams and Enterprise.
+- [Memories & Rules](https://docs.devin.ai/windsurf/plugins/cascade/memories.md): Configure Cascade memories and rules to persist context across conversations with global rules, workspace rules, and system-level rules for enterprise.
+- [Cascade Models](https://docs.devin.ai/windsurf/plugins/cascade/models.md): Available AI models in Cascade including SWE-1.7, Claude, and GPT with credit costs.
+- [Web and Docs Search](https://docs.devin.ai/windsurf/plugins/cascade/web-search.md): Enable Cascade to search the web and read documentation pages in real-time using @web and @docs mentions for up-to-date context.
+- [Workflows](https://docs.devin.ai/windsurf/plugins/cascade/workflows.md): Create reusable Cascade workflows as markdown files to automate repetitive tasks like deployments, PR reviews, and code formatting with slash commands.
+- [Changelog](https://docs.devin.ai/windsurf/plugins/changelog.md): Release notes for the Windsurf JetBrains plugin.
+- [Changelog (Pre-release)](https://docs.devin.ai/windsurf/plugins/changelog-next.md): Release notes for the Windsurf JetBrains plugin pre-release builds.
+- [IDE Compatibility](https://docs.devin.ai/windsurf/plugins/compatibility.md): Supported IDEs and version requirements for Windsurf Plugins including VS Code, JetBrains, Visual Studio, NeoVim, Vim, Emacs, Xcode, Sublime Text, and Eclipse.
+- [Welcome to Windsurf Plugins](https://docs.devin.ai/windsurf/plugins/getting-started.md): Install and set up Windsurf Plugins for JetBrains, VS Code, Visual Studio, Vim, NeoVim, Jupyter, Chrome, and other IDEs with AI-powered coding assistance.
+- [Guide for Admins](https://docs.devin.ai/windsurf/plugins/guide-for-admins.md): Enterprise admin guide for deploying Windsurf at scale. Configure SSO, SCIM, RBAC, analytics, and team management for large organizations.
+- [Advanced Capabilities](https://docs.devin.ai/work-with-devin/advanced-capabilities.md): Devin can orchestrate managed sessions, analyze past work, create playbooks, and manage your knowledge base
+- [Ask Devin](https://docs.devin.ai/work-with-devin/ask-devin.md): Use Ask Devin to ask questions about your codebase, plan tasks, and generate high-context sessions
+- [Computer Use](https://docs.devin.ai/work-with-devin/computer-use.md): How Devin uses a full desktop environment to interact with GUIs, test applications, and visually verify changes
+- [Data Analyst Agent](https://docs.devin.ai/work-with-devin/data-analyst.md): Use the Data Analyst agent for fast database queries, data analysis, and visualizations
+- [DeepWiki](https://docs.devin.ai/work-with-devin/deepwiki.md): Architecture diagrams, documentation, links to sources, and more for all your repos
+- [DeepWiki MCP](https://docs.devin.ai/work-with-devin/deepwiki-mcp.md): How to use the official DeepWiki MCP server
+- [Devin CLI](https://docs.devin.ai/work-with-devin/devin-cli.md): Use Devin as a local coding agent directly from your command line, with the ability to hand off tasks to cloud Devin.
+- [Hand off to cloud Devins](https://docs.devin.ai/work-with-devin/devin-handoff.md): Hand off tasks to a cloud Devin session from the Devin CLI, Claude Code, Codex, or any coding agent.
+- [Devin MCP](https://docs.devin.ai/work-with-devin/devin-mcp.md): How to use the official Devin MCP server for private and public repositories
+- [Devin Review](https://docs.devin.ai/work-with-devin/devin-review.md): A new way to quickly review and understand complex PRs.
+- [Devin Session Tools](https://docs.devin.ai/work-with-devin/devin-session-tools.md): Complete guide to Devin's IDE, Browser, and Shell tools
+- [MCP (Model Context Protocol) Marketplace](https://docs.devin.ai/work-with-devin/mcp.md)
+- [Security Swarm](https://docs.devin.ai/work-with-devin/security-swarm.md): Find, triage, and remediate security vulnerabilities across your repositories
+- [Slash Commands](https://docs.devin.ai/work-with-devin/slash-commands.md): Use slash commands to quickly insert predefined text prompt templates and streamline your workflow with Devin
+- [Stacked PRs](https://docs.devin.ai/work-with-devin/stacked-prs.md): How Devin splits large changes into ordered, reviewable stacks of pull requests
+- [Testing & Video Recordings](https://docs.devin.ai/work-with-devin/testing-and-recordings.md): How Devin tests your changes end-to-end and sends you video recordings as proof
+
+## OpenAPI Specs
+
+- [v3-openapi](https://docs.devin.ai/v3-openapi.yaml)
+- [v3-openapi-apigee](https://docs.devin.ai/v3-openapi-apigee.json)
+- [analytics-v2-openapi](https://docs.devin.ai/desktop/accounts/api-reference/analytics-v2-openapi.yaml)
+- [v1-openapi](https://docs.devin.ai/v1-openapi.yaml)
+- [v2-openapi](https://docs.devin.ai/v2-openapi.yaml)
+- [package-lock](https://docs.devin.ai/package-lock.json)

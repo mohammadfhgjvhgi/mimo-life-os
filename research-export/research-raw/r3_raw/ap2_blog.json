@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol",
+    "name": "Announcing Agent Payments Protocol (AP2)",
+    "snippet": "Google announced the Agent Payments Protocol ( AP2 ), an open protocol developed with leading payments and technology companies to securely initiate and transact ...",
+    "host_name": "cloud.google.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://eco.com/support/en/articles/15192002-ap2-protocol-explained-google-s-agentic-commerce-standard-2026",
+    "name": "AP2 Protocol Explained: Google's Agentic Commerce  - Eco",
+    "snippet": "Jul 16, 2026 — AP2 (Agent Payments Protocol) is Google's open standard for letting AI agents transact on behalf of users , announced September 16, 2025 with 60+ ... Read more",
+    "host_name": "eco.com",
+    "rank": 1,
+    "date": "Jul 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://cloudsecurityalliance.org/blog/2025/10/06/secure-use-of-the-agent-payments-protocol-ap2-a-framework-for-trustworthy-ai-driven-transactions",
+    "name": "Secure Use of the Agent Payments Protocol (AP2)",
+    "snippet": "Oct 6, 2025 — This blog provides a detailed security analysis of AP2 , elucidating its role-based architecture, cryptographic primitives (e.g., ECDSA ... Read more",
+    "host_name": "cloudsecurityalliance.org",
+    "rank": 2,
+    "date": "Oct 6, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://ap2lab.com/en/blog/ap2-launch-2025",
+    "name": "Google and Coinbase Launch the Agent Payments Protocol",
+    "snippet": "In mid- September 2025 Google Cloud and Coinbase jointly introduced the Agent Payments Protocol ( AP2 ), positioning it as the commerce layer for autonomous ...",
+    "host_name": "ap2lab.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://agentpaymentsprotocol.info/blog",
+    "name": "AP2 Blog - Agent Payments Protocol (AP2)",
+    "snippet": "Sep 18, 2025 — Key takeaways from the Google Cloud and Coinbase announcement of the Agent Payments Protocol ( AP2 ) and its first launch partners.",
+    "host_name": "agentpaymentsprotocol.info",
+    "rank": 4,
+    "date": "Sep 18, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://dr-arsanjani.medium.com/the-era-of-agentic-commerce-starts-now-with-the-new-agent-payments-protocol-ap2-2197b8762dd9",
+    "name": "The Era of Agentic Commerce starts now with the  - Medium",
+    "snippet": "At Google we just (Sept 2025) announced Agent Payments Protocol (AP2 ) — an open protocol developed with leading payments & tech companies. Read more",
+    "host_name": "dr-arsanjani.medium.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://colinmcnamara.com/blog/understanding-a2a-ap2-protocols-builder-guide",
+    "name": "My Deep Dive into Google's A2A and AP2 Protocols",
+    "snippet": "Sep 22, 2025 — The initial spec dropped on September 16, 2025 . Here's what actually works right now: Human-present purchases. Credit/debit card payments. ...",
+    "host_name": "colinmcnamara.com",
+    "rank": 6,
+    "date": "Sep 22, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/pulse/from-chat-checkout-how-googles-ap2-protocol-turns-ai-schwentker-txcuc",
+    "name": "How Google's AP2 Protocol Turns AI Agents into Trusted",
+    "snippet": "On September 16, 2025, Google introduced the Agent Payments Protocol (AP2 ) with backing from 60+ partners across networks, wallets, crypto, ... Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.fintechwrapup.com/p/deep-dive-googles-ap2-explained-the",
+    "name": "Google's AP2 Explained - The Rulebook for Agent-Led",
+    "snippet": "Sep 21, 2025 — Announced in September 2025, AP2 is an open standard designed so AI agents can initiate payments on our behalf across different platforms. In ... Read more",
+    "host_name": "www.fintechwrapup.com",
+    "rank": 8,
+    "date": "Sep 21, 2025",
+    "favicon": ""
+  }
+]

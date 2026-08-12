@@ -1,0 +1,470 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Introducing the new Vercel Agent - Vercel 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+Skip to content 
+
+Copy Logo as SVG Copy Wordmark as SVG Brand Guidelines 
+Products 
+##### Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Passport 
+
+- Connect 
+
+- eve 
+
+##### Core Platform
+
+- Security 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+- Workflows 
+
+- CI/CD 
+
+##### Tools
+
+- Next.js 
+
+- Vercel Agent 
+
+- Vercel Plugin 
+
+- Domains ↗ 
+
+- v0 ↗ 
+
+Resources 
+##### Learn
+
+- Docs 
+
+- About 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+##### Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+##### Explore
+
+- Customers 
+
+- Marketplace 
+
+- Partner Finder 
+
+- AWS 
+
+- Community ↗ 
+
+Enterprise Pricing 
+Get a Demo Log In Sign Up 
+Ask AI Dashboard 
+
+Products 
+### Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Passport 
+
+- Connect 
+
+- eve 
+
+### Core Platform
+
+- Security 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+- Workflows 
+
+- CI/CD 
+
+### Tools
+
+- Next.js 
+
+- Vercel Agent 
+
+- Vercel Plugin 
+
+- Domains ↗ 
+
+- v0 ↗ 
+
+Resources 
+### Learn
+
+- Docs 
+
+- About 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+### Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+### Explore
+
+- Customers 
+
+- Marketplace 
+
+- Partner Finder 
+
+- AWS 
+
+- Community ↗ 
+
+Enterprise 
+Pricing 
+
+Get a Demo Log In Sign Up 
+
+# Introducing the new Vercel Agent
+
+Amelia Charles Content Engineer 
+
+Blog Company News 
+
+21 Jul 2026 
+6 min read
+Copy 
+
+Today we're expanding Vercel Agent . It started by triaging alerts and reviewing your pull requests. Now it has a home in your dashboard, where it can investigate production, answer questions about your projects, and take action once you approve it.
+Because Vercel Agent is built into the platform that deploys and runs your app, when something changes in production, it's your first responder. It autonomously investigates your logs, metrics, and deployments, finds the root cause, and proposes a fix, before you've opened your laptop.
+Vercel Agent works under its own identity and is read-only by default. You can reach it through the Vercel Dashboard, GitHub, and the CLI.
+
+## Copy link to heading What Vercel Agent does for you 
+We've been running Vercel Agent on our production deployments for months. This is what a typical investigation looks like. 
+A bad deploy ships at 11pm and the checkout endpoint starts throwing 500s. By the time the on-call engineer logs in, Vercel Agent has already traced the errors to the deploy that shipped four minutes earlier, and recommends an instant rollback. The engineer approves the plan. With permission, Vercel Agent rolls back to the previous production deployment and begins working on a PR to fix the endpoint. 
+The time from alert to mitigated: less than three minutes.
+
+### Copy link to heading What you can do with Vercel Agent
+You can also direct Vercel Agent yourself. Hand it a task and it does the legwork, then either answers your question or hands you a fix to approve. It never changes production on its own. For example:
+
+- Review a pull request. Tell it to look at a PR and it flags performance regressions and risky changes that a passing CI run won’t show.
+
+- Trace a cost increase. Ask why your bill jumped and it finds the culprit, like a code change that server-renders a page on every request instead of caching. With approval, it writes the fix and opens a PR. 
+
+- Fix a broken build. Point Vercel Agent at a failed deployment and it reads the logs, finds the failing config, asks permission to update it, and tests the build in a sandbox. 
+
+- Check if you're clear to ship. Ask about a feature flag and it reads the code and live metrics, then tells you whether it's safe to roll out.
+
+Vercel Agent lives in your dashboard. Ask it anything about your projects. 
+
+## Copy link to heading A new security model for agents in production
+An agent that can fix your app can also break it. So for any agent you let near production, the first question is: how is it safe to let it deploy, change your config, or touch your data? The answer, for most agents today, is that it isn't.
+That's because they inherit your full permissions. One bad prompt from you or a confused sub-agent has the same blast radius as you. The choice has been read-only or standing access, careful-but-limited or capable-but-dangerous. 
+Vercel Agent implements a new permissions model, built on three things: who the agent is, what it's allowed to do, and where its code can run.
+
+#### Copy link to heading Vercel Agent has its own identity
+Most agents act as you. Connect one, and it acts with your identity and your access for the whole session. There's no line between what the agent can do and what you can do. 
+Vercel Agent runs as its own principal, vercel-agent . This matters for two reasons:
+
+- Attribution: The agent's actions are always distinguishable from yours. Every change records who asked for it, who approved it, and that Vercel Agent carried it out. Nothing it does is untraceable.
+
+- Authority: A separate identity doesn't mean separate power. The agent doesn't inherit your access; it gets only what plan approval explicitly grants, and never more than the person directing it already has. 
+
+Vercel Agent's actions show up as its own, separate from yours and tied to whoever approved them. 
+
+#### Copy link to heading The plan is the permission
+Integrating agents into your SDLC usually starts the same way, by granting them broad access up front, more than they need and for longer than they need it. But anyone who can prompt the agent can reach whatever that access touches. The permissions you grant are the exposure you accept.
+Vercel Agent is read-only by default. To do something more, like rolling back a deploy, changing a config, or clearing a cache, it proposes a plan and requests access scoped specifically to that plan. You approve it, the agent does the work, then drops back to read-only as soon as the plan is completed.
+When you approve a plan, the agent gets a short-lived capability for exactly the tasks it named, and nothing else. Every call it makes has to pass three checks: that capability, the token's scope, and your team's existing permissions. It runs only where all three allow it, and those checks live in the platform, so they hold no matter what the model does.
+We call this the plan-to-permission prompt model. It's least privilege, by design. Even if something goes wrong, Vercel Agent can only act inside the plan you approved. It's an agent capable enough to fix production, and contained enough to actually let it.
+
+Before it can purge the cache, Vercel Agent proposes a plan and requests access scoped to just that plan, then waits for approval. 
+
+#### Copy link to heading Generated code runs in a sandbox
+The plan-to-permission prompt model controls what the agent is allowed to do. But any agent that writes code faces a second problem: there’s no way to know the code works until you run it.
+The code Vercel Agent generates runs in Vercel Sandbox , an ephemeral Firecracker microVM. Inside the sandbox, that code is isolated from your live systems and the host environment.
+The sandbox is a real copy of your project, so the agent runs generated code against your actual build, tests, and linters, and only surfaces what passes. Say the agent needs to fix a failing config. It writes the change, runs it in the sandbox to confirm it passes, and surfaces it in a PR.
+The agent can write and run code freely, and still can't put anything broken in front of you or into production.
+
+## Copy link to heading Anti-fragile infrastructure
+The agent era will be defined by two ceilings. One is what the model can do; the other is how much of that you'll let it do. As models improve, the first matters less and the second is what counts. It all comes down to trust.
+A better model is wrong less frequently, but it is still non-deterministic, and non-deterministic systems fail non-deterministically. A safety story can’t rest on an agent getting it right every time. The trust has to live in the system, and the system is judged by what a mistake costs.
+We have spent years driving that number down. Immutable deployments mean every deploy is preserved and a bad one is a rollback away. We didn’t build that for agents initially, but it’s exactly the guardrail an autonomous system needs.
+When safety is built into the infrastructure itself, agent mistakes are contained and human mistakes are less costly. 
+This is what we mean by anti-fragile infrastructure. You can give an autonomous system real power without betting on it being right, because the foundation holds when it's wrong. Power stops requiring trust.
+The agent does the work, you stay in control of what reaches production, and when something goes wrong, by the agent or by you, you can take it back. That's the ground the agent era needs, and with Vercel, you're already standing on it.
+
+## Copy link to heading What’s next
+Today, Vercel Agent can investigate anomalies, open PRs, and answer questions about your apps and agents in production. Soon, it will delegate to specialists on demand, like deep security review across your codebase, or design and UX review of your frontend.
+
+## Copy link to heading Get started
+Vercel Agent is available to teams on Pro and Enterprise. Enable it in the Agent section of your dashboard. 
+Explore Vercel Agent 
+Learn what Vercel Agent does, and how to set up Code Review, Investigation, Chat, Installation, and more.
+
+Read the guide
+
+## Ready to deploy?
+Start deploying Talk to an expert 
+
+## Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Workflows 
+
+- Connect New 
+
+- Passport New 
+
+- eve New 
+
+## Core Platform
+
+- CI/CD 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+## Security
+
+- Platform Security 
+
+- WAF 
+
+- Bot Management 
+
+- Bot ID 
+
+## Tools
+
+- Vercel Drop New 
+
+- Vercel Agent 
+
+- Vercel Plugin New 
+
+- Agent Skills 
+
+- Next.js 
+
+- Domains 
+
+- v0 
+
+## Frameworks
+
+- eve New 
+
+- Nuxt 
+
+- SvelteKit 
+
+- Nitro 
+
+- Turborepo 
+
+- Tanstack Start 
+
+- FastAPI 
+
+- xmcp 
+
+- All frameworks 
+
+## SDKs
+
+- Vercel SDK 
+
+- Workflow SDK New 
+
+- Flags SDK 
+
+- Chat SDK New 
+
+- Queues SDK New 
+
+- Streamdown 
+
+## Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+- Platform Engineers 
+
+- Design Engineers 
+
+## Learn
+
+- Docs 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+- Academy 
+
+- Articles 
+
+- Community 
+
+## Explore
+
+- Customers 
+
+- Marketplace 
+
+- Templates 
+
+- Partner Finder 
+
+- Vercel + AWS 
+
+## Company
+
+- About 
+
+- Careers 
+
+- Press 
+
+- Events 
+
+- Startups 
+
+- Shipped on Vercel 
+
+- Open Source Program 
+
+- Enterprise 
+
+- Pricing 
+
+- Help 
+
+## Legal & Trust
+
+- Privacy Policy 
+
+- Terms of Service 
+
+- Cookie Policy 
+
+- DPA 
+
+- Acceptable Use Policy 
+
+- Legal (all documents) 
+
+- Trust Center 
+
+- Status 
+
+- Cookie Preferences 
+
+## Social
+
+- GitHub 
+
+- X 
+
+- LinkedIn 
+
+- YouTube 
+
+- Instagram 
+
+- 
+
+Loading status…
+
+Select a display theme: system light dark

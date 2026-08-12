@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Roam Research – A note taking tool for networked thought.</title>
+    <meta name="description"
+        content="As easy to use as a word document or bulleted list, and as powerful for finding, collecting, and connecting related ideas as a graph database. Collaborate with others in real time, or store all your data locally." />
+    <meta name="google-site-verification" content="qW5hb2tZpOtI-_7bpKcdqZfRN0-if2b33Y0MUAGYnKc" />
+    <meta property="og:site_name" content="Roam Research" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://roamresearch.com" />
+    <meta property="og:title" content="Roam Research – A note taking tool for networked thought." />
+    <meta property="og:description"
+        content="As easy to use as a word document or bulleted list, and as powerful for finding, collecting, and connecting related ideas as a graph database. Collaborate with others in real time, or store all your data locally." />
+    <meta property="og:image" content="https://roamresearch.com/assets/astro.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <meta name="google-site-verification" content="uc_1-HWEBiRkqJkUzV1HXosoD78FG9dsCADHQZb5tIw" />
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link rel="manifest" href="manifest.webmanifest">
+    <!-- https://github.com/GoogleChromeLabs/pwacompat -->
+    <script async src="pwacompat.min.js"></script>
+    <link href="assets/css/fonts/Inter/inter.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/fonts/Inter/Inter-Regular.woff2" rel="preload" as="font" crossorigin>
+    <link href="assets/css/fonts/Inter/Inter-Bold.woff2" rel="preload" as="font" crossorigin>
+    <link href="assets/css/fonts/Inter/Inter-Medium.woff2" rel="preload" as="font" crossorigin>
+    <link href="assets/css/fonts/Fira_Code_v5.2/fira_code.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/normalize.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/codemirror-colorpicker.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/npm/blueprint/core/lib/css/blueprint.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/npm/blueprint/select/lib/css/blueprint-select.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/npm/blueprint/icons/lib/css/blueprint-icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/npm/blueprint/datetime/lib/css/blueprint-datetime.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/npm/katex/dist/katex.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/npm/reactflow/dist/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/re-com/material-design-iconic-font.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/re-com/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/re-com/roboto.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/re-com/roboto-condensed.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/re-com/re-com.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/less-compiled/site.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/tailwind.min.css" rel="stylesheet" type="text/css">
+    <script>
+     // To enable app check for local development
+     // You should NOT push this uncommented out to prod
+     // self.FIREBASE_APPCHECK_DEBUG_TOKEN = true
+    </script>
+    <script>
+        // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/bsfg6obv'
+        (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', w.intercomSettings); } else { var d = document; var i = function () { i.c(arguments); }; i.q = []; i.c = function (args) { i.q.push(args); }; w.Intercom = i; var l = function () { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/bsfg6obv'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })();
+    </script>
+</head>
+
+<body>
+    <div id="layoutViewport"></div>
+    <div id="rm-modal-portal" class="roam-lift-modal"></div>
+    <div id="app"></div>
+    <script src="js/compiled/shared.js"></script>
+    <script src="js/compiled/main.js" data-worker-limit="8"></script>
+</body>
+
+</html>

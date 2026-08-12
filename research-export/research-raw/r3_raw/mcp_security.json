@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks",
+    "name": "MCP Security Notification: Tool Poisoning Attacks",
+    "snippet": "Apr 1, 2025 — A Tool Poisoning Attack occurs when malicious instructions are embedded within MCP tool descriptions that are invisible to users but visible to ... Read more",
+    "host_name": "invariantlabs.ai",
+    "rank": 0,
+    "date": "Apr 1, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.truefoundry.com/blog/blog-mcp-tool-poisoning-gateway-defense",
+    "name": "MCP Tool Poisoning (CVE-2025-54136)",
+    "snippet": "May 5, 2026 — Why MCP tool poisoning is not just another prompt-injection variant — it's a supply-chain attack on the agent's context window.",
+    "host_name": "www.truefoundry.com",
+    "rank": 1,
+    "date": "May 5, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-mcp-tool-poisoning-auto-execution-20260701",
+    "name": "MCP Attack Surface: Tool Poisoning and IDE Auto-Execution",
+    "snippet": "Jul 1, 2026 — Check Point Research disclosed a second Cursor vulnerability , MCPoison (CVE- 2025 -54136), on August 5, 2025 [3]. Where CurXecute attacked a ... Read more",
+    "host_name": "labs.cloudsecurityalliance.org",
+    "rank": 2,
+    "date": "Jul 1, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://mcpmanager.ai/blog/tool-poisoning",
+    "name": "MCP Tool Poisoning: How It Works and How To Prevent It",
+    "snippet": "Jul 22, 2025 — As of July 2025 , no organization has actually fallen victim to a real, successful tool poisoning attack. However, this is because MCP servers ... Read more",
+    "host_name": "mcpmanager.ai",
+    "rank": 3,
+    "date": "Jul 22, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://arxiv.org/html/2508.14925v1",
+    "name": "MCPTox: A Benchmark for Tool Poisoning Attack on Real-",
+    "snippet": "Aug 19, 2025 — current LLM-integrated MCP ecosystem is systemically vulnerable to Tool Poisoning attacks, with the highest attack success rate reaching over ...",
+    "host_name": "arxiv.org",
+    "rank": 4,
+    "date": "Aug 19, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cyberark.com/resources/threat-research-blog/poison-everywhere-no-output-from-your-mcp-server-is-safe",
+    "name": "Poison everywhere: No output from your MCP server is safe",
+    "snippet": "May 30, 2025 — In this blog post, we'll briefly explore MCP and dive into a Tool Poisoning Attack (TPA), originally described by Invariant Labs. We'll show ... Read more",
+    "host_name": "www.cyberark.com",
+    "rank": 5,
+    "date": "May 30, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://owasp.org/www-project-mcp-top-10/2025/MCP03-2025%E2%80%93Tool-Poisoning",
+    "name": "MCP03:2025 - Tool Poisoning",
+    "snippet": "Your MCP deployment may be vulnerable if any of the following are true: Schemas, manifests, or tool descriptors are fetched dynamically from remote locations",
+    "host_name": "owasp.org",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  }
+]

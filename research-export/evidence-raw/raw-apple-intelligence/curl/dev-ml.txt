@@ -1,0 +1,580 @@
+TITLE: AI & Machine Learning - Apple Developer
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+AI & Machine Learning - Apple Developer 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- ' />
+
+- ' />
+
+- 
+
+View in English 
+
+- 
+
+- 
+
+Apple Developer 
+
+- 
+
+- 
+
+Get Started 
+
+- 
+
+Explore Get Started
+
+- Overview 
+
+- Learn 
+
+- Apple Developer Program 
+
+Stay Updated
+
+- Latest News 
+
+- Hello Developer 
+
+- 
+
+Platforms 
+
+- 
+
+Explore Platforms
+
+- Apple Platforms 
+
+- iOS 
+
+- iPadOS 
+
+- macOS 
+
+- tvOS 
+
+- visionOS 
+
+- watchOS 
+
+- App Store 
+
+Featured
+
+- Design 
+
+- Distribution 
+
+- Games 
+
+- Accessories 
+
+- Web 
+
+- Home 
+
+- CarPlay 
+
+- 
+
+Technologies 
+
+- 
+
+Explore Technologies
+
+- Overview 
+
+- Xcode 
+
+- Swift 
+
+- SwiftUI 
+
+Featured
+
+- Accessibility 
+
+- AI & Machine Learning 
+
+- App Intents 
+
+- Apple Intelligence 
+
+- Games 
+
+- Security 
+
+- Xcode Cloud 
+
+- 
+
+Community 
+
+- 
+
+Explore Community
+
+- Overview 
+
+- Meet with Apple events 
+
+- Community-driven events 
+
+- Developer Forums 
+
+- Open Source 
+
+Featured
+
+- WWDC 
+
+- Swift Student Challenge 
+
+- Developer Stories 
+
+- App Store Awards 
+
+- Apple Design Awards 
+
+- Apple Developer Centers 
+
+- 
+
+Documentation 
+
+- 
+
+Explore Documentation
+
+- Documentation Library 
+
+- Technology Overviews 
+
+- Sample Code 
+
+- Human Interface Guidelines 
+
+- Videos 
+
+Release Notes
+
+- Featured Updates 
+
+- iOS 
+
+- iPadOS 
+
+- macOS 
+
+- watchOS 
+
+- visionOS 
+
+- tvOS 
+
+- Xcode 
+
+- 
+
+Downloads 
+
+- 
+
+Explore Downloads
+
+- All Downloads 
+
+- Operating Systems 
+
+- Applications 
+
+- Design Resources 
+
+Featured
+
+- Xcode 
+
+- TestFlight 
+
+- Fonts 
+
+- SF Symbols 
+
+- Icon Composer 
+
+- 
+
+Support 
+
+- 
+
+Explore Support
+
+- Overview 
+
+- Help Guides 
+
+- Developer Forums 
+
+- Feedback Assistant 
+
+- Contact Us 
+
+Featured
+
+- Account Help 
+
+- App Review Guidelines 
+
+- App Store Connect Help 
+
+- Upcoming Requirements 
+
+- Agreements and Guidelines 
+
+- System Status 
+
+- 
+
+Quick Links
+
+- 
+
+Events 
+
+- 
+
+News 
+
+- 
+
+Forums 
+
+- 
+
+Sample Code 
+
+- 
+
+Videos 
+
+- 
+
+  
+
+- 
+
+AI & Machine Learning 
+
+Open Menu 
+
+Close Menu 
+
+- 
+Overview 
+
+- 
+What‘s New 
+
+- 
+Resources 
+
+Build intelligent experiences
+
+Create intelligent features and enable new experiences for your apps and games by leveraging powerful on-device machine learning. Learn how to build, use, train, and deploy AI and machine learning models for iPhone, iPad, Apple Vision Pro, Mac, and Apple Watch.
+
+What’s new in AI & machine learning
+
+Dive into the latest key technologies and capabilities.
+
+New to AI development?
+
+Explore the Apple Intelligence and machine learning overview to get started building intelligent features in your apps. 
+
+Get to know the technologies
+
+Core AI
+
+Core AI is designed to be the best way to bring and run AI models on device in your apps. It’s a complete set of technologies purpose-built for Apple Silicon, engineered for uncompromising performance, extensive customization, and seamless scaling across devices and model sizes, with zero server dependencies and zero token costs.
+
+Foundation Models framework
+
+The Foundation Models framework is a native Swift API that gives you direct access to Apple Foundation Models — on device and in Private Cloud Compute* — as well as any model provider with a Swift package conforming to the Language Model protocol.
+
+From there, multimodal prompts and on-device Vision framework tools let your app reason about images alongside text, while Dynamic Profiles let you swap models, tools, and instructions within a continuous session so your app's intelligence can adapt in real time. Then use the Evaluations framework to ensure your AI features work reliably across dynamic conditions.
+
+Vision
+
+Build powerful image and video analysis with the latest in computer vision . Tap-to-segment lets you isolate objects within images, while OCR, barcode scanning, and your own custom tools can be passed directly to Apple Foundation Models, enabling LLM-powered visual understanding in your app. Vision is also available on watchOS, bringing image analysis capabilities across Apple platforms.
+
+Speech
+
+Take advantage of speech recognition and saliency features for a variety of languages. With SpeechAnalyzer , you can bring advanced, on-device transcription to your app.
+
+Machine-learning-powered APIs
+
+Bring intelligent on-device machine-learning-powered features, natural language analysis, translation , and sound classification, to your app with just a few lines of code.
+
+Core ML
+
+Core ML delivers fast performance for integrating traditional machine learning models into your apps and games — from tree ensembles to regression models and beyond. Convert models from popular training libraries using Core ML Tools, download ready-to-use models, and preview them directly in Xcode. If you're interested in bringing LLMs and other generative AI models into your app, check out Core AI.
+
+Metal
+
+Metal puts the advanced capabilities of Apple-designed GPUs at your fingertips to power the most advanced graphics workloads. Now you can tap into machine learning capabilities like MetalFX, run inference networks directly in your shaders, and implement the latest neural rendering techniques with Metal 4.
+
+MLX framework
+
+MLX is an open-source array framework that lets you experiment with, training, researching, and fine-tuning generative models on Apple Silicon. It supports Metal 4 and GPU Neural Accelerators for maximum performance, and can scale training across multiple Macs with RDMA over Thunderbolt, making it an incredible way to explore cutting-edge machine learning innovations on Mac.
+
+Developer stories
+
+How Speechify is evolving into a hands-free AI assistant
+
+With features like voice AI chat, text-to-speech, and voice typing, Speechify aims to be a full-time AI assistant — one that doesn’t require a keyboard at all.
+
+Read more
+
+Break it down
+
+Find out how Moises isolates the instruments in a recorded song, using machine learning models to separate out the vocals, guitar, bass, drums, and more.
+
+Read more 
+
+The appealing design of CapWords
+
+The Apple Design Award winner leverages a lot of cutting-edge technology for an app that was partly invented by a 3-year-old.
+
+Read more
+
+Meet with Apple
+
+Sharpen your skills through in-person and online activities around the world.
+
+Explore the schedule
+
+Resources
+
+Browse tools, documentation, sample code, videos, and more.
+
+Learn more
+
+- 
+
+Developer Footer
+
+- *If you’re enrolled in the App Store Small Business Program and your app has fewer than 2 million total first-time App Store downloads, you can access the next generation of Apple Foundation Models running on Private Cloud Compute at no cloud API cost.
+
+- AI & Machine Learning
+
+Platforms
+
+Open Menu 
+Close Menu 
+
+- iOS 
+
+- iPadOS 
+
+- macOS 
+
+- tvOS 
+
+- visionOS 
+
+- watchOS 
+
+- App Store 
+
+Tools
+
+Open Menu 
+Close Menu 
+
+- Swift 
+
+- SwiftUI 
+
+- Swift Playground 
+
+- TestFlight 
+
+- Xcode 
+
+- Xcode Cloud 
+
+- Icon Composer 
+
+- SF Symbols 
+
+Technologies
+
+Open Menu 
+Close Menu 
+
+- Accessibility 
+
+- Accessories 
+
+- AI & Machine Learning 
+
+- Apple Intelligence 
+
+- Audio & Video 
+
+- Augmented Reality 
+
+- Business 
+
+- Design 
+
+- Distribution 
+
+- Education 
+
+- Games 
+
+- Health & Fitness 
+
+- In-App Purchase 
+
+- Localization 
+
+- Maps & Location 
+
+- Security 
+
+- Safari & Web 
+
+Resources
+
+Open Menu 
+Close Menu 
+
+- Documentation 
+
+- Downloads 
+
+- Sample Code 
+
+- Videos 
+
+- Documentation Archive 
+
+Support
+
+Open Menu 
+Close Menu 
+
+- Help Guides & Articles 
+
+- Contact Us 
+
+- Forums 
+
+- Feedback & Bug Reporting 
+
+- System Status 
+
+Account
+
+Open Menu 
+Close Menu 
+
+- Apple Developer 
+
+- App Store Connect 
+
+- Certificates, IDs, & Profiles 
+
+- Feedback Assistant 
+
+Programs
+
+Open Menu 
+Close Menu 
+
+- Apple Developer Program 
+
+- Apple Developer Enterprise Program 
+
+- App Store Small Business Program 
+
+- MFi Program 
+
+- Mini Apps Partner Program 
+
+- News Partner Program 
+
+- Video Partner Program 
+
+- Security Bounty Program 
+
+- Security Research Device Program 
+
+Events
+
+Open Menu 
+Close Menu 
+
+- Meet with Apple 
+
+- Apple Developer Centers 
+
+- App Store Awards 
+
+- Apple Design Awards 
+
+- Apple Developer Academies 
+
+- WWDC 
+
+Read the latest news .
+Get the Apple Developer app .
+
+Light
+
+Dark
+
+Auto
+
+- 
+
+Copyright © 2026 Apple Inc. All rights reserved.
+
+Terms of Use 
+Privacy Policy 
+Agreements and Guidelines

@@ -1,0 +1,133 @@
+TITLE: 
+DESCRIPTION: Learn more about managing memory in ChatGPT.
+
+# Memory FAQ
+Learn more about managing memory in ChatGPT.
+Updated: 19 days ago
+Note 
+: Data retention for certain services may be affected by recent legal developments – please see our 
+blog post 
+for more details. 
+
+# Overview
+ChatGPT can remember useful details between chats, making its responses more personalized and relevant. As you chat with ChatGPT, whether you’re typing, talking, or asking it to generate an image, it can remember helpful context from earlier conversations, such as your preferences and interests, and use that to tailor its responses.
+
+The more you use ChatGPT, the more useful it becomes. You'll start to notice improvements over time as it builds a better understanding of what works best for you. You can also teach ChatGPT something new by saying it in a chat — for example: “Remember that I am vegetarian when you recommend a recipe.” To check what ChatGPT remembers, just ask: “What do you remember about me?”. Memory is intended for high-level preferences and details, and should not be relied on to store exact templates or large blocks of verbatim text.
+
+You’re in control of what ChatGPT remembers. You can delete individual memories, clear specific or all saved memories, or turn memory off entirely in your settings. To chat without using or updating memory, use Temporary Chat . Temporary Chats won’t reference memories and won’t create new memories.
+
+# How Memory works 
+You can control Memory via two settings:
+
+- Reference saved memories: These are details you have explicitly asked ChatGPT to remember, like your name, favorite color, or dietary preferences.
+
+- Reference chat history : ChatGPT can also use information from your past chats to make future conversations more helpful. For example, if you once said you like Thai food, it may take that into account the next time you ask “What should I have for lunch?” ChatGPT doesn’t remember every detail from past chats, so use saved memories for anything you want it to always keep in mind.
+
+You can choose to turn on “Saved Memories,” both, or neither. The settings are flexible and you can change them anytime.
+
+# How does “Reference saved memories” work? 
+Saved memories are details you’ve directly told ChatGPT to remember. You can add a new memory at any time – for example: “Remember that I am vegetarian when you recommend a recipe.” Saved memories work similarly to custom instructions, except our models update them automatically rather than requiring users to manage them manually. If you share information that might be useful for future conversations, ChatGPT may save those details as a memory without you needing to ask. Like custom instructions, saved memories are part of the context ChatGPT uses to generate a response. Unless you delete them, saved memories are always considered in future responses.
+
+ChatGPT can manage saved memories on its own, updating, combining, or removing them when asked. You’re in control of ChatGPT’s saved memories. You can delete individual memories, clear all of them, or turn saved memory off completely in settings. (Note: turning off “Reference saved memories” in settings also turns off “Reference chat history”). To chat without using saved memory, use Temporary Chat.
+
+# How do I enable or disable saved memories? 
+You can turn saved memories on or off anytime under your profile picture > Settings > Personalization. Note that these settings may vary slightly depending on your plan.
+
+Turning saved memory off won’t delete anything that’s already been remembered. And deleting a chat doesn’t remove saved memory from that conversation. To delete saved memories, tell ChatGPT to delete or forget it, or go to Settings > Personalization > Manage memories .
+
+To fully remove a memory, delete both the saved memory in Manage memories and the chat where you originally shared it.
+
+# How long does ChatGPT keep saved memories? 
+The “notepad” of your saved memories are stored separately from your chat history. This means even if you delete a chat, any saved memories from it can still be used in future conversations.
+
+You can ask ChatGPT to forget a saved memory at any time. When you do, that memory is removed and won’t be used in future chats. We may retain a log of deleted Saved Memories for up to 30 days for safety and debugging purposes.
+
+Saved memories can show up in past conversations. For example, if ChatGPT remembers that you live in San Francisco, it might say “Since you live in San Francisco…” when answering a weekend plan question. You can delete that memory anytime, but it won’t remove mentions from past chats. To clear that, you will need to delete the specific chat where it was shared.
+
+# How do I manage my saved memory storage? 
+Please note that memory management controls and automatic memory management are currently only available on Web to ChatGPT Plus and Pro users.
+
+ChatGPT Plus and Pro users can now automatically manage saved memories by keeping the most relevant details prioritized and moving less important ones to the background. This helps prevent saved memories from reaching capacity and helps avoid “memory full” state in your ChatGPT account.
+
+To decide which memories stay top of mind, ChatGPT considers factors such as how recent a detail is and how often you talk about a topic. 
+
+You can now also search your saved memories more easily and sort them by newest or oldest by tapping the three dot menu. 
+
+You’re always in control: you can turn off automatic memory management at any time, and you can see which memories are currently top of mind and choose to prioritize or deprioritize any specific memory yourself in settings. Memories that are not top of mind are in gray. 
+
+You can delete any saved memory by clicking on ⋯ next to each memory and selecting Delete in the pop-up menu that appears. You can also also delete all your memories by selecting ⋯ next to the search bar and selecting Delete all .
+
+You can also view and restore prior versions of saved memories by tapping view history in the three dot menu. You will see your saved memory history, and you can choose to restore previous versions of your memories, by date.
+
+# How does “Reference chat history” work? 
+When “Reference chat history” is turned on, ChatGPT will reference your past conversations to recall useful information you’ve shared. It uses this to learn about your interests and preferences, helping make future chats more personalized and relevant. Like custom instructions, when this setting is on, relevant information from your past conversations may be added to new ones. Unlike saved memories, which are kept until you delete them, details from past chats can change over time as ChatGPT updates what’s more helpful to remember. Because ChatGPT doesn’t retain every detail from past chats, use saved memories for anything you want it to always remember.
+
+# How do I enable or disable Reference Chat History? 
+You can turn “Reference chat history” on or off anytime in Settings > Personalization . Note that these settings may vary slightly depending on your plan.
+
+If you turn “Reference saved memories” off, that will also turn off “Reference chat history”. If “Reference saved memories” is on, you can still turn “Reference chat history” off.
+
+If you turn off “Reference chat history”, this will also delete the information ChatGPT remembered from past chats. That information will be deleted from our systems within 30 days.
+
+# 
+
+# Does ChatGPT have a storage limit when Reference Chat History is on? 
+There is no storage limit for what ChatGPT can reference when “Reference chat history” is turned on.
+
+# How do I manage what ChatGPT remembers when Reference Chat History is on? 
+To learn what ChatGPT remembers about you, just ask it. You can also ask ChatGPT to forget something it remembered from a past conversation. When ChatGPT forgets something, it won’t use that information in future responses, but the original conversation will still be in your chat history unless you delete it. It may take a few days for deleted memories to stop being referenced in your chats.
+
+When “Reference chat history” is on, ChatGPT will keep information from past conversations unless you delete (or archive) those chats.
+
+If you turn off “Reference chat history”, all information ChatGPT remembered from past chats will be deleted. That information will be deleted from our systems within 30 days.
+
+# How does "Reference memory in suggestions" work?
+Note: This setting is related to ChatGPT pulse, currently available to Pro users on iOS and Android. 
+
+When this setting is enabled, ChatGPT pulse uses both chat history and saved memories to perform nightly, asynchronous research on your behalf, and deliver visual summaries that you can scan at a glance, the next day. You can expand the summaries for more detail, save for later, ask follow up questions and provide feedback. For this setting to work, both Reference saved memories and Reference chat history must be toggled on. See more information in the ChatGPT Pulse article . 
+
+# How do I fully delete something ChatGPT knows about me? 
+If Memory is on and you want to fully remove something ChatGPT remembers, you will need to delete both the saved memories in Settings and all chats where you shared or referenced that information.
+
+# Can I disable memories for my ChatGPT Enterprise or Edu workspace? 
+ChatGPT Enterprise workspace owners can turn Memory on or off for all users in their Admin Settings.
+
+Note : The Reference Chat History feature is not yet available to Enterprise and Edu customers.
+
+# Does memory remember sensitive information? 
+Memory raises important privacy and safety considerations, especially around what type of information should be remembered and how that information is used.
+
+We’re taking steps to reduce bias and have trained ChatGPT not to proactively remember sensitive information, like health details, unless you explicitly ask it to. We are continuing to improve how the model handles this type of information. You’re in control: you can review and delete saved memories, ask what ChatGPT remembers about you, delete specific conversations, and provide feedback so we can improve. If Memory is enabled, please avoid entering information you wouldn’t want remembered.
+
+# Can ChatGPT remember my name or account identity in Memory? 
+Yes, but only in these cases:
+
+- You tell it your name (for example, in Custom Instructions or in a message).
+
+- Memory is on and “reference past chats” is enabled , in which case ChatGPT may reference your account name it already shows you in product.
+
+# Do you train your models with memories? 
+If you have the “Improve the model for everyone” setting turned on, we may use content you’ve shared with ChatGPT, including past chats, saved memories, and memories from those chats, to help improve our models. You can turn this setting off anytime in your Data Controls. As always, we do not train on content from ChatGPT Business, Enterprise, and Edu customers by default.
+
+Learn more about your choices on how we use your content to improve model performance. 
+
+# How does memory work with ChatGPT search? 
+ChatGPT may use relevant details from your saved memories or recent chats to improve how it rewrites your query for search. This helps make the search results more tailored to you.
+
+For example, if you’ve shared in past chats that you’re vegan and live in San Francisco, and you ask:
+"What are some restaurants near me that I’d like?" 
+ChatGPT might rewrite that to:
+"Good vegan restaurants in San Francisco" 
+to better reflect your preferences.
+
+Learn more about ChatGPT search.
+
+## Need more help? Contact us
+
+AI Chat
+Chat now 
+
+AI Phone Call (beta)
+1-888-GPT-0090 
+
+Calls may be recorded to improve OpenAI services. Learn more.

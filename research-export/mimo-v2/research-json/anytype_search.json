@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://volodymyrpavlyshyn.medium.com/anytype-from-second-brain-to-social-brain-with-types-and-graphs-e6eb6611ec7d",
+    "name": "Anytype: From Second Brain to Social Brain with Types and",
+    "snippet": "It utilizes a “peer-to-peer” ( P2P ) architecture for secure and decentralized synchronization. Data is synced directly between devices, often on ...",
+    "host_name": "volodymyrpavlyshyn.medium.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://anytype.io",
+    "name": "Anytype — A safe haven for digital collaboration",
+    "snippet": "Create notes, tasks, databases, and chats. Visualise connections using graph & database views. Your data syncs p2p in local networks. Native on mobile Natural ...",
+    "host_name": "anytype.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://news.ycombinator.com/item?id=36799548",
+    "name": "Anytype – local-first, P2P Notion alternative",
+    "snippet": "Jul 20, 2023 — Local-first architecture allows for better control over what you are storing . For me though, local-first architecture lets me take notes ... Read more",
+    "host_name": "news.ycombinator.com",
+    "rank": 2,
+    "date": "Jul 20, 2023",
+    "favicon": ""
+  },
+  {
+    "url": "https://capacities.io/compare/anytype",
+    "name": "Capacities vs Anytype — Honest Comparison (2026)",
+    "snippet": "Apr 15, 2026 — Anytype is a local-first, end-to-end encrypted workspace built around objects and relations. Local-first with self-hosting Your with optional P ...",
+    "host_name": "capacities.io",
+    "rank": 3,
+    "date": "Apr 15, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://doc.anytype.io/anytype/data/sync-and-backup/local-only",
+    "name": "Local-only",
+    "snippet": "Local - first means it works offline, syncs with end-to-end encryption across multiple devices, and is only accessible to the those who have a key.",
+    "host_name": "doc.anytype.io",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=9oYTAmJz4Qs",
+    "name": "Creating a knowledge base in Anytype",
+    "snippet": "It is very similar to notion but it is open source and local . In todays video I am showing you how you can create your own knowledge base ...",
+    "host_name": "www.youtube.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

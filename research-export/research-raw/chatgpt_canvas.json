@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://openai.com/index/introducing-canvas",
+    "name": "Introducing canvas",
+    "snippet": "Oct 3, 2024 — You can directly edit text or code . There's a menu of shortcuts for you to ask ChatGPT to adjust writing length, debug your code, and quickly ...",
+    "host_name": "openai.com",
+    "rank": 0,
+    "date": "Oct 3, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://lunary.ai/blog/chatgpt-canvas-review",
+    "name": "ChatGPT Canvas: Tool for Writers and Developers",
+    "snippet": "Oct 11, 2024 — The ability to edit, refine, and manipulate text and code directly within the Canvas is very helpful for people seeking a more streamlined ...",
+    "host_name": "lunary.ai",
+    "rank": 1,
+    "date": "Oct 11, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1fvyivo/chatgpt_canvas_is_really_amazing",
+    "name": "ChatGPT canvas is really amazing! : r/ChatGPTCoding",
+    "snippet": "Canvas is a dedicated experience for code completion, review, debug Similar to an AI editor like Cursor, with some functionalities similar to ...",
+    "host_name": "www.reddit.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.certlibrary.com/blog/comprehensive-guide-to-chatgpt-canvas-features-usage-and-examples",
+    "name": "Comprehensive Guide to ChatGPT Canvas: Features,",
+    "snippet": "Developers appreciate the seamless code-editing experience , combined with real-time debugging and explanation capabilities. Educators, especially those ...",
+    "host_name": "www.certlibrary.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cnet.com/tech/services-and-software/i-tried-chatgpt-canvas-to-make-writing-and-coding-easier",
+    "name": "I Tried ChatGPT Canvas to Make Writing and Coding Easier",
+    "snippet": "Apr 15, 2025 — Compared to ordinary ChatGPT-4o, canvas offers a more robust experience for work that requires revisions. Whether it's brainstorming ideas, ...\nI Tried ChatGPT Canvas to Make Writing and Coding Easier Commentary: The paid feature helps you edit and track changes as you go. I took it for a spin.",
+    "host_name": "www.cnet.com",
+    "rank": 4,
+    "date": "Apr 15, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@mubashirburfat4/i-used-chatgpts-canvas-feature-for-six-months-then-openai-quietly-killed-it-88c542f1a63f",
+    "name": "I Used ChatGPT's Canvas Feature for Six Months. Then",
+    "snippet": "I Used ChatGPT's Canvas Feature for Six Months. Then OpenAI Quietly Killed It. Here's everything it changed about the way I write and what's ...",
+    "host_name": "medium.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

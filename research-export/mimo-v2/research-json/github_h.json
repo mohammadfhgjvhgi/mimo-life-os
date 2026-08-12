@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://github.com/features/copilot",
+    "name": "GitHub Copilot · Your AI pair programmer",
+    "snippet": "Everything in Free and: Access to Cloud agent and code review 1 Unlimited code completion and next edit suggestions2 Access to 3rd party agents (Claude Code and ...",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.github.com/en/copilot/get-started/features",
+    "name": "GitHub Copilot features",
+    "snippet": "Organize and centralize relevant content—like code, docs, specs, and more—into Spaces that ground Copilot's responses in the right context for a specific task. Read more",
+    "host_name": "docs.github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/orgs/community/discussions/160840",
+    "name": "Introducing Copilot Spaces: A new way to work with context",
+    "snippet": "Copilot Spaces is a new feature within GitHub Copilot. You can organize and centralize relevant content—like code, docs, files, and (soon) issues—into “Spaces”",
+    "host_name": "github.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://visualstudio.microsoft.com/github-copilot",
+    "name": "Visual Studio With GitHub Copilot - AI Pair Programming",
+    "snippet": "Jun 25, 2026 — To get the new unified GitHub Copilot extension : Install Visual Studio version 17.10 or later. Select at least one workload in the installer. Read more",
+    "host_name": "visualstudio.microsoft.com",
+    "rank": 3,
+    "date": "Jun 25, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.blog/changelog/2025-02-19-announcing-the-general-availability-of-github-copilot-extensions",
+    "name": "Announcing the General Availability of GitHub Copilot",
+    "snippet": "Feb 19, 2025 — With Copilot Extensions , you can integrate and prompt your favorite tools directly in Copilot Chat using natural language wherever you develop, ... Read more",
+    "host_name": "github.blog",
+    "rank": 4,
+    "date": "Feb 19, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/GithubCopilot/comments/1npzptn/20250924_copilot_spaces_is_now_generally",
+    "name": "2025-09-24 : Copilot Spaces is now generally available",
+    "snippet": "Spaces is promising for teams that want a hosted Copilot environment or who lack a structured repo onboarding. GitHub confirms full CLI parity ...",
+    "host_name": "www.reddit.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/features/copilot/plans",
+    "name": "GitHub Copilot · Plans & pricing",
+    "snippet": "Access to Cloud agent and code review ; Unlimited code completion and next edit suggestions; Access to 3rd party agents (Claude Code and Codex) ... Read more",
+    "host_name": "github.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  }
+]

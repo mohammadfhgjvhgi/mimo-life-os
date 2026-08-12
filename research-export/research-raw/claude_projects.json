@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://www.youtube.com/watch?v=fMa2zQIkQwM",
+    "name": "Claude 3.5 Crash Course for Developers: Code 10x Faster in",
+    "snippet": "You'll learn how to leverage Claude's capabilities to build apps 10x faster, including working with Projects, Artifacts, and knowledge bases.",
+    "host_name": "www.youtube.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://albato.com/blog/publications/how-to-use-claude-artifacts-guide",
+    "name": "What Are Claude Artifacts and How to Use Them (2026) - Albato",
+    "snippet": "Claude Artifacts turn chats into a live workspace for apps, docs, and dashboards. Learn what they are and how to use them in 7 ways.",
+    "host_name": "albato.com",
+    "rank": 1,
+    "date": "Apr 29, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.facebook.com/groups/claudecommunity/posts/1034416582432340",
+    "name": "Using Claude for client knowledge base creation",
+    "snippet": "Claude's knowledge base was last updated on April 2024. It answers questions about events prior to and after April 2024 the way a highly ...",
+    "host_name": "www.facebook.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ClaudeAI/comments/1js1y22/cant_save_artifact_to_project_knowledge_base",
+    "name": "Cant save artifact to project knowledge base? : r/ClaudeAI",
+    "snippet": "Hi Sorry for dumb question. I used to be able to save artifacts to the project knowledge base. But now I can't find the button after the new update for ...",
+    "host_name": "www.reddit.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+    "name": "Introducing Claude 3.5 Sonnet",
+    "snippet": "Today, we're also introducing Artifacts on Claude.ai, a new feature that expands how users can interact with Claude. When a user asks Claude to ...",
+    "host_name": "www.anthropic.com",
+    "rank": 4,
+    "date": "Jun 21, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=1VYUC3Taa5A",
+    "name": "Mastering Claude AI - Unleashing the Power of Projects and",
+    "snippet": "Did you know that Claude AI now offers features that can help you maintain context across conversations, visualize outcomes instantly, ...",
+    "host_name": "www.youtube.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

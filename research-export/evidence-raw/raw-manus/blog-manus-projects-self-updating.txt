@@ -1,0 +1,236 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- New: Projects That Learn From Every Task 
+- 
+- 
+- 
+- 
+
+Features
+Solutions
+Resources
+Events
+Team
+Pricing
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+Get started 
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+Manus is now part of Meta — bringing AI to businesses worldwide
+
+Product · Wednesday, May 06 
+
+# New: Projects That Learn From Every Task
+
+Manus can now turn useful conversations into approved updates to Project instructions and files, so each task can make the next one better. 
+
+A Project is only useful if its context stays current. But real work changes quickly. A launch message gets sharper. A research format improves. A PRD template evolves. A teammate makes a decision that should guide everyone else. 
+
+Until now, that learning was easy to lose. It stayed in the conversation unless someone manually updated the Project instructions, files, or skills. 
+
+Now, Manus can help Projects learn from the work itself. When a task produces reusable knowledge, Manus can identify what changed, propose updates to the Project, and apply them only after approval. 
+
+## What the Feature Does 
+
+Projects can now evolve through the conversations that happen inside them. Manus can review a task and identify instructions, files, examples, terminology, or workflow patterns that should be carried forward. 
+
+﻿ 
+
+You can trigger this directly with a prompt 
+
+“Review this conversation and suggest any updates we should make to this Project’s instructions or files.” 
+
+Manus then explains what should change and why. You review the proposal, approve what makes sense, and future tasks in that Project start with fresher context. 
+
+## Key Capabilities 
+
+• Learning from conversations: Manus can identify reusable decisions, standards, and patterns from completed work. 
+
+• Instruction updates: Manus can propose changes to Project instructions when your process, terminology, or output format changes. 
+
+• File updates: Manus can help refresh Project files when source material, examples, or templates become outdated. 
+
+• Skill updates: Manus can help identify when a Project skill should be created, refined, or updated so recurring work follows the latest process. 
+
+• User approval: Manus suggests changes, but Project context is not updated without authorization. 
+
+• Team continuity: Approved updates help future tasks and teammates start from the latest shared context. 
+
+## Why It Matters 
+
+• Projects get more useful over time instead of drifting out of date. 
+
+• Teams spend less time restating the same context in every task. 
+
+• Reusable decisions become part of the workspace, not just the chat history. 
+
+• Future work reflects the latest instructions, files, and operating patterns. 
+
+## How to Use It 
+
+1 . Work in a Project as usual. 
+
+2 . When a task produces a reusable decision, updated file, or improved process, ask Manus to review the conversation. 
+
+3 . Review the proposed updates to Project instructions or files. 
+
+4 . Approve the changes you want to keep. 
+
+5 . Start the next task with updated Project context already in place. 
+
+For recurring workflows, you can make this part of the Project’s operating rhythm: 
+
+“After each launch planning task, check whether the Project instructions, examples, or source files should be updated. If something changed, propose the update for review.” 
+
+## Update Skills Through Prompts 
+
+Instructions and files are not the only parts of a Project that can improve over time. When a workflow becomes repeatable, Manus can also help you turn that pattern into a Project skill or update an existing one. 
+
+This is useful when your team develops a specialized way of working. For example, you may have a preferred research method, a launch writing checklist, a customer feedback taxonomy, or a reporting format that should be reused across future tasks. Instead of explaining that process from scratch each time, you can ask Manus to review what worked and propose a skill update. 
+
+“This task produced a better workflow for writing launch blog posts. Please suggest whether we should update or create a Project skill so future launch posts follow the same process.” 
+
+Manus can then summarize the reusable workflow, explain what the skill should contain, and prepare the update for your review. As with instructions and files, you stay in control of what gets added or changed. 
+
+Prompt goal 
+Example prompt 
+Possible Project update 
+
+Capture a repeatable workflow 
+“Turn this approved launch process into a reusable Project skill.” 
+A new skill that guides future launch planning, drafting, and review. 
+
+Improve an existing process 
+“Update our research skill with the source standards we used in this task.” 
+A refined skill with clearer evidence rules and output expectations. 
+
+Standardize team habits 
+“Create a skill for summarizing customer feedback using this taxonomy.” 
+A reusable categorization workflow for future feedback analysis. 
+
+Keep skills current 
+“Review this conversation and tell me if any Project skills should be updated.” 
+A proposed skill change that reflects the latest working method. 
+
+## Example Scenarios 
+
+Scenario 
+What Manus can learn 
+What improves next time 
+
+Launch planning 
+Updated positioning, naming decisions, FAQ rules, and messaging structure. 
+Future blogs, docs, and social posts start from the latest narrative. 
+
+Market research 
+Preferred report structure, source standards, and analysis criteria. 
+New reports become more consistent with less setup. 
+
+PRD writing 
+Product terminology, requirements format, and decision rules. 
+PMs and engineers work from the same current context. 
+
+Customer feedback analysis 
+Categorization rules, priority definitions, and recurring themes. 
+Feedback summaries stay comparable over time. 
+
+Team onboarding 
+Current examples, templates, and operating notes. 
+New teammates start with the latest working model. 
+
+## Availability 
+
+This update applies to Project sessions where Project instructions and Project files are supported. Proposed changes are reviewable before they take effect. 
+
+If a workspace, platform, or task does not support Project context, Project-level learning and updates will not apply there. 
+
+## Common Questions / FAQ 
+
+Q: Can Manus update a Project without my approval? 
+
+A: No. Manus can propose updates, but changes require authorization before they are applied. 
+
+Q: What can Manus learn from a conversation? 
+
+A: Manus can identify reusable instructions, updated source files, workflow patterns, skill improvements, terminology, examples, and decisions that should guide future tasks. 
+
+Q: Can I trigger this manually? 
+
+A: Yes. You can ask Manus to review a conversation and suggest updates to Project instructions or files. 
+
+Q: Do updates apply across all Projects? 
+
+A: No. Updates apply to the Project where they are reviewed and authorized. 
+
+Q: How is this different from uploading a new file? 
+
+A: Uploading a file changes the source material. This update helps Manus identify when the Project’s broader context should change, including instructions, files, and reusable workflows. 
+
+## ﻿
+
+Projects are becoming a workspace that improves with use. As your decisions, files, and processes evolve, Manus can help carry that learning forward into the next task. 
+
+### Download desktop & mobile app
+Access Manus anytime, anywhere.
+
+macOS Windows iOS Android 
+
+## Less structure,
+more intelligence.
+
+### Product
+Pricing Web app AI design AI slides AI image generator AI music generator Manus browser operator Wide Research Mail Manus Slack integration 
+
+### Resources
+Download Blog Docs Updates Help center Trust center API Team plan Startups Playbook Brand assets 
+
+### Community
+Events Fellows 
+
+### Compare
+VS ChatGPT VS Lovable VS Replit 
+
+### Download
+Mobile app Desktop app My Browser 
+
+### Team
+Team plan SSO API 
+
+### Company
+About us Careers For media Terms of service Privacy policy 
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+© 2026 Meta

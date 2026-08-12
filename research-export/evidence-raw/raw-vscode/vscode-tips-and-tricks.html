@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="awa-expId" content="cv-downloadv2:1227264;" />
+	<meta name="awa-env" content="prod" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="hNs7DXrTySP_X-0P_AC0WulAXvUwgSXEmgfcO2r79dw" />
+
+	<!-- Twitter and Facebook OpenGraph Metadata-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@code" />
+
+	<meta name="description" content="Visual Studio Code Tips and Tricks for power users." />
+<meta name="keywords" content="" />
+<meta name="ms.prod" content="vs-code" />
+<meta name="ms.TOCTitle" content="" />
+<meta name="ms.ContentId" content="9bbbe55d-cf81-428f-8a9f-4f60280cb874" />
+<meta name="ms.date" content="8/5/2026" />
+<meta name="ms.topic" content="conceptual" />
+<!-- Twitter and Facebook OpenGraph Metadata-->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:url" content="https://code.visualstudio.com/docs/editing/tips-and-tricks" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Visual Studio Code tips and tricks" />
+<meta property="og:description" content="Visual Studio Code Tips and Tricks for power users." />
+
+<meta property="og:image" content="https://code.visualstudio.com/opengraphimg/generated/docs/editing/tips-and-tricks.webp" />
+
+
+
+	<link rel="shortcut icon" href="/assets/favicon.ico" sizes="128x128" />
+	<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+	<title>Visual Studio Code tips and tricks</title>
+
+	<link rel="stylesheet" href="/dist/style.css">
+
+	<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
+	<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-4.min.js"></script>
+	
+	<script type="text/javascript">
+	// Leave as var; siteConsent is initialized and referenced elsewhere.
+	var siteConsent = null;
+	
+	const GPC_DataSharingOptIn = false;
+	WcpConsent.onInitCallback(function () {
+		window.appInsights = new oneDS.ApplicationInsights();
+		window.appInsights.initialize({
+			instrumentationKey: "1a3eb3104447440391ad5f2a6ee06a0a-62879566-bc58-4741-9650-302bf2af703f-7103",
+			propertyConfiguration: {
+				userConsented: false,
+				gpcDataSharingOptIn: false,
+				callback: {
+					userConsentDetails: siteConsent ? siteConsent.getConsent : undefined
+				},
+			},
+			cookieCfg: {
+				ignoreCookies: ["MSCC"]
+			},
+			webAnalyticsConfiguration:{ // Web Analytics Plugin configuration
+				urlCollectQuery: true,
+				urlCollectHash: true,
+				autoCapture: {
+					scroll: true,
+					pageView: true,
+					onLoad: true,
+					onUnload: true,
+					click: true,
+					resize: true,
+					jsError: true
+				}
+			}
+		}, []);
+	
+		window.appInsights.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = GPC_DataSharingOptIn;
+	});
+	</script>
+	<link rel="alternate" type="application/atom+xml" title="RSS Feed for code.visualstudio.com" href="/feed.xml" />
+</head>
+
+<body >
+	<!-- Setting theme here to avoid FOUC -->
+	<script>
+		function setTheme(themeName) {
+			if (themeName === 'dark') {
+				document.documentElement.removeAttribute('data-theme'); // dark is default, so no data-theme attribute needed
+			}
+
+			if (themeName === 'light') {
+				document.documentElement.setAttribute('data-theme', themeName);
+			}
+			return;
+		}
+
+		// Determine initial theme: user preference or system preference
+		let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		setTheme(theme); // Apply the initial theme
+
+		// Listen for changes in the system theme preference
+		window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+			if (!localStorage.getItem('theme')) { // Only if no user preference is saved
+				setTheme(e.matches ? 'dark' : 'light');
+			}
+		});
+	</script>
+
+	<div id="main">
+		<div class="navbar-fixed-container">
+			<div class="navbar navbar-inverse navbar-fixed-top ">
+				<div id='cookie-banner'></div>		<nav role="navigation" aria-label="Top Level">
+					<div class="container">
+						<div class="nav navbar-header">
+							<a class="navbar-brand" href="/"><span>Visual Studio Code</span></a>
+						</div>
+						<div class="navbar-collapse collapse">
+							<ul class="nav navbar-nav navbar-left" data-m='{"cN":"top-navbar","aN":"navigation"}'>
+								<li class="nav-dropdown">
+									<a id="nav-features" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Features","aN":"navigation","cT":"toggle"}'>
+										Features <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/features/agents" data-m='{"cN":"Agents","aN":"navigation - Features"}'>Agents</a></li>
+									</ul>
+								</li>
+								<li class="nav-dropdown active">
+									<a id="nav-docs" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Docs","aN":"navigation","cT":"toggle"}'>
+										Docs <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/docs" data-m='{"cN":"Documentation","aN":"navigation - Docs"}'>Documentation</a></li>
+										<li role="none"><a role="menuitem" href="/api" data-m='{"cN":"API","aN":"navigation - Docs"}'>API</a></li>
+										<li role="none"><a role="menuitem" id="nav-faqs" href="/docs/supporting/faq" data-m='{"cN":"FAQ","aN":"navigation - Docs"}'>FAQ</a></li>
+									</ul>
+								</li>
+								<li ><a id="nav-updates" href="/updates" data-m='{"cN":"Release Notes"}'>Release Notes</a>
+								</li>
+								<li ><a id="nav-blogs" href="/blogs" data-m='{"cN":"Blog"}'>Blog</a></li>
+								<li ><a id="nav-learn" href="/learn" data-m='{"cN":"Learn"}'>Learn</a></li>
+								<li><a id="nav-events" href="https://aka.ms/vscode/live" target="_blank" rel="noopener" data-m='{"cN":"Events"}'>Events<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+								<li class="nav-dropdown">
+									<a id="nav-resources" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Resources","aN":"navigation","cT":"toggle"}'>
+										Resources <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="https://marketplace.visualstudio.com/VSCode" target="_blank" rel="noopener"
+												id="nav-extensions" data-m='{"cN":"Extensions","aN":"navigation - Resources"}'>Extensions<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+										<li role="none"><a role="menuitem" id="nav-mcp" href="/mcp" target="_blank" rel="noopener" data-m='{"cN":"MCP","aN":"navigation - Resources"}'>MCP<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right" role="presentation">
+								<li>
+									<a class="link-button" href="/download" id="nav-download">
+										<span>Download</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="navbar-actions">
+							<div class="search" role="presentation">
+								<div class="nav-search search-control" role="button" tabindex="0" aria-label="Open search dialog">
+									<div class="input-group" role="presentation">
+										<span class="input-group-btn">
+											<span class="btn search-icon-container" aria-hidden="true">
+												<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="" />
+												<img class="search-icon-light" src="/assets/icons/search.svg" alt="" />
+											</span>
+										</span>
+										<span class="search-box form-control" aria-hidden="true" role="presentation"></span>
+										<span class="search-shortcut-placeholder">Search</span>
+										<span class="search-shortcut-overlay"></span>
+									</div>
+								</div>					</div>
+							<button type="button" class="theme-switch" id="theme-toggle">
+								<img class="theme-icon-light" src="/assets/icons/theme-light.svg" alt="Switch to the dark theme" />
+								<img class="theme-icon-dark" src="/assets/icons/theme-dark.svg" alt="Switch to the light theme" />
+							</button>
+							<a class="link-button navbar-actions-download" href="/Download">
+								<span>Download</span>
+							</a>
+						</div>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
+							aria-label="Expand and Collapse Menu">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</div>		<div data-announcement-version="2026-06-01-vscode-live-build" class="updates-banner ">
+			<div class="container">
+				<p class="message"><a href="https://aka.ms/VSCode/Livestage?source=vsc-website-banner" target="_blank" rel="noopener">📼 Rewatch VS Code Live at MS Build 2026</a></p>
+			</div>
+			<div tabindex="0" role="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn"><span class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span></div>
+		</div>
+		<script>
+			// Hide the banner synchronously (before first paint) if this version was
+			// already dismissed, to avoid a flicker/layout shift once the main bundle loads.
+			(function () {
+				try {
+					var banner = document.currentScript.previousElementSibling;
+					if (banner && localStorage.getItem('dismissedAnnouncementVersion') === banner.getAttribute('data-announcement-version')) {
+						banner.classList.add('js-hidden');
+					}
+				} catch (e) { /* ignore */ }
+			})();
+		</script>
+		<!-- This div wraps around the entire site -->
+		<!-- The body itself should already have a main tag -->
+		<main id="main-content">
+			<script>
+    function closeReportIssue() {
+        var element = document.getElementById('surveypopup');
+        element.parentElement.removeChild(element);
+    }
+
+    function reportIssue(tutorial, page) {
+        var div = document.createElement('div');
+        div.innerHTML = '<div id="surveypopup" class="overlay visible"><div class="surveypopup"><div id="surveytitle">Tell us more<a href="javascript:void(0)" onclick="closeReportIssue()">X</a></div><div id="surveydiv"><iframe frameBorder="0" scrolling="0" src="https://www.research.net/r/PWZWZ52?tutorial=' + tutorial + '&step=' + page + '"></iframe></div></div></div>';
+        document.body.appendChild(div.children[0]);
+    }
+</script>
+
+<div class="body-content docs docs-github-layout">
+    <div class="docs-layout-wrapper">
+        <!-- Left sidebar - Table of Contents -->
+        <aside class="docs-left-sidebar">
+            <nav id="docs-navbar" aria-label="Topics" class="docs-nav visible-md visible-lg" data-m='{"cN":"docs-left-nav","aN":"navigation"}'>
+              <div class="docs-nav-back">
+                <a class="area" href="/docs" aria-label="Back to all documentation"><span class="codicon codicon-arrow-left" aria-hidden="true"></span><span>All Docs</span></a>
+              </div>
+              <h4>Core Editor</h4>
+              <ul class="nav" id="main-nav">
+              <li >
+                <a href="/docs/core-editor/overview" data-m='{"cN":"Overview"}' >Overview</a>
+              </li>
+              
+            <li class="panel active expanded">
+              <a class="area" role="button" href="#editing-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Write code","cT":"toggle"}'>Write code</a>
+              <ul id="editing-articles" class="collapse in">
+            
+                    <li >
+                      <a href="/docs/editing/getting-started" data-m='{"cN":"Tutorial","aN":"Write code"}' >Tutorial</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/userinterface" data-m='{"cN":"User Interface","aN":"Write code"}' >User Interface</a>
+                    </li>
+                      
+                    <li class="active">
+                      <a href="/docs/editing/tips-and-tricks" data-m='{"cN":"Tips and Tricks","aN":"Write code"}' aria-label="Current Page: Tips and Tricks">Tips and Tricks</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/codebasics" data-m='{"cN":"Basic Editing","aN":"Write code"}' >Basic Editing</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/intellisense" data-m='{"cN":"IntelliSense","aN":"Write code"}' >IntelliSense</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/ai-powered-suggestions" data-m='{"cN":"Inline Suggestions","aN":"Write code"}' >Inline Suggestions</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/copilot-smart-actions" data-m='{"cN":"Smart Actions","aN":"Write code"}' >Smart Actions</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/editingevolved" data-m='{"cN":"Code Navigation","aN":"Write code"}' >Code Navigation</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/refactoring" data-m='{"cN":"Refactoring","aN":"Write code"}' >Refactoring</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/userdefinedsnippets" data-m='{"cN":"Snippets","aN":"Write code"}' >Snippets</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#editing-workspaces-articles" data-toggle="collapse" data-m='{"cN":"Workspaces","aN":"Write code","cT":"toggle"}'>Workspaces</a>
+              <ul id="editing-workspaces-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/editing/workspaces/workspaces" data-m='{"cN":"Overview","aN":"Write code - Workspaces"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/workspaces/multi-root-workspaces" data-m='{"cN":"Multi-Root Workspaces","aN":"Write code - Workspaces"}' >Multi-Root Workspaces</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/workspaces/workspace-trust" data-m='{"cN":"Workspace Trust","aN":"Write code - Workspaces"}' >Workspace Trust</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+              </ul>
+            </li>
+                
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Configure the editor","cT":"toggle"}'>Configure the editor</a>
+              <ul id="configure-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/locales" data-m='{"cN":"Display Language","aN":"Configure the editor"}' >Display Language</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/custom-layout" data-m='{"cN":"Layout","aN":"Configure the editor"}' >Layout</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/keybindings" data-m='{"cN":"Keyboard Shortcuts","aN":"Configure the editor"}' >Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/settings" data-m='{"cN":"Settings","aN":"Configure the editor"}' >Settings</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/settings-sync" data-m='{"cN":"Settings Sync","aN":"Configure the editor"}' >Settings Sync</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-extensions-articles" data-toggle="collapse" data-m='{"cN":"Extensions","aN":"Configure the editor","cT":"toggle"}'>Extensions</a>
+              <ul id="configure-extensions-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/extensions/extensions" data-m='{"cN":"Overview","aN":"Configure the editor - Extensions"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/extensions/extension-marketplace" data-m='{"cN":"Extension Marketplace","aN":"Configure the editor - Extensions"}' >Extension Marketplace</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/extensions/extension-runtime-security" data-m='{"cN":"Extension Runtime Security","aN":"Configure the editor - Extensions"}' >Extension Runtime Security</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li >
+                      <a href="/docs/configure/themes" data-m='{"cN":"Themes","aN":"Configure the editor"}' >Themes</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/profiles" data-m='{"cN":"Profiles","aN":"Configure the editor"}' >Profiles</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-accessibility-articles" data-toggle="collapse" data-m='{"cN":"Accessibility","aN":"Configure the editor","cT":"toggle"}'>Accessibility</a>
+              <ul id="configure-accessibility-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/accessibility/accessibility" data-m='{"cN":"Overview","aN":"Configure the editor - Accessibility"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/accessibility/voice" data-m='{"cN":"Voice Interactions","aN":"Configure the editor - Accessibility"}' >Voice Interactions</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li >
+                      <a href="/docs/configure/command-line" data-m='{"cN":"Command Line Interface","aN":"Configure the editor"}' >Command Line Interface</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/telemetry" data-m='{"cN":"Telemetry","aN":"Configure the editor"}' >Telemetry</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#reference-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Reference","cT":"toggle"}'>Reference</a>
+              <ul id="reference-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/reference/default-keybindings" data-m='{"cN":"Default Keyboard Shortcuts","aN":"Reference"}' >Default Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/default-settings" data-m='{"cN":"Default Settings","aN":"Reference"}' >Default Settings</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/variables-reference" data-m='{"cN":"Substitution Variables","aN":"Reference"}' >Substitution Variables</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/tasks-appendix" data-m='{"cN":"Tasks Schema","aN":"Reference"}' >Tasks Schema</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+              </ul>
+            </nav>
+            
+            <nav id="small-nav" aria-label="Topics" class="docs-nav hidden-md hidden-lg">
+              <label class="faux-h4" for="small-nav-dropdown-core-editor">Topics</label>
+              <select id="small-nav-dropdown-core-editor" aria-label="topics">
+                <option value="/docs/core-editor/overview" >Overview</option>
+            
+              <optgroup label="Write code">
+            
+                    <option value="/docs/editing/getting-started" >Tutorial</option>
+                    
+                    <option value="/docs/editing/userinterface" >User Interface</option>
+                    
+                    <option value="/docs/editing/tips-and-tricks" selected>Tips and Tricks</option>
+                    
+                    <option value="/docs/editing/codebasics" >Basic Editing</option>
+                    
+                    <option value="/docs/editing/intellisense" >IntelliSense</option>
+                    
+                    <option value="/docs/editing/ai-powered-suggestions" >Inline Suggestions</option>
+                    
+                    <option value="/docs/editing/copilot-smart-actions" >Smart Actions</option>
+                    
+                    <option value="/docs/editing/editingevolved" >Code Navigation</option>
+                    
+                    <option value="/docs/editing/refactoring" >Refactoring</option>
+                    
+                    <option value="/docs/editing/userdefinedsnippets" >Snippets</option>
+                    
+                    <option disabled>Workspaces</option>
+            
+                    <option value="/docs/editing/workspaces/workspaces" >    Overview</option>
+                    
+                    <option value="/docs/editing/workspaces/multi-root-workspaces" >    Multi-Root Workspaces</option>
+                    
+                    <option value="/docs/editing/workspaces/workspace-trust" >    Workspace Trust</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Configure the editor">
+            
+                    <option value="/docs/configure/locales" >Display Language</option>
+                    
+                    <option value="/docs/configure/custom-layout" >Layout</option>
+                    
+                    <option value="/docs/configure/keybindings" >Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/configure/settings" >Settings</option>
+                    
+                    <option value="/docs/configure/settings-sync" >Settings Sync</option>
+                    
+                    <option disabled>Extensions</option>
+            
+                    <option value="/docs/configure/extensions/extensions" >    Overview</option>
+                    
+                    <option value="/docs/configure/extensions/extension-marketplace" >    Extension Marketplace</option>
+                    
+                    <option value="/docs/configure/extensions/extension-runtime-security" >    Extension Runtime Security</option>
+                    
+                    <option value="/docs/configure/themes" >Themes</option>
+                    
+                    <option value="/docs/configure/profiles" >Profiles</option>
+                    
+                    <option disabled>Accessibility</option>
+            
+                    <option value="/docs/configure/accessibility/accessibility" >    Overview</option>
+                    
+                    <option value="/docs/configure/accessibility/voice" >    Voice Interactions</option>
+                    
+                    <option value="/docs/configure/command-line" >Command Line Interface</option>
+                    
+                    <option value="/docs/configure/telemetry" >Telemetry</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Reference">
+            
+                    <option value="/docs/reference/default-keybindings" >Default Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/reference/default-settings" >Default Settings</option>
+                    
+                    <option value="/docs/reference/variables-reference" >Substitution Variables</option>
+                    
+                    <option value="/docs/reference/tasks-appendix" >Tasks Schema</option>
+                    
+              </optgroup>
+              
+              </select>
+            </nav>        </aside>
+        
+        <!-- Content wrapper contains main content + right sidebar -->
+        <div class="docs-content-wrapper">
+            <!-- Right sidebar - On This Page -->
+            <aside class="docs-right-sidebar hidden-xs">
+                <div class="docs-markdown-actions">
+                    <div class="docs-markdown-dropdown" data-raw-url="/raw/docs/editing/tips-and-tricks.md">
+                        <button type="button" class="docs-markdown-btn-main" data-action="copy-markdown" aria-label="Copy as Markdown">
+                            <span class="codicon codicon-copy" aria-hidden="true"></span>
+                            <span>Copy as Markdown</span>
+                        </button>
+                        <button type="button" class="docs-markdown-btn-trigger" aria-haspopup="true" aria-expanded="false" aria-label="More Markdown options">
+                            <span class="codicon codicon-chevron-down docs-markdown-chevron" aria-hidden="true"></span>
+                        </button>
+                        <ul class="docs-markdown-menu" role="menu" aria-label="Markdown options">
+                            <li role="menuitem" tabindex="0" data-action="copy-markdown">
+                                <span class="codicon codicon-copy" aria-hidden="true"></span>
+                                <span>Copy as Markdown</span>
+                            </li>
+                            <li role="menuitem" tabindex="0" data-action="view-markdown">
+                                <span class="codicon codicon-file" aria-hidden="true"></span>
+                                <span>View as Markdown</span>
+                                <span class="codicon codicon-link-external" aria-hidden="true"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav id="docs-subnavbar" aria-label="On Page">
+                    
+                    <h4><span class="sr-only">On this page there are 16 sections</span><span
+                            aria-hidden="true">On this page</span></h4>
+                    <ul class="nav">
+                        
+                        <li><a href="#_basics">Basics</a></li>
+                        
+                        <li><a href="#_command-line">Command line</a></li>
+                        
+                        <li><a href="#_status-bar">Status Bar</a></li>
+                        
+                        <li><a href="#_customization">Customization</a></li>
+                        
+                        <li><a href="#_extensions">Extensions</a></li>
+                        
+                        <li><a href="#_files-and-folders">Files and folders</a></li>
+                        
+                        <li><a href="#_editing-hacks">Editing hacks</a></li>
+                        
+                        <li><a href="#_intellisense">IntelliSense</a></li>
+                        
+                        <li><a href="#_snippets">Snippets</a></li>
+                        
+                        <li><a href="#_git-integration">Git integration</a></li>
+                        
+                        <li><a href="#_git-blame">Git blame</a></li>
+                        
+                        <li><a href="#_compare-file-with-the-clipboard">Compare file with the clipboard</a></li>
+                        
+                        <li><a href="#_debugging">Debugging</a></li>
+                        
+                        <li><a href="#_task-runner">Task runner</a></li>
+                        
+                        <li><a href="#_portable-mode">Portable mode</a></li>
+                        
+                        <li><a href="#_insiders-builds">Insiders builds</a></li>
+                        
+                    </ul>
+                    
+                </nav>
+                
+                <section class="sidebar-try-this" role="region" aria-labelledby="try-this-heading" data-m='{"cN":"sidebar-try-this","aN":"sidebar"}'>
+                    <h4 id="try-this-heading">
+                        <span class="codicon codicon-play" aria-hidden="true"></span>
+                        <span>Try this</span>
+                    </h4>
+                    
+                    
+                    <div class="sidebar-action-card" 
+                         id="sidebar-action-get-started-with-ai-0"
+                         data-section="intro"
+                         >
+                        <span class="sidebar-action-title">Get started with AI</span>
+                        
+                        <p class="sidebar-action-desc">Follow a hands-on tutorial to build your first app with AI in VS Code.</p>
+                        
+                        <div class="sidebar-action-links">
+                            
+                            
+                            <a href="/docs/agents/agents-tutorial" 
+                               class="sidebar-action-btn"
+                               
+                               aria-label="Start tutorial">
+                                Start tutorial
+                            </a>
+                            
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-action-card" 
+                         id="sidebar-action-watch-the-introduction-video-1"
+                         data-section="intro"
+                         >
+                        <span class="sidebar-action-title">Watch the introduction video</span>
+                        
+                        <p class="sidebar-action-desc">Learn about the key features of Visual Studio Code in our introduction video.</p>
+                        
+                        <div class="sidebar-action-links">
+                            
+                            
+                            <a href="https://www.youtube.com/watch?v=f8_uF_IDV50" 
+                               class="sidebar-action-btn"
+                               target="_blank" rel="noopener noreferrer"
+                               aria-label="Watch video (opens in new tab)">
+                                Watch video
+                            </a>
+                            
+                            
+                        </div>
+                    </div>
+                    
+                </section>
+                
+            </aside>
+            
+            <!-- Main article content -->
+            <main class="docs-main-content body">
+                <h1>Visual Studio Code tips and tricks</h1>
+<p>Use the tips and tricks in this article to jump right in and learn how to be productive with Visual Studio Code. Become familiar with the powerful editing, code intelligence, and source code control features and learn useful keyboard shortcuts. Make sure to explore the other in-depth topics in <a href="/docs/editing/userinterface">Getting Started</a> and the <a href="/docs/editing/codebasics">User Guide</a> to learn more.</p>
+<p>If you're just getting started, make sure to check out the <a href="/docs/editing/getting-started">VS Code tutorial</a> for a step-by-step to discover the key features.</p>
+<blockquote><p>If you don't have Visual Studio Code installed, go to the <a href="/download">Download</a> page. You can find platform specific setup instructions at <a href="/docs/setup/linux">Running VS Code on Linux</a>, <a href="/docs/setup/mac">macOS</a>, and <a href="/docs/setup/windows">Windows</a>.</p>
+</blockquote><p>Prefer a video? You can watch the VS Code Day talks <a href="https://learn.microsoft.com/en-us/events/visual-studio-code-vs-code-day-2021/vs-code-tips-and-tricks" class="external-link" target="_blank">Visual Studio Code tips and tricks</a> or <a href="https://learn.microsoft.com/en-us/shows/vs-code-day-2023/elevate-your-vs-code-experience" class="external-link" target="_blank">Elevate your VS Code experience</a>.</p>
+
+
+<h2 id="_basics" data-needslink="_basics">Basics</h2>
+<h3 id="_getting-started" data-needslink="_getting-started">Getting started</h3>
+<p>The best way of exploring VS Code hands-on is to open the <strong>Welcome</strong> page and then pick a <strong>Walkthrough</strong> for a self-guided tour through the setup steps, features, and deeper customizations that VS Code offers. As you discover and learn, the walkthroughs track your progress.</p>
+<p>Open the Welcome page from the <strong>Help</strong> &gt; <strong>Welcome</strong> menu or use the <strong>Help: Welcome</strong> command from the Command Palette (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>).</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/welcome-page.png" alt="Welcome page" loading="lazy"></p>
+<p>Extensions can also contribute walkthroughs. You can also directly open a walkthrough by using the <strong>Help: Open Walkthrough...</strong> command from the Command Palette (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>).</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/open-walkthrough.png" alt="Open walkthrough command in the Command Palette" loading="lazy"></p>
+<p>If you are looking to improve your code editing skills, open the <strong>Interactive Editor Playground</strong>. Try out VS Code's <a href="/docs/editing/codebasics">code editing features</a>, like multi-cursor editing, <a href="/docs/editing/intellisense">IntelliSense</a>, Snippets, <a href="/docs/languages/emmet">Emmet</a>, and more.</p>
+<p>Open the Welcome page from the <strong>Help</strong> &gt; <strong>Editor Playground</strong> menu or use the <strong>Help: Interactive Editor Playground</strong> command from the Command Palette (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>).</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/interactive_playground.png" alt="Interactive editor playground" loading="lazy"></p>
+<h3 id="_command-palette" data-needslink="_command-palette">Command Palette</h3>
+<p>Access all available commands based on your current context.</p>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/OpenCommandPalette.gif" alt="Command Palette" loading="lazy"></p>
+<div class="markdown-alert tip" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z">
+          </path>
+        </svg>
+        Tip
+      </span><p>You can move the Command Palette to another location by grabbing the top edge with the mouse cursor and dragging it somewhere else. You can also select the <strong>Customize Layout</strong> control in the title bar, and then select one of the preconfigured <strong>Quick Input Positions</strong>.</p>
+</div><p><img src="/assets/docs/editing/tips-and-tricks/command-palette-position.png" alt="Screenshot that shows the Command Palette in a different location, highlighting the Customize Layout control in the title bar and the preconfigured position options." loading="lazy"></p>
+<h3 id="_default-keyboard-shortcuts" data-needslink="_default-keyboard-shortcuts">Default keyboard shortcuts</h3>
+<p>Many of the commands in the Command Palette have default keyboard shortcuts associated with them. You can see the default keyboard shortcut alongside the command in the <strong>Command Palette</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>).</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/keyboard-references.png" alt="keyboard references" loading="lazy"></p>
+<h3 id="_keyboard-reference-sheets" data-needslink="_keyboard-reference-sheets">Keyboard reference sheets</h3>
+<p>Download the keyboard shortcut reference sheet for your platform (<a href="https://go.microsoft.com/fwlink/?linkid=832143" class="external-link" target="_blank">macOS</a>, <a href="https://go.microsoft.com/fwlink/?linkid=832145" class="external-link" target="_blank">Windows</a>, <a href="https://go.microsoft.com/fwlink/?linkid=832144" class="external-link" target="_blank">Linux</a>).</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/KeyboardReferenceSheet.png" alt="Keyboard Reference Sheet" loading="lazy"></p>
+<h3 id="_floating-windows" data-needslink="_floating-windows">Floating windows</h3>
+<p>You can open an editor, the terminal, or specific views in a floating window, for example to move the editor to another place on your monitor or even to another monitor.</p>
+<p><img src="/assets/docs/editing/userinterface/floating-editor.png" alt="Screenshot that shows the OS desktop with VS Code window and a CSV file opened in a floating window." loading="lazy"></p>
+<p>Drag an editor tab out of the current VS Code window to open it in a floating window. Alternatively, use the <strong>Move into New Window</strong> or <strong>Copy into New Window</strong> context options from the editor tab.</p>
+<h3 id="_integrated-terminal" data-needslink="_integrated-terminal">Integrated terminal</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.terminal.toggleTerminal" data-osx="⌃`" data-win="Ctrl+`" data-linux="Ctrl+`"><span class="keybinding">⌃`</span> (Windows, Linux <span class="keybinding">Ctrl+`</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/integrated_terminal.png" alt="Integrated terminal" loading="lazy"></p>
+<p>You can select another terminal shell from the dropdown. Depending on your operating system and system configuration, you might see different shells listed.</p>
+<p>Further reading:</p>
+<ul>
+<li><a href="/docs/terminal/basics">Integrated Terminal</a> documentation</li>
+<li><a href="https://www.growingwiththeweb.com/2017/03/mastering-vscodes-terminal.html" class="external-link" target="_blank">Mastering VS Code's Terminal article</a></li>
+</ul>
+<h3 id="_toggle-sidebar" data-needslink="_toggle-sidebar">Toggle Sidebar</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.toggleSidebarVisibility" data-osx="⌘B" data-win="Ctrl+B" data-linux="Ctrl+B"><span class="keybinding">⌘B</span> (Windows, Linux <span class="keybinding">Ctrl+B</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/toggle_side_bar.gif" alt="toggle side bar" loading="lazy"></p>
+<h3 id="_toggle-panel" data-needslink="_toggle-panel">Toggle Panel</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.togglePanel" data-osx="⌘J" data-win="Ctrl+J" data-linux="Ctrl+J"><span class="keybinding">⌘J</span> (Windows, Linux <span class="keybinding">Ctrl+J</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/toggle_panel.gif" alt="toggle panel" loading="lazy"></p>
+<h3 id="_zen-mode" data-needslink="_zen-mode">Zen mode</h3>
+<p>Enter distraction-free Zen mode.</p>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.toggleZenMode" data-osx="⌘K Z" data-win="Ctrl+K Z" data-linux="Ctrl+K Z"><span class="keybinding">⌘K Z</span> (Windows, Linux <span class="keybinding">Ctrl+K Z</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/zen_mode.gif" alt="zen mode" loading="lazy"></p>
+<p>Press <span class="keybinding">Esc</span> twice to exit Zen Mode.</p>
+<h2 id="_command-line" data-needslink="_command-line">Command line</h2>
+<p>VS Code has a powerful command line interface (CLI) which enables you to customize how the editor is launched to support various scenarios. For example, you can start VS Code from the command line to open a diff editor for comparing two files.</p>
+<blockquote><p>Make sure the VS Code binary is on your path so you can simply type 'code' to launch VS Code. See the platform specific setup topics if VS Code is added to your environment path during installation (<a href="/docs/setup/linux">Running VS Code on Linux</a>, <a href="/docs/setup/mac">macOS</a>, <a href="/docs/setup/windows">Windows</a>).</p>
+</blockquote><pre class="shiki" data-lang="bash" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000"># open code with current directory</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">code</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000"># open the current directory in the most recently used code window</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">code</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> -r</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000"># create a new window</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">code</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> -n</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000"># change the language</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">code</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --locale=es</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000"># open diff editor</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">code</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --diff</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &#x3C;</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">file</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">1> &#x3C;</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">file</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">2></span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000"># open file at specific line and column &#x3C;file:line[:character]></span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">code</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --goto</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> package.json:10:5</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000"># see help options</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">code</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --help</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000"># disable all extensions</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">code</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --disable-extensions</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> .</span></span>
+<span class="line"></span></code></pre>
+<h3 id="_vscode-folder" data-needslink="_vscode-folder">.vscode folder</h3>
+<p>Workspace-specific configuration files are in a <code>.vscode</code> folder at the root of your workspace. For example, <code>tasks.json</code> for the <a href="/docs/debugtest/tasks">Task Runner</a> and <code>launch.json</code> for the <a href="/docs/debugtest/debugging">debugger</a>.</p>
+<h2 id="_status-bar" data-needslink="_status-bar">Status Bar</h2>
+<h3 id="_errors-and-warnings" data-needslink="_errors-and-warnings">Errors and warnings</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.actions.view.problems" data-osx="⇧⌘M" data-win="Ctrl+Shift+M" data-linux="Ctrl+Shift+M"><span class="keybinding">⇧⌘M</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+M</span>)</span></p>
+<p>Quickly jump to errors and warnings in the project.</p>
+<p>Cycle through errors with <span class="dynamic-keybinding" data-commandId="editor.action.marker.nextInFiles" data-osx="F8" data-win="F8" data-linux="F8"><span class="keybinding">F8</span></span> or <span class="dynamic-keybinding" data-commandId="editor.action.marker.prevInFiles" data-osx="⇧F8" data-win="Shift+F8" data-linux="Shift+F8"><span class="keybinding">⇧F8</span> (Windows, Linux <span class="keybinding">Shift+F8</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/Errors_Warnings.gif" alt="errors and warnings" loading="lazy"></p>
+<p>You can filter problem list either by type ('info', 'errors', 'warnings') or by matching text.</p>
+<h3 id="_change-language-mode" data-needslink="_change-language-mode">Change language mode</h3>
+<p>The language mode in the Status Bar indicates the language (for example, Markdown, Python, and more) that is associated with the active editor. You can change the language mode for the current editor by selecting the Status Bar language mode indicator, or by using the keyboard shortcut.</p>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.editor.changeLanguageMode" data-osx="⌘K M" data-win="Ctrl+K M" data-linux="Ctrl+K M"><span class="keybinding">⌘K M</span> (Windows, Linux <span class="keybinding">Ctrl+K M</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/change_syntax.gif" alt="change syntax" loading="lazy"></p>
+<p>If you want to persist the new language mode for a file type, use the <strong>Configure File Association for</strong> command to associate the current file extension with an installed language.</p>
+<h2 id="_customization" data-needslink="_customization">Customization</h2>
+<p>There are many options to customize VS Code to meet your preferences:</p>
+<ul>
+<li>Change your theme</li>
+<li>Change your keyboard shortcuts</li>
+<li>Tune your settings</li>
+<li>Add JSON validation</li>
+<li>Create snippets</li>
+<li>Install extensions</li>
+</ul>
+<h3 id="_change-your-theme" data-needslink="_change-your-theme">Change your theme</h3>
+<p>VS Code comes with a number of built-in <a href="/docs/configure/themes">color themes</a>. Use the <strong>Preferences: Color Theme</strong> command or use the keyboard shortcut.</p>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.selectTheme" data-osx="⌘K ⌘T" data-win="Ctrl+K Ctrl+T" data-linux="Ctrl+K Ctrl+T"><span class="keybinding">⌘K ⌘T</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+T</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/PreviewThemes.gif" alt="Preview themes" loading="lazy"></p>
+<p>You can install more themes from the VS Code extension <a href="https://marketplace.visualstudio.com/search?target=VSCode&amp;category=Themes&amp;sortBy=Installs" class="external-link" target="_blank">Marketplace</a>. Select the <strong>Preferences: Color Theme</strong> &gt; <strong>+ Browse Additional Color Themes...</strong> command to search themes from the Marketplace.</p>
+<p>Additionally, you can install and change your File Icon themes.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/PreviewFileIconThemes.gif" alt="File icon themes" loading="lazy"></p>
+<h3 id="_keymaps" data-needslink="_keymaps">Keymaps</h3>
+<p>Are you used to keyboard shortcuts from another editor? You can install a Keymap extension that brings the keyboard shortcuts from your favorite editor to VS Code. Use the <strong>Preferences: Keymaps</strong> command to see the current list on the <a href="https://marketplace.visualstudio.com/search?target=VSCode&amp;category=Keymaps&amp;sortBy=Installs" class="external-link" target="_blank">Visual Studio Marketplace</a>.</p>
+<p>Some of the more popular keymaps are:</p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=vscodevim.vim" class="external-link" target="_blank">Vim</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.sublime-keybindings" class="external-link" target="_blank">Sublime Text Keymap</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=hiro-sun.vscode-emacs" class="external-link" target="_blank">Emacs Keymap</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings" class="external-link" target="_blank">Atom Keymap</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.brackets-keybindings" class="external-link" target="_blank">Brackets Keymap</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=alphabotsec.vscode-eclipse-keybindings" class="external-link" target="_blank">Eclipse Keymap</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings" class="external-link" target="_blank">Visual Studio Keymap</a></li>
+</ul>
+<h3 id="_customize-your-keyboard-shortcuts" data-needslink="_customize-your-keyboard-shortcuts">Customize your keyboard shortcuts</h3>
+<p>You can view and customize the keyboard shortcuts in the <strong>Keyboard Shortcuts</strong> editor. Use the <strong>Preferences: Open Keyboard Shortcuts</strong> command or use the shortcut to open the editor.</p>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.openGlobalKeybindings" data-osx="⌘K ⌘S" data-win="Ctrl+K Ctrl+S" data-linux="Ctrl+K Ctrl+S"><span class="keybinding">⌘K ⌘S</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+S</span>)</span></p>
+<p>Select the pencil icon or use <span class="keybinding">Enter</span> on a specific entry to edit the keyboard shortcut. Filter the list by using the search field.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/keyboard-shortcuts.png" alt="keyboard shortcuts" loading="lazy"></p>
+<p>You can also search for shortcuts and add your own keyboard shortcuts to the <code>keybindings.json</code> file.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/KeyboardShortcuts.gif" alt="customize keyboard shortcuts" loading="lazy"></p>
+<p>See more in <a href="/docs/configure/keybindings">Key Bindings for Visual Studio Code</a>.</p>
+<h3 id="_tune-your-settings" data-needslink="_tune-your-settings">Tune your settings</h3>
+<p>By default, VS Code shows the Settings editor to view and edit settings. You can also edit the underlying <code>settings.json</code> file by using the <strong>Open User Settings (JSON)</strong> command or by changing your default settings editor with the <span class="setting"><span class="setting-dropdown" data-setting-id="workbench.settings.editor">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.settings.editor
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting.</p>
+<p>Open User Settings <code>settings.json</code></p>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.openSettings" data-osx="⌘," data-win="Ctrl+," data-linux="Ctrl+,"><span class="keybinding">⌘,</span> (Windows, Linux <span class="keybinding">Ctrl+,</span>)</span></p>
+<p>Change the font size of various UI elements</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// Main editor</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.fontSize"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">18</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// Terminal panel</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"terminal.integrated.fontSize"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">14</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// Output panel</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"[Log]"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "editor.fontSize"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">15</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<p>Change the zoom level</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"window.zoomLevel"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">5</span></span>
+<span class="line"></span></code></pre>
+<p>Font ligatures</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.fontFamily"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"Fira Code"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.fontLigatures"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span></span>
+<span class="line"></span></code></pre>
+<blockquote><p><strong>Tip:</strong> You need to have a font installed that supports font ligatures. <a href="https://github.com/tonsky/FiraCode" class="external-link" target="_blank">FiraCode</a> is a popular font on the VS Code team.</p>
+</blockquote><p><img src="/assets/docs/editing/tips-and-tricks/font-ligatures-annotated.png" alt="font ligatures" loading="lazy"></p>
+<p>Auto Save</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"files.autoSave"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"afterDelay"</span></span>
+<span class="line"></span></code></pre>
+<p>You can also toggle Auto Save from the top-level menu with the <strong>File</strong> &gt; <strong>Auto Save</strong>.</p>
+<p>Format on save</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.formatOnSave"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span></span>
+<span class="line"></span></code></pre>
+<p>Format on paste</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.formatOnPaste"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span></span>
+<span class="line"></span></code></pre>
+<p>Change the size of Tab characters</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.tabSize"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">4</span></span>
+<span class="line"></span></code></pre>
+<p>Spaces or Tabs</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.insertSpaces"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span></span>
+<span class="line"></span></code></pre>
+<p>Render whitespace</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.renderWhitespace"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"all"</span></span>
+<span class="line"></span></code></pre>
+<p>Whitespace characters are rendered by default in text selection.</p>
+<p>Ignore files / folders</p>
+<p>Removes these files / folders from your editor window.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"files.exclude"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "somefolder/"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "somefile"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<p>Remove these files / folders from search results.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"search.exclude"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "someFolder/"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "somefile"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<p>Learn about the many <a href="/docs/configure/settings">other customizations</a>.</p>
+<h3 id="_language-specific-settings" data-needslink="_language-specific-settings">Language specific settings</h3>
+<p>You can scope settings for specific languages by using the language identifier. You can find a list of commonly used language IDs in the <a href="/docs/languages/identifiers">Language Identifiers</a> reference.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"[languageid]"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<blockquote><p><strong>Tip:</strong> You can also create language-specific settings with the <strong>Configure Language Specific Settings</strong> command.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/lang-based-settings.png" alt="language based settings" loading="lazy"></p>
+</blockquote><h3 id="_add-json-validation" data-needslink="_add-json-validation">Add JSON validation</h3>
+<p>JSON validation is enabled by default for many file types. Create your own schema and validation in <code>settings.json</code>:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"json.schemas"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "fileMatch"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">            "bower.json"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        ],</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "url"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"https://json.schemastore.org/bower"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">]</span></span>
+<span class="line"></span></code></pre>
+<p>or for a schema defined in your workspace:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"json.schemas"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "fileMatch"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">            "**/foo.json"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        ],</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "url"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"./myschema.json"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">]</span></span>
+<span class="line"></span></code></pre>
+<p>or to use a custom schema:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"json.schemas"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "fileMatch"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">            "/.myconfig"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        ],</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "schema"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">            "type"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"object"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">            "properties"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">                "name"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> : {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">                    "type"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"string"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">                    "description"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"The name of the entry"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">                }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">            }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">]</span></span>
+<span class="line"></span></code></pre>
+<p>See more in the <a href="/docs/languages/json">JSON</a> documentation.</p>
+<h3 id="_configure-the-default-browser" data-needslink="_configure-the-default-browser">Configure the default browser</h3>
+<p>In VS Code, you can <span class="keybinding">Ctrl+click</span> (<span class="keybinding">Cmd+click</span> on macOS) on a link to open it in your default browser. You can configure the default browser by setting the <span class="setting"><span class="setting-dropdown" data-setting-id="workbench.externalBrowser">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.externalBrowser
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> <a href="/docs/configure/settings">setting</a>.</p>
+<p>Specify the full path to the browser executable as the settings value. Alternatively, to ensure correct functioning across devices, you can also use browser aliases, such as <code>edge</code>, <code>chrome</code>, or <code>firefox</code>.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.externalBrowser"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"edge"</span></span>
+<span class="line"></span></code></pre>
+<h3 id="_combine-multiple-logs-into-a-single-view" data-needslink="_combine-multiple-logs-into-a-single-view">Combine multiple logs into a single view</h3>
+<p>The Output panel shows the output of various services. Each services typically has their own log. To analyze related log information from multiple services, you can combine multiple logs into a single <em>compound log</em>.</p>
+<p>Select <strong>Create Compound Log...</strong> from the overflow menu of the Output panel.</p>
+<p><video src="/assets/docs/editing/tips-and-tricks/compound-log.mp4" title="Video showing how to create a compound log that combines the log messages from two other logs." autoplay loop controls muted></video></p>
+<h2 id="_extensions" data-needslink="_extensions">Extensions</h2>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.view.extensions" data-osx="⇧⌘X" data-win="Ctrl+Shift+X" data-linux="Ctrl+Shift+X"><span class="keybinding">⇧⌘X</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+X</span>)</span></p>
+<h3 id="_find-extensions" data-needslink="_find-extensions">Find extensions</h3>
+<p>You can use multiple sources to find extensions:</p>
+<ul>
+<li>In the VS Code <a href="https://marketplace.visualstudio.com/vscode" class="external-link" target="_blank">Marketplace</a>.</li>
+<li>Search inside VS Code in the <strong>Extensions</strong> view.</li>
+<li>View extension recommendations</li>
+<li>Community curated extension lists, such as <a href="https://github.com/viatsko/awesome-vscode" class="external-link" target="_blank">awesome-vscode</a>.</li>
+</ul>
+<h3 id="_find-popular-extensions" data-needslink="_find-popular-extensions">Find popular extensions</h3>
+<p>In the <strong>Extensions</strong> view, select the <strong>Filter</strong> control, and then either select <strong>Most Popular</strong> or <strong>Sort By</strong> &gt; <strong>Install Count</strong>.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/show-popular-extensions.png" alt="install extensions" loading="lazy"></p>
+<h3 id="_extension-recommendations" data-needslink="_extension-recommendations">Extension recommendations</h3>
+<p>In the <strong>Extensions</strong> view, select the <strong>Filter</strong> control, and then select <strong>Recommended</strong> to view the list of recommended extensions.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/show-recommended-extensions.png" alt="show recommended extensions" loading="lazy"></p>
+<h3 id="_create-your-own-extension" data-needslink="_create-your-own-extension">Create your own extension</h3>
+<p>Are you interested in creating your own extension? You can learn how to do this in the <a href="/api">Extension API documentation</a>, specifically check out the <a href="/api/references/contribution-points">documentation on contribution points</a>.</p>
+<ul>
+<li>configuration</li>
+<li>commands</li>
+<li>keyboard shortcuts</li>
+<li>languages</li>
+<li>debuggers</li>
+<li>grammars</li>
+<li>themes</li>
+<li>snippets</li>
+<li>jsonValidation</li>
+</ul>
+<h2 id="_files-and-folders" data-needslink="_files-and-folders">Files and folders</h2>
+<h3 id="_simple-file-dialog" data-needslink="_simple-file-dialog">Simple file dialog</h3>
+<p>With the simple file dialog, you can replace the system's default file dialog for opening and saving files and folders with a simpler Quick Pick dialog within VS Code.</p>
+<p>Setting: <span class="setting"><span class="setting-dropdown" data-setting-id="files.simpleDialog">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      files.simpleDialog
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/simple-file-dialog.png" alt="Simple File Dialog" loading="lazy"></p>
+<div class="markdown-alert tip" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z">
+          </path>
+        </svg>
+        Tip
+      </span><p>Use the eye icon in the top right corner to show or hide files and folders starting with a dot.</p>
+</div><p>When you open a folder and enter a path that doesn't exist, the simple file dialog prompts you to create the folder.</p>
+<h3 id="_show-explorer-view" data-needslink="_show-explorer-view">Show Explorer view</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.view.explorer" data-osx="⇧⌘E" data-win="Ctrl+Shift+E" data-linux="Ctrl+Shift+E"><span class="keybinding">⇧⌘E</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+E</span>)</span></p>
+<h3 id="_quick-open" data-needslink="_quick-open">Quick Open</h3>
+<p>Quickly search and open files.</p>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.quickOpen" data-osx="⌘P" data-win="Ctrl+P" data-linux="Ctrl+P"><span class="keybinding">⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+P</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/QuickOpen.gif" alt="Quick Open" loading="lazy"></p>
+<p><strong>Tip:</strong> Type <span class="keybinding">?</span> to view command suggestions.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/quick-open-command-dropdown.png" alt="Quick Open command list" loading="lazy"></p>
+<p>Typing commands such as <code>edt</code> or <code>term</code> followed by a space brings up a dropdown list.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/term-quick-open.png" alt="term command in Quick Open" loading="lazy"></p>
+<h4 id="_navigate-between-recently-opened-files" data-needslink="_navigate-between-recently-opened-files">Navigate between recently opened files</h4>
+<p>Repeatedly press the <strong>Quick Open</strong> keyboard shortcut to cycle quickly between recently opened files.</p>
+<h4 id="_open-multiple-files-from-quick-open" data-needslink="_open-multiple-files-from-quick-open">Open multiple files from Quick Open</h4>
+<p>You can open multiple files from <strong>Quick Open</strong> by pressing <span class="keybinding">Right Arrow</span>. This opens the currently selected file in the background, and you can continue selecting files from <strong>Quick Open</strong>.</p>
+<h3 id="_navigate-between-recently-opened-folders-and-workspaces" data-needslink="_navigate-between-recently-opened-folders-and-workspaces">Navigate between recently opened folders and workspaces</h3>
+<p>Open a recent folder or workspace.</p>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.openRecent" data-osx="⌃R" data-win="Ctrl+R" data-linux="Ctrl+R"><span class="keybinding">⌃R</span> (Windows, Linux <span class="keybinding">Ctrl+R</span>)</span></p>
+<p>Displays a Quick Pick dropdown with the list from <strong>File</strong> &gt; <strong>Open Recent</strong> with recently opened folders and workspaces followed by files.</p>
+<h3 id="_create-or-open-a-file-from-a-link" data-needslink="_create-or-open-a-file-from-a-link">Create or open a file from a link</h3>
+<p>Keyboard Shortcut: <span class="keybinding">Ctrl+click</span> (<span class="keybinding">Cmd+click</span> on macOS)</p>
+<p>You can quickly open a file or image, or create a new file by moving the cursor to the file link and then pressing <span class="keybinding">Ctrl+click</span>.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/create_open_file.gif" alt="create and open file" loading="lazy"></p>
+<h3 id="_close-the-currently-opened-folder" data-needslink="_close-the-currently-opened-folder">Close the currently opened folder</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.closeFolder" data-osx="⌘K F" data-win="Ctrl+K F" data-linux="Ctrl+K F"><span class="keybinding">⌘K F</span> (Windows, Linux <span class="keybinding">Ctrl+K F</span>)</span></p>
+<h3 id="_navigation-history" data-needslink="_navigation-history">Navigation history</h3>
+<p>Navigate entire history: <span class="dynamic-keybinding" data-commandId="workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup" data-osx="⌃Tab" data-win="Ctrl+Tab" data-linux="Ctrl+Tab"><span class="keybinding">⌃Tab</span> (Windows, Linux <span class="keybinding">Ctrl+Tab</span>)</span></p>
+<p>Navigate back: <span class="dynamic-keybinding" data-commandId="workbench.action.navigateBack" data-osx="⌃-" data-win="Alt+Left" data-linux="Ctrl+Alt+-"><span class="keybinding">⌃-</span> (Windows <span class="keybinding">Alt+Left</span>, Linux <span class="keybinding">Ctrl+Alt+-</span>)</span></p>
+<p>Navigate forward: <span class="dynamic-keybinding" data-commandId="workbench.action.navigateForward" data-osx="⌃⇧-" data-win="Alt+Right" data-linux="Ctrl+Shift+-"><span class="keybinding">⌃⇧-</span> (Windows <span class="keybinding">Alt+Right</span>, Linux <span class="keybinding">Ctrl+Shift+-</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/navigate_history.gif" alt="navigate history" loading="lazy"></p>
+<h3 id="_file-associations" data-needslink="_file-associations">File associations</h3>
+<p>Create language associations for files that aren't detected correctly. For example, many configuration files with custom file extensions are actually JSON.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"files.associations"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    ".database"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"json"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<h3 id="_preventing-dirty-writes" data-needslink="_preventing-dirty-writes">Preventing dirty writes</h3>
+<p>VS Code will show you an error message when you try to save a file that cannot be saved because it has changed on disk. VS Code blocks saving the file to prevent overwriting changes that have been made outside of the editor.</p>
+<p>To resolve the save conflict, select the <strong>Compare</strong> action in the notification popup to open a diff editor that shows you the contents of the file on disk (to the left) compared to the contents in VS Code (on the right):</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/dirty-write.png" alt="dirty write" loading="lazy"></p>
+<p>Use the actions in the editor toolbar to resolve the save conflict. You can either <strong>Accept</strong> your changes and thereby overwriting any changes on disk, or <strong>Revert</strong> to the version on disk. Reverting means that your changes will be lost.</p>
+<p><strong>Note:</strong> The file remains dirty and cannot be saved until you pick one of the two actions to resolve the conflict.</p>
+<h2 id="_editing-hacks" data-needslink="_editing-hacks">Editing hacks</h2>
+<p>Here is a selection of common features for editing code. If you're more familiar with the keyboard shortcuts for another editor, consider installing a <a href="https://marketplace.visualstudio.com/search?target=VSCode&amp;category=Keymaps&amp;sortBy=Installs" class="external-link" target="_blank">keymap extension</a>.</p>
+<p><strong>Tip</strong>: You can see recommended keymap extensions in the <strong>Extensions</strong> view by filtering the search to <code>@recommended:keymaps</code>.</p>
+<h3 id="_side-by-side-editing" data-needslink="_side-by-side-editing">Side by side editing</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.splitEditor" data-osx="⌘\" data-win="Ctrl+\" data-linux="Ctrl+\"><span class="keybinding">⌘\</span> (Windows, Linux <span class="keybinding">Ctrl+\</span>)</span></p>
+<p>You can also drag and drop editors to create new editor groups and move editors between groups.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/split_editor.gif" alt="split editors" loading="lazy"></p>
+<h3 id="_switch-between-editors" data-needslink="_switch-between-editors">Switch between editors</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.focusFirstEditorGroup" data-osx="⌘1" data-win="Ctrl+1" data-linux="Ctrl+1"><span class="keybinding">⌘1</span> (Windows, Linux <span class="keybinding">Ctrl+1</span>)</span>, <span class="dynamic-keybinding" data-commandId="workbench.action.focusSecondEditorGroup" data-osx="⌘2" data-win="Ctrl+2" data-linux="Ctrl+2"><span class="keybinding">⌘2</span> (Windows, Linux <span class="keybinding">Ctrl+2</span>)</span>, <span class="dynamic-keybinding" data-commandId="workbench.action.focusThirdEditorGroup" data-osx="⌘3" data-win="Ctrl+3" data-linux="Ctrl+3"><span class="keybinding">⌘3</span> (Windows, Linux <span class="keybinding">Ctrl+3</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/navigate_editors.gif" alt="navigate editors" loading="lazy"></p>
+<h3 id="_multi-cursor-selection" data-needslink="_multi-cursor-selection">Multi cursor selection</h3>
+<p>To add cursors at arbitrary positions, select a position with your mouse and use <span class="keybinding">Alt+Click</span> (<span class="keybinding">Option+Click</span> on macOS).</p>
+<p>To set cursors above or below the current position use:</p>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="editor.action.insertCursorAbove" data-osx="⌥⌘↑" data-win="Ctrl+Alt+Up" data-linux="Shift+Alt+Up"><span class="keybinding">⌥⌘↑</span> (Windows <span class="keybinding">Ctrl+Alt+Up</span>, Linux <span class="keybinding">Shift+Alt+Up</span>)</span> or <span class="dynamic-keybinding" data-commandId="editor.action.insertCursorBelow" data-osx="⌥⌘↓" data-win="Ctrl+Alt+Down" data-linux="Shift+Alt+Down"><span class="keybinding">⌥⌘↓</span> (Windows <span class="keybinding">Ctrl+Alt+Down</span>, Linux <span class="keybinding">Shift+Alt+Down</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/multicursor.gif" alt="multi cursor" loading="lazy"></p>
+<p>You can add additional cursors to all occurrences of the current selection with <span class="dynamic-keybinding" data-commandId="editor.action.selectHighlights" data-osx="⇧⌘L" data-win="Ctrl+Shift+L" data-linux="Ctrl+Shift+L"><span class="keybinding">⇧⌘L</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+L</span>)</span>.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/add_cursor_current_selection.gif" alt="add cursor to all occurrences of current selection" loading="lazy"></p>
+<blockquote><p>Note: You can also change the modifier to <span class="keybinding">Ctrl/Cmd</span> for applying multiple cursors with the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.multiCursorModifier">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.multiCursorModifier
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> <a href="/docs/configure/settings">setting</a> . See <a href="/docs/editing/codebasics#_multicursor-modifier">Multi-cursor Modifier</a> for details.</p>
+</blockquote><p>If you do not want to add all occurrences of the current selection, you can use <span class="dynamic-keybinding" data-commandId="editor.action.addSelectionToNextFindMatch" data-osx="⌘D" data-win="Ctrl+D" data-linux="Ctrl+D"><span class="keybinding">⌘D</span> (Windows, Linux <span class="keybinding">Ctrl+D</span>)</span> instead.
+This only selects the next occurrence after the one you selected so you can add selections one by one.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/add_cursor_current_selection_one_by_one.gif" alt="add cursor to next occurrences of current selection one by one" loading="lazy"></p>
+<h3 id="_column-box-selection" data-needslink="_column-box-selection">Column (box) selection</h3>
+<p>You can select blocks of text by holding <span class="keybinding">Shift+Alt</span> (<span class="keybinding">Shift+Option</span> on macOS) while you drag your mouse. A separate cursor will be added to the end of each selected line.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/column-select.gif" alt="Column text selection" loading="lazy"></p>
+<p>You can also use <a href="/docs/editing/codebasics#_column-box-selection">keyboard shortcuts</a> to trigger column selection.</p>
+<h3 id="_vertical-rulers" data-needslink="_vertical-rulers">Vertical rulers</h3>
+<p>You can add vertical column rulers to the editor with the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.rulers">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.rulers
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting, which takes an array of column character positions where you'd like vertical rulers.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "editor.rulers"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">20</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">40</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">60</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">]</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<p><img src="/assets/docs/editing/tips-and-tricks/editor-rulers.png" alt="Editor rulers in the editor" loading="lazy"></p>
+<h3 id="_fast-scrolling" data-needslink="_fast-scrolling">Fast scrolling</h3>
+<p>Pressing the <span class="keybinding">Alt</span> key enables fast scrolling in the editor and Explorers. By default, fast scrolling uses a 5X speed multiplier but you can control the multiplier with the <strong>Editor: Fast Scroll Sensitivity</strong> (<span class="setting"><span class="setting-dropdown" data-setting-id="editor.fastScrollSensitivity">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.fastScrollSensitivity
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>) setting.</p>
+<h3 id="_locked-scrolling" data-needslink="_locked-scrolling">Locked scrolling</h3>
+<p>You can synchronize scrolling across all visible editors by using the <strong>View: Toggle Locked Scrolling Across Editors</strong> command. This means that when you scroll in one editor, all the other editors scroll by the same amount, keeping everything aligned.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/locked-scrolling.gif" alt="Locked scrolling in the editor" loading="lazy"></p>
+<p>You can choose to only activate the scrolling sync when you're holding down a specific keyboard shortcut. Set up a keyboard shortcut for the <code>workbench.action.holdLockedScrolling</code> command to temporarily lock scrolling across editors.</p>
+<h3 id="_copy-line-up-down" data-needslink="_copy-line-up-down">Copy line up / down</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="editor.action.copyLinesUpAction" data-osx="⇧⌥↑" data-win="Shift+Alt+Up" data-linux="Ctrl+Shift+Alt+Up"><span class="keybinding">⇧⌥↑</span> (Windows <span class="keybinding">Shift+Alt+Up</span>, Linux <span class="keybinding">Ctrl+Shift+Alt+Up</span>)</span> or <span class="dynamic-keybinding" data-commandId="editor.action.copyLinesDownAction" data-osx="⇧⌥↓" data-win="Shift+Alt+Down" data-linux="Ctrl+Shift+Alt+Down"><span class="keybinding">⇧⌥↓</span> (Windows <span class="keybinding">Shift+Alt+Down</span>, Linux <span class="keybinding">Ctrl+Shift+Alt+Down</span>)</span></p>
+<blockquote><p>The commands <strong>Copy Line Up/Down</strong> are unbound on Linux because the VS Code default keyboard shortcuts would conflict with Ubuntu keyboard shortcuts, see <a href="https://github.com/microsoft/vscode/issues/509" class="external-link" target="_blank">Issue #509</a>. You can still set the commands <code>editor.action.copyLinesUpAction</code> and <code>editor.action.copyLinesDownAction</code> to your own preferred keyboard shortcuts.</p>
+</blockquote><p><img src="/assets/docs/editing/tips-and-tricks/copy_line_down.gif" alt="copy line down" loading="lazy"></p>
+<h3 id="_move-line-up-and-down" data-needslink="_move-line-up-and-down">Move line up and down</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="editor.action.moveLinesUpAction" data-osx="⌥↑" data-win="Alt+Up" data-linux="Alt+Up"><span class="keybinding">⌥↑</span> (Windows, Linux <span class="keybinding">Alt+Up</span>)</span> or <span class="dynamic-keybinding" data-commandId="editor.action.moveLinesDownAction" data-osx="⌥↓" data-win="Alt+Down" data-linux="Alt+Down"><span class="keybinding">⌥↓</span> (Windows, Linux <span class="keybinding">Alt+Down</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/move_line.gif" alt="move line up and down" loading="lazy"></p>
+<h3 id="_shrink-expand-selection" data-needslink="_shrink-expand-selection">Shrink / expand selection</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="editor.action.smartSelect.shrink" data-osx="⌃⇧⌘←" data-win="Shift+Alt+Left" data-linux="Shift+Alt+Left"><span class="keybinding">⌃⇧⌘←</span> (Windows, Linux <span class="keybinding">Shift+Alt+Left</span>)</span> or <span class="dynamic-keybinding" data-commandId="editor.action.smartSelect.expand" data-osx="⌃⇧⌘→" data-win="Shift+Alt+Right" data-linux="Shift+Alt+Right"><span class="keybinding">⌃⇧⌘→</span> (Windows, Linux <span class="keybinding">Shift+Alt+Right</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/shrink_expand_selection.gif" alt="shrink expand selection" loading="lazy"></p>
+<p>You can learn more in the <a href="/docs/editing/codebasics#_shrinkexpand-selection">Basic Editing</a> documentation.</p>
+<h3 id="_go-to-symbol-in-file" data-needslink="_go-to-symbol-in-file">Go to Symbol in File</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.gotoSymbol" data-osx="⇧⌘O" data-win="Ctrl+Shift+O" data-linux="Ctrl+Shift+O"><span class="keybinding">⇧⌘O</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+O</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/find_by_symbol.gif" alt="Find by symbol" loading="lazy"></p>
+<p>You can group the symbols by kind by adding a colon, <code>@:</code>.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/group_symbols_by_kind.png" alt="group symbols by kind" loading="lazy"></p>
+<h3 id="_go-to-symbol-in-workspace" data-needslink="_go-to-symbol-in-workspace">Go to Symbol in Workspace</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.showAllSymbols" data-osx="⌘T" data-win="Ctrl+T" data-linux="Ctrl+T"><span class="keybinding">⌘T</span> (Windows, Linux <span class="keybinding">Ctrl+T</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/go_to_symbol_in_workspace.png" alt="go to symbol in workspace" loading="lazy"></p>
+<h3 id="_outline-view" data-needslink="_outline-view">Outline view</h3>
+<p>The Outline view in the File Explorer (default collapsed at the bottom) shows you the symbols of the currently open file.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/outline-view.png" alt="Outline view" loading="lazy"></p>
+<p>You can sort by symbol name, category, and position in the file, allowing quick navigation to symbol locations.</p>
+<h3 id="_navigate-to-a-specific-line" data-needslink="_navigate-to-a-specific-line">Navigate to a specific line</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.action.gotoLine" data-osx="⌃G" data-win="Ctrl+G" data-linux="Ctrl+G"><span class="keybinding">⌃G</span> (Windows, Linux <span class="keybinding">Ctrl+G</span>)</span></p>
+<h3 id="_undo-cursor-position" data-needslink="_undo-cursor-position">Undo cursor position</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="cursorUndo" data-osx="⌘U" data-win="Ctrl+U" data-linux="Ctrl+U"><span class="keybinding">⌘U</span> (Windows, Linux <span class="keybinding">Ctrl+U</span>)</span></p>
+<h3 id="_trim-trailing-whitespace" data-needslink="_trim-trailing-whitespace">Trim trailing whitespace</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="editor.action.trimTrailingWhitespace" data-osx="⌘K ⌘X" data-win="Ctrl+K Ctrl+X" data-linux="Ctrl+K Ctrl+X"><span class="keybinding">⌘K ⌘X</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+X</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/trim_whitespace.gif" alt="trailing whitespace" loading="lazy"></p>
+<h3 id="_transform-text-commands" data-needslink="_transform-text-commands">Transform text commands</h3>
+<p>You can change selected text to uppercase, lowercase, and title case with the <strong>Transform</strong> commands from the Command Palette.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/transform-text-commands.png" alt="Transform text commands" loading="lazy"></p>
+<h3 id="_code-formatting" data-needslink="_code-formatting">Code formatting</h3>
+<p>Currently selected source code: <span class="dynamic-keybinding" data-commandId="editor.action.formatSelection" data-osx="⌘K ⌘F" data-win="Ctrl+K Ctrl+F" data-linux="Ctrl+K Ctrl+F"><span class="keybinding">⌘K ⌘F</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+F</span>)</span></p>
+<p>Whole document format: <span class="dynamic-keybinding" data-commandId="editor.action.formatDocument" data-osx="⇧⌥F" data-win="Shift+Alt+F" data-linux="Ctrl+Shift+I"><span class="keybinding">⇧⌥F</span> (Windows <span class="keybinding">Shift+Alt+F</span>, Linux <span class="keybinding">Ctrl+Shift+I</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/code_formatting.gif" alt="code formatting" loading="lazy"></p>
+<h3 id="_code-folding" data-needslink="_code-folding">Code folding</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="editor.fold" data-osx="⌥⌘[" data-win="Ctrl+Shift+[" data-linux="Ctrl+Shift+["><span class="keybinding">⌥⌘[</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+[</span>)</span>, <span class="dynamic-keybinding" data-commandId="editor.unfold" data-osx="⌥⌘]" data-win="Ctrl+Shift+]" data-linux="Ctrl+Shift+]"><span class="keybinding">⌥⌘]</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+]</span>)</span> and <span class="dynamic-keybinding" data-commandId="editor.toggleFold" data-osx="⌘K ⌘L" data-win="Ctrl+K Ctrl+L" data-linux="Ctrl+K Ctrl+L"><span class="keybinding">⌘K ⌘L</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+L</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/code_folding.gif" alt="code folding" loading="lazy"></p>
+<p>You can also fold/unfold all regions in the editor with <strong>Fold All</strong> (<span class="dynamic-keybinding" data-commandId="editor.foldAll" data-osx="⌘K ⌘0" data-win="Ctrl+K Ctrl+0" data-linux="Ctrl+K Ctrl+0"><span class="keybinding">⌘K ⌘0</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+0</span>)</span>) and <strong>Unfold All</strong> (<span class="dynamic-keybinding" data-commandId="editor.unfoldAll" data-osx="⌘K ⌘J" data-win="Ctrl+K Ctrl+J" data-linux="Ctrl+K Ctrl+J"><span class="keybinding">⌘K ⌘J</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+J</span>)</span>).</p>
+<p>You can fold all block comments with <strong>Fold All Block Comments</strong> (<span class="dynamic-keybinding" data-commandId="editor.foldAllBlockComments" data-osx="⌘K ⌘/" data-win="Ctrl+K Ctrl+/" data-linux="Ctrl+K Ctrl+/"><span class="keybinding">⌘K ⌘/</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+/</span>)</span>).</p>
+<h3 id="_select-current-line" data-needslink="_select-current-line">Select current line</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="expandLineSelection" data-osx="⌘L" data-win="Ctrl+L" data-linux="Ctrl+L"><span class="keybinding">⌘L</span> (Windows, Linux <span class="keybinding">Ctrl+L</span>)</span></p>
+<h3 id="_navigate-to-beginning-and-end-of-file" data-needslink="_navigate-to-beginning-and-end-of-file">Navigate to beginning and end of file</h3>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="cursorTop" data-osx="⌘↑" data-win="Ctrl+Home" data-linux="Ctrl+Home"><span class="keybinding">⌘↑</span> (Windows, Linux <span class="keybinding">Ctrl+Home</span>)</span> and <span class="dynamic-keybinding" data-commandId="cursorBottom" data-osx="⌘↓" data-win="Ctrl+End" data-linux="Ctrl+End"><span class="keybinding">⌘↓</span> (Windows, Linux <span class="keybinding">Ctrl+End</span>)</span></p>
+<h3 id="_open-markdown-preview" data-needslink="_open-markdown-preview">Open Markdown preview</h3>
+<p>In a Markdown file, use</p>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="markdown.togglePreview" data-osx="⇧⌘V" data-win="Ctrl+Shift+V" data-linux="Ctrl+Shift+V"><span class="keybinding">⇧⌘V</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+V</span>)</span></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/markdown-preview.png" alt="Markdown preview" loading="lazy"></p>
+<h3 id="_side-by-side-markdown-edit-and-preview" data-needslink="_side-by-side-markdown-edit-and-preview">Side by side Markdown edit and preview</h3>
+<p>In a Markdown file, use</p>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="markdown.showPreviewToSide" data-osx="⌘K V" data-win="Ctrl+K V" data-linux="Ctrl+K V"><span class="keybinding">⌘K V</span> (Windows, Linux <span class="keybinding">Ctrl+K V</span>)</span></p>
+<p>The preview and editor will synchronize with your scrolling in either view.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/markdown-preview-side-by-side.png" alt="side by side Markdown preview" loading="lazy"></p>
+<h2 id="_intellisense" data-needslink="_intellisense">IntelliSense</h2>
+<p><span class="dynamic-keybinding" data-commandId="editor.action.triggerSuggest" data-osx="⌃Space" data-win="Ctrl+Space" data-linux="Ctrl+Space"><span class="keybinding">⌃Space</span> (Windows, Linux <span class="keybinding">Ctrl+Space</span>)</span> to trigger the Suggestions widget.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/intellisense.gif" alt="intellisense" loading="lazy"></p>
+<p>You can view available methods, parameter hints, short documentation, etc.</p>
+<h3 id="_peek" data-needslink="_peek">Peek</h3>
+<p>Select a symbol then type <span class="dynamic-keybinding" data-commandId="editor.action.peekDefinition" data-osx="⌥F12" data-win="Alt+F12" data-linux="Ctrl+Shift+F10"><span class="keybinding">⌥F12</span> (Windows <span class="keybinding">Alt+F12</span>, Linux <span class="keybinding">Ctrl+Shift+F10</span>)</span>. Alternatively, you can use the context menu.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/peek.gif" alt="peek" loading="lazy"></p>
+<h3 id="_go-to-definition" data-needslink="_go-to-definition">Go to Definition</h3>
+<p>Select a symbol then type <span class="dynamic-keybinding" data-commandId="editor.action.revealDefinition" data-osx="F12" data-win="F12" data-linux="F12"><span class="keybinding">F12</span></span>. Alternatively, you can use the context menu or <span class="keybinding">Ctrl+click</span> (<span class="keybinding">Cmd+click</span> on macOS).</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/goto_definition.gif" alt="go to definition" loading="lazy"></p>
+<p>You can go back to your previous location with the <strong>Go</strong> &gt; <strong>Back</strong> command or <span class="dynamic-keybinding" data-commandId="workbench.action.navigateBack" data-osx="⌃-" data-win="Alt+Left" data-linux="Ctrl+Alt+-"><span class="keybinding">⌃-</span> (Windows <span class="keybinding">Alt+Left</span>, Linux <span class="keybinding">Ctrl+Alt+-</span>)</span>.</p>
+<p>You can also see the type definition if you press <span class="keybinding">Ctrl</span> (<span class="keybinding">Cmd</span> on macOS) when you are hovering over the type.</p>
+<h3 id="_go-to-references" data-needslink="_go-to-references">Go to References</h3>
+<p>Select a symbol then type <span class="dynamic-keybinding" data-commandId="editor.action.goToReferences" data-osx="⇧F12" data-win="Shift+F12" data-linux="Shift+F12"><span class="keybinding">⇧F12</span> (Windows, Linux <span class="keybinding">Shift+F12</span>)</span>. Alternatively, you can use the context menu.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/find_all_references.gif" alt="peek references" loading="lazy"></p>
+<h3 id="_find-all-references-view" data-needslink="_find-all-references-view">Find All References view</h3>
+<p>Select a symbol then type <span class="dynamic-keybinding" data-commandId="references-view.findReferences" data-osx="⇧⌥F12" data-win="Shift+Alt+F12" data-linux="Shift+Alt+F12"><span class="keybinding">⇧⌥F12</span> (Windows, Linux <span class="keybinding">Shift+Alt+F12</span>)</span> to open the References view showing all your file's symbols in a dedicated view.</p>
+<h3 id="_rename-symbol" data-needslink="_rename-symbol">Rename Symbol</h3>
+<p>Select a symbol then type <span class="dynamic-keybinding" data-commandId="editor.action.rename" data-osx="F2" data-win="F2" data-linux="F2"><span class="keybinding">F2</span></span>. Alternatively, you can use the context menu.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/rename_symbol.gif" alt="rename symbol" loading="lazy"></p>
+<h3 id="_search-and-modify" data-needslink="_search-and-modify">Search and modify</h3>
+<p>Besides searching and replacing expressions, you can also search and reuse parts of what was matched, using regular expressions with capturing groups. Enable regular expressions in the search box by clicking the <strong>Use Regular Expression</strong> <code>.*</code> button (<span class="dynamic-keybinding" data-commandId="toggleSearchRegex" data-osx="⌥⌘R" data-win="Alt+R" data-linux="Alt+R"><span class="keybinding">⌥⌘R</span> (Windows, Linux <span class="keybinding">Alt+R</span>)</span>) and then write a regular expression and use parentheses to define groups. You can then reuse the content matched in each group by using <code>$1</code>, <code>$2</code>, etc. in the Replace field.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/search_and_modify.png" alt="search and modify" loading="lazy"></p>
+<h3 id="_eslintrcjson" data-needslink="_eslintrcjson">.eslintrc.json</h3>
+<p>Install the <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" class="external-link" target="_blank">ESLint extension</a>. Configure
+your linter however you'd like. Consult the <a href="https://eslint.org/docs/user-guide/configuring" class="external-link" target="_blank">ESLint specification</a> for details on its linting rules and options.</p>
+<p>Here is configuration to use ES6.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "env"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "browser"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "commonjs"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "es6"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "node"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">  },</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "parserOptions"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "ecmaVersion"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">6</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "sourceType"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"module"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "ecmaFeatures"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">      "jsx"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">      "classes"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">      "defaultParams"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">  },</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "rules"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "no-const-assign"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "no-extra-semi"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "semi"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "no-fallthrough"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "no-empty"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "no-mixed-spaces-and-tabs"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "no-redeclare"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "no-this-before-super"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "no-undef"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "no-unreachable"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "no-use-before-define"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "constructor-super"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "curly"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "eqeqeq"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "func-names"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">0</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "valid-typeof"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658">1</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">  }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<h3 id="_packagejson" data-needslink="_packagejson">package.json</h3>
+<p>See IntelliSense for your <code>package.json</code> file.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/package_json_intellisense.gif" alt="package json intellisense" loading="lazy"></p>
+<h3 id="_emmet-syntax" data-needslink="_emmet-syntax">Emmet syntax</h3>
+<p><a href="/docs/languages/emmet">Support for Emmet syntax</a>.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/emmet_syntax.gif" alt="emmet syntax" loading="lazy"></p>
+<h2 id="_snippets" data-needslink="_snippets">Snippets</h2>
+<h3 id="_create-custom-snippets" data-needslink="_create-custom-snippets">Create custom snippets</h3>
+<p><span class="filePreferencesPath"><strong>File</strong> &gt; <strong>Preferences</strong></span> &gt; <strong>Configure Snippets</strong>, select the language, and create a snippet.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"create component"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "prefix"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"component"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "body"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">        "class $1 extends React.Component {"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">        ""</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">        "</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\t</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">render() {"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">        "</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\t\t</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">return ($2);"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">        "</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\t</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">}"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">        ""</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">        "}"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    ]</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">},</span></span>
+<span class="line"></span></code></pre>
+<p>See more details in <a href="/docs/editing/userdefinedsnippets">Creating your own Snippets</a>.</p>
+<h2 id="_git-integration" data-needslink="_git-integration">Git integration</h2>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.view.scm" data-osx="⌃⇧G" data-win="Ctrl+Shift+G" data-linux="Ctrl+Shift+G"><span class="keybinding">⌃⇧G</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+G</span>)</span></p>
+<p>Git integration comes &quot;out-of-the-box&quot; with VS Code. You can install other source control management (SCM) providers from the VS Code <a href="/docs/configure/extensions/extension-marketplace">Extension Marketplace</a>. This section describes the Git integration but much of the UI and gestures are common for other SCM providers.</p>
+<h2 id="_git-blame" data-needslink="_git-blame">Git blame</h2>
+<p>VS Code shows git blame information inline in the editor and in the Status Bar. Hover over the Status Bar item or inline hint to view detailed git blame information.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/scm-git-blame.png" alt="Screenshot that shows Git blame information when hovering over the git blame item in the Status Bar." loading="lazy"></p>
+<p>To enable or disable git blame information, use the <strong>Git: Toggle Git Blame Editor Decoration</strong> and <strong>Git: Toggle Git Blame Status Bar Item</strong> commands, or configure these settings:</p>
+<ul>
+<li><span class="setting"><span class="setting-dropdown" data-setting-id="git.blame.statusBarItem.enabled">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      git.blame.statusBarItem.enabled
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> (enabled by default)</li>
+<li><span class="setting"><span class="setting-dropdown" data-setting-id="git.blame.editorDecoration.enabled">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      git.blame.editorDecoration.enabled
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span></li>
+</ul>
+<p>Learn more about <a href="/docs/sourcecontrol/staging-commits#_git-blame-information">git blame support in VS Code</a> and how to customize the layout.</p>
+<h3 id="_diffs" data-needslink="_diffs">Diffs</h3>
+<p>From the <strong>Source Control</strong> view, select a file to open the diff editor. Alternatively, select the <strong>Open Changes</strong> button in the top right corner to diff the current open file.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/msee-changes.gif" alt="git diff from source control" loading="lazy"></p>
+<h4 id="_views" data-needslink="_views">Views</h4>
+<p>The default view for diffs is the <strong>side by side view</strong>.</p>
+<p>Toggle <strong>inline view</strong> by selecting the <strong>More Actions</strong> (...) button in the top right, and then selecting <strong>Inline View</strong>.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/mdiff-switch-to-inline.png" alt="Screenshot that shows the More Actions menu in the diff editor, highlighting the Inline View menu item" loading="lazy"></p>
+<p>If you prefer to have the inline view as the default, configure the <code>&quot;diffEditor.renderSideBySide&quot;: false</code> setting.</p>
+<h4 id="_accessible-diff-viewer" data-needslink="_accessible-diff-viewer">Accessible Diff Viewer</h4>
+<p>Navigate through diffs with <span class="dynamic-keybinding" data-commandId="editor.action.accessibleDiffViewer.next" data-osx="F7" data-win="F7" data-linux="F7"><span class="keybinding">F7</span></span> and <span class="dynamic-keybinding" data-commandId="editor.action.accessibleDiffViewer.prev" data-osx="⇧F7" data-win="Shift+F7" data-linux="Shift+F7"><span class="keybinding">⇧F7</span> (Windows, Linux <span class="keybinding">Shift+F7</span>)</span>. This presents changes in a unified patch format. Lines can be navigated with arrow keys and pressing <span class="keybinding">Enter</span> jumps back in the diff editor and the selected line.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/diff_review_pane.png" alt="diff_review_pane" loading="lazy"></p>
+<h4 id="_edit-pending-changes" data-needslink="_edit-pending-changes">Edit pending changes</h4>
+<p>While you're viewing changes in the diff editor, you can make edits directly in the pending changes side of the diff editor.</p>
+<h3 id="_branches" data-needslink="_branches">Branches</h3>
+<p>Easily switch between Git branches via the Status Bar.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/switch-branch.gif" alt="switch branches" loading="lazy"></p>
+<h3 id="_staging" data-needslink="_staging">Staging</h3>
+<h4 id="_stage-file-changes" data-needslink="_stage-file-changes">Stage file changes</h4>
+<p>Hover over the number of files and select the plus button to stage a file.</p>
+<p>Select the minus button to unstage changes.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/stage-unstage.gif" alt="git stage all" loading="lazy"></p>
+<h4 id="_stage-selected" data-needslink="_stage-selected">Stage selected</h4>
+<p>You can stage a portion of a file by making a text selection in a file and then choosing <strong>Stage Selected Ranges</strong> from the <strong>Command Palette</strong> or from the diff editor context menu (right-click).</p>
+<h3 id="_undo-last-commit" data-needslink="_undo-last-commit">Undo last commit</h3>
+<p>Select the (...) button, and then select <strong>Commit</strong> &gt; <strong>Undo Last Commit</strong> to undo the previous commit. The changes are added to the Staged Changes section.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/mundo-last-commit.gif" alt="undo last commit" loading="lazy"></p>
+<h3 id="_see-git-output" data-needslink="_see-git-output">See Git output</h3>
+<p>VS Code makes it easy to see what Git commands are actually running. This can be helpful when you're still learning Git or when you're debugging a difficult source control issue.</p>
+<p>To view the Git output, select the (...) button in the Source Control view, and then select <strong>Show Git Output</strong>, use the <strong>Git: Show Git Output</strong> command, or use the <strong>Toggle Output</strong> command (<span class="dynamic-keybinding" data-commandId="workbench.action.output.toggleOutput" data-osx="⇧⌘U" data-win="Ctrl+Shift+U" data-linux="Ctrl+K Ctrl+H"><span class="keybinding">⇧⌘U</span> (Windows <span class="keybinding">Ctrl+Shift+U</span>, Linux <span class="keybinding">Ctrl+K Ctrl+H</span>)</span>) and then select <strong>Git</strong> from the dropdown.</p>
+<h3 id="_gutter-indicators" data-needslink="_gutter-indicators">Gutter indicators</h3>
+<p>The editor provides visual cues in the gutter about where and which changes (added, changed, or remove lines) were made. See <a href="/docs/sourcecontrol/overview">the source control documentation</a> for more details.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/mgutter_icons.gif" alt="git gutter indicators" loading="lazy"></p>
+<h3 id="_resolve-merge-conflicts" data-needslink="_resolve-merge-conflicts">Resolve merge conflicts</h3>
+<p>During a merge, go to the <strong>Source Control</strong> view (<span class="dynamic-keybinding" data-commandId="workbench.view.scm" data-osx="⌃⇧G" data-win="Ctrl+Shift+G" data-linux="Ctrl+Shift+G"><span class="keybinding">⌃⇧G</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+G</span>)</span>) and make changes in the diff view.</p>
+<p>You can resolve merge conflicts with the inline CodeLens which lets you <strong>Accept Current Change</strong>, <strong>Accept Incoming Change</strong>, <strong>Accept Both Changes</strong>, and <strong>Compare Changes</strong>.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/merge-conflict.png" alt="Git merge" loading="lazy"></p>
+<p>Learn more about <a href="/docs/sourcecontrol/merge-conflicts">resolving merge conflicts</a> in the source control documentation.</p>
+<h3 id="_set-vs-code-as-default-merge-tool" data-needslink="_set-vs-code-as-default-merge-tool">Set VS Code as default merge tool</h3>
+<pre class="shiki" data-lang="bash" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">git</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> config</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --global</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> merge.tool</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> vscode</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">git</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> config</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --global</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> mergetool.vscode.cmd</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> 'code --wait $MERGED'</span></span>
+<span class="line"></span></code></pre>
+<h3 id="_set-vs-code-as-default-diff-tool" data-needslink="_set-vs-code-as-default-diff-tool">Set VS Code as default diff tool</h3>
+<pre class="shiki" data-lang="bash" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">git</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> config</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --global</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> diff.tool</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> vscode</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">git</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> config</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --global</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> difftool.vscode.cmd</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> 'code --wait --diff $LOCAL $REMOTE'</span></span>
+<span class="line"></span></code></pre>
+<h2 id="_compare-file-with-the-clipboard" data-needslink="_compare-file-with-the-clipboard">Compare file with the clipboard</h2>
+<p>Keyboard Shortcut: <span class="dynamic-keybinding" data-commandId="workbench.files.action.compareWithClipboard" data-osx="⌘K C" data-win="Ctrl+K C" data-linux="Ctrl+K C"><span class="keybinding">⌘K C</span> (Windows, Linux <span class="keybinding">Ctrl+K C</span>)</span></p>
+<p>Quickly compare the active file with the contents of the clipboard with the <strong>File: Compare Active File with Clipboard</strong> command in the Command Palette (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>).</p>
+<h2 id="_debugging" data-needslink="_debugging">Debugging</h2>
+<h3 id="_configure-debugger" data-needslink="_configure-debugger">Configure debugger</h3>
+<p>From the Run and Debug view (<span class="dynamic-keybinding" data-commandId="workbench.view.debug" data-osx="⇧⌘D" data-win="Ctrl+Shift+D" data-linux="Ctrl+Shift+D"><span class="keybinding">⇧⌘D</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+D</span>)</span>), select <strong>create a launch.json file</strong>, which prompts you to select the environment that matches your project (Node.js, Python, C++, and more). This generates a <code>launch.json</code> file in your workspace that contains the debugger configuration.</p>
+<p>Node.js support is built-in and other environments require installing the appropriate language extensions. See the <a href="/docs/debugtest/debugging">debugging documentation</a> for more details.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/configure-debug.png" alt="configure debugging" loading="lazy"></p>
+<h3 id="_breakpoints-and-stepping-through" data-needslink="_breakpoints-and-stepping-through">Breakpoints and stepping through</h3>
+<p>Toggle a breakpoint by selecting the <strong>editor margin</strong> or by using <span class="dynamic-keybinding" data-commandId="editor.debug.action.toggleBreakpoint" data-osx="F9" data-win="F9" data-linux="F9"><span class="keybinding">F9</span></span> on the current line. Breakpoints in the editor margin are normally shown as red filled circles.</p>
+<p>Once a debug session starts, the <strong>Debug toolbar</strong> appears on the top of the editor and enables you to step through or into the code while debugging. Learn more about <a href="/docs/debugtest/debugging#_debug-actions">debug actions</a> in the debugging documentation.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/node_debug.gif" alt="debug" loading="lazy"></p>
+<h3 id="_data-inspection" data-needslink="_data-inspection">Data inspection</h3>
+<p>Variables can be inspected in the <strong>VARIABLES</strong> section of the <strong>Run and Debug</strong> view, by hovering over their source in the editor, or by using the debug console.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/debug_data_inspection.gif" alt="data inspection" loading="lazy"></p>
+<h3 id="_logpoints" data-needslink="_logpoints">Logpoints</h3>
+<p>Logpoints act much like breakpoints but instead of halting the debugger when they are hit, they log a message to the console. Logpoints are especially useful for injecting logging while debugging production servers that cannot be modified or paused.</p>
+<p>Add a logpoint with the <strong>Add Logpoint</strong> command in the left editor gutter and it will be displayed as a &quot;diamond&quot; shaped icon. Log messages are plain text but can include expressions to be evaluated within curly braces ('{}').</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/logpoint.png" alt="Logpoint set in the editor" loading="lazy"></p>
+<h3 id="_triggered-breakpoints" data-needslink="_triggered-breakpoints">Triggered breakpoints</h3>
+<p>A triggered breakpoint is a breakpoint that is automatically enabled once another breakpoint is hit. They can be very useful when diagnosing failure cases in code that happen only after a certain precondition.</p>
+<p>Triggered breakpoints can be set by right-clicking on the glyph margin, selecting <strong>Add Triggered Breakpoint</strong>, and then choosing which other breakpoint enables the breakpoint.</p>
+<p><video src="/assets/docs/debugtest/debugging/debug-triggered-breakpoint.mp4" autoplay loop controls muted></video></p>
+<h2 id="_task-runner" data-needslink="_task-runner">Task runner</h2>
+<p>Tasks in VS Code can be configured to run scripts and start processes so that these tools can be used from within VS Code without having to enter a command line or write new code.</p>
+<h3 id="_auto-detect-tasks" data-needslink="_auto-detect-tasks">Auto detect tasks</h3>
+<p>Select <strong>Terminal</strong> from the top-level menu, run the command <strong>Configure Tasks</strong>, then select the type of task you'd like to run.
+This generates a <code>tasks.json</code> file with content like the following. See the <a href="/docs/debugtest/tasks">Tasks</a> documentation for more details.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">  // See https://go.microsoft.com/fwlink/?LinkId=733558</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">  // for the documentation about the tasks.json format</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "version"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"2.0.0"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "tasks"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">      "type"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"npm"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">      "script"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"install"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">      "group"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "kind"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"build"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "isDefault"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">      }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">  ]</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<p>There are occasionally issues with auto generation. Check out the documentation for getting things to work properly.</p>
+<h3 id="_run-tasks-from-the-terminal-menu" data-needslink="_run-tasks-from-the-terminal-menu">Run tasks from the Terminal menu</h3>
+<p>Select <strong>Terminal</strong> from the top-level menu, run the command <strong>Run Task</strong>, and select the task you want to run. Terminate the running task by running the command <strong>Terminate Task</strong></p>
+<p><img src="/assets/docs/editing/tips-and-tricks/task_runner.gif" alt="task runner" loading="lazy"></p>
+<h3 id="_define-keyboard-shortcuts-for-tasks" data-needslink="_define-keyboard-shortcuts-for-tasks">Define keyboard shortcuts for tasks</h3>
+<p>You can define a keyboard shortcut for any task. From the <strong>Command Palette</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>), select <strong>Preferences: Open Keyboard Shortcuts File</strong>, bind the desired shortcut to the <code>workbench.action.tasks.runTask</code> command, and define the <strong>Task</strong> as <code>args</code>.</p>
+<p>For example, to bind <span class="keybinding">Ctrl+H</span> to the <code>Run tests</code> task, add the following:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ctrl+h"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.action.tasks.runTask"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"Run tests"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<h3 id="_run-npm-scripts-as-tasks-from-the-explorer" data-needslink="_run-npm-scripts-as-tasks-from-the-explorer">Run npm scripts as tasks from the Explorer</h3>
+<p>From the Explorer view you can open a script in the editor, run it as a task, and launch it with the node debugger (when the script defines a debug option like <code>--inspect-brk</code>). The default action on click is to open the script. To run a script on a single click, set <span class="setting"><span class="setting-dropdown" data-setting-id="npm.scriptExplorerAction">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      npm.scriptExplorerAction
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> to <code>run</code>. Use the setting <span class="setting"><span class="setting-dropdown" data-setting-id="npm.exclude">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      npm.exclude
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> to exclude scripts in <code>package.json</code> files contained in particular folders.</p>
+<p><img src="/assets/docs/editing/tips-and-tricks/script_explorer.png" alt="Filter problems" loading="lazy"></p>
+<p>With the setting <span class="setting"><span class="setting-dropdown" data-setting-id="npm.enableRunFromFolder">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      npm.enableRunFromFolder
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>, you can enable to run npm scripts from the Explorer view context menu for a folder. The setting enables the command <strong>Run NPM Script in Folder...</strong> when a folder is selected. The command shows a Quick Pick list of the npm scripts contained in this folder and you can select the script to be executed as a task.</p>
+<h2 id="_portable-mode" data-needslink="_portable-mode">Portable mode</h2>
+<p>VS Code has a <a href="/docs/setup/portable">Portable mode</a> which lets you keep settings and data in the same location as your installation, for example, on a USB drive.</p>
+<h2 id="_insiders-builds" data-needslink="_insiders-builds">Insiders builds</h2>
+<p>The Visual Studio Code team uses the Insiders version to test the latest features and bug fixes of VS Code. You can also use the Insiders version by <a href="/insiders">downloading it here</a>.</p>
+<ul>
+<li>For Early Adopters - Insiders has the most recent code changes for users and extension authors to try out.</li>
+<li>Frequent Builds - New builds every day with the latest bug fixes and features.</li>
+<li>Side-by-side install - Insiders installs next to the Stable build allowing you to use either independently.</li>
+</ul>
+
+                <div class="feedback" data-edit-url="https://vscode.dev/github/microsoft/vscode-docs/blob/main/docs/editing/tips-and-tricks.md"></div>
+                
+                <div class="body-footer">8/5/2026</div>
+                
+            </main>
+        </div>
+        
+        <!-- Mobile connect widget -->
+        <div class="docs-mobile-widgets visible-xs">
+            <div class="connect-widget"></div>
+        </div>
+    </div>
+</div>
+		</main>
+	</div>
+
+	<div id="search-popup-overlay" class="search-popup-overlay" role="dialog" aria-modal="true" aria-label="Search">
+		<div class="search-popup-container">
+			<div class="search-popup-header">
+				<form class="search-popup-form">
+					<div class="input-group">
+						<input type="text" name="q" class="search-box form-control" placeholder="Search the website"
+							aria-label="Search text" role="combobox" aria-expanded="false"
+							aria-autocomplete="list" aria-controls="search-results-listbox"
+							aria-activedescendant="" />
+						<span class="input-group-btn">
+							<button tabindex="0" class="btn" type="submit" aria-label="Search">
+								<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="Search" />
+								<img class="search-icon-light" src="/assets/icons/search.svg" alt="Search" />
+							</button>
+						</span>
+					</div>
+				</form>
+				<button class="search-popup-close" type="button" aria-label="Close search"><i class="codicon codicon-close" aria-hidden="true"></i></button>
+			</div>
+			<div class="search-popup-results">
+				<ul class="search-popup-results-list" id="search-results-listbox" role="listbox" aria-label="Search results"></ul>
+			</div>
+			<div class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="search-popup-status"></div>
+		</div>
+	</div>
+
+
+	<footer role="contentinfo" class="container">
+		<div class="footer-container">
+			<div class="footer-row">
+				<div class="footer-social">
+					<ul class="links">
+						<li>
+							<a href="https://github.com/microsoft/vscode"><img src="/assets/icons/github-icon.svg" alt="VS Code on Github"></a>
+						</li>
+						<li>
+							<a href="https://go.microsoft.com/fwlink/?LinkID=533687"><img src="/assets/icons/x-icon.svg" class="x-icon" alt="Follow us on X"></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/showcase/vs-code"><img src="/assets/icons/linkedin-icon.svg" alt="VS Code on LinkedIn"></a>
+						</li>
+						<li>
+							<a href="https://bsky.app/profile/vscode.dev"><img src="/assets/icons/bluesky-icon.svg" alt="VS Code on Bluesky"></a>
+						</li>
+						<li>
+							<a href="https://www.reddit.com/r/vscode/"><img src="/assets/icons/reddit-icon.svg" alt="Join the VS Code community on Reddit"></a>
+						</li>
+						<li>
+							<a href="https://www.vscodepodcast.com"><img src="/assets/icons/podcast-icon.svg" alt="The VS Code Insiders Podcast"></a>
+						</li>
+						<li>
+							<a href="https://www.tiktok.com/@vscode"><img src="/assets/icons/tiktok-icon.svg" alt="VS Code on TikTok"></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@code"><img src="/assets/icons/youtube-icon.svg" alt="VS Code on YouTube"></a>
+						</li>
+						<script>
+							function manageConsent() {
+								if (siteConsent && siteConsent.isConsentRequired) {
+									siteConsent.manageConsent();
+								}
+							}
+						</script>
+					</ul>
+					<a id="footer-microsoft-link" class="microsoft-logo" href="https://www.microsoft.com">
+						<img src="/assets/icons/microsoft.svg" alt="Microsoft homepage" />
+					</a>
+				</div>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li><a id="footer-support-link" href="https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=d66407ed-3967-b000-4cfb-2c318cad363d"
+						target="_blank" rel="noopener" title="Get support for VS Code"
+						aria-label="Get support for VS Code (opens in new tab)">Support</a></li>
+					<li><a id="footer-privacy-link" href="https://go.microsoft.com/fwlink/?LinkId=521839"
+						target="_blank" rel="noopener" title="View the Microsoft privacy statement"
+						aria-label="Microsoft privacy statement (opens in new tab)">Privacy</a></li>
+					<li style="display: none;"><a id="footer-cookie-link" style="cursor: pointer;" onclick="manageConsent()"
+						target="_blank" rel="noopener">Manage Cookies</a></li>
+					<li><a id="footer-terms-link" href="https://www.microsoft.com/legal/terms-of-use"
+						target="_blank" rel="noopener" title="View the Microsoft Terms of Use"
+						aria-label="Microsoft Terms of Use (opens in new tab)">Terms of Use</a></li>
+					<li><a id="footer-license-link" href="/License"
+						target="_blank" rel="noopener" title="View the Visual Studio Code license"
+						aria-label="Visual Studio Code license (opens in new tab)">License</a></li>
+				</ul>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li>
+						<svg class="privacy-choices" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43">
+							<title>Your Privacy Choices Opt-Out Icon</title>
+							<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+							<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+							<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+							<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+						</svg>
+						<a id="footer-privacy-choices-link" href="https://aka.ms/YourCaliforniaPrivacyChoices"
+						target="_blank" rel="noopener" title="View Your Privacy Choices"
+						aria-label="Your Privacy Choices (opens in new tab)">Your Privacy Choices</a></li>
+					<li><a id="footer-consumer-health-privacy-link" href="https://go.microsoft.com/fwlink/?linkid=2259814"
+						target="_blank" rel="noopener" title="View the Microsoft Consumer Health Privacy policy"
+						aria-label="Microsoft Consumer Health Privacy policy (opens in new tab)">Consumer Health Privacy</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="module">
+		document.addEventListener('DOMContentLoaded', () => {
+			const copilotDeepLinks = document.querySelectorAll('.copilot-deep-link');
+			if (copilotDeepLinks.length === 0) {
+				return;
+			}
+			if (window.innerWidth < 992) {
+				for (const link of copilotDeepLinks) {
+					link.href = 'https://aka.ms/vscode-activatecopilotfree';
+				}
+			}
+		});
+	</script>
+
+	<script src="/dist/index.js"></script>
+
+	
+
+	<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type" : "SoftwareApplication",
+			"name" : "Visual Studio Code",
+			"softwareVersion": "1.132",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			},
+			"applicationCategory": "DeveloperApplication",
+			"applicationSubCategory": "AI Code Editor",
+			"description": "Visual Studio Code is a free, open source AI code editor for agent-first development. Build with AI agents, manage multi-agent workflows, and code across any environment.",
+			"alternateName": "VS Code",
+			"datePublished": "2021-11-03",
+			"operatingSystem": "Mac, Linux, Windows",
+			"logo": "https://code.visualstudio.com/assets/apple-touch-icon.png",
+			"screenshot": "https://code.visualstudio.com/assets/images/product-screenshot.png",
+			"releaseNotes": "https://code.visualstudio.com/updates",
+			"downloadUrl": "https://code.visualstudio.com/download",
+			"license": "https://code.visualstudio.com/license",
+			"softwareRequirements": "https://code.visualstudio.com/docs/supporting/requirements",
+			"url" : "https://code.visualstudio.com",
+			"author": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"maintainer": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://code.visualstudio.com/Search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			},
+			"sameAs" : [
+				"https://en.wikipedia.org/wiki/Visual_Studio_Code",
+				"https://twitter.com/code",
+				"https://www.youtube.com/code",
+				"https://www.tiktok.com/@vscode",
+				"https://github.com/microsoft/vscode"
+			]
+		}
+	</script>
+</body>
+
+</html>

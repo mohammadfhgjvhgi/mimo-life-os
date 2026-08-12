@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/saga",
+    "name": "Saga Design Pattern - Azure Architecture Center",
+    "snippet": "Learn how to use the Saga design pattern to help ensure data consistency on distributed transactions in microservices architectures.",
+    "host_name": "learn.microsoft.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://microservices.io/patterns/data/saga.html",
+    "name": "Pattern: Saga",
+    "snippet": "A saga is a sequence of local transactions. Each local transaction updates the database and publishes a message or event to trigger the next local transaction ... Read more",
+    "host_name": "microservices.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://joudwawad.medium.com/microservices-pattern-distributed-transactions-saga-92b5e933cea1",
+    "name": "Microservices Pattern: Distributed Transactions (SAGA)",
+    "snippet": "A SAGA is a sequence of local transactions. Each local transaction updates data within a single service using the familiar ACID transaction ... Read more",
+    "host_name": "joudwawad.medium.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://orkes.io/blog/saga-pattern-in-distributed-systems",
+    "name": "Saga Pattern in Distributed Systems",
+    "snippet": "Jul 24, 2023 — The Saga pattern is efficient for handling distributed transactions in applications with multiple services. With the saga pattern, businesses ... Read more",
+    "host_name": "orkes.io",
+    "rank": 3,
+    "date": "Jul 24, 2023",
+    "favicon": ""
+  },
+  {
+    "url": "https://temporal.io/blog/mastering-saga-patterns-for-distributed-transactions-in-microservices",
+    "name": "Saga Pattern in Microservices: A Mastery Guide",
+    "snippet": "Jan 31, 2025 — Learn how saga patterns handle distributed transactions in microservices, ensuring data consistency and system resilience with key concepts ...",
+    "host_name": "temporal.io",
+    "rank": 4,
+    "date": "Jan 31, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to/willvelida/the-saga-pattern-3o7p",
+    "name": "Managing Distributed Transactions with the Saga Pattern",
+    "snippet": "Jan 29, 2024 — Saga pattern , which can help us manage data consistency across microservices in distributed transaction scenarios.",
+    "host_name": "dev.to",
+    "rank": 5,
+    "date": "Jan 29, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.conduktor.io/glossary/saga-pattern-for-distributed-transactions",
+    "name": "Saga Pattern for Microservices Explained",
+    "snippet": "Jul 29, 2026 — The Saga pattern is a design pattern for managing distributed transactions by breaking them into a sequence of local transactions.",
+    "host_name": "www.conduktor.io",
+    "rank": 6,
+    "date": "Jul 29, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.geeksforgeeks.org/system-design/saga-design-pattern",
+    "name": "SAGA Design Pattern",
+    "snippet": "Jun 23, 2026 — The SAGA Design Pattern manages distributed transactions by dividing them into a sequence of smaller transactions that execute independently ... Read more",
+    "host_name": "www.geeksforgeeks.org",
+    "rank": 7,
+    "date": "Jun 23, 2026",
+    "favicon": ""
+  }
+]

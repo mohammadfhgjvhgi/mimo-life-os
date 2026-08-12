@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.youtube.com/watch?v=KXwsygZZWOk",
+    "name": "Anytype Basics Objects, Types, Relations, Sets, Collections - YouTube",
+    "snippet": "Mar 7, 2024 · Anytype Basics Objects, Types, Relations, Sets, Collections · Comments.",
+    "host_name": "www.youtube.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/Anytype/comments/176efip/possible_to_join_object_relationships_in_sets",
+    "name": "Possible to Join Object Relationships in Sets? : r/Anytype - Reddit",
+    "snippet": "Oct 12, 2023 · Given the flexibility of Anytype, Objects can potentially appear in multiple Sets based on various criteria. In such cases, you may not wish to ... My understanding of set and collections : r/Anytype Anytype is needlessly convoluted More results from www.reddit.com",
+    "host_name": "www.reddit.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://doc.anytype.io/anytype/organize/collections",
+    "name": "Collections | Anytype Docs",
+    "snippet": "2 days ago · A Collection is a container of hand-picked Objects—the closest thing to a folder in Anytype. You decide what goes in, and Objects stay in ...",
+    "host_name": "doc.anytype.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://doc.anytype.io/anytype/organize/types",
+    "name": "Types - Anytype Docs",
+    "snippet": "2 days ago · Every Object has one Type, which you apply on creation and can change at any time. Anytype comes with built-in Types, but you can create your ...",
+    "host_name": "doc.anytype.io",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=pKMTynOl8zw",
+    "name": "Anytype Beginners - Basic Terms (Jan 2025) - YouTube",
+    "snippet": "Jan 20, 2025 · ... relations are now called properties 0:00 - Intro 0:14 - Vault 0:30 - Spaces 1:06 - Objects 1:18 - Types 1:42 - Relations (Properties) 2:29 - ...",
+    "host_name": "www.youtube.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@danielasgharian/bridging-the-gap-between-power-and-usability-anytypes-smartest-update-so-far-8d5f990a2736",
+    "name": "Bridging the Gap Between Power and Usability: Anytype's Smartest",
+    "snippet": "Apr 28, 2025 · Anytype has changed the terminology. Sets are now called Queries. Relations are now called Properties. Collections stay as Collections.",
+    "host_name": "medium.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=B1fZlQYaSPw",
+    "name": "Understand the Basic Anytype Functions - YouTube",
+    "snippet": "Jun 29, 2023 · There is a method to the madness that is Objects, Relations, Sets, and Collections. While not the most elegant, it can be quite powerful.",
+    "host_name": "www.youtube.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.anytype.io/tag/properties/61?match_all_tags=true&page=21&tags%5B%5D=Properties",
+    "name": "Topics tagged Properties - Anytype Community",
+    "snippet": "You can modify object relations of objects in bin Closed. Based on Set being Relation. Overview of all date-related things as a Set. Relations of converting  ...",
+    "host_name": "community.anytype.io",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://langfuse.com/docs/observability/features/token-and-cost-tracking",
+    "name": "Token & Cost Tracking",
+    "snippet": "Langfuse tracks the usage and costs of your LLM generations and provides breakdowns by usage types. Usage and cost can be tracked on observations of type ... Read more",
+    "host_name": "langfuse.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://langfuse.com/changelog/2024-12-20-improved-cost-tracking",
+    "name": "Improved cost tracking",
+    "snippet": "Dec 20, 2024 — Langfuse now supports cost tracking all usage types such as cached tokens, audio tokens, reasoning tokens, etc. Read more",
+    "host_name": "langfuse.com",
+    "rank": 1,
+    "date": "Dec 20, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://langfuse.com/docs/observability/overview",
+    "name": "LLM Observability & Application Tracing (Open Source)",
+    "snippet": "Open source application tracing and observability for LLM apps. Capture traces, monitor latency, track costs , and debug issues across OpenAI, LangChain, ...",
+    "host_name": "langfuse.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/orgs/langfuse/discussions/12612",
+    "name": "Billing API for usage and cost monitoring #12612 - langfuse",
+    "snippet": "Langfuse gives you trace-level observability (latency, token flows, evaluations), but the actual dollar amounts often need to come from a different source",
+    "host_name": "github.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://langfuse.com/pricing",
+    "name": "Pricing",
+    "snippet": "Simple pricing for projects of all sizes . Tracking Token and Cost Tracking Native Frameworks. Longer data access and unlimited users. Unlimited history, high ...",
+    "host_name": "langfuse.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.digitalapplied.com/blog/ai-agent-observability-2026-tracing-monitoring-stack-guide",
+    "name": "AI Agent Observability 2026: Tracing & Monitoring Stack",
+    "snippet": "May 27, 2026 — What to log, trace , and alert on when running AI agents in production: an observability -stack comparison covering spans, token cost , ...",
+    "host_name": "www.digitalapplied.com",
+    "rank": 5,
+    "date": "May 27, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://encore.dev/blog/langfuse-tutorial",
+    "name": "LLM Observability with LangFuse, OpenRouter, and Encore.ts",
+    "snippet": "Nov 26, 2025 — It captures detailed traces of every AI interaction, including prompts, completions, token usage, costs , and latency.",
+    "host_name": "encore.dev",
+    "rank": 6,
+    "date": "Nov 26, 2025",
+    "favicon": ""
+  }
+]

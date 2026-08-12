@@ -1,0 +1,419 @@
+TITLE: Official Microsoft Copilot Studio documentation - Microsoft Copilot Studio | Microsoft Learn
+
+Official Microsoft Copilot Studio documentation - Microsoft Copilot Studio | Microsoft Learn 
+
+- 
+
+- 
+
+Skip to main content
+
+This browser is no longer supported.
+
+Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+
+Download Microsoft Edge
+
+More info about Internet Explorer and Microsoft Edge
+
+Microsoft Copilot Studio documentation
+
+Discover how to build AI-driven agents and workflows with Microsoft Copilot Studio. Access documentation, implementation guidance, online training, and other resources.
+
+Overview
+
+What is Microsoft Copilot Studio? 
+
+What's new
+
+What's new in Microsoft Copilot Studio? 
+
+Overview
+
+Review implementation guidance 
+
+How-To Guide
+
+Troubleshoot 
+
+Create
+
+Create agents and workflows in Microsoft Copilot Studio.
+
+Get started
+
+- 
+Choose your harness before you build 
+
+- 
+Build in Copilot Studio 
+
+- 
+Create an automated solution using the GitHub Copilot harness (preview) 
+
+- 
+Create and deploy an agent with the standard harness 
+
+Agents (GitHub Copilot harness)
+
+- 
+Build an agent 
+
+- 
+Preview and test your agent 
+
+- 
+Evaluate an agent 
+
+- 
+Publish an agent 
+
+Workflows (GitHub Copilot harness)
+
+- 
+Workflows overview 
+
+- 
+Edit and manage your workflow 
+
+- 
+Add an agent node to a workflow 
+
+- 
+Add a Microsoft 365 Copilot node to a workflow 
+
+Build agents using the GitHub Copilot harness
+
+Plan and build
+
+- 
+
+About agents powered by the GitHub Copilot harness 
+
+- 
+
+Understand usage-based billing and Copilot Credits 
+
+- 
+
+Build a new agent 
+
+- 
+
+Configure your agent's details and instructions 
+
+Add knowledge and tools
+
+- 
+
+Add knowledge to your agents 
+
+- 
+
+Extend agents with tools 
+
+- 
+
+Use skills with agents 
+
+- 
+
+Build modular solutions with connected agents 
+
+Preview and test
+
+- 
+
+Debug your agents using activity trace 
+
+- 
+
+Test your agents 
+
+- 
+
+View conversation history 
+
+Evaluate
+
+- 
+
+Create a test set 
+
+- 
+
+Run an evaluation 
+
+- 
+
+View evaluation results 
+
+Publish, monitor, and share
+
+- 
+
+Publish an agent 
+
+- 
+
+Monitor your agent's performance 
+
+- 
+
+Share an agent 
+
+Build agents and agent flows using the standard harness
+
+Create agents
+
+- 
+
+Build an agent with generative AI from the ground up 
+
+- 
+
+Create and delete agents 
+
+- 
+
+Test your agent 
+
+- 
+
+Create voice-enabled agents 
+
+Add knowledge and tools to agents
+
+- 
+
+Add knowledge to your agents 
+
+- 
+
+Extend agents with tools 
+
+- 
+
+Enhance your agents with MCP servers 
+
+- 
+
+Add other agents 
+
+Build and manage agent flows
+
+- 
+
+Agent flows overview 
+
+- 
+
+Build an agent flow with natural language 
+
+- 
+
+Edit and manage your agent flow in the designer 
+
+- 
+
+Add an agent flow to an agent 
+
+Evaluate your agents
+
+- 
+
+About agent evaluation 
+
+- 
+
+Create test sets for evaluations 
+
+- 
+
+Choose evaluation methods 
+
+- 
+
+Run tests and view results 
+
+Publish and deploy your agent
+
+- 
+
+Key concepts - Publish and deploy your agent 
+
+- 
+
+Publish an agent to SharePoint 
+
+- 
+
+Publish an agent to a live or demo website 
+
+- 
+
+Publish an agent to Teams and Microsoft 365 Copilot 
+
+Monitor and administer
+
+- 
+
+Use analytics to improve your agent 
+
+- 
+
+Configure data policies for agents 
+
+- 
+
+Configure authentication 
+
+- 
+
+Security and governance 
+
+Billing and licensing
+
+- 
+
+Licensing overview 
+
+- 
+
+Assign licenses and manage access 
+
+- 
+
+Billing rates and management 
+
+- 
+
+Agent usage estimator 
+
+Related content
+
+Explore related Microsoft products and services.
+
+Power Platform 
+One-stop learning resource for Power Platform applications and features including admin, connectors, developer, and guidance documentation.
+
+Power Apps 
+Quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps.
+
+Power Automate 
+Create automated workflows between your favorite apps and services to synchronize files, get notifications, collect data, and more.
+
+Power BI 
+Turn your unrelated sources of data into coherent, visually immersive, and interactive insights.
+
+Power Pages 
+Design, host, and administer secure, modern, and low-code business websites.
+
+Power Platform & Copilot Studio Architecture Center 
+Browse reference architectures and solution ideas for Power Platform and Copilot Studio.
+
+Agents hub on Learn 
+Explore Microsoft's agent ecosystem, learn key concepts, and find resources to plan, build, adopt, and continuously improve AI agents for your organization.
+
+Microsoft 365 Copilot extensibility 
+Customize Microsoft 365 Copilot with agents and use actions and connectors to extend Copilot's skills and knowledge.
+
+Microsoft 365 Agents SDK 
+Build agents deployable to channels of your choice, with scaffolding to handle the required communication.
+
+Microsoft Agent 365 
+Learn about Microsoft Agent 365, a platform to manage agents within an organization.
+
+Microsoft Agents Framework 
+Explore Microsoft Agents Framework, an open-source development kit for building AI agents and multi-agent workflows.
+
+Microsoft Foundry for AI 
+Learn about Microsoft Foundry, a unified Azure platform-as-a-service offering for enterprise AI operations, model builders, and application development.
+
+Dynamics 365 
+Discover the next generation of CRM and ERP applications.
+
+Microsoft Azure 
+Explore the ever-expanding set of cloud computing services to help your organization meet its business challenges.
+
+Build your knowledge
+
+Enhance your knowledge and skills in Copilot Studio with these resources.
+
+Microsoft Copilot Studio training 
+Explore Microsoft Copilot Studio training on the Learn platform.
+
+Agent in a Day events 
+Learn to build low-code AI agents with Copilot Studio in a free, hands-on, instructor-led workshop.
+
+Copilot Studio Agent Academy 
+Master the art of building agents using Copilot Studio. Upskill your team with curated lessons.
+
+Copilot learning hub 
+Discover tools, guidance, and support for adopting, securing, and managing custom and Microsoft Copilot experiences in your organization.
+
+AI learning hub 
+Build practical skills to unlock the potential of AI and prepare for AI innovation using the Microsoft Cloud.
+
+Copilot Studio Adoption 
+Check out adoption resources for Copilot Studio.
+
+Copilot Studio scenarios 
+Explore agent scenarios to jumpstart your projects with downloadable resources.
+
+Copilot Studio Blog 
+Keep updated with the Copilot Studio Blog, your source for AI-powered agent news.
+
+en-us 
+
+Your Privacy Choices 
+
+Theme 
+
+- 
+
+Light 
+
+- 
+
+Dark 
+
+- 
+
+High contrast 
+
+- 
+
+- 
+
+AI Disclaimer 
+
+- 
+
+Previous Versions 
+
+- 
+
+Blog 
+
+- 
+
+Contribute 
+
+- 
+
+Privacy 
+
+- 
+
+Consumer Health Privacy 
+
+- 
+
+Terms of Use 
+
+- 
+
+Trademarks 
+
+- © Microsoft 2026

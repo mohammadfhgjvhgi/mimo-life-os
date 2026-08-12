@@ -1,0 +1,372 @@
+TITLE: AI Prompting 101: How to Write the Best AI Prompts | Microsoft Copilot
+
+AI Prompting 101: How to Write the Best AI Prompts | Microsoft Copilot 
+
+- 
+
+- 
+- 
+
+- 
+
+- 
+
+- 
+
+Skip to main content 
+
+Copilot 
+
+How to get Copilot 
+Features 
+Try free version of Copilot 
+
+Copilot on Windows 
+Copilot Labs 
+
+Students 
+Privacy & security 
+Do more with Copilot 
+AI art prompting guide 
+Copilot blog 
+
+For organizations 
+
+Microsoft 365 
+Azure 
+Copilot 
+Windows 
+Surface 
+XBOX 
+Deals 
+Small Business 
+Support 
+
+Windows Apps 
+Outlook 
+OneDrive 
+Microsoft Teams 
+OneNote 
+Microsoft Edge 
+Moving from Skype to Teams 
+
+Computers 
+Shop XBOX 
+Accessories 
+VR & mixed reality 
+Certified Refurbished 
+Trade-in for cash 
+
+XBOX Game Pass Ultimate 
+PC Game Pass 
+XBOX games 
+PC games 
+
+Microsoft AI 
+Microsoft Security 
+Dynamics 365 
+Microsoft 365 for business 
+Microsoft Power Platform 
+Windows 365 
+Small Business 
+Digital Sovereignty 
+
+Azure 
+Microsoft Developer 
+Microsoft Learn 
+Support for AI marketplace apps 
+Microsoft Tech Community 
+Microsoft Marketplace 
+Software companies 
+Visual Studio 
+
+Microsoft Rewards 
+Free downloads & security 
+Education 
+Gift cards 
+Licensing 
+Unlocked stories 
+
+View Sitemap 
+
+- 
+
+Home
+
+- 
+
+General AI
+
+- 
+
+AI Prompting 101: How to Write the Best AI Prompts 
+
+NOVEMBER 21, 2023 4 MIN READ 
+
+AI prompting 101: How to write the best AI prompts 
+
+- 
+
+- 
+
+- 
+
+The information you can find and the things you can create with artificial intelligence (AI) are limitless when you harness the AI capabilities of
+
+Copilot 
+. Whether you’re a seasoned AI enthusiast or just dipping your toes to try it, find out how easy it is to use these tools when you give Copilot detailed AI prompts. Learn the ins and outs of effective AI prompt writing so you can write the best AI prompts the first time you try.
+What is an AI prompt?
+Simply put, an AI prompt is a command, question, request, or statement that is used to direct an AI tool like
+
+Copilot 
+to generate the response, text, or
+
+image 
+you want. The way you frame the AI prompt determines the quality and relevance of the results you receive. Once you’ve mastered the art of AI prompting writing, the sky’s the limit.
+How to write the best AI prompts
+Writing the best AI prompts requires a combination of creativity, precision, and clarity about results you want. Whether you want to use AI as a
+
+free image generator 
+,
+
+grammar assistant 
+, or something else, here are some tips and tricks to help you excel with your AI prompting:
+1. Be clear and specific
+Outstanding outputs start with clear AI prompts. Follow these tips for staying specific:
+
+- Ask for the format you want from
+
+Copilot 
+, whether it's a paragraph, step-by-step instructions, or a list.
+
+- Avoid generic time references; instead, use specific dates or years to enhance precision.
+
+- Mention specific quantities or criteria when applicable.
+
+- Incorporate any constraints or preferences to narrow down the AI's response.
+
+- Make your prompt goal-oriented and practical .
+
+- Clearly define the scope of your request to guide the AI's response.
+
+- Always proofread your prompt to ensure it is well-structured and free from ambiguity.
+
+2. Give context
+For even greater clarity, include the bigger picture in your AI prompt. Context guides the AI tool to create what you most need based on the wider-view details. Follow these tips for writing well-contextualized AI prompts:
+
+- Include relevant context , such as the reason for the request or what you plan to do with the output, to help
+
+Copilot 
+understand what you need.
+
+- Clearly outline the task or information you need from Copilot and say how it fits into any larger projects or goals in progress.
+
+- Ask for the type of response you want, whether that’s guidance, instructions, recommendations, or explanations.
+
+- Ensure your prompt conveys your intent and what you expect Copilot to deliver.
+
+3. Experiment
+To write the best AI prompts, don’t be afraid to play and experiment. You’ll learn what works well for your purposes and maybe even discover Copilot uses you’d never considered. Follow these tips on experimenting with AI prompts:
+
+- Expand your thinking on what
+
+Copilot 
+can do: it isn’t only helpful in 
+
+finding new recipes 
+or forms of entertainment, but it’s also useful in
+
+planning vacations 
+, getting personalized advice, translating foreign text,
+
+generating AI pictures 
+, and more. Experiment with Copilot by finding new ways to use it throughout your day at
+
+home 
+,
+
+work 
+, and beyond.
+
+- Example: "I need ideas for a romantic date night at home. Suggest creative activities, dinner recipes, and a romantic playlist."
+
+- Tailor your prompts to various scenarios in your daily life.
+
+- Example: "I'm working on a presentation about renewable energy. Can you help me gather recent statistics and compelling facts on solar power?"
+
+- Seek personalized advice or recommendations for your specific needs.
+
+- Example: "I have a job interview tomorrow. Provide tips on dressing professionally and handling common interview questions."
+
+- Request assistance with tasks like translation or calculations.
+
+- Example: "Translate this English text into Spanish: 'Hello, how can I help you today?'"
+
+- Experiment with different output formats for your information needs.
+
+- Example: "Can you provide a list of the top 10 sci-fi novels of all time, along with their average reader ratings in a downloadable spreadsheet?"
+
+- Continuously explore new ways to use Copilot in your daily routines.
+
+- Example: "I'm hosting a virtual trivia night. Help me come up with a set of challenging trivia questions on famous landmarks."
+
+- Be creative and open-minded in your requests.
+
+- Example: "Share interesting historical facts about ancient civilizations, focusing on their architectural achievements."
+
+- Challenge Copilot with diverse tasks to discover its capabilities.
+
+- Example: "Find inspirational quotes from famous philosophers and match each quote with a relevant 
+
+AI image 
+for a motivational poster."
+
+4. Use keywords
+Keywords help Copilot understand your preferences and deliver more accurate results. They also help narrow down your search and get the information you need faster. Try these tips to use keywords that work in your AI prompts:
+
+- Incorporate relevant keywords or phrases to clarify your intent in the AI prompt.
+
+- In professional contexts, use industry-specific terms to refine your AI prompts.
+
+- When discussing technology or software, use technical terms relevant to your task.
+
+- Inquire about products or services with keywords that identify your specific requirements .
+
+Try these AI prompt examples
+Want to see these AI prompting tips in action? Here are a few example AI prompts that apply specificity, context, experimentation, and/or keywords. Use these yourself or alter them to ask
+
+Copilot 
+for what you need.
+Travel planning prompt
+Help me plan a trip to Chicago from [location] for next summer. I need flight, lodging, transportation, and activity information. Provide a response that mixes text, tables, and images to give me the best info and fullest picture of what my trip can be. Use these keywords: best Chicago activities for kids, cheap airfare, and Chicago budget travel. Also, tell me three more ways you can help with this trip.
+Productivity prompt
+I want to save time on daily tasks at work. How can you help me do each of these tasks more quickly without losing the human touch: read and respond to emails, write proposals, manage three employees. Ask me any questions that would help you understand my specific needs, and then give me actionable guidance. Act as a productivity coach.
+Study plan prompt
+I need help learning high school calculus. Create a study plan that includes videos, a glossary, diagrams, and practice tests to help me master the foundational concepts. Also, keep my interest by making all examples practical. Provide additional resources related to calculus simplified, calculus in real life, and calculus help.
+Once you understand AI prompting and know how to write an AI prompt that works well,, a world of possibility opens to you. By applying these tips to write detailed, well-structured prompts—from
+
+image prompts 
+to spreadsheet prompts—you can harness the power of AI to receive accurate and relevant results fast.
+
+Try Copilot 
+to master using AI for your everyday needs.
+
+DISCLAIMER : Features and functionality subject to change. Articles are written specifically for the United States market; features, functionality, and availability may vary by region.
+
+Mentioned in this article
+
+Copilot
+
+Try Copilot 
+
+Copilot app
+
+Download now 
+
+Copilot for individuals
+
+Learn more 
+
+Search articles by category:
+
+Daily Life 
+
+AI Art & Creativity 
+
+General AI 
+
+Learning & Education 
+
+Professional Life 
+
+You may also like
+
+See all articles 
+
+General AI - 4 MIN READ 
+
+What is Copilot, and how can you use it?
+
+Learn how you can use Copilot, your AI-companion.
+
+General AI - 4 MIN READ 
+
+You’re in charge of your Copilot experience
+
+You decide what data you share and when.
+
+General AI - 4 MIN READ 
+
+5 Reasons to use Copilot in GroupMe
+
+Find a Copilot plan that works for you by exploring the different subscription options.
+
+Surface Pro 
+Surface Laptop 
+Surface Laptop Ultra 
+Surface RTX Spark Dev Box 
+Copilot for organizations 
+Copilot for personal use 
+Explore Microsoft products 
+Windows 11 apps 
+
+Account profile 
+Download Center 
+Microsoft Store support 
+Returns 
+Order tracking 
+Certified Refurbished 
+Microsoft Store Promise 
+Flexible Payments 
+
+Microsoft in education 
+Devices for education 
+Microsoft Teams for Education 
+Microsoft 365 Education 
+How to buy for your school 
+Educator training and development 
+Deals for students and parents 
+AI for education 
+
+Microsoft AI 
+Microsoft Security 
+Dynamics 365 
+Microsoft 365 
+Microsoft Power Platform 
+Microsoft Teams 
+Microsoft 365 Copilot 
+Small Business 
+
+Azure 
+Microsoft Developer 
+Microsoft Learn 
+Support for AI marketplace apps 
+Microsoft Tech Community 
+Microsoft Marketplace 
+Software companies 
+Visual Studio 
+
+Careers 
+About Microsoft 
+Company news 
+Privacy at Microsoft 
+Investors 
+Diversity and inclusion 
+Accessibility 
+Sustainability 
+
+English (United States) 
+
+Your Privacy Choices 
+
+Consumer Health Privacy 
+
+Sitemap 
+Contact Microsoft 
+Privacy 
+Manage cookies 
+Terms of use 
+Trademarks 
+Safety & eco 
+Recycling 
+About our ads

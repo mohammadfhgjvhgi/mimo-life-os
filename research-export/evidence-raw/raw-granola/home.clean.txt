@@ -1,0 +1,337 @@
+TITLE: Granola — The AI Notepad for back-to-back meetings
+DESCRIPTION: The AI notepad for back-to-back meetings. Notes, actions and memory. Without a meeting bot.
+
+New Granola for Apple Watch 
+# The AI notepad for back-to-back meetings
+Notes, actions and memory.
+Without a meeting bot.
+
+Download for free 
+Available for macOS, Windows, iOS, Android 
+
+# Effortless notes, enhanced instantly.
+
+Uses your computer audio, so doesn’t invite a bot 
+Private by default , easy to share if you choose 
+Works with Zoom , Google Meet , Teams and every other meeting app. 
+
+Q3 GTM sync
+Today 4 
+
+confirm ICP alignment
+Deal stalls - sales input
+
+ICP Alignment Confirmation
+• Agreed to narrow Q3 focus to mid-market finance and ops buyers
+– SMB deprioritised for the quarter
+– Paid campaigns paused until ICP doc is confirmed
+Deal Stalls: Sales Input
+• Jack flagged deals stalling at business case stage
+– Marketing to build a business case template
+– CS to share proof points from successful onboardings
+• Follow-up scheduled for Tuesday
+Q3 Messaging Rollout
+• Sales and CS do not yet feel briefed on new messaging
+– Lunch and learn session agreed
+Next Steps
+• Tanya: Update ICP doc and pause paid campaigns
+• Rob: Scope business case template by Tuesday
+• Jack: Collate CS proof points by Tuesday
+
+Enhancing notes 
+
+Transcribing 
+
+Generate notes
+
+My notes Enhanced 
+
+# Effortless notes, enhanced instantly.
+
+Uses your computer audio, so doesn’t invite a bot 
+Private by default , easy to share if you choose 
+Works with Zoom , Google Meet , Teams and every other meeting app. 
+
+## For the doers
+
+Trusted by teams we admire
+
+## Granola helps you before, during and after your meetings.
+
+Before the meeting
+
+### Start your meeting prepared
+Granola syncs with your calendar and preps a Brief before every external meeting: who’s attending, what you discussed last time, and what matters now.
+
+Northwind Sync
+Today 2 
+
+Write notes...
+
+Q3 roadmap check-in
+• Walked through priorities for the quarter
+• Two initiatives pulled forward from Q4
+• One project deprioritized pending more research
+Design system rollout
+• Phase 1 shipping next week
+• Blocked on documentation site
+• Tanya offered to pair on the doc structure
+Onboarding improvements
+• Brainstormed ways to improve new-user onboarding
+• Three angles: in-app tour, intro video, sample data
+• Jack to spec out the in-app tour direction
+Next steps
+• Sam to draft doc outline by Friday
+• Jess to set up the A/B test plan
+• Sync again Friday
+
+Enhancing notes 
+
+Transcribing 
+
+Ask anything 
+
+Your Brief
+Alex Park’s (VP at Northwind ) team pushed back on pricing overnight, bringing a counter-proposal to today’s call.
+
+- • Alex email this morning notes the push-back is team-driven, not executive-level. 
+
+- • Q3 implementation is a hard constraint on Northwind’s side, flagged in prior syncs. Last delivery timeline mentioned targets August 2026. 
+
+- • EU data residency is still open from the procurement intro two weeks ago; no update from Alex’s side since. 
+
+In the meeting
+
+### Give your full attention
+Don’t choose between listening and taking good notes. Write down as much or as little as you like - Granola uses meeting context to write clear notes, personal to you.
+
+Northwind Sync
+Today 2 
+
+Write notes...
+
+Q3 roadmap check-in
+• Walked through priorities for the quarter
+• Two initiatives pulled forward from Q4
+• One project deprioritized pending more research
+Design system rollout
+• Phase 1 shipping next week
+• Blocked on documentation site
+• Tanya offered to pair on the doc structure
+Onboarding improvements
+• Brainstormed ways to improve new-user onboarding
+• Three angles: in-app tour, intro video, sample data
+• Jack to spec out the in-app tour direction
+Next steps
+• Sam to draft doc outline by Friday
+• Jess to set up the A/B test plan
+• Sync again Friday
+
+Enhancing notes 
+
+Transcribing 
+
+Ask anything 
+
+After the meeting
+
+### Post-meeting admin, done
+Notes, action items, and follow-ups are ready the moment the meeting ends, so you can move things forward.
+
+Northwind Sync
+Today 2 
+
+Write notes...
+
+Q3 roadmap check-in
+• Walked through priorities for the quarter
+• Two initiatives pulled forward from Q4
+• One project deprioritized pending more research
+Design system rollout
+• Phase 1 shipping next week
+• Blocked on documentation site
+• Tanya offered to pair on the doc structure
+Onboarding improvements
+• Brainstormed ways to improve new-user onboarding
+• Three angles: in-app tour, intro video, sample data
+• Jack to spec out the in-app tour direction
+Next steps
+• Sam to draft doc outline by Friday
+• Jess to set up the A/B test plan
+• Sync again Friday
+
+Enhancing notes 
+
+Transcribing 
+
+Ask anything 
+
+List actions 
+Write follow-up email 
+Draft project plan 
+
+Before the meeting In the meeting After the meeting 
+
+### Start your meeting prepared
+Granola syncs with your calendar and preps a Brief before every external meeting: who’s attending, what you discussed last time, and what matters now.
+
+Northwind Sync
+Today 2 
+
+Write notes...
+
+Q3 roadmap check-in
+• Walked through priorities for the quarter
+• Two initiatives pulled forward from Q4
+• One project deprioritized pending more research
+Design system rollout
+• Phase 1 shipping next week
+• Blocked on documentation site
+• Tanya offered to pair on the doc structure
+Onboarding improvements
+• Brainstormed ways to improve new-user onboarding
+• Three angles: in-app tour, intro video, sample data
+• Jack to spec out the in-app tour direction
+Next steps
+• Sam to draft doc outline by Friday
+• Jess to set up the A/B test plan
+• Sync again Friday
+
+Enhancing notes 
+
+Transcribing 
+
+Ask anything 
+
+Your Brief
+Alex Park’s (VP at Northwind ) team pushed back on pricing overnight, bringing a counter-proposal to today’s call.
+
+- • Alex email this morning notes the push-back is team-driven, not executive-level. 
+
+- • Q3 implementation is a hard constraint on Northwind’s side, flagged in prior syncs. Last delivery timeline mentioned targets August 2026. 
+
+- • EU data residency is still open from the procurement intro two weeks ago; no update from Alex’s side since. 
+
+### Give your full attention
+Don’t choose between listening and taking good notes. Write down as much or as little as you like - Granola uses meeting context to write clear notes, personal to you.
+
+Northwind Sync
+Today 2 
+
+Write notes...
+
+Q3 roadmap check-in
+• Walked through priorities for the quarter
+• Two initiatives pulled forward from Q4
+• One project deprioritized pending more research
+Design system rollout
+• Phase 1 shipping next week
+• Blocked on documentation site
+• Tanya offered to pair on the doc structure
+Onboarding improvements
+• Brainstormed ways to improve new-user onboarding
+• Three angles: in-app tour, intro video, sample data
+• Jack to spec out the in-app tour direction
+Next steps
+• Sam to draft doc outline by Friday
+• Jess to set up the A/B test plan
+• Sync again Friday
+
+Enhancing notes 
+
+Transcribing 
+
+Ask anything 
+
+### Post-meeting admin, done
+Notes, action items, and follow-ups are ready the moment the meeting ends, so you can move things forward.
+
+Northwind Sync
+Today 2 
+
+Write notes...
+
+Q3 roadmap check-in
+• Walked through priorities for the quarter
+• Two initiatives pulled forward from Q4
+• One project deprioritized pending more research
+Design system rollout
+• Phase 1 shipping next week
+• Blocked on documentation site
+• Tanya offered to pair on the doc structure
+Onboarding improvements
+• Brainstormed ways to improve new-user onboarding
+• Three angles: in-app tour, intro video, sample data
+• Jack to spec out the in-app tour direction
+Next steps
+• Sam to draft doc outline by Friday
+• Jess to set up the A/B test plan
+• Sync again Friday
+
+Enhancing notes 
+
+Transcribing 
+
+Ask anything 
+
+List actions 
+Write follow-up email 
+Draft project plan 
+
+Granola Chat
+
+## Perfect
+meeting
+memory
+
+What did I promise to do in my meetings this week? W h a t d i d I p r o m i s e t o d o i n m y m e e t i n g s t h i s w e e k ? 
+Team stand-ups 
+
+## Helping busy people through busy days
+
+“ Granola was one of those things that just clicked instantly. It’s seamless and very purpose-built. ” 
+Karri Saarinen CEO of Linear 
+
+“ It’s the easiest AI notetaker to start using “out of the box,” and it gets better with more meetings ” 
+Olivia Moore Partner at Andreessen Horowitz 
+
+“ It’s actually unbelievable how good Granola is. ” 
+Guillermo Rauch CEO of Vercel 
+
+“ If you are in a lot of meetings, this is a gamechanger. ” 
+Deedy Das Partner at Menlo Ventures 
+
+“ Granola generates the best meeting notes of anything I’ve tried so far. ” 
+Nat Friedman 
+
+Features
+
+## Works everywhere you do, how you do
+Download for free 
+
+### Humans in the room, not bots
+Granola doesn’t join your meeting. Instead, it transcribes in the background while you stay present
+
+### Works with all meeting apps
+Zoom, Meet, Teams, Huddles, in-person, on-the-go: capture conversations wherever you have them.
+
+### Private by default, ready to share
+Your notes are just for you. Search them, polish them, analyze them, then send them as you like.
+
+### Made for in-person meetings too
+Walking meetings, conferences or coffee catchups - use the iPhone or Android app to take notes anywhere.
+
+### Syncs with your calendar
+Granola integrates with your calendar and automatically detects upcoming meetings. One click, and you’ll have every conversation captured and easy to find.
+
+Granola MCP Connector
+
+## Use your meeting notes anywhere
+Download for free 
+
+### No more copy-pasting meeting transcripts into AI tools.
+Connect Granola in a few clicks and your AI apps become aware of your meeting notes. So you can power what you’re working on with what you talked about.
+
+## Unlimited meeting notes for free
+Take as many notes as you’d like. Upgrade to view and work with notes older than 30 days.
+Download for free View pricing

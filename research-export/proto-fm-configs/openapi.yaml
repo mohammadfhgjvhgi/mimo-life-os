@@ -1,0 +1,176 @@
+openapi: 3.0.3
+info:
+  title: Engineering Identity Platform API
+  description: |
+    API for the Engineering Identity Platform — Mohammed Adil Alakaly.
+    
+    The engage endpoint accepts contact form submissions with rate limiting
+    (5 requests/hour/IP) and honeypot bot protection.
+  version: 1.0.0
+  contact:
+    name: Mohammed Adil Alakaly
+    url: https://github.com/mohammadfhgjvhgi/proto-fm
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: /
+    description: Current server
+
+paths:
+  /api/engage:
+    post:
+      summary: Submit a contact form message
+      description: |
+        Accepts a contact form submission. Rate limited to 5 requests/hour/IP.
+        Includes honeypot field — if the `website` field is non-empty, the
+        request is silently accepted but not stored (bot trap).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - path
+                - name
+                - email
+              properties:
+                path:
+                  type: string
+                  enum: [review, consult, build, refer]
+                  description: Type of engagement
+                name:
+                  type: string
+                  minLength: 2
+                  maxLength: 120
+                  description: Sender's full name
+                email:
+                  type: string
+                  format: email
+                  maxLength: 200
+                  description: Sender's email address
+                fields:
+                  type: object
+                  additionalProperties:
+                    type: string
+                  description: Additional fields specific to the engagement path
+                website:
+                  type: string
+                  maxLength: 0
+                  description: Honeypot — must be empty for legitimate submissions
+            examples:
+              review:
+                summary: Project review request
+                value:
+                  path: review
+                  name: Ahmed Ali
+                  email: ahmed@example.com
+                  fields:
+                    "Project context": "Smart greenhouse IoT"
+                    "Question": "Can you review my schematic?"
+              build:
+                summary: Build a project request
+                value:
+                  path: build
+                  name: Sara Hassan
+                  email: sara@example.com
+                  fields:
+                    "Project type": "Home automation"
+                    "Approximate budget": "$500-1000"
+                    "Timeline": "2 months"
+      responses:
+        '200':
+          description: Submission received successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    example: true
+                  id:
+                    type: string
+                    example: SUB-mr81t6t7
+                  message:
+                    type: string
+                    example: "Received. I will respond within 48 hours."
+              headers:
+                X-RateLimit-Remaining:
+                  schema:
+                    type: integer
+                    description: Remaining requests in current window
+                X-RateLimit-Reset:
+                  schema:
+                    type: integer
+                    description: Unix timestamp when the rate limit resets
+        '400':
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    example: false
+                  error:
+                    type: string
+                    example: "Validation failed."
+                  issues:
+                    type: array
+                    items:
+                      type: string
+        '429':
+          description: Rate limit exceeded
+          headers:
+            Retry-After:
+              schema:
+                type: integer
+                description: Seconds until the rate limit resets
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: 0
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    example: false
+                  error:
+                    type: string
+                    example: "Rate limit exceeded. Try again later."
+                  retryAfter:
+                    type: integer
+                    example: 3600
+
+    get:
+      summary: Get submission count (no PII)
+      description: Returns the total number of submissions stored. No personally identifiable information is exposed.
+      responses:
+        '200':
+          description: Submission count
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    example: true
+                  count:
+                    type: integer
+                    example: 5
+                  paths:
+                    type: array
+                    items:
+                      type: string
+                    example: [review, consult, build, refer]
+
+components:
+  securitySchemes: {}

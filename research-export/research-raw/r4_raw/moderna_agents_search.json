@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://openai.com/business/guides-and-resources/the-state-of-enterprise-ai-2025-report",
+    "name": "The state of enterprise AI",
+    "snippet": "Dec 17, 2025 — OpenAI now serves more than 7 million ChatGPT workplace seats, and ChatGPT Enterprise seats have increased approximately 9x year-over-year.",
+    "host_name": "openai.com",
+    "rank": 0,
+    "date": "Dec 17, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://pharmaphorum.com/news/moderna-banks-openai-accelerate-mrna-research",
+    "name": "Moderna banks on OpenAI to accelerate mRNA research",
+    "snippet": "Apr 26, 2024 — Moderna teams up with OpenAI, further integrating ChatGPT across its mRNA drug development and manufacturing operations.",
+    "host_name": "pharmaphorum.com",
+    "rank": 1,
+    "date": "Apr 26, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/matthewjetthall_moderna-ai-biotech-activity-7335362481420177408-91Z7",
+    "name": "Moderna deploys 3000 AI agents, redefines roles",
+    "snippet": "By integrating AI into its Accelerator™ Drug Development solution and deploying ChatGPT Enterprise internally, Thermo Fisher is setting a ... Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.modernatx.com/media-center/all-media/blogs/collaboration-with-openai",
+    "name": "Collaboration with OpenAI: Transforming the Way We Work",
+    "snippet": "Apr 24, 2024 — From launching mChat in 2023, our own instance of ChatGPT built on top of OpenAI's API, to recently deploying OpenAI's ChatGPT Enterprise ...",
+    "host_name": "www.modernatx.com",
+    "rank": 3,
+    "date": "Apr 24, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.sectionai.com/blog/ai-in-2025",
+    "name": "How AI is shaping Section in 2025",
+    "snippet": "Our 2025 roadmap for supporting AI operators. Next year, we're doing more of what worked in 2024 - to lower employee anxiety and increase brand-safe AI adoption ... Read more",
+    "host_name": "www.sectionai.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://sloanreview.mit.edu/projects/the-emerging-agentic-enterprise-how-leaders-must-navigate-a-new-age-of-ai",
+    "name": "The Emerging Agentic Enterprise: How Leaders Must",
+    "snippet": "Nov 18, 2025 — In just two years, agentic AI has already reached 35% adoption, with another 44% of organizations planning to deploy it soon.",
+    "host_name": "sloanreview.mit.edu",
+    "rank": 5,
+    "date": "Nov 18, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://emerj.com/ai-at-moderna",
+    "name": "AI at Moderna",
+    "snippet": "Jul 6, 2026 — Moderna reported approximately $1.9 billion in revenue for 2025 , Moderna executives have stated that they intend to bring up to 15 new products ...",
+    "host_name": "emerj.com",
+    "rank": 6,
+    "date": "Jul 6, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=t3UHnKLVS1M",
+    "name": "Moderna partners with OpenAI to accelerate the development",
+    "snippet": "Moderna deployed ChatGPT Enterprise to thousands of employees , seeing remarkable adoption across the company. They've created hundreds of ...",
+    "host_name": "www.youtube.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

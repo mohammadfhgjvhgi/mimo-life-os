@@ -1,0 +1,164 @@
+TITLE: Blog - News and product insights from Granola HQ
+DESCRIPTION: Read our latest insights on building in the AI space, team productivity, and the future of work. Learnings and updates from the Granola team.
+
+# Blog
+
+All
+
+Blog
+
+Announcements
+
+Press
+
+## Granola for Apple Watch
+Jack
+
+July 28
+
+## Granola for Android is here!
+Jack
+
+July 1
+
+## Why Granola doesn't use a bot
+Chris Pedregal
+
+· Sam Stephenson
+
+June 1
+
+## New: Briefs prepare you for your next meeting as you join
+Jack
+
+May 20
+
+## --dangerously-skip-permissions is the only safe mode
+Jim Fisher
+
+May 11
+
+## How Granola thinks about designing agents
+Toby
+
+· Robert
+
+· Xiuting
+
+May 6
+
+## How I shipped Granola’s San Francisco office in one 14-day trip
+Ursula Wild
+
+April 27
+
+## Granola Chat just got smarter
+Jack
+
+April 21
+
+## Granola raises $125M to put your company's context to work
+Chris Pedregal
+
+March 25
+
+## How to Take Good Meeting Notes: 7 Strategies That Work 
+BestReviews February 26
+
+## So, you think it's easy to change an app icon?
+Dante
+
+February 9
+
+## Introducing Granola MCP
+Jack
+
+February 4
+
+## Meet the new look Granola
+Sam Stephenson
+
+February 2
+
+## I Spent 10 Years Taking Bad Notes. This AI Changed Everything 
+Feisworld January 13
+
+## How we wrote the prompts behind Granola's Crunched 2025
+Jo Barrow
+
+December 17, 2025
+
+## Introducing Recipes, in the all-new Granola Chat
+Chris Pedregal
+
+September 30, 2025
+
+## When back becomes broken: how we found a tiny navigation bug 
+nick
+
+July 7, 2025
+
+## Granola 2.0: A second brain for your team
+Chris Pedregal
+
+May 14, 2025
+
+## Start with a dot-plot
+Jim Fisher
+
+May 10, 2025
+
+## Can Granola's AI meeting notes eat bigger apps for breakfast? 
+Upstarts Media April 2, 2025
+
+## Sam Stephenson – the journey of designing an AI startup 
+Dive Club March 28, 2025
+
+## Chris Pedregal — building Granola 
+Invest Like the Best February 25, 2025
+
+## Don't animate height!
+Jim Fisher
+
+January 29, 2025
+
+## How to build a truly useful AI product 
+Every December 9, 2024
+
+## Our biggest stories and favorite things of 2024 
+The Verge December 5, 2024
+
+## A recipe for everyday AI 
+Digital Frontier December 3, 2024
+
+## Using AI to be more present and effective in your meetings thanks to Granola 
+Alex Rainert November 22, 2024
+
+## Granola raises $20M to build the AI notepad that makes you smarter
+Chris Pedregal
+
+October 23, 2024
+
+## VCs love using the AI meeting notepad Granola, so they gave it $20M 
+TechCrunch October 23, 2024
+
+## Chris Pedregal: Revolutionizing meetings with AI 
+Lightspeed Venture Partners October 23, 2024
+
+## How to evolve a product
+Jim Fisher
+
+June 25, 2024
+
+## The best AI note-taking tools for meetings 
+Time June 12, 2024
+
+## How to Get the Best Out of Granola: Your Ultimate Guide
+Jo Barrow
+
+May 24, 2024
+
+## Introducing Granola: the AI-powered notepad for meetings
+Chris Pedregal
+
+May 22, 2024

@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol",
+    "name": "Announcing Agent Payments Protocol (AP2)",
+    "snippet": "Google's Agent Payments Protocol (AP2 ) combines programmable payments via modern blockchains like Sui with open protocols like A2A",
+    "host_name": "cloud.google.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://cloudsecurityalliance.org/blog/2025/10/06/secure-use-of-the-agent-payments-protocol-ap2-a-framework-for-trustworthy-ai-driven-transactions",
+    "name": "Secure Use of the Agent Payments Protocol (AP2)",
+    "snippet": "Oct 6, 2025 — Get a detailed security analysis of the Agent Payments Protocol ( AP2 ), including its role-based architecture, cryptographic primitives, ...",
+    "host_name": "cloudsecurityalliance.org",
+    "rank": 1,
+    "date": "Oct 6, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://ap2-protocol.org",
+    "name": "AP2 - Agent Payments Protocol Documentation",
+    "snippet": "Sep 16, 2025 — The Agent Payments Protocol (AP2 ) is a solution for enabling gen AI agents to make payments on behalf of users, safely, securely, ...",
+    "host_name": "ap2-protocol.org",
+    "rank": 2,
+    "date": "Sep 16, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://fintechmagazine.com/news/agentic-pay-systems-googles-agent-payments-protocol",
+    "name": "Agentic Pay Systems: Google's Agent Payments Protocol",
+    "snippet": "Sep 18, 2025 — Google's Agents Payments Protocol (AP2 ) sets out to introduce an agentic payment tool compatible with most platforms. Merchants, payment ... Read more",
+    "host_name": "fintechmagazine.com",
+    "rank": 3,
+    "date": "Sep 18, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@tahirbalarabe2/google-agent-payments-protocol-ap2-37799f78da40",
+    "name": "Google Agent Payments Protocol(AP2) | by Tahir",
+    "snippet": "Google announced a new protocol called the Agent Payments Protocol , or AP2 . It is an open standard for handling payments initiated by AI agents .",
+    "host_name": "medium.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://eco.com/support/en/articles/15192002-ap2-protocol-explained-google-s-agentic-commerce-standard-2026",
+    "name": "AP2 Protocol Explained: Google's Agentic Commerce  - Eco",
+    "snippet": "Jul 16, 2026 — AP2 (Agent Payments Protocol) is Google's open standard for letting AI agents transact on behalf of users , announced September 16, 2025 with 60 ...",
+    "host_name": "eco.com",
+    "rank": 5,
+    "date": "Jul 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/google-agentic-commerce/AP2",
+    "name": "Agent Payments Protocol (AP2)",
+    "snippet": "This repository contains code samples and demos of the Agent Payments Protocol . Intro to AP2 Video. A2A Intro Video. AP2 on The Agent Factory - September 2025 . Read more",
+    "host_name": "github.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.pymnts.com/news/artificial-intelligence/2025/google-debuts-agent-payments-protocol-bolster-ai-commerce",
+    "name": "Google Debuts Payments Protocol for Agentic Commerce",
+    "snippet": "Sep 16, 2025 — AP2 is designed to “securely initiate and transact agent-led payments across platforms,” according to a Tuesday (Sept. 16) company blog post. Read more",
+    "host_name": "www.pymnts.com",
+    "rank": 7,
+    "date": "Sep 16, 2025",
+    "favicon": ""
+  }
+]

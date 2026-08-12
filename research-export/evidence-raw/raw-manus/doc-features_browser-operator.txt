@@ -1,0 +1,206 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Browser Operator - Manus Documentation 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
+## Documentation Index
+Fetch the complete documentation index at: /docs/llms.txt 
+Use this file to discover all available pages before exploring further.
+Skip to main content 
+Manus Documentation home page English 
+
+Search...
+
+⌘ K Ask Assistant 
+
+Search... 
+
+Navigation 
+Browser Operator
+
+Introduction 
+Features 
+Website Builder 
+Integrations 
+
+- Projects 
+
+- Manus Skills 
+
+- Design View 
+
+- Wide Research 
+
+- Manus Slides 
+
+- Scheduled Tasks 
+
+- Data Analysis & Visualization 
+
+- Multimedia Processing 
+
+- Mail Manus 
+
+- Manus Collab 
+
+- Cloud browser 
+
+- Browser Operator 
+
+- Desktop 
+
+- Meeting minutes 
+
+## On this page 
+
+- What it is 
+- True Autonomous Delegation 
+
+- Powered by Your Active Tabs 
+
+- Automate Your Most Tedious Tasks 
+
+- How to use it 
+- 1. Connect Browser 
+
+- 2. Grant Access 
+
+- 3. Autonomous Action 
+
+- What you need to know 
+- Local vs. Cloud Browser 
+
+- Security and Control 
+
+- Tips 
+
+- FAQ 
+
+# Browser Operator
+
+A browser extension that transforms your web browser into an autonomous agent.
+
+## ​ 
+
+What it is 
+
+Manus Browser Operator is a browser extension that transforms your web browser into an autonomous agent. It allows Manus to securely perform tasks on your behalf directly within your local browser, using your existing logins and sessions. 
+
+### ​ 
+
+True Autonomous Delegation 
+
+Manus is a sophisticated AI Agent that doesn’t just chat—it operates. Give it a multi-step goal, and it will plan, navigate, click, and execute the entire workflow across various sites without continuous human supervision. 
+
+### ​ 
+
+Powered by Your Active Tabs 
+
+Manus Browser Operator works directly within your current browser session, securely utilizing your existing logins and active tabs to complete tasks on sites you already use and trust. 
+
+### ​ 
+
+Automate Your Most Tedious Tasks 
+
+Instantly eliminate manual clicking, form filling, and cross-platform data extraction. From complex research and booking logistics to summarizing data, Manus handles the tedious processes that take hours out of your day. 
+
+## ​ 
+
+How to use it 
+
+### ​ 
+
+1. Connect Browser 
+
+Enable the Manus Browser Operator in the Manus Connectors tab. A browser extension will be installed to link Manus with your browser. 
+
+### ​ 
+
+2. Grant Access 
+
+When you assign a task requiring web access, Manus will ask for permission to control your browser. Grant access to allow the agent to take over. 
+
+### ​ 
+
+3. Autonomous Action 
+
+Manus works in a dedicated tab to complete your task. It uses your logged-in sessions to navigate websites, gather information, and perform actions as instructed. 
+
+## ​ 
+
+What you need to know 
+
+### ​ 
+
+Local vs. Cloud Browser 
+
+The Browser Operator uses your local browser , which is ideal for tasks requiring access to sites where you are already logged in. This avoids CAPTCHAs and security checks. For other tasks, Manus uses an isolated Cloud Browser . 
+Feature Manus Browser Operator (Local) Cloud Browser 
+Environment Your local desktop browser Isolated, sandboxed cloud environment 
+Authentication Uses your existing browser logins Requires logging in within the session 
+Best For Authenticated sessions, sensitive sites General web tasks, broad research 
+
+### ​ 
+
+Security and Control 
+
+You have full control over the Browser Operator. You must authorize every session, and you can stop the agent at any time by simply closing the browser tab. All actions are logged for complete transparency. 
+
+## ​ 
+
+Tips 
+
+- Use for Authenticated Sites: Best for tasks on sites like LinkedIn, CRMs, or premium tools you are already logged into.
+
+- Be Specific: Give clear, step-by-step instructions for the best results.
+
+- Monitor Complex Tasks: Keep an eye on the dedicated browser tab for multi-step workflows to ensure they run smoothly.
+
+## ​ 
+
+FAQ 
+
+Is it secure?
+
+You authorize each session and can stop it at any time. All actions are logged, and Manus never stores your passwords. 
+
+What browsers are supported?
+
+Chrome and Edge are currently recommended. Support for other browsers is coming soon 
+
+Can I use it on mobile?
+
+You can start and monitor tasks from mobile, but the Operator runs on your desktop browser, which must be online. 
+
+What if a task goes wrong?
+
+A: You can take over by clicking into the tab or stop the task completely by closing the tab. 
+
+Cloud browser
+Desktop
+⌘ I 
+
+instagram linkedin x youtube 
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform 
+
+Assistant 
+
+Responses are generated using AI and may contain mistakes.

@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://openai.com/codex",
+    "name": "Codex in ChatGPT | AI Coding Agents for Software",
+    "snippet": "Codex in ChatGPT is a command center for agentic coding . With built-in worktrees and cloud environments, agents work in parallel across projects, completing ...",
+    "host_name": "openai.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developers.openai.com/codex/cli",
+    "name": "Codex CLI | ChatGPT Learn",
+    "snippet": "Inspect, edit, and run code from your terminal Inspect code, make changes, run commands, and automate repeatable work. Run coding tasks in parallel cloud ...",
+    "host_name": "developers.openai.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.openai.com/t/codex-cloud-agent-cloud-doing-autonomously-pr/1371279",
+    "name": "Codex(Cloud) Agent Cloud doing autonomously PR",
+    "snippet": "Jan 8, 2026 — Codex Cloud Agent get instruction doing work and at the end do their PR autonomously. How to set up git and GitHub CLI (gh) for Codex Web ( ...",
+    "host_name": "community.openai.com",
+    "rank": 2,
+    "date": "Jan 8, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.openai.com/t/gitlab-with-codex-cloud-agent/1268080/26",
+    "name": "GitLab with Codex Cloud Agent - #26 by merefield",
+    "snippet": "May 25, 2025 — Codex CLI now supports ChatGPT auth , so you can use your ChatGPT account to authenticate and provide you with the AI resources needed to run ...",
+    "host_name": "community.openai.com",
+    "rank": 3,
+    "date": "May 25, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://openai.com/index/unrolling-the-codex-agent-loop",
+    "name": "Unrolling the Codex agent loop",
+    "snippet": "Jan 23, 2026 — Codex CLI ⁠(opens in a new window) is our cross-platform local software agent, designed to produce high-quality, reliable software changes",
+    "host_name": "openai.com",
+    "rank": 4,
+    "date": "Jan 23, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://openai.com/index/codex-now-generally-available",
+    "name": "Codex is now generally available",
+    "snippet": "Oct 6, 2025 — Codex SDK: Embed the same agent that powers the Codex CLI into your own workflows, tools, and apps for state-of-the-art performance on GPT‑5 ...",
+    "host_name": "openai.com",
+    "rank": 5,
+    "date": "Oct 6, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.openai.com/t/feature-request-integrate-with-codex-cli/1268389",
+    "name": "Feature Request: Integrate with Codex CLI",
+    "snippet": "May 25, 2025 — The agent works great for sending out lots of tasks at once, and CLI is better tasks that I need to be more involved in . I would love it if ...",
+    "host_name": "community.openai.com",
+    "rank": 6,
+    "date": "May 25, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.openai.com/t/how-are-you-using-the-codex-app-on-windows/1376295",
+    "name": "How are you using the Codex app on Windows?",
+    "snippet": "Mar 11, 2026 — It is very useful for sending tasks to the cloud and getting a best-of-four style result when I am out of my depth and need a few additional ...",
+    "host_name": "community.openai.com",
+    "rank": 7,
+    "date": "Mar 11, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.openai.com/t/using-codex-cli-remotely-using-your-mobile-device/1375896",
+    "name": "Using Codex CLI remotely using your mobile device",
+    "snippet": "Mar 6, 2026 — Prerequisites · An OpenAI ChatGPT or platform (API) account. · An account on a solid cloud VPS provider (e.g. Scaleway, Digitial Ocean, AWS) · A ...",
+    "host_name": "community.openai.com",
+    "rank": 8,
+    "date": "Mar 6, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://openai.com/index/introducing-upgrades-to-codex",
+    "name": "Introducing upgrades to Codex",
+    "snippet": "Sep 15, 2025 — In addition to Codex CLI, the new IDE extension and GitHub integration bring the Codex cloud agent closer to developer workflows so you can now ...",
+    "host_name": "openai.com",
+    "rank": 9,
+    "date": "Sep 15, 2025",
+    "favicon": ""
+  }
+]

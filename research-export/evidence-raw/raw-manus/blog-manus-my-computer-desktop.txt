@@ -1,0 +1,172 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Introducing My Computer: When Manus Meets Your Desktop 
+- 
+- 
+- 
+- 
+
+Features
+Solutions
+Resources
+Events
+Team
+Pricing
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+Get started 
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+Manus is now part of Meta — bringing AI to businesses worldwide
+
+Product · Monday, March 16 
+
+# Introducing My Computer: When Manus Meets Your Desktop
+
+﻿ 
+
+Until today, Manus has lived entirely in the cloud. 
+
+The cloud sandbox has served Manus well. Inside an isolated, secure environment, it has everything an AI agent needs: networking, a command line, a file system, and a browser. This is the foundation of Manus's power as a general AI agent, always online and always ready to work. However, there has always been a fundamental limitation: your most important work happens on your own computer. Your project files, development environments, and essential applications all reside locally, not in the cloud. 
+
+Today, we are closing that gap. 
+
+Meet My Computer , the core capability of the new Manus Desktop application. It brings Manus out of the cloud and onto your computer, allowing it to work directly with your local files, tools, and applications. 
+
+### How Manus Interacts with Your Computer 
+
+Through the Manus Desktop app, Manus executes command line instructions (CLI) in your computer's terminal. This allows it to read, analyze, and edit local files, as well as launch and control your local applications. 
+
+It may sound simple, but the power of the command line enables a vast range of automated actions. 
+
+﻿ 
+
+Consider a florist with thousands of unsorted photos on her computer: bouquets, potted plants, customer shots and more all in a single disorganized folder. She can simply tell Manus to "organize my flower shop photos." Manus then scans the files, identifies the content of each image, creates categorized subfolders, and sorts every photo accordingly. In minutes, a clean, structured asset library emerges from the chaos. 
+
+﻿ 
+
+Or imagine an accountant who needs to rename hundreds of invoices to a standard format. A task that would take an entire afternoon by hand, Manus can complete in minutes with a few terminal commands. 
+
+These file management tasks may seem simple, but they are tedious and repetitive. Automating them makes a real difference. 
+
+### A Powerful New Way to Build Desktop Apps 
+
+When Manus can leverage every command line tool on your machine, from Python and Node.js to Swift and Xcode, the potential for complex automation and development becomes immense. 
+
+One of our colleagues challenged Manus to build a real-time meeting translation and subtitle application in Swift, entirely on his Mac. The entire process, from project creation and coding to debugging and packaging, was handled through terminal commands. 
+
+Twenty minutes later: a fully working Mac app. No Xcode opened. No code written manually. 
+
+﻿ 
+
+This is what becomes possible when a general AI agent gains full access to your local machine. Through development driven by command line instructions, you can build Mac apps, Python scripts, websites, and more, while Manus handles the entire workflow from coding to debugging. 
+
+### Unlock Your Idle Compute 
+
+You likely have a powerful GPU in your machine that sits idle most of the time. You might even have a Mac mini in a corner, powered on 24/7 but rarely used. My Computer gives those idle resources a new purpose. 
+
+You can have Manus use your local GPU to train a machine learning model or run a large language model for inference. That idle Mac mini can be transformed into a 24/7 work-from-anywhere AI assistant. As long as the machine is on and Manus Desktop is running, you can assign complex tasks to it from any of your devices, anywhere in the world. 
+
+Imagine sending an instruction from your phone while you're out, and Manus quietly completes the job on your computer back home. This combination of cloud intelligence and local compute is AI at its best. 
+
+### A Catalyst for Automating Workflows 
+
+My Computer isn't just another feature. It transforms what Manus can already do, creating powerful new workflows. 
+
+Manus is already integrated with Google Calendar, Gmail, and a wide range of third-party services. Now, imagine you are out without your laptop and urgently need a contract file from your home computer. You can simply tell Manus to find the document, and it will remotely access your machine, locate the file, and email it to your client through your Gmail account. The file resides on your machine, the email is sent through the cloud, and Manus seamlessly bridges the two. 
+
+This is AI orchestrating your cloud, your apps, and your computer. All at once. 
+
+### You Are Always in Command 
+
+We understand that letting an AI work on your local computer requires trust. That is why we designed My Computer to keep you firmly in control. 
+
+Every terminal command requires your explicit approval before execution. You can choose "Always Allow" to streamline your workflow for trusted tasks, or "Allow Once" to review each operation individually. You are the commander; Manus is the executor. That relationship will never change. 
+
+My Computer also integrates with your personal Projects, Agents, and Scheduled Tasks. This allows you to create recurring local routines, such as tidying your Downloads folder every morning or generating a weekly summary report from your local data. 
+
+### How To Get Started 
+
+﻿ 
+
+1 . Download the Manus Desktop app and sign into your Manus account 
+
+2 . Click "My computer" and add the local folders you'd like Manus to work with 
+
+3 . Select and authorize the folder 
+
+### Availability 
+
+My Computer is available today for all macOS and Windows users. 
+
+We have always believed that an AI agent should be an action engine, not just a chat assistant. The cloud sandbox gave Manus its own workspace. My Computer brings Manus into yours. 
+
+Your ideas. Manus's execution. Every resource on your computer. We can't wait to see what you build with it. 
+
+### Download desktop & mobile app
+Access Manus anytime, anywhere.
+
+macOS Windows iOS Android 
+
+## Less structure,
+more intelligence.
+
+### Product
+Pricing Web app AI design AI slides AI image generator AI music generator Manus browser operator Wide Research Mail Manus Slack integration 
+
+### Resources
+Download Blog Docs Updates Help center Trust center API Team plan Startups Playbook Brand assets 
+
+### Community
+Events Fellows 
+
+### Compare
+VS ChatGPT VS Lovable VS Replit 
+
+### Download
+Mobile app Desktop app My Browser 
+
+### Team
+Team plan SSO API 
+
+### Company
+About us Careers For media Terms of service Privacy policy 
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+© 2026 Meta

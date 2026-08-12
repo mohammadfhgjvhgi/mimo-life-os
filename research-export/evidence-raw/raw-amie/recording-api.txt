@@ -1,0 +1,82 @@
+Meeting Recording API: Record & Transcribe Without Bots | Amie
+
+[/] 
+
+Features
+
+[/pricing] Pricing
+
+[https://calendar.amie.so/login] Login[https://calendar.amie.so/login] Get started
+
+The Amie Recording API.
+Meeting recordings, without the bot.
+
+Add meeting recording, transcription, and AI notes to your product with one integration: a lightweight capture SDK in your app, a REST API behind it. Unlike a meeting bot API, nothing joins the call: audio is captured on the user's device, so it works with Zoom, Google Meet, Microsoft Teams, Slack huddles, and every other platform your users are on. Now onboarding early-access partners.
+
+[/contact?sales] Get in touchSee how it works
+
+Every meeting bot API sends a bot. We don't.
+
+The standard way to record meetings programmatically is a meeting bot: a virtual participant that joins the call, sits in the participant list, and streams audio out. That means waiting-room admissions, "who invited the bot?" moments, per-platform quirks, and whole platforms where bots simply can't go. The Amie Recording API takes the other path. It records where the meeting is actually heard, on the device, using the same engine behind Amie's own meeting notes, hardened by millions of hours of transcription for our own users.
+
+How it works
+
+Your app starts a recording session through the capture SDK that ships with the API. It records system audio and the microphone locally, keeps the recording alive through network blips and platform hiccups, and streams the result to Amie's API. You get back a live transcript with speaker labels, then a summary and action items when the meeting ends, delivered by webhook or fetched from the API. Calendar context is built in: sessions can be linked to the event they belong to, so recordings arrive organized instead of as anonymous audio files.
+
+What you get
+
+On-device capture, no bot
+
+Works on every platform
+
+Live transcription
+
+Speaker labels
+
+Summaries & action items
+
+Raw audio access
+
+Webhooks & REST API
+
+Calendar context
+
+Battle-tested recovery
+
+The recorder handles the failure modes we've already spent years on: frozen capture daemons, device switches mid-call, flaky networks, and meetings that outlive their scheduled slot. You integrate once and ship; we keep the recordings alive.
+
+Built for products, not just notes
+
+Teams use meeting recording APIs to power CRMs that log calls automatically, recruiting tools that capture interviews, sales coaching that needs every conversation, and AI assistants that turn meetings into structured data. If your roadmap says "record the meeting," the hard part isn't the feature, it's the recording infrastructure underneath it. That's the part we've already built.
+
+Questions, answered
+
+What is the Amie Recording API?
+
+What is a meeting bot API?
+
+How is bot-free recording different from a meeting bot API?
+
+Which meeting platforms are supported?
+
+Does it include a meeting transcription API?
+
+When can I get access?
+
+What does it cost?
+
+Building on meetings? Let's talk.
+
+The API is rolling out to early-access partners now. Tell us what you're building and we'll fast-track you.
+
+[/contact?sales] Get in touchSee how it works
+
+[/blog] Blog[/stories] Our Story[/calendar] Calendar[/changelog] Changelog[/tools] Tools[/templates] Templates[/alternatives] Alternatives[/best] Best Apps[/mcp] MCP Server[/recording-api] Recording API[/routines] Routines[/tools/ai-response-generator] AI Response Generator
+
+[/contact] Contact us[/download] Download[/affiliate] Affiliates[/reviews] Reviews[/art] Art
+
+[https://www.linkedin.com/company/tryamie/] LinkedIn[https://www.instagram.com/tryamie/] Instagram[https://x.com/tryamie] x.com
+
+[/privacy] Privacy Policy[/terms] Terms of use[/imprint] Imprint
+© Amie 2026
+

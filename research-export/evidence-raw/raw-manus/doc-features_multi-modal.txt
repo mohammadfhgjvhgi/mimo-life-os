@@ -1,0 +1,442 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Multimedia Processing - Manus Documentation 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
+## Documentation Index
+Fetch the complete documentation index at: /docs/llms.txt 
+Use this file to discover all available pages before exploring further.
+Skip to main content 
+Manus Documentation home page English 
+
+Search...
+
+⌘ K Ask Assistant 
+
+Search... 
+
+Navigation 
+Multimedia Processing
+
+Introduction 
+Features 
+Website Builder 
+Integrations 
+
+- Projects 
+
+- Manus Skills 
+
+- Design View 
+
+- Wide Research 
+
+- Manus Slides 
+
+- Scheduled Tasks 
+
+- Data Analysis & Visualization 
+
+- Multimedia Processing 
+
+- Mail Manus 
+
+- Manus Collab 
+
+- Cloud browser 
+
+- Browser Operator 
+
+- Desktop 
+
+- Meeting minutes 
+
+## On this page 
+
+- Capabilities Overview 
+
+- Image Generation 
+- Quick Start 
+
+- Common Uses 
+
+- Tips for Better Images 
+
+- Image Understanding 
+- Quick Start 
+
+- Common Uses 
+
+- Example Tasks 
+
+- Video Understanding 
+- Quick Start 
+
+- Common Uses 
+
+- Example Tasks 
+
+- Voice Output 
+- Quick Start 
+
+- Common Uses 
+
+- Voice Options 
+
+- Speech to Text 
+- Quick Start 
+
+- Common Uses 
+
+- Features 
+
+- Combining Multiple Modes 
+- Example 1: Video to Blog Post 
+
+- Example 2: Presentation with Voiceover 
+
+- Example 3: Image Analysis to Report 
+
+- Common Questions 
+
+- Quick Use Cases 
+
+# Multimedia Processing
+
+Generate and understand images, video, voice, and speech
+
+Manus works with multiple media types—generating images, understanding video content, creating voice output, and transcribing speech. Combine text, images, video, and audio in your workflows seamlessly. 
+
+## ​ 
+
+Capabilities Overview 
+
+Capability What It Does Example Use 
+Image Generation Create custom images from descriptions Product mockups, illustrations, diagrams 
+Image Understanding Analyze and extract info from images Document scanning, visual analysis 
+Video Understanding Analyze video content and extract insights Meeting transcripts, content analysis 
+Voice Output Convert text to natural speech Voiceovers, audio content 
+Speech to Text Transcribe audio to text Meeting notes, interview transcripts 
+
+## ​ 
+
+Image Generation 
+
+### ​ 
+
+Quick Start 
+
+“Generate an image of a modern minimalist office workspace
+with natural lighting and plants” 
+
+### ​ 
+
+Common Uses 
+
+Product Visuals : 
+
+- Product mockups and prototypes
+
+- Feature illustrations
+
+- UI/UX concepts
+
+Marketing Assets : 
+
+- Social media graphics
+
+- Blog post illustrations
+
+- Ad creatives
+
+Presentations : 
+
+- Custom slide backgrounds
+
+- Concept illustrations
+
+- Visual metaphors
+
+Diagrams & Charts : 
+
+- Process flows
+
+- System architectures
+
+- Infographics
+
+### ​ 
+
+Tips for Better Images 
+
+Be specific about style : 
+
+- ✅ “Minimalist, modern, professional photography”
+
+- ✅ “Flat design illustration, bright colors”
+
+- ❌ “Make it look good”
+
+Describe composition : 
+
+- ✅ “Centered subject, blurred background, natural lighting”
+
+- ❌ “A picture of…”
+
+Specify use case : 
+
+- ✅ “For Instagram post, square format, bold text overlay”
+
+- ✅ “For presentation slide, wide format, subtle background”
+
+## ​ 
+
+Image Understanding 
+
+### ​ 
+
+Quick Start 
+
+(Upload image) 
+
+(Upload image) 
+
+(Upload image) 
+
+### ​ 
+
+Common Uses 
+
+Document Processing : 
+
+- Extract text from screenshots
+
+- Read handwritten notes
+
+- Parse receipts and invoices
+
+Visual Analysis : 
+
+- Identify objects in photos
+
+- Analyze charts and graphs
+
+- Describe image content
+
+Quality Control : 
+
+- Check product photos for issues
+
+- Verify image content
+
+- Compare visual differences
+
+### ​ 
+
+Example Tasks 
+
+## ​ 
+
+Video Understanding 
+
+### ​ 
+
+Quick Start 
+
+(Upload video file or provide URL) 
+
+### ​ 
+
+Common Uses 
+
+Meeting Processing : 
+
+- Transcribe meetings
+
+- Extract action items
+
+- Summarize discussions
+
+Content Analysis : 
+
+- Analyze competitor videos
+
+- Extract key points from tutorials
+
+- Review product demos
+
+Documentation : 
+
+- Convert video tutorials to text guides
+
+- Create summaries of long videos
+
+- Extract quotes and timestamps
+
+### ​ 
+
+Example Tasks 
+
+## ​ 
+
+Voice Output 
+
+### ​ 
+
+Quick Start 
+
+### ​ 
+
+Common Uses 
+
+Content Creation : 
+
+- Podcast scripts to audio
+
+- Blog posts to audio versions
+
+- Video voiceovers
+
+Accessibility : 
+
+- Audio versions of written content
+
+- Screen reader alternatives
+
+- Audio guides
+
+Marketing : 
+
+- Ad voiceovers
+
+- Product demo narration
+
+- Social media audio content
+
+### ​ 
+
+Voice Options 
+
+Tone : Professional, friendly, casual, energetic, calm Pace : Fast, moderate, slow Style : Conversational, formal, educational, promotional 
+
+## ​ 
+
+Speech to Text 
+
+### ​ 
+
+Quick Start 
+
+(Upload audio file) 
+
+### ​ 
+
+Common Uses 
+
+Meeting Notes : 
+
+- Transcribe meetings automatically
+
+- Create searchable meeting archives
+
+- Extract action items
+
+Content Repurposing : 
+
+- Convert podcasts to blog posts
+
+- Create show notes from audio
+
+- Generate social media quotes
+
+Research : 
+
+- Transcribe interviews
+
+- Analyze customer calls
+
+- Process focus group recordings
+
+### ​ 
+
+Features 
+
+- Speaker identification : Distinguish between speakers
+
+- Timestamps : Mark when things were said
+
+- Formatting : Proper punctuation and paragraphs
+
+- Accuracy : High accuracy even with accents or background noise
+
+## ​ 
+
+Combining Multiple Modes 
+
+Manus can combine these capabilities in single workflows: 
+
+### ​ 
+
+Example 1: Video to Blog Post 
+
+### ​ 
+
+Example 2: Presentation with Voiceover 
+
+### ​ 
+
+Example 3: Image Analysis to Report 
+
+## ​ 
+
+Common Questions 
+
+What image formats are supported? PNG, JPG, WEBP, GIF, and more. For generation, you can specify format. 
+How long can videos be? Manus can process videos up to several hours long. Longer videos take more time. 
+What audio formats work for transcription? MP3, WAV, M4A, WEBM, and most common audio formats. 
+Can I generate images in specific sizes? Yes. Specify dimensions: “Generate a 1920x1080 image…” or “Square format for Instagram…” 
+How accurate is speech transcription? Very high accuracy, even with accents, multiple speakers, or background noise. 
+Can I generate videos? Yes. Manus can generate short video clips and animations. 
+Are there limits on generation? Generation uses credits. Check your plan for limits. 
+
+## ​ 
+
+Quick Use Cases 
+
+Use Case Input Output 
+Product Mockups Description Generated images 
+Meeting Notes Video recording Transcript + summary 
+Blog Audio Text article Audio narration 
+Document Scanning Photo of document Extracted text 
+Video Analysis Competitor video Feature comparison 
+Podcast Show Notes Audio file Transcript + summary 
+Social Graphics Description Custom images 
+
+Bottom line : Manus handles multiple media types seamlessly. Generate images, understand video, create voice output, and transcribe speech—all integrated into your workflows. 
+Data Analysis & Visualization
+Mail Manus
+⌘ I 
+
+instagram linkedin x youtube 
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform 
+
+Assistant 
+
+Responses are generated using AI and may contain mistakes.

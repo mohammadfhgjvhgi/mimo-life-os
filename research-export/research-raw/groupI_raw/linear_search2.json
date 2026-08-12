@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://www.youtube.com/watch?v=4muxFVZ4XfM",
+    "name": "Inside Linear: Building with taste, craft, and focus",
+    "snippet": "Karri Saarinen is the co-founder and CEO of Linear, an issue-tracking tool that has quickly become the fastest-growing and most beloved in the ...",
+    "host_name": "www.youtube.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://karrisaarinen.com/posts/starting-linear-app",
+    "name": "Starting Linear",
+    "snippet": "Introducing the more enjoyable and efficient way to manage software development and issue tracking with Linear.",
+    "host_name": "karrisaarinen.com",
+    "rank": 1,
+    "date": "Apr 28, 2019",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=9tjtfhoTiYU",
+    "name": "Figma design demo: Linear release page with Karri Saarinen",
+    "snippet": "Linear's CEO Karri shares how we designed and built the Linear 2020.12 release page from concept to production and built it in about a week.",
+    "host_name": "www.youtube.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/karrisaarinen_issue-trackers-were-built-for-an-era-of-handoffs-activity-7442275242804322304-wdl9",
+    "name": "Linear streamlines feedback, decisions, and code for",
+    "snippet": "Feedback, decisions, plans, and code in one system, so humans and agents can move work all the way to production.",
+    "host_name": "www.linkedin.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/linear-app/announcing-linear-e64e79581d01",
+    "name": "Announcing Linear - by Karri Saarinen",
+    "snippet": "Think sprint workflows, starting branches for code, triaging bugs, smart status updates and signals how things are tracking.",
+    "host_name": "medium.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://linear.app/now/press",
+    "name": "Press",
+    "snippet": "Karri Saarinen helped shape design at Airbnb and Coinbase before building Linear around small teams and high standards.",
+    "host_name": "linear.app",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

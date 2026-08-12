@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://medium.com/data-science/4-autonomous-ai-agents-you-need-to-know-d612a643fa92",
+    "name": "4 Autonomous AI Agents you need to know",
+    "snippet": "The key feature of BabyAGI is just three agents : Task Execution Agent , Task Creation Agent , and Task Prioritization Agent . 1) The task execution ...",
+    "host_name": "medium.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=jvpCvRSxXQI&vl=en",
+    "name": "Auto-GPT, BabyAGI, and 4 autonomous agents you must try",
+    "snippet": "Learn about 4 autonomous AI agents in this video. We talk about Auto-GPT, BabyAGI, Camel, and the LangChain framework. Don't learn AI Agents ...",
+    "host_name": "www.youtube.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.facebook.com/FastCompany/posts/given-the-energy-around-generative-ai-and-the-current-pace-of-development-theres/620178469976619",
+    "name": "Given the energy around generative AI and the current",
+    "snippet": "Fully autonomous agents remain limited due to challenges in reliability, reasoning, and access — but that's changing.",
+    "host_name": "www.facebook.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=90464Ht7vhQ",
+    "name": "The Problems with AutoGPT and BabyAGI: How Useful Are",
+    "snippet": "AutoGPT has massively captured the attention of the AI community. The Problems with AutoGPT and BabyAGI : How Useful Are They Really? BabyAGI - ...",
+    "host_name": "www.youtube.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://sidsaladi.substack.com/p/week-36-exploring-the-new-frontier",
+    "name": "Week 36 - Exploring the New Frontier of Autonomous AI Agents",
+    "snippet": "Although autonomous agents represent an exciting advancement in AI, they are still largely experimental and face certain limitations . One ...",
+    "host_name": "sidsaladi.substack.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.tomshardware.com/news/autonomous-agents-new-big-thing",
+    "name": "Auto-GPT and BabyAGI Are AI's New Hotness, But They",
+    "snippet": "Apr 22, 2023 — The default objective for BabyAGI is “Solve World Hunger” and it showcases one of the biggest problems with autonomous agents : they just can't ...",
+    "host_name": "www.tomshardware.com",
+    "rank": 5,
+    "date": "Apr 22, 2023",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.bairesdev.com/blog/the-rise-of-autonomous-agents-autogpt-agentgpt-and-babyagi",
+    "name": "The Rise of Autonomous Agents: AutoGPT, AgentGPT, and",
+    "snippet": "May 13, 2026 — It can automate tasks: AutoGPT can be used to automate a variety of tasks , such as writing code, generating text, translating languages, ...",
+    "host_name": "www.bairesdev.com",
+    "rank": 6,
+    "date": "May 13, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.fastcompany.com/90880294/auto-gpt-and-babyagi-how-autonomous-agents-are-bringing-generative-ai-to-the-masses",
+    "name": "Autonomous agents Auto-GPT and BabyAGI are bringing",
+    "snippet": "Apr 13, 2023 — And they have some serious limitations that prevent them from getting what they want from large language models. They often struggle to keep ...",
+    "host_name": "www.fastcompany.com",
+    "rank": 7,
+    "date": "Apr 13, 2023",
+    "favicon": ""
+  }
+]

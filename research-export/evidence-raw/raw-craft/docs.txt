@@ -1,0 +1,4 @@
+before any CSS evaluates so the first paint already matches the user's choice.
+Without this, ThemeProvider only stamps the attributes after React mounts, producing a light/blue flash on every cold load (and on every spare-tab adoption).
+Mirrors the resolution logic in src/theme/theme-store.ts.
+--> Craft — A fresh take on documents --> -->

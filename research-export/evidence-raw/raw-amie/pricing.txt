@@ -1,0 +1,99 @@
+Amie - Pricing
+
+[/] 
+
+Features
+
+[/pricing] Pricing
+
+[https://calendar.amie.so/login] Login[https://calendar.amie.so/login] Get started
+
+Which plan is right for you? Use our 7 day free trial.
+
+Get 20% off with yearly
+
+Bill monthly
+
+Bill yearly
+
+Pro
+Select
+
+Business
+Select
+
+Google calendars
+
+Unlimited
+
+Unlimited
+
+Apple calendars
+
+Unlimited
+
+Unlimited
+
+Todo lists
+
+Unlimited
+
+Unlimited
+
+Todo integrations
+
+Unlimited
+
+Unlimited
+
+Calendar in menu bar
+
+Pomodoro timer
+
+Meeting notes
+
+Unlimited
+
+Unlimited
+
+Bot-free recordings
+
+Chat with notes
+
+AI Scheduling
+
+Upload audio files as AI Notes
+
+Custom templates
+
+Custom branding on shared meeting notes
+
+Advanced integrations (ATS/CRM)
+
+FAQs
+
+You can find answers to most questions here.
+
+Can I use Amie at my company?
+
+I've already used my trial. Can I get another one?
+
+Where do I connect more accounts?
+
+How does Amie protect my privacy?
+
+When can I use Amie on my device?
+
+Where can I send a feature request or report a bug?
+
+Which video call providers do you support?
+
+[/blog] Blog[/stories] Our Story[/calendar] Calendar[/changelog] Changelog[/tools] Tools[/templates] Templates[/alternatives] Alternatives[/best] Best Apps[/mcp] MCP Server[/recording-api] Recording API[/routines] Routines[/tools/ai-response-generator] AI Response Generator
+
+[/contact] Contact us[/download] Download[/affiliate] Affiliates[/reviews] Reviews[/art] Art
+
+[https://www.linkedin.com/company/tryamie/] LinkedIn[https://www.instagram.com/tryamie/] Instagram[https://x.com/tryamie] x.com
+
+[/privacy] Privacy Policy[/terms] Terms of use[/imprint] Imprint
+© Amie 2026
+

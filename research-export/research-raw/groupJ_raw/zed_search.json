@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://zed.dev",
+    "name": "Zed — Your last next editor",
+    "snippet": "Zed is a high-performance, multiplayer code editor … efficiently leverage multiple CPU cores and your GPU.",
+    "host_name": "zed.dev",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://news.ycombinator.com/item?id=43912844",
+    "name": "Zed: High-performance AI Code Editor",
+    "snippet": "May 7, 2025 — You don't need a high-end gpu zed runs perfectly fine on embedded graphics. result in cpu graphics rendering , which is the problem.",
+    "host_name": "news.ycombinator.com",
+    "rank": 1,
+    "date": "May 7, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@robert-baer/zed-a-next-generation-ai-powered-code-editor-for-modern-developers-5c77125544c5",
+    "name": "Zed: A Next Generation AI Powered Code Editor for",
+    "snippet": "Built in Rust and using GPU rendering , Zed is engineered for minimal latency. It delivers near instant startup, lightning fast file loading, ...",
+    "host_name": "medium.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/zed-industries/zed/discussions/17212",
+    "name": "Is Zed only useable on GPU-enabled machines? #17212",
+    "snippet": "zed uses vulkan for rendering and requires a compatible gpu. will result in awful performance. Zed is a performative editor. it doesn't unless specific GPU ...",
+    "host_name": "github.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/rust/comments/11s0yrp/zed_a_highperformance_multiplayer_code_editor",
+    "name": "r/rust - Zed – A high-performance, multiplayer code editor",
+    "snippet": "Zed – A high-performance, multiplayer code editor written in Rust. features than lapce. Which is also rust based and fast.",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://tech-insider.org/zed-vs-vscode-2026",
+    "name": "Zed vs VS Code 2026: 2x Startup Speed and 16x Memory",
+    "snippet": "Apr 11, 2026 — Zed uses a custom GPU-accelerated rendering framework called GPUI . Zed's native multiplayer editing is built into the core of the editor. It ...",
+    "host_name": "tech-insider.org",
+    "rank": 5,
+    "date": "Apr 11, 2026",
+    "favicon": ""
+  }
+]

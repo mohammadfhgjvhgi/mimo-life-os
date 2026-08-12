@@ -1,0 +1,54 @@
+{
+  "code": 200,
+  "data": {
+    "description": "new user experience and data ownership priorities",
+    "external": {
+      "apple-touch-icon": {
+        "https://hilton.org.uk/apple-touch-icon.png": {}
+      },
+      "icon": {
+        "https://hilton.org.uk/favicon.png": {
+          "sizes": "16x16",
+          "type": "image/png"
+        }
+      },
+      "mask-icon": {
+        "https://hilton.org.uk/h.svg": {
+          "color": "#DF5A49"
+        }
+      }
+    },
+    "html": "<html lang=\"en\"><head>\n<meta charset=\"utf-8\">\n<title>Anytype’s local-first architecture - Peter Hilton</title>\n<meta name=\"author\" content=\"Peter Hilton\">\n<meta prefix=\"og: http://ogp.me/ns#\" property=\"og:locale\" content=\"en_GB\">\n<meta prefix=\"og: http://ogp.me/ns#\" property=\"og:type\" content=\"article\">\n<meta prefix=\"og: http://ogp.me/ns#\" property=\"og:title\" content=\"Anytype’s local-first architecture\">\n<meta prefix=\"og: http://ogp.me/ns#\" property=\"og:description\" content=\"new user experience and data ownership priorities\">\n<meta prefix=\"og: http://ogp.me/ns#\" property=\"og:url\" content=\"https://hilton.org.uk/blog/anytype-local-first\">\n<meta prefix=\"og: http://ogp.me/ns#\" property=\"og:image\" content=\"https://hilton.org.uk/blog/local.jpg\">\n<meta prefix=\"og: http://ogp.me/ns#\" property=\"og:image:alt\" content=\"blog illustration\">\n<meta prefix=\"og: http://ogp.me/ns#\" property=\"article:published_time\" content=\"2025-05-27T00:00:00+0100\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n<meta name=\"twitter:site\" content=\"@PeterHilton\">\n<meta name=\"twitter:creator\" content=\"@PeterHilton\">\n<link rel=\"icon\" href=\"/favicon.png\" sizes=\"16x16\" type=\"image/png\">\n<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\">\n<link rel=\"mask-icon\" href=\"/h.svg\" color=\"#DF5A49\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"../style/hh.css\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"../style/pygments.css\">\n\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"description\" content=\"new user experience and data ownership priorities\">\n\n</head>\n<body class=\"writing\">\n\n<section class=\"main\"></section>\n<section class=\"development\"></section>\n<section class=\"writing\">\n\t<nav role=\"navigation\">\n\t\t<ul>\n\t\t\t<li><a href=\"/\">home</a></li>\n\t\t\t<li><a href=\"../about\">about</a></li>\n\t\t\t<li><a href=\"../contact\">contact</a></li>\n\t\t</ul>\n\t</nav>\n\t<h2><a href=\"/blog/\">Writing by Peter Hilton</a></h2>\n</section>\n<section class=\"speaking\"></section>\n<section class=\"music\"></section>\n\n<article itemscope=\"\" itemtype=\"http://schema.org/Article\">\n\n\n<header>\n\t<h1 itemprop=\"name\">Anytype’s local-first architecture</h1>\n\t<p><span itemprop=\"description\">new user experience and data ownership priorities</span>\n\t<em>2025-05-27 #product #review</em></p>\n</header>\n\n\n<p><img src=\"local.jpg\" alt=\"\"></p>\n\n<p><a href=\"https://unsplash.com/photos/qvWnGmoTbik\" class=\"photocredit\">Tim Mossholder</a></p>\n\n<ol class=\"series\">\n  <li><a href=\"anytype-review\">Anytype review</a></li>\n  <li>Anytype architecture ←</li>\n</ol>\n\n<p><a href=\"anytype-review\">Anytype</a>\noffers a Notion alternative whose user-experience improvements go beyond its user interface.\nInstead of highlighting the user interface,\nthe <a href=\"https://anytype.io\">Anytype web site</a> focuses on the benefits of its local-first architecture:</p>\n\n<ul>\n  <li>data privacy</li>\n  <li>access your data without third-party services</li>\n  <li>third-parties can’t access your data</li>\n  <li>third-parties can’t control your access to your data.</li>\n</ul>\n\n<p>(The writing experience –&nbsp;‘compose beautifully’ –&nbsp;comes later.)\nIn general, local-first software delivers these benefits by design.</p>\n\n<h2 id=\"local-first-software\">Local-first software</h2>\n\n<p>In their essay,\n<a href=\"https://www.inkandswitch.com/essay/local-first/\">Local-first software: you own your data, in spite of the cloud</a>,\nthe team that coined the term <em>local-first software</em> focus on improving collaboration and data ownership,\nby applying seven <em>ideals</em> to software design.</p>\n\n<ol>\n  <li>‘<a href=\"https://www.inkandswitch.com/essay/local-first/#1-no-spinners-your-work-at-your-fingertips\">No spinners: your work at your fingertips</a>’ –&nbsp;a responsive user interface</li>\n  <li>‘<a href=\"https://www.inkandswitch.com/essay/local-first/#2-your-work-is-not-trapped-on-one-device\">Your work is not trapped on one device</a>’</li>\n  <li>‘<a href=\"https://www.inkandswitch.com/essay/local-first/#3-the-network-is-optional\">The network is optional</a>’ –&nbsp;work offline, or on an unreliable network</li>\n  <li>‘<a href=\"https://www.inkandswitch.com/essay/local-first/#4-seamless-collaboration-with-your-colleagues\">Seamless collaboration with your colleagues</a>’ –&nbsp;avoid editing conflicts</li>\n  <li>‘<a href=\"https://www.inkandswitch.com/essay/local-first/#5-the-long-now\">The Long Now</a>’ –&nbsp;keeping data accessible for years to come</li>\n  <li>‘<a href=\"https://www.inkandswitch.com/essay/local-first/#6-security-and-privacy-by-default\">Security and privacy by default</a>’</li>\n  <li>‘<a href=\"https://www.inkandswitch.com/essay/local-first/#7-you-retain-ultimate-ownership-and-control\">You retain ultimate ownership and control</a>’</li>\n</ol>\n\n<p>See also: <a href=\"https://media.ccc.de/v/bob11-2025-local-first-software-bieniusa\">Annette Bieniusa’s conference presentation about local-first software</a>.</p>\n\n<p>These seven ideals result in a different user experience to cloud-based collaboration platforms like Notion.\nBut only the first immediately becomes apparent in the user-interface.</p>\n\n<h2 id=\"user-interface-responsiveness\">User-interface responsiveness</h2>\n\n<p><em>Local-first</em> literally means storing all of the data locally, on your computer.\nWhen you use Anytype, this data loads without the network latency we get used to with cloud apps.\nChanges are then synchronised over the network asynchronously,\nmuch like in Notion and Google Docs.</p>\n\n<p>Not waiting seconds for pages to load, and for search results to appear, elevates the user experience.\nExpert users who use keyboard shortcuts find this responsiveness especially satisfying,\nbecause of how it allows them to work faster.</p>\n\n<h2 id=\"data-ownership\">Data ownership</h2>\n\n<p>US politics in 2025 have prompted European companies to look for alternatives to US software.\nUS control of your data poses new potential risks,\nsuch as losing access to data, and losing GDPR compliance with little notice,\nin the case that the EU-US data protection framework adequacy decision collapses.</p>\n\n<p>Anytype belongs to a Swiss/German organisation, and you always have your data locally,\nso you have less reason to worry about someone else blocking your access to your own data.\nMeanwhile, Anytype encrypts your local data, using a key that only you have.\nYou get control over who can access your data, and which devices can synchronise it.</p>\n\n<h2 id=\"data-portability\">Data portability</h2>\n\n<p>Anytype also makes it easy to move your data elsewhere.\nYou can export your data as an archive of Markdown documents, \nor export a single page to Markdown or PDF.\nBecause your data is local, this doesn’t depend on access to a cloud service, or its availability.</p>\n\n<h2 id=\"offline-functionality\">Offline functionality</h2>\n\n<p>Anytype’s local-first architecture means that you always work on local data,\nso you don’t need a network connection to view and edit content.\nThe network synchronises your changes with other devices, after you make those changes,\nso you can work offline.\nWhen you reconnect to the network, Anytype will synchronise updates.</p>\n\n<p>As well as enabling offline work, working local-first and then synchronising means that \na bad network connection won’t degrade your user experience.\nEven if you never work while traveling, for example,\nyou’ll no longer notice the occasional network issues that cause video calls to freeze for a few seconds.</p>\n\n\n</article>\n\n<article class=\"related\">\n\n\tPrevious article: <a href=\"/blog/97-jokes\">97 Jokes Every Programmer Should Know</a>\n\t<br>\n\n\n\tNext article: <a href=\"/blog/document-quantities\">Document precise quantities</a>\n\n</article>\n\n\n\n\n\n<section class=\"social\">\n<p><a href=\"https://bsky.app/intent/compose?text=Anytype%E2%80%99s+local-first+architecture%3A+new+user+experience+and+data+ownership+priorities+%23product+%23review+%7C+by+%40hilton.org.uk+https%3A%2F%2Fhilton.org.uk%2Fblog%2Fanytype-local-first\"><img src=\"../picture/social/minimal/bluesky.png\" srcset=\"../picture/social/minimal/bluesky-64.png 2x\" alt=\"Share on Bluesky\"></a><a href=\"http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fhilton.org.uk%2Fblog%2Fanytype-local-first&amp;title=Anytype%E2%80%99s+local-first+architecture&amp;summary=new+user+experience+and+data+ownership+priorities+%23product+%23review&amp;source=Presentations+by+Peter+Hilton\"><img src=\"../picture/social/minimal/linkedin.png\" alt=\"Share on LinkedIn\"></a></p>\n</section>\n\n\n<footer class=\"text-muted\">\n<p>Feedback by mail to peter.hilton○gmail.com\n • Content &amp; page design ©1996-2026 Peter Hilton • This web site (excluding images and presentations) is licensed under a <a href=\"http://creativecommons.org/licenses/by-nc-sa/4.0/\">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> - required attribution is the credit ‘Peter Hilton - https://hilton.org.uk/’. \n</p>\n</footer>\n\n\n\n</body></html>",
+    "httpStatus": 200,
+    "httpStatusText": "OK",
+    "metadata": {
+      "article:published_time": "2025-05-27T00:00:00+0100",
+      "author": "Peter Hilton",
+      "description": "new user experience and data ownership priorities",
+      "lang": "en",
+      "og:description": "new user experience and data ownership priorities",
+      "og:image": "https://hilton.org.uk/blog/local.jpg",
+      "og:image:alt": "blog illustration",
+      "og:locale": "en_GB",
+      "og:title": "Anytype’s local-first architecture",
+      "og:type": "article",
+      "og:url": "https://hilton.org.uk/blog/anytype-local-first",
+      "twitter:card": "summary_large_image",
+      "twitter:creator": "@PeterHilton",
+      "twitter:site": "@PeterHilton",
+      "viewport": "width=device-width, initial-scale=1"
+    },
+    "publishedTime": "2025-05-27T00:00:00+0100",
+    "title": "Anytype’s local-first architecture",
+    "url": "https://hilton.org.uk/blog/anytype-local-first",
+    "usage": {
+      "tokens": 2335
+    }
+  },
+  "meta": {
+    "usage": {
+      "tokens": 2335
+    }
+  },
+  "status": 200
+}

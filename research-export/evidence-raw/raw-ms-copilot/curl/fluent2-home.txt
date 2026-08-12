@@ -1,0 +1,81 @@
+TITLE: Home - Fluent 2 Design System
+
+Home - Fluent 2 Design System 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
+- 
+Skip to main content 
+
+Search / 
+
+Employee sign-in 
+
+Search / 
+
+Welcome to
+
+Let the flow 
+
+Design
+Dive into our Figma UI kits
+Get started → 
+
+Develop
+Find installation guides and tooling tips
+Get started → 
+
+Components
+Web 
+iOS 
+Android 
+Windows 
+
+Newsworthy
+
+A new era of Teams
+Teams leverages Fluent 2 to boost performance and reduce complexity
+
+Emoji update
+Whatever the moment calls for, there's an emoji for that
+
+A modern Outlook
+Outlook, Windows, and Fluent unite for a customizable hub experience
+
+Resources
+
+A11y – Focus Order
+Quickly annotate your design’s focus and tab order for a meaningful flow of interactive objects.
+
+A11y – Color Contrast Checker
+Ensure your text is readable by adhering to Web Content Accessibility Guideline standards.
+
+Content Reel
+Design layouts more efficiently by pulling text strings, images, and icons from one palette.
+
+Icon Scaling Tool
+Creating multiple sizes of icons is easy. Draw once and scale to multiple sizes with a single click.
+
+- Fluent 1 
+
+- Microsoft Design 
+
+- Inclusive Design 
+
+- Medium 
+
+- Feedback 
+
+- Contact Microsoft 
+
+- Trademarks 
+
+- Terms of use 
+
+- 
+© Microsoft 2026

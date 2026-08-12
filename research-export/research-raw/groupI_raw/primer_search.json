@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://primer.style",
+    "name": "GitHub Primer",
+    "snippet": "Primer's design tokens for color, spacing, and typography . Hub The blog Catch up on what's new with design at GitHub.",
+    "host_name": "primer.style",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/primer/primitives",
+    "name": "primer/primitives: Color, typography, and spacing",
+    "snippet": "This repo contains values for color, spacing, and typography primitives for use with Primer , GitHub's design system. Motion CSS imports are required for  ...",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://primer.style/product/primitives/token-names",
+    "name": "Token names",
+    "snippet": "Intro. Primer design tokens are named using a consistent convention to make it easier to understand what they do and how they should be used at a glance. Read more",
+    "host_name": "primer.style",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/primer/primitives/blob/main/DESIGN_TOKENS_GUIDE.md",
+    "name": "DESIGN_TOKENS_GUIDE.md - primer/primitives",
+    "snippet": "This file defines the Logic and Rules for the design system. * tokens for interactive state changes. Create indefinitely looping motion without user control … ...",
+    "host_name": "github.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=SjOieV8seec",
+    "name": "Invisible Infrastructure: How we shipped new color tokens",
+    "snippet": "This talk will touch on how the Primer design system team revamped Primer Primitives with a new naming convention and build process, connecting ...",
+    "host_name": "www.youtube.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://primer.style/product/getting-started/foundations/color-usage",
+    "name": "Color usage",
+    "snippet": "Primer delivers colors in the form of design tokens . Design tokens are a layer of abstraction that allows for better maintainability, consistency and theming. Read more",
+    "host_name": "primer.style",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

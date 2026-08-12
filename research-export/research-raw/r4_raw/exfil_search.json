@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://www.nightfall.ai/blog/ai-agent-audit-logging",
+    "name": "Best AI Agent Security & MCP Security Platforms for AI",
+    "snippet": "Jul 14, 2026 — Compare the best AI agent security and MCP security platforms for audit logging, compliance , and real-time AI data governance in 2026.",
+    "host_name": "www.nightfall.ai",
+    "rank": 0,
+    "date": "Jul 14, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://utmstack.com/data-exfiltration-prevention",
+    "name": "Mastering Data Exfiltration Prevention in 2026",
+    "snippet": "Centralize telemetry: Bring cloud audit logs , endpoint events, firewall logs , identity activity, and file access records into one analysis workflow.",
+    "host_name": "utmstack.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/purview/ai-agent-365",
+    "name": "Use Microsoft Purview to manage data security &",
+    "snippet": "May 1, 2026 — Use Microsoft Purview to help you protect and manage data security and compliance protections for Microsoft Agent 365. see Audit logs for ...",
+    "host_name": "learn.microsoft.com",
+    "rank": 2,
+    "date": "May 1, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.armosec.io/blog/minimum-viable-audit-trail",
+    "name": "What to Log for AI Agent Activity: The Minimum Viable Audit Trail",
+    "snippet": "Jun 1, 2026 — The audit log proves the agent was scheduled; it cannot prove any Kubernetes distribution — it has to be added, and once added it sits between ...",
+    "host_name": "www.armosec.io",
+    "rank": 3,
+    "date": "Jun 1, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.mintmcp.com/blog/audit-unauthorized-ai-agents",
+    "name": "How to Audit Unauthorized AI Agents in Your Organization",
+    "snippet": "Jan 28, 2026 — Learn how to audit unauthorized AI agents in your organization to identify risks, enforce governance, and maintain secure AI operations.",
+    "host_name": "www.mintmcp.com",
+    "rank": 4,
+    "date": "Jan 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cyberhaven.com/infosec-essentials/what-is-audit-log",
+    "name": "What Is an Audit Log? Guide for Security Leaders",
+    "snippet": "Mar 31, 2026 — Audit logs specifically record security-relevant events tied to accountability, compliance , and access control. All audit entries are events ... Read more",
+    "host_name": "www.cyberhaven.com",
+    "rank": 5,
+    "date": "Mar 31, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/AI_associates/comments/1nsmzxy/how_can_audit_logging_and_forensics_make_ai",
+    "name": "How Can Audit Logging and Forensics Make AI Agents",
+    "snippet": "In practice, a robust audit logging system transforms AI agents from black boxes into accountable actors. It supports compliance , debugging, and ... Read more",
+    "host_name": "www.reddit.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.lyzr.ai/ai-agents/ai-agents-for-ai-audit-trails",
+    "name": "AI Agents for AI Audit Trails | Enterprise Compliance",
+    "snippet": "Our AI audit trails provide the verifiable evidence needed to demonstrate compliance with data protection and privacy regulations.",
+    "host_name": "www.lyzr.ai",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://mcpgate.de/blog/audit-trail-exfiltration-detection",
+    "name": "What flows through, what gets blocked, what gets logged",
+    "snippet": "May 25, 2026 — The audit log is the foundation. PII redaction shapes what gets logged. Throughput is a volume-aware lens on the same log, surfacing ... Read more",
+    "host_name": "mcpgate.de",
+    "rank": 8,
+    "date": "May 25, 2026",
+    "favicon": ""
+  }
+]

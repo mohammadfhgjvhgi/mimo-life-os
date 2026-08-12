@@ -1,0 +1,239 @@
+Use Deep Research in Gemini Apps - Computer - Gemini Apps Help Skip to main content 
+
+Gemini Apps Help 
+
+Sign in 
+
+Google Help 
+
+Help Center
+Community
+Gemini Apps 
+
+Privacy Policy
+Terms of Service
+Submit feedback
+
+Send feedback on...
+
+This help content & information 
+
+General Help Center experience 
+
+Next 
+
+Help Center 
+Community 
+Privacy Hub 
+
+Gemini Apps 
+
+Use Deep Research in Gemini Apps
+You can conduct in-depth and real-time research on almost any subject with Deep Research in Gemini Apps. By default, Gemini includes Google Search as a source for your research. You can change or add other sources, like your personal Gmail or Drive, for your research. You can also upload files and add NotebookLM notebooks. Learn more about Deep Research .
+
+Tip: If you have a Google AI Ultra plan, Deep Research reports may include visuals like charts, diagrams, schematics, and interactive simulators. Learn more about visuals and animations .
+
+What you need
+
+To use Deep Research, you need to:
+
+Be 18 or over. 
+
+Be signed in to the Gemini app. Learn how to sign in to Gemini Apps .
+
+About Deep Research models & limits
+
+Deep Research models 
+
+Google AI Pro and Google AI Ultra users can generate reports using Pro for even higher quality. All users can use Thinking for their reports. Learn how to switch between models .
+
+Deep Research limits 
+
+In Gemini Apps, there are limits for:
+
+Daily research requests
+
+Number of research requests you can run at the same time
+
+If you’re close to your limit, Gemini Apps notifies you how many research requests are left for the day.
+
+Google AI Pro and Google AI Ultra users get higher limits for how many research reports they can create. If you would like to create more research reports, learn more about limits and how to upgrade .
+
+Start a Deep Research report
+
+On your computer, go to gemini.google.com .
+
+In the text box, click Add Files Deep Research .
+
+(Optional) To upload files or an image with your prompt, click Add Files Files .
+
+Learn more about uploading files in Gemini Apps .
+
+(Optional) To choose the sources for your research, click Sources and select the sources you want to include, like Gmail or Drive.
+
+Other Google services, like Gmail and Drive, are only available if the Google Workspace app is connected to Gemini Apps. Learn how to connect Google Workspace to Gemini Apps .
+
+Google Search is included as a source by default. To limit your research to other selected sources, deselect Google Search.
+
+In the text box, enter a question or prompt that explains what you want to research.
+
+Click Submit .
+
+Gemini will create a research plan for your topic.
+
+To update the research plan before you create a report, click Edit plan .
+
+Click Start research .
+
+When your report is ready, click Open .
+
+Tips: 
+
+It usually takes about 5-10 minutes to generate the report since Gemini analyzes many sources. For more complex reports, it may take longer.
+
+While you wait for the report, you can leave the chat. When it’s ready, Gemini will notify you:
+
+In the web app: Next to the chat thread with your completed report.
+
+In the mobile app: As a notification on your device. The notification may appear when your device is locked depending on your settings.
+
+About visuals & animations in reports 
+
+Important: For now, this feature isn’t available if you include any Google Workspace services, like Gmail and Drive, as a source.
+
+With a Google AI Ultra plan, Deep Research reports can include animations and visuals. These visuals help illustrate complex data and research findings, and make reports more comprehensive and easier to understand.
+
+Visuals are included directly in the report and can include:
+
+Charts
+
+Diagrams
+
+Interactive simulators
+
+Find your research reports
+
+Important: You can only find past research reports if your Keep Activity setting is on. Learn how to manage Gemini Apps activity .
+
+Go to gemini.google.com .
+
+If your chats are hidden, at the top, click Menu .
+
+Under “ Recent ,” find your research chat.
+
+Listen to your research report
+
+Go to gemini.google.com .
+
+If your chats are hidden, at the top, click Menu .
+
+Under “ Recent ,” select the chat with your research report.
+
+On the right in the Canvas panel, click Create Audio Overview .
+
+Tip: Learn more about Audio Overviews .
+
+Visualize your research report
+
+Go to gemini.google.com .
+
+If your chats are hidden, at the top, click Menu .
+
+Under “ Recent ,” select the chat with your research report.
+
+On the right in the Canvas panel, click Create. 
+
+To create a custom visualization based on the report, enter the description as a prompt in the text box.
+
+Share, export, or copy your research report
+
+Go to gemini.google.com .
+
+If your chats are hidden, at the top, click Menu .
+
+Under “ Recent ,” select the chat with your research report.
+
+On the right in the Canvas panel, click Share & export . 
+
+Select how you want to share or export the report. 
+
+To share the report, click Share Canvas .
+
+To export the report, click Export to Docs .
+
+To copy the report text, click Copy Contents .
+
+Related resources
+
+Create docs, apps & more with Canvas in Gemini Apps 
+
+Upload & analyze files in Gemini Apps 
+
+Manage your Gemini Pro or Gemini Ultra plan 
+
+Computer Android iPhone & iPad More 
+
+Need more help?
+Try these next steps:
+
+Post to the help community Get answers from community members 
+
+true
+Help 
+1 of 10
+Generate videos with Gemini Apps 
+2 of 10
+Generate & edit images with Gemini Apps 
+3 of 10
+Generate music with Gemini Apps 
+4 of 10
+Create and use an avatar in Gemini Apps 
+5 of 10
+Generate Audio Overviews in Gemini Apps 
+6 of 10
+Create docs, apps & more with Canvas 
+7 of 10
+Use Deep Research in Gemini Apps 
+8 of 10
+Create quizzes, flashcards, practice tests & more in Gemini Apps 
+9 of 10
+Create an illustrated storybook in Gemini Apps 
+10 of 10
+Use learning tools in Gemini Apps 
+
+©2026 Google Privacy Policy 
+Terms of Service 
+
+Language Afrikaans&lrm; azərbaycan&lrm; bosanski&lrm; català&lrm; dansk&lrm; Deutsch&lrm; eesti&lrm; English (United Kingdom)&lrm; español&lrm; español (Latinoamérica)&lrm; euskara&lrm; Filipino&lrm; français&lrm; français (Canada)&lrm; galego&lrm; hrvatski&lrm; Indonesia&lrm; isiZulu&lrm; italiano&lrm; Kiswahili&lrm; latviešu&lrm; lietuvių&lrm; magyar&lrm; Melayu&lrm; Nederlands&lrm; norsk&lrm; o‘zbek&lrm; polski&lrm; português&lrm; português (Brasil)&lrm; română&lrm; shqip&lrm; slovenčina&lrm; slovenščina&lrm; suomi&lrm; svenska&lrm; Tiếng Việt&lrm; Türkçe&lrm; íslenska&lrm; čeština&lrm; Ελληνικά&lrm; беларуская&lrm; български&lrm; македонски&lrm; монгол&lrm; русский&lrm; српски&lrm; українська&lrm; қазақ тілі&lrm; հայերեն&lrm; &rlm; עברית &rlm; اردو &rlm; العربية &rlm; فارسی नेपाली&lrm; मराठी&lrm; हिन्दी&lrm; অসমীয়া&lrm; বাংলা&lrm; ਪੰਜਾਬੀ&lrm; ଓଡ଼ିଆ&lrm; தமிழ்&lrm; తెలుగు&lrm; ไทย&lrm; ລາວ&lrm; ქართული&lrm; አማርኛ&lrm; ខ្មែរ&lrm; 中文（简体）&lrm; 中文（繁體）&lrm; 中文（香港）&lrm; 日本語&lrm; 한국어&lrm; English&lrm; Enable Dark Mode
+
+Send feedback on...
+This help content & information General Help Center experience 
+
+Search
+Clear search
+Close search
+Google apps
+Main menu
+
+7684160496968119332
+true
+
+Search Help Center
+false
+true
+
+true
+
+true
+
+true
+true
+5295044
+false
+
+false
+
+false
+false
+
+false

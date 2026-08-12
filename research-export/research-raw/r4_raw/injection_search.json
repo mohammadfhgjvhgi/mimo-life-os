@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.microsoft.com/en-us/msrc/blog/2025/07/how-microsoft-defends-against-indirect-prompt-injection-attacks",
+    "name": "how-microsoft-defends-against-indirect-prompt-injection-",
+    "snippet": "Jul 29, 2025 — Indirect prompt injection can be used against systems that leverage large language models (LLMs) to process untrusted data. Fundamentally, the ... Read more",
+    "host_name": "www.microsoft.com",
+    "rank": 0,
+    "date": "Jul 29, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection",
+    "name": "LLM01:2025 Prompt Injection - OWASP Gen AI Security Project",
+    "snippet": "Indirect prompt injections occur when an LLM accepts input from external sources, such as websites or files. The content may have in the external content data",
+    "host_name": "genai.owasp.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.crowdstrike.com/en-us/blog/indirect-prompt-injection-attacks-hidden-ai-risks",
+    "name": "Indirect Prompt Injection Attacks: Hidden AI Risks",
+    "snippet": "Dec 4, 2025 — Indirect prompt injection is a hidden threat to GenAI systems, allowing attackers to embed malicious instructions in content AI tools access ...",
+    "host_name": "www.crowdstrike.com",
+    "rank": 2,
+    "date": "Dec 4, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://dl.acm.org/doi/10.1145/3690624.3709179",
+    "name": "Benchmarking and Defending against Indirect Prompt",
+    "snippet": "by J Yi · 2025 · Cited by 461 — This research addresses the critical vulnerability of Large Language Models (LLMs) to indirect prompt injection attacks through external content integration.",
+    "host_name": "dl.acm.org",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://redbotsecurity.com/prompt-injection-attacks-ai-security-2025",
+    "name": "Prompt Injection Attacks in 2025 | Risks, Defenses & Testing",
+    "snippet": "Prompt injection attacks will continue to evolve as attackers learn how to manipulate AI systems indirectly through documents, websites, emails, tickets, code ... Read more",
+    "host_name": "redbotsecurity.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.sentinelone.com/cybersecurity-101/cybersecurity/indirect-prompt-injection-attacks",
+    "name": "What is Indirect Prompt Injection? Risks & Prevention",
+    "snippet": "Oct 31, 2025 — Indirect prompt injection attacks manipulate LLM behavior by embedding malicious instructions in external content your system processes ...",
+    "host_name": "www.sentinelone.com",
+    "rank": 5,
+    "date": "Oct 31, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://unit42.paloaltonetworks.com/ai-agent-prompt-injection",
+    "name": "Web-Based Indirect Prompt Injection Observed in the Wild",
+    "snippet": "Mar 3, 2026 — Uncover real-world indirect prompt injection attacks and learn how adversaries weaponize hidden web content to exploit LLMs for high-impact ...",
+    "host_name": "unit42.paloaltonetworks.com",
+    "rank": 6,
+    "date": "Mar 3, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.obsidiansecurity.com/blog/prompt-injection",
+    "name": "Prompt Injection Attacks: The Most Common AI Exploit in",
+    "snippet": "7 days ago — Prompt injection attacks exploit LLM instruction following behavior to override system directives, bypass security controls, and access ... Read more",
+    "host_name": "www.obsidiansecurity.com",
+    "rank": 7,
+    "date": "Aug 1, 2026",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://aider.chat",
+    "name": "Aider - AI Pair Programming in Your Terminal",
+    "snippet": "AI pair programming in your terminal . Aider lets you pair program with LLMs to start a new project or build on your existing codebase. Read more",
+    "host_name": "aider.chat",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@jmoral4/ai-pair-programming-my-journey-with-aider-2aef61394d27",
+    "name": "AI Pair Programming: My Journey with Aider",
+    "snippet": "Aider is a terminal-based AI pair programming tool that integrates directly with your codebase through Git. transforms the development workflow.",
+    "host_name": "medium.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.openreplay.com/getting-started-aider-ai-coding-terminal",
+    "name": "Getting Started with Aider: AI-Powered Coding from the",
+    "snippet": "Nov 18, 2025 — Aider brings AI pair programming directly to your terminal , working with any git repository · Supports multiple LLMs including GPT-4-series (e.g. ... Read more",
+    "host_name": "blog.openreplay.com",
+    "rank": 2,
+    "date": "Nov 18, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1gij840/trying_to_understand_the_hype_around_aider",
+    "name": "Trying to understand the hype around Aider",
+    "snippet": "Aider as an AI coding tool. There isn't much in the docs as to what aider can do, how to use aider effectively as a pair programmer and so on.  ...",
+    "host_name": "www.reddit.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://terminaltrove.com/aider",
+    "name": "aider - AI pair programming in your terminal.",
+    "snippet": "aider is a terminal based AI pair-programming tool that links large-language models to your local git repo, enabling chat-driven edits, new files and refactors",
+    "host_name": "terminaltrove.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/NousResearch/hermes-agent/issues/534",
+    "name": "Aider Coding Agent Skill — Lightweight Model-Agnostic",
+    "snippet": "Mar 6, 2026 — Aider is an Apache 2.0-licensed, open-source AI pair programming tool . It works in the terminal to edit code across entire repositories, with ...",
+    "host_name": "github.com",
+    "rank": 5,
+    "date": "Mar 6, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://codegen.com/ai-tools/aider",
+    "name": "Aider Review: Terminal AI Coding Agent (2026)",
+    "snippet": "Jun 23, 2026 — Aider is a free, open-source terminal coding agent . Edits files directly, auto-commits to Git, and works with any LLM. Setup time 5 to 10 ...",
+    "host_name": "codegen.com",
+    "rank": 6,
+    "date": "Jun 23, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=EqLyFT78Sig",
+    "name": "Aider: This AI Coder Can Create AND Update Git Codebases",
+    "snippet": "I checkout Aider , the GPT code generator that can work with existing code. We install and use it on new and existing projects.",
+    "host_name": "www.youtube.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "name": "mimo-agent-service",
+  "version": "1.0.0",
+  "description": "MiMo Life OS — Background Agent Service (GitHub + Calendar + University)",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot index.ts",
+    "start": "bun index.ts",
+    "postinstall": "echo 'Note: uses parent project @prisma/client (do not install local copy)'"
+  },
+  "dependencies": {
+    "googleapis": "^173.0.0"
+  }
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://langfuse.com/resources/engineering/best-phoenix-arize-alternatives",
+    "name": "Langfuse vs. Arize AX / Arize Phoenix",
+    "snippet": "This article compares Langfuse and Arize AI and Arize Phoenix for LLM observability, analytics, evaluations, testing, and annotation.",
+    "host_name": "langfuse.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.helicone.ai/blog/the-complete-guide-to-LLM-observability-platforms",
+    "name": "The Complete Guide to LLM Observability Platforms in 2025",
+    "snippet": "May 8, 2025 — : Helicone offers proxy-based integration; Langfuse is SDK-based. Langfuse has more detailed tracing for complex workflows. ; Arize Phoenix ...",
+    "host_name": "www.helicone.ai",
+    "rank": 1,
+    "date": "May 8, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.digitalapplied.com/blog/agent-observability-platforms-langsmith-langfuse-arize-2026",
+    "name": "Agent Observability: LangSmith, Langfuse, Arize 2026",
+    "snippet": "Apr 28, 2026 — LangSmith and Langfuse ship strong eval features but Arize's depth is meaningful for regulated or accuracy-critical workloads.",
+    "host_name": "www.digitalapplied.com",
+    "rank": 2,
+    "date": "Apr 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/LangChain/comments/1b2y18p/langsmith_started_charging_time_to_compare",
+    "name": "Langsmith started charging. Time to compare alternatives.",
+    "snippet": "Langfuse looks to be more focused on representation of the data out of the box , while Phoenix does not have pretty dashboard and such, but ...",
+    "host_name": "www.reddit.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.confident-ai.com/knowledge-base/compare/top-arize-ai-alternatives-and-competitors-compared",
+    "name": "Top 6 Arize AI Alternatives and Competitors, Compared",
+    "snippet": "Jul 13, 2026 — In this article, we'll go through the top 6 alternatives and competitors to Arize AI.",
+    "host_name": "www.confident-ai.com",
+    "rank": 4,
+    "date": "Jul 13, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.zenml.io/blog/langfuse-vs-phoenix",
+    "name": "Langfuse vs Phoenix: Which One's the Better Open-Source",
+    "snippet": "Nov 18, 2025 — Both are maturing fast. However, Phoenix shows better community adoption with higher commits and GitHub stars than LangFuse.",
+    "host_name": "www.zenml.io",
+    "rank": 5,
+    "date": "Nov 18, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@shabanakhanum/navigating-the-black-box-langsmith-vs-be105b8e0844",
+    "name": "LangSmith vs. Langfuse vs. Arize AI for LLM Observability",
+    "snippet": "Langfuse: Excellent — first-class prompt versioning . Arize: Good but not the primary focus. Winner: Langfuse for prompt management; LangSmith ...",
+    "host_name": "medium.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://latitude.so/blog/best-llm-observability-tools-agents-latitude-vs-langfuse-langsmith",
+    "name": "Best LLM Observability Tools for AI Agents - Latitude.so",
+    "snippet": "Mar 27, 2026 — Langfuse remains the most mature and well-documented option . Arize is suited to organizations focused on drift detection and existing ML ...",
+    "host_name": "latitude.so",
+    "rank": 7,
+    "date": "Mar 27, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=GyDAY3WkqRg",
+    "name": "Langfuse vs Arize Phoenix vs Helicone | (2025) Which Is The",
+    "snippet": "In this comprehensive 2025 comparison, we put Langfuse, Arize Phoenix, and Helicone head-to-head to determine which LLM observability ...",
+    "host_name": "www.youtube.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  }
+]

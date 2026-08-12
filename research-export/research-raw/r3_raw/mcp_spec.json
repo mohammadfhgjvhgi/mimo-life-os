@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://www.anthropic.com/news/model-context-protocol",
+    "name": "Introducing the Model Context Protocol - Anthropic",
+    "snippet": "Nov 25, 2024 · The Model Context Protocol is an open standard that enables developers to build secure, two-way connections between their data sources and AI- ...",
+    "host_name": "www.anthropic.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28",
+    "name": "The 2026-07-28 Specification | Model Context Protocol Blog",
+    "snippet": "The 2026-07-28 Model Context Protocol specification is out, bringing a stateless protocol core, Multi Round-Trip Requests, header-based routing, cacheable list ...",
+    "host_name": "blog.modelcontextprotocol.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Model_Context_Protocol",
+    "name": "Model Context Protocol - Wikipedia",
+    "snippet": "In December 2025, Anthropic donated the MCP to the Agentic AI Foundation ... \"Anthropic releases Model Context Protocol to standardize AI-data integration\".",
+    "host_name": "en.wikipedia.org",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2026-07-28",
+    "name": "Specification - Model Context Protocol",
+    "snippet": "Jul 28, 2026 · Model Context Protocol (MCP) is an open protocol that enables seamless integration between LLM applications and external data sources and tools.",
+    "host_name": "modelcontextprotocol.io",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://media.defense.gov/2026/Jun/02/2003943289/-1/-1/0/CSI_MCP_SECURITY.PDF",
+    "name": "[PDF] Model Context Protocol (MCP): Security Design Considerations for",
+    "snippet": "Jun 2, 2026 · Model Context Protocol (MCP) is an application-level protocol that provides a simple and agreed upon messaging pattern and transport format ...",
+    "host_name": "media.defense.gov",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-06-18",
+    "name": "Specification - Model Context Protocol",
+    "snippet": "Model Context Protocol (MCP) is an open protocol that enables seamless integration between LLM applications and external data sources and tools.",
+    "host_name": "modelcontextprotocol.io",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://hidekazu-konishi.com/entry/mcp_specification_version_timeline.html",
+    "name": "Model Context Protocol Specification Version Timeline",
+    "snippet": "Jul 26, 2026 · As of this writing, the current finalized version is 2025-11-25. The next revision, version 2026-07-28, final publication targeted for July 28, ...",
+    "host_name": "hidekazu-konishi.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/modelcontextprotocol",
+    "name": "Model Context Protocol - GitHub",
+    "snippet": "The Model Context Protocol (MCP) is an open protocol that enables seamless integration between LLM applications and external data sources and tools.",
+    "host_name": "github.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@anandtopu/the-future-of-mcp-how-agents-get-connected-in-2026-ee24d62c0c43",
+    "name": "The Future of MCP: How Agents Get Connected in 2026 - Medium",
+    "snippet": "Apr 19, 2026 · A technical deep dive based on David Soria Parra's (Anthropic) keynote on the Model Context Protocol (MCP).",
+    "host_name": "medium.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+    "name": "Code execution with MCP: building more efficient AI agents - Anthropic",
+    "snippet": "Nov 4, 2025 · The Model Context Protocol (MCP) is an open standard for connecting AI agents to external systems. Connecting agents to tools and data ...",
+    "host_name": "www.anthropic.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

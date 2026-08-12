@@ -1,0 +1,7 @@
+Building software that puts data ownership first | Anytype Download Subscribe to updates Anytype for Business Use Cases Pricing FAQ Community Blog Docs Testimonials GitHub Download Why we are building Anytype We’re building an alternative for those who value freedom and trust — for ourselves We imagine a world where our fundamental digital freedoms are sacred: the privacy of thought; the freedom to connect with those we trust; and, the freedom to participate in the governance of our digital creations.
+We believe that these freedoms are as important to the world of bits, as fundamental human rights are to the world of atoms.
+The current web and much of the software we use do not respect these digital freedoms.
+In the architecture of the current web, application developers are the keepers of our keys; they control the keys to users’ accounts.
+As the gatekeepers of our accounts, they determine who has access, who does not, and how information is distributed.
+With so much of our lives lived online, we are driven to construct an alternative.
+Go deeper: Our mission Download Subscribe to updates Anytype for Business Use Cases FAQ Community Blog Docs Testimonials GitHub Made by Any — a Swiss association Privacy Policy Terms and conditions What Why Who

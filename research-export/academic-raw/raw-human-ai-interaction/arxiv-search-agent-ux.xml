@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/nVAkYE611IB5tv45pncLTnp39K4</id>
+  <title>arXiv Query: search_query=all:"AI agent" AND all:"user experience" AND cat:cs.HC&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-08-07T14:57:48Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22AI+agent%22+AND+(all:%22user+experience%22+AND+cat:cs.HC)&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>22</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.19941v1</id>
+    <title>A Framework of User Experience Principles for Human-AI Agent Interaction in the Workplace</title>
+    <updated>2026-07-22T09:13:12Z</updated>
+    <link href="https://arxiv.org/abs/2607.19941v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.19941v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As AI agents become integral to business workflows, establishing guiding user experience (UX) principles is crucial for ensuring user trust and successful adoption. To address this, our study uses a multi-method approach - combining participatory design workshop, paper-and-pencil, expert review, meta-analysis, and in-depth interviews - to identify and validate a design framework of eight core UX principles for human-AI agent interaction in the workplace. Together with their underlying criteria, these principles provide actionable guardrails for designers and software engineers, creating a foundation for developing effective and human-centered AI agent interactions. This study contributes to a structured foundation for future empirical studies on agentic AI in enterprise settings.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-22T09:13:12Z</published>
+    <arxiv:comment>6 pages, 1 figure, 1 table, to be published in the proceedings of Mensch und Computer 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Kathrin Paimann</name>
+    </author>
+    <author>
+      <name>Elizangela Valarini</name>
+    </author>
+    <author>
+      <name>Sebastian Juhl</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.18716v1</id>
+    <title>Human-AI Agent Interaction in a Business Context</title>
+    <updated>2026-06-17T05:55:07Z</updated>
+    <link href="https://arxiv.org/abs/2606.18716v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.18716v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As AI agents are increasingly integrated into core business processes, understanding and designing effective interaction patterns between humans and AI agents becomes crucial for value creation. This study identifies and evaluates principles and criteria for a positive User Experience (UX) with AI agents, along with methods for its measurement. We identify user expectations and needs to facilitate adoption, build trust, and support user-centered decision-making by development teams. Using a mixed-methods approach that combines qualitative and quantitative techniques, we explore interaction patterns between humans and AI agents. The findings from this exploratory research serve as the basis to develop a survey experiment which evaluates the effectiveness of specific design elements on a larger scale. This foundational research contributes to the development of more intuitive and effective human-AI agent interactions in business settings.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-17T05:55:07Z</published>
+    <arxiv:comment>9 pages, 5 tables, 1 figure, submitted to Springer Nature</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Kathrin Paimann</name>
+    </author>
+    <author>
+      <name>Elizangela Valarini</name>
+    </author>
+    <author>
+      <name>Sebastian Juhl</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.31104v1</id>
+    <title>Extending the UXR Point of View Playbook: Triangulating Insights in Complex Developer Domains</title>
+    <updated>2026-05-29T10:15:54Z</updated>
+    <link href="https://arxiv.org/abs/2605.31104v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.31104v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As User Experience Research (UXR) matures, practitioners face the challenge of moving beyond data collection toward establishing a compelling Point of View (POV) that drives strategic impact. This paper proposes an extension to the UXR POV Playbook, specifically focusing on the transition from the "Insight Generation" layer to the "POV" layer. Drawing on extensive multi-method research in Cloud Developer Tools, spanning AI Agents, Command Line Interfaces (CLI), and Error Messages, we demonstrate how triangulating qualitative and quantitative data facilitates the creation of high-confidence POVs. We introduce three new "Playbook Cards" derived from this research: The Paradigm Shift, Explainability as Trust, and The Cost of Friction. These cards provide a structured mechanism for researchers to translate complex technical findings into irrefutable business narratives.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-29T10:15:54Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Sarah Kianfar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.18275v1</id>
+    <title>When Nobody Around Is Real: Exploring Public Opinions and User Experiences On the Multi-Agent AI Social Platform</title>
+    <updated>2026-01-26T08:58:51Z</updated>
+    <link href="https://arxiv.org/abs/2601.18275v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.18275v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Powered by large language models, a new genre of multi-agent social platforms has emerged. Apps such as Social.AI deploy numerous AI agents that emulate human behavior, creating unprecedented bot-centric social networks. Yet, existing research has predominantly focused on one-on-one chatbots, leaving multi-agent AI platforms underexplored. To bridge this gap, we took Social.AI as a case study and performed a two-stage investigation: (i) content analysis of 883 user comments; (ii) a 7-day diary study with 20 participants to document their firsthand platform experiences. While public discourse expressed greater skepticism, the diary study found that users did project a range of social expectations onto the AI agents. While some user expectations were met, the AI-dominant social environment introduces distinct problems, such as attention overload and homogenized interaction. These tensions signal a future where AI functions not merely as a tool or an anthropomorphized actor, but as the dominant medium of sociality itself-a paradigm shift that foregrounds new forms of architected social life.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-26T08:58:51Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Qiufang Yu</name>
+    </author>
+    <author>
+      <name>Mengmeng Wu</name>
+    </author>
+    <author>
+      <name>Xingyu Lan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.08971v1</id>
+    <title>Plug-and-Play Clarifier: A Zero-Shot Multimodal Framework for Egocentric Intent Disambiguation</title>
+    <updated>2025-11-12T04:28:14Z</updated>
+    <link href="https://arxiv.org/abs/2511.08971v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.08971v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The performance of egocentric AI agents is fundamentally limited by multimodal intent ambiguity. This challenge arises from a combination of underspecified language, imperfect visual data, and deictic gestures, which frequently leads to task failure. Existing monolithic Vision-Language Models (VLMs) struggle to resolve these multimodal ambiguous inputs, often failing silently or hallucinating responses. To address these ambiguities, we introduce the Plug-and-Play Clarifier, a zero-shot and modular framework that decomposes the problem into discrete, solvable sub-tasks. Specifically, our framework consists of three synergistic modules: (1) a text clarifier that uses dialogue-driven reasoning to interactively disambiguate linguistic intent, (2) a vision clarifier that delivers real-time guidance feedback, instructing users to adjust their positioning for improved capture quality, and (3) a cross-modal clarifier with grounding mechanism that robustly interprets 3D pointing gestures and identifies the specific objects users are pointing to. Extensive experiments demonstrate that our framework improves the intent clarification performance of small language models (4--8B) by approximately 30%, making them competitive with significantly larger counterparts. We also observe consistent gains when applying our framework to these larger models. Furthermore, our vision clarifier increases corrective guidance accuracy by over 20%, and our cross-modal clarifier improves semantic answer accuracy for referential grounding by 5%. Overall, our method provides a plug-and-play framework that effectively resolves multimodal ambiguity and significantly enhances user experience in egocentric interaction.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-12T04:28:14Z</published>
+    <arxiv:comment>16 pages, 9 figures, AAAI 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Sicheng Yang</name>
+    </author>
+    <author>
+      <name>Yukai Huang</name>
+    </author>
+    <author>
+      <name>Weitong Cai</name>
+    </author>
+    <author>
+      <name>Shitong Sun</name>
+    </author>
+    <author>
+      <name>You He</name>
+    </author>
+    <author>
+      <name>Jiankang Deng</name>
+    </author>
+    <author>
+      <name>Hang Zhang</name>
+    </author>
+    <author>
+      <name>Jifei Song</name>
+    </author>
+    <author>
+      <name>Zhensong Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.03143v1</id>
+    <title>From Measurement to Expertise: Empathetic Expert Adapters for Context-Based Empathy in Conversational AI Agents</title>
+    <updated>2025-11-05T03:07:27Z</updated>
+    <link href="https://arxiv.org/abs/2511.03143v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.03143v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Empathy is a critical factor in fostering positive user experiences in conversational AI. While models can display empathy, it is often generic rather than tailored to specific tasks and contexts. In this work, we introduce a novel framework for developing and evaluating context-specific empathetic large language models (LLMs). We first analyze a real-world conversational dataset consisting of 672 multi-turn conversations across 8 tasks, revealing significant differences in terms of expected and experienced empathy before and after the conversations, respectively. To help minimize this gap, we develop a synthetic multi-turn conversational generation pipeline and steer responses toward our defined empathy patterns based on the context that more closely matches users' expectations. We then train empathetic expert adapters for context-specific empathy that specialize in varying empathy levels based on the recognized task. Our empirical results demonstrate a significant gap reduction of 72.66% between perceived and desired empathy with scores increasing by an average factor of 2.43 as measured by our metrics and reward models. Additionally, our trained empathetic expert adapters demonstrate superior effectiveness in preserving empathy patterns throughout conversation turns, outperforming system prompts, which tend to dramatically diminish in impact as conversations lengthen.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-05T03:07:27Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Erfan Shayegani</name>
+    </author>
+    <author>
+      <name>Jina Suh</name>
+    </author>
+    <author>
+      <name>Andy Wilson</name>
+    </author>
+    <author>
+      <name>Nagu Rangan</name>
+    </author>
+    <author>
+      <name>Javier Hernandez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.00481v2</id>
+    <title>Make a Video Call with LLM: A Measurement Campaign over Six Mainstream Apps</title>
+    <updated>2026-05-30T15:21:07Z</updated>
+    <link href="https://arxiv.org/abs/2510.00481v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.00481v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 2025, Large Language Model (LLM) services have launched a new feature -- AI video chat -- allowing users to interact with AI agents via real-time video communication (RTC), just like chatting with real people. Despite its significance, no systematic study has characterized the performance of existing AI video chat systems. To address this gap, this paper proposes a comprehensive benchmark across four dimensions: quality, latency, internal mechanisms, and system overhead. Using custom testbeds, we further evaluate six mainstream AI video chatbots with this benchmark. We also build an online platform for user study. The measurement leads to interesting findings that could be beneficial to the future optimizations. For example, the network latency of AI video chat matters not as much as human video chat. The capabilities of AI agents matters most in the user experience. Our benchmarking results also open up several research questions for future optimizations of AI video chatbots. Availability: https://callarena.net/ for the online evaluation platform and our open-sourced dataset and testbed.</summary>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-01T04:03:51Z</published>
+    <arxiv:primary_category term="cs.NI"/>
+    <author>
+      <name>Jiayang Xu</name>
+    </author>
+    <author>
+      <name>Xiangjie Huang</name>
+    </author>
+    <author>
+      <name>Zijie Li</name>
+    </author>
+    <author>
+      <name>Antariksh Verma</name>
+    </author>
+    <author>
+      <name>Zili Meng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.05197v1</id>
+    <title>AI Agents for Web Testing: A Case Study in the Wild</title>
+    <updated>2025-09-05T15:57:16Z</updated>
+    <link href="https://arxiv.org/abs/2509.05197v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.05197v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Automated web testing plays a critical role in ensuring high-quality user experiences and delivering business value. Traditional approaches primarily focus on code coverage and load testing, but often fall short of capturing complex user behaviors, leaving many usability issues undetected. The emergence of large language models (LLM) and AI agents opens new possibilities for web testing by enabling human-like interaction with websites and a general awareness of common usability problems. In this work, we present WebProber, a prototype AI agent-based web testing framework. Given a URL, WebProber autonomously explores the website, simulating real user interactions, identifying bugs and usability issues, and producing a human-readable report. We evaluate WebProber through a case study of 120 academic personal websites, where it uncovered 29 usability issues--many of which were missed by traditional tools. Our findings highlight agent-based testing as a promising direction while outlining directions for developing next-generation, user-centered testing frameworks.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-05T15:57:16Z</published>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Naimeng Ye</name>
+    </author>
+    <author>
+      <name>Xiao Yu</name>
+    </author>
+    <author>
+      <name>Ruize Xu</name>
+    </author>
+    <author>
+      <name>Tianyi Peng</name>
+    </author>
+    <author>
+      <name>Zhou Yu</name>
+    </author>
+  </entry>
+</feed>

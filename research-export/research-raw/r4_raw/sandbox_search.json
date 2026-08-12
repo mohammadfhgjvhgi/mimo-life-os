@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://blaxel.ai/blog/ai-sandbox",
+    "name": "What is an AI Sandbox? Secure Isolation for Code Agents",
+    "snippet": "Dec 12, 2025 — Capability - based security explicitly grants access to specific APIs rather than blanket permissions . Rate limiting prevents resource exhaustion ...",
+    "host_name": "blaxel.ai",
+    "rank": 0,
+    "date": "Dec 12, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.augmentcode.com/guides/agent-execution-sandbox",
+    "name": "What Is an Agent Execution Sandbox?",
+    "snippet": "May 3, 2026 — An agent execution sandbox is a production isolation boundary for AI-generated code because it restricts filesystem access, network egress, and ...",
+    "host_name": "www.augmentcode.com",
+    "rank": 1,
+    "date": "May 3, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://tsuyoshiushio.medium.com/agent-security-best-practices-8af6b692f145",
+    "name": "Agent Security Best Practices - Medium",
+    "snippet": "Instead of using the developer's credentials, create an agent-specific identity with restricted permissions . This makes access control far ... Read more",
+    "host_name": "tsuyoshiushio.medium.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.armosec.io/blog/what-is-ai-agent-sandboxing-kubernetes-native-enforcement-explained",
+    "name": "What Is AI Agent Sandboxing? Kubernetes-Native",
+    "snippet": "Mar 6, 2026 — credential isolation that prevents agents from inheriting host secrets . The Agent Sandbox CRD is strong infrastructure for code execution  ...",
+    "host_name": "www.armosec.io",
+    "rank": 3,
+    "date": "Mar 6, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/AI_Agents/comments/1so3pw7/execution_boundaries_for_ai_agents_not_all",
+    "name": "Execution Boundaries for AI Agents: Not All Sandboxes Are",
+    "snippet": "For high-risk actions — arbitrary execution, credentials , customer data — the answer should be a hardware- isolated VM or microVM with its own ... Read more",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developer.nvidia.com/blog/practical-security-guidance-for-sandboxing-agentic-workflows-and-managing-execution-risk",
+    "name": "Practical Security Guidance for Sandboxing Agentic",
+    "snippet": "Jan 30, 2026 — Organizations should regularly validate that their sandbox implementations provide the isolation and security controls they expect.",
+    "host_name": "developer.nvidia.com",
+    "rank": 5,
+    "date": "Jan 30, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.n8n.io/ai-agent-sandbox",
+    "name": "AI Agent Sandboxes: Isolation and Secure Execution",
+    "snippet": "2 days ago — Separating credentials from agent runtime makes it easier to enforce permission boundaries and rotate secrets without changing workflow logic.",
+    "host_name": "blog.n8n.io",
+    "rank": 6,
+    "date": "Aug 6, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.tencentcloud.com/techpedia/144319",
+    "name": "Secure Your Self-Hosted AI Agent (Sandbox + Permissions)",
+    "snippet": "The sandbox contains what happens if the agent runs something hostile. The permission layer is about reducing what it can reach in the first place",
+    "host_name": "www.tencentcloud.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://arxiv.org/html/2512.01295v1",
+    "name": "Systems Security Foundations for Agentic Computing",
+    "snippet": "Dec 1, 2025 — This paper articulates short- and long-term research problems in AI agent security and privacy, using the lens of computer systems security . Read more",
+    "host_name": "arxiv.org",
+    "rank": 8,
+    "date": "Dec 1, 2025",
+    "favicon": ""
+  }
+]

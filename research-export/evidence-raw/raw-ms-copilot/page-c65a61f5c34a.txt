@@ -1,0 +1,122 @@
+TITLE: Microsoft 365 Copilot hub | Microsoft Learn
+
+Microsoft 365 Copilot hub | Microsoft Learn 
+
+- 
+
+- 
+
+Skip to main content
+
+This browser is no longer supported.
+
+Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+
+Download Microsoft Edge
+
+More info about Internet Explorer and Microsoft Edge
+
+Microsoft 365 Copilot documentation for IT Pros
+
+Explore resources for delivering Microsoft 365 Copilot services.
+
+Overview
+
+Privacy and Responsible AI 
+
+What's new
+
+Copilot release notes 
+
+Architecture
+
+Secure and govern Microsoft 365 Copilot 
+
+How-To Guide
+
+Manage Microsoft 365 scenarios 
+
+Microsoft 365 Copilot documentation
+
+Microsoft 365 Copilot 
+Plan, implement, and manage Microsoft 365 Copilot Chat and Microsoft 365 Copilot in your organization.
+
+Extending Microsoft 365 Copilot
+
+Who this content is for - Developers that are responsible for customizing Microsoft 365 Copilot capabilities by extending Copilot connectors, plugins, agents, and APIs, and even building AI-driven copilots with Microsoft Copilot Studio. Connect to data beyond Microsoft 365 to enhance Microsoft 365 Copilot, Copilot Search, and Microsoft Search experiences.
+
+Microsoft 365 Copilot connectors 
+
+Microsoft 365 Copilot extensibility 
+
+Microsoft Copilot Studio 
+
+Keep exploring
+
+Continue your Microsoft 365 Copilot and development learning with these Microsoft resources.
+
+Microsoft 365 Copilot training 
+Access videos, tutorials, and learning paths for Microsoft 365 Copilot.
+
+Explore scenarios for Microsoft 365 Copilot 
+See real-world scenarios that demonstrate how Copilot can deliver business value.
+
+AI and Copilot videos 
+Videos about how to get the most out of Copilot.
+
+Anthropic as a subprocessor 
+Opting in to Anthropic as a subprocessor for Microsoft 365 Copilot.
+
+en-us 
+
+Your Privacy Choices 
+
+Theme 
+
+- 
+
+Light 
+
+- 
+
+Dark 
+
+- 
+
+High contrast 
+
+- 
+
+- 
+
+AI Disclaimer 
+
+- 
+
+Previous Versions 
+
+- 
+
+Blog 
+
+- 
+
+Contribute 
+
+- 
+
+Privacy 
+
+- 
+
+Consumer Health Privacy 
+
+- 
+
+Terms of Use 
+
+- 
+
+Trademarks 
+
+- © Microsoft 2026

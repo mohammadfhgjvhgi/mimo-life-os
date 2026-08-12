@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+    "name": "Overview - Claude Code Docs",
+    "snippet": "Claude Code is an AI-powered coding assistant that helps you build features, fix bugs, and automate development tasks. It understands your entire codebase and ... Read more",
+    "host_name": "docs.anthropic.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.anthropic.com/en/docs/claude-code/quickstart",
+    "name": "Quickstart - Claude Code Docs",
+    "snippet": "This quickstart guide will have you using AI-powered coding assistance in a few minutes. Claude will analyze your files and provide a summary.",
+    "host_name": "docs.anthropic.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.anthropic.com/en/docs/intro-to-claude",
+    "name": "Intro to Claude - Claude Platform Docs",
+    "snippet": "Claude is a highly performant, trustworthy, and intelligent AI platform built by Anthropic. Claude excels at tasks involving language, reasoning, analysis, ... Read more",
+    "host_name": "docs.anthropic.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.anthropic.com/en/docs/claude-code/features-overview",
+    "name": "Extend Claude Code - Claude Code Docs",
+    "snippet": "Claude Code combines a model that reasons about your code with built-in tools for file operations, search, execution, and web access. Read more",
+    "host_name": "docs.anthropic.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.anthropic.com/en/docs/claude-code/skills",
+    "name": "Extend Claude with skills - Claude Code Docs",
+    "snippet": "Claude Code extends the standard with additional features like invocation control, subagent execution, and dynamic context injection.",
+    "host_name": "docs.anthropic.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+    "name": "Models overview - Claude Platform Docs",
+    "snippet": "Claude is a family of state-of-the-art large language models developed by Anthropic. This guide introduces the available models and compares their performance. Read more",
+    "host_name": "docs.anthropic.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.anthropic.com/pt/docs/claude-code/overview",
+    "name": "Visão geral - Claude Code Docs",
+    "snippet": "Claude Code é um assistente de codificação alimentado por IA que ajuda você a construir recursos, corrigir bugs e automatizar tarefas de desenvolvimento. Read more",
+    "host_name": "docs.anthropic.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.anthropic.com/en/release-notes/claude-code",
+    "name": "claude-code/CHANGELOG.md at main",
+    "snippet": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, ...",
+    "host_name": "docs.anthropic.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.anthropic.com/en/docs/claude-code/code-review",
+    "name": "Code Review - Claude Code Docs",
+    "snippet": "Code Review analyzes your GitHub pull requests and posts findings as inline comments on the lines of code where it found issues. Read more",
+    "host_name": "docs.anthropic.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.anthropic.com/en/docs/claude-code/cli-reference",
+    "name": "CLI reference - Claude Code Docs",
+    "snippet": "Claude Code provides four flags for customizing the system prompt . All four work in both interactive and non-interactive modes. ... --system-prompt and --system- ... Read more",
+    "host_name": "docs.anthropic.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

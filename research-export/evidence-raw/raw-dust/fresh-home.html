@@ -1,0 +1,88 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><script id="datadog-rum" data-nscript="beforeInteractive">
+             (function(h,o,u,n,d) {
+               h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+               d=o.createElement(u);d.async=1;d.src=n
+               n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+             })(window,document,'script','https://www.datadoghq-browser-agent.com/eu1/v6/datadog-rum.js','DD_RUM')
+             '' && window.DD_RUM.onReady(function() {
+               window.DD_RUM.init({
+                 clientToken: '',
+                 applicationId: '5e9735e7-87c8-4093-b09f-49d708816bfd',
+                 site: 'datadoghq.eu',
+                 service: 'front-browser',
+                 env: 'prod',
+                 version: 'fb14b48',
+                 allowedTracingUrls: [
+                   "https://dust.tt",
+                   "https://eu.dust.tt",
+                   "https://front-edge.dust.tt",
+                   "https://eu.front-edge.dust.tt",
+                 ],
+                 traceSampleRate: 5,
+                 traceContextInjection: 'sampled',
+                 sessionSampleRate: 20,
+                 sessionReplaySampleRate: 5,
+                 defaultPrivacyLevel: 'mask-user-input',
+                 beforeSend: function (event) {
+                    // This error is benign, happens often in the wild but has 0 effect on the user.
+                    // See: https://github.com/DataDog/browser-sdk/issues/1616.
+                    if (
+                    event.type === "error" &&
+                      event.error.message &&
+                      event.error.message.includes(
+                        "ResizeObserver loop completed with undelivered notifications"
+                      )
+                    ) {
+                      return false;
+                    }
+                   if (event.type === "action" && event.action && event.action.target && event.action.type === "click") {
+                     if (event._dd && event._dd.action && event._dd.action.name_source === "text_content") {
+                       var elSelector = event._dd.action.target && event._dd.action.target.selector;
+                       if (elSelector && typeof elSelector === "string") {
+                         try {
+                           var el = document.querySelector(elSelector);
+                           if (el) {
+                             var parentWithPrivacyMask = el.closest(".dd-privacy-mask");
+                             if (parentWithPrivacyMask) {
+                               // Initially redact with a generic string
+                               event.action.target.name = "[text element within dd-privacy-mask]";
+                               // Now attempt to provide a better, less generic name, still respecting privacy
+                               var buttonParent = el.closest("button");
+                               if (buttonParent) {
+                                 var ariaLabel = buttonParent.getAttribute("aria-label");
+                                 if (ariaLabel) {
+                                   event.action.target.name = ariaLabel;  // More specific, but still protecting privacy
+                                 }
+                               }
+                             }
+                           }
+                         } catch (error) {
+                           // Invalid selector - silently ignore
+                         }
+                       }
+                     }
+                   }
+                   return true;
+                 }
+               });
+             })
+           </script><script id="privacy-mask-init" data-nscript="beforeInteractive">
+              (function() {
+                // Initialize privacy mask state from localStorage on page load.
+                function initPrivacyMask() {
+                  const stored = localStorage.getItem('privacy-mask');
+                  const isEnabled = stored === 'true';
+
+                  if (isEnabled) {
+                    document.body.classList.add('privacy-mask-enabled');
+                  }
+                }
+
+                // Run on DOM ready.
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', initPrivacyMask);
+                } else {
+                  initPrivacyMask();
+                }
+              })();
+            </script><link rel="preload" href="/_next/static/css/3f4d5d04a42da6e3.css" as="style"/><link rel="stylesheet" href="/_next/static/css/3f4d5d04a42da6e3.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-42372ed130431b0a.js"></script><script src="/_next/static/chunks/webpack-d20095012c1979c7.js" defer=""></script><script src="/_next/static/chunks/framework-838c6ca2253d4294.js" defer=""></script><script src="/_next/static/chunks/main-cf949400518e02c0.js" defer=""></script><script src="/_next/static/chunks/pages/_app-448467c986a63e71.js" defer=""></script><script src="/_next/static/chunks/7592-17b2841d1c4ee495.js" defer=""></script><script src="/_next/static/chunks/2978-1daa743ee25c358a.js" defer=""></script><script src="/_next/static/chunks/5697-4be0565fd4a679fb.js" defer=""></script><script src="/_next/static/chunks/5131-379282d32595052e.js" defer=""></script><script src="/_next/static/chunks/5352-e01931aff5fdf507.js" defer=""></script><script src="/_next/static/chunks/8579-0230746ccbd0bc98.js" defer=""></script><script src="/_next/static/chunks/5489-ea4135c9fa11a594.js" defer=""></script><script src="/_next/static/chunks/5555-3e70053d4efa219a.js" defer=""></script><script src="/_next/static/chunks/8083-e9b9d9a924c635eb.js" defer=""></script><script src="/_next/static/chunks/7400-749f9a0d3c4e968c.js" defer=""></script><script src="/_next/static/chunks/7676-ba334d8039c7a555.js" defer=""></script><script src="/_next/static/chunks/7915-dd3014cb885eb28d.js" defer=""></script><script src="/_next/static/chunks/3999-401bee70ee5328c6.js" defer=""></script><script src="/_next/static/chunks/pages/index-9553dd689f7c2329.js" defer=""></script><script src="/_next/static/nRJ4pBbRbVXzEAmduJxBo/_buildManifest.js" defer=""></script><script src="/_next/static/nRJ4pBbRbVXzEAmduJxBo/_ssgManifest.js" defer=""></script></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDWPND4G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="__next"></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"postLoginReturnToUrl":"/api/login","shape":0,"gtmTrackingId":"GTM-MDWPND4G","news":[{"source":"AXIOS","title":"Agentic AI startup Dust raises $40M","date":"May 18, 2026","href":"https://www.axios.com/pro/enterprise-software-deals/2026/05/18/agentic-ai-dust-snowflake-sequoia"},{"source":"FORBES","title":"Why Dust Believes Agentic AI Has To Be A Team Sport","date":"May 18, 2026","href":"https://www.forbes.com/sites/davidprosser/2026/05/18/why-dust-believes-agentic-ai-has-to-be-a-team-sport/"},{"source":"FORTUNE","title":"The AI boom is pulling Europe’s hottest startups to the U.S.—whether they planned to move or not","date":"May 18, 2026","href":"https://fortune.com/2026/05/18/ai-boom-creandum-lovable-klarna-startups-trump-carl-fritjofsson-europe/"}]},"__N_SSP":true},"page":"/","query":{},"buildId":"nRJ4pBbRbVXzEAmduJxBo","isFallback":false,"isExperimentalCompile":false,"gssp":true,"scriptLoader":[]}</script></body></html>

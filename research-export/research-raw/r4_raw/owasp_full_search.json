@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications",
+    "name": "OWASP Top 10 for Large Language Model Applications",
+    "snippet": "LLM01: Prompt Injection · LLM02: Insecure Output Handling · LLM03: Training Data Poisoning · LLM04: Model Denial of Service · LLM05: Supply Chain Vulnerabilities. Read more",
+    "host_name": "owasp.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://genai.owasp.org/llm-top-10",
+    "name": "LLMRisks Archive - OWASP Gen AI Security Project",
+    "snippet": "Expore the latest Top 10 risks, vulnerabilities and mitigations for developing and securing generative AI and large language model applications. LLM07 : 2025 ...",
+    "host_name": "genai.owasp.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://trydeepteam.com/docs/frameworks-owasp-top-10-for-llms",
+    "name": "OWASP Top 10 for LLMs 2025",
+    "snippet": "Jun 9, 2026 — OWASP Top 10 for LLMs 2025 · 1. Prompt Injection (LLM01: 2025 ) · 2. Sensitive Information Disclosure (LLM02: 2025 ) · 3. Supply Chain (LLM03: 2025 ) · 4. Read more",
+    "host_name": "trydeepteam.com",
+    "rank": 2,
+    "date": "Jun 9, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.giskard.ai/knowledge/owasp-top-10-for-llm-2025-understanding-the-risks-of-large-language-models",
+    "name": "OWASP Top 10 for LLM 2025: Understanding the Risks",
+    "snippet": "Nov 24, 2025 — LLM07: System Prompt Leakage Watch : LLM08: Vector & Embedding Weaknesses Watch: LLM09: Misinformation Watch: LLM10: Unbounded Consumption. LLM ...",
+    "host_name": "www.giskard.ai",
+    "rank": 3,
+    "date": "Nov 24, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://aembit.io/blog/owasp-top-10-llm-risks-explained",
+    "name": "OWASP Top 10 for LLM Applications (2025)",
+    "snippet": "Learn what's new in the OWASP Top 10 for LLM Applications 2025 , including prompt injection, excessive agency and supply chain risks.",
+    "host_name": "aembit.io",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=j04st4edDKI",
+    "name": "OWASP Top 10 for LLM Applications 2025 Full overview",
+    "snippet": "LLM06 Excessive Agency; LLM 07 System Prompt Leakage ; LLM08 Vector & Embedding Weaknesses; LLM09 Misinformation; LLM10 Unbounded Consumption; How ...",
+    "host_name": "www.youtube.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.tigera.io/learn/guides/llm-security/owasp-top-10-llm",
+    "name": "Quick Guide to OWASP Top 10 LLM: Threats, Examples &",
+    "snippet": "LLM07: Data Leakage ; LLM08: Excessive Agency; LLM09: Overreliance; LLM10: Insecure Plugins. Generative AI Security with Calico. Why Is the OWASP Top 10 LLM ... Read more",
+    "host_name": "www.tigera.io",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://securiti.ai/owasp-top-10-for-llms",
+    "name": "OWASP Top 10 for LLM Applications - Complete Guide",
+    "snippet": "Jun 27, 2024 — The OWASP Top 10 for LLM Applications is an ideal guide compiled by hundreds of experts to enable the safe adoption of AI technologies. OWASP ... Read more",
+    "host_name": "securiti.ai",
+    "rank": 7,
+    "date": "Jun 27, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.invicti.com/blog/web-security/owasp-top-10-risks-llm-security-2025",
+    "name": "OWASP Top 10 risks for LLMs (2025 update)",
+    "snippet": "Sep 21, 2025 — The OWASP Top 10 for LLM Applications ( 2025 ) highlights the leading technical and socio-technical risks facing enterprises as they scale ... Read more",
+    "host_name": "www.invicti.com",
+    "rank": 8,
+    "date": "Sep 21, 2025",
+    "favicon": ""
+  }
+]

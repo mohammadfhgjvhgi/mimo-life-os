@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://www.joshwcomeau.com/animation/a-friendly-introduction-to-spring-physics",
+    "name": "A Friendly Introduction to Spring Physics",
+    "snippet": "Sep 21, 2020 — Spring physics are like a secret ingredient; they make all animations taste better. The motion produced using spring physics is fluid and ...",
+    "host_name": "www.joshwcomeau.com",
+    "rank": 0,
+    "date": "Sep 21, 2020",
+    "favicon": ""
+  },
+  {
+    "url": "https://theekshanachamodhya.medium.com/why-framer-motion-still-beats-css-animations-in-2025-16b3d74eccbd",
+    "name": "Why Framer Motion Still Beats CSS Animations in 2025",
+    "snippet": "Google's 2024 UX study showed users perceive spring animations as 15–20% “more responsive” than linear or bezier CSS ones.",
+    "host_name": "theekshanachamodhya.medium.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://motion.dev/examples/react-css-spring",
+    "name": "CSS spring example & tutorial for React - Motion.dev",
+    "snippet": "In this tutorial, we'll learn to use the spring function from Motion to generate a linear () easing spring .",
+    "host_name": "motion.dev",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.maximeheckel.com/posts/the-physics-behind-spring-animations",
+    "name": "The physics behind spring animations",
+    "snippet": "Jun 23, 2020 — This article aims to explain how a spring animation in a library like Framer Motion works, the laws of physics that are behind it, and the ...",
+    "host_name": "blog.maximeheckel.com",
+    "rank": 3,
+    "date": "Jun 23, 2020",
+    "favicon": ""
+  },
+  {
+    "url": "https://toqoz.fyi/springs.html",
+    "name": "Spring-based Animation and Quaternions",
+    "snippet": "Sep 1, 2025 — Spring animation is a modern technique for animating stuff going between two points. Why not apply them to game object transforms?",
+    "host_name": "toqoz.fyi",
+    "rank": 4,
+    "date": "Sep 1, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39250377",
+    "name": "Motion-Based Visual Encoding Can Improve Performance",
+    "snippet": "by S Hu · 2025 · Cited by 4 — Motion -Based Visual Encoding Can Improve Performance on Perceptual Tasks with Dynamic Time Series. IEEE Trans Vis Comput Graph. 2025 Jan;31(1):163-173.",
+    "host_name": "pubmed.ncbi.nlm.nih.gov",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

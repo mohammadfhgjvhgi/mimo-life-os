@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://www.uxpin.com/studio/blog/best-design-system-examples",
+    "name": "Design System: 13 Real-World Examples (2025)",
+    "snippet": "Every strong design system on this list starts with design tokens — the foundational values for color, spacing, typography, and elevation.",
+    "host_name": "www.uxpin.com",
+    "rank": 0,
+    "date": "Jun 15, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://atlassian.design",
+    "name": "Atlassian Design System",
+    "snippet": "Explore Atlassian Design to build beautiful experiences using our design system, and stay up to date with the latest news.",
+    "host_name": "atlassian.design",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.developer.atlassian.com/t/introducing-design-tokens-new-colour-foundations-and-dark-mode/62258",
+    "name": "Introducing design tokens, new colour foundations and",
+    "snippet": "Design Tokens are basically variables (either Javascript or CSS) that replace hard-coded references to styling decisions in each component.",
+    "host_name": "community.developer.atlassian.com",
+    "rank": 2,
+    "date": "Oct 6, 2022",
+    "favicon": ""
+  },
+  {
+    "url": "https://atlassian.design/foundations/design-tokens",
+    "name": "Overview - Design tokens",
+    "snippet": "Design tokens are the new way to apply visual foundations in Atlassian app experiences. We're rolling out tokens to standardize colors, elevations, spacing, and ...",
+    "host_name": "atlassian.design",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/daneoleary_designsystems-uxdesign-designtokens-activity-7370491149184286720-fv88",
+    "name": "How to fix your design system with better tokenization",
+    "snippet": "The fix is usually better tokenization. UX brings in as much as $100 for every dollar efficiency gains across design and development. This ...",
+    "host_name": "www.linkedin.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.developer.atlassian.com/t/a-visual-refresh-of-our-ui-foundations-is-coming/84949",
+    "name": "A visual refresh of our UI foundations is coming",
+    "snippet": "We're iterating on the color system to fold in updates from our brand color palette, which will be updated through existing color design tokens.",
+    "host_name": "community.developer.atlassian.com",
+    "rank": 5,
+    "date": "Oct 4, 2024",
+    "favicon": ""
+  }
+]

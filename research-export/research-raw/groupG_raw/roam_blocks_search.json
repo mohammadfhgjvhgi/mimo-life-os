@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.reddit.com/r/RoamResearch/comments/gjskxo/block_embed_vs_block_reference",
+    "name": "Block Embed vs Block Reference : r/RoamResearch",
+    "snippet": "I tend to use block references when I'm grabbing a single bullet of information which is now relevant in a different context/train of thought. Read more",
+    "host_name": "www.reddit.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.facebook.com/groups/roamresearch/posts/490830778468685",
+    "name": "Is there a sheet or guide for all the different kinds of blocks",
+    "snippet": "Learn how to use block references to create a simple navigation framework. Building Out Your Roam Part 2: Questions, Queries, and Block ... Read more",
+    "host_name": "www.facebook.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.zsolt.blog/2021/05/Addicted-to-block-references.html",
+    "name": "Addicted to Block References<br>MS Office vs. Roam",
+    "snippet": "May 23, 2021 — Block references take linking and referencing between documents to a whole new level. Blocks are another name for paragraphs in a document.",
+    "host_name": "www.zsolt.blog",
+    "rank": 2,
+    "date": "May 23, 2021",
+    "favicon": ""
+  },
+  {
+    "url": "https://mil.ad/blog/2026/auto-expand-references-in-roam.html",
+    "name": "Auto Expand Linked References in Roam Research",
+    "snippet": "May 8, 2026 — While it does embed the linked references , it sometimes collapses them. In general, the collapse/expand state of each bullet is something Roam ... Read more",
+    "host_name": "mil.ad",
+    "rank": 3,
+    "date": "May 8, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://uxdesign.cc/roam-research-a-new-way-of-working-with-qualitative-research-data-96534b9cd951",
+    "name": "Roam Research: a new way of working with qualitative",
+    "snippet": "Sep 12, 2020 — Roam uses text blocks as the “information unit” it pulls in for linked references . Drag the summaries to insert them into the [[Head Page]] as  ...",
+    "host_name": "uxdesign.cc",
+    "rank": 4,
+    "date": "Sep 12, 2020",
+    "favicon": ""
+  },
+  {
+    "url": "https://nesslabs.com/roam-research-input-output",
+    "name": "Roam Research: a simple input to output flow",
+    "snippet": "Roam pages are made of a bunch of blocks which visually look like bullet points. You can move them around, copy them, export them, edit them.",
+    "host_name": "nesslabs.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=FJUVSej4YlY",
+    "name": "Obsidian vs. Roam: Block References -- Effective Remote Work",
+    "snippet": "Obsidian launched block references 🎉 How does this work, and how does it stack up against competitor apps like Roam Research ?",
+    "host_name": "www.youtube.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.obsidian.md/t/using-blocks-in-obsidian-as-a-roam-refugee/18301",
+    "name": "Using Blocks in Obsidian as a Roam Refugee - Basement",
+    "snippet": "May 16, 2021 — If I need to pull notes from a previous day, it's easy to embed them in that daily note using Roam's embed method. I love the fact that I write ... Read more",
+    "host_name": "forum.obsidian.md",
+    "rank": 7,
+    "date": "May 16, 2021",
+    "favicon": ""
+  }
+]

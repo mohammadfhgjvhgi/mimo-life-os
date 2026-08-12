@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://www.apple.com/os/ios",
+    "name": "OS - iOS 27",
+    "snippet": "iOS 27 with all-new Siri AI powered by Apple Intelligence and new features for a more responsive, delightful experience. Type or talk naturally with Siri AI. ...",
+    "host_name": "www.apple.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.apple.com/newsroom/2024/12/apple-intelligence-now-features-image-playground-genmoji-and-more",
+    "name": "Apple Intelligence now features Image Playground",
+    "snippet": "Dec 11, 2024 — Today's release of iOS 18.2 , iPadOS 18.2, and macOS Sequoia 15.2 brings new features to Apple Intelligence on iPhone, iPad, and Mac. Read more",
+    "host_name": "www.apple.com",
+    "rank": 1,
+    "date": "Dec 11, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://support.apple.com/en-us/121161",
+    "name": "About iOS 18 Updates",
+    "snippet": "iOS 18.2 . This update introduces new features powered by Apple Intelligence, the personal intelligence system that unlocks powerful new ways to communicate ... Read more",
+    "host_name": "support.apple.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://discussions.apple.com/thread/255884505",
+    "name": "Not able to access Apple Intelligence fea",
+    "snippet": "Dec 16, 2024 — After updating to iOS 18.2 last night I am no longer able to access any of the Apple Intelligence features. I previously had access to these from ...",
+    "host_name": "discussions.apple.com",
+    "rank": 3,
+    "date": "Dec 16, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://support.apple.com/guide/iphone/whats-new-in-ios-26-iphfed2c4091/ios",
+    "name": "What's new in iOS 26",
+    "snippet": "Apple Intelligence.* Create custom Genmoji using existing emoji, combinations of emoji, or descriptive text. Change the look and expressions of Genmoji and ...",
+    "host_name": "support.apple.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://discussions.apple.com/thread/255843871",
+    "name": "iPhone XR has any benifits with Apple Intelligence?",
+    "snippet": "Nov 13, 2024 — I'm getting regular updates on my XR for IOS 18 Public Beta. what improvements has made for my model?",
+    "host_name": "discussions.apple.com",
+    "rank": 5,
+    "date": "Nov 13, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.apple.com/newsroom/2024/10/apple-intelligence-is-available-today-on-iphone-ipad-and-mac",
+    "name": "Apple Intelligence is available today on iPhone, iPad, and",
+    "snippet": "Oct 28, 2024 — Users can now record and transcribe audio in the Phone and Notes apps , and Apple Intelligence will summarize the transcript. Many More Features ... Read more",
+    "host_name": "www.apple.com",
+    "rank": 6,
+    "date": "Oct 28, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://podcasts.apple.com/us/podcast/ios-18-2-ramps-up-apple-intelligence/id1602394741?i=1000674458981",
+    "name": "iOS 18.2 Ramps Up Apple Intelligence",
+    "snippet": "Oct 25, 2024 — The update includes Writing Tools , the ability for Siri to answer Apple product questions, smart replies to emails and messages, audio ... Read more",
+    "host_name": "podcasts.apple.com",
+    "rank": 7,
+    "date": "Oct 25, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.apple.com/uk/apple-intelligence",
+    "name": "Apple Intelligence and Siri",
+    "snippet": "Apple Intelligence automatically checks your grammar and spelling and offers suggestions virtually anywhere you type. Read more",
+    "host_name": "www.apple.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developer.apple.com/ios",
+    "name": "Develop for iOS",
+    "snippet": "The App Intents framework connects your app to Apple Intelligence and Siri AI through schemas — recognizable structures built on years of language model ... Read more",
+    "host_name": "developer.apple.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

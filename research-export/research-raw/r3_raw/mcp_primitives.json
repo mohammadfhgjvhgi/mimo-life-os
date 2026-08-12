@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/prompts",
+    "name": "Prompts",
+    "snippet": "Jul 28, 2026 — The Model Context Protocol (MCP) provides a standardized way for servers to expose prompt templates to clients . Prompts allow servers to ...",
+    "host_name": "modelcontextprotocol.io",
+    "rank": 0,
+    "date": "Jul 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.philschmid.de/mcp-introduction",
+    "name": "Model Context Protocol (MCP) an overview",
+    "snippet": "Apr 3, 2025 — Overview of the Model Context Protocol (MCP) how it works , what are MCP servers and clients, and how to use it.",
+    "host_name": "www.philschmid.de",
+    "rank": 1,
+    "date": "Apr 3, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.dailydoseofds.com/model-context-protocol-crash-course-part-5",
+    "name": "Integrating Sampling into MCP Workflows",
+    "snippet": "Jun 22, 2025 — In a typical MCP setup, an MCP server exposes functions ( tools ), data (via resources ), and prompts that an LLM client can use. But what happens ...",
+    "host_name": "www.dailydoseofds.com",
+    "rank": 2,
+    "date": "Jun 22, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.singlestore.com/blog/unlocking-human-like-interactions-with-model-context-protocol-elicitation",
+    "name": "Unlocking Human-Like AI with Model Context Protocol",
+    "snippet": "Sep 5, 2025 — Model Context Protocol ( MCP ), an emerging standard that allows AI models to connect to external tools , APIs and databases in a structured way.",
+    "host_name": "www.singlestore.com",
+    "rank": 3,
+    "date": "Sep 5, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://unit42.paloaltonetworks.com/model-context-protocol-attack-vectors",
+    "name": "New Prompt Injection Attack Vectors Through MCP Sampling",
+    "snippet": "Dec 5, 2025 — This article examines the security implications of the Model Context Protocol ( MCP ) sampling feature in the context of a widely used coding ...",
+    "host_name": "unit42.paloaltonetworks.com",
+    "rank": 4,
+    "date": "Dec 5, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://gofastmcp.com/servers/elicitation",
+    "name": "User Elicitation",
+    "snippet": "User elicitation allows MCP servers to request input from users during tool execution. tools can interactively ask for missing parameters, clarification, or ...",
+    "host_name": "gofastmcp.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@cstroliadavis/building-mcp-servers-13570f347c74",
+    "name": "“Building MCP Servers: Part 3 — Adding Prompts",
+    "snippet": "Prompts in MCP are structured templates that servers provide to standardize interactions with language models. Unlike resources which provide ...",
+    "host_name": "medium.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.databricks.com/blog/what-is-model-context-protocol",
+    "name": "What is the Model Context Protocol (MCP)?",
+    "snippet": "The Model Context Protocol ( MCP ) is an open standard that enables AI applications to connect seamlessly with external data sources, tools , and systems.",
+    "host_name": "www.databricks.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

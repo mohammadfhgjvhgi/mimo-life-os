@@ -1,0 +1,436 @@
+TITLE: Devin Desktop | Devin
+
+Devin Desktop | Devin 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Product 
+
+- Solutions 
+
+- Customers 
+
+- Resources 
+
+- Pricing 
+
+Contact sales Log in Download 
+
+The home for every agent you run | Learn more → Devin Desktop
+Manage fleets of local and cloud agents from one surface.
+Plan, delegate, review, and ship without leaving your editor.
+Download for MacOS Visit on desktop to download Sign up 
+
+THE HOME FOR EVERY AGENT YOU RUN
+LEARN MORE → 
+
+Agent 
+Editor 
+
+New session 
+Sessions 
+
+Spaces 
+
+Widen the model hidden dimension 
+
+Working... 
+
+Switch the MLP activation to GELU 
+42m ago • 
+
+Learning rate tuning 
+
+Increase the Muon matrix learning rate 
+
+Working... 
+
+Add a learning rate warmup phase 
+
+PR is ready • 
+
+Tune the WSD warmdown ratio 
+
+Waiting for CI • 
+
+Establish the training baseline 
+3h ago • 
+
+Add QK-norm and value embeddings 
+1h ago • 
+
+Sessions 
+
+Board 
+List 
+
+Display 
+
+Status 
+
+Space 
+
+Pull request 
+
+Agent 
+
+Clear filters 
+
+Running 2 
+
+Widen the model hidden dimension
+
+Working... 
+
+Learning rate tuning
+Increase the Muon matrix learning rate
+
+Working... 
+
+Waiting for review 2 
+
+Learning rate tuning
+Add a learning rate warmup phase
+
+PR is ready • 
+
+Learning rate tuning
+Tune the WSD warmdown ratio
+
+Waiting for CI • 
+
+Done 3 
+
+Switch the MLP activation to GELU
+
+42m ago • 
+
+Establish the training baseline
+
+3h ago • 
+
+Add QK-norm and value embeddings
+
+1h ago • 
+
+main 
+Launchpad 
+0 
+0 
+
+Screen Reader Optimized 
+Ln 231, Col 29 
+Spaces: 2 
+UTF-8 
+{ } TypeScript JSX 
+Cognition Platform (Enterprise) 
+Windsurf - Settings 
+
+Agent Command Center 
+A team of agents for 
+every engineer.
+Devin Desktop is the home for coding agents to do your best work.
+You decide what to build, then your agents write the code, chase the edge cases, and test every detail.
+
+autoresearch 
+Establish the training baseline 
+
+Add QK-norm and value embeddings 
+
+A world-class IDE 
+The power of an IDE, 
+exactly when you need it.
+Read, trace, and debug every change your agents ship.
+Devin Desktop includes a full IDE with syntax highlighting, autocomplete, and debugging tools built in for you to stay in flow.
+
+autoresearch 
+train.py 
+
+116 self . mlp = MLP ( config ) 
+117 
+118 def forward ( self , x , ve , cos_sin , window_size ) : 
+119 x = x + self . attn ( norm ( x ) , ve , cos_sin , window_size ) 
+120 x = x + self . mlp ( norm ( x ) ) 
+121 return x 
+122 
+123 
+124 class GPT (class) GPT : type [ GPT ] Go to GPT Implements the full transformer language model defined in train.py . • Builds wte embedding, Block layer list, and output head. • Handles value embeddings, rotary embeddings, and windowed attention patterns. • Provides init_weights , _precompute_rotary_embeddings , and FLOP estimation utilities. ( nn . Module ) : 
+125 def __init__ ( self , config ) : 
+126 super ( ) . __init__ ( ) 
+127 self . config = config 
+128 self . window_sizes = self . _compute_window_sizes ( config ) 
+129 self . transformer = nn . ModuleDict ( { 
+130 "wte" : nn . Embedding ( config . vocab_size , config . n_embd ) , 
+131 "h" : nn . ModuleList ( [ Block ( config , i ) for i in range ( config . n_layer ) ] ) , 
+132 } ) 
+133 self . lm_head = nn . Linear ( config . n_embd , config . vocab_size , bias = False ) 
+134 self . resid_lambdas = nn . Parameter ( torch . ones ( config . n_layer ) ) 
+135 self . x0_lambdas = nn . Parameter ( torch . zeros ( config . n_layer ) ) 
+136 # Value embeddings 
+137 head_dim = config . n_embd / / config . n_head 
+138 kv_dim = config . n_kv_head * head_dim 
+
+Agent Client Protocol 
+All the models, 
+All the agents.
+Work across models and agents, powered by the Agent Client Protocol (ACP).
+
+micrograd 
+Implement backprop 
+
+implement backprop from scratch — a minimal scalar autograd engine, like micrograd
+
+I'll build a single `Value` type that records the computation graph as expressions run, then backpropagates with reverse-mode autodiff. Starting from an empty repo with the node scaffold — the data, its gradient, and the edges to its parents.
+
+engine.py + 9 
+
+Each forward op returns a new `Value` and stashes a local `_backward` closure — the chain rule for that op, pushing the output gradient into its inputs.
+
+engine.py + 17 
+
+engine.py + 13 
+
+Now the backward pass itself: topologically order the graph from the output, seed its gradient to 1, and run the stored closures in reverse so each node is fully accumulated before its parents are reached.
+
+engine.py + 12 
+
+Sanity-checking the gradients against PyTorch on a small expression with a reused variable, so the accumulation is actually exercised.
+
+test_engine.py + 9 
+
+python -m pytest test_engine.py -q
+
+Done — a ~50-line autograd engine, written from scratch. `backward()` topo-sorts the graph and applies each op’s local gradient in reverse, accumulating with `+=` so reused sub-expressions sum correctly. The gradient check matches PyTorch to 1e-6.
+
+Code 
+SWE-1.6 Fast 
+Devin Local Agents Devin Cloud Devin Local Codex Claude Agent OpenCode Cascade 
+
+Local 
+micrograd 
+
+Spaces 
+Spaces 
+
+Onboarding Flow Redesign feat/onboarding-flow-design 
+
+Build onboarding UI 
+Working… 
+
+Update onboarding API endpoints 
+
+Working… • 
+
+Fix authentication error 
+
+12m ago • 
+
+Improve Unicode normalization 
+
+Waiting for approval • 
+
+Implement UTF-8 encoding 
+
+2d ago • 
+
+One Space for every agent
+Use Spaces to share context and Git worktrees across all your agents.
+
+Supercomplete 
+
+autoresearch 
+train.py 
+
+117 def __init__ ( self , config ) : 
+118 super ( ) . __init__ ( ) 
+119 self . config = config 
+120 self.window_sizes = self._compute_window_sizes(config) self . window_sizes = self . _compute_window_sizes ( config ) 
+121 
+122 def _compute_window_sizes ( self , config ) : 
+123 pattern = config . window_pattern . upper ( ) 
+124 long_window = config . sequence_len 
+125 short_window = long_window / / 2 
+126 char_to_window = { "L" : ( long_window , 0 ) , "S" : ( short_window , 0 ) } 
+127 
+128 for i in range(config.n_layer): for i in range ( config . n_layer ) : 
+129 char = pattern[i % len(pattern)] char = pattern [ i % len ( pattern ) ] 
+130 window_sizes.append(char_to_window[char]) window_sizes . append ( char_to_window [ char ] ) 
+131 return window_sizes return window_sizes 
+
+Tab, Tab, Ship
+Supercomplete predicts your next thought, not just your next edit.
+
+Agents on ACP
+
+Fast Context Where is reconciliation scheduled? 
+
+Instant codebase context
+Fast Context finds the exact files and lines your agent needs—in milliseconds.
+
+1 Bug 
+
+setFakeTimerMarker sets clock to false instead of resetting it Bug FakeTimers.zig:188 
+3 Flags Mark all as read 
+
+Test order dependency - first test assumes clean state Investigate 25869.test.ts:20-23 setFakeTimerMarker silently ignores errors Informational FakeTimers.zig:179-189 Comment at line 185-187 is inconsistent with implementation Informational FakeTimers.zig:185-187 
+
+Never miss a detail
+Rapidly (or deeply) review every agent diff—before you push.
+
+Free world-class models
+Unlimited access to SWE-1.6, the fastest coding model in the world.
+
+plan.md 
+To build a dashboard for real-time store sales data, we will stream events from Kafka over websockets and render them onto a three.js globe.
+
+View plan Implement in Cloud 
+
+Effortless handoff to the cloud
+The only IDE designed for you to close your laptop.
+
+Customers 
+Teams building with Devin Desktop
+
+Ramp Harvey NVIDIA Modal Intact Financial 
+
+Devin Desktop makes it easy to dispatch and monitor our array of agents from a single command center. We're excited to partner with Cognition to bring the agents Ramp engineers already use into one shared workspace, making it easier to jump between tasks, preserve context, and get more done.
+Shaiyon Hariri Research Engineer 
+
+At Harvey, we built our internal background agent, Spectre, to work across long-running engineering efforts while carrying organizational context for our legal research, engineering, product, and design teams to seamlessly collaborate. With Devin Desktop's support for custom background agents, that context now extends to every engineer's laptop, so humans and agents work from the same shared understanding instead of starting from scratch.
+Joey Wang Engineering Lead 
+
+NVIDIA is joining Cognition's research preview for multi-agent support in Devin Desktop. Our engineers run multiple agents across complex workflows every day, and we're excited to help define how they share context and coordinate in one place.
+Subhash Ranjan Engineering Lead - AI Tools 
+
+We've been working closely with Cognition as a design partner on multi-agent support in Devin Desktop. Our engineers run multiple agents every day and Devin Desktop is the first tool that lets them manage all of them together, with shared context, from one place.
+Rahul Chalamala Member of Technical Staff 
+
+Devin Desktop gives our teams the same intelligent agent experience, but with the full permissions and flexibility of their local machines. For development work that benefits from a faster, more hands-on environment, it's a natural fit. It's snappier, it's accessible, and it fits the way a lot of our developers are working today.
+Ciprian Nechita Senior IT Architect 
+
+Make Devin Desktop your own
+Extend Devin with the tools, skills, and plugins your team already uses.
+
+Slack 
+MCP Server 
+Search channels and messages, send and read messages, and access user profiles.
+
+ESLint 
+Extension 
+Find and fix problems in your JavaScript and TypeScript code.
+
+Linear 
+MCP Server 
+List, create, update, and query issues, projects, initiatives, cycles, and comments.
+
+rust-analyzer 
+Language Server 
+Code completion, go-to-definition, and inline diagnostics for Rust.
+
+Notion 
+MCP Server 
+Retrieve and manage pages, databases, and comments; search across your workspace.
+
+Prettier 
+Extension 
+Opinionated code formatter that enforces a consistent style across your codebase.
+
+Figma 
+MCP Server 
+Get files, nodes, and images; manage comments, components, styles, and webhooks.
+
+clangd 
+Language Server 
+C and C++ language server with completion, navigation, and diagnostics.
+
+Sentry 
+MCP Server 
+Retrieve issue data and stack traces; search, filter, and update issue status.
+
+Windsurf Pyright 
+Extension 
+Fast type checking, IntelliSense, and diagnostics for Python.
+
+Stripe 
+MCP Server 
+Create and manage customers, products, subscriptions, invoices, payouts, and refunds.
+
+gopls 
+Language Server 
+The official Go language server for completion, navigation, and refactoring.
+
+Vercel 
+MCP Server 
+Manage projects and deployments, analyze logs, and search Vercel documentation.
+
+Datadog 
+MCP Server 
+Retrieve telemetry insights and manage incidents, monitors, logs, dashboards, and traces.
+
+Atlassian 
+MCP Server 
+Access Jira and Confluence — manage issues and create enterprise documentation.
+
+Show more + 
+
+So good you can't work without it
+Download for MacOS Visit on desktop to download Sign up Request a demo → 
+
+PRICING OVERVIEW 
+Learn about our plans
+
+Free 
+$0 
+Download 
+Pro POPULAR 
+$20 per month 
+Select plan 
+Max NEW 
+$200 per month 
+Select plan 
+Teams 
+$80 /mo + $40/mo per full seat 
+Select plan 
+Enterprise 
+Let's talk 
+Contact us 
+
+STATS 
+Trusted by developers. 
+
+1M+ Users Trusted by over a million developers worldwide 
+
+4000+ Enterprise Customers Startups, agencies, and enterprises 
+
+Frequently Asked Questions
+What is Devin Desktop? 
+Devin Desktop is the new name for Windsurf. We’re building on the IDE foundation of Windsurf to introduce the command center for managing all your agents in one place. The Agent Command Center (Spaces, Kanban view, and multi-agent management) is front and center, while the full IDE experience you know remains fully accessible.
+Read the announcement → 
+
+How do I upgrade to Devin Desktop from Windsurf? 
+Devin Desktop arrives as a standard over-the-air update, so your plan, pricing, extensions, and settings all carry over automatically. You can also download the latest Devin Desktop version from the download page .
+
+Will I lose anything if I update? 
+The IDE, your extensions, workflows, settings, and in-progress work will all remain intact and will be fully migrated when you update. Only the name and branding are changing.
+Learn more in the docs → 
+
+Does my plan or pricing change? 
+No. Your current plan and pricing stay exactly the same, including legacy Windsurf Enterprise plans.
+Learn more in the docs → 
+
+What is happening to JetBrains support? 
+Windsurf for JetBrains (IntelliJ IDEA, PyCharm, WebStorm, and more) continues to be available for download.
+Get Windsurf for JetBrains → 
+
+Privacy Policy Terms of Service Your Privacy Choices 
+LinkedIn X (Twitter)

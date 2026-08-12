@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously",
+    "name": "Enabling Claude Code to work more autonomously",
+    "snippet": "Sep 29, 2025 — Introducing Claude Code upgrades: terminal UX updates, Claude Code now handles longer, more complex development tasks in your terminal and IDE.",
+    "host_name": "www.anthropic.com",
+    "rank": 0,
+    "date": "Sep 29, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://natesnewsletter.substack.com/p/the-claude-code-complete-guide-learn",
+    "name": "The Claude Code Complete Guide: Learn Vibe-Coding &",
+    "snippet": "Unlock Anthropic's terminal -based AI: From 5-minute setup to multi- agent workflows, learn best practices, cost control & vibe- coding tricks ...",
+    "host_name": "natesnewsletter.substack.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=P-5bWpUbO60&vl=en-US",
+    "name": "Claude Code Setup That Actually Works | Full Tutorial 2025",
+    "snippet": "Master Claude Code with the ultimate tutorial and guide for 2025 . This video covers the full setup, install, workflow, and how to build a ...",
+    "host_name": "www.youtube.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.latent.space/p/claude-code",
+    "name": "Claude Code: Anthropic's Agent in Your Terminal",
+    "snippet": "May 7, 2025 — Claude Code: Anthropic's Agent in Your Terminal . Cat Wu and Boris Cherny from the Claude Code team stop by to tell all! May 07, 2025.",
+    "host_name": "www.latent.space",
+    "rank": 3,
+    "date": "May 7, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ClaudeAI/comments/1mle79b/chatgpt_5_claude_code_is_a_thing_of_beauty",
+    "name": "ChatGPT 5 + Claude Code is a thing of beauty! : r/ClaudeAI",
+    "snippet": "Claude Code agentic workflow that let subagents brainstorm ideas, collaborate and give each feedback, then go back to improve their own ideas.",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/trevin_you-give-an-ai-coding-agent-a-task-it-runs-activity-7385500807590404096-hjwX",
+    "name": "Anthropic's Claude Code 2.0.21: AI coding agent with mid-",
+    "snippet": "Claude Code has always excelled at the terminal UX but here it really shines: intuitive arrow key selection that needed no explanation of how ...",
+    "host_name": "www.linkedin.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://newsletter.pragmaticengineer.com/p/how-claude-code-is-built",
+    "name": "How Claude Code is built - by Gergely Orosz",
+    "snippet": "Sep 23, 2025 — Claude Code brings a lot of innovative features to the terminal user experience that weren't needed before we could interact with terminals ...",
+    "host_name": "newsletter.pragmaticengineer.com",
+    "rank": 6,
+    "date": "Sep 23, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.anthropic.com/news/claude-opus-4-5",
+    "name": "Introducing Claude Opus 4.5",
+    "snippet": "Nov 24, 2025 — Claude Opus 4.5 delivers high-quality code and excels at powering heavy-duty agentic workflows with GitHub Copilot. Early testing shows it ...",
+    "host_name": "www.anthropic.com",
+    "rank": 7,
+    "date": "Nov 24, 2025",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/PetrnnQ/N8UEtVtcOAwgqIOn1IM</id>
+  <title>arXiv Query: search_query=all:"progressive disclosure" AND cat:cs.HC&amp;id_list=&amp;start=0&amp;max_results=5</title>
+  <updated>2026-08-07T14:57:34Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22progressive+disclosure%22+AND+cat:cs.HC&amp;start=0&amp;max_results=5&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>5</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16661v1</id>
+    <title>Beyond One-Size-Fits-All: User Strategies for Simplification Technique and Level Selection in Responsive Line Charts</title>
+    <updated>2026-05-15T21:58:05Z</updated>
+    <link href="https://arxiv.org/abs/2605.16661v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16661v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Simplifying line charts for responsive displays typically applies a single algorithm uniformly across devices, despite the availability of multiple techniques that preserve different signal characteristics (e.g., peaks, trends, periodicity). We investigate whether users benefit from algorithmic choice when adapting charts across screen sizes. In a within-subjects study (N=30), participants simplified nine datasets under three conditions: single pre-assigned technique (C1), multiple techniques (C2), and multiple techniques with manual point selection (C3), each with control over simplification level. We found that users adapted technique selections across datasets rather than devices, leveraging dataset-level strategies rather than per-device optimization. Additionally, interaction complexity did not always increase engagement uniformly, suggesting that responsive simplification tools should balance algorithmic flexibility with progressive disclosure and strong defaults. Supplemental materials are available at https://osf.io/yjp76/?view_only=b77b5e97f0cc4f689fbf48ad0d965af3.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T21:58:05Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Rifat Ara Proma</name>
+    </author>
+    <author>
+      <name>Paul Rosen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.06364v1</id>
+    <title>Human-in-the-Loop Interactive Report Generation for Chronic Disease Adherence</title>
+    <updated>2026-01-10T00:19:33Z</updated>
+    <link href="https://arxiv.org/abs/2601.06364v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.06364v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Chronic disease management requires regular adherence feedback to prevent avoidable hospitalizations, yet clinicians lack time to produce personalized patient communications. Manual authoring preserves clinical accuracy but does not scale; AI generation scales but can undermine trust in patient-facing contexts. We present a clinician-in-the-loop interface that constrains AI to data organization and preserves physician oversight through recognition-based review. A single-page editor pairs AI-generated section drafts with time-aligned visualizations, enabling inline editing with visual evidence for each claim. This division of labor (AI organizes, clinician decides) targets both efficiency and accountability. In a pilot with three physicians reviewing 24 cases, AI successfully generated clinically personalized drafts matching physicians' manual authoring practice (overall mean 4.86/10 vs. 5.0/10 baseline), requiring minimal physician editing (mean 8.3\% content modification) with zero safety-critical issues, demonstrating effective automation of content generation. However, review time remained comparable to manual practice, revealing an accountability paradox: in high-stakes clinical contexts, professional responsibility requires complete verification regardless of AI accuracy. We contribute three interaction patterns for clinical AI collaboration: bounded generation with recognition-based review via chart-text pairing, automated urgency flagging that analyzes vital trends and adherence patterns with fail-safe escalation for missed critical monitoring tasks, and progressive disclosure controls that reduce cognitive load while maintaining oversight. These patterns indicate that clinical AI efficiency requires not only accurate models, but also mechanisms for selective verification that preserve accountability.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-10T00:19:33Z</published>
+    <arxiv:comment>5 pages, 3 figures. Accepted at the AAAI 2026 Workshop on AI for Healthy Aging and Longevity</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Xiaotian Zhang</name>
+    </author>
+    <author>
+      <name>Jinhong Yu</name>
+    </author>
+    <author>
+      <name>Pengwei Yan</name>
+    </author>
+    <author>
+      <name>Le Jiang</name>
+    </author>
+    <author>
+      <name>Xingyi Shen</name>
+    </author>
+    <author>
+      <name>Mumo Cheng</name>
+    </author>
+    <author>
+      <name>Xiaozhong Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.09802v4</id>
+    <title>Building a Data Dashboard for Magic: The Gathering: Initial Design Considerations</title>
+    <updated>2026-07-05T21:08:02Z</updated>
+    <link href="https://arxiv.org/abs/2512.09802v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.09802v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents the initial stages of a design study aimed at developing a dashboard to visualize gameplay data of the Commander format from Magic: The Gathering. We conducted a user-task analysis to identify requirements for a data visualization dashboard tailored to the Commander format. Afterward, we proposed a design for the dashboard, leveraging visualizations to address players' needs and pain points for typical data analysis tasks in the context domain. Then, we followed-up with a structured user test to evaluate players' comprehension and preferences of data visualizations. Results show that players prioritize contextually relevant, outcome-driven metrics over peripheral ones, and that canonical charts like heatmaps and line charts support higher comprehension than complex ones such as scatterplots or icicle plots. Our findings also highlight the importance of localized views, user customization, and progressive disclosure, emphasizing that adaptability and contextual relevance are as essential as accuracy in effective dashboard design. Our study contributes practical design guidelines for data visualization in gaming contexts and highlights broader implications for engagement-driven dashboards.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-10T16:15:55Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Tomás Alves</name>
+    </author>
+    <author>
+      <name>João Moreira</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1811.02164v1</id>
+    <title>Progressive Disclosure: Designing for Effective Transparency</title>
+    <updated>2018-11-06T05:01:25Z</updated>
+    <link href="https://arxiv.org/abs/1811.02164v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1811.02164v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As we increasingly delegate important decisions to intelligent systems, it is essential that users understand how algorithmic decisions are made. Prior work has often taken a technocentric approach to transparency. In contrast, we explore empirical user-centric methods to better understand user reactions to transparent systems. We assess user reactions to global and incremental feedback in two studies. In Study 1, users anticipated that the more transparent incremental system would perform better, but retracted this evaluation after experience with the system. Qualitative data suggest this may arise because incremental feedback is distracting and undermines simple heuristics users form about system operation. Study 2 explored these effects in depth, suggesting that users may benefit from initially simplified feedback that hides potential system errors and assists users in building working heuristics about system operation. We use these findings to motivate new progressive disclosure principles for transparency in intelligent systems.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-11-06T05:01:25Z</published>
+    <arxiv:comment>arXiv admin note: text overlap with arXiv:1811.02163</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Aaron Springer</name>
+    </author>
+    <author>
+      <name>Steve Whittaker</name>
+    </author>
+  </entry>
+</feed>

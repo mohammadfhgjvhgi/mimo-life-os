@@ -1,0 +1,523 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Blog - Vercel 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+Skip to content 
+
+Copy Logo as SVG Copy Wordmark as SVG Brand Guidelines 
+Products 
+##### Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Passport 
+
+- Connect 
+
+- eve 
+
+##### Core Platform
+
+- Security 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+- Workflows 
+
+- CI/CD 
+
+##### Tools
+
+- Next.js 
+
+- Vercel Agent 
+
+- Vercel Plugin 
+
+- Domains ↗ 
+
+- v0 ↗ 
+
+Resources 
+##### Learn
+
+- Docs 
+
+- About 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+##### Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+##### Explore
+
+- Customers 
+
+- Marketplace 
+
+- Partner Finder 
+
+- AWS 
+
+- Community ↗ 
+
+Enterprise Pricing 
+Get a Demo Log In Sign Up 
+Ask AI Dashboard 
+
+Products 
+### Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Passport 
+
+- Connect 
+
+- eve 
+
+### Core Platform
+
+- Security 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+- Workflows 
+
+- CI/CD 
+
+### Tools
+
+- Next.js 
+
+- Vercel Agent 
+
+- Vercel Plugin 
+
+- Domains ↗ 
+
+- v0 ↗ 
+
+Resources 
+### Learn
+
+- Docs 
+
+- About 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+### Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+### Explore
+
+- Customers 
+
+- Marketplace 
+
+- Partner Finder 
+
+- AWS 
+
+- Community ↗ 
+
+Enterprise 
+Pricing 
+
+Get a Demo Log In Sign Up 
+
+# What have we shipped?
+All 
+- All 
+
+- Engineering 
+
+- Community 
+
+- Company News 
+
+- Customers 
+
+- v0 
+
+- Security 
+
+- Changelog 
+
+- Press 
+Search… 
+
+- No " " results found at this time.
+Try again with a different keyword.
+
+## Featured articles
+
+- 6 August General 
+
+## Introducing Agent Plugins
+Agent Plugins is an open, vendor-neutral standard for plugins that extend AI agents. 
+
+Jonathan Hefner Member of Technical Staff 
+
+- 27 July Security 
+
+## DeepsecBench: evaluating model performance in finding cybersecurity vulnerabilities
+DeepsecBench evaluates model performance in finding security vulnerabilities.
+
+Malte Ubl, Eric Dodds 
+
+- 4 August Next.js 
+
+## Next.js 16.3 support on Vercel
+Next.js 16.3 on Vercel has leaner prefetching, immutable static assets, and instant navigations.
+
+Luba Kravchenko, Mark Knichel 
+
+## Blog posts
+
+- 6 August General 
+
+### Introducing Agent Plugins
+
+Jonathan Hefner Member of Technical Staff 
+
+- 5 August Field Engineering 
+
+### Introducing the new v0 API
++2 
+
+Esteban Suárez, Fernando Rojo, and 2 others 
+
+- 4 August Next.js 
+
+### Next.js 16.3 support on Vercel
+
+Luba Kravchenko, Mark Knichel 
+
+- 3 August Customers 
+
+### How Factory scaled its cloud backend to one billion monthly requests on Vercel
+
+Susan Aziz, Ben Sabic 
+
+- 30 July Customers 
+
+### Shopify and Vercel are rebuilding Hydrogen for faster storefronts
+
+Susan Aziz Startup Customer Marketing 
+
+- 27 July Customers 
+
+### How Sandstone grew 40x in 147 days on Vercel
+
+Susan Aziz, Madison McIlwain, and 1 other 
+
+- 27 July Security 
+
+### DeepsecBench: evaluating model performance in finding cybersecurity vulnerabilities
+
+Malte Ubl, Eric Dodds 
+
+- 21 July Customers 
+
+### How Searchable ships customer-requested features in 30 minutes on Vercel 
+
+Susan Aziz Startup Customer Marketing 
+
+- 21 July Company News 
+
+### Introducing the new Vercel Agent
+
+Amelia Charles Content Engineer 
+
+- 15 July Customers 
+
+### How Speechify serves 500,000 dynamic pages to 60 million users on Vercel
+
+Susan Aziz Startup Customer Marketing 
+
+- 13 July Company News 
+
+### Open-weight models surge to 29% of volume, price per token flattens
+
+Amelia Charles, Harpreet Arora 
+
+- 7 July Company News 
+
+### Vercel acquires Better Auth to accelerate open source auth
+
+Guillermo Rauch CEO and Founder, Vercel 
+
+Show more posts 
+
+## Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Workflows 
+
+- Connect New 
+
+- Passport New 
+
+- eve New 
+
+## Core Platform
+
+- CI/CD 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+## Security
+
+- Platform Security 
+
+- WAF 
+
+- Bot Management 
+
+- Bot ID 
+
+## Tools
+
+- Vercel Drop New 
+
+- Vercel Agent 
+
+- Vercel Plugin New 
+
+- Agent Skills 
+
+- Next.js 
+
+- Domains 
+
+- v0 
+
+## Frameworks
+
+- eve New 
+
+- Nuxt 
+
+- SvelteKit 
+
+- Nitro 
+
+- Turborepo 
+
+- Tanstack Start 
+
+- FastAPI 
+
+- xmcp 
+
+- All frameworks 
+
+## SDKs
+
+- Vercel SDK 
+
+- Workflow SDK New 
+
+- Flags SDK 
+
+- Chat SDK New 
+
+- Queues SDK New 
+
+- Streamdown 
+
+## Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+- Platform Engineers 
+
+- Design Engineers 
+
+## Learn
+
+- Docs 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+- Academy 
+
+- Articles 
+
+- Community 
+
+## Explore
+
+- Customers 
+
+- Marketplace 
+
+- Templates 
+
+- Partner Finder 
+
+- Vercel + AWS 
+
+## Company
+
+- About 
+
+- Careers 
+
+- Press 
+
+- Events 
+
+- Startups 
+
+- Shipped on Vercel 
+
+- Open Source Program 
+
+- Enterprise 
+
+- Pricing 
+
+- Help 
+
+## Legal & Trust
+
+- Privacy Policy 
+
+- Terms of Service 
+
+- Cookie Policy 
+
+- DPA 
+
+- Acceptable Use Policy 
+
+- Legal (all documents) 
+
+- Trust Center 
+
+- Status 
+
+- Cookie Preferences 
+
+## Social
+
+- GitHub 
+
+- X 
+
+- LinkedIn 
+
+- YouTube 
+
+- Instagram 
+
+- 
+
+Loading status…
+
+Select a display theme: system light dark

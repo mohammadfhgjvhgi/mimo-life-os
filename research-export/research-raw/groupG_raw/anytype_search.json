@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://anytype.io",
+    "name": "Anytype — A safe haven for digital collaboration",
+    "snippet": "Create notes, tasks, databases, and chats that only you can access. Your data stays on your device — fully owned, secure, and private. Free to start.",
+    "host_name": "anytype.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://volodymyrpavlyshyn.medium.com/anytype-from-second-brain-to-social-brain-with-types-and-graphs-e6eb6611ec7d",
+    "name": "Anytype: From Second Brain to Social Brain with Types and",
+    "snippet": "Anytype's fundamental philosophy is “ local - first ,” meaning data resides on the user's device by default, ensuring privacy and offline access.3",
+    "host_name": "volodymyrpavlyshyn.medium.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/Anytype/comments/1p79jtt/anytype_is_deteriorating",
+    "name": "Anytype is deteriorating",
+    "snippet": "Does anyone else feel like Anytype's UI & UX is getting progressively worse? When I started there was a big plus button to create a new ... Read more",
+    "host_name": "www.reddit.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://apps.apple.com/my/app/anytype-the-everything-app/id6449487029",
+    "name": "Anytype - The Everything App",
+    "snippet": "Anytype is a private, offline- first workspace for notes, docs, tasks, and team collaboration — end-to-end encrypted, with your data stored on your device. Read more",
+    "host_name": "apps.apple.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://doc.anytype.io/anytype/create/objects",
+    "name": "Objects",
+    "snippet": "With Anytype , you create an Object and add relationships over time. This builds a flexible system of interconnected knowledge that doesn't care where something ... Read more",
+    "host_name": "doc.anytype.io",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://hilton.org.uk/blog/anytype-local-first",
+    "name": "Anytype's local-first architecture - Peter Hilton",
+    "snippet": "May 27, 2025 — Local - first literally means storing all of the data locally, on your computer. When you use Anytype , this data loads without the network latency ... Read more",
+    "host_name": "hilton.org.uk",
+    "rank": 5,
+    "date": "May 27, 2025",
+    "favicon": ""
+  }
+]

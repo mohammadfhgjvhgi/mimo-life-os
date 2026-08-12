@@ -1,0 +1,338 @@
+Overview - Overview - Z.AI DEVELOPER DOCUMENT 
+Documentation Index
+Fetch the complete documentation index at: /llms.txt 
+Use this file to discover all available pages before exploring further.
+Skip to main content 
+Overview - Z.AI DEVELOPER DOCUMENT home page English 
+
+Search...
+
+⌘K 
+API Keys 
+Payment Method 
+
+Search... 
+
+Navigation 
+Get Started 
+Overview
+
+Guides 
+API Reference 
+Coding Plan 
+Released Notes 
+Terms and Policy 
+Help Center 
+
+Get Started 
+
+Quick Start 
+
+Overview 
+
+Pricing 
+
+Core Parameters 
+
+SDKs Guide 
+
+Migrate to GLM-5.2 
+
+Language Models 
+
+GLM-5.2 HOT 
+
+GLM-5.1 
+
+GLM-5 
+
+GLM-5-Turbo 
+
+GLM-4.7 
+
+GLM-4.6 
+
+GLM-4.5 
+
+GLM-4-32B-0414-128K 
+
+Vision Language Models 
+
+GLM-5V-Turbo 
+
+GLM-4.6V 
+
+GLM-OCR 
+
+AutoGLM-Phone-Multilingual 
+
+GLM-4.5V 
+
+Image Generation Models 
+
+GLM-Image 
+
+CogView-4 
+
+Video Generation Models 
+
+CogVideoX-3 
+
+Vidu Q1 
+
+Vidu 2 
+
+Image Generation Models 
+
+CogView-4 
+
+Audio Models 
+
+GLM-ASR-2512 
+
+Capabilities 
+
+Thinking Mode 
+
+Deep Thinking 
+
+Streaming Messages 
+
+Tool Streaming Output 
+
+Function Calling 
+
+Context Caching 
+
+Structured Output 
+
+Tools 
+
+Web Search 
+
+Stream Tool Call 
+
+Agents 
+
+GLM Slide/Poster Agent(beta) 
+
+Translation Agent 
+
+Video Effect Template Agent 
+
+On this page 
+Featured Models 
+Models, Agents and Tools Text Models 
+Vision Models 
+Built-in Tools 
+Image Generation Models 
+Video Generation Models 
+Audio Models 
+Agents 
+
+Get Started
+Overview
+Copy page Copy page 
+
+Copy page Copy page 
+
+Z.AI offers a variety of models and agents to meet the needs of different scenarios. Choosing the right model can help you complete tasks more efficiently. 
+
+​ 
+
+Featured Models 
+
+GLM-5.2
+Open-source SOTA Performance 
+1M Lossless Context 
+
+GLM-5V-Turbo
+Multimodal coding model, specializing in visual programming. 
+
+GLM-Image
+Supports text-to-image generation, achieving open-source state-of-the-art in complex scenarios 
+
+​ 
+
+Models, Agents and Tools 
+
+To help you find the best fit for your use case, we’ve created a table outlining the core features and strengths of each model in the Z.AI family. 
+
+If you need to get pricing information, please go directly to Pricing . 
+
+​ 
+
+Text Models 
+
+Our model matrix includes text models with built-in reasoning capabilities, as well as vision-language models (VLMs) that extend the same reasoning power to multimodal understanding. 
+Model Strength Language Context Resource 
+GLM-5.2 Stable 1M-token context for long-horizon tasks
+Open-source SOTA coding, from generation to delivery English & Chinese 1M Guide 
+
+API Reference 
+GLM-5.1 Coding proficiency aligned with Opus 4.6
+Ability to work independently and consistently for up to 8 hours on a single task English & Chinese 200K Guide 
+
+API Reference 
+GLM-5 Programming ability
+Agentic Long-Term Planning and Execution
+Backend refactoring and in-depth debugging English & Chinese 200K Guide 
+
+API Reference 
+GLM-5-Turbo Optimization of Core Requirements for OpenClaw Tasks
+Improved continuity in the execution of complex tasks English & Chinese 200K Guide 
+
+API Reference 
+GLM-4.7 SOTA Performance
+Enhanced General Capabilities
+Optimized Agentic Coding English & Chinese 200K Guide 
+
+API Reference 
+GLM-4.7-FlashX Enhanced General Capabilities
+Optimized Agentic Coding
+Lightweight & High-Speed English & Chinese 200K Guide 
+
+API Reference 
+GLM-4.6 High Performance
+Strong Coding
+More Versatile English & Chinese 200K Guide 
+
+API Reference 
+GLM-4.5 Better Performance
+Strong Reasoning
+More Versatile English & Chinese 128K Guide 
+
+API Reference 
+GLM-4.5-X Good Performance
+Strong Reasoning
+Ultra-Fast Response English & Chinese 128K Guide 
+
+API Reference 
+GLM-4.5-Air Cost-Effective
+Lightweight
+High Performance English & Chinese 128K Guide 
+
+API Reference 
+GLM-4.5-AirX Lightweight
+High Performance
+Ultra-Fast Response English & Chinese 128K Guide 
+
+API Reference 
+GLM-4-32B-0414-128K High intelligence at 
+unmatched cost-efficiency English & Chinese 128K Guide 
+
+API Reference 
+GLM-4.7-Flash Free, Lightweight
+High Performance English & Chinese 200K Guide 
+
+API Reference 
+GLM-4.5-Flash Free, Lightweight
+Strong Reasoning
+English & Chinese 200K Guide 
+
+API Reference 
+
+​ 
+
+Vision Models 
+
+Visual models process images or videos for recognition and analysis. 
+Model Strength Language Context Resource 
+GLM-5V-Turbo Multimodal Coding Capabilities
+Context Size Increased to 200K
+Deep Integration with Agent Workflows English & Chinese 200K Guide 
+
+API Reference 
+GLM-4.6V Native Function Call Support
+Thinking Mode Switch Support English & Chinese 128K Guide 
+
+API Reference 
+GLM-OCR Document Parsing
+Information Extraction Multiple / Guide 
+
+API Reference 
+GLM-4.6V-FlashX Native Function Call Support
+Thinking Mode Switch Support
+Lightweight & High-Speed English & Chinese 128K Guide 
+
+API Reference 
+GLM-4.5V Multimodal
+Flexible Reasoning English & Chinese 64K Guide 
+
+API Reference 
+GLM-4.6V-Flash Free, Native Function Call Support English & Chinese 128K Guide 
+
+API Reference 
+
+​ 
+
+Built-in Tools 
+
+A suite of built-in tools designed to streamline workflows and boost productivity. 
+Tool Capability 
+Web Search - Provide real-time, concise, direct answers
+- Accurately parse complex HTML and converts it into clean Markdown or JSON 
+
+​ 
+
+Image Generation Models 
+
+Image Generation Models learn from massive image data to automatically generate high-quality images from text. 
+Model Strength Language Resolution Resource 
+GLM-Image - Stronger in complex instruction and knowledge-intensive scenarios
+- Open-source SOTA in text rendering English & Chinese multiple resolutions Guide 
+
+API Reference 
+CogView-4 - High-quality image generation
+- Diverse styles
+- Rich in detail English & Chinese multiple resolutions Guide 
+
+API Reference 
+
+​ 
+
+Video Generation Models 
+
+Video Generation Models turn text, images, or clips into dynamic video content, accelerating creativity for film, virtual avatars, animation, and marketing. 
+Model Strength Language Resolution Resource 
+CogVideoX-3 Significant improvements in image quality, stability, and physical realism simulation English & Chinese multiple resolutions Guide 
+
+API Reference 
+ViduQ1 Theatrical quality with seamless temporal flow English & Chinese 1080P Guide 
+
+API Reference 
+Vidu2 Fast delivery with smart style preservation English & Chinese 720P Guide 
+
+API Reference 
+
+​ 
+
+Audio Models 
+
+Audio models are a class of multimodal models that process audio and video signals, enabling the understanding, generation, or editing of audiovisual content. 
+Model Strength Multimodal Support Resource 
+GLM-ASR-2512 - CER as low as 0.0717
+- Support user-defined vocabularies
+- Support multiple mainstream languages and dialects Audio Guide 
+
+API Reference 
+
+​ 
+
+Agents 
+
+A set of ready-made agents empower users to create and communicate effortlessly. 
+Tool Capability Resource 
+GLM Slide/Poster Agent(beta) Combine content generation with professional design Guide 
+General-Purpose Translation Support 40+ languages, flexible strategies, and terminology customization Guide 
+Popular Special Effects Video Templates Special effects video templates like French_Kiss, BodyShake, and Sexy_Me Guide 
+
+Was this page helpful?
+Yes No 
+
+Quick Start
+Pricing
+⌘I 
+
+x github discord linkedin 
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

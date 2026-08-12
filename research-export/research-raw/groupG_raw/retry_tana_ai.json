@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://outliner.tana.inc/blog/tana-current-monthly-update-october-2025",
+    "name": "Tana Current Monthly Update (October 2025)",
+    "snippet": "Oct 10, 2025 — We're confident on the role of the knowledge graph to solve some challenges, Tana's vision for agents goes back to 2021 when the team committed ...",
+    "host_name": "outliner.tana.inc",
+    "rank": 0,
+    "date": "Oct 10, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://outliner.tana.inc/learn/features/ai-command-nodes",
+    "name": "AI command nodes - Tana Outliner",
+    "snippet": "AI command nodes are reusable actions that send your notes to an AI model with a prompt you define, then write the result back into Tana Outliner.",
+    "host_name": "outliner.tana.inc",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=U8QWw1JDnrI",
+    "name": "Productivity Cycles and AI Agents",
+    "snippet": "This video show you how to build AI Agents in Tana and create a productivity coach right inside your Tana workspace!",
+    "host_name": "www.youtube.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://outliner.tana.inc/learn/features/tana-ai",
+    "name": "Tana AI - Tana Outliner Learn",
+    "snippet": "Tana Outliner lets you build a knowledge graph where you can add information to help AI understand what content means and how it's connected, through Supertags ...",
+    "host_name": "outliner.tana.inc",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/TanaInc/comments/1iktkez/20250225_update_node",
+    "name": "2025/02/25 Update Node : r/TanaInc",
+    "snippet": "2025 /02/25 Update Node · Improved We now support o3-mini in most AI commands , such as Ask AI and AI Chat. · Improved We've improved pasting of ... Read more",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

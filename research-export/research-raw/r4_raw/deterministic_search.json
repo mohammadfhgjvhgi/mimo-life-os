@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://www.linkedin.com/pulse/deterministic-guardrails-nondeterministic-agents-andrew-mallaband-hn14e",
+    "name": "Deterministic Guardrails for Nondeterministic Agents",
+    "snippet": "Because agents are not deterministic components . They do not behave the same way twice. They reason probabilistically, adapt to context, and ... Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.civic.com/news/deterministic-guardrails-for-ai-agent-security",
+    "name": "You need deterministic guardrails for AI agent security - Civic",
+    "snippet": "Jul 2, 2025 — Deterministic Guardrails : Hard rules that reject, redact, or add security context to inputs and outputs. These provide absolute boundaries that ... Read more",
+    "host_name": "www.civic.com",
+    "rank": 1,
+    "date": "Jul 2, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://gucci-ninja.github.io/wordsandcode/post/guardian",
+    "name": "Building Deterministic Guardrails for Autonomous Agents",
+    "snippet": "Jan 26, 2026 — Building Deterministic Guardrails for Autonomous Agents · 1. Autonomous Agent (The Untrusted Caller ) · 2. Agentic Gateway (The PEP - Policy ... Read more",
+    "host_name": "gucci-ninja.github.io",
+    "rank": 2,
+    "date": "Jan 26, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://ranthebuilder.cloud/blog/agentic-coding-hooks-deterministic-ai-guardrails",
+    "name": "Agentic Coding Hooks: Deterministic AI Guardrails",
+    "snippet": "Jun 23, 2026 — In this post you will learn what agent hooks are and how they add a deterministic layer of guardrails to your AI coding workflow. We will focus ... Read more",
+    "host_name": "ranthebuilder.cloud",
+    "rank": 3,
+    "date": "Jun 23, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.rubrik.com/blog/ai/26/4/agents-are-doers-why-ai-guardrails-are-not-enough",
+    "name": "Agents Are Doers: Why AI Guardrails Aren't Enough",
+    "snippet": "Apr 16, 2026 — An AI agent has two components : an LLM (the brain) and a set of tools (the hands). Unlike deterministic software, agents are probabilistic and ...",
+    "host_name": "www.rubrik.com",
+    "rank": 4,
+    "date": "Apr 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://arxiv.org/html/2606.26924v1",
+    "name": "A Deterministic Control Plane for LLM Coding Agents",
+    "snippet": "Jun 25, 2026 — A non - deterministic component cannot serve as a trustworthy control for another non - deterministic component . Every governance component is  ...",
+    "host_name": "arxiv.org",
+    "rank": 5,
+    "date": "Jun 25, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.arthur.ai/blog/best-practices-for-building-agents-guardrails",
+    "name": "AI Agent Guardrails: Pre-LLM & Post-LLM Best Practices | Arthur",
+    "snippet": "Apr 6, 2026 — Learn how to implement pre-LLM and post-LLM guardrails for AI agents—including PII redaction, hallucination detection, and self-correction ...",
+    "host_name": "www.arthur.ai",
+    "rank": 6,
+    "date": "Apr 6, 2026",
+    "favicon": ""
+  }
+]

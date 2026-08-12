@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://howaiworks.ai/ai-tools/logseq",
+    "name": "Logseq - AI Tool | HowAIWorks.ai",
+    "snippet": "Logseq is a powerful open-source knowledge management and note-taking tool that helps you organize your thoughts, manage tasks, ...",
+    "host_name": "howaiworks.ai",
+    "rank": 0,
+    "date": "Jul 8, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://discuss.logseq.com/t/whiteboards-moodboards-lets-discuss-and-gather-ideas/1793?page=2",
+    "name": "Whiteboards, moodboards - let's discuss and gather ideas",
+    "snippet": "Whiteboards are a way to organize spatially Logseq objects like blocks, pages, queries etc, create relations between them by drawing arrows and ...",
+    "host_name": "discuss.logseq.com",
+    "rank": 1,
+    "date": "Jul 29, 2021",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/logseq/comments/1irrszk/logseq_plugin_copilot",
+    "name": "Logseq plugin - Copilot",
+    "snippet": "I want to make this plugin more agentic, able to use logseq queries to find out more information as it sees fit, able to search the web when it ...",
+    "host_name": "www.reddit.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://ednico.medium.com/logseq-times-2023-04-01-logseq-0-9-whiteboards-query-builder-workflows-and-new-plugins-f949d45afe19?source=user_profile---------0----------------------------",
+    "name": "Logseq 0.9, Whiteboards, Query Builder, workflows and new",
+    "snippet": "With this plugin, you can effortlessly generate or transform text using custom prompts, and creative workflows within Logseq.",
+    "host_name": "ednico.medium.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.logseq.com/whiteboards-and-queries-for-everybody",
+    "name": "Whiteboards and Live Queries for Everybody! [0.9.1 Update]",
+    "snippet": "The Whiteboards feature is now available for everybody, and writing Logseq queries is easier than ever. The feature works on all Logseq desktop ...",
+    "host_name": "blog.logseq.com",
+    "rank": 4,
+    "date": "Mar 29, 2023",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=BCyiNlVVLNk",
+    "name": "Logseq: 5 Best Features for PKM Mastery",
+    "snippet": "Exploring the best Logseq features with Dario Da Silva, Logseq expert. Your place to find and discover productivity tools. The Ultimate ...",
+    "host_name": "www.youtube.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/ahonn/logseq-plugin-ai-assistant",
+    "name": "ahonn/logseq-plugin-ai-assistant",
+    "snippet": "A powerful tool that enhances your Logseq experience by allowing you to interact with AI models like OpenAI's gpt-3.5-turbo.",
+    "host_name": "github.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.aidown.com.cn/en/software/logseq",
+    "name": "Logseq - AI Software Download Hub",
+    "snippet": "Logseq is a privacy-first open-source knowledge base built around local Markdown files, linked thinking, graph view, queries, flashcards, ...",
+    "host_name": "www.aidown.com.cn",
+    "rank": 7,
+    "date": "Mar 30, 2026",
+    "favicon": ""
+  }
+]

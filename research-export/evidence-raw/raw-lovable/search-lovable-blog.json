@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://lovable.dev/blog",
+    "name": "Blog",
+    "snippet": "2 days ago — Learn how we built the Visual Edit s feature at Lovable, an intuitive, Figma-like visual editor that empowers users to visually select, edit, and ... Read more",
+    "host_name": "lovable.dev",
+    "rank": 0,
+    "date": "Aug 5, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.lovable.dev/changelog",
+    "name": "Lovable changelog",
+    "snippet": "Lovable changelog and product updates. Stay up to date with new features, improvements, and bug fixes shipped in Lovable.",
+    "host_name": "docs.lovable.dev",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://lovable.dev/video/lovable-20-just-changed-the-game-ai-update-nobody-saw-coming",
+    "name": "Lovable 2.0 just changed the game: Ai Update Nobody Saw",
+    "snippet": "The new version emphasizes improved workflow efficiency, team collaboration, and production-ready deployment capabilities . content and UI changes without ...",
+    "host_name": "lovable.dev",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://uibakery.io/blog/what-is-lovable-ai",
+    "name": "What is Lovable AI? A Deep Dive into the Builder",
+    "snippet": "A May 2026 guide to Lovable AI with pricing, credit limits, core features , production-readiness risks, and comparisons with alternatives.",
+    "host_name": "uibakery.io",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/orgs/community/discussions/183385",
+    "name": "Visual live preview and visual-edit mode for AI Code Assist",
+    "snippet": "Visual live preview : See UI changes of your code in real time, just like lovable.dev. · Visual-edit mode: Do WYSIWYG style changes directly in a preview pane, ... Read more",
+    "host_name": "github.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/lovable/comments/1k15jd9/anyone_else_struggling_with_lovabledev_making",
+    "name": "Anyone else struggling with Lovable.dev making random",
+    "snippet": "Lovable keeps making random changes across parts of the system that I didn’t touch, didn’t ask to be touched, and honestly, didn’t even know were ...",
+    "host_name": "www.reddit.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://lovable.dev/blog/versioning-dev-mode",
+    "name": "Versioning, Dev Mode & Lovable Livestream with Clerk",
+    "snippet": "Mar 12, 2025 — Bookmark, restore & track changes easily Introducing Dev Mode – View and edit your code without leaving. We've upgraded versioning with better ...",
+    "host_name": "lovable.dev",
+    "rank": 6,
+    "date": "Mar 12, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://lovable.dev/video/lovable-20-just-launched-5-must-see-updates-and-a-full-website-build-in-10-minutes",
+    "name": "Lovable 2.0 Just Launched: 5 Must-See Updates (And a Full",
+    "snippet": "The first major update is an enhanced visual editor that allows direct manipulation of any element, including text, padding, and styling through a graphical ...",
+    "host_name": "lovable.dev",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

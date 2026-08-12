@@ -1,0 +1,499 @@
+- 
+- 
+- 
+- 
+- 
+- Terminal commands | v0 Docs 
+- 
+- 
+- 
+- 
+- 
+- 
+
+- Docs 
+
+- API 
+
+Search… ⌘ K Ask AI Ask AI 
+Search… ⌘ K 
+Docs API 
+
+- Getting Started 
+
+- What is v0? 
+
+- Agentic features 
+
+- Sandbox 
+
+- Vercel Integration 
+
+- Quickstart 
+
+- FAQs 
+
+- Prompt 
+
+- Text Prompting 
+
+- Screenshots and Files 
+
+- Figma 
+
+- Iterate 
+
+- Code editing 
+
+- Terminal commands 
+
+- Design mode 
+
+- Design Systems 2.0 
+
+- Images, videos, and file uploads 
+
+- Versions 
+
+- Integrate 
+
+- AI models 
+
+- Databases 
+
+- Snowflake 
+
+- Shopify 
+
+- External APIs 
+
+- GitHub 
+
+- MCP Integrations 
+
+- Pre-installed Agents 
+
+- Slack 
+
+- Ship 
+
+- Deployments 
+
+- Custom domain 
+
+- Sharing 
+
+- Templates 
+
+- Manage 
+
+- Account 
+
+- Enterprise 
+
+- Instructions 
+
+- Folders 
+
+- Projects 
+
+- Pricing 
+
+- Usage & Activity 
+
+- Teams 
+
+- Security 
+
+- Guides 
+
+- Full-stack apps 
+
+- Prototyping 
+
+- PRD design 
+
+- 
+
+- Compare 
+
+Menu 
+
+# Terminal commands
+Copy page Copy page 
+
+v0 can run bash commands in your project sandbox to test, debug, and use platform CLIs. Control its autonomy with three permission modes (Ask, Auto, Full).
+Copy for LLM View Markdown Ask AI about this page 
+
+v0 can run bash commands inside your project's sandbox to test interactions, inspect your repo, run unit tests, and call platform CLIs like Vercel and GitHub. You control how much autonomy v0 has with a permission mode that defaults to Auto.
+
+## What v0 can do in the terminal 
+
+v0's Bash tool runs commands in the same sandbox where your project files live. Each command runs in a fresh shell starting from the project root, so v0 chains operations explicitly rather than relying on shell state.
+
+### Common use cases 
+
+- Test interactions in a browser : launch a headless browser session against your live preview to verify user flows and capture errors.
+
+- Review commit history : run git log , git blame , or git diff to understand prior changes before editing files.
+
+- Write and run unit tests : execute your project's test command, read the output, and fix failures in place.
+
+- Use platform CLIs : interact with the Vercel CLI ( vercel logs , vercel inspect ) and GitHub CLI ( gh pr view , gh issue list ) to inspect deployments, pull requests, and issues without leaving the chat.
+
+### How to ask for it 
+
+Describe the outcome you want. For example:
+
+- "Test the signup flow in a browser and report any failures."
+
+- "Look at the last 10 commits on this file and summarize what changed."
+
+- "Run the unit tests and fix any failures."
+
+- "Check the latest deployment logs in Vercel and identify the error."
+
+v0 picks the appropriate commands, runs them, and folds the output into its next response.
+
+## Permission modes 
+
+v0 has three permission modes that control how the terminal permission layer handles a command. The setting persists across new chats.
+
+Mode What v0 does When to use 
+Ask Permissions Applies your permission rules. Allowed commands run, denied commands are blocked, and commands marked ask or not matched by a rule require confirmation. Sensitive projects, production data, or work where you want to review commands that have not been explicitly allowed. 
+Auto Permissions (default) Applies the same rules. Allowed commands run, denied commands are blocked, and commands marked ask require confirmation. For an unmatched command, v0 decides whether to request confirmation. Day-to-day development where you want v0 to proceed autonomously while respecting configured rules. 
+Full Permissions Skips terminal permission evaluation and runs commands without checking allow , ask , or deny rules. Disposable or non-sensitive projects where you accept the risk of unrestricted commands. 
+
+### Auto Permissions 
+
+Auto is the default mode and fits most users. v0 runs commands on its built-in allow list without confirmation. The list includes:
+
+- Read-only file inspection : ls , find , cat , head , tail , tree , wc , cd , pwd 
+
+- Search and data : grep , rg , jq 
+
+- Local git : git status , git log , git diff , git show 
+
+- Read-only GitHub CLI : gh pr view , gh pr list , gh pr diff , gh pr checks , gh issue view , gh repo view 
+
+- Read-only Vercel CLI : vercel logs , vercel inspect , vercel list , vercel whoami , vercel activity 
+
+- Output : echo , whoami 
+
+- Browser automation and timing : agent-browser , sleep 
+
+An unmatched command is not automatically approved or rejected. v0 can run it or explicitly request your confirmation based on the operation it intends to perform. Add an ask or deny rule when a command must have a deterministic outcome in Auto mode.
+
+You can edit this list under Settings → Agent Permissions . See Customize the rules .
+
+### Ask Permissions 
+
+Ask mode shows a confirmation card for every command that is marked ask or does not match a rule. Commands matched by an allow rule still run without confirmation, and commands matched by a deny rule are blocked.
+
+Use Ask mode when you want a tight feedback loop, for example when working against a real production database or in a repo where you want to audit each step v0 takes.
+
+### Full Permissions 
+
+Full mode bypasses terminal permission evaluation. It does not check built-in, team, or user allow , ask , and deny rules before running a command. This includes shell wrappers ( bash , sh , eval ), package execution ( pnpm dlx , npx -y ), remote git operations ( git push , gh pr create ), and destructive commands.
+
+Only use Full mode if both of these apply:
+
+- You're working on a non-sensitive project with no production credentials or critical data.
+
+- You're comfortable reviewing v0's command history after the fact rather than approving each command up front.
+
+### Set the permission mode 
+
+- In the composer toolbar, open the Tools dropdown (the plus icon next to the model picker).
+
+- Select the Permissions row. The submenu shows your current mode.
+
+- Choose Ask Permissions , Auto Permissions , or Full Permissions .
+
+Your selection persists across new chats until you change it.
+
+## Customize the rules 
+
+The permission mode controls how v0 reacts to unmatched commands. The rules themselves (which commands count as allowed, asked, or denied) live in your settings and can be edited directly. Open Settings → Agent Permissions to manage them.
+
+### User and Team scopes 
+
+The permissions panel has two tabs:
+
+- User : Rules tied to your account. They apply across every project you work on.
+
+- Team : Rules set by team owners that apply to every member of the team. Only team owners can edit this tab.
+
+User, team, and built-in rules are evaluated together in Ask and Auto modes. A rule in one scope does not always override a rule in another scope. The most specific matching rule determines the result, as described in Rule precedence .
+
+### Rule format 
+
+Each scope holds three JSON arrays:
+
+Array Behavior 
+allow v0 runs the matching command without asking in Ask or Auto mode. 
+deny v0 blocks the matching command in Ask or Auto mode. 
+ask v0 confirms with you before running the matching command in Ask or Auto mode. 
+
+Patterns follow the form Bash(<command pattern>) . A :* suffix matches any arguments. For example:
+
+{ 
+" allow " : [ " Bash(pnpm test:*) " , " Bash(pnpm lint:*) " ], 
+" ask " : [ " Bash(git push:*) " ], 
+" deny " : [ " Bash(curl:*) " ] 
+} 
+
+### Rule precedence 
+
+For each command, v0 applies these rules:
+
+- It gathers matching built-in, team, and user patterns.
+
+- It compares their specificity using the length of the command pattern inside Bash(...) , excluding a trailing :* .
+
+- The verdict from the most specific match wins. A more specific allow can therefore take precedence over a broader ask or deny , and the reverse is also true.
+
+- If equally specific winning patterns have conflicting verdicts, v0 asks for confirmation.
+
+- For a compound command, v0 evaluates its subcommands and uses the most restrictive result in this order: deny , ask , unmatched, then allow .
+
+When the same exact pattern appears in allow and ask while settings are merged, allow removes the identical ask entry. A matching deny is retained; if it has the same specificity as another winning verdict, the conflict resolves to ask .
+
+These rules do not apply in Full mode because Full mode skips permission evaluation.
+
+Click Reset to default to discard your custom rules and restore the built-in list.
+
+## Current deletion guard 
+
+The built-in settings include a deny pattern for commands that begin with the exact rm -rf token sequence. In Ask and Auto modes, it participates in the same specificity and tie-breaking rules as every other pattern. Full mode skips it.
+
+This pattern is a guard, not a complete sandbox safety boundary. Equivalent flag forms and commands invoked through some shell wrappers may not match it. Other sandbox and platform controls can still limit what a process can access, but the terminal permission layer should not be treated as protection from every destructive command.
+
+To remove files, ask v0 to delete them by name so it can use its built-in Delete tool.
+
+See what else v0's agent can do
+
+Previous Code editing Next Design mode 
+
+On this page
+What v0 can do in the terminal Common use cases How to ask for it Permission modes Auto Permissions Ask Permissions Full Permissions Set the permission mode Customize the rules User and Team scopes Rule format Rule precedence Current deletion guard 
+
+Scroll to top Give feedback 
+
+## Product
+
+- Home 
+
+- Enterprise 
+
+- Pricing 
+
+- v0 for Students 
+
+## Company
+
+- Terms 
+
+- AI Policy 
+
+- Privacy 
+
+- Cookies 
+
+## Resources
+
+- FAQs 
+
+- Docs 
+
+- Vercel Community 
+
+- Vercel 
+
+## Social
+
+- Twitter 
+
+- LinkedIn 
+
+## Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Workflows 
+
+- Connect New 
+
+- Passport New 
+
+- eve New 
+
+## Core Platform
+
+- CI/CD 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+## Security
+
+- Platform Security 
+
+- WAF 
+
+- Bot Management 
+
+- Bot ID 
+
+## Tools
+
+- Vercel Drop New 
+
+- Vercel Agent 
+
+- Vercel Plugin New 
+
+- Agent Skills 
+
+- Next.js 
+
+- Domains 
+
+- v0 
+
+## Frameworks
+
+- eve New 
+
+- Nuxt 
+
+- SvelteKit 
+
+- Nitro 
+
+- Turborepo 
+
+- Tanstack Start 
+
+- FastAPI 
+
+- xmcp 
+
+- All frameworks 
+
+## SDKs
+
+- Vercel SDK 
+
+- Workflow SDK New 
+
+- Flags SDK 
+
+- Chat SDK New 
+
+- Queues SDK New 
+
+- Streamdown 
+
+## Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+- Platform Engineers 
+
+- Design Engineers 
+
+## Learn
+
+- Docs 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+- Academy 
+
+- Articles 
+
+- Community 
+
+## Explore
+
+- Customers 
+
+- Marketplace 
+
+- Templates 
+
+- Partner Finder 
+
+- Vercel + AWS 
+
+## Company
+
+- About 
+
+- Careers 
+
+- Press 
+
+- Events 
+
+- Startups 
+
+- Shipped on Vercel 
+
+- Open Source Program 
+
+- Enterprise 
+
+- Pricing 
+
+- Help 
+
+## Legal & Trust
+
+- Privacy Policy 
+
+- Terms of Service 
+
+- Cookie Policy 
+
+- DPA 
+
+- Acceptable Use Policy 
+
+- Legal 
+
+- Trust Center 
+
+- Status 
+
+## Social
+
+- GitHub 
+
+- X 
+
+- LinkedIn 
+
+- YouTube 
+
+- Instagram

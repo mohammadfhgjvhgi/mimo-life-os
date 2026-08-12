@@ -1,0 +1,246 @@
+Reflect Reflect Product Pricing Company Blog Changelog Login Start free trial Changelog New updates and improvements to Reflect.
+Subscribe 🔗 AI link summaries A popular Reflect feature is the ability to save website links to your notes with a single click.
+And now, those saved links just got smarter and easier to find.
+When you save a link, whether through the Chrome extension or from your phone, Reflect will automatically generate a short AI summary of the page.
+Here’s how it works: Save a link from your browser or phone.
+Reflect creates a summary that captures what the page is about, appending it to your notes.
+Find it faster later — summaries give Reflect’s semantic search engine more context so the right link shows up when you search for it.
+💡 Tip : If you haven’t tried saving links yet, install our Chrome extension or use the Share feature on mobile.
+Advanced Search on Mobile Last year we launched Advanced Search on desktop, which added the ability to filter your notes.
+This makes it a lot easier and faster to find what you're looking for.
+Today, we are bringing that filtering functionality to our iOS app.
+🎙️ Advanced Search on Mobile When you search your notes from the “All” tab of the iPhone app, you’ll see there are now filters to toggle on top.
+Filter by: Pinned notes Published notes Tags Linked To/By Created at Updated at Daily Notes We've also got some additional mobile improvements coming, as well as some bugs to squash! Custom prompt editor and more Editor for custom AI prompts Inside your preferences, we've added a new tab for Prompt Templates.
+From here you can create, copy, edit and delete any of your custom AI prompt templates.
+Shortcut to copy URL Copy the link to any note you are on by using the keyboard shortcut ⌥ ⌘ (option + cmd + L).
+Other updates We now support OCRing images contained inside the PDFs, meaning they will be added to the search index.
+Support dragging more links onto Reflect, such as an email from Apple Mail.
+Fix SQLite search when better trigram is unavailable (on mobile) What's next? Bringing advanced search to mobile.
+Bringing AI chat to mobile.
+Performance boost on iPad Last week we announced a major speed boost from rewriting the entire frontend codebase to be powered by SQLite.
+We’ve now brought the same improvement to our iPad app.
+If you previously used Reflect’s iPad app, you’ll notice it’s now much faster and more responsive.
+It’s also now able to handle massive collections of notes without any issue.
+If you own an iPad but haven’t tried it yet, you can download it here from TestFlight and take it for a spin! It shares a lot of the functionality our desktop apps have, like advanced search and the ability to chat with your notes using AI.
+Massive speed bump, Sonnet 3.7, and PDF preview Over the past year, a lot of our time has gone into rewriting the entire frontend codebase to be powered by SQLite.
+We quietly launched this across iOS, web, and macOS desktop over the last two weeks.
+In short you should see much faster load times, and we should handle massive note collections without issue (no more reloading issues on mobile!).
+Also included in this release is: Claude Sonnet 3.7 support for our AI assistant An in-line PDF preview that lets you view PDFs within the macOS app Persistent search results Read the full update here.
+In-line transcriber and Gemini for AI chat Reflect has added an in-line voice transcriber that lets you add voice transcriptions anywhere within your notes.
+To use it on Mac, either press the Option key twice or Option + Space and start speaking.
+On Windows computers use the Alt key twice or Alt + Space.
+Make sure your cursor is where you want the text to go! The transcription will happen in real-time as you speak.
+When you’re done speaking, just use the same shortcut again.
+We’ve started using Gemini to power our AI chat feature that lets you chat with your notes.
+Gemini has a context limit of 2 million tokens vs.
+the 128k cap from OpenAI and Anthropic.
+This means it can take in a LOT more of your notes as context for the chat, which drastically improves the results.
+Image and PDF OCR Text Reflect now has OCR that extracts text from images and PDFs.
+We’ve also improved how image resizing and uploading works.
+OCR (“Optical Character Recognition”) extracts text from images.
+In Reflect, this means that the text contained in images and PDFs now shows up in the search results.
+For example, you can take a photo of a receipt and save it to your daily note.
+If you search for that charge later, it will show up.
+🔐 Encrypted assets, lock screen activity, deep-links and more Assets you save to Reflect are now end-to-end encrypted.
+That means any image or file you add to a note can only be decrypted and viewed by you.
+We’ve also added a lock screen activity widget for our voice transcriber.
+When you record a voice note from Reflect’s iOS app, it now shows the recording activity from your lock screen.
+There’s also a convenient “Stop” button for when you’re finished.
+Next we’ve added deep links, which allow you to open specific pages or notes within Reflect, directly from external applications.
+Jump straight to the exact note or page you need, saving time and reducing clicks.
+Finally, we’ve added a few improvements to images.
+Images are now available to save and view while offline.
+Like the rest of your notes, they will sync once you go back online again.
+On iOS you can now also zoom into images after clicking them to expand.
+Tasks added to iPhone app Today we’re happy to announce we are extending that to our iPhone app.
+Our tasks manager is designed to be a simple aggregation of the tasks across your notes.
+You can create new tasks, check-off completed ones, and schedule tasks for the future.
+Our goal isn't to build a fully fledged task manager (we recommend other great apps like Things for that), but we decided to add a basic aggregate view so tasks don’t get buried in your daily notes.
+If you don't see the Tasks tab at the bottom, update the Reflect iPhone app.
+GPT-4o added to Reflect's AI features We've added the new GPT-4o into Reflect.
+This makes Reflect’s AI voice transcriber, AI assistant and the chat with your notes much faster.
+GPT-4o also allows for substantially larger context windows, so you can give the AI a lot more text to work with.
+International Keyboard Support We’ve added support for international keyboards.
+By default, Reflect will automatically detect what keyboard your system is set to.
+If you’re multilingual, it even works when you toggle between different keyboard languages.
+The one exception is when you are using Reflect in Safari, so we’ve also added the ability to manually select the layout in your preferences.
+💡Tip: click on the question mark next to your profile name in the lower left corner of the app, then click “Keyboard shortcuts”.
+Here you’ll be able to see what the custom shortcuts are for your language.
+iOS App live in App Store Reflect’s iPhone app has been out of beta for quite a while, but has remained in TestFlight (Apple’s developer platform), until now.
+The app is functionally the same as the TestFlight app, but we recommend uninstalling the old app and downloading the new one from the App Store.
+This is where future updates will be made.
+You can download Reflect from the App Store here.
+🛠️ Other Updates and fixes: Fixed backlink picker highlighting for note aliases Improved case-sensitive alias matching Fixed backlink matching for emojis Updated models to use GPT-4-turbo Do not auto-create tags from pastes Re-enable macOS level audio recording (i.e.
+record zoom meetings) Localized non-US keyboard shortcuts New Backlink Picker Improved the performance of pages with a lot of incoming backlinks Enhance the backlink picker.
+It's now smarter about the sorting of items and shows bolded matched text.
+Other updates and improvements: Ability to toggle between tasks and checklists on mobile Added forward and back buttons on the desktop, web and iPad apps Added support for custom protocols (e.g., things://) Enabled history navigation buttons on iPad Introduced task creation via API (use ‘+’) Improved performance for pages with many incoming backlinks Improved handling of remote images—images now re-upload automatically when dragged from a browser Implemented scrollbars in dark mode Enhanced meeting sorting across multiple calendars Adjusted positioning of the pop-up account menu when resizing the sidebar Fixed an aliasing issue causing duplicate entries Tasks update and custom protocols We have quietly shipped support for: Creating tasks through the API (use +) Oscillating between tasks and checklist items on mobile.
+Support for custom protocols (e.g.
+things://) Forward/back buttons + small UI fixes Add forward/back buttons to desktop, web, and iPad UI Show history nav buttons on iPad Fix Scrollbars in darkmode Fix meeting sort for multiple calendars Keep the focus in the editor when the popover opens Various small bug fixes Major bug fixes Fixed an aliasing bug that was causing duplicates.
+Fixed an editing bug on mobile that was causing the wrong note to be edited.
+(This one was quite a serious one, so a full post-mortem is being written up.) Fix the positioning of the pop-up account menu when the sidebar is resized.
+Ensure that audio files are saved locally before uploaded.
+This will dramatically reduce the risk of losing audio memos.
+Fix an issue with remote images dragged from a browser.
+Previously Reflect would store the remote URL rather than re-upload the image.
+Now you can drag them from anywhere.
+Tasks filtering and meeting fixes You can now filter by Tasks by their breadcrumbs Lots of fixes around adding meetings / attendees Update to the tasks beta and voice notes Current will now show tasks from this daily note and all previous daily notes.
+Overdue will only be scheduled tasks that are overdue.
+Update to audio recording: You can now cancel recordings with escape.
+Improved iOS performance and action button support We just shipped a new version of the iOS app that will improve the performance.
+We've also added support for the new hardware button on the latest iPhones.
+So you can set that up as a shortcut to record audio memos.
+iPad offline fix and improved iOS performance Shipped a new iPad app that should fix offline mode again (sorry!) Shipped a new iOS app that improves performance.
+Improved memory and Chrome extension fix We just released mobile build 389 which improves memory usage.
+This should address the reloading issues few of you reported to some extent.
+We've fixed the bug that stopped our Chrome extension from being able to bookmark PDFs.
+Advanced Search and AI Chat We've released three new features: advanced search, AI chat, and similar notes.
+we've introduced a new advanced search, which lets you filter notes by daily dates, backlinks, pinned, and more.
+On top of that, you can now ‘chat’ with your search results using GPT-4.
+This is convenient for quickly summarizing a collection of notes, or for example, reflecting on what you've written the last week.
+Lastly, we've released similar notes.
+This uses client-side embedding to build up a semantic index of your notes.
+By every note, you'll see ‘similar notes’ that have semantically similar content.
+All features are available today.
+You can read more on our blog post announcement.
+AI on mobile, iCal integration and offline status indicator Starting today, you can access Reflect’s AI palette editor through our mobile iPhone app.
+To access the AI palette on the mobile app: Select text within any note in Reflect Tap on the ✨ icon in the menu Select the prompt you’d like to run Like on the desktop and browser apps, you can also clone and save your own custom prompts.
+📅 Add iCal events to Reflect We’ve also added the ability to add events from iCal intro Reflect.
+To do this, connect your iCloud account from the “Connections” page under preferences.
+You’ll need to generate an app-specific password for Reflect at appleid.apple.com.
+You can watch a video of how to do this here.
+📡 Offline notice Lastly we’ve added a notice to notes when they are offline, so you can see that some changes have been made, and are waiting to be synced.
+Add backlinks using AI We’ve just released an update to Reflect that lets you select a paragraph of text and automatically add backlinks.
+How to add backlinks using AI: Highlight a selection of text within a note, or highlight the entire note by using cmd + a.
+Pull up the AI palette editor using cmd + j or by clicking on the magic stars icon in the editor menu.
+Select the prompt titled “Decorate my writing with backlinks” Replace the text, and your backlinks will be added! Find the full video walkthrough here.
+Other updates: A 50% memory usage improvement on the mobile app Option to configure text size in the iOS app Reflect API We’ve publicly released our API, which supports appending data to your notes, returning a list of the links you've bookmarked, and a few other things.
+You can find information on how to access the API, the available endpoints and more on our Academy Page.
+We’ve also got a video walkthrough showing how to generate an access token here.
+iOS audio memo widget We’ve released a widget for iOS that lets you record and transcribe voice notes with one tap from your lock screen.
+To install the widget: Make sure you have the latest version of Reflect on Testflight Press and hold down on your lock screen Tap customize and select your lock screen Tap “add widgets” and select Reflect We also have a video walkthrough you can watch here.
+Massive speed increase to our mobile app Today we released the database rewrite I've been working on for the past few weeks.
+It changes how the entire app works internally, and effectively reduces the memory footprint greatly.
+Practically, you'll notice: Much faster startup time No more mobile reloads if you have a large graph Less obvious, but still important: Reflect will now take up much less system resources.
+We're getting close to what native apps can achieve in terms of both speed and lightweightness.
+To get the updated app, just refresh Testflight.
+New Chrome extension We’ve released a new version of our Chrome extension.
+It’s been fully redesigned with a few new features: Save a link to Reflect with a single click Toggle automatic highlighting when you select text Remove highlights that you’ve made on a page Toggle your Kindle sync to be on or off Add custom descriptions to pages you save Save Tweets to Reflect You can download the new extension here.
+Drag and drop bullets We've released a new version of the desktop and web app that lets you move and indent bullet points by dragging them.
+Reflect Academy also got a makeover.
+You can now search through the academy to find information about Reflect and note-taking more broadly.
+What else is new in May? Mem and Loseq importers added Improved Whisper transcription formatting (you must have “Labs” turned on in your Reflect preferences).
+Improved Twitter embeds – they now load much faster, work offline and are searchable.
+Readwise tags now come in as backlinks.
+More bug fixes and performance improvements.
+AI and usability improvements In the past month, we’ve made updates to our AI integrations as well as some user experience improvements.
+Some highlights: Give the transcriber helper text on names or words it struggles with Transcribe voice notes longer than 30 minutes Record voice transcriptions from the iPad app Enter your own API keys (either GPT-3.5 or GPT-4) to bypass the AI palette character limits A complete revamp of our Lists functionality - this was a huge one for user experience You can now check/uncheck to-do boxes from the incoming backlinks section at the bottom of a note The overflow scroll issue has been fixed on the sidebars Added ability to map forward/back keyboard shortcuts on the Mac app (useful for international keyboards) A new content series on our blog , and 12 new workflow videos on our YouTube channel New mobile app design Reflect’s mobile iOS app has a fresh new redesign, resulting in a much smoother experience.
+Some changes you’ll notice: An updated layout for the text editing menu, complete with new icons A cleaner Daily Notes page that clearly shows what day you're on When you open the mobile app, it will take you right to your Daily Note for that day More space around text, making your notes much easier to navigate and read The changes are live on the most recent version of Reflect, which you can download through the Testflight app.
+GPT-4 + custom AI prompts Reflect AI now operates using GPT-4 from OpenAI.
+This newer version of GPT is significantly more creative and intelligent.
+You can use it to rephrase text like any author, use it to edit your writing and much more.
+In this update we also added the ability to view the prompts our team has pre-built.
+You can then clone, edit and save your own custom prompts to quickly call up in the future.
+To access Reflect AI with GPT-4, just call on the AI palette like normal using cmd j or clicking the stars icon after highlighting some text.
+You can see a video walkthrough of how to create your own custom prompts here.
+Readwise Integration Reflect now has an integration with Readwise – a tool that lets you save things you find online, then resurfaces those highlights at set intervals so you don't forget about them.
+By integrating Readwise with Reflect, all of this happens directly in your notes.
+With it, you can do things like sync your bookmarked Tweets with Reflect, import all of your Kindle or Apple Books highlights, discover and save podcast highlights and gather insert text from physical books.
+It will also resurface these highlights directly within your notes.
+If you don’t have an account yet, you can sign up for a free trial and start syncing your reading notes with the applications you use.
+Re-design of web and desktop apps Reflect has received a major design makeover on the web and desktop applications.
+The whole app got refreshed, from the daily notes page to the settings.
+Here are some highlights: A new set of icons Re-designed dark mode Simplified side-bars with more descriptive labels Redesigned recorder for Whisper transcriptions The new design is live on the desktop app, and on reflect.app.
+Whisper on mobile and password recovery kits Reflect’s mobile app now lets you record and transcribe voice notes through Whisper - a new technology that provides near human level accuracy.
+It’s great for capturing that fleeting idea, or recording a reflection at the end of the day from your bed.
+To access on mobile, tap on the plus sign in the top right corner of your notes.
+Reflect also now has recovery kits automatically download upon signup – making encryption much less scary.
+If you’ve already signed up, you can download your own recovery kit in your graph settings.
+Reflect AI integration You can now use AI to take better notes and improve your writing.
+The AI palette comes with a handful of pre-written prompts, and you can also ask anything you want with a custom prompt.
+Pull up the AI palette at anytime by pressing 'cmd j' (or 'control j' on Windows).
+You can also edit existing text by highlighting it and using the same keyboard shortcut, or selecting the magic wand in the text-selection menu.
+For more information see our Reflect academy page.
+New Import/Export options We've added the ability to import Evernote, HTML, Workflowy, Markdown, and Apple Notes.
+We've also added the ability to export as HTML (alongside our Markdown and JSON export options).
+For more information, see our academy.
+Happy New Year! 🎆 New API endpoints, speed and Whisper improvements Improve the formatting of lists copied to the clipboard New Zapier append-to-daily-note API.
+Improve speed of first page load Improve Whisper transcriptions, specifically the output formatting and spelling of names.
+Enhanced search and Whisper integration Today we are releasing the desktop integration of OpenAI's Whisper.
+This provides close to human-level transcription support.
+Simply tap the microphone icon, and record a message.
+Your audio will be transcribed and appended to today's daily note.
+Later this year we will be adding the technology to our mobile app.
+A note regarding security: we delete the audio recordings and plain text transcriptions as soon as they're processed.
+Enhanced search We are also releasing an improved search engine.
+Not only did we speed things up, but we added both prefix and fuzzy matching.
+Give it a whirl with cmd+k Split pane view Yesterday we quietly shipped a long-awaited featured: split-pane.
+In short you can now edit and view two notes at the same time.
+To activate split-pane, try clicking a backlink while holding down the command key (or control if you're on Windows).
+To close, hit escape.
+And, naturally, you can also activate with the keyboard.
+Highlight a backlink (using the arrow keys) and then press command+enter.
+For more info see: https://reflect.academy/split-pane-view Tasks and more! Firstly, we have released the Tasks Beta ! This is a limited beta for the desktop/web app only.
+If you'd like to be involved in the beta head here (and please get involved in Discord ).
+And more We now de-dupe incoming backlinks We have added 'Go to a random note' to the cmd+k search menu.
+We have shipped a fix to our markdown export feature - backlinks and tags will now be exported without their Reflect links Released a beta office 365 calendar integration - try it! We have added task context to tasks.
+This will pull from the bullet above it.
+Reflect 2 It has been a few months since we launched Reflect and we've been busy bees.
+Today we are releasing Reflect 2.
+We have made improvements across the board from templates, to history revisions, to pretty redesigns, and so much more.
+Let's explore what's new.
+Templates Templates are a long requested feature.
+They make it easy to insert commonly used snippets.
+For example, you might want to use a common structure for your daily note.
+You can edit templates under Reflect's preferences.
+And insert using our new slash menu.
+Just type forward-slash, the template name, and then enter.
+Which is a great segue to our other editor improvements...
+Editor polishing Our goal with the editor is to make it fast and invisible.
+Its power should blend into the background.
+If we do our job right you should enter a state of flow while using it.
+We started out by creating a new 'slash menu' for editing your notes.
+We added a text-selection popup menu to make formatting easier.
+Then we added a few tools around link-editing.
+You can now hover a link to see its url and a quick edit menu.
+You can also press press cmd k over selected text to quickly link it.
+History browser and sync Behind the blinking cursor on every Reflect note lies an incredible amount of complexity.
+From the rich-text editor, to the realtime sync, to the end-to-end encryption...
+it turns out note-taking is one of the harder problems in computer science.
+And the grand-daddy of all these problems: merging offline changes.
+In Reflect 2 we have rewritten our sync engine to use YJS , the gold-standard in the space.
+What this means in practice is that your offline changes will be merged in a more intelligent manner.
+As part of this update we've released our History Browser.
+This is like a time-machine for your notes.
+You can view all of your changes to a note and revert to any point in time.
+Brainier Brain Our Brain tab is both a fun way to visualize all your notes and a useful way of explaining "what the hell is a graph database is and why are you spending so much time on it" to your partner.
+In Reflect 2.0 we've touched up the interface a bit and color-coded your notes based on tag.
+We've added a few filters so you can exclude your daily notes, for example.
+Meeting tweaks The less typing you have to do the better.
+That's why we make it super easy to import meetings from your calendar straight into your daily notes.
+In Reflect 2.0 you can now import more events from multiple calendars.
+Also, if you edit an attendee's name we'll remember that in the future.
+Date styling We know our users have different preferences around date and time formats.
+In Reflect's settings you can now specify which format you want.
+We have also added a little shortcut for inserting the current time.
+Design facelift We have redesigned the nav bar and split up the account and support popup menus.
+For those of you who like creating multiple graphs we have added a little color setting so you can easily see which area you're in.
+And so much more...
+There are hundreds of tiny improvements and bug fixes that didn't make these release notes (like markdown exports).
+I'm proud of the progress our little team has made.
+If you want to see how the sausage is made, join our discord.
+How do I get Reflect 2? If you're already using Reflect, you have it! We developed some fancy functionality to push updates out instantly.
+If you're not using Reflect, you can sign up for a two week free trial here.
+Customize date format Allow changing of the date format in preferences.
+Use the US format as default.
+Disabling linking to the Safari extension (until we push a fix to it) Fix code block background in dark mode Don't copy triple backticks from code block Offline Mode and Internationalization fixes.
+Release offline mode and sync Fix typos in website copy Fix clickjacking issue Ensure that logged in user doesn't appear amongst meeting attendees Offline sync merge improvements Fix where the subject of new notes wasn't synced properly cmd d keyboard shortcut fix Fix for selecting calendars where user has tons of calendars which require paginating Lots and lots of internationalization fixes.
+Fixing inputs of CJK IME.
+You can now create non-english tags.
+Markdown export, multiple Google calendars, and more Hello there! It's been a while.
+Thank you for your patience - we took a bit of a break over Christmas but we've been diligently working on a new Reflect release.
+We've got some neat new features for you.
+But this release also has a lot of work going on behind the scenes to set us up for some really cool stuff in the future.
+Markdown notes export (under graph preferences) Daily notes backup to hard-drive (see under graph preferences) Support multiple Google Calendars Dark-mode search in Electron fixed Lots of editing bugs fixed A quick way to remove all attendees from a meeting New Electron (desktop) app Only change is to add a right-click context menu with editing options.
+New iOS release Yesterday we released a new TestFlight build for the iOS app.
+This features: Native keyboard editing (which has a dramatic effect on the speed of the app) Inline backlink/tagging (much faster to backlink/tag) Backlinks are now below the note (faster to access) Squash lots of bugs Huge kudus goes to Ocavue and Vojtech here.
+Desktop/Web: Minor bug-fix release Change expand/collapse shortcut to option meta [ Fix bug where autolink would only work on space, not return Fix bugs where tags could have spaces in them Fix bug where searching for 9999 would crash app New design for /auth Move to revue from Substack New Reflect desktop/web app release Support markdown paste! Fixed editor overflow issue on mobile Do not display daily notes in recently edited notes (cmd+k) Add shortcuts for moving list-items up/down (option+up/down) Use // for aliasing instead of / cmd+/ now toggles the keyboard shortcuts panel Add Safari extension to downloads Fixed a bug where collapsed list-item contents could be edited/deleted

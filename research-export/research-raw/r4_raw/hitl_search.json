@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://www.kiteworks.com/regulatory-compliance/human-in-the-loop-ai-compliance",
+    "name": "Human in the Loop: AI Compliance and Oversight",
+    "snippet": "Mar 30, 2026 — No AI action occurs without explicit human approval . The human reviews the proposed action , has genuine authority to modify or reject it, and ...",
+    "host_name": "www.kiteworks.com",
+    "rank": 0,
+    "date": "Mar 30, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/pulse/why-your-ai-agents-need-human-in-the-loop-loginradius-8efqc",
+    "name": "Why Your AI Agents Need a \"Human-in-the-Loop\"",
+    "snippet": "Built-in HITL Guardrails: Add explicit human oversight to high-risk scopes , enforcing conditional policy evaluation and keeping full approval ... Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.stackai.com/insights/human-in-the-loop-ai-agents-how-to-design-approval-workflows-for-safe-and-scalable-automation",
+    "name": "Human-in-the-Loop AI Agents: Approval Workflows",
+    "snippet": "Mar 3, 2026 — A human-in-the-loop approval workflow for AI agents is a runtime control pattern where an AI agent must request and receive a human decision ... Read more",
+    "host_name": "www.stackai.com",
+    "rank": 2,
+    "date": "Mar 3, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.strata.io/blog/agentic-identity/practicing-the-human-in-the-loop",
+    "name": "Human-in-the-Loop: A 2026 Guide to AI Oversight",
+    "snippet": "May 11, 2026 — Human-in-the-loop (HITL) is an AI governance approach where trained humans retain decision authority over high - risk AI agent actions , providing ... Read more",
+    "host_name": "www.strata.io",
+    "rank": 3,
+    "date": "May 11, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/AI_Agents/comments/1vhvqp0/human_in_the_loop_is_meaningless_unless_we_define",
+    "name": "“Human in the loop” is meaningless unless we define what",
+    "snippet": "People often say risky agent actions are safe because a human approves them. if the action can drift after signoff, the human in the loop is ...",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/xano_one-of-the-biggest-mistakes-teams-make-with-activity-7485736842986741761-LtBw",
+    "name": "Designing Human-in-the-Loop AI Governance",
+    "snippet": "And this is where human in the loop stops being a safety feature and becomes a governance layer. Every review, every approval , every rejection. Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://agentic-patterns.com/patterns/human-in-loop-approval-framework",
+    "name": "Human-in-the-Loop Approval Framework - Pattern",
+    "snippet": "Systematically insert human approval gates for designated high-risk functions while maintaining agent autonomy for safe operations. Create lightweight feedback ... Read more",
+    "host_name": "agentic-patterns.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://teamcopilot.ai/blog/human-in-the-loop-ai-agents-approvals-permissions-audit-trails",
+    "name": "Human-in-the-Loop AI Agents: Approvals, Permissions, and",
+    "snippet": "Jun 26, 2026 — A practical guide to human-in-the-loop AI agents, with a focus on approvals, permissions, and audit trails for safer workflow automation.",
+    "host_name": "teamcopilot.ai",
+    "rank": 7,
+    "date": "Jun 26, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.datavessel.io/ai-agent-audit-trail-smb",
+    "name": "AI Agent Audit Trails: What to Log, and Why Approvals Beat",
+    "snippet": "Jun 14, 2026 — An AI agent audit trail is the record that shows what an agent did, why it did it, which data it used, and whether a human approved the ... Read more",
+    "host_name": "blog.datavessel.io",
+    "rank": 8,
+    "date": "Jun 14, 2026",
+    "favicon": ""
+  }
+]

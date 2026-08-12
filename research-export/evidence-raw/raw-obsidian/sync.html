@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<script>
+	(function(){
+		var defined = ["en","ar","bn","de","es","fr","it","ja","ko","pl","pt-BR","ro","ru","sv","zh"];
+		var dflt = 'en';
+		var cur = 'en';
+		var pref = null;
+		try { pref = localStorage.getItem('lang'); } catch(e) {}
+		if (!pref && cur === dflt) return;
+		if (pref && pref === cur) return;
+		var target = pref;
+		if (!target) {
+			var langs = (navigator.languages || [navigator.language || '']);
+			for (var i = 0; i < langs.length; i++) {
+				var code = langs[i].toLowerCase().split('-')[0];
+				if (defined.indexOf(code) !== -1) { target = code; break; }
+			}
+		}
+		if (!target || target === cur) return;
+		var p = location.pathname;
+		// Strip any locale prefix from path
+		p = p.replace(new RegExp('^/(' + defined.join('|') + ')(/|$)'), '/');
+		// Don't redirect app routes
+		if (/^\/(account|buy)(\/|$)/.test(p)) return;
+		// Add target locale prefix
+		if (target !== dflt) p = '/' + target + (p === '/' ? '/' : p);
+		if (p.replace(/\/$/, '') === location.pathname.replace(/\/$/, '')) return;
+		location.replace(p + location.search + location.hash);
+	})();
+	</script>
+	<title>Obsidian Sync</title>
+	<meta name="description" content="Obsidian Sync is the simple and secure way to synchronize your Obsidian notes across any device and OS.">
+	<meta name="copyright" content="Obsidian">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="i18n-hash" content="95affe3b">
+
+	<link rel="stylesheet" href="/tailwind.css?v=9d5102ea">
+	<link rel="icon" href="/favicon.ico" sizes="32x32">
+	<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+	<link rel="alternate" type="application/atom+xml" href="/feed.xml" title="Obsidian Blog">
+	<link rel="alternate" type="application/feed+json" href="/feed.json" title="Obsidian Blog">
+	<link rel="alternate" type="application/atom+xml" href="/changelog.xml" title="Obsidian Changelog">
+	<link rel="alternate" type="application/feed+json" href="/changelog.json" title="Obsidian Changelog">
+
+	<meta property="og:site_name" content="Obsidian">
+	<meta property="og:title" content="Obsidian Sync">
+	<meta property="og:description" content="Obsidian Sync is the simple and secure way to synchronize your Obsidian notes across any device and OS.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://obsidian.md/images/banner.png">
+
+	<meta name="twitter:title" content="Obsidian Sync">
+	<meta name="twitter:description" content="Obsidian Sync is the simple and secure way to synchronize your Obsidian notes across any device and OS.">
+	<meta name="twitter:site" content="@obsdmd">
+	<meta name="twitter:domain" content="obsidian.md">
+	<meta name="twitter:creator" content="@obsdmd">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://obsidian.md/images/banner.png">
+
+</head>
+<body class="theme-dark">
+<div class="">
+	<div class="header-height"></div>
+<header class="header">
+	
+	
+	<div class="container flex items-center">
+		<div class="flex items-center">
+			<a class="header-logo me-4 flex items-center gap-x-2 transition-colors -mt-[3px]" href="/" aria-label="Go to the Obsidian home page">
+				<svg alt="Obsidian" height="22" viewBox="0 0 143 25" width="126" xmlns="http://www.w3.org/2000/svg"><path fill="#A88BFA" d="m6.91927 14.5955c.64053-.1907 1.67255-.4839 2.85923-.5565-.71191-1.7968-.88376-3.3691-.74554-4.76905.15962-1.61678.72977-2.9662 1.28554-4.11442.1186-.24501.2326-.47313.3419-.69198.1549-.30984.3004-.60109.4365-.8953.2266-.48978.3948-.92231.4798-1.32416.0836-.39515.0841-.74806-.0148-1.08657-.099-.338982-.3093-.703864-.7093-1.1038132-.5222-.1353116-1.1017-.0165173-1.53613.3742922l-5.15591 4.638241c-.28758.25871-.47636.60929-.53406.99179l-.44455 2.94723c.69903.6179 2.42435 2.41414 3.47374 4.90644.09364.2224.1819.4505.26358.6838z"/><path fill="#A88BFA" d="m2.97347 10.3512c-.02431.1037-.05852.205-.10221.3024l-2.724986 6.0735c-.279882.6238-.15095061 1.3552.325357 1.8457l4.288349 4.4163c2.1899-3.2306 1.87062-6.2699.87032-8.6457-.75846-1.8013-1.90801-3.2112-2.65683-3.9922z"/><path fill="#A88BFA" d="m5.7507 23.5094c.07515.012.15135.0192.2281.0215.81383.0244 2.18251.0952 3.29249.2997.90551.1669 2.70051.6687 4.17761 1.1005 1.1271.3294 2.2886-.5707 2.4522-1.7336.1192-.8481.343-1.8075.7553-2.6869l-.0095.0033c-.6982-1.9471-1.5865-3.2044-2.5178-4.0073-.9284-.8004-1.928-1.1738-2.8932-1.3095-1.60474-.2257-3.07497.1961-4.00103.4682.55465 2.3107.38396 5.0295-1.48417 7.8441z"/><path fill="#A88BFA" d="m17.3708 19.3102c.9267-1.3985 1.5868-2.4862 1.9352-3.0758.1742-.295.1427-.6648-.0638-.9383-.5377-.7126-1.5666-2.1607-2.1272-3.5015-.5764-1.3785-.6624-3.51876-.6673-4.56119-.0019-.39626-.1275-.78328-.3726-1.09465l-3.3311-4.23183c-.0117.19075-.0392.37998-.0788.56747-.1109.52394-.32 1.04552-.5585 1.56101-.1398.30214-.3014.62583-.4646.95284-.1086.21764-.218.4368-.3222.652-.5385 1.11265-1.0397 2.32011-1.1797 3.73901-.1299 1.31514.0478 2.84484.8484 4.67094.1333.0113.2675.0262.4023.0452 1.1488.1615 2.3546.6115 3.4647 1.5685.9541.8226 1.8163 2.0012 2.5152 3.6463z"/><path fill="currentColor" d="m39.752 4.5038c-5.952 0-10.248 3.744-10.248 8.88s4.296 8.88 10.248 8.88c5.928 0 10.224-3.744 10.224-8.88s-4.296-8.88-10.224-8.88zm0 3.47999c3.576 0 6.144 2.13601 6.144 5.40001s-2.568 5.4-6.144 5.4c-3.6 0-6.168-2.136-6.168-5.4s2.568-5.40001 6.168-5.40001z"/><path fill="currentColor" d="m55.4847 20.5598c.864.936 2.472 1.704 4.584 1.704 4.32 0 6.8401-2.976 6.8401-6.576 0-3.624-2.5201-6.60001-6.8401-6.60001-2.112 0-3.72.79201-4.584 1.70401v-6.02401h-3.84v17.23201h3.84zm-.12-4.944c0-1.992 1.704-3.432 3.912-3.432 2.112 0 3.888 1.248 3.888 3.504s-1.776 3.48-3.888 3.48c-2.208 0-3.912-1.416-3.912-3.408z"/><path fill="currentColor" d="m67.3181 19.9118c1.464 1.488 4.272 2.352 7.2 2.352 3.96 0 6.936-1.44 6.936-4.392 0-2.88-2.832-3.432-6.072-3.816-2.736-.312-3.576-.384-3.576-1.08 0-.648.864-1.056 2.496-1.056 1.968 0 3.672.6 4.824 1.656l1.992-2.304c-1.272-1.224-3.648-2.18401-6.624-2.18401-4.008 0-6.48 1.72801-6.48 4.32001 0 2.712 2.52 3.312 5.544 3.696 2.832.336 4.032.336 4.032 1.176 0 .792-1.056 1.128-2.784 1.128-2.16 0-4.152-.672-5.664-2.064z"/><path fill="currentColor" d="m82.8395 8.05579h3.912v-3.288h-3.912zm3.864 1.29601h-3.84v12.648h3.84z"/><path fill="currentColor" d="m99.8264 20.5598v1.44h3.8396v-17.23201h-3.8396v6.02401c-.864-.912-2.472-1.70401-4.584-1.70401-4.32 0-6.84 2.97601-6.84 6.60001 0 3.6 2.52 6.576 6.84 6.576 2.112 0 3.72-.768 4.584-1.704zm.12-4.944v.144c0 1.992-1.704 3.408-3.912 3.408-2.112 0-3.888-1.224-3.888-3.48s1.776-3.504 3.888-3.504c2.208 0 3.912 1.44 3.912 3.432z"/><path fill="currentColor" d="m105.996 8.05579h3.912v-3.288h-3.912zm3.864 1.29601h-3.84v12.648h3.84z"/><path fill="currentColor" d="m116.863 22.2638c2.232 0 4.056-.648 5.208-1.656.648 1.2 2.184 1.92 4.992 1.392v-2.832c-1.344.288-1.632-.024-1.632-.696v-4.608c0-3.168-2.376-4.77601-6.408-4.77601-3.48 0-6.264 1.51201-7.056 3.79201l3.456.936c.384-.984 1.704-1.704 3.432-1.704 2.04 0 2.856.768 2.856 1.728v.072l-5.04.456c-2.976.288-5.16 1.512-5.16 3.984 0 2.496 2.232 3.912 5.352 3.912zm4.848-5.112c0 1.464-2.184 2.304-4.152 2.304-1.488 0-2.328-.432-2.328-1.248 0-.84.672-1.152 1.992-1.272l4.488-.456z"/><path fill="currentColor" d="m128.379 21.9998h3.84v-6.048c0-2.184 1.2-3.456 3.288-3.456 1.968 0 3 1.296 3 3.432v6.072h3.84v-7.2c0-3.504-2.232-5.71201-5.52-5.71201-2.04 0-3.624.76801-4.608 1.80001v-1.536h-3.84z"/></svg>
+			</a>
+		</div>
+		<div class="group w-full">
+			<ul class="text-sm hidden md:flex items-center">
+				<li><a class="px-3 py-2 rounded-lg font-medium hover:text-white text-muted hover:bg-gray-800" href="/download">Download</a></li>
+				<li><a class="px-3 py-2 rounded-lg font-medium hover:text-white text-muted hover:bg-gray-800" href="/pricing">Pricing</a></li>
+				<li><a class="px-3 py-2 rounded-lg font-medium hover:text-white text-white bg-gray-800 group-hover:bg-transparent hover:!bg-gray-800" href="/sync">Sync</a></li>
+				<li><a class="px-3 py-2 rounded-lg font-medium hover:text-white text-muted hover:bg-gray-800" href="/publish">Publish</a></li>
+				<li class="hidden lg:block"><a class="px-3 py-2 rounded-lg font-medium hover:text-white text-muted hover:bg-gray-800" href="/enterprise">Enterprise</a></li>
+				<li class="flex-grow" aria-hidden="true"></li>
+				<li class="relative" data-lang-picker>
+					<button type="button" data-lang-toggle class="header-lang-toggle px-2 py-2 me-2 rounded-lg ring-1 ring-inset ring-white/10 text-muted hover:text-white hover:bg-gray-800 flex items-center gap-1" aria-label="Change language">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+						<i data-lucide="chevron-down" class="icon-xs"></i>
+					</button>
+					<div data-lang-menu data-search-placeholder="Switch language..." data-no-results="No results" class="lang-menu hidden absolute end-0 top-full mt-1 bg-gray-800 ring-1 ring-inset ring-white/10 rounded-lg min-w-[12rem] shadow-xl z-50 flex flex-col">
+						<ul class="flex flex-col gap-0.5 p-1 min-h-0 overflow-y-auto">
+							
+							<li><a href="/sync" data-search="English English en" aria-current="true" onclick="try{localStorage.setItem('lang','en');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">English</a></li>
+							
+							<li><a href="/ar/sync" data-search="العربية Arabic ar" onclick="try{localStorage.setItem('lang','ar');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">العربية</a></li>
+							
+							<li><a href="/bn/sync" data-search="বাংলা Bengali Bangla bn" onclick="try{localStorage.setItem('lang','bn');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">বাংলা</a></li>
+							
+							<li><a href="/de/sync" data-search="Deutsch German de" onclick="try{localStorage.setItem('lang','de');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Deutsch</a></li>
+							
+							<li><a href="/es/sync" data-search="Español Spanish Castilian es" onclick="try{localStorage.setItem('lang','es');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Español</a></li>
+							
+							<li><a href="/fr/sync" data-search="Français French fr" onclick="try{localStorage.setItem('lang','fr');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Français</a></li>
+							
+							<li><a href="/it/sync" data-search="Italiano Italian it" onclick="try{localStorage.setItem('lang','it');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Italiano</a></li>
+							
+							<li><a href="/ja/sync" data-search="日本語 Japanese ja" onclick="try{localStorage.setItem('lang','ja');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">日本語</a></li>
+							
+							<li><a href="/ko/sync" data-search="한국어 Korean ko" onclick="try{localStorage.setItem('lang','ko');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">한국어</a></li>
+							
+							<li><a href="/pl/sync" data-search="Polski Polish pl" onclick="try{localStorage.setItem('lang','pl');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Polski</a></li>
+							
+							<li><a href="/pt-BR/sync" data-search="Português (Brasil) Portuguese Brazilian pt-BR" onclick="try{localStorage.setItem('lang','pt-BR');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Português (Brasil)</a></li>
+							
+							<li><a href="/ro/sync" data-search="Română Romanian ro" onclick="try{localStorage.setItem('lang','ro');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Română</a></li>
+							
+							<li><a href="/ru/sync" data-search="Русский Russian ru" onclick="try{localStorage.setItem('lang','ru');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Русский</a></li>
+							
+							<li><a href="/sv/sync" data-search="Svenska Swedish sv" onclick="try{localStorage.setItem('lang','sv');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Svenska</a></li>
+							
+							<li><a href="/zh/sync" data-search="简体中文 Chinese Simplified Mandarin zh" onclick="try{localStorage.setItem('lang','zh');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">简体中文</a></li>
+							
+						</ul>
+					</div>
+				</li>
+				<li><a class="px-3 py-2 rounded-lg font-medium hover:text-white text-muted hover:bg-gray-800" href="https://community.obsidian.md">Community</a></li>
+				<li><a class="px-3 py-2 rounded-lg font-medium text-muted hover:text-white hover:bg-gray-800" href="/account">Account</a></li>
+			</ul>
+		</div>
+		<div class="ms-auto md:hidden z-10 flex items-center gap-4">
+			<div class="relative" data-lang-picker>
+				<button type="button" data-lang-toggle class="header-lang-toggle-mobile px-2 py-2 text-gray-400 flex items-center gap-1" aria-label="Change language">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+					
+				</button>
+				<div data-lang-menu data-search-placeholder="Switch language..." data-no-results="No results" class="lang-menu hidden absolute end-0 top-full mt-1 bg-gray-800 ring-1 ring-inset ring-white/10 rounded-lg min-w-[12rem] shadow-xl z-50 flex flex-col">
+					<ul class="flex flex-col gap-0.5 p-1 min-h-0 overflow-y-auto">
+						
+						<li><a href="/sync" data-search="English English en" aria-current="true" onclick="try{localStorage.setItem('lang','en');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">English</a></li>
+						
+						<li><a href="/ar/sync" data-search="العربية Arabic ar" onclick="try{localStorage.setItem('lang','ar');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">العربية</a></li>
+						
+						<li><a href="/bn/sync" data-search="বাংলা Bengali Bangla bn" onclick="try{localStorage.setItem('lang','bn');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">বাংলা</a></li>
+						
+						<li><a href="/de/sync" data-search="Deutsch German de" onclick="try{localStorage.setItem('lang','de');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Deutsch</a></li>
+						
+						<li><a href="/es/sync" data-search="Español Spanish Castilian es" onclick="try{localStorage.setItem('lang','es');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Español</a></li>
+						
+						<li><a href="/fr/sync" data-search="Français French fr" onclick="try{localStorage.setItem('lang','fr');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Français</a></li>
+						
+						<li><a href="/it/sync" data-search="Italiano Italian it" onclick="try{localStorage.setItem('lang','it');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Italiano</a></li>
+						
+						<li><a href="/ja/sync" data-search="日本語 Japanese ja" onclick="try{localStorage.setItem('lang','ja');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">日本語</a></li>
+						
+						<li><a href="/ko/sync" data-search="한국어 Korean ko" onclick="try{localStorage.setItem('lang','ko');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">한국어</a></li>
+						
+						<li><a href="/pl/sync" data-search="Polski Polish pl" onclick="try{localStorage.setItem('lang','pl');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Polski</a></li>
+						
+						<li><a href="/pt-BR/sync" data-search="Português (Brasil) Portuguese Brazilian pt-BR" onclick="try{localStorage.setItem('lang','pt-BR');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Português (Brasil)</a></li>
+						
+						<li><a href="/ro/sync" data-search="Română Romanian ro" onclick="try{localStorage.setItem('lang','ro');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Română</a></li>
+						
+						<li><a href="/ru/sync" data-search="Русский Russian ru" onclick="try{localStorage.setItem('lang','ru');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Русский</a></li>
+						
+						<li><a href="/sv/sync" data-search="Svenska Swedish sv" onclick="try{localStorage.setItem('lang','sv');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">Svenska</a></li>
+						
+						<li><a href="/zh/sync" data-search="简体中文 Chinese Simplified Mandarin zh" onclick="try{localStorage.setItem('lang','zh');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="lang-option">简体中文</a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<a class="header-mobile-nav text-gray-200 hover:text-gray-100" href="#" aria-label="Open the navigation menu">
+				<div class="header-mobile-nav-button">
+					<div class="header-mobile-nav-button-inner"></div>
+				</div>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div class="header-mobile-nav-menu fixed top-0 right-0 bottom-0 left-0 overflow-scroll overscroll-contain block md:hidden">
+	<div class="container py-4">
+		<ul class="text-xl font-medium grid sm:grid-cols-2 pb-4 border-b border-gray-800">
+			<li><a class="flex py-1 items-center gap-2" href="/download">
+				Download</a></li>
+			<li><a class="flex py-1 items-center gap-2" href="/account">
+				Account</a></li>
+			<li><a class="flex py-1 items-center gap-3" href="/sync">
+				Sync</a></li>
+			<li><a class="flex py-1 items-center gap-3" href="/publish">
+				Publish</a></li>
+			<li><a class="flex py-1 items-center gap-3" href="/pricing">
+				Pricing</a></li>
+			<li><a class="flex py-1 items-center gap-3" href="https://community.obsidian.md">
+				Plugins</a></li>
+			<li><a class="flex py-1 items-center gap-2" href="/enterprise">
+				Enterprise</a></li>
+			<li><a class="flex py-1 items-center gap-2" href="/clipper">
+				Web Clipper</a></li>
+		</ul>
+		<div class="text-muted mt-6">Learn more</div>
+		<ul class="font-medium grid grid-cols-2 my-2 pb8">
+			<li><a class="block py-1" href="https://obsidian.md/help/">Help</a></li>
+			<li><a class="block py-1" href="/about">About</a></li>
+
+			<li><a class="block py-1" href="/blog">Blog</a></li>
+			<li><a class="block py-1" href="https://discord.gg/obsidianmd" rel="noopener noreferrer" target="_blank">Discord</a></li>
+
+			<li><a class="block py-1" href="/changelog">Changelog</a></li>
+			<li><a class="block py-1" href="https://community.obsidian.md">Community</a></li>
+
+			<li><a class="block py-1" href="/roadmap">Roadmap</a></li>
+			<li><a class="block py-1" href="/security">Security</a></li>
+
+			<li><a class="block py-1" href="/softwear">Merch store</a></li>
+			<li><a class="block py-1" href="/privacy">Privacy</a></li>
+		</ul>
+	</div>
+</div>
+
+
+	<div class="min-h-[60vh] flex items-center bg-basalt overflow-hidden">
+
+		<div class="container pt-24 pb-24">
+			<div class="max-w-xl sm:text-center sm:mx-auto">
+				<p class="mb-2 text-accent flex items-center sm:justify-center">
+					<svg alt="Obsidian Sync" class="aspect-ratio[2.81] h-6 sm:h-8" viewBox="0 0 70 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path d="m.7 15.2 1.8-1.6c1.9 3.1 5.5 4.3 8.8 4.3 3.7 0 6.4-1.3 6.4-3.4 0-2.3-1.9-2.6-7.5-3.2C5.3 10.8 2 10 2 6.4 2 3.2 5.3.8 10.3.8 14.6.8 18 2.5 19.6 5l-1.8 1.4c-1.3-2-4-3.4-7.7-3.4-3.8 0-5.8 1.4-5.8 3.2 0 2 1.8 2.4 6.7 2.9 5.9.6 9.1 1.3 9.1 5.1 0 3.7-3.8 6-8.9 6-4.6 0-8.8-2-10.5-5ZM29 21.4c-1.3 2.5-2.8 3.4-5.1 3.4-.9 0-2-.2-2.5-.5l.5-2a4 4 0 0 0 1.9.4c1.3 0 2.5-.4 3.2-2.1l.4-1-7-13.4H23l5.6 11 5.6-11h2.6L29 21.4Zm9.4-1.6V6.2h2.4v2.4c1-1.5 2.8-2.7 5.4-2.7 3.8 0 5.9 2.6 5.9 6.3v7.6h-2.4v-7.2c0-2.6-1.4-4.5-4.2-4.5-2.7 0-4.7 1.9-4.7 4.8v7h-2.4Zm16-6.8c0-4.2 3.3-7.1 7.8-7.1 3.7 0 6.2 2.1 7 4.6l-2 1c-.5-2-2.4-3.6-5-3.6-3.1 0-5.5 2-5.5 5.1 0 3.1 2.4 5 5.5 5 2.6 0 4.5-1.5 5-3.5l2 1c-.8 2.5-3.3 4.6-7 4.6-4.5 0-7.8-3-7.8-7Z"/>
+					</svg>
+				</p>
+				<h1 class="text-title mb-6 mt-4 text-balance sm:mx-auto">All your notes, on all your devices.</h1>
+				<p class="max-w-xl sm:mx-auto text-2xl text-balance sm:text-3xl text-muted">The simple and secure way to sync your notes across any device and OS.</p>
+				<div class="py-6 mt-4 flex items-center gap-6 flex-row sm:justify-center">
+					<a href="/buy/sync" class="button button-primary text-base py-3 px-6 js-upgrade-sync js-goto-account">
+						Start syncing
+					</a>
+					<a href="/buy/sync" class="text-accent font-medium">
+						$4 per month
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pb-16 cards">
+		<div class="container">
+		<div class="mx-auto grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-2">
+			<div>
+			<p class="text-sm font-semibold leading-7 text-accent uppercase tracking-widest">Features</p>
+			<h2 class="text-3xl font-semibold sm:text-4xl">Safe and secure</h2>
+			<p class="mt-6 text-xl sm:text-2xl text-muted">Obsidian Sync works in the background to keep your notes synchronized effortlessly and privately.</p>
+			</div>
+			<dl class="col-span-2 grid grid-cols-1 gap-x-4 gap-y-8 sm:gap-y-4 sm:grid-cols-2">
+				<div class="card card-shimmer card-grow sm:ring-1 ring-inset ring-white/5 rounded-xl sm:p-6 sm:bg-secondary text-lg sm:text-xl flex flex-row sm:flex-col gap-y-2 gap-x-3">
+					<div>
+						<i data-lucide="fingerprint" class="icon-xl sm:icon-2xl text-accent h-8 w-8 -mt-1 sm:mt-0"></i>
+					</div>
+					<div>
+						<dt class="font-semibold inline sm:block">
+							End-to-end encryption<span class="sm:hidden">.</span>
+						</dt>
+						<dd class="mt-2 text-lg leading-6 text-muted inline sm:block">
+							Your data is automatically secured using AES‑256, the strongest encryption standard. With Obsidian Sync you’re always in total control of your notes. <a href="https://obsidian.md/help/sync/security" class="text-accent font-medium">Learn more.</a>
+						</dd>
+					</div>
+				</div>
+
+				<div class="card card-shimmer card-grow sm:ring-1 ring-inset ring-white/5 rounded-xl sm:p-6 sm:bg-secondary text-lg sm:text-xl flex flex-row sm:flex-col gap-y-2 gap-x-3">
+					<div>
+						<i data-lucide="history" class="icon-xl sm:icon-2xl text-accent h-8 w-8 -mt-1 sm:mt-0"></i>
+					</div>
+					<div>
+						<dt class="font-semibold inline sm:block">
+							Version history<span class="sm:hidden">.</span>
+						</dt>
+						<dd class="mt-2 text-lg leading-6 text-muted inline sm:block">
+							Obsidian Sync gives you version history for every note, so you can go back to see how the content changed. It’s easy to see the differences between revisions.
+						</dd>
+					</div>
+				</div>
+
+				<div class="card card-shimmer card-grow sm:ring-1 ring-inset ring-white/5 rounded-xl sm:p-6 sm:bg-secondary text-lg sm:text-xl flex flex-row sm:flex-col gap-y-2 gap-x-3">
+					<div>
+						<i data-lucide="monitor-smartphone" class="icon-xl sm:icon-2xl text-accent h-8 w-8 -mt-1 sm:mt-0"></i>
+					</div>
+					<div>
+						<dt class="font-semibold inline sm:block">
+							Cross-platform apps<span class="sm:hidden">.</span>
+						</dt>
+						<dd class="mt-2 text-lg leading-6 text-muted inline sm:block">
+							Obsidian is available on all major platforms, so you can sync notes to any device. Seamlessly work across Mac, Windows, Linux, iOS, Android, and even <a href="https://obsidian.md/help/sync/headless" class="text-accent font-medium">headless on a server.</a>
+						</dd>
+					</div>
+				</div>
+
+				<div class="card card-shimmer card-grow sm:ring-1 ring-inset ring-white/5 rounded-xl sm:p-6 sm:bg-secondary text-lg sm:text-xl flex flex-row sm:flex-col gap-y-2 gap-x-3">
+					<div>
+						<i data-lucide="wifi-off" class="icon-xl sm:icon-2xl text-accent h-8 w-8 -mt-1 sm:mt-0"></i>
+					</div>
+					<div>
+						<dt class="font-semibold inline sm:block">
+							Work offline, sync later<span class="sm:hidden">.</span>
+						</dt>
+						<dd class="mt-2 text-lg leading-6 text-muted inline sm:block">
+							Obsidian is designed to work even without an internet connection. When you’re flying or in a remote location, you still have access to your files. When you’re back online Sync merges changes for you.
+						</dd>
+					</div>
+				</div>
+			</dl>
+		</div>
+		</div>
+	</div>
+
+	<div class="overflow-hidden py-16 sm:py-32">
+		<div class="container tab-container" style="--active-tab: 0;">
+			<div class="grid grid-cols-1 gap-x-16 gap-y-16 items-center sm:gap-y-20 lg:grid-cols-2">
+				<div class="tab-content order-last sm:order-1" aria-hidden="true" data-nosnippet>
+					<div class="lg:aspect-square tab-pane active relative rounded-xl sm:rounded-3xl isolate overflow-hidden bg-accent-400 ps-6 pt-8 sm:mx-auto sm:ps-16 sm:pe-0 sm:pt-16 lg:mx-0 lg:max-w-none" data-tab="tab-vault">
+						<div class="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
+							<div class="h-full ui ui-light rounded-ss-xl shadow-xl pt-8 ps-8 pe-8 bg-white">
+								<div class="text-xl font-semibold border-b pb-4 border-gray-200">Vault configuration</div>
+								<div class="border-b py-4 border-gray-200 flex items-center gap-4">
+									<div class="flex-1 min-w-0">
+										<div>Main settings</div>
+										<div class="text-sm text-gray-500 pt-1">Sync editor, file, link settings.</div>
+									</div>
+									<div class="checkbox-container is-enabled"><input type="checkbox"></div>
+								</div>
+								<div class="border-b py-4 border-gray-200 flex items-center gap-4">
+									<div class="flex-1 min-w-0">
+										<div>Appearance settings</div>
+										<div class="text-sm text-gray-500 pt-1">Sync dark mode, active theme and enabled snippets.</div>
+									</div>
+									<div class="checkbox-container is-enabled"><input type="checkbox"></div>
+								</div>
+								<div class="border-b py-4 border-gray-200 flex items-center gap-4">
+									<div class="flex-1 min-w-0">
+										<div>Themes and snippets</div>
+										<div class="text-sm text-gray-500 pt-1">Sync themes and snippets.</div>
+									</div>
+									<div class="checkbox-container is-enabled"><input type="checkbox"></div>
+								</div>
+								<div class="border-b py-4 border-gray-200 flex items-center gap-4">
+									<div class="flex-1 min-w-0">
+										<div>Plugins</div>
+										<div class="text-sm text-gray-500 pt-1">Sync which plugins are enabled.</div>
+									</div>
+									<div class="checkbox-container"><input type="checkbox"></div>
+								</div>
+								<div class="border-b py-4 border-gray-200 flex items-center gap-4">
+									<div class="flex-1 min-w-0">
+										<div>Hotkeys</div>
+										<div class="text-sm text-gray-500 pt-1">Sync custom hotkeys.</div>
+									</div>
+									<div class="checkbox-container"><input type="checkbox"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lg:aspect-square tab-pane relative rounded-xl sm:rounded-3xl isolate overflow-hidden bg-accent-400 ps-6 pt-8 sm:mx-auto sm:ps-16 sm:pe-0 sm:pt-16 lg:mx-0 lg:max-w-none" data-tab="tab-files">
+						<div class="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
+							<div class="h-full ui ui-light rounded-ss-xl shadow-xl pt-8 ps-8 pe-8 bg-white">
+								<div class="text-xl font-semibold border-b pb-4 border-gray-200">Selective sync</div>
+								<div class="border-b py-4 border-gray-200 flex items-center gap-1">
+									<div>
+										<div>Excluded folders</div>
+										<div class="text-sm text-gray-500 pt-1">Prevent certain folders from being synced</div>
+									</div>
+								</div>
+								<div class="border-b py-4 border-gray-200 flex items-center gap-4">
+									<div class="flex-1 min-w-0">
+										<div id="sync-images">Sync images</div>
+										<div class="text-sm text-gray-500 pt-1">bmp, png, jpg, jpeg, gif, svg, webp</div>
+									</div>
+									<div class="checkbox-container is-enabled"><input type="checkbox" aria-labelledby="sync-images"></div>
+								</div>
+								<div class="border-b py-4 border-gray-200 flex items-center gap-4">
+									<div class="flex-1 min-w-0">
+										<div id="sync-audio">Sync audio</div>
+										<div class="text-sm text-gray-500 pt-1">mp3, wav, m4a, 3gp, flac, ogg, oga, opus</div>
+									</div>
+									<div class="checkbox-container is-enabled"><input type="checkbox" aria-labelledby="sync-audio"></div>
+								</div>
+								<div class="border-b py-4 border-gray-200 flex items-center gap-4">
+									<div class="flex-1 min-w-0">
+										<div id="sync-video">Sync videos</div>
+										<div class="text-sm text-gray-500 pt-1">mp4, webm, ogv, mov, mkv</div>
+									</div>
+									<div class="checkbox-container"><input type="checkbox" aria-labelledby="sync-videos"></div>
+								</div>
+								<div class="border-b py-4 border-gray-200 flex items-center gap-4">
+									<div class="flex-1 min-w-0">
+										<div id="sync-pdf">Sync PDFs</div>
+										<div class="text-sm text-gray-500 pt-1" aria-labelledby="sync-pdf">pdf files</div>
+									</div>
+									<div class="checkbox-container"><input type="checkbox"></div>
+								</div>
+								<div class="border-b py-4 border-gray-200 flex items-center gap-4">
+									<div class="flex-1 min-w-0">
+										<div id="sync-other">Sync all other types</div>
+										<div class="text-sm text-gray-500 pt-1">Sync unsupported file types.</div>
+									</div>
+									<div class="checkbox-container is-enabled"><input type="checkbox" aria-labelledby="sync-other"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lg:aspect-square tab-pane relative rounded-xl sm:rounded-3xl isolate overflow-hidden bg-accent-400 px-6 pt-8 sm:mx-auto sm:ps-16 sm:pe-0 sm:pt-16 lg:mx-0 lg:max-w-none" data-tab="tab-recovery">
+						<div class="h-full ui ui-light rounded-ss-xl shadow-xl pt-8 ps-8 pe-8 bg-white">
+							<div class="text-xl font-semibold border-b pb-4 border-gray-200">File recovery</div>
+							<div class="border-b py-4 border-gray-200 flex items-center gap-1">
+								<div>
+									<div>Snapshots</div>
+									<div class="text-sm text-gray-500 pt-1">View and restore snapshots.</div>
+								</div>
+							</div>
+							<div class="border-b py-4 border-gray-200 flex items-center gap-1">
+								<div>
+									<div>Deleted files</div>
+									<div class="text-sm text-gray-500 pt-1">View and restore deleted files</div>
+								</div>
+							</div>
+							<div class="border-b py-4 border-gray-200 flex items-center gap-1">
+								<div>
+									<div>Sync activity</div>
+									<div class="text-sm text-gray-500 pt-1">View log of sync activity.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<div class="mx-auto">
+						<p class="text-sm font-semibold leading-7 text-accent uppercase tracking-widest">Configuration</p>
+						<h2 class="mt-2 text-3xl font-semibold sm:text-4xl">Fine-grained sync control</h2>
+						<p class="mt-6 text-xl sm:text-2xl text-muted">Obsidian Sync lets you decide which files and preferences you want to sync to which devices.</p>
+
+						<div class="mt-8 text-lg relative max-w-xl lg:max-w-none">
+							<div class="tab-glider absolute md:bg-secondary -start-[3%] h-1/3 rounded-lg w-[106%] transition-all duration-100" style="transform: translateY(calc(100% * var(--active-tab)))"></div>
+							<dl class="grid grid-cols-1 auto-rows-fr text-muted">
+								<div class="tab-button active relative ps-9 pe-3 rounded-lg py-4" data-tab="tab-vault">
+									<dt><i data-lucide="settings" class="icon-xl absolute start-0 top-4 text-accent-400"></i></dt>
+									<dd class="inline"><strong class="font-semibold text-normal">Vault settings.</strong> Sync your hotkeys, file and editor preferences, or individually set them per device.</dd>
+								</div>
+
+								<div class="tab-button relative ps-9 pe-3 rounded-lg py-4" data-tab="tab-files">
+									<dt><i data-lucide="file-image" class="icon-xl absolute start-0 top-4 text-accent-400"></i></dt>
+									<dd class="inline"><strong class="font-semibold text-normal">Selective sync.</strong> Images, audio, video and PDFs can all be toggled to reduce data transfer.</dd>
+								</div>
+
+								<div class="tab-button relative ps-9 pe-3 rounded-lg py-4" data-tab="tab-recovery">
+									<dt><i data-lucide="history" class="icon-xl absolute start-0 top-4 text-accent-400"></i></dt>
+									<dd class="inline"><strong class="font-semibold text-normal">File recovery.</strong> Restore deleted files, and get granular details on sync activities.</dd>
+								</div>
+							</dl>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="py-24">
+		<div class="container">
+			<div class="mx-auto max-w-xl md:text-center">
+				<p class="text-sm font-semibold text-accent uppercase tracking-widest">Shared vaults</p>
+				<h2 class="mt-2 text-3xl font-semibold sm:text-4xl">Collaborate with your team</h2>
+				<p class="mt-6 text-xl sm:text-2xl text-muted">Invite your team to a shared Obsidian vault. Notes are updated in real-time across your team’s devices without compromising the privacy of your company data.</p>
+			</div>
+		</div>
+		<div class="relative overflow-hidden hidden sm:block pt-16">
+			<div class="container">
+				<img src="/images/sync-share-dark.png" alt="Screenshot of Obsidian app showing the process to share a vault" class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10" style="object-position: 0 -1px;" width="2446" height="1848">
+				<div class="relative" aria-hidden="true">
+				<div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-primary pt-[7%]"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" id="pricing">
+		<div class="mx-auto max-w-7xl lg:px-8">
+			<div class="mx-auto max-w-3xl">
+				<h2 class="text-3xl sm:text-4xl font-semibold">Pricing</h2>
+			</div>
+			<div class=" mt-6 max-w-3xl text-xl sm:text-2xl leading-tight text-balance sm:mx-auto text-muted">
+				<p>Easily and securely sync your notes across all your devices. If you’re not satisfied, get a refund within 7 days, no questions asked.</p>
+
+				<div class="mt-8 max-w-[300px] rounded-lg border border-gray-700 p-0.5">
+					<div class="flex h-7 yearly-toggle yearly-toggle-on relative" role="tablist">
+						<button role="tab" class="h-7 flex items-center justify-center absolute start-0 z-10 w-1/2 py-1 px-2 text-sm font-semibold yearly text-muted">
+							Yearly
+						</button>
+						<button role="tab" class="h-7 flex items-center justify-center absolute end-0 z-10 w-1/2 py-1 px-2 text-sm font-semibold monthly text-muted">
+							Monthly
+						</button>
+						<div class="absolute glider rounded-md w-1/2 h-7 bg-gray-700 transition-all"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-12 flow-root mx-auto max-w-3xl">
+				<div class="cards isolate mt-2 grid sm:max-w-md grid-cols-1 gap-6 sm:mx-auto md:max-w-none md:grid-cols-2">
+
+					<div class="card card-shimmer card-grow ring-1 ring-inset ring-white/5 bg-secondary rounded-lg sm:rounded-xl p-6 sm:p-8">
+						<h3 id="tier-standard" class="text-xl font-semibold leading-7 flex items-baseline gap-2">Sync Standard</h3>
+						<div class="yearly-price">
+							<p class="mt-6 flex items-baseline gap-x-1">
+								<span class="text-4xl md:text-5xl font-semibold tracking-tight">$4</span>
+								<span class="text-faint">USD</span>
+							</p>
+							<p class="mt-3 text-muted">Per user, per month, billed annually</p>
+						</div>
+						<div class="monthly-price" style="display:none;">
+							<p class="mt-6 flex items-baseline gap-x-1">
+								<span class="text-4xl md:text-5xl font-semibold tracking-tight">$5</span>
+								<span class="text-faint">USD</span>
+							</p>
+							<p class="mt-3 text-muted">Per user, per month, billed monthly</p>
+						</div>
+						<a  href="/buy/sync" aria-describedby="tier-standard" class="js-upgrade-sync js-goto-account mt-10 button button-primary lg:text-base block">
+							Sign up
+						</a>
+						<ul role="list" class="mt-8 mb-2 space-y-2">
+							<li class="flex gap-x-3">
+								<i data-lucide="check" class="text-green-500"></i>
+								1 synced vault
+							</li>
+							<li class="flex gap-x-3">
+								<i data-lucide="check" class="text-green-500"></i>
+								1 GB total storage
+							</li>
+							<li class="flex gap-x-3">
+								<i data-lucide="check" class="text-green-500"></i>
+								5 MB maximum file size
+							</li>
+							<li class="flex gap-x-3">
+								<i data-lucide="check" class="text-green-500"></i>
+								1 month version history
+							</li>
+						</ul>
+					</div>
+
+					<div class="card card-shimmer card-grow ring-1 ring-inset ring-white/5 bg-secondary rounded-lg sm:rounded-xl p-6 sm:p-8">
+						<h3 id="tier-plus" class="text-xl font-semibold leading-7 flex items-baseline gap-2">Sync Plus <span class="text-green-400 text-xs tracking-wide font-medium uppercase">Popular</span></h3>
+						<div class="yearly-price">
+							<p class="mt-6 flex items-baseline gap-x-1">
+								<span class="text-4xl md:text-5xl font-semibold tracking-tight">$8</span>
+								<span class="text-faint">USD</span>
+							</p>
+							<p class="mt-3 text-muted">Per user, per month, billed annually</p>
+						</div>
+						<div class="monthly-price" style="display:none;">
+							<p class="mt-6 flex items-baseline gap-x-1">
+								<span class="text-4xl md:text-5xl font-semibold tracking-tight">$10</span>
+								<span class="text-faint">USD</span>
+							</p>
+							<p class="mt-3 text-muted">Per user, per month, billed monthly</p>
+						</div>
+						<a href="/buy/sync" aria-describedby="tier-plus" class="js-upgrade-sync js-goto-account mt-10 button button-primary lg:text-base block">
+							Sign up
+						</a>
+						<ul role="list" class="mt-8 mb-2 space-y-2">
+							<li class="flex gap-x-3">
+								<i data-lucide="check" class="text-green-500"></i>
+								10 synced vaults
+							</li>
+							<li class="flex gap-x-3">
+								<i data-lucide="check" class="text-green-500"></i>
+								10 GB total storage
+							</li>
+							<li class="flex gap-x-3">
+								<i data-lucide="check" class="text-green-500"></i>
+								200 MB maximum file size
+							</li>
+							<li class="flex gap-x-3">
+								<i data-lucide="check" class="text-green-500"></i>
+								12 month version history
+							</li>
+							<li class="flex gap-x-3 text-muted">
+								<i data-lucide="plus" class="text-faint"></i>
+								Upgradable to 100 GB storage
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="cards py-16 sm:pt-48 sm:pb-16">
+			<div class="relative isolate overflow-hidden card card-shimmer sm:ring-1 ring-inset ring-white/5 sm:bg-secondary py-12 sm:py-24 sm:text-center sm:shadow-2xl sm:rounded-2xl sm:px-16">
+				<h2 class="mx-auto max-w-2xl text-3xl font-semibold sm:text-4xl">Take control of your data</h2>
+				<p class="sm:mx-auto mt-6 max-w-md text-xl text-muted">Set up Obsidian Sync in just a few minutes.</p>
+				<div class="mt-10 flex items-center sm:justify-center gap-6 flex-row">
+					<a href="/buy/sync">
+						<div class="button button-primary text-base py-3 px-6">Start syncing</div>
+					</a>
+					<a href="/buy/sync" class="text-accent font-medium">
+						$4 per month
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<footer class="container flex flex-row-reverse flex-wrap pt-24 pb-12 sm:pt-24 md:pb-32">
+	<div class="grid grid-cols-2 gap-3 gap-y-6 md:grid-cols-3 justify-between w-full mb-24 ms-auto md:w-3/5 lg:w-1/2 md:mb-0 leading-tight md:ps-6 [&_li]:mt-2">
+
+		<div>
+			<ul class="">
+				<li class="text-faint mb-3">Get started</li>
+				<li><a class="font-medium" href="/download">Download</a></li>
+				<li><a class="font-medium" href="/pricing">Pricing</a></li>
+				<li><a class="font-medium" href="/enterprise">Enterprise</a></li>
+				<li><a class="font-medium" href="/account">Account</a></li>
+			</ul>
+			<ul class="mt-8">
+				<li class="text-faint mb-3">Obsidian</li>
+				<li><a class="font-medium" href="/">Overview</a></li>
+				<li><a class="font-medium" href="/sync">Sync</a></li>
+				<li><a class="font-medium" href="/publish">Publish</a></li>
+				<li><a class="font-medium" href="/canvas">Canvas</a></li>
+				<li><a class="font-medium" href="/mobile">Mobile</a></li>
+				<li><a class="font-medium" href="/clipper">Web Clipper</a></li>
+				<li><a class="font-medium" href="/cli">CLI</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<ul class="">
+				<li class="text-faint mb-3">Learn</li>
+				<li><a class="font-medium" href="https://obsidian.md/help/">Help</a></li>
+				<li><a class="font-medium" href="https://docs.obsidian.md/" target="_blank">Developers</a></li>
+				<li><a class="font-medium" href="/changelog">Changelog</a></li>
+				<li><a class="font-medium" href="/about">About</a></li>
+				<li><a class="font-medium" href="/roadmap">Roadmap</a></li>
+				<li><a class="font-medium" href="/blog">Blog</a></li>
+			</ul>
+			<ul class="mt-8">
+				<li class="text-faint mb-3">Resources</li>
+				<li><a class="font-medium" href="https://status.obsidian.md" rel="noopener noreferrer">System status</a></li>
+				<li><a class="font-medium" href="/license">License overview</a></li>
+				<li><a class="font-medium" href="/terms">Terms of service</a></li>
+				<li><a class="font-medium" href="/privacy">Privacy policy</a></li>
+				<li><a class="font-medium" href="/security">Security</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<ul class="">
+				<li class="text-faint mb-3">Community</li>
+				<li><a class="font-medium" href="https://community.obsidian.md/plugins">Plugins</a></li>
+				<li><a class="font-medium" href="https://community.obsidian.md/themes">Themes</a></li>
+				<li><a class="font-medium" href="https://discord.gg/obsidianmd" rel="noopener noreferrer" target="_blank">Discord</a></li>
+				<li><a class="font-medium" href="https://forum.obsidian.md" target="_blank">Forum</a> <span class="text-gray-600">/</span> <a class="font-medium" href="https://forum-zh.obsidian.md" target="_blank">中文论坛</a></li>
+				<li><a class="font-medium" href="/softwear">Merch store</a></li>
+				<li><a class="font-medium" href="/brand">Brand guidelines</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="me-auto w-full sm:w-auto">
+		<a class="header-logo me-4 flex items-center gap-x-2 transition-colors" href="/" aria-label="Go to the Obsidian home page">
+			<svg alt="Obsidian" height="22" viewBox="0 0 143 25" width="126" xmlns="http://www.w3.org/2000/svg"><path fill="#A88BFA" d="m6.91927 14.5955c.64053-.1907 1.67255-.4839 2.85923-.5565-.71191-1.7968-.88376-3.3691-.74554-4.76905.15962-1.61678.72977-2.9662 1.28554-4.11442.1186-.24501.2326-.47313.3419-.69198.1549-.30984.3004-.60109.4365-.8953.2266-.48978.3948-.92231.4798-1.32416.0836-.39515.0841-.74806-.0148-1.08657-.099-.338982-.3093-.703864-.7093-1.1038132-.5222-.1353116-1.1017-.0165173-1.53613.3742922l-5.15591 4.638241c-.28758.25871-.47636.60929-.53406.99179l-.44455 2.94723c.69903.6179 2.42435 2.41414 3.47374 4.90644.09364.2224.1819.4505.26358.6838z"/><path fill="#A88BFA" d="m2.97347 10.3512c-.02431.1037-.05852.205-.10221.3024l-2.724986 6.0735c-.279882.6238-.15095061 1.3552.325357 1.8457l4.288349 4.4163c2.1899-3.2306 1.87062-6.2699.87032-8.6457-.75846-1.8013-1.90801-3.2112-2.65683-3.9922z"/><path fill="#A88BFA" d="m5.7507 23.5094c.07515.012.15135.0192.2281.0215.81383.0244 2.18251.0952 3.29249.2997.90551.1669 2.70051.6687 4.17761 1.1005 1.1271.3294 2.2886-.5707 2.4522-1.7336.1192-.8481.343-1.8075.7553-2.6869l-.0095.0033c-.6982-1.9471-1.5865-3.2044-2.5178-4.0073-.9284-.8004-1.928-1.1738-2.8932-1.3095-1.60474-.2257-3.07497.1961-4.00103.4682.55465 2.3107.38396 5.0295-1.48417 7.8441z"/><path fill="#A88BFA" d="m17.3708 19.3102c.9267-1.3985 1.5868-2.4862 1.9352-3.0758.1742-.295.1427-.6648-.0638-.9383-.5377-.7126-1.5666-2.1607-2.1272-3.5015-.5764-1.3785-.6624-3.51876-.6673-4.56119-.0019-.39626-.1275-.78328-.3726-1.09465l-3.3311-4.23183c-.0117.19075-.0392.37998-.0788.56747-.1109.52394-.32 1.04552-.5585 1.56101-.1398.30214-.3014.62583-.4646.95284-.1086.21764-.218.4368-.3222.652-.5385 1.11265-1.0397 2.32011-1.1797 3.73901-.1299 1.31514.0478 2.84484.8484 4.67094.1333.0113.2675.0262.4023.0452 1.1488.1615 2.3546.6115 3.4647 1.5685.9541.8226 1.8163 2.0012 2.5152 3.6463z"/><path fill="currentColor" d="m39.752 4.5038c-5.952 0-10.248 3.744-10.248 8.88s4.296 8.88 10.248 8.88c5.928 0 10.224-3.744 10.224-8.88s-4.296-8.88-10.224-8.88zm0 3.47999c3.576 0 6.144 2.13601 6.144 5.40001s-2.568 5.4-6.144 5.4c-3.6 0-6.168-2.136-6.168-5.4s2.568-5.40001 6.168-5.40001z"/><path fill="currentColor" d="m55.4847 20.5598c.864.936 2.472 1.704 4.584 1.704 4.32 0 6.8401-2.976 6.8401-6.576 0-3.624-2.5201-6.60001-6.8401-6.60001-2.112 0-3.72.79201-4.584 1.70401v-6.02401h-3.84v17.23201h3.84zm-.12-4.944c0-1.992 1.704-3.432 3.912-3.432 2.112 0 3.888 1.248 3.888 3.504s-1.776 3.48-3.888 3.48c-2.208 0-3.912-1.416-3.912-3.408z"/><path fill="currentColor" d="m67.3181 19.9118c1.464 1.488 4.272 2.352 7.2 2.352 3.96 0 6.936-1.44 6.936-4.392 0-2.88-2.832-3.432-6.072-3.816-2.736-.312-3.576-.384-3.576-1.08 0-.648.864-1.056 2.496-1.056 1.968 0 3.672.6 4.824 1.656l1.992-2.304c-1.272-1.224-3.648-2.18401-6.624-2.18401-4.008 0-6.48 1.72801-6.48 4.32001 0 2.712 2.52 3.312 5.544 3.696 2.832.336 4.032.336 4.032 1.176 0 .792-1.056 1.128-2.784 1.128-2.16 0-4.152-.672-5.664-2.064z"/><path fill="currentColor" d="m82.8395 8.05579h3.912v-3.288h-3.912zm3.864 1.29601h-3.84v12.648h3.84z"/><path fill="currentColor" d="m99.8264 20.5598v1.44h3.8396v-17.23201h-3.8396v6.02401c-.864-.912-2.472-1.70401-4.584-1.70401-4.32 0-6.84 2.97601-6.84 6.60001 0 3.6 2.52 6.576 6.84 6.576 2.112 0 3.72-.768 4.584-1.704zm.12-4.944v.144c0 1.992-1.704 3.408-3.912 3.408-2.112 0-3.888-1.224-3.888-3.48s1.776-3.504 3.888-3.504c2.208 0 3.912 1.44 3.912 3.432z"/><path fill="currentColor" d="m105.996 8.05579h3.912v-3.288h-3.912zm3.864 1.29601h-3.84v12.648h3.84z"/><path fill="currentColor" d="m116.863 22.2638c2.232 0 4.056-.648 5.208-1.656.648 1.2 2.184 1.92 4.992 1.392v-2.832c-1.344.288-1.632-.024-1.632-.696v-4.608c0-3.168-2.376-4.77601-6.408-4.77601-3.48 0-6.264 1.51201-7.056 3.79201l3.456.936c.384-.984 1.704-1.704 3.432-1.704 2.04 0 2.856.768 2.856 1.728v.072l-5.04.456c-2.976.288-5.16 1.512-5.16 3.984 0 2.496 2.232 3.912 5.352 3.912zm4.848-5.112c0 1.464-2.184 2.304-4.152 2.304-1.488 0-2.328-.432-2.328-1.248 0-.84.672-1.152 1.992-1.272l4.488-.456z"/><path fill="currentColor" d="m128.379 21.9998h3.84v-6.048c0-2.184 1.2-3.456 3.288-3.456 1.968 0 3 1.296 3 3.432v6.072h3.84v-7.2c0-3.504-2.232-5.71201-5.52-5.71201-2.04 0-3.624.76801-4.608 1.80001v-1.536h-3.84z"/></svg>
+		</a>
+		<div class="mt-6 text-base md:text-sm text-faint mb-3 md:mb-2">Follow us</div>
+		<div class="text-base md:text-sm grid gap-y-2 grid-cols-2 gap-x-4 md:gap-y-1 mb-4">
+			<a class="font-medium" href="https://discord.com/invite/obsidianmd" rel="noopener noreferrer" target="_blank">Discord</a>
+			<a class="font-medium" href="https://x.com/obsdmd" rel="noopener noreferrer" target="_blank">Twitter</a>
+			<a class="font-medium" href="https://bsky.app/profile/obsidian.md" rel="me noopener noreferrer" target="_blank">Bluesky</a>
+			<a class="font-medium" href="https://www.threads.net/@obsdmd" rel="me noopener noreferrer" target="_blank">Threads</a>
+			<a class="font-medium" href="https://mas.to/@obsidian" rel="me noopener noreferrer" target="_blank">Mastodon</a>
+			<a class="font-medium" href="https://www.youtube.com/@obsdmd" rel="noopener noreferrer" target="_blank">YouTube</a>
+			<a class="font-medium" href="https://github.com/obsidianmd" rel="noopener noreferrer" target="_blank">GitHub</a>
+		</div>
+		<details class="relative text-sm mb-4 group">
+			<summary class="list-none cursor-pointer text-faint hover:text-normal flex items-center gap-1.5 select-none px-3 py-3 sm:py-1.5 rounded-lg ring-1 ring-inset ring-white/10 hover:bg-gray-800 min-w-[10rem] whitespace-nowrap">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+				English
+				<i data-lucide="chevron-down" class="icon-xs ms-auto"></i>
+			</summary>
+			<ul class="absolute bottom-full start-0 mb-1 bg-gray-800 ring-1 ring-inset ring-white/10 rounded-lg p-1 min-w-[10rem] shadow-xl flex flex-col gap-0.5">
+				
+				<li><a href="/sync" onclick="try{localStorage.setItem('lang','en');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-normal font-medium bg-gray-700 hover:text-normal">English</a></li>
+				
+				<li><a href="/ar/sync" onclick="try{localStorage.setItem('lang','ar');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">العربية</a></li>
+				
+				<li><a href="/bn/sync" onclick="try{localStorage.setItem('lang','bn');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">বাংলা</a></li>
+				
+				<li><a href="/de/sync" onclick="try{localStorage.setItem('lang','de');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Deutsch</a></li>
+				
+				<li><a href="/es/sync" onclick="try{localStorage.setItem('lang','es');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Español</a></li>
+				
+				<li><a href="/fr/sync" onclick="try{localStorage.setItem('lang','fr');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Français</a></li>
+				
+				<li><a href="/it/sync" onclick="try{localStorage.setItem('lang','it');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Italiano</a></li>
+				
+				<li><a href="/ja/sync" onclick="try{localStorage.setItem('lang','ja');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">日本語</a></li>
+				
+				<li><a href="/ko/sync" onclick="try{localStorage.setItem('lang','ko');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">한국어</a></li>
+				
+				<li><a href="/pl/sync" onclick="try{localStorage.setItem('lang','pl');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Polski</a></li>
+				
+				<li><a href="/pt-BR/sync" onclick="try{localStorage.setItem('lang','pt-BR');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Português (Brasil)</a></li>
+				
+				<li><a href="/ro/sync" onclick="try{localStorage.setItem('lang','ro');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Română</a></li>
+				
+				<li><a href="/ru/sync" onclick="try{localStorage.setItem('lang','ru');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Русский</a></li>
+				
+				<li><a href="/sv/sync" onclick="try{localStorage.setItem('lang','sv');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">Svenska</a></li>
+				
+				<li><a href="/zh/sync" onclick="try{localStorage.setItem('lang','zh');sessionStorage.setItem('scrollY',scrollY)}catch(e){}" class="block px-3 py-1.5 rounded-md whitespace-nowrap text-muted hover:text-normal hover:bg-gray-700">简体中文</a></li>
+				
+			</ul>
+		</details>
+		<div class="text-sm text-faint">&copy; 2026 Obsidian</div>
+	</div>
+</footer>
+<script>
+document.addEventListener('click', function(e) {
+	document.querySelectorAll('footer details[open]').forEach(function(d) {
+		if (!d.contains(e.target)) d.removeAttribute('open');
+	});
+});
+</script>
+
+</div>
+<script src="/static.js?v=4f322412"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Scheduled Tasks - Manus Documentation 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
+## Documentation Index
+Fetch the complete documentation index at: /docs/llms.txt 
+Use this file to discover all available pages before exploring further.
+Skip to main content 
+Manus Documentation home page English 
+
+Search...
+
+⌘ K Ask Assistant 
+
+Search... 
+
+Navigation 
+Scheduled Tasks
+
+Introduction 
+Features 
+Website Builder 
+Integrations 
+
+- Projects 
+
+- Manus Skills 
+
+- Design View 
+
+- Wide Research 
+
+- Manus Slides 
+
+- Scheduled Tasks 
+
+- Data Analysis & Visualization 
+
+- Multimedia Processing 
+
+- Mail Manus 
+
+- Manus Collab 
+
+- Cloud browser 
+
+- Browser Operator 
+
+- Desktop 
+
+- Meeting minutes 
+
+## On this page 
+
+- Quick Start 
+- One-Time Task 
+
+- Recurring Task 
+
+- Complex Schedule 
+
+- When to Use Scheduled Tasks 
+
+- Quick Examples 
+- Example 1: Daily News Digest 
+
+- Example 2: Weekly Competitor Tracking 
+
+- Example 3: Monthly Analytics Report 
+
+- How to Set Up 
+
+- Schedule Options 
+
+- Managing Scheduled Tasks 
+
+- Tips for Better Scheduled Tasks 
+
+- Quick Use Cases 
+
+- Common Questions 
+
+# Scheduled Tasks
+
+Automate recurring work—run tasks on schedules or at specific times
+
+Scheduled Tasks let you automate recurring work by having Manus execute tasks on a schedule. Set it once, and Manus handles it automatically—daily reports, weekly research, monthly analysis, or any recurring workflow. 
+
+## ​ 
+
+Quick Start 
+
+### ​ 
+
+One-Time Task 
+
+### ​ 
+
+Recurring Task 
+
+### ​ 
+
+Complex Schedule 
+
+## ​ 
+
+When to Use Scheduled Tasks 
+
+Use for: 
+
+- Recurring research (daily news summaries, weekly competitor updates)
+
+- Regular reports (monthly analytics, weekly performance summaries)
+
+- Periodic data collection (scraping prices, tracking mentions)
+
+- Automated monitoring (checking for updates, tracking changes)
+
+Don’t use for: 
+
+- One-off tasks you need right now (just run them normally)
+
+- Real-time monitoring (scheduled tasks run at specific times, not continuously)
+
+## ​ 
+
+Quick Examples 
+
+### ​ 
+
+Example 1: Daily News Digest 
+
+Schedule : Daily at 7 AM (weekdays only) 
+Output : Email with curated news summary 
+
+### ​ 
+
+Example 2: Weekly Competitor Tracking 
+
+Schedule : Weekly (Fridays at 5 PM) 
+Output : Comparison table in Google Drive 
+
+### ​ 
+
+Example 3: Monthly Analytics Report 
+
+Schedule : Monthly (1st day at 9 AM) 
+Output : Slide deck posted to Slack 
+
+## ​ 
+
+How to Set Up 
+
+Step 1: Describe the task Be specific about what you want Manus to do. 
+Step 2: Specify the schedule 
+
+- “Every day at 9 AM”
+
+- “Every Monday at 8 AM”
+
+- “On the 1st of every month”
+
+- “Every weekday at 7 AM”
+
+- “Tomorrow at 3 PM” (one-time)
+
+Step 3: Define the output 
+
+- Email results to you
+
+- Post to Slack channel
+
+- Save to Google Drive
+
+- Update a spreadsheet
+
+- Send via connector
+
+## ​ 
+
+Schedule Options 
+
+Schedule Type Example Use Case 
+Daily ”Every day at 9 AM” News summaries, daily metrics 
+Weekdays ”Every weekday at 8 AM” Business reports, work updates 
+Weekly ”Every Monday at 10 AM” Weekly reviews, competitor tracking 
+Monthly ”On the 1st at 9 AM” Monthly reports, billing analysis 
+Custom ”Every Tuesday and Thursday at 2 PM” Specific recurring needs 
+One-Time ”Tomorrow at 3 PM” Delayed execution 
+
+## ​ 
+
+Managing Scheduled Tasks 
+
+View active schedules : Navigate to Settings → Scheduled Tasks to see all active schedules. 
+Pause a schedule : Toggle off any schedule temporarily without deleting it. 
+Edit a schedule : Modify timing, task description, or output method. 
+Delete a schedule : Remove schedules you no longer need. 
+View execution history : See past runs, results, and any errors. 
+
+## ​ 
+
+Tips for Better Scheduled Tasks 
+
+Be specific about timing : 
+
+- ✅ “Every weekday at 8 AM EST”
+
+- ❌ “In the morning”
+
+Define clear outputs : 
+
+- ✅ “Email me a 5-bullet summary”
+
+- ✅ “Post to Slack #team channel”
+
+- ❌ “Let me know what you find”
+
+Include time ranges for research : 
+
+- ✅ “News from the past 24 hours”
+
+- ✅ “Updates since last week”
+
+- ❌ “Recent news” (ambiguous)
+
+Test before scheduling : 
+
+- Run the task manually first to ensure it works as expected
+
+- Then set up the schedule
+
+## ​ 
+
+Quick Use Cases 
+
+Use Case Schedule Output 
+News Monitoring Daily 7 AM Email summary 
+Competitor Tracking Weekly Friday 5 PM Google Drive report 
+Social Media Monitoring Daily 9 AM Slack notification 
+Analytics Reports Monthly 1st day Slide deck 
+Price Tracking Daily 6 AM Spreadsheet update 
+Content Curation Weekdays 8 AM Email digest 
+
+## ​ 
+
+Common Questions 
+
+What happens if a scheduled task fails? 
+
+Manus will notify you and log the error. You can review the issue and adjust the task. 
+
+Can I run a task immediately and also schedule it?
+
+Yes. Run it now to test, then set up the recurring schedule. 
+
+What timezone are schedules in
+
+Your account timezone (set in Settings). You can specify timezone in the schedule: “9 AM EST” 
+
+How many scheduled tasks can I have?
+
+Depends on your plan. Check Settings → Scheduled Tasks for your limit. 
+
+Can I schedule Wide Research tasks? 
+
+Yes. Any task Manus can do can be scheduled. 
+
+Manus Slides
+Data Analysis & Visualization
+⌘ I 
+
+instagram linkedin x youtube 
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform 
+
+Assistant 
+
+Responses are generated using AI and may contain mistakes.

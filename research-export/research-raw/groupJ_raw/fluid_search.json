@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://devblogs.microsoft.com/microsoft365dev/announcing-fluid-framework-2-0-beta",
+    "name": "Announcing Fluid Framework 2.0 Beta",
+    "snippet": "Jan 9, 2024 — Fluid Framework enables real-time collaboration by providing developers with easy-to-use data structures which Fluid Framework automatically ...",
+    "host_name": "devblogs.microsoft.com",
+    "rank": 0,
+    "date": "Jan 9, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://fluidframework.com",
+    "name": "Fluid Framework",
+    "snippet": "Fluid Relay is a cloud service that enables real-time collaboration on shared data models. It is a fully managed service",
+    "host_name": "fluidframework.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://devblogs.microsoft.com/microsoft365dev/fluid-framework-2-0-alpha-is-now-available",
+    "name": "Fluid Framework 2.0 Alpha is now available",
+    "snippet": "Jun 15, 2023 — SharedTree also supports features like atomic move operations to make working with collaborative data less error prone.",
+    "host_name": "devblogs.microsoft.com",
+    "rank": 2,
+    "date": "Jun 15, 2023",
+    "favicon": ""
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/azure-fluid-relay/concepts/data-structures",
+    "name": "Distributed data structures - Azure Fluid Relay",
+    "snippet": "Jul 29, 2022 — The Fluid Framework provides developers with distributed data structures (DDSes) that automatically ensure that each connected client has ...",
+    "host_name": "learn.microsoft.com",
+    "rank": 3,
+    "date": "Jul 29, 2022",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.infoq.com/news/2024/01/fluid-framework-2-0-beta",
+    "name": "Fluid Framework 2.0 Beta: SharedTree Distributed Data",
+    "snippet": "Jan 15, 2024 — SharedTree includes advanced merge semantics for array operations, along with features like atomic move operations, simplifying collaborative ...",
+    "host_name": "www.infoq.com",
+    "rank": 4,
+    "date": "Jan 15, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.logrocket.com/microsofts-fluid-framework-an-introduction",
+    "name": "Microsoft's Fluid Framework: An introduction",
+    "snippet": "Jan 18, 2021 — This post introduces Microsoft's Fluid Framework and walks through a sample application to show how it can be integrated into projects.",
+    "host_name": "blog.logrocket.com",
+    "rank": 5,
+    "date": "Jan 18, 2021",
+    "favicon": ""
+  }
+]

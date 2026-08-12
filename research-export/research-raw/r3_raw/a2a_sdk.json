@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://github.com/a2aproject/a2a-python",
+    "name": "Official Python SDK for the Agent2Agent (A2A) Protocol",
+    "snippet": "A Python library for running agentic applications as A2A Servers , following the Agent2Agent (A2A) Protocol.",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/a2aproject/a2a-samples",
+    "name": "Samples using the Agent2Agent (A2A) Protocol",
+    "snippet": "Core A2A samples organized by programming language. samples/python, Demonstrates Python agent implementations using the A2A Python SDK . samples/go, Demonstrates ... Read more",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://pypi.org/project/a2a-sdk",
+    "name": "a2a-sdk",
+    "snippet": "A Python library for running agentic applications as A2A Servers, following the Agent2Agent ( A2A ) Protocol. The GitHub source repository was provided by the ...",
+    "host_name": "pypi.org",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/a2aproject/A2A",
+    "name": "Agent2Agent (A2A) is an open protocol enabling",
+    "snippet": "Agent2Agent (A2A ) is an open protocol enabling communication and interoperability between opaque agentic applications. Use the SDKs: 🐍 A2A Python SDK pip ...",
+    "host_name": "github.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/a2aproject/A2A/discussions/97",
+    "name": "Help Grow awesome-a2a: Share Your Agent2Agent",
+    "snippet": "The a2ajava project offers a comprehensive Java implementation of Google's Agent-to-Agent ( A2A ) protocol, facilitating seamless communication between AI agents. Read more",
+    "host_name": "github.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/a2aproject/a2a-python?ref=column-detail_article",
+    "name": "a2aproject/a2a-python at column-detail_article",
+    "snippet": "Jun 4, 2026 — Official Python SDK for the Agent2Agent (A2A) Protocol - GitHub. A Python library for running agentic applications as A2A Servers, following ...",
+    "host_name": "github.com",
+    "rank": 5,
+    "date": "Jun 4, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/a2aproject/a2a-python/releases",
+    "name": "Releases · a2aproject/a2a-python",
+    "snippet": "Official Python SDK for the Agent2Agent (A2A) Protocol . Search code, repositories, users, issues, pull requests... A2A routes. Features helpers: add non-text ...",
+    "host_name": "github.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/a2aproject/a2a-python/issues",
+    "name": "Issues · a2aproject/a2a-python",
+    "snippet": "Official Python SDK for the Agent2Agent (A2A) Protocol - : clientIssues related to transport logic and configuration for external apps connecting to A2A agents ...",
+    "host_name": "github.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/a2aproject/a2a-java",
+    "name": "a2aproject/a2a-java: Official Java SDK for the Agent2Agent",
+    "snippet": "A Java library that helps run agentic applications as A2A servers following the Agent2Agent (A2A) Protocol. A multi-module Maven library providing client and ... Read more",
+    "host_name": "github.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  }
+]

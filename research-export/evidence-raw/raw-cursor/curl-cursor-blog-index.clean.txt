@@ -1,0 +1,8 @@
+TITLE: Blog · Cursor
+DESCRIPTION: Latest updates and insights from the Cursor team. Learn about AI-powered coding, product updates, and development tips.
+
+Jul 8, 2026 · Research 
+Introducing Grok 4.5
+Our most intelligent model and the first we've built for more than software engineering.
+
+Cursor Team · 3m 3 min read

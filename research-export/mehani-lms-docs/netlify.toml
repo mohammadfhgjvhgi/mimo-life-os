@@ -1,0 +1,37 @@
+# =============================================
+# Netlify Configuration for Mehani LMS Platform
+# =============================================
+
+[build]
+  command = "bun run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  BUN_VERSION = "latest"
+
+# Essential plugin for Next.js on Netlify (handles API routes automatically)
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Headers for security and caching
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/uploads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Note: @netlify/plugin-nextjs handles API routes automatically
+# No manual redirects needed for /api/* routes

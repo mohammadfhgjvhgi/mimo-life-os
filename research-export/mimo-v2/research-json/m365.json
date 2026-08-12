@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://www.microsoft.com/en-us/microsoft-365-copilot",
+    "name": "Microsoft 365 Copilot | AI Productivity Tools for Work",
+    "snippet": "Get an AI assistant for work with Microsoft 365 Copilot. Turn data into insights in the apps you already know with Microsoft 365 Copilot. Get answers, draft ...",
+    "host_name": "www.microsoft.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot",
+    "name": "Introducing a new design for Microsoft 365 Copilot",
+    "snippet": "Copilot's redesigned experience delivers faster performance, adaptive tools, and clearer AI-powered workflows to help you easily move from ...",
+    "host_name": "www.microsoft.com",
+    "rank": 1,
+    "date": "May 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+    "name": "Release Notes for Microsoft 365 Copilot",
+    "snippet": "What changed: Users can now access agents built with the Model Context Protocol (MCP) directly within Word, Excel, PowerPoint, Outlook, and ...",
+    "host_name": "learn.microsoft.com",
+    "rank": 2,
+    "date": "Jul 29, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.microsoft.com/en-us/microsoft-365/roadmap",
+    "name": "Microsoft 365 Roadmap",
+    "snippet": "The Microsoft 365 Copilot app has a cleaner interface, faster app load and chat response times, and adaptive design that reveals the right capabilities at the ...",
+    "host_name": "www.microsoft.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://redriver.com/collaboration/microsoft-copilot-use-cases",
+    "name": "12 Best Microsoft Copilot for Office 365 Use Cases - Red River",
+    "snippet": "Copilot integrates seamlessly into the Microsoft 365 ecosystem, including Office platforms such as Excel, Word, Outlook, PowerPoint, Teams and ...",
+    "host_name": "redriver.com",
+    "rank": 4,
+    "date": "Mar 17, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://officegarageitpro.medium.com/copilot-now-included-with-word-excel-powerpoint-outlook-onenote-fd01cc2eda3b",
+    "name": "Copilot now included with Word, Excel, PowerPoint, Outlook",
+    "snippet": "Copilot Chat, now available directly in Word, Excel, PowerPoint, Outlook, and OneNote for everyone with an Office 365",
+    "host_name": "officegarageitpro.medium.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://supersimple365.com/whats-new-in-microsoft-365-and-copilot-july-2025",
+    "name": "What's new in Microsoft 365 and Copilot? July 2025",
+    "snippet": "Welcome to our seventh roundup of 2025. We look at what was announced, released and delayed across Microsoft 365 and Copilot in July.",
+    "host_name": "supersimple365.com",
+    "rank": 6,
+    "date": "Jul 2, 2025",
+    "favicon": ""
+  }
+]

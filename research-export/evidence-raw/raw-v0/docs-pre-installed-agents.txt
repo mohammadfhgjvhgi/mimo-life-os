@@ -1,0 +1,423 @@
+- 
+- 
+- 
+- 
+- 
+- Pre-installed Agents | v0 Docs 
+- 
+- 
+- 
+- 
+- 
+- 
+
+- Docs 
+
+- API 
+
+Search… ⌘ K Ask AI Ask AI 
+Search… ⌘ K 
+Docs API 
+
+- Getting Started 
+
+- What is v0? 
+
+- Agentic features 
+
+- Sandbox 
+
+- Vercel Integration 
+
+- Quickstart 
+
+- FAQs 
+
+- Prompt 
+
+- Text Prompting 
+
+- Screenshots and Files 
+
+- Figma 
+
+- Iterate 
+
+- Code editing 
+
+- Terminal commands 
+
+- Design mode 
+
+- Design Systems 2.0 
+
+- Images, videos, and file uploads 
+
+- Versions 
+
+- Integrate 
+
+- AI models 
+
+- Databases 
+
+- Snowflake 
+
+- Shopify 
+
+- External APIs 
+
+- GitHub 
+
+- MCP Integrations 
+
+- Pre-installed Agents 
+
+- Slack 
+
+- Ship 
+
+- Deployments 
+
+- Custom domain 
+
+- Sharing 
+
+- Templates 
+
+- Manage 
+
+- Account 
+
+- Enterprise 
+
+- Instructions 
+
+- Folders 
+
+- Projects 
+
+- Pricing 
+
+- Usage & Activity 
+
+- Teams 
+
+- Security 
+
+- Guides 
+
+- Full-stack apps 
+
+- Prototyping 
+
+- PRD design 
+
+- 
+
+- Compare 
+
+Menu 
+
+# Pre-installed Agents
+Copy page Copy page 
+
+Use pre-installed coding agents like Claude Code directly in the v0 terminal.
+Copy for LLM View Markdown Ask AI about this page 
+
+v0 sandboxes come with pre-installed coding agents that you can invoke directly from the terminal. These agents let you use tools like Claude Code alongside v0's built-in AI assistant, giving you flexibility to work with different agent paradigms within the same project.
+
+## How it works 
+
+### Invoking an agent 
+
+To start using a pre-installed agent, open the terminal in your v0 project and run the agent's CLI command:
+
+claude 
+
+The agent launches inside your project's sandbox environment and can read, edit, and create files in your codebase — just like it would on your local machine.
+
+### Traffic routing through Vercel AI Gateway 
+
+By default, all agent traffic is routed through the Vercel AI Gateway . This means:
+
+- Model access follows your team's configuration : The same model restrictions and permissions that apply to your v0 usage apply to agent requests.
+
+- Subprocessor compliance : Traffic routed through the Gateway is processed only by providers on Vercel's subprocessor list , ensuring requests stay within your organization's approved data processing boundaries.
+
+- Usage is metered : Agent requests routed through the Gateway consume your team's AI Gateway credits, the same as other v0 usage.
+
+### Enterprise availability 
+
+Pre-installed agents are disabled by default for Enterprise accounts. An Enterprise admin must explicitly opt in to enable the feature for their team. This allows organizations to evaluate the feature against their security and compliance requirements before making it available to users.
+
+For non-Enterprise accounts, pre-installed agents are available by default.
+
+## What agents can access 
+
+When running inside the v0 sandbox, a pre-installed agent has access to:
+
+- Your project's codebase : All files and directories within the v0 project.
+
+- Sandbox files and conversation history : Any files generated during your session, including prior outputs and context.
+
+- Environment variables and secrets : Variables configured in your project's Vars panel are available in the sandbox environment, just as they would be in a local development setup.
+
+This is the same level of access that any process running in the sandbox terminal has. Treat the sandbox environment the same way you would treat a local development machine — avoid storing secrets you wouldn't want a terminal process to read.
+
+## Unsupported configurations 
+
+The supported configuration for pre-installed agents is to use the provided CLI wrapper (e.g., claude ) with traffic routed through Vercel AI Gateway. The following actions fall outside the supported configuration and are at your own risk :
+
+### Direct binary execution 
+
+Running agent binaries directly, bypassing the provided CLI wrapper, is unsupported use of the v0 terminal. The CLI wrapper ensures that agent traffic is routed through the Gateway with the correct authentication and model restrictions.
+
+### Overriding Gateway routing 
+
+Manually changing the agent's configuration to route traffic to providers outside of Vercel's approved list — for example, by supplying personal API keys to redirect requests away from the Gateway — removes the protections that Gateway routing provides.
+
+### Installing third-party agents 
+
+Installing additional agents or CLI tools not pre-installed by Vercel and using them to access project data is not a supported configuration. Vercel has not reviewed or vetted third-party tools installed by users into the sandbox.
+
+### Vercel's visibility and responsibility 
+
+Vercel does not monitor, log, or have visibility into agent activity conducted outside the supported configuration. This means:
+
+- No responsibility for non-Gateway traffic : Vercel disclaims all responsibility for data transmitted through non-Gateway channels or through unsupported agent configurations.
+
+- Potential policy violations : Unsupported use may violate your team's or organization's security policies. Users are responsible for ensuring their actions comply with their organization's requirements.
+
+- Enterprise admin considerations : Enterprise admins should be aware that users with terminal access can technically perform these actions. Admins should evaluate whether to enable the feature based on their organization's risk tolerance and security posture.
+
+## Third-party notices 
+
+Pre-installed agents such as Claude Code are third-party services. By using pre-installed agents in v0, you acknowledge the third-party terms referenced in Vercel's Notices and License Information .
+
+Learn more about v0's security practices
+
+Previous MCP Integrations Next Slack 
+
+On this page
+How it works Invoking an agent Traffic routing through Vercel AI Gateway Enterprise availability What agents can access Unsupported configurations Direct binary execution Overriding Gateway routing Installing third-party agents Vercel's visibility and responsibility Third-party notices 
+
+Scroll to top Give feedback 
+
+## Product
+
+- Home 
+
+- Enterprise 
+
+- Pricing 
+
+- v0 for Students 
+
+## Company
+
+- Terms 
+
+- AI Policy 
+
+- Privacy 
+
+- Cookies 
+
+## Resources
+
+- FAQs 
+
+- Docs 
+
+- Vercel Community 
+
+- Vercel 
+
+## Social
+
+- Twitter 
+
+- LinkedIn 
+
+## Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Workflows 
+
+- Connect New 
+
+- Passport New 
+
+- eve New 
+
+## Core Platform
+
+- CI/CD 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+## Security
+
+- Platform Security 
+
+- WAF 
+
+- Bot Management 
+
+- Bot ID 
+
+## Tools
+
+- Vercel Drop New 
+
+- Vercel Agent 
+
+- Vercel Plugin New 
+
+- Agent Skills 
+
+- Next.js 
+
+- Domains 
+
+- v0 
+
+## Frameworks
+
+- eve New 
+
+- Nuxt 
+
+- SvelteKit 
+
+- Nitro 
+
+- Turborepo 
+
+- Tanstack Start 
+
+- FastAPI 
+
+- xmcp 
+
+- All frameworks 
+
+## SDKs
+
+- Vercel SDK 
+
+- Workflow SDK New 
+
+- Flags SDK 
+
+- Chat SDK New 
+
+- Queues SDK New 
+
+- Streamdown 
+
+## Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+- Platform Engineers 
+
+- Design Engineers 
+
+## Learn
+
+- Docs 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+- Academy 
+
+- Articles 
+
+- Community 
+
+## Explore
+
+- Customers 
+
+- Marketplace 
+
+- Templates 
+
+- Partner Finder 
+
+- Vercel + AWS 
+
+## Company
+
+- About 
+
+- Careers 
+
+- Press 
+
+- Events 
+
+- Startups 
+
+- Shipped on Vercel 
+
+- Open Source Program 
+
+- Enterprise 
+
+- Pricing 
+
+- Help 
+
+## Legal & Trust
+
+- Privacy Policy 
+
+- Terms of Service 
+
+- Cookie Policy 
+
+- DPA 
+
+- Acceptable Use Policy 
+
+- Legal 
+
+- Trust Center 
+
+- Status 
+
+## Social
+
+- GitHub 
+
+- X 
+
+- LinkedIn 
+
+- YouTube 
+
+- Instagram

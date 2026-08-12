@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="awa-expId" content="cv-downloadv2:1227264;" />
+	<meta name="awa-env" content="prod" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="hNs7DXrTySP_X-0P_AC0WulAXvUwgSXEmgfcO2r79dw" />
+
+	<!-- Twitter and Facebook OpenGraph Metadata-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@code" />
+
+	<meta name="description" content="Visual Studio Code user accessibility features.  Learn here about the various ways VS Code aids user accessibility." />
+<meta name="keywords" content="" />
+<meta name="ms.prod" content="vs-code" />
+<meta name="ms.TOCTitle" content="" />
+<meta name="ms.ContentId" content="62894B41-CC33-400A-8A56-8C761C77B4C7" />
+<meta name="ms.date" content="02/04/2026" />
+<meta name="ms.topic" content="conceptual" />
+<!-- Twitter and Facebook OpenGraph Metadata-->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:url" content="https://code.visualstudio.com/docs/configure/accessibility/accessibility" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Accessibility" />
+<meta property="og:description" content="Visual Studio Code user accessibility features.  Learn here about the various ways VS Code aids user accessibility." />
+
+<meta property="og:image" content="https://code.visualstudio.com/opengraphimg/generated/docs/configure/accessibility/accessibility.webp" />
+
+
+
+	<link rel="shortcut icon" href="/assets/favicon.ico" sizes="128x128" />
+	<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+	<title>Accessibility</title>
+
+	<link rel="stylesheet" href="/dist/style.css">
+
+	<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
+	<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-4.min.js"></script>
+	
+	<script type="text/javascript">
+	// Leave as var; siteConsent is initialized and referenced elsewhere.
+	var siteConsent = null;
+	
+	const GPC_DataSharingOptIn = false;
+	WcpConsent.onInitCallback(function () {
+		window.appInsights = new oneDS.ApplicationInsights();
+		window.appInsights.initialize({
+			instrumentationKey: "1a3eb3104447440391ad5f2a6ee06a0a-62879566-bc58-4741-9650-302bf2af703f-7103",
+			propertyConfiguration: {
+				userConsented: false,
+				gpcDataSharingOptIn: false,
+				callback: {
+					userConsentDetails: siteConsent ? siteConsent.getConsent : undefined
+				},
+			},
+			cookieCfg: {
+				ignoreCookies: ["MSCC"]
+			},
+			webAnalyticsConfiguration:{ // Web Analytics Plugin configuration
+				urlCollectQuery: true,
+				urlCollectHash: true,
+				autoCapture: {
+					scroll: true,
+					pageView: true,
+					onLoad: true,
+					onUnload: true,
+					click: true,
+					resize: true,
+					jsError: true
+				}
+			}
+		}, []);
+	
+		window.appInsights.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = GPC_DataSharingOptIn;
+	});
+	</script>
+	<link rel="alternate" type="application/atom+xml" title="RSS Feed for code.visualstudio.com" href="/feed.xml" />
+</head>
+
+<body >
+	<!-- Setting theme here to avoid FOUC -->
+	<script>
+		function setTheme(themeName) {
+			if (themeName === 'dark') {
+				document.documentElement.removeAttribute('data-theme'); // dark is default, so no data-theme attribute needed
+			}
+
+			if (themeName === 'light') {
+				document.documentElement.setAttribute('data-theme', themeName);
+			}
+			return;
+		}
+
+		// Determine initial theme: user preference or system preference
+		let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		setTheme(theme); // Apply the initial theme
+
+		// Listen for changes in the system theme preference
+		window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+			if (!localStorage.getItem('theme')) { // Only if no user preference is saved
+				setTheme(e.matches ? 'dark' : 'light');
+			}
+		});
+	</script>
+
+	<div id="main">
+		<div class="navbar-fixed-container">
+			<div class="navbar navbar-inverse navbar-fixed-top ">
+				<div id='cookie-banner'></div>		<nav role="navigation" aria-label="Top Level">
+					<div class="container">
+						<div class="nav navbar-header">
+							<a class="navbar-brand" href="/"><span>Visual Studio Code</span></a>
+						</div>
+						<div class="navbar-collapse collapse">
+							<ul class="nav navbar-nav navbar-left" data-m='{"cN":"top-navbar","aN":"navigation"}'>
+								<li class="nav-dropdown">
+									<a id="nav-features" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Features","aN":"navigation","cT":"toggle"}'>
+										Features <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/features/agents" data-m='{"cN":"Agents","aN":"navigation - Features"}'>Agents</a></li>
+									</ul>
+								</li>
+								<li class="nav-dropdown active">
+									<a id="nav-docs" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Docs","aN":"navigation","cT":"toggle"}'>
+										Docs <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/docs" data-m='{"cN":"Documentation","aN":"navigation - Docs"}'>Documentation</a></li>
+										<li role="none"><a role="menuitem" href="/api" data-m='{"cN":"API","aN":"navigation - Docs"}'>API</a></li>
+										<li role="none"><a role="menuitem" id="nav-faqs" href="/docs/supporting/faq" data-m='{"cN":"FAQ","aN":"navigation - Docs"}'>FAQ</a></li>
+									</ul>
+								</li>
+								<li ><a id="nav-updates" href="/updates" data-m='{"cN":"Release Notes"}'>Release Notes</a>
+								</li>
+								<li ><a id="nav-blogs" href="/blogs" data-m='{"cN":"Blog"}'>Blog</a></li>
+								<li ><a id="nav-learn" href="/learn" data-m='{"cN":"Learn"}'>Learn</a></li>
+								<li><a id="nav-events" href="https://aka.ms/vscode/live" target="_blank" rel="noopener" data-m='{"cN":"Events"}'>Events<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+								<li class="nav-dropdown">
+									<a id="nav-resources" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Resources","aN":"navigation","cT":"toggle"}'>
+										Resources <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="https://marketplace.visualstudio.com/VSCode" target="_blank" rel="noopener"
+												id="nav-extensions" data-m='{"cN":"Extensions","aN":"navigation - Resources"}'>Extensions<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+										<li role="none"><a role="menuitem" id="nav-mcp" href="/mcp" target="_blank" rel="noopener" data-m='{"cN":"MCP","aN":"navigation - Resources"}'>MCP<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right" role="presentation">
+								<li>
+									<a class="link-button" href="/download" id="nav-download">
+										<span>Download</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="navbar-actions">
+							<div class="search" role="presentation">
+								<div class="nav-search search-control" role="button" tabindex="0" aria-label="Open search dialog">
+									<div class="input-group" role="presentation">
+										<span class="input-group-btn">
+											<span class="btn search-icon-container" aria-hidden="true">
+												<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="" />
+												<img class="search-icon-light" src="/assets/icons/search.svg" alt="" />
+											</span>
+										</span>
+										<span class="search-box form-control" aria-hidden="true" role="presentation"></span>
+										<span class="search-shortcut-placeholder">Search</span>
+										<span class="search-shortcut-overlay"></span>
+									</div>
+								</div>					</div>
+							<button type="button" class="theme-switch" id="theme-toggle">
+								<img class="theme-icon-light" src="/assets/icons/theme-light.svg" alt="Switch to the dark theme" />
+								<img class="theme-icon-dark" src="/assets/icons/theme-dark.svg" alt="Switch to the light theme" />
+							</button>
+							<a class="link-button navbar-actions-download" href="/Download">
+								<span>Download</span>
+							</a>
+						</div>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
+							aria-label="Expand and Collapse Menu">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</div>		<div data-announcement-version="2026-06-01-vscode-live-build" class="updates-banner ">
+			<div class="container">
+				<p class="message"><a href="https://aka.ms/VSCode/Livestage?source=vsc-website-banner" target="_blank" rel="noopener">📼 Rewatch VS Code Live at MS Build 2026</a></p>
+			</div>
+			<div tabindex="0" role="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn"><span class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span></div>
+		</div>
+		<script>
+			// Hide the banner synchronously (before first paint) if this version was
+			// already dismissed, to avoid a flicker/layout shift once the main bundle loads.
+			(function () {
+				try {
+					var banner = document.currentScript.previousElementSibling;
+					if (banner && localStorage.getItem('dismissedAnnouncementVersion') === banner.getAttribute('data-announcement-version')) {
+						banner.classList.add('js-hidden');
+					}
+				} catch (e) { /* ignore */ }
+			})();
+		</script>
+		<!-- This div wraps around the entire site -->
+		<!-- The body itself should already have a main tag -->
+		<main id="main-content">
+			<script>
+    function closeReportIssue() {
+        var element = document.getElementById('surveypopup');
+        element.parentElement.removeChild(element);
+    }
+
+    function reportIssue(tutorial, page) {
+        var div = document.createElement('div');
+        div.innerHTML = '<div id="surveypopup" class="overlay visible"><div class="surveypopup"><div id="surveytitle">Tell us more<a href="javascript:void(0)" onclick="closeReportIssue()">X</a></div><div id="surveydiv"><iframe frameBorder="0" scrolling="0" src="https://www.research.net/r/PWZWZ52?tutorial=' + tutorial + '&step=' + page + '"></iframe></div></div></div>';
+        document.body.appendChild(div.children[0]);
+    }
+</script>
+
+<div class="body-content docs docs-github-layout">
+    <div class="docs-layout-wrapper">
+        <!-- Left sidebar - Table of Contents -->
+        <aside class="docs-left-sidebar">
+            <nav id="docs-navbar" aria-label="Topics" class="docs-nav visible-md visible-lg" data-m='{"cN":"docs-left-nav","aN":"navigation"}'>
+              <div class="docs-nav-back">
+                <a class="area" href="/docs" aria-label="Back to all documentation"><span class="codicon codicon-arrow-left" aria-hidden="true"></span><span>All Docs</span></a>
+              </div>
+              <h4>Core Editor</h4>
+              <ul class="nav" id="main-nav">
+              <li >
+                <a href="/docs/core-editor/overview" data-m='{"cN":"Overview"}' >Overview</a>
+              </li>
+              
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#editing-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Write code","cT":"toggle"}'>Write code</a>
+              <ul id="editing-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/editing/getting-started" data-m='{"cN":"Tutorial","aN":"Write code"}' >Tutorial</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/userinterface" data-m='{"cN":"User Interface","aN":"Write code"}' >User Interface</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/tips-and-tricks" data-m='{"cN":"Tips and Tricks","aN":"Write code"}' >Tips and Tricks</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/codebasics" data-m='{"cN":"Basic Editing","aN":"Write code"}' >Basic Editing</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/intellisense" data-m='{"cN":"IntelliSense","aN":"Write code"}' >IntelliSense</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/ai-powered-suggestions" data-m='{"cN":"Inline Suggestions","aN":"Write code"}' >Inline Suggestions</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/copilot-smart-actions" data-m='{"cN":"Smart Actions","aN":"Write code"}' >Smart Actions</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/editingevolved" data-m='{"cN":"Code Navigation","aN":"Write code"}' >Code Navigation</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/refactoring" data-m='{"cN":"Refactoring","aN":"Write code"}' >Refactoring</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/userdefinedsnippets" data-m='{"cN":"Snippets","aN":"Write code"}' >Snippets</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#editing-workspaces-articles" data-toggle="collapse" data-m='{"cN":"Workspaces","aN":"Write code","cT":"toggle"}'>Workspaces</a>
+              <ul id="editing-workspaces-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/editing/workspaces/workspaces" data-m='{"cN":"Overview","aN":"Write code - Workspaces"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/workspaces/multi-root-workspaces" data-m='{"cN":"Multi-Root Workspaces","aN":"Write code - Workspaces"}' >Multi-Root Workspaces</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/workspaces/workspace-trust" data-m='{"cN":"Workspace Trust","aN":"Write code - Workspaces"}' >Workspace Trust</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+              </ul>
+            </li>
+                
+            <li class="panel active expanded">
+              <a class="area" role="button" href="#configure-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Configure the editor","cT":"toggle"}'>Configure the editor</a>
+              <ul id="configure-articles" class="collapse in">
+            
+                    <li >
+                      <a href="/docs/configure/locales" data-m='{"cN":"Display Language","aN":"Configure the editor"}' >Display Language</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/custom-layout" data-m='{"cN":"Layout","aN":"Configure the editor"}' >Layout</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/keybindings" data-m='{"cN":"Keyboard Shortcuts","aN":"Configure the editor"}' >Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/settings" data-m='{"cN":"Settings","aN":"Configure the editor"}' >Settings</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/settings-sync" data-m='{"cN":"Settings Sync","aN":"Configure the editor"}' >Settings Sync</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-extensions-articles" data-toggle="collapse" data-m='{"cN":"Extensions","aN":"Configure the editor","cT":"toggle"}'>Extensions</a>
+              <ul id="configure-extensions-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/extensions/extensions" data-m='{"cN":"Overview","aN":"Configure the editor - Extensions"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/extensions/extension-marketplace" data-m='{"cN":"Extension Marketplace","aN":"Configure the editor - Extensions"}' >Extension Marketplace</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/extensions/extension-runtime-security" data-m='{"cN":"Extension Runtime Security","aN":"Configure the editor - Extensions"}' >Extension Runtime Security</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li >
+                      <a href="/docs/configure/themes" data-m='{"cN":"Themes","aN":"Configure the editor"}' >Themes</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/profiles" data-m='{"cN":"Profiles","aN":"Configure the editor"}' >Profiles</a>
+                    </li>
+                      
+            <li class="panel active expanded">
+              <a class="area" role="button" href="#configure-accessibility-articles" data-toggle="collapse" data-m='{"cN":"Accessibility","aN":"Configure the editor","cT":"toggle"}'>Accessibility</a>
+              <ul id="configure-accessibility-articles" class="collapse in">
+            
+                    <li class="active">
+                      <a href="/docs/configure/accessibility/accessibility" data-m='{"cN":"Overview","aN":"Configure the editor - Accessibility"}' aria-label="Current Page: Overview">Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/accessibility/voice" data-m='{"cN":"Voice Interactions","aN":"Configure the editor - Accessibility"}' >Voice Interactions</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li >
+                      <a href="/docs/configure/command-line" data-m='{"cN":"Command Line Interface","aN":"Configure the editor"}' >Command Line Interface</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/telemetry" data-m='{"cN":"Telemetry","aN":"Configure the editor"}' >Telemetry</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#reference-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Reference","cT":"toggle"}'>Reference</a>
+              <ul id="reference-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/reference/default-keybindings" data-m='{"cN":"Default Keyboard Shortcuts","aN":"Reference"}' >Default Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/default-settings" data-m='{"cN":"Default Settings","aN":"Reference"}' >Default Settings</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/variables-reference" data-m='{"cN":"Substitution Variables","aN":"Reference"}' >Substitution Variables</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/tasks-appendix" data-m='{"cN":"Tasks Schema","aN":"Reference"}' >Tasks Schema</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+              </ul>
+            </nav>
+            
+            <nav id="small-nav" aria-label="Topics" class="docs-nav hidden-md hidden-lg">
+              <label class="faux-h4" for="small-nav-dropdown-core-editor">Topics</label>
+              <select id="small-nav-dropdown-core-editor" aria-label="topics">
+                <option value="/docs/core-editor/overview" >Overview</option>
+            
+              <optgroup label="Write code">
+            
+                    <option value="/docs/editing/getting-started" >Tutorial</option>
+                    
+                    <option value="/docs/editing/userinterface" >User Interface</option>
+                    
+                    <option value="/docs/editing/tips-and-tricks" >Tips and Tricks</option>
+                    
+                    <option value="/docs/editing/codebasics" >Basic Editing</option>
+                    
+                    <option value="/docs/editing/intellisense" >IntelliSense</option>
+                    
+                    <option value="/docs/editing/ai-powered-suggestions" >Inline Suggestions</option>
+                    
+                    <option value="/docs/editing/copilot-smart-actions" >Smart Actions</option>
+                    
+                    <option value="/docs/editing/editingevolved" >Code Navigation</option>
+                    
+                    <option value="/docs/editing/refactoring" >Refactoring</option>
+                    
+                    <option value="/docs/editing/userdefinedsnippets" >Snippets</option>
+                    
+                    <option disabled>Workspaces</option>
+            
+                    <option value="/docs/editing/workspaces/workspaces" >    Overview</option>
+                    
+                    <option value="/docs/editing/workspaces/multi-root-workspaces" >    Multi-Root Workspaces</option>
+                    
+                    <option value="/docs/editing/workspaces/workspace-trust" >    Workspace Trust</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Configure the editor">
+            
+                    <option value="/docs/configure/locales" >Display Language</option>
+                    
+                    <option value="/docs/configure/custom-layout" >Layout</option>
+                    
+                    <option value="/docs/configure/keybindings" >Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/configure/settings" >Settings</option>
+                    
+                    <option value="/docs/configure/settings-sync" >Settings Sync</option>
+                    
+                    <option disabled>Extensions</option>
+            
+                    <option value="/docs/configure/extensions/extensions" >    Overview</option>
+                    
+                    <option value="/docs/configure/extensions/extension-marketplace" >    Extension Marketplace</option>
+                    
+                    <option value="/docs/configure/extensions/extension-runtime-security" >    Extension Runtime Security</option>
+                    
+                    <option value="/docs/configure/themes" >Themes</option>
+                    
+                    <option value="/docs/configure/profiles" >Profiles</option>
+                    
+                    <option disabled>Accessibility</option>
+            
+                    <option value="/docs/configure/accessibility/accessibility" selected>    Overview</option>
+                    
+                    <option value="/docs/configure/accessibility/voice" >    Voice Interactions</option>
+                    
+                    <option value="/docs/configure/command-line" >Command Line Interface</option>
+                    
+                    <option value="/docs/configure/telemetry" >Telemetry</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Reference">
+            
+                    <option value="/docs/reference/default-keybindings" >Default Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/reference/default-settings" >Default Settings</option>
+                    
+                    <option value="/docs/reference/variables-reference" >Substitution Variables</option>
+                    
+                    <option value="/docs/reference/tasks-appendix" >Tasks Schema</option>
+                    
+              </optgroup>
+              
+              </select>
+            </nav>        </aside>
+        
+        <!-- Content wrapper contains main content + right sidebar -->
+        <div class="docs-content-wrapper">
+            <!-- Right sidebar - On This Page -->
+            <aside class="docs-right-sidebar hidden-xs">
+                <div class="docs-markdown-actions">
+                    <div class="docs-markdown-dropdown" data-raw-url="/raw/docs/configure/accessibility/accessibility.md">
+                        <button type="button" class="docs-markdown-btn-main" data-action="copy-markdown" aria-label="Copy as Markdown">
+                            <span class="codicon codicon-copy" aria-hidden="true"></span>
+                            <span>Copy as Markdown</span>
+                        </button>
+                        <button type="button" class="docs-markdown-btn-trigger" aria-haspopup="true" aria-expanded="false" aria-label="More Markdown options">
+                            <span class="codicon codicon-chevron-down docs-markdown-chevron" aria-hidden="true"></span>
+                        </button>
+                        <ul class="docs-markdown-menu" role="menu" aria-label="Markdown options">
+                            <li role="menuitem" tabindex="0" data-action="copy-markdown">
+                                <span class="codicon codicon-copy" aria-hidden="true"></span>
+                                <span>Copy as Markdown</span>
+                            </li>
+                            <li role="menuitem" tabindex="0" data-action="view-markdown">
+                                <span class="codicon codicon-file" aria-hidden="true"></span>
+                                <span>View as Markdown</span>
+                                <span class="codicon codicon-link-external" aria-hidden="true"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav id="docs-subnavbar" aria-label="On Page">
+                    
+                    <h4><span class="sr-only">On this page there are 21 sections</span><span
+                            aria-hidden="true">On this page</span></h4>
+                    <ul class="nav">
+                        
+                        <li><a href="#_zoom">Zoom</a></li>
+                        
+                        <li><a href="#_accessibility-help">Accessibility help</a></li>
+                        
+                        <li><a href="#_high-contrast-theme">High Contrast theme</a></li>
+                        
+                        <li><a href="#_color-vision-accessibility">Color vision accessibility</a></li>
+                        
+                        <li><a href="#_customizing-warning-colors">Customizing warning colors</a></li>
+                        
+                        <li><a href="#_dim-unfocused-editors-and-terminals">Dim unfocused editors and terminals</a></li>
+                        
+                        <li><a href="#_keyboard-navigation">Keyboard navigation</a></li>
+                        
+                        <li><a href="#_tab-navigation">Tab navigation</a></li>
+                        
+                        <li><a href="#_tab-trapping">Tab trapping</a></li>
+                        
+                        <li><a href="#_screen-readers">Screen readers</a></li>
+                        
+                        <li><a href="#_screen-reader-mode">Screen reader mode</a></li>
+                        
+                        <li><a href="#_resize-table-columns-via-the-keyboard">Resize table columns via the keyboard</a></li>
+                        
+                        <li><a href="#_accessible-view">Accessible View</a></li>
+                        
+                        <li><a href="#_input-control-and-result-navigation">Input control and result navigation</a></li>
+                        
+                        <li><a href="#_terminal-accessibility">Terminal accessibility</a></li>
+                        
+                        <li><a href="#_status-bar-accessibility">Status bar accessibility</a></li>
+                        
+                        <li><a href="#_debugger-accessibility">Debugger accessibility</a></li>
+                        
+                        <li><a href="#_accessibility-signals">Accessibility Signals</a></li>
+                        
+                        <li><a href="#_hover-accessibility">Hover accessibility</a></li>
+                        
+                        <li><a href="#_current-known-issues">Current known issues</a></li>
+                        
+                        <li><a href="#_next-steps">Next steps</a></li>
+                        
+                    </ul>
+                    
+                </nav>
+                
+            </aside>
+            
+            <!-- Main article content -->
+            <main class="docs-main-content body">
+                <h1>Accessibility</h1>
+<p>Visual Studio Code has many features to help make the editor accessible to all users. Zoom levels and High Contrast colors improve editor visibility, keyboard-only navigation supports use without a mouse, and the editor is optimized for screen readers.</p>
+<h2 id="_zoom" data-needslink="_zoom">Zoom</h2>
+<p>You can adjust the zoom level in VS Code with the <strong>View</strong> &gt; <strong>Appearance</strong> &gt; <strong>Zoom</strong> commands.  Each <strong>Zoom</strong> command increases or decreases the zoom level by 20 percent.</p>
+<ul>
+<li><strong>View</strong> &gt; <strong>Appearance</strong> &gt; <strong>Zoom In</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.zoomIn" data-osx="⌘=" data-win="Ctrl+=" data-linux="Ctrl+="><span class="keybinding">⌘=</span> (Windows, Linux <span class="keybinding">Ctrl+=</span>)</span>) - increase the zoom level.</li>
+<li><strong>View</strong> &gt; <strong>Appearance</strong> &gt; <strong>Zoom Out</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.zoomOut" data-osx="⌘-" data-win="Ctrl+-" data-linux="Ctrl+-"><span class="keybinding">⌘-</span> (Windows, Linux <span class="keybinding">Ctrl+-</span>)</span>) - decrease the zoom level.</li>
+<li><strong>View</strong> &gt; <strong>Appearance</strong> &gt; <strong>Reset Zoom</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.zoomReset" data-osx="⌘Numpad0" data-win="Ctrl+Numpad0" data-linux="Ctrl+Numpad0"><span class="keybinding">⌘Numpad0</span> (Windows, Linux <span class="keybinding">Ctrl+Numpad0</span>)</span>) - reset the zoom level to 0.</li>
+</ul>
+<blockquote><p><strong>Note</strong>: If you are using a magnifier, hold down the <span class="keybinding">Alt</span> key while viewing the hover to move the cursor over the hover.</p>
+</blockquote><p><img src="/assets/docs/configure/accessibility/accessibility/zoomed-in.png" alt="Zoomed in editor" loading="lazy"></p>
+<h3 id="_persisted-zoom-level" data-needslink="_persisted-zoom-level">Persisted zoom level</h3>
+<p>When you adjust the zoom level with the <strong>View</strong> &gt; <strong>Appearance</strong> &gt; <strong>Zoom In / Out</strong> commands, the zoom level is persisted in the <span class="setting"><span class="setting-dropdown" data-setting-id="window.zoomLevel">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      window.zoomLevel
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> <a href="/docs/configure/settings">setting</a>. The default value is 0. Each increment above or below 0 represents zooming 20% in or out. You can also enter decimals to adjust the zoom level with a finer granularity.</p>
+<h2 id="_accessibility-help" data-needslink="_accessibility-help">Accessibility help</h2>
+<p>The command <strong>Open Accessibility Help</strong> <span class="dynamic-keybinding" data-commandId="editor.action.accessibilityHelp" data-osx="⌥F1" data-win="Alt+F1" data-linux="Shift+Alt+F1"><span class="keybinding">⌥F1</span> (Windows <span class="keybinding">Alt+F1</span>, Linux <span class="keybinding">Shift+Alt+F1</span>)</span> opens a help menu based on the current context. It currently applies to the editor, terminal, notebook, Chat view, and Inline Chat features.</p>
+<p>You can dismiss the accessibility help menu or open additional documentation from within the help menu.</p>
+<p><img src="/assets/docs/configure/accessibility/accessibility/status.png" alt="When triggered in an editor, a dialog appears that explains how to enable screen reader mode explicitly, tab focus mode and other details" loading="lazy"></p>
+<h2 id="_high-contrast-theme" data-needslink="_high-contrast-theme">High Contrast theme</h2>
+<p>VS Code supports a High Contrast color theme on all platforms.  Use <span class="filePreferencesPath"><strong>File</strong> &gt; <strong>Preferences</strong></span> &gt; <strong>Theme</strong> &gt; <strong>Color Theme</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.selectTheme" data-osx="⌘K ⌘T" data-win="Ctrl+K Ctrl+T" data-linux="Ctrl+K Ctrl+T"><span class="keybinding">⌘K ⌘T</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+T</span>)</span>) to display the <strong>Select Color Theme</strong> dropdown and select the <strong>High Contrast</strong> theme.</p>
+<p><img src="/assets/docs/configure/accessibility/accessibility/high-contrast.png" alt="High Contrast Theme" loading="lazy"></p>
+<h2 id="_color-vision-accessibility" data-needslink="_color-vision-accessibility">Color vision accessibility</h2>
+<p>You can search for extensions in <strong>Visual Studio Marketplace</strong> that are compatible with color vision deficiency. Use the Extensions view <span class="dynamic-keybinding" data-commandId="workbench.view.extensions" data-osx="⇧⌘X" data-win="Ctrl+Shift+X" data-linux="Ctrl+Shift+X"><span class="keybinding">⇧⌘X</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+X</span>)</span> and search for &quot;color blind&quot; to populate relevant options.</p>
+<p><img src="/assets/docs/configure/accessibility/accessibility/accessibility-extension-marketplace.png" alt="Visual Studio Marketplace in VS Code UI" loading="lazy"></p>
+<p>Once you have installed a color theme from the Marketplace, you can change the <a href="/docs/configure/themes">color theme</a> with <span class="filePreferencesPath"><strong>File</strong> &gt; <strong>Preferences</strong></span> &gt; <strong>Theme</strong> &gt; <strong>Color Theme</strong> <span class="dynamic-keybinding" data-commandId="workbench.action.selectTheme" data-osx="⌘K ⌘T" data-win="Ctrl+K Ctrl+T" data-linux="Ctrl+K Ctrl+T"><span class="keybinding">⌘K ⌘T</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+T</span>)</span>.</p>
+<p><img src="/assets/docs/configure/accessibility/accessibility/accessibility-select-theme.png" alt="Dropdown for Select Color Theme" loading="lazy"></p>
+<h3 id="_recommended-themes-for-color-vision-accessibility" data-needslink="_recommended-themes-for-color-vision-accessibility">Recommended themes for color vision accessibility</h3>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme" class="external-link" target="_blank">GitHub</a> - Accessible to most forms of color blindness and matches the themes in GitHub's settings.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=janbiasi.gotthard-theme" class="external-link" target="_blank">Gotthard</a> - Optimized for approximately 20 programming languages.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=tankashing.blinds-theme" class="external-link" target="_blank">Blinds</a> - Created for people with deuteranopia, featuring a high contrast color ratio.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=Greative.greative" class="external-link" target="_blank">Greative</a> - Considers both color blindness and light sensitivity.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=trallard.pitaya-smoothie" class="external-link" target="_blank">Pitaya Smoothie</a> - Accessible to most forms of color blindness and compliant with <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" class="external-link" target="_blank">WCAG 2.1 criteria for color contrast</a>.</li>
+</ul>
+<h2 id="_customizing-warning-colors" data-needslink="_customizing-warning-colors">Customizing warning colors</h2>
+<p>The default Color Theme for VS Code is <strong>Dark+</strong>. However, you can customize both the theme and property colors in the user interface.</p>
+<blockquote><p><strong>Note</strong>: Go to <a href="/docs/configure/themes#_customizing-a-color-theme">Customizing a Color Theme</a> for more information about overriding the colors in your current theme.</p>
+</blockquote><p>To customize the error and warning squiggles, go to <span class="filePreferencesPath"><strong>File</strong> &gt; <strong>Preferences</strong></span> &gt; <strong>Settings</strong> for user settings. Search for &quot;color customizations&quot; to find the <strong>Workbench: Color Customizations</strong> setting, and open your user <code>settings.json</code> file by selecting <strong>Edit in settings.json</strong>.</p>
+<p><img src="/assets/docs/configure/accessibility/accessibility/accessibility-settings-json-file.png" alt="JSON file settings icon" loading="lazy"></p>
+<p>In your <code>settings.json</code> file, nest the following code inside the outermost curly braces. You can assign a color to each object by entering a hex code.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.colorCustomizations"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "editorError.foreground"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"#ffef0f"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "editorWarning.foreground"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"#3777ff"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<p>In the following example, the warning color is applied when a comma is missing after a JSON item.</p>
+<p><img src="/assets/docs/configure/accessibility/accessibility/accessibility-extension-squiggles.png" alt="JSON code to alter error/warning squiggle colors" loading="lazy"></p>
+<ul>
+<li><code>editorError.foreground</code> - Overrides the wavy line beneath an error.</li>
+<li><code>editorWarning.foreground</code> - Overrides the wavy line beneath a warning.</li>
+<li><code>editorError.background</code> - Overrides the highlight color of an error.</li>
+<li><code>editorWarning.background</code> - Overrides the highlight color of a warning.</li>
+</ul>
+<p>Assigning a color to the background of <code>editorError</code> and <code>editorWarning</code> also helps to identify potential issues. The color that you choose will highlight the respective error or warning. The colors shown in the preceding example, <code>#ffef0f</code> (yellow) and <code>#37777ff</code> (blue), are more accessible to individuals with common forms of color vision deficiencies.</p>
+<h3 id="_selecting-accessible-colors" data-needslink="_selecting-accessible-colors">Selecting accessible colors</h3>
+<p>The accessibility of colors is subjective to the type of anomalous trichromacy (color blindness). The level of severity ranges per person and can be divided into four condition types:</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Condition</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deuteranopia</td>
+<td>Reduced sensitivity to green light. It is the most common form of color blindness.</td>
+</tr>
+<tr>
+<td>Protanopia</td>
+<td>Reduced sensitivity to red light.</td>
+</tr>
+<tr>
+<td>Tritanopia</td>
+<td>Reduced sensitivity to blue light. This condition is considered rare.</td>
+</tr>
+<tr>
+<td>Monochromia</td>
+<td>The inability to see all colors, also referred to as achromatopsia. More information about the rarest form of color blindness: <a href="https://www.fightingblindness.org/diseases/achromatopsia" class="external-link" target="_blank">Foundation for Fighting Blindness</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>One of the best approaches to selecting the best colors for a specific condition is to apply complementary colors. These are colors located opposite of one another on a color wheel.</p>
+<p><img src="/assets/docs/configure/accessibility/accessibility/accessibility-color-wheels.png" alt="Color wheel highlighting complementary colors for regular vision, deuteranopia, protanopia, tritanopia and monochromacy" loading="lazy"></p>
+<blockquote><p><strong>Note</strong>: For more information on finding complementary colors, access the color blind simulator and interactive color wheel at <a href="https://color.adobe.com/create/color-accessibility" class="external-link" target="_blank">Adobe Color</a>.</p>
+</blockquote><h2 id="_dim-unfocused-editors-and-terminals" data-needslink="_dim-unfocused-editors-and-terminals">Dim unfocused editors and terminals</h2>
+<p>Unfocused views can be dimmed to make it clearer where typed input will go. This is especially useful when working with multiple editor groups or terminals. Turn on this feature by setting <code>&quot;accessibility.dimUnfocused.enabled&quot;: true</code>. You can control the dimness level with <span class="setting"><span class="setting-dropdown" data-setting-id="accessibility.dimUnfocused.opacity">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      accessibility.dimUnfocused.opacity
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>, which takes the opacity fraction from 0.2 to 1 (default 0.75).</p>
+<h2 id="_keyboard-navigation" data-needslink="_keyboard-navigation">Keyboard navigation</h2>
+<p>VS Code provides an exhaustive list of commands in the <strong>Command Palette</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>) so that you can use VS Code without a mouse. Press <span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>, then type a command name (for example 'git') to filter the list of commands.</p>
+<p>VS Code also has many preset keyboard shortcuts for commands.</p>
+<p><img src="/assets/docs/configure/accessibility/accessibility/keyboard-shortcuts.png" alt="Key bindings for commands are displayed at the end of the command palette entry" loading="lazy"></p>
+<p>You can also set your own keyboard shortcuts. <span class="filePreferencesPath"><strong>File</strong> &gt; <strong>Preferences</strong></span> &gt; <strong>Keyboard Shortcuts</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.openGlobalKeybindings" data-osx="⌘K ⌘S" data-win="Ctrl+K Ctrl+S" data-linux="Ctrl+K Ctrl+S"><span class="keybinding">⌘K ⌘S</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+S</span>)</span>) opens the Keyboard Shortcuts editor, where you can discover and modify keyboard shortcuts for VS Code actions. See <a href="/docs/configure/keybindings">Key Bindings</a> for more details on customizing or adding your own keyboard shortcuts.</p>
+<p>For quick navigation across the workbench, we recommend using <strong>Focus Next Part</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.focusNextPart" data-osx="F6" data-win="F6" data-linux="F6"><span class="keybinding">F6</span></span>) and <strong>Focus Previous Part</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.focusPreviousPart" data-osx="⇧F6" data-win="Shift+F6" data-linux="Shift+F6"><span class="keybinding">⇧F6</span> (Windows, Linux <span class="keybinding">Shift+F6</span>)</span>) commands.</p>
+<h3 id="_anchor-selection" data-needslink="_anchor-selection">Anchor selection</h3>
+<p>To make it easier to start and end selections with the keyboard, there are four commands: <strong>Set Selection Anchor</strong> (<span class="dynamic-keybinding" data-commandId="editor.action.setSelectionAnchor" data-osx="⌘K ⌘B" data-win="Ctrl+K Ctrl+B" data-linux="Ctrl+K Ctrl+B"><span class="keybinding">⌘K ⌘B</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+B</span>)</span>), <strong>Select From Anchor to Cursor</strong> (<span class="dynamic-keybinding" data-commandId="editor.action.selectFromAnchorToCursor" data-osx="⌘K ⌘K" data-win="Ctrl+K Ctrl+K" data-linux="Ctrl+K Ctrl+K"><span class="keybinding">⌘K ⌘K</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+K</span>)</span>), <strong>Cancel Selection Anchor</strong> (<span class="dynamic-keybinding" data-commandId="editor.action.cancelSelectionAnchor" data-osx="Escape" data-win="Escape" data-linux="Escape"><span class="keybinding">Escape</span></span>) and <strong>Go to Selection Anchor</strong>.</p>
+<h2 id="_tab-navigation" data-needslink="_tab-navigation">Tab navigation</h2>
+<p>You can use the <span class="keybinding">Tab</span> key to navigate between UI controls in VS Code. Use <span class="keybinding">Shift+Tab</span> to tab in reverse order. As you tab through the UI controls, an indicator will appear around each UI element when it has focus.</p>
+<p>All elements in the workbench support tab navigation. To avoid having too many tab stops, workbench toolbars and tab lists each have only one. Once a toolbar or a tab list has focus, you can use the arrow keys to navigate within them.</p>
+<blockquote><p><strong>Note</strong>: Tab navigation goes in the visually natural order, with the exception of WebViews (like Markdown preview). For WebViews, we recommend using the <span class="dynamic-keybinding" data-commandId="workbench.action.focusNextPart" data-osx="F6" data-win="F6" data-linux="F6"><span class="keybinding">F6</span></span> and <span class="dynamic-keybinding" data-commandId="workbench.action.focusPreviousPart" data-osx="⇧F6" data-win="Shift+F6" data-linux="Shift+F6"><span class="keybinding">⇧F6</span> (Windows, Linux <span class="keybinding">Shift+F6</span>)</span> commands to navigate between the WebViews and the rest of the workbench. Alternatively, you can use one of many Focus Editor commands.</p>
+</blockquote><h2 id="_tab-trapping" data-needslink="_tab-trapping">Tab trapping</h2>
+<p>By default, pressing <span class="keybinding">Tab</span> within a source code file inserts the Tab character (or spaces depending on your indentation setting) and does not leave the open file. You can toggle <span class="keybinding">Tab</span> trapping with <span class="dynamic-keybinding" data-commandId="editor.action.toggleTabFocusMode" data-osx="⌃⇧M" data-win="Ctrl+M" data-linux="Ctrl+M"><span class="keybinding">⌃⇧M</span> (Windows, Linux <span class="keybinding">Ctrl+M</span>)</span>, and subsequent <span class="keybinding">Tab</span> keys will move focus out of the file.  When default <span class="keybinding">Tab</span> trapping is off, you will see a <strong>Tab moves focus</strong> indicator in the Status Bar.</p>
+<p>Tab trapping also exists in the integrated terminal. The default behavior for the feature can be configured with <span class="setting"><span class="setting-dropdown" data-setting-id="editor.tabFocusMode">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.tabFocusMode
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>.</p>
+<p><img src="/assets/docs/configure/accessibility/accessibility/tab-moves-focus.png" alt="A Tab moves focus status bar item shows when the mode is active" loading="lazy"></p>
+<p>You can also toggle <span class="keybinding">Tab</span> trapping on and off from the <strong>Command Palette</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>) with the <strong>Toggle Tab Key Moves Focus</strong> action.</p>
+<p>Read-only files never trap the <span class="keybinding">Tab</span> key. The <strong>Integrated Terminal</strong> panel respects the <span class="keybinding">Tab</span> trapping mode and can be toggled with <span class="dynamic-keybinding" data-commandId="editor.action.toggleTabFocusMode" data-osx="⌃⇧M" data-win="Ctrl+M" data-linux="Ctrl+M"><span class="keybinding">⌃⇧M</span> (Windows, Linux <span class="keybinding">Ctrl+M</span>)</span>.</p>
+<h2 id="_screen-readers" data-needslink="_screen-readers">Screen readers</h2>
+<p>VS Code supports screen readers in the editor using a strategy based on text pagination. The following screen readers have been tested:</p>
+<ul>
+<li>Windows: <a href="https://www.nvaccess.org" class="external-link" target="_blank">NVDA</a> and <a href="https://www.freedomscientific.com/products/software/jaws" class="external-link" target="_blank">JAWS</a></li>
+<li>macOS: <a href="https://support.apple.com/guide/voiceover/welcome/mac" class="external-link" target="_blank">VoiceOver</a></li>
+<li>Linux: <a href="https://help.gnome.org/users/orca/stable/" class="external-link" target="_blank">Orca</a></li>
+</ul>
+<blockquote><p>For NVDA, we recommend that you stay in focus mode and use the hotkeys to navigate, instead of using browse mode.</p>
+</blockquote><p>The <strong>Go to Next/Previous Error or Warning</strong> actions (<span class="dynamic-keybinding" data-commandId="editor.action.marker.nextInFiles" data-osx="F8" data-win="F8" data-linux="F8"><span class="keybinding">F8</span></span> and <span class="dynamic-keybinding" data-commandId="editor.action.marker.prevInFiles" data-osx="⇧F8" data-win="Shift+F8" data-linux="Shift+F8"><span class="keybinding">⇧F8</span> (Windows, Linux <span class="keybinding">Shift+F8</span>)</span>) allow screen readers to announce the error and warning messages.</p>
+<p>When suggestions pop up, they are announced to screen readers. Navigate the suggestions using <span class="keybinding">Ctrl+Up</span> and <span class="keybinding">Ctrl+Down</span> and dismiss them with <span class="keybinding">Shift+Escape</span>. If suggestions get in your way, you can turn them off with the <span class="setting"><span class="setting-dropdown" data-setting-id="editor.quickSuggestions">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.quickSuggestions
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting.</p>
+<p>In the diff view pane, the <strong>Go to Next/Previous Difference</strong> actions (<span class="dynamic-keybinding" data-commandId="editor.action.accessibleDiffViewer.next" data-osx="F7" data-win="F7" data-linux="F7"><span class="keybinding">F7</span></span> and <span class="dynamic-keybinding" data-commandId="editor.action.accessibleDiffViewer.prev" data-osx="⇧F7" data-win="Shift+F7" data-linux="Shift+F7"><span class="keybinding">⇧F7</span> (Windows, Linux <span class="keybinding">Shift+F7</span>)</span>) will show the Accessible Diff Viewer with diffs presented in a unified patch format. Navigate through the unchanged, inserted, or deleted lines with <span class="keybinding">Up</span> and <span class="keybinding">Down</span>. Press <span class="keybinding">Enter</span> to return focus to the modified pane of the diff editor at the selected line number (or the closest line number that still exists, if a deleted line is selected). Use <span class="keybinding">Escape</span> or <span class="keybinding">Shift+Escape</span> to dismiss the Accessible Diff Viewer.</p>
+<h2 id="_screen-reader-mode" data-needslink="_screen-reader-mode">Screen reader mode</h2>
+<p>When VS Code detects that a screen reader is being used, it goes into an optimized screen reader mode for UI such as the editor and Integrated Terminal. The Status bar will display <strong>Screen Reader Optimized</strong> in the lower right. You can exit screen reader mode by clicking on the display text or using the <strong>Toggle Screen Reader Accessibility Mode</strong> command.</p>
+<p><img src="/assets/docs/configure/accessibility/accessibility/screen-reader-mode.png" alt="Activating the screen reader optimized status bar will show a notification that allows disabling the mode" loading="lazy"></p>
+<p>Some features, such as folding and minimap (code overview), are disabled when in screen reader mode. You can control whether VS Code uses screen reader mode with the <strong>Editor: Accessibility Support</strong> setting (<span class="setting"><span class="setting-dropdown" data-setting-id="editor.accessibilitySupport">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.accessibilitySupport
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>) and the values are <code>on</code>, <code>off</code>, or the default <code>auto</code> that automatically detects a screen reader through querying the platform.</p>
+<h2 id="_resize-table-columns-via-the-keyboard" data-needslink="_resize-table-columns-via-the-keyboard">Resize table columns via the keyboard</h2>
+<p>The <code>list.resizeColumn</code> command enables you to resize columns by using the keyboard. You can <a href="#_keyboard-navigation">assign a keyboard shortcut</a> to trigger this command.</p>
+<p>When you trigger this command, select the column you want to resize, and provide a percentage of the width you want to set. The following video shows how to apply this to resize a column in the Keyboard Shortcuts editor.</p>
+<p><video src="/assets/docs/configure/accessibility/accessibility/resize-columns.mp4" title="Resize columns in the Keyboard Shortcuts editor via the keyboard." autoplay loop controls muted></video></p>
+<h2 id="_accessible-view" data-needslink="_accessible-view">Accessible View</h2>
+<p>Run the command <strong>Open Accessible View</strong> <span class="dynamic-keybinding" data-commandId="editor.action.accessibleView" data-osx="⌥F2" data-win="Alt+F2" data-linux="Shift+Alt+F2"><span class="keybinding">⌥F2</span> (Windows <span class="keybinding">Alt+F2</span>, Linux <span class="keybinding">Shift+Alt+F2</span>)</span> to display an Accessible View and inspect content character by character, line by line. The Accessible View is currently available for hovers, notifications, comments, notebook output, terminal output, chat responses, inline completions, debug console output, and more.</p>
+<h2 id="_input-control-and-result-navigation" data-needslink="_input-control-and-result-navigation">Input control and result navigation</h2>
+<p>Navigating between an input control (for example, search or filter input) and its results is consistent across the Extensions view, the Keyboard Shortcuts editor, and the Comments, Problems, and Debug Console panels using (<span class="dynamic-keybinding" data-commandId="widgetNavigation.focusNext" data-osx="⌘↓" data-win="Ctrl+Down" data-linux="Ctrl+Down"><span class="keybinding">⌘↓</span> (Windows, Linux <span class="keybinding">Ctrl+Down</span>)</span>) and (<span class="dynamic-keybinding" data-commandId="widgetNavigation.focusPrevious" data-osx="⌘↑" data-win="Ctrl+Up" data-linux="Ctrl+Up"><span class="keybinding">⌘↑</span> (Windows, Linux <span class="keybinding">Ctrl+Up</span>)</span>).</p>
+<h2 id="_terminal-accessibility" data-needslink="_terminal-accessibility">Terminal accessibility</h2>
+<p>You can display terminal accessibility help via <span class="dynamic-keybinding" data-commandId="editor.action.accessibilityHelp" data-osx="⌥F1" data-win="Alt+F1" data-linux="Shift+Alt+F1"><span class="keybinding">⌥F1</span> (Windows <span class="keybinding">Alt+F1</span>, Linux <span class="keybinding">Shift+Alt+F1</span>)</span>, which describes useful tips when using a screen reader. One tip is to use <span class="dynamic-keybinding" data-commandId="workbench.action.terminal.focusAccessibleBuffer" data-osx="⌥F2" data-win="Alt+F2" data-linux="Shift+Alt+F2"><span class="keybinding">⌥F2</span> (Windows <span class="keybinding">Alt+F2</span>, Linux <span class="keybinding">Shift+Alt+F2</span>)</span> to access the buffer in the terminal. This will automatically enter the screen reader's browse mode, depending on your screen reader, for an accessible view of the entire terminal buffer.</p>
+<p>Use <span class="setting"><span class="setting-dropdown" data-setting-id="editor.tabFocusMode">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      editor.tabFocusMode
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> to control whether the terminal receives the <span class="keybinding">Tab</span> key instead of the workbench, similar to the editor.</p>
+<h3 id="_shell-integration" data-needslink="_shell-integration">Shell integration</h3>
+<p>The terminal has a feature called <a href="/docs/terminal/shell-integration">shell integration</a> that enables many additional features that are not found in other terminals. When using a screen reader, the <a href="/docs/terminal/shell-integration#_run-recent-command">Run Recent Command</a> and <a href="/docs/terminal/shell-integration#_go-to-recent-directory">Go to Recent Directory</a> features are particularly useful.</p>
+<p>Another shell integration powered command, <strong>Go to Symbol in Accessible View</strong> (<span class="dynamic-keybinding" data-commandId="editor.action.accessibleViewGoToSymbol" data-osx="⇧⌘O" data-win="Ctrl+Shift+O" data-linux="Ctrl+Shift+O"><span class="keybinding">⇧⌘O</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+O</span>)</span>), lets you navigate between terminal commands similar to <strong>Go to Symbol in Editor...</strong> navigation in the editor.</p>
+<h3 id="_minimum-contrast-ratio" data-needslink="_minimum-contrast-ratio">Minimum contrast ratio</h3>
+<p>Set <span class="setting"><span class="setting-dropdown" data-setting-id="terminal.integrated.minimumContrastRatio">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      terminal.integrated.minimumContrastRatio
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> to a number between 1 and 21 to adjust text color luminance until the desired contrast ratio is met or pure white (<code>#FFFFFF</code>) black (<code>#000000</code>) is hit.</p>
+<p>Note that the <span class="setting"><span class="setting-dropdown" data-setting-id="terminal.integrated.minimumContrastRatio">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      terminal.integrated.minimumContrastRatio
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting will not apply to <code>powerline</code> characters.</p>
+<h2 id="_status-bar-accessibility" data-needslink="_status-bar-accessibility">Status bar accessibility</h2>
+<p>Once focus is in the Status bar via <strong>Focus Next Part</strong> (<span class="dynamic-keybinding" data-commandId="workbench.action.focusNextPart" data-osx="F6" data-win="F6" data-linux="F6"><span class="keybinding">F6</span></span>), you can use arrow navigation to move focus between Status bar entries.</p>
+<h3 id="_diff-editor-accessibility" data-needslink="_diff-editor-accessibility">Diff editor accessibility</h3>
+<p>There is an Accessible Diff Viewer in the Diff editor that presents changes in a unified patch format. You can navigate between changes with <strong>Go to Next Difference</strong> (<span class="dynamic-keybinding" data-commandId="editor.action.accessibleDiffViewer.next" data-osx="F7" data-win="F7" data-linux="F7"><span class="keybinding">F7</span></span>) and <strong>Go to Previous Difference</strong> (<span class="dynamic-keybinding" data-commandId="editor.action.accessibleDiffViewer.prev" data-osx="⇧F7" data-win="Shift+F7" data-linux="Shift+F7"><span class="keybinding">⇧F7</span> (Windows, Linux <span class="keybinding">Shift+F7</span>)</span>). Navigate lines with the arrow keys and press <span class="keybinding">Enter</span> to jump back in the Diff editor and the selected line.</p>
+<h2 id="_debugger-accessibility" data-needslink="_debugger-accessibility">Debugger accessibility</h2>
+<p>The VS Code debugger UI is user accessible and has the following features:</p>
+<ul>
+<li>Debug state changes are read out (for example, 'started', 'breakpoint hit', 'terminated', ...).</li>
+<li>All debug actions are keyboard accessible.</li>
+<li>Both the Run and Debug view and Debug Console support Tab navigation.</li>
+<li>Debug hover is keyboard accessible (<span class="dynamic-keybinding" data-commandId="editor.action.showHover" data-osx="⌘K ⌘I" data-win="Ctrl+K Ctrl+I" data-linux="Ctrl+K Ctrl+I"><span class="keybinding">⌘K ⌘I</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+I</span>)</span>).</li>
+<li>Keyboard shortcuts can be created to set focus to each debugger area.</li>
+<li>While debugging and with the focus in an editor, invoking the <strong>Debug: Add to Watch</strong> command announces the variable's value.</li>
+</ul>
+<h2 id="_accessibility-signals" data-needslink="_accessibility-signals">Accessibility Signals</h2>
+<p>Accessibility signals indicate if the current line has certain markers such as: errors, warnings, breakpoints, folded text regions or inline suggestions.</p>
+<p>They are played when the primary cursor changes its line or the first time a marker is added to the current line. Accessibility Signal sounds and announcements may be enabled automatically when a screen reader is attached and can be controlled by the settings <code>accessibility.signals.*</code>.</p>
+<p>The command <strong>Help: List Signal Sounds</strong> lists all available sounds, lets you hear each as you move through the list, and allows for configuring their enabled/disabled status.</p>
+<p>Aria announcements also inform screen reader and braille users that certain markers have been hit. The command <strong>Help: List Signal Announcements</strong> informs the user of which are available and allows for configuring their enabled/disabled status.</p>
+<h2 id="_hover-accessibility" data-needslink="_hover-accessibility">Hover accessibility</h2>
+<p>Some hovers cannot be hovered normally, which makes them hard to use with screen magnifiers. To work around this, hold the <span class="keybinding">Alt</span> or <span class="keybinding">Option</span> key while a hover is active to &quot;lock&quot; it in place so that it won't hide when hovered. Release the key to unlock the hover.</p>
+<h2 id="_current-known-issues" data-needslink="_current-known-issues">Current known issues</h2>
+<p>VS Code has some known accessibility issues, depending on the platform. For the full list, go to <a href="https://github.com/microsoft/vscode/issues?q=is%3Aopen+is%3Aissue+label%3Aaccessibility" class="external-link" target="_blank">VS Code accessibility issues</a>.</p>
+<h3 id="_macos" data-needslink="_macos">macOS</h3>
+<p>The editor includes screen reader support for VoiceOver.</p>
+<h3 id="_linux" data-needslink="_linux">Linux</h3>
+<p>VS Code works well with the Orca screen reader. If Orca in your Linux distribution does not read the editor content:</p>
+<ul>
+<li>Make sure to have the setting <code>&quot;editor.accessibilitySupport&quot;: &quot;on&quot;</code> in VS Code. You can do this using settings, or by running the <strong>Show Accessibility Help</strong> command and pressing <span class="keybinding">Ctrl+E</span> to turn on accessibilitySupport.</li>
+<li>If Orca is still silent, try setting <code>ACCESSIBILITY_ENABLED=1</code> as an environment variable.</li>
+</ul>
+<p>After you enable that setting, VS Code should work with the Orca screen reader.</p>
+<h2 id="_next-steps" data-needslink="_next-steps">Next steps</h2>
+<p>Read on to find out about:</p>
+<ul>
+<li><a href="/docs/configure/accessibility/voice">Voice interactions</a> - Learn how to use voice commands in VS Code.</li>
+<li><a href="/docs/editing/userinterface">Visual Studio Code User Interface</a> - A quick orientation to VS Code.</li>
+<li><a href="/docs/editing/codebasics">Basic Editing</a> - Learn about the powerful VS Code editor.</li>
+<li><a href="/docs/editing/editingevolved">Code Navigation</a> - Move quickly through your source code.</li>
+</ul>
+
+                <div class="feedback" data-edit-url="https://vscode.dev/github/microsoft/vscode-docs/blob/main/docs/configure/accessibility/accessibility.md"></div>
+                
+                <div class="body-footer">02/04/2026</div>
+                
+            </main>
+        </div>
+        
+        <!-- Mobile connect widget -->
+        <div class="docs-mobile-widgets visible-xs">
+            <div class="connect-widget"></div>
+        </div>
+    </div>
+</div>
+		</main>
+	</div>
+
+	<div id="search-popup-overlay" class="search-popup-overlay" role="dialog" aria-modal="true" aria-label="Search">
+		<div class="search-popup-container">
+			<div class="search-popup-header">
+				<form class="search-popup-form">
+					<div class="input-group">
+						<input type="text" name="q" class="search-box form-control" placeholder="Search the website"
+							aria-label="Search text" role="combobox" aria-expanded="false"
+							aria-autocomplete="list" aria-controls="search-results-listbox"
+							aria-activedescendant="" />
+						<span class="input-group-btn">
+							<button tabindex="0" class="btn" type="submit" aria-label="Search">
+								<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="Search" />
+								<img class="search-icon-light" src="/assets/icons/search.svg" alt="Search" />
+							</button>
+						</span>
+					</div>
+				</form>
+				<button class="search-popup-close" type="button" aria-label="Close search"><i class="codicon codicon-close" aria-hidden="true"></i></button>
+			</div>
+			<div class="search-popup-results">
+				<ul class="search-popup-results-list" id="search-results-listbox" role="listbox" aria-label="Search results"></ul>
+			</div>
+			<div class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="search-popup-status"></div>
+		</div>
+	</div>
+
+
+	<footer role="contentinfo" class="container">
+		<div class="footer-container">
+			<div class="footer-row">
+				<div class="footer-social">
+					<ul class="links">
+						<li>
+							<a href="https://github.com/microsoft/vscode"><img src="/assets/icons/github-icon.svg" alt="VS Code on Github"></a>
+						</li>
+						<li>
+							<a href="https://go.microsoft.com/fwlink/?LinkID=533687"><img src="/assets/icons/x-icon.svg" class="x-icon" alt="Follow us on X"></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/showcase/vs-code"><img src="/assets/icons/linkedin-icon.svg" alt="VS Code on LinkedIn"></a>
+						</li>
+						<li>
+							<a href="https://bsky.app/profile/vscode.dev"><img src="/assets/icons/bluesky-icon.svg" alt="VS Code on Bluesky"></a>
+						</li>
+						<li>
+							<a href="https://www.reddit.com/r/vscode/"><img src="/assets/icons/reddit-icon.svg" alt="Join the VS Code community on Reddit"></a>
+						</li>
+						<li>
+							<a href="https://www.vscodepodcast.com"><img src="/assets/icons/podcast-icon.svg" alt="The VS Code Insiders Podcast"></a>
+						</li>
+						<li>
+							<a href="https://www.tiktok.com/@vscode"><img src="/assets/icons/tiktok-icon.svg" alt="VS Code on TikTok"></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@code"><img src="/assets/icons/youtube-icon.svg" alt="VS Code on YouTube"></a>
+						</li>
+						<script>
+							function manageConsent() {
+								if (siteConsent && siteConsent.isConsentRequired) {
+									siteConsent.manageConsent();
+								}
+							}
+						</script>
+					</ul>
+					<a id="footer-microsoft-link" class="microsoft-logo" href="https://www.microsoft.com">
+						<img src="/assets/icons/microsoft.svg" alt="Microsoft homepage" />
+					</a>
+				</div>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li><a id="footer-support-link" href="https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=d66407ed-3967-b000-4cfb-2c318cad363d"
+						target="_blank" rel="noopener" title="Get support for VS Code"
+						aria-label="Get support for VS Code (opens in new tab)">Support</a></li>
+					<li><a id="footer-privacy-link" href="https://go.microsoft.com/fwlink/?LinkId=521839"
+						target="_blank" rel="noopener" title="View the Microsoft privacy statement"
+						aria-label="Microsoft privacy statement (opens in new tab)">Privacy</a></li>
+					<li style="display: none;"><a id="footer-cookie-link" style="cursor: pointer;" onclick="manageConsent()"
+						target="_blank" rel="noopener">Manage Cookies</a></li>
+					<li><a id="footer-terms-link" href="https://www.microsoft.com/legal/terms-of-use"
+						target="_blank" rel="noopener" title="View the Microsoft Terms of Use"
+						aria-label="Microsoft Terms of Use (opens in new tab)">Terms of Use</a></li>
+					<li><a id="footer-license-link" href="/License"
+						target="_blank" rel="noopener" title="View the Visual Studio Code license"
+						aria-label="Visual Studio Code license (opens in new tab)">License</a></li>
+				</ul>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li>
+						<svg class="privacy-choices" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43">
+							<title>Your Privacy Choices Opt-Out Icon</title>
+							<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+							<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+							<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+							<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+						</svg>
+						<a id="footer-privacy-choices-link" href="https://aka.ms/YourCaliforniaPrivacyChoices"
+						target="_blank" rel="noopener" title="View Your Privacy Choices"
+						aria-label="Your Privacy Choices (opens in new tab)">Your Privacy Choices</a></li>
+					<li><a id="footer-consumer-health-privacy-link" href="https://go.microsoft.com/fwlink/?linkid=2259814"
+						target="_blank" rel="noopener" title="View the Microsoft Consumer Health Privacy policy"
+						aria-label="Microsoft Consumer Health Privacy policy (opens in new tab)">Consumer Health Privacy</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="module">
+		document.addEventListener('DOMContentLoaded', () => {
+			const copilotDeepLinks = document.querySelectorAll('.copilot-deep-link');
+			if (copilotDeepLinks.length === 0) {
+				return;
+			}
+			if (window.innerWidth < 992) {
+				for (const link of copilotDeepLinks) {
+					link.href = 'https://aka.ms/vscode-activatecopilotfree';
+				}
+			}
+		});
+	</script>
+
+	<script src="/dist/index.js"></script>
+
+	
+
+	<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type" : "SoftwareApplication",
+			"name" : "Visual Studio Code",
+			"softwareVersion": "1.132",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			},
+			"applicationCategory": "DeveloperApplication",
+			"applicationSubCategory": "AI Code Editor",
+			"description": "Visual Studio Code is a free, open source AI code editor for agent-first development. Build with AI agents, manage multi-agent workflows, and code across any environment.",
+			"alternateName": "VS Code",
+			"datePublished": "2021-11-03",
+			"operatingSystem": "Mac, Linux, Windows",
+			"logo": "https://code.visualstudio.com/assets/apple-touch-icon.png",
+			"screenshot": "https://code.visualstudio.com/assets/images/product-screenshot.png",
+			"releaseNotes": "https://code.visualstudio.com/updates",
+			"downloadUrl": "https://code.visualstudio.com/download",
+			"license": "https://code.visualstudio.com/license",
+			"softwareRequirements": "https://code.visualstudio.com/docs/supporting/requirements",
+			"url" : "https://code.visualstudio.com",
+			"author": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"maintainer": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://code.visualstudio.com/Search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			},
+			"sameAs" : [
+				"https://en.wikipedia.org/wiki/Visual_Studio_Code",
+				"https://twitter.com/code",
+				"https://www.youtube.com/code",
+				"https://www.tiktok.com/@vscode",
+				"https://github.com/microsoft/vscode"
+			]
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+# =============================================
+# Fly.io Configuration for Mehani LMS Platform
+# =============================================
+
+app = "mehani-lms"
+primary_region = "ams"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "3000"
+  NODE_ENV = "production"
+  DATABASE_URL = "file:/data/mehani.db"
+
+# Persistent Volume for SQLite Database
+[[mounts]]
+  source = "mehani_data"
+  destination = "/data"
+  initial_size = "1gb"
+
+# HTTP Service Configuration
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [http_service.concurrency]
+    type = "connections"
+    hard_limit = 100
+    soft_limit = 80
+
+# VM Configuration
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
+
+# Auto-scaling (optional)
+# [[http_service.checks]]
+#   grace_period = "10s"
+#   interval = "30s"
+#   method = "GET"
+#   timeout = "5s"
+#   path = "/api/health"

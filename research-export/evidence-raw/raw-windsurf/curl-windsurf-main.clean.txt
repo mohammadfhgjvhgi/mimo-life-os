@@ -1,0 +1,5 @@
+TITLE: Devin Desktop | Devin
+DESCRIPTION: Manage fleets of local and cloud agents from one surface. Plan, delegate, review, and ship without leaving your editor.
+
+Devin Desktop makes it easy to dispatch and monitor our array of agents from a single command center. We're excited to partner with Cognition to bring the agents Ramp engineers already use into one shared workspace, making it easier to jump between tasks, preserve context, and get more done.
+Shaiyon Hariri Research Engineer

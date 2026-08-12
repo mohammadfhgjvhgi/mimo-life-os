@@ -1,0 +1,502 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- v0 by Vercel - Build Full-Stack Web Apps with AI 
+- 
+- 
+- 
+- 
+- 
+- 
+
+New Chat 
+
+- Templates 
+
+- Enterprise 
+
+- Pricing 
+
+- iOS 
+
+- Students 
+
+- FAQ 
+
+Log In Sign Up 
+
+# What do you want to create?
+
+v0 Max 
+
+Contact Form Image Editor Mini Game Finance Calculator 
+
+## Start with a template
+Apps and Games Landing Pages Components Dashboards Browse all 
+
+Browse all 
+
+### Prompt.
+Build. Publish.
+Generate working applications in minutes with AI. Publish as live websites in seconds.
+
+### Sync with a repo
+Connect to GitHub and push code directly to your repository.
+
+### Integrate with apps
+Build with your favorite tools and APIs. Automatic integration, no accounts required.
+
+### Deploy to Vercel
+Go live instantly with one-click deployment to production in seconds.
+
+### Edit with design mode
+Fine-tune every detail with visual controls and live preview.
+
+### Start with templates
+Launch faster with ready-made components and full-page designs.
+
+### Create design systems
+Define colors, typography, and styles that you can use across projects.
+
+### Agentic by default
+v0 plans, creates tasks, and connects to databases as it builds.
+
+Web 
+
+Plan 
+
+DB 
+
+API 
+
+Deploy 
+
+LLM 
+
+### Create from your phone
+Build anywhere with the v0 iOS app. Design on the go.
+
+## Ship mobile sites
+Browse all 
+
+Dashboard – M.O.N.K.Y
+7.5K 
+720 
+
+Garden City Game
+8 
+3 
+
+3D Gallery Photography Template
+1.8K 
+397 
+
+Modern Smart Home Dashboard
+222 
+81 
+
+New Components - shadcn/ui
+672 
+182 
+
+v0 icon
+539 
+73 
+
+Modern Booking Page
+18 
+5 
+
+Wadada run club hero
+590 
+95 
+
+Modern Agency Website - Liquid Glass
+4.2K 
+575 
+
+Sleek Landing Page
+103 
+33 
+
+The Orb
+3.5K 
+81 
+
+## Start building with v0 
+Go from idea to production in seconds with smart, secure infrastructure
+Get Started 
+
+## Product
+
+- Home 
+
+- Enterprise 
+
+- Pricing 
+
+- v0 for Students 
+
+## Company
+
+- Terms 
+
+- AI Policy 
+
+- Privacy 
+
+- Cookies 
+
+## Resources
+
+- FAQs 
+
+- Docs 
+
+- Vercel Community 
+
+- Vercel 
+
+## Social
+
+- Twitter 
+
+- LinkedIn 
+
+v0 Max 
+
+Drop to attach
+
+- 
+- 
+- 
+- 
+- View Details 
+
+Image Generation Playground
+6.4K 
+712 
+
+View Details 
+
+Brillance SaaS Landing Page
+14.1K 
+2.1K 
+
+View Details 
+
+3D Gallery Photography Template
+3.4K 
+856 
+
+View Details 
+
+Optimus - The AI platform to build and ship
+7.6K 
+1.2K 
+
+View Details 
+
+Grok Creative Studio
+1.1K 
+107 
+
+View Details 
+
+Globe To Map Transform
+2.3K 
+647 
+
+View Details 
+
+Sign in with Vercel
+20 
+14 
+
+View Details 
+
+Pointer AI landing page
+20.4K 
+1.9K 
+
+View Details 
+
+Dashboard – M.O.N.K.Y
+10.9K 
+1.2K 
+
+View Details 
+
+Lorenzo Motocross - Landing Page
+2.3K 
+669 
+
+View Details 
+
+Vercel-style Black Friday map
+1.3K 
+405 
+
+View Details 
+
+Skal Ventures Template
+8.5K 
+1.2K 
+
+View Details 
+
+Shaders Landing Page
+4.6K 
+1.1K 
+
+View Details 
+
+Storefront w/Nano Banana + AI SDK + AI Gateway
+3.1K 
+443 
+
+View Details 
+
+Shaders Hero Section
+10.7K 
+1.5K 
+
+View Details 
+
+Minimalist Portfolio
+4.4K 
+1.1K 
+
+View Details 
+
+FINBRO Dashboard
+1K 
+240 
+
+View Details 
+
+3D Keyboard Chat
+747 
+247 
+
+View Details 
+
+DesignThing - a hero for doomscrolling
+276 
+132 
+
+View Details 
+
+v0 icon
+1.1K 
+215 
+
+View Details 
+
+Portfolio Template
+1.8K 
+362 
+
+View Details 
+
+Folders UI
+645 
+314 
+
+View Details 
+
+Sketchpad - shadcn/ui theme
+1.3K 
+417 
+
+View Details 
+
+Newsletter Template
+3K 
+748 
+
+View Details 
+
+Auralink - SaaS Landing Page
+2.3K 
+472 
+
+View Details 
+
+Nano Banana Starter
+1.1K 
+189 
+
+View Details 
+
+Modern Agency Website - Liquid Glass - 3D Agency website
+5.7K 
+937 
+
+View Details 
+
+Simple Parallax Sticky Footer Landing
+1.1K 
+261 
+
+View Details 
+
+New Components - shadcn/ui
+1K 
+342 
+
+View Details 
+
+Shopify Ecommerce Template
+2.8K 
+523 
+
+View Details 
+
+MindSpace - SaaS Landing Page Template
+2.1K 
+316 
+
+View Details 
+
+Design Portfolio
+670 
+121 
+
+View Details 
+
+KATACHI
+3.5K 
+799 
+
+View Details 
+
+Flowly - SaaS Landing Page Template
+646 
+155 
+
+View Details 
+
+Waitlist
+5.8K 
+281 
+
+View Details 
+
+Glow menu component
+14.4K 
+662 
+
+View Details 
+
+Habbo Hotel like Multiplayer Chatroom using GPT-5
+2.6K 
+422 
+
+View Details 
+
+Cyberpunk dashboard design
+14.9K 
+688 
+
+View Details 
+
+Saas Landing Page
+9.6K 
+394 
+
+View Details 
+
+Resend Contact Form
+748 
+28 
+
+View Details 
+
+v0.me
+2.4K 
+96 
+
+View Details 
+
+Frosted Authentication Page
+2.4K 
+521 
+
+View Details 
+
+blog
+3.9K 
+217 
+
+View Details 
+
+Financial Dashboard
+28.2K 
+689 
+
+View Details 
+
+Crypto Dashboard
+20.7K 
+124 
+
+View Details 
+
+Product Launch Waitlist
+6.5K 
+85 
+
+View Details 
+
+Two-column Login Card
+9.2K 
+103 
+
+View Details 
+
+OpenAI and AI SDK Chatbot
+10.2K 
+93 
+
+View Details 
+
+Logo particles (v0 + aws)
+11.7K 
+351 
+
+View Details 
+
+Streamline Landing Page
+14.2K 
+119

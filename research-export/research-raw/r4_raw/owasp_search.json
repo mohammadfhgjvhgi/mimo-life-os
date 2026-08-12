@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://owasp.org",
+    "name": "OWASP Top 10 for Large Language Model Applications",
+    "snippet": "OWASP Top 10 for Large Language Model Applications Version 1.1 · LLM01: Prompt Injection · LLM02: Insecure Output Handling · LLM03: Training Data Poisoning · LLM04: ... Read more",
+    "host_name": "owasp.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://genai.owasp.org",
+    "name": "LLMRisks Archive - OWASP Gen AI Security Project",
+    "snippet": "2025 Top 10 Risk & Mitigations for LLMs and Gen AI Apps . Expore the latest Top 10 risks, vulnerabilities and mitigations for developing and securing generative ... Read more",
+    "host_name": "genai.owasp.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.trendmicro.com",
+    "name": "What are the OWASP Top 10 risks for LLMs?",
+    "snippet": "Feb 5, 2026 — OWASP Top 10 for LLM Applications - 2025 · Prompt Injection · Sensitive Information Disclosure · Supply Chain Vulnerabilities · Training data ... Read more",
+    "host_name": "www.trendmicro.com",
+    "rank": 2,
+    "date": "Feb 5, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.oligo.security",
+    "name": "OWASP Top 10 LLM, Updated 2025: Examples &",
+    "snippet": "OWASP Top 10 LLM Security Risks 2025 : Examples and Security Best Practices · 1. Prompt Injection Attacks · 2. Sensitive Information Disclosure · 3. Supply Chain · 4 ... Read more",
+    "host_name": "www.oligo.security",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://aembit.io",
+    "name": "OWASP Top 10 for LLM Applications (2025)",
+    "snippet": "The 2025 edition adds two new categories, substantially reworks several others, reorders existing risks based on community feedback and consolidates entries",
+    "host_name": "aembit.io",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com",
+    "name": "www-project-top-10-for-large-language-model-applications",
+    "snippet": "This repository contains the OWASP Top 10 for Large Language Model Applications , which is now housed under the comprehensive OWASP GenAI Security Project. Read more",
+    "host_name": "github.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://trydeepteam.com",
+    "name": "OWASP Top 10 for LLMs 2025",
+    "snippet": "Jun 9, 2026 — What's New in 2025 · The OWASP Top 10 2025 Risks List · 1. Prompt Injection (LLM01:2025 ) · 2. Sensitive Information Disclosure (LLM02:2025) · 3. Read more",
+    "host_name": "trydeepteam.com",
+    "rank": 6,
+    "date": "Jun 9, 2026",
+    "favicon": ""
+  }
+]

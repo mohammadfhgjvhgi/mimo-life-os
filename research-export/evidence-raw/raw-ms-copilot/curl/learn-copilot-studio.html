@@ -1,0 +1,1454 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-single    hub show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>Official Microsoft Copilot Studio documentation - Microsoft Copilot Studio | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Discover how to build AI-driven agents and workflows using Microsoft Copilot Studio with documentation, implementation guidance, online training, and other resources." />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Official Microsoft Copilot Studio documentation - Microsoft Copilot Studio" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/microsoft-copilot-studio/" />
+			<meta property="og:description" content="Discover how to build AI-driven agents and workflows using Microsoft Copilot Studio with documentation, implementation guidance, online training, and other resources." />
+			<meta name="platform_id" content="317a5ec6-e471-51ea-e690-e06d1868ad09" /> <meta name="scope" content="Microsoft Copilot Studio" />
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-MicrosoftCopilotStudio" />
+
+			<meta name="page_type" content="hub" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="summary" content="Discover how to build AI-driven agents and workflows with Microsoft Copilot Studio. Access documentation, implementation guidance, online training, and other resources." />
+	
+		<meta name="schema" content="Hub" />
+	
+		<meta name="breadcrumb_path" content="/microsoft-copilot-studio/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="Standard" />
+	
+		<meta name="feedback_product_url" content="https://powerusers.microsoft.com/t5/Power-Virtual-Agents-Community/ct-p/PVACommunity" />
+	
+		<meta name="search.app" content="capaedac-pva" />
+	
+		<meta name="search.app" content="powervirtualagents-docs" />
+	
+		<meta name="recommendations" content="true" />
+	
+		<meta name="ms.service" content="copilot-studio" />
+	
+		<meta name="ms.collection" content="bap-ai-copilot" />
+	
+		<meta name="ms.update-cycle" content="180-days" />
+	
+		<meta name="ms.topic" content="hub-page" />
+	
+		<meta name="author" content="jhaskett-msft" />
+	
+		<meta name="ms.author" content="jhaskett" />
+	
+		<meta name="ms.date" content="2026-08-03T00:00:00Z" />
+	
+		<meta name="ms.custom" content="bap-template" />
+	
+		<meta name="ms.custom" content="copilot-learning-hub" />
+	
+		<meta name="document_id" content="b3c985cb-bb4b-afb2-4eee-0c08316859da" />
+	
+		<meta name="document_version_independent_id" content="b3c985cb-bb4b-afb2-4eee-0c08316859da" />
+	
+		<meta name="updated_at" content="2026-08-03T14:59:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/businessapps-copilot-docs-pr/blob/live/copilot-studio/index.yml" />
+	
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/businessapps-copilot-docs-pr/blob/d3dd478d56933bdfd2dc0d5e562fd9546ab9823e/copilot-studio/index.yml" />
+	
+		<meta name="git_commit_id" content="d3dd478d56933bdfd2dc0d5e562fd9546ab9823e" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="Learn.copilot-studio" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="asset_id" content="index" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="copilot-studio/index.yml" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/businessapps-copilot-docs-pr/blob/live/copilot-studio/index.yml" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/microsoft-copilot-studio/?accept=text/markdown" />
+	 
+		<meta name="cmProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/46e3c7c4-fe77-4a6e-b40a-44c569819fa5" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/c389ea6b-b6a0-46df-93a1-1e21f25e19e7" data-source="generated" />
+	
+		<meta name="spProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/d0c6fab8-2d7d-4bb0-bf40-589e08d7c132" data-source="generated" />
+	
+		<meta name="spProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/19ada1b6-705b-4ed7-aad0-bffd1bd03dfa" data-source="generated" />
+	
+
+			<!-- Apply persisted/system theme before first paint to prevent wrong-theme flash when scripts are deferred. -->
+			<script id="theme-preference">
+				(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = /^(light|dark|high-contrast)$/.test(stored)
+					? stored
+					: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				document.documentElement.classList.add('theme-' + theme);
+			} catch (e) {}
+		})();;
+			</script>
+
+			<script id="atlas-layout-preferences">
+				(function () {
+			try {
+				var state = JSON.parse(localStorage.getItem('atlas-layout-preferences') || '{}');
+				var view = state["Hub"] || {};
+				var excludesKey = "";
+				var blocked = {};
+				if (excludesKey) {
+					var exclusions = JSON.parse(localStorage.getItem('atlas-layout-exclusions') || '{}');
+					if (Object.prototype.hasOwnProperty.call(exclusions, excludesKey)) {
+						var scoped = exclusions[excludesKey];
+						if (scoped) {
+							if (typeof scoped === 'object') blocked = scoped;
+						}
+					}
+				}
+				var html = document.documentElement;
+				for (var c in view) {
+					if (Object.prototype.hasOwnProperty.call(blocked, c)) continue;
+					if (view[c]) html.classList.add(c);
+					else html.classList.remove(c);
+				}
+			} catch (e) {}
+		})();;
+			</script>
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03503.8087-34604b98/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<script async src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Hub",
+    "layoutStateStorageKey": "Hub",
+    "brand": "power-virtual-agents",
+    "context": {},
+    "standardFeedback": false,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "Standard",
+    "feedbackGitHubRepo": "",
+    "feedbackProductUrl": "https://powerusers.microsoft.com/t5/Power-Virtual-Agents-Community/ct-p/PVACommunity",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": false,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": false,
+    "contributors": [
+      {
+        "name": "Eric-tw-convAI",
+        "url": "https://github.com/Eric-tw-convAI"
+      },
+      {
+        "name": "cyrilanderson",
+        "url": "https://github.com/cyrilanderson"
+      },
+      {
+        "name": "donums",
+        "url": "https://github.com/donums"
+      },
+      {
+        "name": "steph-kent-ms",
+        "url": "https://github.com/steph-kent-ms"
+      },
+      {
+        "name": "KathleenJette",
+        "url": "https://github.com/KathleenJette"
+      },
+      {
+        "name": "iaanw",
+        "url": "https://github.com/iaanw"
+      },
+      {
+        "name": "v-aangie",
+        "url": "https://github.com/v-aangie"
+      },
+      {
+        "name": "steph-kent",
+        "url": "https://github.com/steph-kent"
+      },
+      {
+        "name": "bolducs",
+        "url": "https://github.com/bolducs"
+      }
+    ]
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script
+				src="/static/assets/0.4.03503.8087-34604b98/scripts/en-us/index-docs.js"
+				async
+			></script>
+			
+
+			<!-- json-ld -->
+			
+		</head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div data-main-column class=" ">
+				 <div id="ms--hub-page-content">
+	<section id="hero" data-bi-name="hero" class="hero  has-background-power-virtual-agents has-text-power-virtual-agents-invert background-image-pattern-plus hero-xs background-image-pattern background-size-200">
+		<div class="hero-content">
+			<h1 id="hero-title" class="title is-1">Microsoft Copilot Studio documentation</h1>
+				<p>Discover how to build AI-driven agents and workflows with Microsoft Copilot Studio. Access documentation, implementation guidance, online training, and other resources.</p>
+		</div>
+	</section>
+
+		<section id="highlighted-content" data-bi-name="highlighted-content">
+			<div class="uhf-container padding-block-sm">
+<div class="columns is-multiline">
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="icon-card" class="card is-full-height position-relative">
+				<div class="card-content display-flex">
+					<div class="media align-items-stretch">
+						<div class="media-left display-none display-block-tablet">
+							<div class="image image-64x64" aria-hidden="true">
+								<img src="/en-us/media/hubs/shared/icon-overview.svg?branch=main" alt="" role="presentation" data-linktype="absolute-path">
+							</div>
+						</div>
+						<div class="media-content">
+							<p class="card-supertitle margin-top-none margin-top-xs-tablet">Overview</p>
+							<a href="fundamentals-what-is-copilot-studio" class="card-title stretched-link has-external-link-indicator" data-linktype="relative-path">What is Microsoft Copilot Studio?</a>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="icon-card" class="card is-full-height position-relative">
+				<div class="card-content display-flex">
+					<div class="media align-items-stretch">
+						<div class="media-left display-none display-block-tablet">
+							<div class="image image-64x64" aria-hidden="true">
+								<img src="/en-us/media/hubs/shared/icon-whats-new.svg?branch=main" alt="" role="presentation" data-linktype="absolute-path">
+							</div>
+						</div>
+						<div class="media-content">
+							<p class="card-supertitle margin-top-none margin-top-xs-tablet">What's new</p>
+							<a href="https://go.microsoft.com/fwlink/?linkid=2082154" class="card-title stretched-link has-external-link-indicator" data-linktype="external">What's new in Microsoft Copilot Studio?</a>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="icon-card" class="card is-full-height position-relative">
+				<div class="card-content display-flex">
+					<div class="media align-items-stretch">
+						<div class="media-left display-none display-block-tablet">
+							<div class="image image-64x64" aria-hidden="true">
+								<img src="/en-us/media/hubs/shared/icon-overview.svg?branch=main" alt="" role="presentation" data-linktype="absolute-path">
+							</div>
+						</div>
+						<div class="media-content">
+							<p class="card-supertitle margin-top-none margin-top-xs-tablet">Overview</p>
+							<a href="guidance/" class="card-title stretched-link has-external-link-indicator" data-linktype="relative-path">Review implementation guidance</a>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="icon-card" class="card is-full-height position-relative">
+				<div class="card-content display-flex">
+					<div class="media align-items-stretch">
+						<div class="media-left display-none display-block-tablet">
+							<div class="image image-64x64" aria-hidden="true">
+								<img src="/en-us/media/hubs/shared/icon-how-to-guide.svg?branch=main" alt="" role="presentation" data-linktype="absolute-path">
+							</div>
+						</div>
+						<div class="media-content">
+							<p class="card-supertitle margin-top-none margin-top-xs-tablet">How-To Guide</p>
+							<a href="/en-us/troubleshoot/power-platform/copilot-studio/welcome-copilot-studio" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Troubleshoot</a>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+</div>
+			</div>
+		</section>
+
+		<section id="product-directory" data-bi-name="product-directory">
+			<div class="uhf-container anchor-headings padding-block-lg">
+	<h2 class="title is-2 is-responsive margin-top-none ">Create</h2>
+	<p class="margin-top-none margin-bottom-sm">Create agents and workflows in Microsoft Copilot Studio.</p>
+<div class="columns">
+	<div id="tabpanel" role="tabpanel" class="column">
+		<div id="product-cards" class="columns is-multiline " data-bi-name="hub-product-cards">
+				<div class="column is-4-tablet is-4-desktop item-column" data-categories="">
+						<div data-bi-name="product-card" class="box margin-none is-full-height padding-sm">
+								<img src="media/hub/copilot-studio-icon.svg" alt="" loading="lazy" class="image is-48x48 margin-bottom-xxs" data-linktype="relative-path">
+							<h3 id="" class="font-size-h6 margin-none">Get started</h3>
+							<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xxs">
+									<li class="is-unstyled margin-bottom-xxs">
+										<a href="harnesses-overview" class="has-external-link-indicator display-block font-size-sm" data-linktype="relative-path">Choose your harness before you build</a>
+									</li>
+									<li class="is-unstyled margin-bottom-xxs">
+										<a href="agents-experience/authoring-first-bot" class="has-external-link-indicator display-block font-size-sm" data-linktype="relative-path">Build in Copilot Studio</a>
+									</li>
+									<li class="is-unstyled margin-bottom-xxs">
+										<a href="create-automation-natural-language" class="has-external-link-indicator display-block font-size-sm" data-linktype="relative-path">Create an automated solution using the GitHub Copilot harness (preview)</a>
+									</li>
+									<li class="is-unstyled margin-bottom-xxs">
+										<a href="fundamentals-get-started" class="has-external-link-indicator display-block font-size-sm" data-linktype="relative-path">Create and deploy an agent with the standard harness</a>
+									</li>
+							</ul>
+						</div>
+				</div>
+				<div class="column is-4-tablet is-4-desktop item-column" data-categories="">
+						<div data-bi-name="product-card" class="box margin-none is-full-height padding-sm">
+								<img src="media/hub/agent-icon.svg" alt="" loading="lazy" class="image is-48x48 margin-bottom-xxs" data-linktype="relative-path">
+							<h3 id="" class="font-size-h6 margin-none">Agents (GitHub Copilot harness)</h3>
+							<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xxs">
+									<li class="is-unstyled margin-bottom-xxs">
+										<a href="agents-experience/build-overview" class="has-external-link-indicator display-block font-size-sm" data-linktype="relative-path">Build an agent</a>
+									</li>
+									<li class="is-unstyled margin-bottom-xxs">
+										<a href="agents-experience/preview-overview" class="has-external-link-indicator display-block font-size-sm" data-linktype="relative-path">Preview and test your agent</a>
+									</li>
+									<li class="is-unstyled margin-bottom-xxs">
+										<a href="agents-experience/analytics-agent-evaluation-intro" class="has-external-link-indicator display-block font-size-sm" data-linktype="relative-path">Evaluate an agent</a>
+									</li>
+									<li class="is-unstyled margin-bottom-xxs">
+										<a href="agents-experience/publication-fundamentals-publish-channels" class="has-external-link-indicator display-block font-size-sm" data-linktype="relative-path">Publish an agent</a>
+									</li>
+							</ul>
+						</div>
+				</div>
+				<div class="column is-4-tablet is-4-desktop item-column" data-categories="">
+						<div data-bi-name="product-card" class="box margin-none is-full-height padding-sm">
+								<img src="media/hub/workflow-icon.svg" alt="" loading="lazy" class="image is-48x48 margin-bottom-xxs" data-linktype="relative-path">
+							<h3 id="" class="font-size-h6 margin-none">Workflows (GitHub Copilot harness)</h3>
+							<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xxs">
+									<li class="is-unstyled margin-bottom-xxs">
+										<a href="workflows-experience/flows-overview" class="has-external-link-indicator display-block font-size-sm" data-linktype="relative-path">Workflows overview</a>
+									</li>
+									<li class="is-unstyled margin-bottom-xxs">
+										<a href="workflows-experience/flow-designer" class="has-external-link-indicator display-block font-size-sm" data-linktype="relative-path">Edit and manage your workflow</a>
+									</li>
+									<li class="is-unstyled margin-bottom-xxs">
+										<a href="workflows-experience/agent-node-workflow" class="has-external-link-indicator display-block font-size-sm" data-linktype="relative-path">Add an agent node to a workflow</a>
+									</li>
+									<li class="is-unstyled margin-bottom-xxs">
+										<a href="workflows-experience/microsoft-365-copilot-node-workflow" class="has-external-link-indicator display-block font-size-sm" data-linktype="relative-path">Add a Microsoft 365 Copilot node to a workflow</a>
+									</li>
+							</ul>
+						</div>
+				</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</section>
+
+		<section id="conceptual-content" data-bi-name="conceptual-content" class="padding-block-lg">
+			<div class="uhf-container anchor-headings">
+	<h2 class="title is-2 is-responsive margin-top-none margin-bottom-sm">Build agents using the GitHub Copilot harness</h2>
+<div class="columns is-multiline">
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="card" class="card is-full-height">
+				<div class="card-content">
+					<h3 class="card-title color-text font-size-lg">Plan and build</h3>
+					<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xs">
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="agents-experience/overview" class="has-external-link-indicator" data-linktype="relative-path">About agents powered by the GitHub Copilot harness</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-concept"></span>
+									</span>
+									<a href="agents-experience/billing-credit-overview" class="has-external-link-indicator" data-linktype="relative-path">Understand usage-based billing and Copilot Credits</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="agents-experience/build-new-agent" class="has-external-link-indicator" data-linktype="relative-path">Build a new agent</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="agents-experience/authoring-instructions" class="has-external-link-indicator" data-linktype="relative-path">Configure your agent's details and instructions</a>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="card" class="card is-full-height">
+				<div class="card-content">
+					<h3 class="card-title color-text font-size-lg">Add knowledge and tools</h3>
+					<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xs">
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="agents-experience/knowledge-copilot-studio" class="has-external-link-indicator" data-linktype="relative-path">Add knowledge to your agents</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="agents-experience/tools-overview" class="has-external-link-indicator" data-linktype="relative-path">Extend agents with tools</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="agents-experience/skills-overview" class="has-external-link-indicator" data-linktype="relative-path">Use skills with agents</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="agents-experience/authoring-add-other-agents" class="has-external-link-indicator" data-linktype="relative-path">Build modular solutions with connected agents</a>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="card" class="card is-full-height">
+				<div class="card-content">
+					<h3 class="card-title color-text font-size-lg">Preview and test</h3>
+					<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xs">
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="agents-experience/authoring-activity-trace" class="has-external-link-indicator" data-linktype="relative-path">Debug your agents using activity trace</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="agents-experience/authoring-test-bot" class="has-external-link-indicator" data-linktype="relative-path">Test your agents</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="agents-experience/preview-history" class="has-external-link-indicator" data-linktype="relative-path">View conversation history</a>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="card" class="card is-full-height">
+				<div class="card-content">
+					<h3 class="card-title color-text font-size-lg">Evaluate</h3>
+					<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xs">
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="agents-experience/analytics-agent-evaluation-create" class="has-external-link-indicator" data-linktype="relative-path">Create a test set</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="agents-experience/analytics-agent-evaluation-results" class="has-external-link-indicator" data-linktype="relative-path">Run an evaluation</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="agents-experience/analytics-agent-evaluation-view" class="has-external-link-indicator" data-linktype="relative-path">View evaluation results</a>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="card" class="card is-full-height">
+				<div class="card-content">
+					<h3 class="card-title color-text font-size-lg">Publish, monitor, and share</h3>
+					<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xs">
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="agents-experience/publication-publish-agent" class="has-external-link-indicator" data-linktype="relative-path">Publish an agent</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="agents-experience/analytics-overview" class="has-external-link-indicator" data-linktype="relative-path">Monitor your agent's performance</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="agents-experience/authoring-share-agent" class="has-external-link-indicator" data-linktype="relative-path">Share an agent</a>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+</div>
+	<h2 class="title is-2 is-responsive margin-top-none margin-bottom-sm">Build agents and agent flows using the standard harness</h2>
+<div class="columns is-multiline">
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="card" class="card is-full-height">
+				<div class="card-content">
+					<h3 class="card-title color-text font-size-lg">Create agents</h3>
+					<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xs">
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-tutorial"></span>
+									</span>
+									<a href="fundamentals-get-started" class="has-external-link-indicator" data-linktype="relative-path">Build an agent with generative AI from the ground up</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="authoring-create-edit-topics" class="has-external-link-indicator" data-linktype="relative-path">Create and delete agents</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="authoring-test-bot" class="has-external-link-indicator" data-linktype="relative-path">Test your agent</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="voice-overview" class="has-external-link-indicator" data-linktype="relative-path">Create voice-enabled agents</a>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="card" class="card is-full-height">
+				<div class="card-content">
+					<h3 class="card-title color-text font-size-lg">Add knowledge and tools to agents</h3>
+					<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xs">
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="knowledge-copilot-studio" class="has-external-link-indicator" data-linktype="relative-path">Add knowledge to your agents</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="add-tools-custom-agent" class="has-external-link-indicator" data-linktype="relative-path">Extend agents with tools</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="agent-extend-action-mcp" class="has-external-link-indicator" data-linktype="relative-path">Enhance your agents with MCP servers</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="authoring-add-other-agents" class="has-external-link-indicator" data-linktype="relative-path">Add other agents</a>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="card" class="card is-full-height">
+				<div class="card-content">
+					<h3 class="card-title color-text font-size-lg">Build and manage agent flows</h3>
+					<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xs">
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="flows-overview" class="has-external-link-indicator" data-linktype="relative-path">Agent flows overview</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="flow-nl" class="has-external-link-indicator" data-linktype="relative-path">Build an agent flow with natural language</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="flow-designer" class="has-external-link-indicator" data-linktype="relative-path">Edit and manage your agent flow in the designer</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="flow-agent" class="has-external-link-indicator" data-linktype="relative-path">Add an agent flow to an agent</a>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="card" class="card is-full-height">
+				<div class="card-content">
+					<h3 class="card-title color-text font-size-lg">Evaluate your agents</h3>
+					<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xs">
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="analytics-agent-evaluation-intro" class="has-external-link-indicator" data-linktype="relative-path">About agent evaluation</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="analytics-agent-evaluation-create" class="has-external-link-indicator" data-linktype="relative-path">Create test sets for evaluations</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="analytics-agent-evaluation-overview" class="has-external-link-indicator" data-linktype="relative-path">Choose evaluation methods</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-tutorial"></span>
+									</span>
+									<a href="analytics-agent-evaluation-results" class="has-external-link-indicator" data-linktype="relative-path">Run tests and view results</a>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="card" class="card is-full-height">
+				<div class="card-content">
+					<h3 class="card-title color-text font-size-lg">Publish and deploy your agent</h3>
+					<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xs">
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="publication-fundamentals-publish-channels" class="has-external-link-indicator" data-linktype="relative-path">Key concepts - Publish and deploy your agent</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-deploy"></span>
+									</span>
+									<a href="publication-add-bot-to-sharepoint" class="has-external-link-indicator" data-linktype="relative-path">Publish an agent to SharePoint</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-deploy"></span>
+									</span>
+									<a href="publication-connect-bot-to-web-channels" class="has-external-link-indicator" data-linktype="relative-path">Publish an agent to a live or demo website</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="publication-add-bot-to-microsoft-teams" class="has-external-link-indicator" data-linktype="relative-path">Publish an agent to Teams and Microsoft 365 Copilot</a>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="card" class="card is-full-height">
+				<div class="card-content">
+					<h3 class="card-title color-text font-size-lg">Monitor and administer</h3>
+					<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xs">
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="analytics-summary" class="has-external-link-indicator" data-linktype="relative-path">Use analytics to improve your agent</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="admin-data-loss-prevention" class="has-external-link-indicator" data-linktype="relative-path">Configure data policies for agents</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="configuration-end-user-authentication" class="has-external-link-indicator" data-linktype="relative-path">Configure authentication</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-concept"></span>
+									</span>
+									<a href="security-and-governance" class="has-external-link-indicator" data-linktype="relative-path">Security and governance</a>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+		<div class="column is-6-tablet is-3-desktop">
+			<article data-bi-name="card" class="card is-full-height">
+				<div class="card-content">
+					<h3 class="card-title color-text font-size-lg">Billing and licensing</h3>
+					<ul class="has-line-height-reset margin-left-none margin-bottom-none margin-top-xs">
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-overview"></span>
+									</span>
+									<a href="billing-licensing" class="has-external-link-indicator" data-linktype="relative-path">Licensing overview</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-how-to-guide"></span>
+									</span>
+									<a href="requirements-licensing" class="has-external-link-indicator" data-linktype="relative-path">Assign licenses and manage access</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-concept"></span>
+									</span>
+									<a href="requirements-messages-management" class="has-external-link-indicator" data-linktype="relative-path">Billing rates and management</a>
+								</div>
+							</li>
+							<li class="is-unstyled margin-bottom-xxs font-size-sm">
+								<div class="justify-content-flex-start display-flex is-fullwidth font-size-sm has-text-wrap">
+									<span class="icon font-size-md has-text-primary margin-right-xxs" aria-hidden="true">
+										<span class="docon docon-topic-concept"></span>
+									</span>
+									<a href="agent-usage-estimator" class="has-external-link-indicator" data-linktype="relative-path">Agent usage estimator</a>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+</div>
+			</div>
+		</section>
+
+
+		<section id="additional-content" data-bi-name="additional-content" class="padding-block-lg">
+			<div class="uhf-container anchor-headings">
+						<h2 class="title is-2 is-responsive margin-top-none ">Related content</h2>
+						<p class="margin-top-xs margin-bottom-sm">Explore related Microsoft products and services.</p>
+					<div class="columns is-multiline">
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/power-platform" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Power Platform</a>
+										<p class="card-content-description">One-stop learning resource for Power Platform applications and features including admin, connectors, developer, and guidance documentation.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/powerapps" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Power Apps</a>
+										<p class="card-content-description">Quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/power-automate" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Power Automate</a>
+										<p class="card-content-description">Create automated workflows between your favorite apps and services to synchronize files, get notifications, collect data, and more.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/power-bi" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Power BI</a>
+										<p class="card-content-description">Turn your unrelated sources of data into coherent, visually immersive, and interactive insights.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/power-pages" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Power Pages</a>
+										<p class="card-content-description">Design, host, and administer secure, modern, and low-code business websites.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/power-platform/architecture/products/copilot-studio" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Power Platform &amp; Copilot Studio Architecture Center</a>
+										<p class="card-content-description">Browse reference architectures and solution ideas for Power Platform and Copilot Studio.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/agents" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Agents hub on Learn</a>
+										<p class="card-content-description">Explore Microsoft's agent ecosystem, learn key concepts, and find resources to plan, build, adopt, and continuously improve AI agents for your organization.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/microsoft-365-copilot/extensibility" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Microsoft 365 Copilot extensibility</a>
+										<p class="card-content-description">Customize Microsoft 365 Copilot with agents and use actions and connectors to extend Copilot's skills and knowledge.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/microsoft-365/agents-sdk" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Microsoft 365 Agents SDK</a>
+										<p class="card-content-description">Build agents deployable to channels of your choice, with scaffolding to handle the required communication.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/microsoft-agent-365/overview" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Microsoft Agent 365</a>
+										<p class="card-content-description">Learn about Microsoft Agent 365, a platform to manage agents within an organization.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/agent-framework/overview/agent-framework-overview" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Microsoft Agents Framework</a>
+										<p class="card-content-description">Explore Microsoft Agents Framework, an open-source development kit for building AI agents and multi-agent workflows.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/azure/ai-foundry/what-is-azure-ai-foundry?view=foundry" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Microsoft Foundry for AI</a>
+										<p class="card-content-description">Learn about Microsoft Foundry, a unified Azure platform-as-a-service offering for enterprise AI operations, model builders, and application development.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/dynamics365/" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Dynamics 365</a>
+										<p class="card-content-description">Discover the next generation of CRM and ERP applications.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/azure" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Microsoft Azure</a>
+										<p class="card-content-description">Explore the ever-expanding set of cloud computing services to help your organization meet its business challenges.</p>
+									</div>
+								</article>
+						</div>
+					</div>
+						<h2 class="title is-2 is-responsive margin-top-none ">Build your knowledge</h2>
+						<p class="margin-top-xs margin-bottom-sm">Enhance your knowledge and skills in Copilot Studio with these resources.</p>
+					<div class="columns is-multiline">
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/training/browse/?terms=copilot studio&amp;products=ms-copilot" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Microsoft Copilot Studio training</a>
+										<p class="card-content-description">Explore Microsoft Copilot Studio training on the Learn platform.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="https://aka.ms/nextAgIAD" class="card-title stretched-link has-external-link-indicator" data-linktype="external">Agent in a Day events</a>
+										<p class="card-content-description">Learn to build low-code AI agents with Copilot Studio in a free, hands-on, instructor-led workshop.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="https://aka.ms/agent-academy" class="card-title stretched-link has-external-link-indicator" data-linktype="external">Copilot Studio Agent Academy</a>
+										<p class="card-content-description">Master the art of building agents using Copilot Studio. Upskill your team with curated lessons.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/copilot" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">Copilot learning hub</a>
+										<p class="card-content-description">Discover tools, guidance, and support for adopting, securing, and managing custom and Microsoft Copilot experiences in your organization.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="/en-us/ai" class="card-title stretched-link has-external-link-indicator" data-linktype="absolute-path">AI learning hub</a>
+										<p class="card-content-description">Build practical skills to unlock the potential of AI and prepare for AI innovation using the Microsoft Cloud.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="https://aka.ms/adoptcopilotstudio" class="card-title stretched-link has-external-link-indicator" data-linktype="external">Copilot Studio Adoption</a>
+										<p class="card-content-description">Check out adoption resources for Copilot Studio.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="https://adoption.microsoft.com/ai-agents/copilot-studio/#scenarios" class="card-title stretched-link has-external-link-indicator" data-linktype="external">Copilot Studio scenarios</a>
+										<p class="card-content-description">Explore agent scenarios to jumpstart your projects with downloadable resources.</p>
+									</div>
+								</article>
+						</div>
+						<div class="column is-6-tablet is-3-desktop">
+								<article data-bi-name="summary-card" class="card is-full-height position-relative">
+									<div class="card-content">
+										<a href="https://aka.ms/CopilotStudioBlog" class="card-title stretched-link has-external-link-indicator" data-linktype="external">Copilot Studio Blog</a>
+										<p class="card-content-description">Keep updated with the Copilot Studio Blog, your source for AI-powered agent news.</p>
+									</div>
+								</article>
+						</div>
+					</div>
+			</div>
+		</section>
+</div>
+
+
+			</div>
+		
+				</main>
+				  <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-haspopup="true"
+				aria-expanded="false"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu" role="none">
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="light"
+							tabindex="-1"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="dark"
+							tabindex="-1"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="high-contrast"
+							tabindex="-1"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			</body>
+		</html>

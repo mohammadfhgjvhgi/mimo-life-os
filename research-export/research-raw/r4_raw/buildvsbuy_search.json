@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.linkedin.com/posts/davidvillalonpardo_most-enterprise-ai-agents-never-make-it-to-activity-7405279040762454016-Xd7o",
+    "name": "Most enterprise AI agents never make it to production.",
+    "snippet": "McKinsey reported less than 10% of enterprise agents make it beyond pilot stage . Meanwhile, Wharton's data shows 82% of enterprise leaders ... Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.facebook.com/McKinsey/posts/while-62-of-organizations-are-experimenting-with-or-piloting-ai-agents-relativel/1525604472368904",
+    "name": "McKinsey & Company",
+    "snippet": "Infrastructure layers — from foundation models to oversight — are helping enterprises build , deploy, and manage AI agents more effectively.",
+    "host_name": "www.facebook.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-promise-and-the-reality-of-gen-ai-agents-in-the-enterprise",
+    "name": "The promise and the reality of gen AI agents in the enterprise",
+    "snippet": "May 17, 2024 — We have estimated that gen AI enterprise use cases could yield $2.6 trillion to $4.4 trillion annually in value across more than 60 use cases.",
+    "host_name": "www.mckinsey.com",
+    "rank": 2,
+    "date": "May 17, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://olakai.ai/blog/ai-pilot-to-production",
+    "name": "AI Pilot to Production: Why 95% of AI Projects Stall",
+    "snippet": "Feb 16, 2026 — MIT's research uncovered a surprising finding about the build - versus - buy decision. Purchasing AI tools from specialized vendors and building ... Read more",
+    "host_name": "olakai.ai",
+    "rank": 3,
+    "date": "Feb 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.kore.ai/blog/build-vs-buy-ai-agents-enterprise-architecture",
+    "name": "Build vs buy AI agents: How enterprises get stuck",
+    "snippet": "May 15, 2026 — Most enterprises think they're choosing whether to build AI agents . They're actually choosing what to build . Here's the build - vs - buy trap ...",
+    "host_name": "www.kore.ai",
+    "rank": 4,
+    "date": "May 15, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://zbrain.ai/why-most-ai-pilots-fail-to-scale",
+    "name": "Why enterprise AI pilots fail to scale and how to address it",
+    "snippet": "Most enterprise AI initiatives fail to reach production . Discover the main reasons keeping organizations stuck in pilot phases and the architectural ...",
+    "host_name": "zbrain.ai",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://agent.nexus/compare/build-vs-buy-ai-agents",
+    "name": "Build vs Buy AI Agents: The Enterprise Decision Framework",
+    "snippet": "The build vs . buy decision for AI agents is not the same as for traditional software. Building offers control but requires significant engineering ... Read more",
+    "host_name": "agent.nexus",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.dataiku.com/blog/build-vs-buy-for-ai-agents",
+    "name": "Build vs. buy for AI agents: a practical guide",
+    "snippet": "Sep 16, 2025 — Buying gets you quick answers and faster pilots . · Building gets you creativity, control, and business impact. · Hybrid gives you both, as long as ... Read more",
+    "host_name": "www.dataiku.com",
+    "rank": 7,
+    "date": "Sep 16, 2025",
+    "favicon": ""
+  }
+]

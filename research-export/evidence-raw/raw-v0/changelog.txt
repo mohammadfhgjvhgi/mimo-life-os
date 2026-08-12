@@ -1,0 +1,1450 @@
+- 
+- 
+- 
+- 
+- Changelog | v0 - v0.app 
+- 
+- 
+- 
+- 
+Home 
+
+- Templates 
+
+- Enterprise 
+
+- Pricing 
+
+- iOS 
+
+- Students 
+
+- FAQ 
+
+Get Started 
+
+# What's new?
+
+July 2026 
+
+Jul 31, 2026 
+## Claude Opus 5, direct Figma inspection, and composer prompt history
+
+## What's new
+
+- Claude Opus 5 is available in the model picker, with an Opus 5 Fast tier for faster responses.
+
+- Connect a Figma file and v0 reads its structure and styles directly while building, instead of the older import-and-screenshot step, and v0 loads the Figma skill automatically when a message includes a Figma link.
+
+- Recall earlier prompts with Up and Down in the composer, including their attachments and attached skills.
+
+- Keyboard shortcuts for the prompt queue: Cmd or Ctrl and Enter sends and interrupts the active response, and Cmd or Ctrl with Up and Down step through queued prompts.
+
+- URLs typed or pasted into the composer, and shown in sent messages, are highlighted inline with the site's favicon.
+
+- When a generated app needs AI features, v0 decides how to build them from the app's requirements instead of pausing to ask you.
+
+## Bug fixes
+
+- Figma connections whose stored credentials could no longer be decrypted are cleared so you are prompted to reconnect, and Figma links without the www subdomain are accepted.
+
+- Stopping a response or interrupting a queued prompt takes effect immediately, and deleting a queued prompt while editing it no longer leaves it stuck and reappearing after a reload.
+
+- Download ZIP no longer returns an empty archive for VM chats, starting a chat from a ZIP keeps dotfiles such as .gitignore, and large ZIP and branch operations no longer time out.
+
+- Duplicating a Git-backed chat produces a working copy instead of one that fails to render.
+
+- Open in v0 and Git deployment lookups prompt for SAML re-authentication instead of getting stuck or failing with a generic error.
+
+- The preview keeps its loading state until the iframe paints, removing a brief black flash after a VM starts.
+
+- On phones, sending the first message keeps you on the chat instead of jumping to Preview.
+
+- The sidebar no longer flashes on load on narrow screens, and a chat row's relative time matches its hover card.
+
+- The chat header no longer overflows on smaller screens.
+
+- A failed checkout shows a retry instead of a stuck loading state, and layout no longer shifts on the checkout page as it loads.
+
+- Upgrading between plans no longer gets stuck on a previous plan's selection.
+
+- The out-of-credits notice clears once the chat's scope has credits again.
+
+- Fixed a stuck file-drop overlay in the composer and refined attachment chips.
+
+## Misc.
+
+- The sidebar hover card previews how a turn ended, such as its closing summary or the question it is waiting on, and the in-progress status reads "v0 is working".
+
+- The queued-prompts panel starts expanded.
+
+- The free-tier all-model-access bar fills over time instead of draining.
+
+- The free Fix with v0 daily limit is 10 per day.
+
+- The generation-complete sound is quieter.
+
+- Long prompt errors show their full text on hover.
+
+- Picking a model returns focus to the composer.
+
+- Expired subscribers see a clearer message that using purchased credits requires an active subscription.
+
+- The credit-exhaustion message reads "You are out of credits".
+
+Jul 21, 2026 
+## Slash commands, the Shopify integration, and a Snowflake reliability pass
+
+## What's new
+
+- Type / in the composer to open a slash-command menu and attach a skill without leaving the keyboard; it live-filters as you type, including remote skills.sh search.
+
+- The Shopify integration is available to everyone: connect a Shopify store and v0 builds a storefront that reads live products, prices, and inventory through the Shopify Storefront and Admin APIs.
+
+- Attached skills appear as inline chips in the composer, with the same draft persistence, undo/redo, and drag-to-reorder as file attachments.
+
+- v0 plays a sound when it finishes responding while the window is not focused, controlled by a Sound Notifications toggle in Settings that is on by default.
+
+- Settings → Integrations shows your GitHub connection status with Connect, Reconnect, and Manage actions.
+
+- Snowflake detects when a chat's code has changed since its last deployment and offers a re-deploy, and it steers generations to your team's connected Snowflake account instead of mock data.
+
+- Request access to a private chat in your team directly from the chat, and save any chat you can access to your favorites, including shared chats.
+
+- VM-backed chats can publish even when the chat has no deployable blocks.
+
+- Generated chat titles and project names focus on product identity instead of implementation details.
+
+- The first-publish wizard is simpler: visibility comes before domains, the final action reads Publish, and project creation stays on a stable loading step until it is ready.
+
+- Redesigned the account dropdown and flattened integration management in Settings into a single Manage menu per integration.
+
+- The Import Design System panel opens as a full-height side panel with inline Add buttons, and pasted files attach directly to the drawer.
+
+## Bug fixes
+
+- Snowflake: fixed OAuth on preview deployments, connect and reauthentication prompt flicker, connection modals stuck on infinite spinners, and credential refresh inside previews. Connections are preserved when forking a chat, New Chat works on projects that deploy to Snowflake instead of Vercel, integration settings are visible to team members with the Contributor role, and shared-chat viewers without their own connection see a Connect prompt instead of a crash.
+
+- Chats started from a Git repository get a generated title instead of the working branch name, and generated branch names stay stable after a pull request is created.
+
+- Agent auto-pushes retry after rebasing when a push is rejected as non-fast-forward, and chats stranded by an interrupted post-merge Git rotation recover on their own.
+
+- Creating a GitHub repository from a team-scoped chat uses the correct Vercel team instead of failing with a SAML error.
+
+- Duplicating a chat no longer produces a broken copy that fails its first build.
+
+- Environment variables added in v0 reach published apps on teams that enforce Sensitive Environment Variables.
+
+- The publish popover shows the subdomain you chose while the deployment builds instead of the raw deployment URL.
+
+- Fixed several preview glitches: a duplicate loading screen on new previews, the v0 logo briefly expanding to fill the preview, previews not appearing until after the first generation, broken v0.app iframe previews, and a false deployment error before publish metadata loads.
+
+- Returning to an already-visited chat from the sidebar no longer flashes the loading skeleton.
+
+- Typed prompts survive clarifying questions, permission approvals, and queued submissions instead of being cleared.
+
+- The stop button is visibly disabled during the send window before the response starts streaming.
+
+- Command-Left and Command-Right move to the start and end of composer lines that contain attachments.
+
+- A stray YubiKey touch no longer submits its one-time password as a chat message, and large encoded message parts no longer render as raw text.
+
+- Connecting Figma works for team members without Marketplace integration permissions, and free-plan users see the upgrade dialog instead of a generic error.
+
+- Design systems: personal-scope imports save to your own memory, the selector resets when you switch scopes, applying a starter preserves Git history, and ZIP asset downloads work without CORS errors.
+
+- Expired team sessions start SAML re-authentication automatically, SAML-limited sessions recover into the existing dialog, and a force-sign-out race is resolved.
+
+- The Add button in Domains settings links to the correct Vercel project.
+
+- Canceled plans show the subscription end date in the credit balance, and checkout maps actionable payment failures to clear messages.
+
+- Organizations no longer need to set a spend limit for chats to work.
+
+- Hardened authentication against a magic-link login CSRF and session-fixation issue, open redirects after login and logout, and OAuth callbacks attaching credentials to a different account; free-plan alias-prefix and GitHub-organization repository restrictions are enforced server-side.
+
+## Misc.
+
+- The Team plan is renamed to Plus.
+
+- Enterprise Managed Users are surfaced in the web UI, and their profiles are always private.
+
+- Provider text streams in steady small deltas instead of arriving in uneven bursts.
+
+- Demo links accept a loadingBackground parameter to set the background shown while the generated app loads.
+
+- Personal upgrades default to Premium.
+
+Jul 7, 2026 
+## Grouped tool approvals, richer MCP tools, and team deployment policies
+
+## What's new
+
+- Tool permission approvals for MCP and bash are grouped into one panel above the composer, so resolving one approval no longer advances the chat before you handle the rest.
+
+- The v0 MCP server adds a listMessages tool to read a chat's history and a resolveTask tool to answer plan approvals, questions, permission requests, and integration prompts, and it now returns scope-aware chat URLs.
+
+- Pasted attachment pills in the composer can be dragged to reorder.
+
+- v0's deploy button and GitHub import respect your team's Vercel deployment policies, hiding disallowed repositories and blocking production deploys your team forbids.
+
+- v0 no longer blocks pushing to GitHub repositories that contain GitHub Actions workflow files.
+
+- Design Systems: set a team default (including Design Systems 2.0 skills and built-in examples) and choose team or personal scope when saving a design system from the save card.
+
+- Team members with v0 edit access can manage team skills and memories without a Vercel write role, and the Restrict Memories and Skills setting is available on any paid team plan instead of Enterprise only.
+
+- Preview loading is smoother: the empty or previous preview shows immediately while the VM starts in the background, with a subtle progress line and no loading status pills.
+
+- The project menu mirrors the chat menu's actions, and a new keyboard shortcut (Cmd+. or Ctrl+.) opens Settings.
+
+- The publish button shows a tooltip explaining why it is disabled, such as waiting for v0 to finish responding.
+
+- v0 builds chat interfaces with shadcn/ui chat primitives and the latest AI SDK instead of the deprecated AI Elements.
+
+- The Platform API can attach memory and project skills when creating a chat or sending a message, and its message schema returns the agent's clarifying question, requested integrations, and permission details for tasks that need user input.
+
+## Bug fixes
+
+- Fixed GitHub connect and SSO reauthentication, so creating a repo or connecting GitHub no longer returns a bad request or opens the wrong Vercel team SSO dialog.
+
+- Auto-push for team-owned chats no longer fails silently, so edits reliably reach the GitHub working branch.
+
+- Connecting an MCP server from the integrations card no longer spins the agent into an auto-resume loop that Stop could not break.
+
+- Opening the command menu and then navigating into a chat no longer crashes the app.
+
+- A preview stuck on a dead or expired sandbox now recovers automatically instead of staying broken.
+
+- Hardened the screenshot service, frame proxy, and chat hook delivery against DNS-rebinding SSRF.
+
+## Misc.
+
+- Preview sandboxes can run for up to 24 hours.
+
+- Faster VM preview startup and Vercel deploys, trimming several seconds of setup.
+
+- Navigating to the new-chat home is instant.
+
+- Signed-out users get a higher preview sandbox limit of 240 per hour, and hitting it prompts sign up or sign in.
+
+- Added a Shopify integration docs page and fixed the docs mobile menu and several broken documentation links.
+
+## Deprecations
+
+- Invite & earn, the referral credit program, is being discontinued on July 15, 2026. Referral links stop earning new credits after that date, and credits you have already earned stay in your account.
+
+June 2026 
+
+Jun 26, 2026 
+## Platform API v2, MCP chat tools, and Office file attachments
+
+## What's new
+
+- Platform API v2 (beta) can now start a chat from a GitHub repository, and the API docs add a v1 to v2 migration guide and a version switcher.
+
+- The v0 MCP server adds tools to create, find, and read chats, fetch a preview, and send messages.
+
+- Attach Excel (.xlsx) and Word (.docx) files to a chat.
+
+- Pasted images and files now appear as inline chips in the prompt composer, with image thumbnails, and stay in place across reloads.
+
+- Custom skills can set disable-model-invocation to stay out of the agent's auto-invoked catalog while remaining available when attached or loaded explicitly.
+
+## Bug fixes
+
+- Starting a new chat from the home composer no longer inherits the previous chat's streaming state, which could turn Send into Queue and send your message to the wrong chat.
+
+- Project visibility settings now respect your team's Vercel Authentication requirements.
+
+- A paying team is no longer downgraded to free when a billing read fails.
+
+- Preview sandboxes no longer time out mid-generation during long agent runs, including when the tab is closed.
+
+- The Restart button on a stopped preview is clickable again even when no snapshot is available.
+
+- Refreshing the preview no longer throws an invalid URL error.
+
+- The editor no longer shows a false start error when a preview, dev server, or install fails while the editor itself is healthy.
+
+- A saved model selection no longer briefly flips to a default while the page loads.
+
+- Design system import routes private registry authentication through your shared environment variables instead of asking for secret values in chat.
+
+- Snowflake gets fewer first deploy failures, creates a missing snowflake.yml for you, keeps the publish flow available on shared chats before you connect your account, and fixes environment variable injection on preview refresh.
+
+- Template previews open through the authenticated path instead of redirecting you to vercel.com inside the preview.
+
+- Upgrade checkout has clearer error recovery, with specific actions for address, authentication, and expired link failures.
+
+- Sending your first message from the home screen now reveals the chat pane if it was collapsed.
+
+- The prompt form no longer grows when you open the + menu with nothing selected.
+
+- Fixed breadcrumb flicker, command palette search visibility, a missing sidebar trigger, oversized pagination buttons in usage settings, and the team avatar and name wrapping on the templates page.
+
+## Misc.
+
+- The credit purchase modal now notes that purchased credits expire one year after purchase.
+
+- The design system you select in the composer now persists per scope.
+
+- Refined chat panel collapse and sidebar hover behavior.
+
+- Updated the API docs with deprecation notes, refreshed the design systems docs, and removed the prompt enhancement section.
+
+Jun 19, 2026 
+## Annotations mode, in-form questions, and wallet checkout
+
+## What's new
+
+- Annotations mode lets you click elements in the preview to drop numbered comments and send them to the agent as one batch of feedback.
+
+- v0's clarifying questions now appear in the prompt form, with single-select, multi-select, skip, and inline custom answers.
+
+- Apple Pay and Google Pay are available in checkout.
+
+- Favorites are no longer capped at five, so you can favorite as many chats, folders, and projects as you want.
+
+- View-only members can download a chat's code as a ZIP from the project menu.
+
+- Attach images to a queued prompt while another chat is still running.
+
+- Rename a custom skill in place from Settings, Skills.
+
+- v0 Builders and Creators can transfer chats that are not connected to a Vercel project.
+
+- v0 now respects your configured default branch name when creating a GitHub repository instead of defaulting to main.
+
+- v0 understands how to work with Vercel Flags out of the box, so it can add feature flags to your app for you.
+
+## Bug fixes
+
+- Responding to an agent prompt for an environment variable, permission, question, or plan no longer discards the previous turn and restarts it.
+
+- New chats are filed under the workspace shown in the URL, fixing chats that could land in the wrong scope right after switching scopes.
+
+- Fixed a sign-in loop for SSO users with SAML-limited scopes and a GitHub access dialog loop when a Vercel SSO session expired.
+
+- Inspect on Vercel and Analytics stay disabled until a deployment has an inspector URL, so they no longer open a blank tab.
+
+- Fixed text selection and editing in the DB Studio SQL editor.
+
+- The Snowflake publish button and its dropdown now stay responsive while v0 is generating.
+
+- Fixed broken documentation links and the no-op Advanced Settings action in the Snowflake integration UI.
+
+- Teams with a custom deployment suffix now see their real suffix in domain settings instead of a hardcoded .vercel.app.
+
+- Team members with v0 access appear reliably in chat invite search.
+
+- Anonymous users opening a shared or public chat are no longer redirected to sign in before the preview loads.
+
+- Password managers no longer cover the environment variable prompt fields.
+
+- A dead preview URL now sends you back to the chat to re-authenticate and restart instead of showing a connection error.
+
+- The upgrade page shows distinct loading, eligible, and already-active states, and supports upgrading from v0 Team to v0 Business.
+
+- On mobile, an expired session while sending opens the re-authenticate flow instead of a generic error.
+
+## Misc.
+
+- Removed the Enhance Prompt button from the composer, since the models ask clarifying questions when they need them.
+
+- Connecting Figma uses a popup-based flow that resumes the import dialog after you authorize.
+
+- Generated GitHub repositories and Vercel projects no longer get a v0- prefix in their names.
+
+- Refined chat action menus with leading icons and cleaner popover styling.
+
+- The skill task row shows the name of the loaded skill instead of a generic label.
+
+- Added a note to the deployments docs about how team Deployment Policies can block publishing from v0.
+
+- Removed several distracting animations across publish popovers, task blocks, and skill cards.
+
+Jun 8, 2026 
+## Changelog update
+
+## What's new
+
+- Press Cmd+K to open a new context-aware command palette and jump to chats, projects, and actions from anywhere.
+
+- v0 can now resolve merge conflicts on your pull requests. Choose Fix PR Conflicts and the agent merges the base branch and resolves them for you.
+
+- v0 can now write SQL for you in DB Studio. Describe the query you want and v0 drafts it in the SQL tab. Run it with Cmd+Enter.
+
+- v0 Max now runs on Claude Opus 4.8, and Max Fast on Opus 4.8 Fast at about a third of its previous price. The model picker is now four tiers: Mini, Pro, Max, and Max Fast.
+
+- Design Mode adds a floating toolbar, a layers viewer, and a measure overlay for checking spacing, plus a shortcut to delete the selected element.
+
+- Added a Shopify integration. Connect your store from a chat and v0 builds storefronts against it with the Shopify AI Toolkit.
+
+- New apps that need a database and authentication now scaffold with Neon, Drizzle, and Better Auth by default.
+
+- The design systems library has been rebuilt with a new layout, and v0 generates higher-quality output when working from a design system.
+
+- Long agent runs now continue automatically instead of stopping when they reach the timeout.
+
+- v0 can now generate SVGs with a built-in skill.
+
+- The Snowflake integration is now in public preview. Connect your account and v0 builds dashboards and apps on top of your data, and you can share Snowflake-connected chats with your team.
+
+- Rename a project from the project menu or the sidebar.
+
+- v0 accepts .tgz files as attachments.
+
+- Team plan members can set custom instructions.
+
+- v0 now signs the commits it pushes to GitHub. Commits show as verified, and repositories that require signed commits accept them.
+
+- v0's sidebar, scope picker, account navigation, and environment variable settings have been redesigned to match the Vercel dashboard.
+
+## Bug fixes
+
+- Pull requests opened from a new-branch chat are no longer titled "Initialize project from GitHub repository".
+
+- Connecting Figma from a paid team as a free user no longer gets stuck in an OAuth loop.
+
+- Queued prompts no longer get stuck after a chat finishes, and the chat keeps its place while you're scrolled to the bottom.
+
+- Snapshots appear without needing a page reload.
+
+- Member search now matches by display name.
+
+- Guest scope names no longer get truncated.
+
+- Documentation header links no longer 404.
+
+- Generated apps no longer surface "GENERATING is not defined" in the preview, and build errors no longer leak into the runtime error overlay.
+
+- Fixed billing errors on mobile.
+
+- Cleaned up flashes on load across the sidebar, the composer model selector, and the version toggle.
+
+## Misc.
+
+- Navigating between chats, settings, design systems, and your library is now instant.
+
+- Updated docs for agentic features and the Snowflake integration.
+
+May 2026 
+
+May 15, 2026 
+## Claude Opus 4.7 Fast, agent browser screenshots, and more
+
+## What's new
+
+- Claude Opus 4.7 Fast is available as a new model option under "More models", with 2.5x faster output.
+
+- v0 can now show the browser screenshots the agent captures while testing your preview.
+
+- Drop a ZIP into the prompt and the agent reads it like any other attachment instead of opening the import modal.
+
+- Snowflake teams with multiple accounts can pick which account a chat connects to, from the chat itself.
+
+- Redesigned the Snowflake deployment error state and build logs panel for readability.
+
+- On iOS, iframe previews now suggest downloading the native v0 app.
+
+- Removed accordion and versioned-block animations in chat.
+
+## Bug fixes
+
+- The prompt form no longer shifts layout on first paint.
+
+- Reloading the preview iframe in Safari shows the "Open preview in new tab" message instead of a generic unauthorized page.
+
+- The "built with v0" badge respects branding settings on deployed apps, and the preview no longer shows the badge.
+
+- Opening a preview from the iOS app keeps you signed in.
+
+- The project picker dropdown loads on open instead of waiting for keyboard input.
+
+- The sidebar reliably highlights the chat you're viewing, even after navigating or closing and reopening it.
+
+- Mobile settings pages no longer crowd actions or clip table contents.
+
+- Bash terminal output no longer flashes empty rows while commands are running.
+
+- The Usage & Activity report and the /v1/reports/user-activity endpoint no longer return 500 errors.
+
+## Misc.
+
+- Added docs for the project sandbox , terminal commands , and permission modes .
+
+May 12, 2026 
+## Run terminal commands with v0, faster sandboxes, and more
+
+## What's new
+
+- v0 can now run terminal commands in your chats, with a permission prompt before each one.
+
+- Sandboxes start over 50% faster on new chats and use about 500 MB less storage.
+
+- The v0.app home page loads faster when you open it.
+
+- Rename a connected Vercel project directly from chat settings.
+
+- Added support for OAuth-authorized MCP servers in the platform API, with reference docs and a guide.
+
+- The VS Code editor in your chats autosaves by default, with a new Vercel Light theme and a refreshed dark theme.
+
+- Made the prompt input faster and lighter.
+
+- Project instructions accept longer text.
+
+## Bug fixes
+
+- Updates to the default permissions mode now reach all users, not only new accounts.
+
+- Restored the GitHub section in Settings and the Manage button on chats connected to a repository.
+
+- Chat pages no longer freeze on very large diffs.
+
+- Custom auth headers for connected MCP servers no longer get stripped after the first request.
+
+- The v0 credit redemption modal no longer hangs on "Verifying" after submitting a usage code.
+
+- Chats with expired Snowflake connections prompt you to reconnect when opened.
+
+March 2026 
+
+Mar 20, 2026 
+## Bug fixes and improvements for Mar 20th
+
+- Added support for .riv file uploads in chat and projects
+
+- Added element screenshot attachment for design mode element selection
+
+- Improved git sync workflow with simplified PR menu
+
+- Fixed design mode sidebar flash during element screenshots
+
+- Fixed layout shift in Data Viewer table titles
+
+- Fixed turborepo interactive task startup issues in the preview
+
+Mar 19, 2026 
+## Bug fixes and improvements for Mar 19th
+
+- Fixed auto-fix not being disabled during restore actions
+
+- Updated Next.js to version 16.2.0
+
+- Improved payment modal styles
+
+- Fixed form submission being blocked while agent is streaming
+
+- Improved error message for repository access to clarify when repo may not exist
+
+- Fixed binary assets not being preserved in git-backed zip imports
+
+Mar 16, 2026 
+## Bug fixes and improvements for Mar 16th
+
+- Added support for linking team skills to design systems
+
+- Added zebra loader animation to preview loading states
+
+- Improved snapshot display to show full version instead of blurred preview
+
+- Improved diff statistics formatting with locale-specific number separators
+
+- Improved sidebar design based on user feedback
+
+- Improved chat title handling with automatic deduplication and branch name syncing
+
+- Added "v0" label to pull requests created by v0
+
+- Improved workspace settings visibility for non-owners with disabled state and tooltips
+
+- Added image generation capability to the Plan agent
+
+- Fixed layout shift in branch skeleton loading state
+
+- Fixed auto-pull to sync changes when PRs are merged outside v0
+
+- Fixed Add to Chat modal dismissal after Git import
+
+Mar 13, 2026 
+## Bug fixes and improvements for Mar 13th
+
+- Added SAML-specific re-authentication link in repository connection dialog
+
+- Fixed iOS dictation causing unwanted textarea expansion in composer
+
+- Updated monthly credit expiry from 30 to 65 days
+
+- Added favicon sync from preview to address bar
+
+- Fixed terminal access when VM is in error state but sandbox is active
+
+- Fixed duplicate 'Duplicate' button appearing for non-owners
+
+Mar 12, 2026 
+## Bug fixes and improvements for Mar 12th
+
+- Improved transfer chat to show only eligible teams with write access
+
+- Added toggle for v0 bot git actions for Team and Business plans
+
+- Improved Snowflake deployment error messages for permission issues
+
+- Fixed deployment protection enforcement and redesigned visibility dropdown
+
+- Fixed Logs panel auto-scrolling when manually scrolled
+
+- Improved code-server loading speed for fresh VMs
+
+- Fixed runtime error notice text legibility
+
+Mar 11, 2026 
+## Bug fixes and improvements for Mar 11th
+
+- Added tooltip to disabled New Chat button for view-only access
+
+- Added hover X button to reset project selector to Draft
+
+- Added one-click marketplace integration installation for iOS app
+
+- Fixed monorepo package.json detection for workspace configs
+
+- Fixed services projects not rendering previews
+
+- Fixed persistent file upload error banner in prompt form
+
+- Fixed password-protected deployments requiring re-authentication
+
+- Improved billing page with credit expiration dates after coupon redemption
+
+- Fixed chat ordering in library views
+
+Mar 10, 2026 
+## Bug fixes and improvements for Mar 10th
+
+- Added visibility and password settings to project settings
+
+- Updated auto model icon to new radial design
+
+- Fixed button loading states and VM diff loading timing
+
+- Fixed git connect dialog flashing sign-in screen during load
+
+- Fixed upgrade CTAs for v0-free team users
+
+- Added tooltip to disabled New Chat button
+
+Mar 9, 2026 
+## Bug fixes and improvements for Mar 9th
+
+- Added support for Nuxt and Nuxt UI frameworks
+
+- Improved the Custom Design System editor interface
+
+- Fixed Analytics not showing for non-git projects after initialization
+
+- Improved error messages when project creation or OAuth flows fail
+
+- Updated the Usage page to show all token cost types in tooltips
+
+- Fixed empty assistant messages appearing when agent is stopped
+
+- Removed spellcheck from the prompt input
+
+Mar 5, 2026 
+## Bug fixes and improvements for Mar 5th
+
+- Fixed attachment deletion issues when switching teams
+
+- Improved settings modal layout and removed double borders
+
+- Added diff/code tab toggle with hover-expand functionality
+
+- Added chevron indicators to project and branch selectors
+
+- Added project screenshot previews on hover in project selector
+
+- Added summary header to diff tab showing file changes
+
+- Fixed duplicate branch creation when duplicating chats
+
+Mar 4, 2026 
+## Bug fixes and improvements for Mar 4th
+
+- Added responsive drag-to-resize handles for the preview panel
+
+- Added dynamic README with project link when connecting GitHub repositories
+
+- Added auto model selection
+
+- Added low-credits warning and auto-recharge opt-in to improve out-of-credits flow
+
+- Added sign-in dialog on public chats for logged-out users
+
+- Improved code language detection when pasting text
+
+- Improved diff navigation with clickable file stats and auto-scrolling
+
+- Fixed share toast showing incorrect "affiliate link copied" message
+
+- Fixed settings dialog to show "Duplicate" option for read-only chats
+
+- Fixed GitHub sync issues when commits fail to push
+
+Mar 3, 2026 
+## Bug fixes and improvements for Mar 3rd
+
+- Added Git support for version control in projects
+
+- Added Python Services support for backend development
+
+- Added model selection when retrying messages
+
+- Improved chat sidebar width for better screen space
+
+- Fixed auto-scroll behavior in chat
+
+- Fixed binary file corruption when downloading files
+
+- Fixed integration permission checks for team roles
+
+- Fixed lockfile not being included in first message
+
+- Updated top bar icons and options
+
+Mar 2, 2026 
+## Bug fixes and improvements for Mar 2nd
+
+- Added "Import from GitHub" option when creating design system templates
+
+- Improved design mode message UI
+
+- Removed tabs from chat sidebar and reorganized settings
+
+- Removed Beta tag from Stripe integration
+
+- Fixed "No Vercel project found" error for git-connected projects on personal accounts
+
+- Fixed preview panel not showing when chat has versioned code blocks
+
+- Fixed design system UI remaining visible after chat starts
+
+- Fixed repository creation being blocked when storage type wasn't set
+
+- Removed "Cooking…" from Slack bot acknowledgment messages
+
+February 2026 
+
+Feb 25, 2026 
+## Bug fixes and improvements for Feb 25th
+
+- Improved package manager detection for imported projects
+
+- Fixed Vercel project recreation when connecting to Git after deletion
+
+- Added account blocked warning in repository connection dialog
+
+- Simplified home page with centered chat input
+
+- Added team setting to allow v0 to open PRs on behalf of members without GitHub accounts
+
+- Added repository information to first message in git-connected chats
+
+- Added "Transfer Chats" option after account upgrade
+
+Feb 23, 2026 
+## Bug fixes and improvements for Feb 23rd
+
+- Added file deletion in the editor
+
+- Improved payment failure handling with automatic refresh when returning to the tab
+
+- Expanded pasted-text file type detection to support 8 additional languages
+
+- Fixed MCP servers to auto-enable when created or connected
+
+- Fixed GitHub pull request creation to handle unauthorized errors
+
+- Fixed credit block pagination to include fully-used expired blocks
+
+- Fixed GitHub connect to use latest chat version instead of stale production block
+
+- Renamed Library page to Chats
+
+Feb 18, 2026 
+## Bug fixes and improvements for Feb 18th
+
+- Added Simplified Chinese (简体中文) language support
+
+- Fixed CSV download on Usage page to export all events instead of just the first page
+
+- Fixed authentication issues with invalidated Vercel tokens
+
+- Fixed personal billing display issues
+
+- Fixed file path resolution for entry points with leading slashes
+
+- Improved error handling and recovery for preview environments
+
+- Improved error popup messaging in chat
+
+- Updated v0 Max Fast icon
+
+- Updated to TailwindCSS 4.2.0
+
+Feb 16, 2026 
+## Bug fixes and improvements for Feb 16th
+
+- Fixed double scrollbar on chat home page
+
+- Fixed VM runtime bugs affecting code execution
+
+Feb 11, 2026 
+## Bug fixes and improvements for Feb 11th
+
+- Added branch picker for Vercel deployments
+
+- Added SSO page for team-specific authentication
+
+- Fixed template creation from forked chats
+
+- Fixed auto-commit on manual edit save
+
+- Fixed preview availability issues
+
+- Improved VS Code theme to match Geist design
+
+- Improved loading states across the app
+
+Feb 10, 2026 
+## Bug fixes and improvements for Feb 10th
+
+- Added support for Nuxt and additional frameworks in Git imports
+
+- Improved file diff view to show lines changed
+
+- Added light and dark mode screenshots for projects
+
+- Fixed blank project template to include all necessary files
+
+- Fixed loading of the latest non-empty block in chat
+
+- Improved VS Code editor layout with activity bar at top by default
+
+- Fixed various 404 errors and authentication issues
+
+- Removed beta badges from chat interface
+
+Feb 9, 2026 
+## Bug fixes and improvements for Feb 9th
+
+- Added ability to favorite Vercel projects for quick access
+
+- Fixed Design System custom preview showing stale content after template changes
+
+- Improved loading states to provide more useful feedback
+
+- Added support for pasting multiple files at once
+
+- Fixed package.json modifications not being detected correctly
+
+- Fixed Edit template button not enabling immediately after ZIP upload
+
+- Improved sidebar pagination to load more items on scroll
+
+- Fixed out of credits dialog not opening correctly
+
+- Synced project and chat names to editor explorer header
+
+Feb 5, 2026 
+## Bug fixes and improvements for Feb 5th
+
+- Added new feature dialogs for v1
+
+- Fixed sharing team folder chats with public/unlisted visibility
+
+- Fixed git deploys in Snowflake apps
+
+- Extended global search to include folders and Vercel projects
+
+- Improved template UX
+
+- Fixed terminal not working when preview fails
+
+- Improved console icons and titles in the editor
+
+January 2026 
+
+Jan 29, 2026 
+## Bug fixes and improvements for Jan 29th
+
+- Added server logs for better debugging
+
+- Improved preview tab interaction in the VM panel
+
+- Added favorite button on chat rows in the library
+
+- Fixed authorization issues preventing unauthorized project access
+
+- Fixed deployment filtering to show correct projects
+
+- Fixed chat header title overflow for long names
+
+- Improved error state UI in preview loading screen
+
+Jan 28, 2026 
+## Import any GitHub repo into v0
+
+You can now import any GitHub repo into v0 and work on your actual codebase.
+
+View your project, edit it, and ship changes to production. All without leaving v0.
+
+Jan 28, 2026 
+## Bug fixes and improvements for Jan 28th
+
+- Improved Git workflow UI on mobile devices
+
+- Added toast notification when pull requests are merged
+
+- Added tooltips for unavailable previews and required status checks
+
+- Added modals for Library and Projects navigation
+
+- Updated "Publish PR" to "Open PR" throughout the interface
+
+- Fixed Data Viewer rendering of Postgres JSON cells
+
+- Fixed GitHub URL pasting and validation issues
+
+- Fixed screenshot fetching for deployments
+
+Jan 27, 2026 
+## Folders and Projects
+
+We simplified how v0 organizes your work.
+
+- Folders : group related chats together.
+
+- Projects : connected to your actual app, with code, environment variables, deployment, and git.
+
+Start a chat in a Project and your infrastructure is already loaded.
+
+Jan 27, 2026 
+## Bug fixes and improvements for Jan 27th
+
+- Fixed GitHub disconnect leaving the UI in a broken state
+
+- Fixed folder rename not refreshing the cache
+
+- Fixed hot module reloading not triggering after file syncs
+
+- Updated token pricing
+
+- Updated documentation for Folders and Libraries features
+
+- Released new GitHub flow
+
+- Released new Folders and Projects structure
+
+Jan 21, 2026 
+## Bug fixes and improvements for Jan 21st
+
+- Added AI SDK v6 support for agents
+
+- Added credit rollover for the following month
+
+- Improved integration card design with less prominent skip button
+
+- Fixed branch naming to use chat title and display in sidebar
+
+Jan 20, 2026 
+## Bug fixes and improvements for Jan 20th
+
+- Improved default repository naming to use Vercel project name
+
+- Fixed preview URLs redirecting instead of rendering correctly
+
+- Fixed design system environment variable dialogs
+
+Jan 19, 2026 
+## Bug fixes and improvements for Jan 19th
+
+- Fixed imports bug in projects
+
+- Fixed Svelte projects when using file tool calls
+
+- Fixed multi-select questions to allow selecting "Other" alongside other options
+
+- Improved pricing structure
+
+- Improved pull request creation with option to push latest changes
+
+Jan 16, 2026 
+## Bug fixes and improvements for Jan 16th
+
+- Fixed fork modal not appearing when users lack write access to a chat in the sidebar
+
+- Fixed JSON schema parsing errors in programmatic API calls
+
+- Fixed .then is not a function error in next-lite runtime
+
+- Added searchable version selector for easier navigation
+
+- Fixed conversations not auto-resuming after all integrations are connected
+
+- Added explanatory messages when non-editable text is detected in Design Mode
+
+- Improved template previews to use deployment URLs
+
+Jan 15, 2026 
+## Bug fixes and improvements for Jan 15th
+
+- Improved model selection to persist per user per team
+
+- Added template categories to organize starter templates
+
+- Updated v0 Max pricing
+
+Jan 14, 2026 
+## Bug fixes and improvements for Jan 14th
+
+- Fixed a rare issue with infinite loading and unresponsive header after login
+
+- Improved chat performance and responsiveness
+
+- Fixed loading state when starting projects from zip files
+
+- Added scope selector in the buy credits dialog
+
+- Improved agent error handling
+
+- Improved front-end performance across the application
+
+Jan 13, 2026 
+## Bug fixes and improvements for Jan 13th
+
+- Added credits display in the user menu
+
+- Fixed Git sync error notifications
+
+- Fixed opening templates that aren't connected to Git
+
+- Fixed agent-installed dependencies not being properly tracked
+
+- Fixed docs footer URL redirect on certain pages
+
+- Fixed all errors related to 'fork keys'
+
+- Fixed an issue with images not being compacted during long chats
+
+Jan 12, 2026 
+## Bug fixes and improvements for Jan 12th
+
+- Added ability to filter templates by paid/free status
+
+- Improved project sorting by relevance
+
+- Fixed Next.js 14 config loading to support function exports
+
+- Fixed deployment crashes caused by certain code patterns
+
+- Fixed wizard dialog and banner responsiveness to preview size settings
+
+- Blocked sending new messages when pending edits exist
+
+Jan 8, 2026 
+## Bug fixes and improvements for Jan 8th
+
+- Improved the speed and token use of the Web Search tool
+
+- Improved how large inputs are stored in the agent's filesystem for better recall
+
+- Attachments added via the ?files parameter are now cloned instead of used directly (requested by ChatPRD )
+
+- Fixed a layout shift when hovering over the upvote/downvote buttons in Safari
+
+- Improved the error message when an Enterprise user adds an integration they don't have access to
+
+- Improved the TailwindCSS v4 upgrade flow
+
+- Fixed a bug causing some Restore actions to fail with a vague error
+
+- Added an inline chat in the new VS Code editor
+
+December 2025 
+
+Dec 22, 2025 
+## Build with Glean via MCP
+
+You can now connect v0 to your Glean workspace and build directly from your company's knowledge.
+
+With Glean connected, you can ask v0 to:
+
+- Generate auth flows from your internal docs
+
+- Design UI from PRDs stored in Glean
+
+- Draft website copy from your latest product updates
+
+Ship with full context using Glean and v0.
+
+View announcement → 
+
+Dec 18, 2025 
+## Keyboard shortcuts in Design Mode
+
+You can now use keyboard shortcuts in v0's design mode.
+
+Navigate elements with arrow keys, enter to edit, and ⌘+click to quick select.
+
+Dec 17, 2025 
+## v0 can now ask clarifying questions
+
+v0 can now ask clarifying questions before it starts generating to better understand your requirements and create more tailored results.
+
+Dec 16, 2025 
+## Linear MCP Integration
+
+You can now connect v0 to your Linear workspace and build straight from your backlog.
+
+With the Linear integration, v0 can:
+
+- Search across your tickets
+
+- Pull in info from your projects, teams, and users
+
+- Create and update issues
+
+View announcement → 
+
+Dec 16, 2025 
+## Build with Notion via MCP
+
+You can now securely connect v0 to your Notion workspace to build using your team's existing context, docs, and databases.
+
+Use Notion x v0 to ship:
+
+- Dashboards and internal tools built from databases
+
+- Prototypes from PRDs
+
+- Presentation slides from outline docs
+
+If it lives in Notion, v0 can build with it.
+
+Read more about how the v0 team replaced a multi-tool workflow with a single prompt using v0 x Notion.
+
+Dec 12, 2025 
+## Three new models to choose from
+
+You can now select from three different models in v0:
+
+- v0 Mini : Fastest and most cost-efficient
+
+- v0 Pro : Superior performance for most tasks
+
+- v0 Max : Maximum intelligence for complex work and best designs
+
+Dec 12, 2025 
+## Additional React Server Components vulnerabilities patched
+
+Following the React2Shell disclosure, two additional vulnerabilities in React Server Components were discovered and patched:
+
+- CVE-2025-55184 : Denial of Service (DoS) vulnerability
+
+- CVE-2025-55183 : Source code disclosure vulnerability
+
+All v0 projects have been automatically updated to protect against these new vulnerabilities. We strongly recommend enabling Standard Protection for all deployments and auditing shareable links.
+
+View Security Bulletin → 
+
+Dec 11, 2025 
+## Search across all your scopes
+
+The command palette now searches across all your accessible workspaces, not just your current one. Results are grouped by workspace with avatars, and your current workspace is shown first. Clicking a result from a different workspace automatically switches to that scope before navigating.
+
+Dec 10, 2025 
+## Bug fixes and improvements for Dec 10th
+
+- Fixed default favicons in deployments
+
+- Added previews for svg and md files to the new editor
+
+- Added default design systems for Teams
+
+- Added automatic oauth refresh for MCP servers
+
+- Added day/week/month usage stats to the Usage page
+
+- Fixed a rare bug with not showing the right import path when there’s a runtime error in the preview
+
+- Fixed the Fix with v0 errors from overflowing when the error was long
+
+Dec 10, 2025 
+## v0's editor just got a major upgrade
+
+v0's editor just got a major upgrade. You can now:
+
+- Edit code in a more stable editor
+
+- Create files and folders
+
+- Search & replace globally across files
+
+- View v0's changes in a new diff view
+
+- Edit files side-by-side with split view
+
+Dec 9, 2025 
+## Bug fixes and improvements for Dec 9th
+
+- Added a /changelog page (that you're looking at now!)
+
+- Updated Linear's logo
+
+- Improved MCP UI styles, minor improvements
+
+- Optimized preview loading performance when using Design Mode
+
+- Made v0 better at writing code for Postgres integrations
+
+- Fixed a bug where pending edits were lost when switching between the Code and Preview panels
+
+- Fixed a bug with showing an AI Gateway connection dialog when it was already connected
+
+- Added an autofixer when v0 writes a middleware.ts file with Next.js 16
+
+- Fixed a bug where certain npm modules failed to load in the preview
+
+Dec 9, 2025 
+## React2Shell Vulnerability Patch
+
+v0 has now automatically updated every React2Shell-vulnerable project deployed with v0, covering more than 800,000 affected deployments.
+
+Going forward, the v0 agent will detect and recommend a free fix for any projects using vulnerable React or Next.js versions.
+
+View announcement → 
+
+Dec 4, 2025 
+## Buy Custom Domains
+
+You can now easily purchase and add custom domains to your v0 projects directly from the in-chat sidebar.
+
+Dec 3, 2025 
+## Bring your own MCPs
+
+You can now bring your own MCPs to v0.
+
+Start with one of our presets or configure your own remote MCP in just a few clicks.
+
+Dec 2, 2025 
+## Project Settings in the Sidebar
+
+You can now access project settings in v0 using the in-chat sidebar.
+
+View connected Vercel Projects, GitHub Repositories, or domains, and easily access project analytics.
+
+November 2025 
+
+Nov 26, 2025 
+## v0 for Students
+
+v0 for Students is now live at 5 more schools:
+
+- San Francisco State University
+
+- Arizona State University
+
+- Georgia Institute of Technology
+
+- University of Waterloo
+
+- New York University
+
+Learn more → 
+
+Nov 25, 2025 
+## Snowflake Integration
+
+Build apps in v0 with your Snowflake data.
+
+Sign up for early access → 
+
+Nov 24, 2025 
+## Claude Opus 4.5 Preview
+
+You can now use v0 with Claude Opus 4.5 at no extra cost.
+
+View announcement → 
+
+Nov 20, 2025 
+## Nano Banana Pro
+
+Nano Banana Pro is now available in v0 via Vercel's AI Gateway.
+
+View announcement → 
+
+Nov 18, 2025 
+## Gemini 3 Pro Preview
+
+All users can now try v0 with Gemini 3 Pro Preview for one week.
+
+View announcement → 
+
+Nov 18, 2025 
+## Sign in with Apple
+
+The v0 iOS app now supports Sign in with Apple.
+
+Get the app → 
+
+Nov 17, 2025 
+## Enterprise
+
+We launched a new Enterprise page.
+
+Learn more → 
+
+Nov 17, 2025 
+## MCP Presets
+
+v0 now supports MCPs for Stripe, Supabase, Neon, and Upstash.
+
+Query databases, seed data, and ask about revenue, all with natural language and zero setup.
+
+View announcement → 
+
+Nov 10, 2025 
+## Stripe Integration
+
+Stripe is now a native integration in v0.
+
+View announcement → 
+
+Nov 5, 2025 
+## Daily Credits
+
+All paid users now get $2 in free credits every day.
+
+View announcement → 
+
+October 2025 
+
+Oct 31, 2025 
+## Business Plan
+
+We launched a new plan: Business.
+
+$100/user/month, sits between Team and Enterprise. Includes training opt-out by default, shared credit purchasing, centralized billing, and team collaboration.
+
+View pricing → 
+
+Oct 31, 2025 
+## Environment-Specific Environment Variables
+
+You can now set environment variables for specific environments in v0—Prod, Preview, Dev, or all.
+
+Oct 31, 2025 
+## Integration Wizard
+
+We launched a new Integration Wizard for connecting integrations and running scripts. Easily connect services like Supabase directly from the chat.
+
+Oct 31, 2025 
+## Work Details
+
+v0 now shows work details after each generation: time worked, files modified, lines of code changed, and credits used.
+
+Oct 30, 2025 
+## Redesigned Chat Sidebar
+
+We redesigned the chat sidebar with better organization, faster navigation, and a cleaner interface.
+
+You can now manage your Integrations, Rules, Environment Variables, and Design Systems all from your v0 sidebar.
+
+Oct 30, 2025 
+## Image Editing with Nano Banana
+
+You can now edit images using Nano Banana in v0. Turn on design mode, select an image, and prompt your changes.
+
+Oct 29, 2025 
+## 12x Faster Chat Loading
+
+Large chats on v0 now load up to 12x faster.
+
+Oct 27, 2025 
+## Referrals Program
+
+Referrals are now live in v0. Invite a new user to subscribe to v0 with your link, and you each get $20 in v0 credits.
+
+Oct 24, 2025 
+## v0 for Students
+
+v0 for students is now live for our first 5 schools: Stanford, Harvard, MIT, and more.
+
+Oct 23, 2025 
+## v0 iOS App
+
+The v0 iOS app is now live on the App Store. Build apps on the go with the full power of v0 in your pocket.
+
+Oct 22, 2025 
+## Next.js 16 Support
+
+v0 now uses Next.js 16 for all new chats.
+
+Oct 21, 2025 
+## Markdown and SVG Preview
+
+You can now preview markdown and SVGs inside v0's editor.
+
+Oct 6, 2025 
+## Custom Instructions
+
+Custom Instructions are now available in v0. Use preset instructions like "Be Concise" and "Plan Mode", or create your own and apply them on-demand.
+
+Oct 3, 2025 
+## Day 1 Support for New shadcn Components
+
+v0 is now the first place you can access the new components by shadcn.
+
+Oct 1, 2025 
+## Fix with v0 is Now Free
+
+It no longer costs credits to use "Fix with v0" when v0 makes an error.
+
+## Product
+
+- Home 
+
+- Enterprise 
+
+- Pricing 
+
+- v0 for Students 
+
+## Company
+
+- Terms 
+
+- AI Policy 
+
+- Privacy 
+
+- Cookies 
+
+## Resources
+
+- FAQs 
+
+- Docs 
+
+- Vercel Community 
+
+- Vercel 
+
+## Social
+
+- Twitter 
+
+- LinkedIn

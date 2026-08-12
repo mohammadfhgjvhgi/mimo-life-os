@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year",
+    "name": "A2A Protocol Surpasses 150 Organizations, Lands in",
+    "snippet": "First production-ready open standard for global AI agent interoperability . SAN FRANCISCO – April 9, 2026 – The A2A (Agent-to-Agent) Protocol ...",
+    "host_name": "www.linuxfoundation.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure",
+    "name": "Announcing the \"AI Agent Standards Initiative\" for",
+    "snippet": "Feb 17, 2026 — The Initiative will ensure that the next generation of AI is widely adopted with confidence, can function securely on behalf of its users, ...",
+    "host_name": "www.nist.gov",
+    "rank": 1,
+    "date": "Feb 17, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://cxfoundation.com/blog/ai-interoperability",
+    "name": "The Ultimate Guide To AI Interoperability",
+    "snippet": "Apr 15, 2026 — In simpler terms, interoperability allows all your AI agents to seamlessly communicate with each other , hand off tasks to each other, and share ...",
+    "host_name": "cxfoundation.com",
+    "rank": 2,
+    "date": "Apr 15, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions",
+    "name": "FIDO Alliance to Develop Standards for Trusted AI Agent",
+    "snippet": "Apr 28, 2026 — 2026 – The FIDO Alliance today announced initiatives to develop interoperable standards for agentic interactions and commerce.",
+    "host_name": "fidoalliance.org",
+    "rank": 3,
+    "date": "Apr 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://intuitionlabs.ai/articles/agentic-ai-foundation-open-standards",
+    "name": "Agentic AI Foundation: Guide to Open Standards for",
+    "snippet": "Dec 11, 2025 — An analysis of the Agentic AI Foundation (AAIF) by the Linux Foundation . Updated April 2026 with 170+ members, MCP's 110M+ monthly downloads ...",
+    "host_name": "intuitionlabs.ai",
+    "rank": 4,
+    "date": "Dec 11, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://zylos.ai/research/2026-02-15-agent-to-agent-communication-protocols",
+    "name": "agent-communication - A2A, MCP, ACP, and ANP",
+    "snippet": "Feb 15, 2026 — A comprehensive analysis of the four major agent interoperability protocols shaping the AI agent ecosystem in 2025- 2026 , from Google's A2A ...",
+    "host_name": "zylos.ai",
+    "rank": 5,
+    "date": "Feb 15, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://datatracker.ietf.org/doc/draft-cui-dmsc-agent-cdi",
+    "name": "Cross-Domain Interoperability Framework for AI Agent",
+    "snippet": "Feb 10, 2026 — This document defines a framework for enabling seamless cross-domain interoperability among AI agents operating across different networks, ...",
+    "host_name": "datatracker.ietf.org",
+    "rank": 6,
+    "date": "Feb 10, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.ruh.ai/blogs/ai-agent-protocols-2026-complete-guide",
+    "name": "AI Agent Protocols 2026: Complete Guide",
+    "snippet": "Jan 16, 2026 — In this guide, we will discover the three major protocols—MCP for agent -to-tool connections, A2A for multi- agent coordination, and ACP for ...",
+    "host_name": "www.ruh.ai",
+    "rank": 7,
+    "date": "Jan 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.facebook.com/TheLinuxFoundation/videos/the-next-chapter-of-ai-is-being-built-around-agents-interoperability-and-open-pr/972456802349088",
+    "name": "The next chapter of AI is being built around agents",
+    "snippet": "The next chapter of AI is being built around agents , interoperability , and open protocols. Join the developers, architects, researchers, ...",
+    "host_name": "www.facebook.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  }
+]

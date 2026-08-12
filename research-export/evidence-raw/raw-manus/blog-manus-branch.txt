@@ -1,0 +1,160 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Introducing Branch: One Context, Many Parallel Directions 
+- 
+- 
+- 
+- 
+
+Features
+Solutions
+Resources
+Events
+Team
+Pricing
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+Get started 
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+Manus is now part of Meta — bringing AI to businesses worldwide
+
+Product · Thursday, July 09 
+
+# Introducing Branch: One Context, Many Parallel Directions
+
+## Work is not linear — your AI shouldn’t be either 
+
+A single research report can become API documentation, a user manual, a flowchart, and a slide deck. An initial idea radiates outward into many parallel tasks of different types. Yet most AI tools force all of that into one forward-moving thread, where every new direction dilutes the context the model has already built. The real cost of starting over is not time — it is losing the accumulated understanding. 
+
+Branch treats that understanding as a reusable asset. Click the branch icon beneath any message and Manus opens a parallel session that inherits everything up to that point — your instructions, your files, and the full history. The original stays exactly as it was. The new branch becomes a separate space where you can take the same starting context somewhere new, without contaminating what came before. 
+
+The result: you can spend the same context many times without depleting it. Each branch keeps its own clean focus, so the work you do in one direction never confuses another. 
+
+## Your context stays intact — you just iterate from it 
+
+When you branch, the new session inherits your files, your instructions, and the full conversation history up to that point. You don’t need to re-upload or re-explain anything. Your original session stays untouched, so the work you’ve already done is not at risk. And because each branch carries its own isolated copy of the context, the directions you explore don’t bleed into each other — Manus stays focused on what that particular branch needs, which keeps output more accurate and focused. A "Branched from" breadcrumb ties every new session back to its origin, so you can always trace where a branch started and navigate between them as your workspace grows. 
+
+## How you might use Branch 
+
+Picture these situations. 
+
+﻿ 
+
+You just finished an online meeting and had Manus put together the notes. The summary looks good, but now you need several things from it: a to-do list for the team, a progress update for your manager, and a slide outline for next week’s review. If you try to produce all of those in the same session, the conversation grows long and Manus’s focus can drift. Instead, you branch from the point where the meeting notes were finalized. Each branch focuses on one output, while the notes themselves — the shared starting point — stay intact in every direction. 
+
+Or say you’re running a market research project. The research itself is an ongoing effort: collecting sources, organizing data, building up a picture over time. But midway through, you want to produce an investor brief based on what you have so far, and separately, an internal analysis report. You don’t have to wait until the research is complete. Branch from the current point, and each branch inherits everything gathered so far. You produce phased outputs while the main thread keeps moving forward. 
+
+Or imagine you’ve spent a session writing and refining a blog post. By the time it’s done, Manus has a deep understanding of the narrative, tone, and key points. Now you want to turn that into a video script. If you keep going in the same session, blog edits and script iterations will get tangled. Branch out, and you can focus the new session entirely on pacing, voiceover, and shot direction — while the script stays grounded in the original piece because it inherited the full context. 
+
+There’s also the running-record pattern: one ongoing session that acts like a living project log, accumulating notes and context over time. Whenever you need a specific deliverable, you branch from the current point to produce it — a plan, a summary, a presentation — and the main thread continues recording and growing. Your “main line” stays a complete project memory, while each branch turns one moment in that record into a finished output. 
+
+The common thread: your work doesn’t have to follow a single straight line. Branch lets you say “I want to go in a new direction from here” at any point, without starting over. 
+
+## How to create a branch 
+
+﻿ 
+
+1 . Hover over any previous message in your conversation. 
+
+2 . Click the branch icon that appears beneath it. 
+
+3 . Wait a moment while Manus spawns the parallel session — you'll see a "Session branched" confirmation. 
+
+4 . Continue in the new branch, which already carries all of your prior context. Repeat from the same message to explore as many parallel directions as you need. 
+
+## Availability 
+
+Session Branching is available to all users in standard Manus chat sessions. It is not currently supported in Web Builder sessions — branching applies to regular conversations and tasks, and support for additional session types may follow. 
+
+## Common questions (FAQ) 
+
+Q: Does branching delete or change my original conversation? 
+
+A: No. Branching creates a separate, parallel session. Your original conversation stays intact and unchanged. 
+
+Q: Does the new branch keep my files and context? 
+
+A: Yes. Everything up to the branch point — instructions, uploaded files, and history — is inherited by the new session automatically. 
+
+Q: Can I create more than one branch from the same message? 
+
+A: Yes. You can branch from the same point as many times as you like to explore multiple parallel directions from one shared context. 
+
+Q: Can I branch from a branch? 
+
+A: Yes. Any standard session can be branched, so you can explore deep decision trees without losing your place. 
+
+Q: Can I branch a Web Builder session? 
+
+A: Not yet. Branching is currently supported in standard Manus chat sessions and is not available for Web Builder. We may extend it to more session types in the future. 
+
+## What comes next 
+
+Branch is a step toward AI that mirrors how you actually think. You don’t hold a body of knowledge and ask one question — you ask many, in many directions, simultaneously. By turning every conversation into a reusable foundation you can build on without depleting, we want the question "what could this become?" to cost nothing but curiosity. 
+
+### Download desktop & mobile app
+Access Manus anytime, anywhere.
+
+macOS Windows iOS Android 
+
+## Less structure,
+more intelligence.
+
+### Product
+Pricing Web app AI design AI slides AI image generator AI music generator Manus browser operator Wide Research Mail Manus Slack integration 
+
+### Resources
+Download Blog Docs Updates Help center Trust center API Team plan Startups Playbook Brand assets 
+
+### Community
+Events Fellows 
+
+### Compare
+VS ChatGPT VS Lovable VS Replit 
+
+### Download
+Mobile app Desktop app My Browser 
+
+### Team
+Team plan SSO API 
+
+### Company
+About us Careers For media Terms of service Privacy policy 
+
+English Deutsch Español Español (Latinoamérica) Français Italiano Português (Brasil) Português (Portugal) Tiếng Việt Türkçe 简体中文 繁體中文 日本語 한국어 العربية ไทย हिन्दी 
+
+© 2026 Meta

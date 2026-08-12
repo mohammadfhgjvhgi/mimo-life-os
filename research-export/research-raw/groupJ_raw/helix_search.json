@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://www.reddit.com/r/HelixEditor/comments/1lv3yok/helix_vs_kakoune",
+    "name": "Helix vs Kakoune : r/HelixEditor",
+    "snippet": "Kakoune and Helix have a very similar modal editing paradigm , Kakoune is basically trying to be a text editor and only that.",
+    "host_name": "www.reddit.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://discuss.kakoune.com/t/helix-vs-kakoune/2108",
+    "name": "Helix vs Kakoune - Help",
+    "snippet": "Aug 25, 2022 — Helix took kakoune's selection first approach , but it did not take the orthogonality and consistency. Kak has a pretty clean codebase with ...",
+    "host_name": "discuss.kakoune.com",
+    "rank": 1,
+    "date": "Aug 25, 2022",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.helix-editor.com/usage.html",
+    "name": "Usage",
+    "snippet": "Helix is a modal editor , ing text directly into the document. Selection-first editing Inspired by Kakoune, Helix follows the selection → action model.",
+    "host_name": "docs.helix-editor.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/helix-editor/helix/discussions/1511",
+    "name": "Are you happy with helix's keybinding model? [User",
+    "snippet": "Dec 18, 2022 — I use Helix as my first modal editor (tried NeoVim and Kakoune before but failed to stick to them). I now use it as my main editor for pretty much everything.",
+    "host_name": "github.com",
+    "rank": 3,
+    "date": "Dec 18, 2022",
+    "favicon": ""
+  },
+  {
+    "url": "https://lobste.rs/s/6zbrhj/i_really_like_helix_editor",
+    "name": "I really like the Helix editor",
+    "snippet": "Jun 28, 2025 — Helix gets rid of keybinds such as dd or D . dd in favor of xd, This follows the 'selection first' principle. First you select something, then ...",
+    "host_name": "lobste.rs",
+    "rank": 4,
+    "date": "Jun 28, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=5WLlLxU2EZE",
+    "name": "Idiot user tries to use Kakoune (for notes? Also Helix?)",
+    "snippet": "Apologies to the Kakoune community that no one is making intelligent videos about your cool editor and you have to put up with this caveman ...",
+    "host_name": "www.youtube.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

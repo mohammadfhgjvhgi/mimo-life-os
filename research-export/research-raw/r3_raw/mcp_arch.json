@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture",
+    "name": "Architecture overview - Model Context Protocol",
+    "snippet": "Connect to local MCP servers · Connect to remote MCP Servers · Build with Agent Skills · Build an MCP server. Clients.",
+    "host_name": "modelcontextprotocol.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-06-18/architecture",
+    "name": "Architecture - Model Context Protocol",
+    "snippet": "The Model Context Protocol (MCP) follows a client-host-server architecture where each host can run multiple client instances.",
+    "host_name": "modelcontextprotocol.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://cloud.google.com/discover/what-is-model-context-protocol",
+    "name": "What is Model Context Protocol (MCP)? A guide | Google Cloud",
+    "snippet": "The MCP client, located within the MCP host, helps the LLM and MCP server communicate with each other. It translates the LLM's requests for the MCP",
+    "host_name": "cloud.google.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@edgar_muyale/understanding-the-mcp-architecture-how-hosts-clients-and-servers-work-together-b835ad923403",
+    "name": "Understanding the MCP Architecture: How Hosts, Clients, and",
+    "snippet": "The Model Context Protocol (MCP) is designed to simplify how AI systems and applications connect. While it follows a familiar client–server ...",
+    "host_name": "medium.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.databricks.com/blog/what-is-model-context-protocol",
+    "name": "What is the Model Context Protocol (MCP)? - Databricks",
+    "snippet": "The MCP architecture organizes integrations around three key roles—MCP servers, MCP clients, and MCP hosts—connected through persistent communication channels. ·",
+    "host_name": "www.databricks.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/mcp/comments/1ucnt47/i_animated_how_the_model_context_protocol_mcp",
+    "name": "I animated how the Model Context Protocol (MCP  - Reddit",
+    "snippet": "MCP flips that: a host runs a client that speaks one protocol (JSON-RPC over stdio or HTTP/SSE) to servers. • Each server exposes 3 things ...",
+    "host_name": "www.reddit.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://stytch.com/blog/model-context-protocol-introduction",
+    "name": "Model Context Protocol (MCP) - Stytch",
+    "snippet": "MCP follows a client-server architecture, where a host application can connect to multiple servers. This architecture enables scalability and ...",
+    "host_name": "stytch.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://cohere.com/blog/guide-to-mcp",
+    "name": "What Is Model Context Protocol (MCP) - Cohere",
+    "snippet": "In this architecture, the AI application acts as the host, while MCP clients connect that host to MCP servers. A single host can connect to ...",
+    "host_name": "cohere.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.traversaal.ai/model-context-protocol-explained-architecture-security-claude-code",
+    "name": "Model Context Protocol Explained: Architecture, Security, and",
+    "snippet": "MCP has three layers (host, client, and server) and each server exposes up to three primitives: tools (actions), resources (readable data), and ...",
+    "host_name": "blog.traversaal.ai",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.redhat.com/en/topics/ai/what-is-model-context-protocol-mcp",
+    "name": "What is Model Context Protocol (MCP)? - Red Hat",
+    "snippet": "Model Context Protocol (MCP) is an open source protocol that enables 2-way connection and standardized communication between AI applications ...",
+    "host_name": "www.redhat.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

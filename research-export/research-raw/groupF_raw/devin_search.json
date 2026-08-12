@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://devin.ai",
+    "name": "Devin | The AI Software Engineer",
+    "snippet": "Devin is an AI coding agent and software engineer that helps developers build better software faster. Parallel cloud agents for serious engineering teams.",
+    "host_name": "devin.ai",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Devin_AI",
+    "name": "Devin AI",
+    "snippet": "Devin AI is an AI-assisted software development tool created by Cognition Labs. It is designed to autonomously complete software development tasks. Read more",
+    "host_name": "en.wikipedia.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://cognition.com/blog/introducing-devin",
+    "name": "Introducing Devin, the first AI software engineer",
+    "snippet": "Dec 3, 2024 — Setting a new state of the art on the SWE-bench coding benchmark. Meet Devin, the world's first fully autonomous AI software engineer .",
+    "host_name": "cognition.com",
+    "rank": 2,
+    "date": "Dec 3, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1qp82lr/where_did_devin_go_what_does_it_say_about_the",
+    "name": "Where did Devin go? What does it say about the future of",
+    "snippet": "Devin didn't fail because the ambition was wrong . It failed because it aimed at a version of autonomy the current models and tooling can't ...",
+    "host_name": "www.reddit.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://amplifilabs.com/post/what-is-devin-ai-the-rise-of-autonomous-software-engineering",
+    "name": "What Is Devin AI: The Rise of Autonomous Software",
+    "snippet": "Devin AI, developed by Cognition Labs, is designed to perform end-to-end software engineering tasks autonomously.",
+    "host_name": "amplifilabs.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

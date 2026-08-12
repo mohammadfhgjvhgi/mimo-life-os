@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://z.ai/blog/glm-4.6v",
+    "name": "GLM-4.6V: Open Source Multimodal Models with Native",
+    "snippet": "Dec 8, 2025 — GLM - 4.6 V scales its context window to 128k tokens in training, and achieves SoTA performance in visual understanding and reasoning among models ...",
+    "host_name": "z.ai",
+    "rank": 0,
+    "date": "Dec 8, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://z.ai/blog/glm-4.6",
+    "name": "GLM-4.6: Advanced Agentic, Reasoning and Coding",
+    "snippet": "Sep 30, 2025 — GLM-4.6 shows a clear improvement in reasoning performance and supports tool use during inference, leading to stronger overall capability.\nResults show clear gains over GLM-4.5, with GLM-4.6 also holding competitive advantages over leading domestic and international models such as DeepSeek-V3.2-Exp and Claude Sonnet 4, but still lags behind Claude Sonnet 4.5 in coding ability.",
+    "host_name": "z.ai",
+    "rank": 1,
+    "date": "Sep 30, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@leucopsis/glm-4-6-review-0600e9425c73",
+    "name": "GLM-4.6 Review",
+    "snippet": "Zhipu AI's GLM-4.6 is the latest among open-weight large language models. It is a 357B-parameter sytem that is poised to rival proprietary ...\nGLM-4.6 Review Updated: January 14th, 2025. Try free GLM-4.7 via web interface; the official Zhipu’s API or on OpenRouter. Zhipu AI’s GLM-4.6 is the latest among open-weight large language …",
+    "host_name": "medium.com",
+    "rank": 2,
+    "date": "Oct 4, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/vibecoding/comments/1osyr6z/zais_glm46_really_strong_budget_option_for",
+    "name": "z.AI's GLM-4.6 — really strong budget option for massive",
+    "snippet": "i became interested in Z.AI around GLM 4.5, because it was a really strong contender for such a small player at the time. then i became really interested ...",
+    "host_name": "www.reddit.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://z.ai/blog/glm-4.7",
+    "name": "GLM-4.7: Advancing the Coding Capability",
+    "snippet": "Dec 22, 2025 — GLM-4.7 takes a major step forward in UI quality . It produces cleaner, more modern webpages and generates better-looking slides with more ...",
+    "host_name": "z.ai",
+    "rank": 4,
+    "date": "Dec 22, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.secondtalent.com/resources/glm-4-6-for-coding-z-ai-chat-review",
+    "name": "GLM 4.6 for Coding: Z.ai Chat Review [2025]",
+    "snippet": "Oct 20, 2025 — This review focuses exclusively on coding performance, assessing how the model handles real-world engineering problems across multiple ...\nGLM 4.6, available through Z.ai Chat, is one of the newest open large language models developed by the GLM/Tsinghua research ecosystem. This review focuses exclusively on coding performance, assessing how the model handles real-world engineering problems across multiple languages.",
+    "host_name": "www.secondtalent.com",
+    "rank": 5,
+    "date": "Oct 20, 2025",
+    "favicon": ""
+  }
+]

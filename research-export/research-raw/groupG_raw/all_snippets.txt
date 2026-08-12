@@ -1,0 +1,239 @@
+=== obsidian ===
+URL: https://www.reddit.com/r/ObsidianMD/comments/1pqhnct/a_graph_view_for_obsidian_vaults_that_you_can 
+NAME: A graph view for Obsidian vaults that you can actually work within 
+SNIPPET: Dec 19, 2025 · can you share the plugin or code or whatever it is? or have you already sent it for verification? im so excited to try this out man. 
+DATE:  
+---
+URL: https://obsidian.md/help/plugins/graph 
+NAME: Graph view - Obsidian Help 
+SNIPPET: Graph view is a core plugin that lets you visualize the relationships between the notes in your vault. To open the Graph view, click Open graph view in the ... 
+DATE:  
+---
+URL: https://forum.obsidian.md/top 
+NAME: Obsidian Forum 
+SNIPPET: Base: Add a Graph View (put graph view in base's view menu) · Feature ... Steward - plugin for AI-powered search, vault management, and automation workflows. 
+DATE:  
+---
+URL: https://www.youtube.com/watch?v=Oygv7Na2FyM 
+NAME: ObsidianTutorial The Most Complete Guide to Obsidian Graph View 
+SNIPPET: May 25, 2026 · I'll walk you through how Graph View works, how to customize it, and how to use it effectively in your note‑taking workflow. By the end of ... 
+DATE:  
+---
+URL: https://www.dsebastien.net/2022-10-19-the-must-have-obsidian-plugins 
+NAME: Discover the Best Obsidian Plugins - Sébastien Dubois 
+SNIPPET: Nov 14, 2024 · The Obsidian Tasks plugin helps you track tasks across your Obsidian vault. It supports due dates, recurring tasks, querying, filtering, etc. 
+DATE:  
+---
+URL: https://forum.obsidian.md/t/vs-code-plugin-the-best-of-both-worlds/6358?page=2 
+NAME: VS Code Plugin - The best of both worlds - Page 2 - Obsidian Forum 
+SNIPPET: Sep 29, 2020 · I'm actually developing a 3D graph view plugin for VSCode now. Already made one for Obsidian: Plugins. I build it for your specific needs! 
+DATE:  
+---
+URL: https://forum.obsidian.md/t/graph-view-ui-and-filters-non-functional-in-main-vault-filter-panel-missing-entirely-in-new- 
+NAME: Graph View UI and filters non-functional in main vault 
+SNIPPET: Apr 3, 2025 · The Graph view lets you visualize the relationships between the notes in your vault. To open the Graph view, click Open graph view in the ... 
+DATE:  
+---
+URL: https://infranodus.com/obsidian-plugin 
+NAME: InfraNodus Obsidian Graph View Plugin with AI Insights & Chat 
+SNIPPET: If you use Obsidian, you can install the InfraNodus graph view plugin that provides advanced 3D network visualization and AI-enhanced text analysis features. 
+DATE:  
+---
+=== heptabase ===
+URL: https://heptabase.com 
+NAME: Heptabase 
+SNIPPET: Ask AI to explain any sources, take notes, and organize your knowledge base for you. · Use whiteboards and cards to clarify your thinking and stay in flow. 
+DATE:  
+---
+URL: https://wiki.heptabase.com/newsletters/2026-03-24 
+NAME: Note Card Highlighting, Web Cards, and more! 
+SNIPPET: Mar 24, 2026 — Select any text, create a highlight card from it, and place it on your whiteboard to think through the key ideas visually . 
+DATE: Mar 24, 2026 
+---
+URL: https://storyflow.so/blog/best-heptabase-alternatives-2026 
+NAME: The 12 Best Heptabase Alternatives in 2026 (We Tested 
+SNIPPET: May 14, 2026 — It put cards on a whiteboard, made the whiteboard the unit of thought , and let visual thinkers stop pretending their notes were a list. 
+DATE: May 14, 2026 
+---
+URL: https://www.youtube.com/watch?v=R0CpFoSJCNc 
+NAME: Heptabase vs Scrintal (2025) | Which Note-Taking App is Better? 
+SNIPPET: Trying to choose between Heptabase and Scrintal in 2025? This video breaks down the key differences between these two powerful visual note- ... 
+DATE:  
+---
+URL: https://medium.com/@danielasgharian/why-heptabase-leads-the-pack-in-visual-note-taking-apps-2125f15c8fbc 
+NAME: Why Heptabase Leads the Pack in Visual Note-Taking Apps 
+SNIPPET: The way Heptabase works is that it has whiteboards, and in these whiteboards, you can add cards . These cards are reusable across multiple ... 
+DATE:  
+---
+URL: https://nesslabs.com/heptabase-featured-tool 
+NAME: Interview with Alan Chan, co-founder of Heptabase 
+SNIPPET: Heptabase, a visual note-taking tool that helps you learn complex topics. Heptabase's whiteboard is designed with two insights. can easily break down lengthy  ... 
+DATE:  
+---
+URL: https://fabric.so/comparison/fabric-vs-heptabase 
+NAME: Fabric vs. Heptabase | Fabric – The workspace that thinks 
+SNIPPET: Heptabase is a visual knowledge management tool built for learning and research. You create cards (notes) and arrange them on whiteboards to see connections ... 
+DATE:  
+---
+URL: https://tana.inc/blog/best-heptabase-alternatives-2026 
+NAME: Best Heptabase alternatives in 2026 
+SNIPPET: Jul 17, 2026 — Heptabase is a strong pick if visual thinking is the deciding factor : an infinite whiteboard where you arrange cards spatially, connect them, ... 
+DATE: Jul 17, 2026 
+---
+=== tana ===
+URL: https://medium.com/@jenstumbles/how-tana-is-helping-me-rethink-my-futures-research-workflow-3595ed9857a7 
+NAME: How Tana is helping me rethink my Futures research workflow. 
+SNIPPET: Jun 23, 2023 · Tana supertags which basically allow you to add in meta data for each tag that creates context and links between different types of knowledge ... 
+DATE:  
+---
+URL: https://outliner.tana.inc/pkm 
+NAME: Tana Outliner for PKM | Personal knowledge management on a 
+SNIPPET: Tana Outliner stores connected nodes in a graph. Supertags and fields let you treat the same information as a note, a task, or a project depending on context. 
+DATE:  
+---
+URL: https://www.youtube.com/watch?v=9TvdfzT-aXs 
+NAME: Does Tana + AI make knowledge "management" obsolete? - YouTube 
+SNIPPET: Mar 26, 2025 · This template has been expanded and upgraded to Giga Brain ➡️ https://strategic-design.co/store/giga-brain Get the Tana Co-pilot (w/ ... 
+DATE:  
+---
+URL: https://uxplanet.org/finally-i-found-it-welcome-tana-1abe9dac0a59 
+NAME: Finally, I found it. Welcome, Tana! - UX Planet 
+SNIPPET: Oct 28, 2022 · supertags, a new concept invented by the developers at Tana. In simple words, you create and assign a supertag to an object and then you can ... 
+DATE:  
+---
+URL: https://www.reddit.com/r/TanaInc/comments/1kijfun/task_mgmt_pkm_will_tana_fit 
+NAME: Task mgmt + pkm - will tana fit ? : r/TanaInc - Reddit 
+SNIPPET: May 9, 2025 · I have been using Tana for 2.5 years and it's my daily driver for managing tasks and work/personal life goals as well as knowledge management. 
+DATE:  
+---
+URL: https://www.superbcrew.com/tana-connects-your-notes-tasks-and-ideas-into-one-ai-powered-workspace 
+NAME: Tana Connects Your Notes, Tasks, And Ideas Into One AI-Powered 
+SNIPPET: Apr 5, 2025 · Tana integrates tasks, notes, meetings, and knowledge into a single, AI-driven environment. By turning unstructured data into usable formats ... 
+DATE:  
+---
+URL: https://fisfraga.substack.com/p/tana-a-knowledge-base-integrated-with-artificial-intelligence 
+NAME: Tana: A Knowledge Base Integrated With Artificial Intelligence to 
+SNIPPET: Apr 18, 2024 · Tana is a state-of-the-art tool for Knowledge Management. Tana is an interconnected knowledge base for your notes. Supertags are Software ... 
+DATE:  
+---
+URL: https://aishortcutlab.com/tools/tana/review 
+NAME: Tana Review (2026): Is It Worth the Learning Curve? - AI Shortcut Lab 
+SNIPPET: Rating 6.5/10 · Review by AI Shortcut Lab Tana has been improving this since 2025 and added basic editing and field support, The interface is clean, minimal, and fast. Analysis Summary · Pricing Reality · Ui/ux Analysis 
+DATE:  
+---
+=== logseq ===
+URL: https://discuss.logseq.com/t/newbi-q-write-everything-in-daily-journal-so-what-about-the-graph/9019 
+NAME: 'write everything in Daily journal', so what about the Graph? 
+SNIPPET: Jul 20, 2022 — Loving the Outliner /Indents view for keeping the focus. Those will be displayed in the graph view and the structure of your notes would emerge. 
+DATE: Jul 20, 2022 
+---
+URL: https://discuss.logseq.com/t/how-to-think-in-bullets/33099 
+NAME: How to think in bullets - General 
+SNIPPET: Aug 10, 2025 — Logseq is more than an outliner , it is a Knowledge Management System. Outliners are not the ultimate solution, graphs are superior. form is an  ... 
+DATE: Aug 10, 2025 
+---
+URL: https://forum.obsidian.md/t/logseq-esque-journal-mode-display-of-daily-notes/50234 
+NAME: Logseq-esque "Journal mode" display of daily notes 
+SNIPPET: Dec 21, 2022 — Add a custom view which shows outline of multiple daily notes with headings, links, tags and list items 
+DATE: Dec 21, 2022 
+---
+URL: https://tfthacker.medium.com/logseq-a-powerful-tool-for-thought-9058dec80dbe 
+NAME: Logseq — A Powerful Tool for Thought - TfTHacker - Medium 
+SNIPPET: Logseq is an open-source note-taking tool based on an outliner editor . Outliners are incredibly efficient editing tools for breaking down ... 
+DATE:  
+---
+URL: https://www.reddit.com/r/logseq/comments/1id1r9m/why_logseq_over_obsidian 
+NAME: Why logseq over obsidian? 
+SNIPPET: Hi!
+
+Just wanted to ask you why you choose Logseq over the obsidian? I’m really curious what was the dealbreaker or what was most convincing thing 
+DATE:  
+---
+URL: https://discuss.logseq.com/t/this-chart-shows-what-makes-logseq-unique/30547 
+NAME: This chart shows what makes Logseq unique - General 
+SNIPPET: Dec 20, 2024 — I made a chart comparing Logseq to several other leading PKMs. I was surprised how many of them lack some basic things I've come to expect ... Read more 
+DATE: Dec 20, 2024 
+---
+URL: https://www.youtube.com/watch?v=_VIUrmZ1f58 
+NAME: Easily Take Organized Notes With LogSeq! Using a Network 
+SNIPPET: In this video, I will walk you through using LogSeq to take notes as you think of them. Then, we create specific research pages and a tasks ... 
+DATE:  
+---
+URL: https://dev.to/koshirok096/the-daily-list-dilemma-logseq-obsidian-and-other-contenders-bite-size-article-218j 
+NAME: Logseq, Obsidian, and Other Contenders (Bite-size Article) 
+SNIPPET: May 2, 2025 — Logseq, an outliner‐style note‐taking tool , to create and manage a daily list of tasks. Journals automatically generates a dated page each day. 
+DATE: May 2, 2025 
+---
+=== roam ===
+URL: https://padminipyapali.medium.com/remembering-with-roam-researchs-%CE%B4-543d717e484 
+NAME: Remembering with Roam Research's Δ - Padmini Pyapali 
+SNIPPET: The block will promptly show up on your daily page the next day. you'll be able to access all references to it easily. You can trace the ... 
+DATE:  
+---
+URL: https://www.zsolt.blog/2021/02/organizing-your-notes-in-roam.html 
+NAME: Organizing Your Notes in Roam - Understanding Pages 
+SNIPPET: Roam is an outliner. You can organize your blocks into an outline using indentation (TAB and Shift+TAB). This approach helps to create context ... 
+DATE: Feb 21, 2021 
+---
+URL: https://www.reddit.com/r/RoamResearch/comments/1lohy8w/june_2025_monthly_recap 
+NAME: r/RoamResearch - [[June 2025]] Monthly Recap 
+SNIPPET: Fabrice pushed a significant update to the LiveAI extension, prioritizing Daily Note Pages to better align with established user workflows. 
+DATE:  
+---
+URL: https://www.youtube.com/watch?v=KoddCmn3eL0 
+NAME: Implementing a Digital Zettelkasten using Block References in 
+SNIPPET: Implementing a Digital Zettelkasten using Block References in Roam Research with Beau Haan. 
+DATE:  
+---
+URL: https://www.facebook.com/groups/researchroam/posts/261456959137344 
+NAME: Best methods for daily notes mechanics in Roam 
+SNIPPET: Hello Roam Community, 
+Can someone recommend their favorite article or video regarding best methods for Daily Notes? Specifically, I'm not looking ... 
+DATE:  
+---
+URL: https://forum.obsidian.md/t/using-daily-notes-as-a-convert-from-roam/15393 
+NAME: Using Daily Notes as a convert from Roam 
+SNIPPET: In Roam, the DNP is where all the writing & linking is done. It's where you construct and reference different ideas, blocks, and pages. The ... 
+DATE: Mar 27, 2021 
+---
+URL: https://roamresearch.com 
+NAME: Roam Research – A note taking tool for networked thought. 
+SNIPPET: As easy to use as a word document or bulleted list, and as powerful for finding, collecting, and connecting related ideas as a graph database. 
+DATE:  
+---
+URL: https://forum.zettelkasten.de/discussion/1802/on-roam-research 
+NAME: On Roam Research 
+SNIPPET: I discuss some of the interesting features of Roam Research, and then show how I use these features to organize my notes. the daily note for ... 
+DATE: May 4, 2021 
+---
+=== anytype ===
+URL: https://anytype.io 
+NAME: Anytype — A safe haven for digital collaboration 
+SNIPPET: Create notes, tasks, databases, and chats that only you can access. Your data stays on your device — fully owned, secure, and private. Free to start. 
+DATE:  
+---
+URL: https://volodymyrpavlyshyn.medium.com/anytype-from-second-brain-to-social-brain-with-types-and-graphs-e6eb6611ec7d 
+NAME: Anytype: From Second Brain to Social Brain with Types and 
+SNIPPET: Anytype's fundamental philosophy is “ local - first ,” meaning data resides on the user's device by default, ensuring privacy and offline access.3 
+DATE:  
+---
+URL: https://www.reddit.com/r/Anytype/comments/1p79jtt/anytype_is_deteriorating 
+NAME: Anytype is deteriorating 
+SNIPPET: Does anyone else feel like Anytype's UI & UX is getting progressively worse? When I started there was a big plus button to create a new ... Read more 
+DATE:  
+---
+URL: https://apps.apple.com/my/app/anytype-the-everything-app/id6449487029 
+NAME: Anytype - The Everything App 
+SNIPPET: Anytype is a private, offline- first workspace for notes, docs, tasks, and team collaboration — end-to-end encrypted, with your data stored on your device. Read more 
+DATE:  
+---
+URL: https://doc.anytype.io/anytype/create/objects 
+NAME: Objects 
+SNIPPET: With Anytype , you create an Object and add relationships over time. This builds a flexible system of interconnected knowledge that doesn't care where something ... Read more 
+DATE:  
+---
+URL: https://hilton.org.uk/blog/anytype-local-first 
+NAME: Anytype's local-first architecture - Peter Hilton 
+SNIPPET: May 27, 2025 — Local - first literally means storing all of the data locally, on your computer. When you use Anytype , this data loads without the network latency ... Read more 
+DATE: May 27, 2025 
+---

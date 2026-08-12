@@ -1,0 +1,27 @@
+TITLE: Rules | Cursor Docs
+DESCRIPTION: Configure persistent instructions with Project, Team, and User Rules, plus AGENTS.md. Learn best practices for effective coding guidelines.
+
+- 
+
+- 
+
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Rules | Cursor Docs 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+-

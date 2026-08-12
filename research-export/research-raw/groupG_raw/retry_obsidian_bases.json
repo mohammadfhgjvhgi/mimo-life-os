@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://www.reddit.com/r/ObsidianMD/comments/1l4sx07/first_look_at_the_obsidian_bases_core_plugin_full",
+    "name": "First Look At The Obsidian Bases Core Plugin  Full Overview",
+    "snippet": "You can create editable tables that allow you to modify the properties directly within the table (aka batch editing). Bases also takes the ...",
+    "host_name": "www.reddit.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://obsidian.md/help/bases",
+    "name": "Introduction to Bases - Obsidian Help",
+    "snippet": "Bases is a core plugin that lets you create database-like views of your notes. Using a base you can view, edit, sort, and filter files and their properties.",
+    "host_name": "obsidian.md",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.obsidian.md/t/bases-display-access-and-or-filter-using-the-notes-content/101378",
+    "name": "Display, Access (and/or Filter using) the Note's Content",
+    "snippet": "May 31, 2025 — Base views currently only allow filtering based on property values, but sometimes you need to search within the actual content of notes.",
+    "host_name": "forum.obsidian.md",
+    "rank": 2,
+    "date": "May 31, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://practicalpkm.com/bases-plugin-overview",
+    "name": "An Overview of the Bases Core Plugin in Obsidian",
+    "snippet": "May 26, 2025 — The ability to create dynamic table views using data stored in note properties . The functionality is delivered via a new Core Plugin , Bases .",
+    "host_name": "practicalpkm.com",
+    "rank": 3,
+    "date": "May 26, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@lennart.dde/unlocking-the-magic-of-bases-in-obsidian-75abb29f0df2",
+    "name": "Unlocking the Magic of Bases in Obsidian | by Len",
+    "snippet": "Bases allows you to create views — custom tables of your notes — based on properties (your note metadata), folders, tags, and even dates.",
+    "host_name": "medium.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

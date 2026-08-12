@@ -1,0 +1,365 @@
+TITLE: Codex CLI
+
+- 
+
+- 
+
+- 
+- 
+- 
+- Codex CLI 
+- 
+- 
+- 
+Resources 
+Codex 
+ChatGPT Apps SDK
+Build apps to extend ChatGPT 
+
+Agentic Commerce
+Build commerce flows in ChatGPT 
+
+Blog 
+
+Search the Codex docs
+
+Close
+
+Primary navigation Codex Resources Codex ChatGPT Blog 
+
+- Home 
+
+- Changelog 
+
+Categories 
+
+- Code 
+
+- Cookbooks 
+
+- Guides 
+
+- Videos 
+
+Topics 
+
+- Agents 
+
+- Audio & Voice 
+
+- Image generation 
+
+- Video generation 
+
+- Tools 
+
+- Computer use 
+
+- Fine-tuning 
+
+- Scaling 
+
+Getting Started 
+
+- Overview 
+
+- Quickstart 
+
+- Pricing 
+
+- Concepts 
+- Prompting 
+
+- Workflows 
+
+- Models 
+
+- AI-Native Teams 
+
+Using Codex 
+
+- IDE Extension 
+- Overview 
+
+- Features 
+
+- Settings 
+
+- IDE Commands 
+
+- Slash commands 
+
+- CLI 
+- Overview 
+
+- Features 
+
+- Command Line Options 
+
+- Slash commands 
+
+- Web 
+- Overview 
+
+- Environments 
+
+- Internet Access 
+
+- Integrations 
+- GitHub 
+
+- Slack 
+
+- Linear 
+
+Configuration 
+
+- Config File 
+- Basic Config 
+
+- Advanced Config 
+
+- Config Reference 
+
+- Sample Config 
+
+- Execution Policy 
+
+- AGENTS.md 
+
+- Custom Prompts 
+
+- MCP 
+
+- Skills 
+- Overview 
+
+- Create skills 
+
+Administration 
+
+- Authentication 
+
+- Security 
+
+- Enterprise 
+
+- Windows 
+
+Automation 
+
+- Non-interactive Mode 
+
+- Codex SDK 
+
+- MCP Server 
+
+- GitHub Action 
+
+Releases 
+
+- Changelog 
+
+- Feature Maturity 
+
+- Open Source 
+
+- Apps SDK 
+
+- Agentic Commerce 
+
+- All posts 
+
+Recent 
+
+- OpenAI for Developers in 2025 
+
+- Updates for developers building with voice 
+
+- What makes a great ChatGPT app 
+
+- Using Codex for education at Dagster Labs 
+
+- How Codex ran OpenAI DevDay 2025 
+
+Search 
+⌘
+
+K
+
+Getting Started
+
+- Overview 
+
+- Quickstart 
+
+- Pricing 
+
+- Concepts 
+- Prompting 
+
+- Workflows 
+
+- Models 
+
+- AI-Native Teams 
+
+Using Codex
+
+- IDE Extension 
+- Overview 
+
+- Features 
+
+- Settings 
+
+- IDE Commands 
+
+- Slash commands 
+
+- CLI 
+- Overview 
+
+- Features 
+
+- Command Line Options 
+
+- Slash commands 
+
+- Web 
+- Overview 
+
+- Environments 
+
+- Internet Access 
+
+- Integrations 
+- GitHub 
+
+- Slack 
+
+- Linear 
+
+Configuration
+
+- Config File 
+- Basic Config 
+
+- Advanced Config 
+
+- Config Reference 
+
+- Sample Config 
+
+- Execution Policy 
+
+- AGENTS.md 
+
+- Custom Prompts 
+
+- MCP 
+
+- Skills 
+- Overview 
+
+- Create skills 
+
+Administration
+
+- Authentication 
+
+- Security 
+
+- Enterprise 
+
+- Windows 
+
+Automation
+
+- Non-interactive Mode 
+
+- Codex SDK 
+
+- MCP Server 
+
+- GitHub Action 
+
+Releases
+
+- Changelog 
+
+- Feature Maturity 
+
+- Open Source 
+
+*+*]:mt-3"> 
+Copy Page More page actions 
+
+Copy Page More page actions 
+
+Codex CLI 
+Pair with Codex in your terminal
+
+Codex CLI is OpenAI’s coding agent that you can run locally from your terminal. It can read, change, and run code on your machine in the selected directory.
+It’s open source and built in Rust for speed and efficiency.
+
+Codex is included with ChatGPT Plus, Pro, Business, Edu, and Enterprise plans. Learn more about what’s included .
+
+CLI setup
+
+Choose your package manager npm Homebrew 
+
+- 1 Install
+
+Install the Codex CLI with npm .
+npm install command npm i -g @openai/codex Copy 
+
+- 2 Run
+
+Run Codex in a terminal. It can inspect your repository, edit files, and run commands.
+Run Codex command codex Copy 
+
+The first time you run Codex, you'll be prompted to sign in. Authenticate with your ChatGPT account or an API key.
+See the pricing page if you're not sure which plans include Codex access.
+
+- 3 Upgrade
+
+New versions of the Codex CLI are released regularly. See the changelog for release notes. To upgrade with npm , run:
+npm upgrade command npm i -g @openai/codex@latest Copy 
+
+The Codex CLI is available on macOS and Linux. Windows support is
+experimental. For the best Windows experience, use Codex in a WSL workspace
+and follow our Windows setup guide .
+
+Work with the Codex CLI
+
+Run Codex interactively 
+Run codex to start an interactive terminal UI (TUI) session.
+
+Control model and reasoning 
+Use /model to switch between GPT-5-Codex and GPT-5, or adjust reasoning levels.
+
+Image inputs 
+Attach screenshots or design specs so Codex reads them alongside your prompt.
+
+Run local code review 
+Get your code reviewed by a separate Codex agent before you commit or push your changes.
+
+Web search 
+Use Codex to search the web and get up-to-date information for your task.
+
+Codex Cloud tasks 
+Launch a Codex Cloud task, choose environments, and apply the resulting diffs without leaving your terminal.
+
+Scripting Codex 
+Automate repeatable workflows by scripting Codex with the exec command.
+
+Model Context Protocol 
+Give Codex access to additional third-party tools and context with Model Context Protocol (MCP).
+
+Approval modes 
+Choose the approval mode that matches your comfort level before Codex edits or runs commands.
+
+Next
+
+Features

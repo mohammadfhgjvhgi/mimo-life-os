@@ -1,0 +1,861 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Introducing the new v0 API - Vercel 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+Skip to content 
+
+Copy Logo as SVG Copy Wordmark as SVG Brand Guidelines 
+Products 
+##### Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Passport 
+
+- Connect 
+
+- eve 
+
+##### Core Platform
+
+- Security 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+- Workflows 
+
+- CI/CD 
+
+##### Tools
+
+- Next.js 
+
+- Vercel Agent 
+
+- Vercel Plugin 
+
+- Domains ↗ 
+
+- v0 ↗ 
+
+Resources 
+##### Learn
+
+- Docs 
+
+- About 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+##### Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+##### Explore
+
+- Customers 
+
+- Marketplace 
+
+- Partner Finder 
+
+- AWS 
+
+- Community ↗ 
+
+Enterprise Pricing 
+Get a Demo Log In Sign Up 
+Ask AI Dashboard 
+
+Products 
+### Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Passport 
+
+- Connect 
+
+- eve 
+
+### Core Platform
+
+- Security 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+- Workflows 
+
+- CI/CD 
+
+### Tools
+
+- Next.js 
+
+- Vercel Agent 
+
+- Vercel Plugin 
+
+- Domains ↗ 
+
+- v0 ↗ 
+
+Resources 
+### Learn
+
+- Docs 
+
+- About 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+### Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+### Explore
+
+- Customers 
+
+- Marketplace 
+
+- Partner Finder 
+
+- AWS 
+
+- Community ↗ 
+
+Enterprise 
+Pricing 
+
+Get a Demo Log In Sign Up 
+
+# Introducing the new v0 API
++2 
+
+Esteban Suárez , Fernando Rojo , Alex Grover , Rickey McGregor 
+
+Blog Field Engineering 
+
+5 Aug 2026 
+5 min read
+Copy 
+
+Today we're introducing the new v0 API : programmatic, headless access to v0 's app-building agent. Send a prompt and v0 generates an app, starts a dev server in a Vercel Sandbox , and gives you a preview URL you can embed in your own UI.
+Each chat is an isolated workspace for one app, where v0 can read, edit, and run the files. Follow-up messages continue from the current state. v0 verifies the code running in the Sandbox, so it can catch and fix errors in your app in real time.
+The new API is now generally available. 
+
+## Copy link to heading How it works
+Create a chat from a prompt, stream its work, and render the live preview, all from your own interface. First, install the v0 SDK.
+
+pnpm add v0@latest 
+
+Then, create a chat. Send a prompt, and v0 generates your app.
+
+1 import { v0 } from 'v0' 
+
+2 
+
+3 const result = await v0 . chats . create ( { 
+
+4 message : 'Build an issue triage app for a support team.' , 
+
+5 } ) 
+
+6 
+
+7 if ( result . error ) { 
+
+8 throw new Error ( result . error . message ) 
+
+9 } 
+
+10 
+
+11 const chatId = result . data . chat . id 
+
+Create a chat and keep its ID for every later request.
+
+Send follow-up messages to the same chat to keep building. Each one continues from the current state.
+
+1 const message = await v0 . messages . send ( { 
+
+2 chatId , 
+
+3 message : 'Add a priority filter and an assignee column.' , 
+
+4 } ) 
+
+5 
+
+6 if ( message . error ) { 
+
+7 throw new Error ( message . error . message ) 
+
+8 } 
+
+Send a follow-up; v0 edits the existing app in place.
+
+Then embed the app.
+
+< iframe src = "/api/v0-preview/chat_abc123/" / > 
+
+Embed the app by pointing an iframe at your proxy route.
+
+A prompt goes in, a running app comes out. v0 operates the Sandbox, dev server, and preview behind it. When you're ready, deploy to Vercel in one API call. v0 manages the whole pipeline.
+
+## Copy link to heading What this unlocks
+The new API lets you run v0 's app builder inside your own product or pipeline. This opens use cases like:
+
+- A white-labeled app builder: Your users describe an app and get one back.
+
+- Automated app changes: Trigger v0 from a script, CI job, or webhook to generate a new app or update an existing one.
+
+- A build tool for your agents: An agent hands back a working app instead of a code snippet.
+
+Below, we break down the API primitives behind this workflow.
+
+## Copy link to heading Start with a chat
+Each chat holds the state for one app, and a repo or Vercel project can have many. Keep each chat's ID and send its follow-up messages to that chat. Metadata lets you group chats by customer, workspace, app, or any key you already use.
+Learn more about messages .
+
+## Copy link to heading Stream the trace
+Your interface needs to show what happens between sending a request and seeing the updated preview.
+Every message includes ordered parts : text, thinking, file reads and edits, searches, bash commands, tool calls, and agent actions. The same object can drive a one-line status, a changed-files view, or the full trace.
+
+1 const stream = await v0 . messages . sendStream ( { 
+
+2 chatId : 'chat_abc123' , 
+
+3 message : 'Add authentication and explain the files you changed.' , 
+
+4 } ) 
+
+5 
+
+6 for await ( const update of stream . stream ) { 
+
+7 console . log ( update . parts ) 
+
+8 if ( update . usage ) { 
+
+9 console . log ( update . usage ) 
+
+10 } 
+
+11 } 
+
+Stream a message's work; each update is a full snapshot of parts.
+
+Usage is returned with chat and message responses, so you can account for the work when it finishes. 
+
+## Copy link to heading Choose sync, async, or streaming
+Chat creation and messages support synchronous, asynchronous, and streaming responses. Use sync when the caller needs the completed response. Use async to queue the work and receive updates via webhook or poll for v0 's response later. Stream the request to render v0 's work as it happens.
+
+1 const message = 'Build an issue triage app for a support team.' 
+
+2 
+
+3 // Wait for the completed response. 
+
+4 const completed = await v0 . chats . create ( { message } ) 
+
+5 
+
+6 if ( completed . error ) { 
+
+7 throw new Error ( completed . error . message ) 
+
+8 } 
+
+9 
+
+10 // Queue work and use the returned IDs to retrieve the result later. 
+
+11 const queued = await v0 . chats . createAsync ( { message } ) 
+
+12 
+
+13 if ( queued . error ) { 
+
+14 throw new Error ( queued . error . message ) 
+
+15 } 
+
+16 
+
+17 console . log ( queued . data . chatId , queued . data . messageId ) 
+
+18 
+
+19 // Receive the agent's work as it happens. 
+
+20 const stream = await v0 . chats . createStream ( { message } ) 
+
+Create a chat three ways: await, queue, or stream the same prompt.
+
+## Copy link to heading Work from existing code
+You can also create a chat from a repository, ZIP archive, or set of files. 
+
+1 const result = await v0 . chats . createFromRepo ( { 
+
+2 repo : { 
+
+3 url : 'https://github.com/acme/app' , 
+
+4 branch : 'main' , 
+
+5 } , 
+
+6 title : 'Acme app' , 
+
+7 metadata : { 
+
+8 source : 'github' , 
+
+9 } , 
+
+10 } ) 
+
+11 
+
+12 if ( result . error ) { 
+
+13 throw new Error ( result . error . message ) 
+
+14 } 
+
+15 
+
+16 const chatId = result . data . chat . id 
+
+17 console . log ( chatId ) 
+
+Create a chat from an existing repo.
+
+## Copy link to heading Render the dev server preview
+Each chat gets a short-lived preview token. Fetch it from a server route and proxy browser requests through it, so your v0 API key never reaches the browser. When a preview is ready, traffic forwards to it; while the Sandbox spins up, requests fall back to a loading route. Point an iframe at your proxy route and cache the preview details until they expire.
+
+1 import { fetchPreview , v0 } from 'v0' 
+
+2 
+
+3 export async function proxyPreviewRequest ( 
+
+4 request : Request , 
+
+5 chatId : string , 
+
+6 path : string [ ] , 
+
+7 ) { 
+
+8 const result = await v0 . chats . getPreview ( { chatId } ) 
+
+9 
+
+10 if ( result . error ) { 
+
+11 throw new Error ( result . error . message ) 
+
+12 } 
+
+13 
+
+14 return fetchPreview ( { 
+
+15 request , 
+
+16 preview : result . data , 
+
+17 path , 
+
+18 fallbackUrl : ` /api/v0-preview/ ${ chatId } /loading ` , 
+
+19 } ) 
+
+20 } 
+
+Proxy preview requests through a server route.
+
+Read more about Accessing Previews in the docs.
+
+## Copy link to heading Bring your own tools and design systems
+Turn on specific MCP servers for a chat, or use the defaults.
+Design Systems 2.0 saves a design system as a skill. Include it in a request to load its components, tokens, setup, and starter app.
+
+1 const designSystem = { 
+
+2 type : 'memory' , 
+
+3 scope : 'team' , 
+
+4 skillName : 'geist-ui' , 
+
+5 } 
+
+6 
+
+7 const result = await v0 . chats . create ( { 
+
+8 message : 'Build an admin console with filters and charts.' , 
+
+9 skills : [ 
+
+10 designSystem , 
+
+11 ] , 
+
+12 } ) 
+
+Create a chat with a design system loaded as a skill.
+
+You can pass up to three skills per request, from team or user memory, skills.sh , or the connected repo, or let the agent pull them in for you.
+
+## Copy link to heading Use v0 from agents
+If you're building an agent, give it v0 as a tool. When the agent needs to produce a working app, it calls v0 , and gets back a running preview or deployment to hand to the user. Your agent stays in charge of everything else.
+There are three ways to connect it:
+
+### Copy link to heading MCP
+Connect the v0 MCP server to an IDE, desktop assistant, or agent runtime that supports MCP. 
+
+1 { 
+
+2 "mcpServers" : { 
+
+3 "v0" : { 
+
+4 "url" : "https://v0.app/api/mcp" 
+
+5 } 
+
+6 } 
+
+7 } 
+
+The v0 server entry for your MCP client.
+
+The first connection starts an OAuth flow. The MCP server exposes tools for creating chats, listing chats, getting chat details, listing and sending messages, resolving pending tasks, and getting preview URLs.
+
+### Copy link to heading AI SDK
+For TypeScript agents built with AI SDK , use @ v0 -sdk/ai-tools to expose v0 's API operations as tools in the agent's own loop.
+
+pnpm add @v0-sdk/ai-tools ai @ai-sdk/openai 
+
+Install the v0 tools with the AI SDK and a provider.
+
+1 import { openai } from '@ai-sdk/openai' 
+
+2 import { generateText , stepCountIs } from 'ai' 
+
+3 import { v0ToolsByCategory } from '@v0-sdk/ai-tools' 
+
+4 
+
+5 const { chats , messages } = v0ToolsByCategory ( ) 
+
+6 
+
+7 const result = await generateText ( { 
+
+8 model : openai ( 'gpt-5.5' ) , 
+
+9 system : ` Use v0 for creating and modifying web apps. Continue an existing v0 chat when a chat ID is available. ` , 
+
+10 prompt : 'Build a customer insights app with charts.' , 
+
+11 tools : { 
+
+12 ... chats , 
+
+13 ... messages , 
+
+14 } , 
+
+15 stopWhen : stepCountIs ( 10 ) , 
+
+16 } ) 
+
+Give an AI SDK agent v0's chat and message tools.
+
+The agent decides when to create or continue a chat. Your AI SDK run keeps control of the orchestration and final response.
+
+### Copy link to heading eve
+For eve agents, add an OpenAPI connection file. eve turns the allowed operations into tools and attaches the API key at execution time, out of model context. 
+
+1 import { defineOpenAPIConnection } from 'eve/connections' 
+
+2 
+
+3 export default defineOpenAPIConnection ( { 
+
+4 spec : 'https://api.v0.dev/v2/openapi/json' , 
+
+5 baseUrl : 'https://api.v0.dev/v2' , 
+
+6 description : 
+
+7 'Build and iterate on web apps with v0. Reuse one v0 chat per app-building task.' , 
+
+8 auth : { 
+
+9 getToken : async ( ) => ( { token : process . env . V0_API_KEY ! } ) , 
+
+10 } , 
+
+11 operations : { 
+
+12 allow : [ 
+
+13 'chats_create' , 
+
+14 'messages_send' , 
+
+15 'messages_resolve' , 
+
+16 'chats_getPreview' , 
+
+17 ] , 
+
+18 } , 
+
+19 } ) 
+
+Register v0 as an eve connection, allow-listing its operations.
+
+## Copy link to heading Connect a Vercel project
+Create a Vercel project for the chat, then manage its environment variables, integrations, and settings through the Vercel API. Your apps get Vercel's security and observability by default.
+
+1 const result = await v0 . chats . createVercelProject ( { 
+
+2 chatId : 'chat_123' , 
+
+3 } ) 
+
+4 
+
+5 if ( result . error ) { 
+
+6 throw new Error ( result . error . message ) 
+
+7 } 
+
+8 
+
+9 const vercelProjectId = result . data . vercelProjectId 
+
+Attach a Vercel project to a chat.
+
+When you're ready to ship, deploy the chat to Vercel. 
+
+1 const result = await v0 . chats . deploy ( { chatId } ) 
+
+2 
+
+3 if ( result . error ) { 
+
+4 throw new Error ( result . error . message ) 
+
+5 } 
+
+6 
+
+7 const { deploymentId , vercelProjectId } = result . data 
+
+Ship the chat to Vercel.
+
+## Copy link to heading Migrate your chats
+Chats from the previous version of the v0 API don’t run on the new one, so carry them forward. Pick the version you want to keep, download it as a ZIP, and create a new chat from that ZIP. Store the old identifiers in the new chat’s metadata if you need traceability.
+The migration guide covers the full mapping. The main changes:
+
+- Use https://api. v0 .dev/v2 for new requests.
+
+- The chat holds current app state, and messages hold its history.
+
+- Replace version workflows with chat file workflows, and v0 Project organization with chat metadata.
+
+- Use vercelProjectId plus the Vercel API for project operations.
+
+- Render message parts , not only final text.
+
+## Copy link to heading Get started
+Create an API key in v0 settings and install the SDK. 
+
+pnpm add v0@latest 
+
+Or, scaffold a full app. 
+
+pnpm create v0-sdk-app@latest my-v0-app 
+
+Read the documentation and migration guide .
+Build your first app-generation interface with the v0 API. 
+Read the quickstart guide to go from a prompt to a running app in your own UI.
+
+Get Started
+
+## Contributors
+
+Amelia Charles 
+
+## Ready to deploy?
+Start deploying Talk to an expert 
+
+## Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Workflows 
+
+- Connect New 
+
+- Passport New 
+
+- eve New 
+
+## Core Platform
+
+- CI/CD 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+## Security
+
+- Platform Security 
+
+- WAF 
+
+- Bot Management 
+
+- Bot ID 
+
+## Tools
+
+- Vercel Drop New 
+
+- Vercel Agent 
+
+- Vercel Plugin New 
+
+- Agent Skills 
+
+- Next.js 
+
+- Domains 
+
+- v0 
+
+## Frameworks
+
+- eve New 
+
+- Nuxt 
+
+- SvelteKit 
+
+- Nitro 
+
+- Turborepo 
+
+- Tanstack Start 
+
+- FastAPI 
+
+- xmcp 
+
+- All frameworks 
+
+## SDKs
+
+- Vercel SDK 
+
+- Workflow SDK New 
+
+- Flags SDK 
+
+- Chat SDK New 
+
+- Queues SDK New 
+
+- Streamdown 
+
+## Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+- Platform Engineers 
+
+- Design Engineers 
+
+## Learn
+
+- Docs 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+- Academy 
+
+- Articles 
+
+- Community 
+
+## Explore
+
+- Customers 
+
+- Marketplace 
+
+- Templates 
+
+- Partner Finder 
+
+- Vercel + AWS 
+
+## Company
+
+- About 
+
+- Careers 
+
+- Press 
+
+- Events 
+
+- Startups 
+
+- Shipped on Vercel 
+
+- Open Source Program 
+
+- Enterprise 
+
+- Pricing 
+
+- Help 
+
+## Legal & Trust
+
+- Privacy Policy 
+
+- Terms of Service 
+
+- Cookie Policy 
+
+- DPA 
+
+- Acceptable Use Policy 
+
+- Legal (all documents) 
+
+- Trust Center 
+
+- Status 
+
+- Cookie Preferences 
+
+## Social
+
+- GitHub 
+
+- X 
+
+- LinkedIn 
+
+- YouTube 
+
+- Instagram 
+
+- 
+
+Loading status…
+
+Select a display theme: system light dark

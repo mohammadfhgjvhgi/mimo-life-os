@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+	<meta charset="utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="mask-icon" href="/apple-logo.svg" color="#333333">
+
+<link rel="stylesheet" href="/assets/styles/global.dist.css?19212626191" type="text/css" />
+<link rel="stylesheet" href="/assets/styles/dark-mode.css?34212621148" type="text/css" media="(prefers-color-scheme: dark)" data-color-scheme="dark" />
+<link rel="stylesheet" href="/assets/styles/localization.css?34212621148" type="text/css" />
+
+<script src="/assets/scripts/lib/jquery/jquery-3.6.0.min.js?35212621148"></script>
+<script src="/assets/scripts/settings.js?35212621148"></script>
+<script src="/assets/scripts/language-locales.js?50222638203"></script>
+<script src="/assets/scripts/DeveloperBreadcrumbs.js?35212621148"></script>
+<script src="/assets/metrics/scripts/analytics-module.js?35212621148"></script>
+
+<script async src="/assets/scripts/retinate.js?35212621148"></script>
+<script src="/assets/scripts/global-logout.js?35212621148"></script>
+
+<script async crossorigin src="https://sfss.cdn-apple.com/2.0.0-beta.2/sf-symbol.js?24142617219"></script>
+
+
+
+<template id="account-menu-authenticated-template">
+  <div
+    class="account-menu-user-header"
+    role="banner"
+    aria-label="User information"
+    data-aria-label="userInformation"
+  >
+    <div
+      class="account-menu-avatar"
+      data-slot="initial"
+      aria-hidden="true"
+    ></div>
+    <div class="account-menu-user-info">
+      <div class="account-menu-user-name" data-slot="name"></div>
+      <div class="account-menu-user-email" data-slot="email"></div>
+    </div>
+  </div>
+  <hr class="account-menu-divider" role="separator" />
+  <nav aria-label="Account actions" data-aria-label="accountActions">
+    <a href="/account" class="account-menu-link">
+      <span class="account-menu-link-icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.045 70.459" focusable="false" class="account-menu-link-icon" aria-hidden="true" style="width: 1.17045em; overflow: visible;">
+        <path fill="currentColor" d="M58.496 84.972C85.999 84.972 108.321 62.701 108.321 35.198C108.321 7.695 85.999-14.575 58.496-14.575C31.045-14.575 8.723 7.695 8.723 35.198C8.723 62.701 31.045 84.972 58.496 84.972ZM58.496 76.704C35.551 76.704 17.031 58.143 17.031 35.198C17.031 12.254 35.551-6.308 58.496-6.308C81.441-6.308 100.002 12.254 100.002 35.198C100.002 58.143 81.441 76.704 58.496 76.704ZM91.931 67.386L91.775 66.837C89.342 59.663 76.437 51.8 58.496 51.8C40.576 51.8 27.723 59.652 25.269 66.805L25.113 67.386C33.938 76.078 49.004 81.148 58.507 81.148C68.082 81.148 83.032 76.12 91.931 67.386ZM58.496 43.534C67.894 43.637 75.255 35.61 75.255 25.113C75.255 15.238 67.862 7.065 58.496 7.065C49.182 7.065 41.727 15.238 41.789 25.113C41.841 35.61 49.099 43.43 58.496 43.534Z"/>
+        </svg>
+      </span>
+      <span data-slot="accountOverview"><!-- Account --></span>
+    </a>
+    <a href="https://appstoreconnect.apple.com" class="account-menu-link">
+      <span class="account-menu-link-icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114.927 70.459" focusable="false" class="account-menu-link-icon" aria-hidden="true" style="width: 1.14927em; overflow: visible;">
+        <defs>
+          <mask id="sf-app-badge-mask-0">
+            <rect x="-25" y="-25" width="164.927" height="120.459" fill="white"/>
+            <path d="M94.508 21.908C107.427 21.908 118.135 11.252 118.135-1.719C118.135-14.637 107.427-25.294 94.508-25.294C81.59-25.294 70.933-14.637 70.933-1.719C70.933 11.252 81.59 21.908 94.508 21.908Z" fill="black"/>
+          </mask>
+        </defs>
+        <path fill="currentColor" mask="url(#sf-app-badge-mask-0)" d="M39.031 80.204L75.902 80.204C84.459 80.204 91.145 77.713 95.537 73.321C100.084 68.877 102.472 62.18 102.472 53.633L102.472 16.825C102.472 8.279 100.095 1.592 95.537-2.862C91.083-7.316 84.459-9.745 75.902-9.745L39.031-9.745C30.475-9.745 23.736-7.254 19.344-2.862C14.849 1.582 12.461 8.279 12.461 16.825L12.461 53.633C12.461 62.18 14.838 68.867 19.344 73.321C23.757 77.734 30.475 80.204 39.031 80.204ZM39.031 72.35C32.941 72.35 28.223 70.626 25.125 67.591C21.987 64.442 20.314 59.776 20.314 53.633L20.314 16.825C20.314 10.683 21.987 6.017 25.125 2.868C28.171-0.115 32.941-1.891 39.031-1.891L75.902-1.891C81.941-1.891 86.7-0.167 89.797 2.868C92.946 6.017 94.619 10.683 94.619 16.825L94.619 53.633C94.619 59.776 92.946 64.442 89.797 67.591C86.752 70.574 81.941 72.35 75.902 72.35Z"/>
+        <path fill="currentColor" d="M94.508 15.282C103.767 15.282 111.458 7.643 111.458-1.667C111.458-10.936 103.767-18.565 94.508-18.565C85.25-18.565 77.61-10.936 77.61-1.667C77.61 7.643 85.25 15.282 94.508 15.282Z"/>
+        </svg>
+      </span>
+      <span data-slot="appStoreConnect"><!-- App Store Connect --></span>
+    </a>
+    <a href="/account/resources/" class="account-menu-link">
+      <span class="account-menu-link-icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.282 70.459" focusable="false" class="account-menu-link-icon" aria-hidden="true" style="width: 1.28282em; overflow: visible;">
+        <path fill="currentColor" d="M34.577 77.349L45.175 77.349C46.163 77.349 46.88 77.608 47.607 78.336L55.151 85.817C61.313 92.021 66.975 91.969 73.137 85.817L80.681 78.336C81.409 77.608 82.126 77.349 83.165 77.349L93.712 77.349C102.405 77.349 106.47 73.325 106.47 64.59L106.47 53.991C106.47 53.004 106.792 52.287 107.509 51.549L114.939 44.015C121.142 37.853 121.091 32.192 114.939 25.967L107.509 18.486C106.792 17.758 106.47 16.989 106.47 15.991L106.47 5.455C106.47-3.239 102.457-7.366 93.712-7.366L83.165-7.366C82.126-7.366 81.409-7.626 80.681-8.353L73.137-15.772C66.965-21.997 61.313-22.007 55.141-15.772L47.607-8.353C46.89-7.636 46.163-7.366 45.175-7.366L34.577-7.366C25.831-7.366 21.818-3.342 21.818 5.455L21.818 15.991C21.818 16.989 21.548 17.758 20.831 18.486L13.349 25.967C7.146 32.192 7.198 37.853 13.349 44.015L20.831 51.549C21.548 52.287 21.818 53.004 21.818 53.991L21.818 64.59C21.818 73.284 25.831 77.349 34.577 77.349ZM34.577 69.599C30.256 69.599 29.568 68.911 29.568 64.59L29.568 51.431C29.568 49.926 29.091 48.795 28.063 47.768L18.81 38.555C15.745 35.45 15.745 34.585 18.81 31.427L28.063 22.277C29.091 21.198 29.568 20.056 29.568 18.603L29.568 5.455C29.568 1.009 30.193 0.436 34.577 0.436L47.725 0.436C49.23 0.436 50.371 0.01 51.399-1.121L60.601-10.323C63.707-13.428 64.582-13.428 67.688-10.323L76.889-1.121C77.969 0.01 79.11 0.436 80.564 0.436L93.712 0.436C98.033 0.436 98.731 1.071 98.731 5.455L98.731 18.603C98.731 20.056 99.208 21.198 100.277 22.277L109.489 31.427C112.595 34.585 112.595 35.45 109.489 38.555L100.277 47.768C99.208 48.795 98.731 49.926 98.731 51.431L98.731 64.59C98.731 68.911 98.033 69.599 93.712 69.599L80.564 69.599C79.11 69.599 77.969 70.024 76.889 71.103L67.688 80.357C64.582 83.411 63.707 83.411 60.601 80.357L51.399 71.103C50.371 70.024 49.23 69.599 47.725 69.599Z"/>
+        <path fill="currentColor" d="M58.849 58.158C60.475 58.158 61.832 57.391 62.776 55.89L85.125 20.782C85.653 19.819 86.296 18.721 86.296 17.643C86.296 15.478 84.337 14.079 82.317 14.079C81.063 14.079 79.799 14.805 78.918 16.265L58.631 48.77L49.02 36.306C47.881 34.742 46.793 34.348 45.466 34.348C43.301 34.348 41.695 36.036 41.695 38.223C41.695 39.269 42.089 40.316 42.804 41.259L54.663 55.89C55.917 57.505 57.201 58.158 58.849 58.158Z"/>
+        </svg>
+      </span>
+      <span data-slot="certificatesIDsProfiles"
+        ><!-- Certificates, IDs & Profiles --></span
+      >
+    </a>
+    <a href="/events/view/my-events" class="account-menu-link">
+      <span class="account-menu-link-icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107.046 70.459" focusable="false" class="account-menu-link-icon" aria-hidden="true" style="width: 1.07046em; overflow: visible;">
+        <path fill="currentColor" d="M27.572 87.552L79.423 87.552C89.479 87.552 94.586 82.415 94.586 72.234L94.586-1.796C94.586-12.028 89.51-17.113 79.423-17.113L64.916-17.113C63.29-17.113 62.15-15.963 62.15-14.171C62.15-9.111 58.679-5.566 53.523-5.566C48.327-5.566 44.793-9.111 44.793-14.171C44.793-15.963 43.705-17.113 42.027-17.113L27.572-17.113C17.495-17.113 12.461-12.028 12.461-1.796L12.461 72.234C12.461 82.415 17.516 87.552 27.572 87.552ZM28.007 79.699C22.924 79.699 20.314 76.944 20.314 72.11L20.314-1.671C20.314-6.547 22.924-9.26 28.007-9.26L41.902-9.26L37.353-12.068C38.234-3.494 44.566 2.08 53.523 2.08C62.439 2.08 68.813-3.494 69.693-12.068L65.093-9.26L79.04-9.26C84.071-9.26 86.691-6.547 86.691-1.671L86.691 72.11C86.691 76.944 84.071 79.699 79.04 79.699Z"/>
+        <path fill="currentColor" d="M35.043 19.226L72.065 19.226C73.786 19.226 75.061 17.91 75.061 16.179C75.061 14.5 73.786 13.225 72.065 13.225L35.043 13.225C33.271 13.225 31.986 14.5 31.986 16.179C31.986 17.91 33.271 19.226 35.043 19.226Z"/>
+        <path fill="currentColor" d="M35.043 36.582L52.571 36.582C54.302 36.582 55.587 35.245 55.587 33.587C55.587 31.866 54.302 30.54 52.571 30.54L35.043 30.54C33.271 30.54 31.986 31.866 31.986 33.587C31.986 35.245 33.271 36.582 35.043 36.582Z"/>
+        </svg>
+      </span>
+      <span data-slot="viewEvents"><!-- Events --></span>
+    </a>
+    <a href="https://feedbackassistant.apple.com" class="account-menu-link">
+      <span class="account-menu-link-icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132.507 70.459" focusable="false" class="account-menu-link-icon" aria-hidden="true" style="width: 1.32507em; overflow: visible;">
+        <path fill="currentColor" d="M42.493 88.831C44.907 88.831 46.565 87.566 49.465 84.946L66.353 69.961L97.694 69.961C112.219 69.961 120.056 61.896 120.056 47.599L120.056 10.188C120.056-4.109 112.219-12.174 97.694-12.174L34.823-12.174C20.298-12.174 12.461-4.13 12.461 10.188L12.461 47.599C12.461 61.917 20.298 69.961 34.823 69.961L37.126 69.961L37.126 82.645C37.126 86.427 39.064 88.831 42.493 88.831ZM44.492 79.91L44.492 65.776C44.492 63.103 43.497 62.108 40.824 62.108L34.844 62.108C24.95 62.108 20.314 57.099 20.314 47.578L20.314 10.209C20.314 0.729 24.95-4.269 34.844-4.269L97.673-4.269C107.524-4.269 112.202 0.729 112.202 10.209L112.202 47.578C112.202 57.099 107.524 62.108 97.673 62.108L66.034 62.108C63.349 62.108 61.95 62.512 60.104 64.43Z"/>
+        <path fill="currentColor" d="M66.232 37.704C68.595 37.704 69.943 36.398 69.994 33.827L70.709 8.082C70.709 5.615 68.792 3.739 66.181 3.739C63.558 3.739 61.693 5.563 61.745 8.03L62.419 33.827C62.47 36.346 63.808 37.704 66.232 37.704ZM66.232 53.574C69.053 53.574 71.511 51.365 71.511 48.503C71.511 45.641 69.105 43.432 66.232 43.432C63.401 43.432 60.995 45.693 60.995 48.503C60.995 51.313 63.453 53.574 66.232 53.574Z"/>
+        </svg>
+      </span>
+      <span data-slot="feedbackAssistant"><!-- Feedback Assistant --></span>
+    </a>
+    <a href="/forums/" class="account-menu-link">
+      <span class="account-menu-link-icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165.127 70.459" focusable="false" class="account-menu-link-icon" aria-hidden="true" style="width: 1.65127em; overflow: visible;">
+        <defs>
+          <mask id="sf-bubble-left-and-bubble-right-mask-0">
+            <rect x="-25" y="-25" width="215.127" height="120.459" fill="white"/>
+            <path d="M85.887 73.343L101.693 73.343L117.981 87.274C120.963 89.832 122.58 91.127 124.952 91.127C128.308 91.127 130.225 88.734 130.225 85.046L130.225 73.343L131.212 73.343C145.253 73.343 152.669 65.782 152.669 51.948L152.669 25.538C152.669 11.693 145.253 4.122 131.212 4.122L85.887 4.122C71.835 4.122 64.471 11.693 64.471 25.538L64.471 51.969C64.471 65.803 71.835 73.343 85.887 73.343Z" fill="black"/>
+          </mask>
+        </defs>
+        <path fill="currentColor" mask="url(#sf-bubble-left-and-bubble-right-mask-0)" d="M34.823 61.571L37.126 61.571L37.126 74.317C37.126 78.036 39.064 80.451 42.493 80.451C44.907 80.451 46.565 79.176 49.465 76.556L66.353 61.571L97.694 61.571C112.219 61.571 120.056 53.506 120.056 39.209L120.056 1.86C120.056-12.448 112.219-20.502 97.694-20.502L34.823-20.502C20.298-20.502 12.461-12.521 12.461 1.86L12.461 39.209C12.461 53.579 20.298 61.571 34.823 61.571ZM34.844 53.717C24.95 53.717 20.314 48.719 20.314 39.188L20.314 1.881C20.314-7.651 24.95-12.659 34.844-12.659L97.673-12.659C107.524-12.659 112.202-7.651 112.202 1.881L112.202 39.188C112.202 48.719 107.524 53.717 97.673 53.717L66.034 53.717C63.349 53.717 61.95 54.122 60.104 56.05L44.492 71.52L44.492 57.385C44.492 54.712 43.497 53.717 40.824 53.717Z"/>
+        <path fill="currentColor" d="M85.887 73.343L101.693 73.343L117.981 87.274C120.963 89.832 122.58 91.127 124.952 91.127C128.308 91.127 130.225 88.734 130.225 85.046L130.225 73.343L131.212 73.343C145.253 73.343 152.669 65.782 152.669 51.948L152.669 25.538C152.669 11.693 145.253 4.122 131.212 4.122L85.887 4.122C71.835 4.122 64.471 11.693 64.471 25.538L64.471 51.969C64.471 65.803 71.835 73.343 85.887 73.343ZM86.023 65.489C76.477 65.489 72.324 61.006 72.324 51.822L72.335 25.622C72.335 16.49 76.477 11.975 86.023 11.975L131.117 11.975C140.675 11.975 144.764 16.49 144.764 25.622L144.764 51.79C144.764 60.934 140.664 65.489 131.117 65.489L126.671 65.489C124.548 65.489 122.859 66.743 122.859 69.509L122.859 82.278L106.39 67.532C104.72 65.987 103.373 65.489 101.392 65.489Z"/>
+        </svg>
+      </span>
+      <span data-slot="forums"><!-- Forums --></span>
+    </a>
+  </nav>
+  <hr class="account-menu-divider" role="separator" />
+  <nav aria-label="Sign out" data-aria-label="signOut">
+    <a href="/logout/" class="account-menu-link">
+      <span class="account-menu-link-icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.282 70.459" focusable="false" class="account-menu-link-icon" aria-hidden="true" style="width: 1.38282em; overflow: visible;">
+        <defs>
+          <mask id="sf-rectangle-portrait-and-arrow-right-mask-0">
+            <rect x="-25" y="-25" width="188.282" height="120.459" fill="white"/>
+            <path d="M58.186 48.243L120.556 48.243C127.658 48.243 133.497 42.353 133.497 35.198C133.497 28.043 127.658 22.154 120.556 22.154L58.186 22.154C51.083 22.154 45.193 28.043 45.193 35.198C45.193 42.353 51.083 48.243 58.186 48.243Z" fill="black"/>
+          </mask>
+        </defs>
+        <path fill="currentColor" mask="url(#sf-rectangle-portrait-and-arrow-right-mask-0)" d="M32.893 87.552L74.164 87.552C87.266 87.552 94.586 80.285 94.586 67.12L94.586 3.318C94.586-9.794 87.266-17.113 74.164-17.113L32.893-17.113C19.791-17.113 12.461-9.794 12.461 3.318L12.461 67.12C12.461 80.285 19.791 87.552 32.893 87.552ZM32.882 79.699C24.847 79.699 20.314 75.156 20.314 67.12L20.314 3.308C20.314-4.717 24.847-9.26 32.882-9.26L74.175-9.26C82.2-9.26 86.691-4.717 86.691 3.308L86.691 67.12C86.691 75.156 82.2 79.699 74.175 79.699Z"/>
+        <path fill="currentColor" d="M54.363 35.198C54.363 37.271 56.103 39.073 58.186 39.073L107.808 39.073L120.98 38.494C122.783 38.39 124.275 37.001 124.275 35.198C124.275 33.396 122.783 32.007 120.98 31.903L107.808 31.323L58.186 31.323C56.103 31.323 54.363 33.126 54.363 35.198ZM102.999 18.645C102.999 19.578 103.393 20.614 104.159 21.329L112.206 28.858L118.971 35.198L112.206 41.528L104.159 49.057C103.393 49.772 102.999 50.756 102.999 51.689C102.999 53.74 104.439 55.284 106.46 55.284C107.485 55.284 108.252 54.849 109.019 54.082L124.515 38.027C125.489 37.053 125.821 36.183 125.821 35.198C125.821 34.214 125.489 33.344 124.515 32.37L109.019 16.304C108.252 15.537 107.485 15.102 106.46 15.102C104.439 15.102 102.999 16.584 102.999 18.645Z"/>
+        </svg>
+      </span>
+      <span data-slot="signOut"><!-- Sign out --></span>
+    </a>
+  </nav>
+</template>
+
+<link rel="stylesheet" href="/assets/includes/global-session-nav/session.css" type="text/css" />
+
+<script>
+  // Synchronously disables the account link before first paint so the user
+  // cannot navigate away before session.js registers its click listener.
+  (function () {
+    var accountLink = document.querySelector(".globalnav-link-account");
+
+    if (accountLink) {
+      var href = accountLink.getAttribute("href");
+
+      if (href) {
+        accountLink.dataset.pendingHref = href;
+        accountLink.removeAttribute("href");
+        accountLink.style.cursor = "default";
+      }
+    }
+  })();
+</script>
+
+<script type="module" src="/assets/includes/global-session-nav/session.js"></script>
+
+
+	<link rel="stylesheet" href="https://www.apple.com/wss/fonts?families=SF+Pro,v3|SF+Pro+Icons,v3">
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=SF+Mono&v=2" type="text/css" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Apple+Icons&v=1" type="text/css" />
+
+	<title>What’s new in Xcode 16 - WWDC24 - Videos - Apple Developer</title>
+	<meta name="omni_page" content="What’s new in Xcode 16 - WWDC24 - Videos" />
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link type="text/css" rel="stylesheet" href="/videos/styles/videos.css?3">
+	<link type="text/css" rel="stylesheet" href="/videos/styles/video-overlay.css?3">
+	<meta name="description" content="Discover the latest productivity and performance improvements in Xcode 16. Learn about enhancements to code completion, diagnostics, and...">
+
+	<meta property="og:url" content="https://developer.apple.com/videos/play/wwdc2024/10135/" />
+	<meta property="og:title" content="What’s new in Xcode 16 - WWDC24 - Videos - Apple Developer" />
+	<meta property="og:description" content="Discover the latest productivity and performance improvements in Xcode 16. Learn about enhancements to code completion, diagnostics, and..." />
+	<meta property="og:site_name" content="Apple Developer" />
+	<meta property="og:type" content="website" />
+	<meta property="og:video" content="https://devstreaming-cdn.apple.com/videos/wwdc/2024/10135/4/A6AD3D2B-72D9-43AE-901E-8AFDBA304007/cmaf.m3u8" /> 
+	<meta property="og:video_secure_url" content="https://devstreaming-cdn.apple.com/videos/wwdc/2024/10135/4/A6AD3D2B-72D9-43AE-901E-8AFDBA304007/cmaf.m3u8" /> 
+	<meta property="og:video:type" content="vnd.apple.mpegURL" /> 
+	<meta property="og:video:width" content="1280" />
+	<meta property="og:video:height" content="720" />
+		<meta property="og:image" content="https://devimages-cdn.apple.com/wwdc-services/images/C03E6E6D-A32A-41D0-9E50-C3C6059820AA/9263/9263_wide_250x141_2x.jpg" />
+		<meta property="og:locale" content="en_US" />
+	<meta itemprop="datePublished" content="2024-06-10">
+	<meta itemprop="uploadDate" content="2024-06-10">	
+
+	<link rel="alternate" href="https://developer.apple.com/videos/play/wwdc2024/10135/" hreflang="en">
+	<link rel="alternate" href="https://developer.apple.com/kr/videos/play/wwdc2024/10135/" hreflang="ko-KR">
+	<link rel="alternate" href="https://developer.apple.com/cn/videos/play/wwdc2024/10135/" hreflang="zh-CN">
+    <link rel="alternate" href="https://developer.apple.com/jp/videos/play/wwdc2024/10135/" hreflang="ja-JP">
+	<link rel="alternate" href="https://developer.apple.com/la/videos/play/wwdc2024/10135/" hreflang="es-lamr">
+	<link rel="alternate" href="https://developer.apple.com/fr/videos/play/wwdc2024/10135/" hreflang="fr-FR">
+	<link rel="alternate" href="https://developer.apple.com/br/videos/play/wwdc2024/10135/" hreflang="pt-BR">		
+    <link rel="canonical" href="https://developer.apple.com/videos/play/wwdc2024/10135/" />
+
+</head>
+<body class="view-play"
+	>
+	
+	<script>
+	// Execute immediately to avoid UI flash
+	(function () {
+		// Prevent React dev mode from running this multiple times
+		if (window.__didRunColorThemeScript) {
+			return;
+		}
+		window.__didRunColorThemeScript = true;
+
+		const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+		const body = document.body;
+
+		// If theme-dark or theme-light is already applied, do nothing and lock it
+		if (body.classList.contains("theme-dark") || body.classList.contains("theme-light")) {
+
+			// Set the data-color-scheme attribute based on the existing theme
+			body.setAttribute('data-color-scheme', body.classList.contains("theme-dark") ? "dark" : "light");
+
+			// Prevent future modifications
+			window.__disableColorScheme = true;
+
+			// Hide the color picker immediately
+			const style = document.createElement('style');
+			style.textContent = '.color-scheme-toggle { display: none !important; }';
+			document.head.appendChild(style);
+
+			return;
+		}
+
+		// Otherwise, set theme normally based on user settings or system preference
+		if (window.Settings && window.Settings.preferredColorScheme) {
+			const colorTheme = (window.Settings.preferredColorScheme === 'auto') && !prefersDark ? 'light'
+				: (window.Settings.preferredColorScheme === 'light') ? 'light' : 'dark';
+			body.setAttribute('data-color-scheme', colorTheme);
+			colorTheme === "dark" ? body.classList.add("theme-dark") : body.classList.add("theme-light");
+		} else {
+			const colorTheme = prefersDark ? 'dark' : 'light';
+			body.setAttribute('data-color-scheme', colorTheme);
+			prefersDark ? body.classList.add("theme-dark") : body.classList.add("theme-light");
+		}
+	})();
+</script>
+
+
+<link rel="stylesheet" href="/assets/styles/suggest-lang.css?34212621148" type="text/css" />
+<div id="suggest-lang" class="ribbon hide" lang="en">
+	<div class="ribbon-content-wrapper">
+		<div class="ribbon-content row">
+			<div class="column large-12 large-centered">
+				<p><a href="#" id="suggest-link" class="ribbon-link more">View in English</a></p>
+				<button id="suggest-closer" class="icon icon-after icon-reset" aria-label="Dismiss language suggestion" tabindex="0"></button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/assets/scripts/suggest-lang.js?50222638203"></script>
+<link rel="stylesheet" href="/assets/styles/globalnav.css?34212621148" type="text/css" />
+<nav id="globalnav" lang="en-US" dir="ltr" aria-label="Global" class="globalnav js" style="--r-globalnav-text-zoom-scale: 1;" data-aa-content-module="global-header">
+	<div class="globalnav-content">
+		<div class="globalnav-item globalnav-menuback"><button aria-label="Main menu" class="globalnav-menuback-button"><span class="globalnav-chevron-icon"><svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+						<path d="m1.5618 24.0621 6.5581-6.4238c.2368-.2319.2407-.6118.0088-.8486-.2324-.2373-.6123-.2407-.8486-.0088l-7 6.8569c-.1157.1138-.1807.2695-.1802.4316.001.1621.0674.3174.1846.4297l7 6.7241c.1162.1118.2661.1675.4155.1675.1577 0 .3149-.062.4326-.1846.2295-.2388.2222-.6187-.0171-.8481z"></path>
+					</svg></span></button></div>
+		<ul id="globalnav-list" class="globalnav-list">
+			<li class="
+	globalnav-item
+	globalnav-item-apple
+	ac-gn-item
+	ac-gn-apple
+">
+				<a href="/" aria-label="Apple Developer" class="globalnav-link globalnav-link-apple ac-gn-link ac-gn-link-apple-developer" id="ac-gn-firstfocus-small">
+					<span class="ac-gn-link-text globalnav-link-text">Apple Developer</span>
+				</a>
+			</li>
+			<li class="globalnav-item globalnav-menu">
+				<div class="globalnav-flyout" style="--r-globalnav-flyout-item-total: 0; --r-globalnav-flyout-group-number: 0;">
+					<div class="globalnav-menu-list" style="--r-globalnav-flyout-item-total: 7;">
+						<div class="
+    globalnav-item
+    globalnav-item-getting-started
+    globalnav-item-menu
+    globalnav-item-submenu
+" style="--r-globalnav-flyout-item-number: 0;">
+							<ul class="globalnav-submenu-trigger-group">
+								<li class="globalnav-submenu-trigger-item">
+									<a href="/get-started/" data-topnav-flyout-trigger-compact="true" aria-label="Get Started" class="globalnav-link globalnav-submenu-trigger-link globalnav-link-getting-started">
+										<span class="globalnav-link-text-container">
+											<span class="globalnav-link-text">Get Started</span>
+										</span>
+										<span class="globalnav-link-chevron">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z"></path>
+											</svg>
+										</span>
+									</a>
+								</li>
+								<li class="globalnav-submenu-trigger-item">
+									<button id="globalnav-menubutton-link-getting-started" class="globalnav-submenu-trigger-button" aria-expanded="false" aria-controls="globalnav-submenu-link-getting-started" aria-label="Get Started menu" data-topnav-flyout-trigger-regular="true">
+										<span class="globalnav-image-regular globalnav-submenu-button-icon">
+											<svg height="10" viewBox="0 0 10 10" width="10" xmlns="http://www.w3.org/2000/svg">
+												<path d="m4.6725 6.635-2.655-2.667a.445.445 0 0 1 -.123-.304.4331.4331 0 0 1 .427-.439h.006a.447.447 0 0 1 .316.135l2.357 2.365 2.356-2.365a.458.458 0 0 1 .316-.135.433.433 0 0 1 .433.433v.006a.4189.4189 0 0 1 -.123.3l-2.655 2.671a.4451.4451 0 0 1 -.327.14.464.464 0 0 1 -.328-.14z"></path>
+											</svg>
+										</span>
+										<span class="globalnav-image-compact globalnav-submenu-button-icon">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m7.4382 24.0621-6.5581-6.4238c-.2368-.2319-.2407-.6118-.0088-.8486.2324-.2373.6123-.2407.8486-.0088l7 6.8569c.1157.1138.1807.2695.1802.4316-.001.1621-.0674.3174-.1846.4297l-7 6.7242c-.1162.1118-.2661.1675-.4155.1675-.1577 0-.3149-.062-.4326-.1846-.2295-.2388-.2222-.6187.0171-.8481l6.5537-6.2959z"></path>
+											</svg>
+										</span>
+									</button>
+								</li>
+							</ul>
+							<div id="globalnav-submenu-link-getting-started" class="globalnav-flyout globalnav-submenu" aria-labelledby="globalnav-menubutton-link-getting-started" style="--r-globalnav-flyout-item-total: 0; --r-globalnav-flyout-group-number: 0; --r-globalnav-flyout-height: auto; --r-globalnav-flyout-rate: 240ms;">
+								<div class="globalnav-flyout-scroll-container">
+									<div class="globalnav-flyout-content globalnav-submenu-content" style="--r-globalnav-flyout-elevated-group-count: 1; --r-globalnav-flyout-group-total: 2; --r-globalnav-flyout-item-total: 4;">
+										<div class="globalnav-submenu-group globalnav-submenu-group-elevated" style="--r-globalnav-flyout-group-number: 0;">
+
+											<h2 class="globalnav-submenu-header" id="apple-getting-started-heading" style="--r-globalnav-flyout-item-number: 1;">Explore Get Started</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="apple-getting-started-heading">
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 2;"><a href="/get-started/" class="globalnav-submenu-link">Overview</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 3;"><a href="/learn/" class="globalnav-submenu-link">Learn</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 4;"><a href="/programs/" class="globalnav-submenu-link">Apple Developer Program</a></li>
+											</ul>
+										</div>
+										<div class="globalnav-submenu-group" style="--r-globalnav-flyout-group-number: 1;">
+
+											<h2 class="globalnav-submenu-header" id="apple-learn-heading" style="--r-globalnav-flyout-item-number: 1;">Stay Updated</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="apple-learn-heading">
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 2;"><a href="/news/" class="globalnav-submenu-link">Latest News</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 3;"><a href="/hello/" class="globalnav-submenu-link">Hello Developer</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="
+  globalnav-item
+  globalnav-item-platforms
+  globalnav-item-menu
+  globalnav-item-submenu
+" style="--r-globalnav-flyout-item-number: 1;">
+							<ul class="globalnav-submenu-trigger-group">
+								<li class="globalnav-submenu-trigger-item">
+									<a href="/platforms/" aria-label="Platforms" class="globalnav-link globalnav-submenu-trigger-link globalnav-link-platforms">
+										<span class="globalnav-link-text-container">
+											<span class="globalnav-link-text">Platforms</span>
+										</span>
+										<span class="globalnav-link-chevron">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z"></path>
+											</svg>
+										</span>
+									</a>
+								</li>
+								<li class="globalnav-submenu-trigger-item">
+									<button id="globalnav-menubutton-link-platforms" class="globalnav-submenu-trigger-button" aria-expanded="false" aria-controls="globalnav-submenu-link-platforms" aria-label="Platforms menu">
+										<span class="globalnav-image-regular globalnav-submenu-button-icon">
+											<svg height="10" viewBox="0 0 10 10" width="10" xmlns="http://www.w3.org/2000/svg">
+												<path d="m4.6725 6.635-2.655-2.667a.445.445 0 0 1 -.123-.304.4331.4331 0 0 1 .427-.439h.006a.447.447 0 0 1 .316.135l2.357 2.365 2.356-2.365a.458.458 0 0 1 .316-.135.433.433 0 0 1 .433.433v.006a.4189.4189 0 0 1 -.123.3l-2.655 2.671a.4451.4451 0 0 1 -.327.14.464.464 0 0 1 -.328-.14z"></path>
+											</svg>
+										</span>
+										<span class="globalnav-image-compact globalnav-submenu-button-icon">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m7.4382 24.0621-6.5581-6.4238c-.2368-.2319-.2407-.6118-.0088-.8486.2324-.2373.6123-.2407.8486-.0088l7 6.8569c.1157.1138.1807.2695.1802.4316-.001.1621-.0674.3174-.1846.4297l-7 6.7242c-.1162.1118-.2661.1675-.4155.1675-.1577 0-.3149-.062-.4326-.1846-.2295-.2388-.2222-.6187.0171-.8481l6.5537-6.2959z"></path>
+											</svg>
+										</span>
+									</button>
+								</li>
+							</ul>
+							<div id="globalnav-submenu-link-platforms" class="globalnav-flyout globalnav-submenu" aria-labelledby="globalnav-menubutton-link-platforms" style="--r-globalnav-flyout-item-total: 0; --r-globalnav-flyout-group-number: 0; --r-globalnav-flyout-height: auto; --r-globalnav-flyout-rate: 240ms;">
+								<div class="globalnav-flyout-scroll-container">
+									<div class="globalnav-flyout-content globalnav-submenu-content" style="--r-globalnav-flyout-elevated-group-count: 1; --r-globalnav-flyout-group-total: 2; --r-globalnav-flyout-item-total: 9;">
+										<!-- Explore -->
+										<div class="globalnav-submenu-group globalnav-submenu-group-elevated" style="--r-globalnav-flyout-group-number: 0;">
+
+											<h2 class="globalnav-submenu-header" id="platforms-apple-heading" style="--r-globalnav-flyout-item-number: 1;">Explore Platforms</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="platforms-apple-heading">
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 2;"><a href="/platforms/" class="globalnav-submenu-link">Apple Platforms</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 3;"><a href="/ios/" class="globalnav-submenu-link">iOS</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 4;"><a href="/ipados/" class="globalnav-submenu-link">iPadOS</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 5;"><a href="/macos/" class="globalnav-submenu-link">macOS</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 6;"><a href="/tvos/" class="globalnav-submenu-link">tvOS</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 7;"><a href="/visionos/" class="globalnav-submenu-link">visionOS</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 8;"><a href="/watchos/" class="globalnav-submenu-link">watchOS</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 9;"><a href="/app-store/" class="globalnav-submenu-link">App Store</a></li>
+											</ul>
+										</div>
+										<!-- Featured -->
+										<div class="globalnav-submenu-group" style="--r-globalnav-flyout-group-number: 1;">
+
+											<h2 class="globalnav-submenu-header" id="platforms-learn-heading" style="--r-globalnav-flyout-item-number: 1;">Featured</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="platforms-learn-heading">
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 2;"><a href="/design/" class="globalnav-submenu-link">Design</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 3;"><a href="/distribute/" class="globalnav-submenu-link">Distribution</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 4;"><a href="/games/" class="globalnav-submenu-link">Games</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 5;"><a href="/accessories/" class="globalnav-submenu-link">Accessories</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 6;"><a href="/safari/" class="globalnav-submenu-link">Web<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 7;"><a href="/apple-home/" class="globalnav-submenu-link">Home</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 8;"><a href="/carplay/" class="globalnav-submenu-link">CarPlay</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="
+  globalnav-item
+  globalnav-item-technologies
+  globalnav-item-menu
+  globalnav-item-submenu
+" style="--r-globalnav-flyout-item-number: 2;">
+							<ul class="globalnav-submenu-trigger-group">
+								<li class="globalnav-submenu-trigger-item">
+									<a href="/technologies/" aria-label="Technologies" class="globalnav-link globalnav-submenu-trigger-link globalnav-link-technologies">
+										<span class="globalnav-link-text-container">
+											<span class="globalnav-link-text">Technologies</span>
+										</span>
+										<span class="globalnav-link-chevron">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z"></path>
+											</svg>
+										</span>
+									</a>
+								</li>
+								<li class="globalnav-submenu-trigger-item">
+									<button id="globalnav-menubutton-link-technologies" class="globalnav-submenu-trigger-button" aria-expanded="false" aria-controls="globalnav-submenu-link-technologies" aria-label="Technologies menu">
+										<span class="globalnav-image-regular globalnav-submenu-button-icon">
+											<svg height="10" viewBox="0 0 10 10" width="10" xmlns="http://www.w3.org/2000/svg">
+												<path d="m4.6725 6.635-2.655-2.667a.445.445 0 0 1 -.123-.304.4331.4331 0 0 1 .427-.439h.006a.447.447 0 0 1 .316.135l2.357 2.365 2.356-2.365a.458.458 0 0 1 .316-.135.433.433 0 0 1 .433.433v.006a.4189.4189 0 0 1 -.123.3l-2.655 2.671a.4451.4451 0 0 1 -.327.14.464.464 0 0 1 -.328-.14z"></path>
+											</svg>
+										</span>
+										<span class="globalnav-image-compact globalnav-submenu-button-icon">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m7.4382 24.0621-6.5581-6.4238c-.2368-.2319-.2407-.6118-.0088-.8486.2324-.2373.6123-.2407.8486-.0088l7 6.8569c.1157.1138.1807.2695.1802.4316-.001.1621-.0674.3174-.1846.4297l-7 6.7242c-.1162.1118-.2661.1675-.4155.1675-.1577 0-.3149-.062-.4326-.1846-.2295-.2388-.2222-.6187.0171-.8481l6.5537-6.2959z"></path>
+											</svg>
+										</span>
+									</button>
+								</li>
+							</ul>
+							<div id="globalnav-submenu-link-technologies" class="globalnav-flyout globalnav-submenu" aria-labelledby="globalnav-menubutton-link-technologies" style="--r-globalnav-flyout-item-total: 0; --r-globalnav-flyout-group-number: 0; --r-globalnav-flyout-height: auto; --r-globalnav-flyout-rate: 254ms;">
+								<div class="globalnav-flyout-scroll-container">
+									<div class="globalnav-flyout-content globalnav-submenu-content" style="--r-globalnav-flyout-elevated-group-count: 1; --r-globalnav-flyout-group-total: 2; --r-globalnav-flyout-item-total: 8;">
+										<!-- Explore -->
+										<div class="globalnav-submenu-group globalnav-submenu-group-elevated" style="--r-globalnav-flyout-group-number: 0;">
+
+											<h2 class="globalnav-submenu-header" id="technologies-learn-heading" style="--r-globalnav-flyout-item-number: 1;">Explore Technologies</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="technologies-learn-heading">
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 2;"><a href="/technologies/" class="globalnav-submenu-link">Overview</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 3;"><a href="/xcode/" class="globalnav-submenu-link">Xcode</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 4;"><a href="/swift/" class="globalnav-submenu-link">Swift</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 5;"><a href="/swiftui/" class="globalnav-submenu-link">SwiftUI</a></li>
+											</ul>
+										</div>
+										<!-- Featured -->
+										<div class="globalnav-submenu-group" style="--r-globalnav-flyout-group-number: 1;">
+
+											<h2 class="globalnav-submenu-header" id="technologies-featured-heading" style="--r-globalnav-flyout-item-number: 1;">Featured</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="technologies-featured-heading">
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 2;"><a href="/documentation/accessibility" class="globalnav-submenu-link">Accessibility<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 3;"><a href="/machine-learning/" class="globalnav-submenu-link">AI &amp; Machine Learning</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 4;"><a href="/documentation/appintents" class="globalnav-submenu-link">App Intents<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 5;"><a href="/apple-intelligence/" class="globalnav-submenu-link">Apple Intelligence</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 6;"><a href="/games/" class="globalnav-submenu-link">Games</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 7;"><a href="/security/" class="globalnav-submenu-link">Security</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 8;"><a href="/xcode-cloud/" class="globalnav-submenu-link">Xcode Cloud</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="
+  globalnav-item
+  globalnav-item-community
+  globalnav-item-menu
+  globalnav-item-submenu
+" style="--r-globalnav-flyout-item-number: 3;">
+							<ul class="globalnav-submenu-trigger-group">
+								<li class="globalnav-submenu-trigger-item">
+									<a href="/community/" aria-label="Community" class="globalnav-link globalnav-submenu-trigger-link globalnav-link-community">
+										<span class="globalnav-link-text-container">
+											<span class="globalnav-link-text">Community</span>
+										</span>
+										<span class="globalnav-link-chevron">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z"></path>
+											</svg>
+										</span>
+									</a>
+								</li>
+								<li class="globalnav-submenu-trigger-item">
+									<button id="globalnav-menubutton-link-community" class="globalnav-submenu-trigger-button" aria-expanded="false" aria-controls="globalnav-submenu-link-community" aria-label="Community menu">
+										<span class="globalnav-image-regular globalnav-submenu-button-icon">
+											<svg height="10" viewBox="0 0 10 10" width="10" xmlns="http://www.w3.org/2000/svg">
+												<path d="m4.6725 6.635-2.655-2.667a.445.445 0 0 1 -.123-.304.4331.4331 0 0 1 .427-.439h.006a.447.447 0 0 1 .316.135l2.357 2.365 2.356-2.365a.458.458 0 0 1 .316-.135.433.433 0 0 1 .433.433v.006a.4189.4189 0 0 1 -.123.3l-2.655 2.671a.4451.4451 0 0 1 -.327.14.464.464 0 0 1 -.328-.14z"></path>
+											</svg>
+										</span>
+										<span class="globalnav-image-compact globalnav-submenu-button-icon">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m7.4382 24.0621-6.5581-6.4238c-.2368-.2319-.2407-.6118-.0088-.8486.2324-.2373.6123-.2407.8486-.0088l7 6.8569c.1157.1138.1807.2695.1802.4316-.001.1621-.0674.3174-.1846.4297l-7 6.7242c-.1162.1118-.2661.1675-.4155.1675-.1577 0-.3149-.062-.4326-.1846-.2295-.2388-.2222-.6187.0171-.8481l6.5537-6.2959z"></path>
+											</svg>
+										</span>
+									</button>
+								</li>
+							</ul>
+							<div id="globalnav-submenu-link-community" class="globalnav-flyout globalnav-submenu" aria-labelledby="globalnav-menubutton-link-community" style="--r-globalnav-flyout-item-total: 0; --r-globalnav-flyout-group-number: 0; --r-globalnav-flyout-height: auto; --r-globalnav-flyout-rate: 240ms;">
+								<div class="globalnav-flyout-scroll-container">
+									<div class="globalnav-flyout-content globalnav-submenu-content" style="--r-globalnav-flyout-elevated-group-count: 1; --r-globalnav-flyout-group-total: 2; --r-globalnav-flyout-item-total: 7;">
+										<!-- Explore -->
+										<div class="globalnav-submenu-group globalnav-submenu-group-elevated" style="--r-globalnav-flyout-group-number: 0;">
+
+											<h2 class="globalnav-submenu-header" id="community-engage-heading" style="--r-globalnav-flyout-item-number: 1;">Explore Community</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="community-engage-heading">
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 2;"><a href="/community/" class="globalnav-submenu-link">Overview</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 3;"><a href="/events/" class="globalnav-submenu-link">Meet with Apple events</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 4;"><a href="/community/events/" class="globalnav-submenu-link">Community-driven events</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 5;"><a href="/forums/" class="globalnav-submenu-link">Developer Forums<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 6;"><a href="https://opensource.apple.com" class="globalnav-submenu-link">Open Source<span class="loc-en-only"></span></a></li>
+											</ul>
+										</div>
+										<!-- Featured -->
+										<div class="globalnav-submenu-group" style="--r-globalnav-flyout-group-number: 1;">
+
+											<h2 class="globalnav-submenu-header" id="community-contribute-heading" style="--r-globalnav-flyout-item-number: 1;">Featured</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="community-contribute-heading">
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 2;"><a href="/wwdc/" class="globalnav-submenu-link">WWDC</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 3;"><a href="/swift-student-challenge/" class="globalnav-submenu-link">Swift Student Challenge</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 4;"><a href="/developer-stories/" class="globalnav-submenu-link">Developer Stories</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 5;"><a href="/app-store/app-store-awards/" class="globalnav-submenu-link">App Store Awards<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 6;"><a href="/design/awards/" class="globalnav-submenu-link">Apple Design Awards</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 7;"><a href="/events/developer-centers/" class="globalnav-submenu-link">Apple Developer Centers</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="
+							    globalnav-item
+							    globalnav-item-documentation
+							    globalnav-item-menu
+							    globalnav-item-submenu
+							" style="--r-globalnav-flyout-item-number: 4;">
+							<ul class="globalnav-submenu-trigger-group">
+								<li class="globalnav-submenu-trigger-item">
+									<a href="/documentation/" aria-label="Documentation" class="globalnav-link globalnav-submenu-trigger-link globalnav-link-documentation">
+										<span class="globalnav-link-text-container">
+											<span class="globalnav-link-text">Documentation<span class="loc-en-only"></span></span>
+										</span>
+										<span class="globalnav-link-chevron">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z"></path>
+											</svg>
+										</span>
+									</a>
+								</li>
+								<li class="globalnav-submenu-trigger-item">
+									<button id="globalnav-menubutton-link-documentation" class="globalnav-submenu-trigger-button" aria-expanded="false" aria-controls="globalnav-submenu-link-documentation" aria-label="Documentation menu">
+										<span class="globalnav-image-regular globalnav-submenu-button-icon">
+											<svg height="10" viewBox="0 0 10 10" width="10" xmlns="http://www.w3.org/2000/svg">
+												<path d="m4.6725 6.635-2.655-2.667a.445.445 0 0 1 -.123-.304.4331.4331 0 0 1 .427-.439h.006a.447.447 0 0 1 .316.135l2.357 2.365 2.356-2.365a.458.458 0 0 1 .316-.135.433.433 0 0 1 .433.433v.006a.4189.4189 0 0 1 -.123.3l-2.655 2.671a.4451.4451 0 0 1 -.327.14.464.464 0 0 1 -.328-.14z"></path>
+											</svg>
+										</span>
+										<span class="globalnav-image-compact globalnav-submenu-button-icon">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m7.4382 24.0621-6.5581-6.4238c-.2368-.2319-.2407-.6118-.0088-.8486.2324-.2373.6123-.2407.8486-.0088l7 6.8569c.1157.1138.1807.2695.1802.4316-.001.1621-.0674.3174-.1846.4297l-7 6.7242c-.1162.1118-.2661.1675-.4155.1675-.1577 0-.3149-.062-.4326-.1846-.2295-.2388-.2222-.6187.0171-.8481l6.5537-6.2959z"></path>
+											</svg>
+										</span>
+									</button>
+								</li>
+							</ul>
+							<div id="globalnav-submenu-link-documentation" class="globalnav-flyout globalnav-submenu" aria-labelledby="globalnav-menubutton-link-documentation" style="--r-globalnav-flyout-item-total: 0; --r-globalnav-flyout-group-number: 0; --r-globalnav-flyout-height: auto; --r-globalnav-flyout-rate: 240ms;">
+								<div class="globalnav-flyout-scroll-container">
+									<div class="globalnav-flyout-content globalnav-submenu-content" style="--r-globalnav-flyout-elevated-group-count: 1; --r-globalnav-flyout-group-total: 2; --r-globalnav-flyout-item-total: 9;">
+										<!-- Explore -->
+										<div class="globalnav-submenu-group globalnav-submenu-group-elevated" style="--r-globalnav-flyout-group-number: 0;">
+
+											<h2 class="globalnav-submenu-header" id="docs-explore" style="--r-globalnav-flyout-item-number: 1;">Explore Documentation</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="docs-explore">
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 2;"><a href="/documentation/" class="globalnav-submenu-link">Documentation Library<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 3;"><a href="/documentation/TechnologyOverviews" class="globalnav-submenu-link">Technology Overviews<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 4;"><a href="/documentation/SampleCode" class="globalnav-submenu-link">Sample Code<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 5;"><a href="/design/human-interface-guidelines/" class="globalnav-submenu-link">Human Interface Guidelines</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 6;"><a href="/videos/" class="globalnav-submenu-link">Videos</a></li>
+											</ul>
+										</div>
+										<!-- Release Notes -->
+										<div class="globalnav-submenu-group" style="--r-globalnav-flyout-group-number: 1;">
+
+											<h2 class="globalnav-submenu-header" id="docs-release-notes" style="--r-globalnav-flyout-item-number: 1;">Release Notes</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="docs-release-notes">
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 2;"><a href="/documentation/Updates" class="globalnav-submenu-link">Featured Updates<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 3;"><a href="/documentation/ios-ipados-release-notes" class="globalnav-submenu-link">iOS<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 4;"><a href="/documentation/ios-ipados-release-notes" class="globalnav-submenu-link">iPadOS<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 5;"><a href="/documentation/macos-release-notes" class="globalnav-submenu-link">macOS<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 6;"><a href="/documentation/watchos-release-notes" class="globalnav-submenu-link">watchOS<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 7;"><a href="/documentation/visionos-release-notes/" class="globalnav-submenu-link">visionOS<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 8;"><a href="/documentation/tvos-release-notes" class="globalnav-submenu-link">tvOS<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 9;"><a href="/documentation/Updates/xcode" class="globalnav-submenu-link">Xcode<span class="loc-en-only"></span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="
+  globalnav-item
+  globalnav-item-downloads
+  globalnav-item-menu
+  globalnav-item-submenu
+" style="--r-globalnav-flyout-item-number: 5;">
+							<ul class="globalnav-submenu-trigger-group">
+								<li class="globalnav-submenu-trigger-item">
+									<a href="/download/" aria-label="Downloads" class="globalnav-link globalnav-submenu-trigger-link globalnav-link-downloads">
+										<span class="globalnav-link-text-container">
+											<span class="globalnav-link-text">Downloads</span>
+										</span>
+										<span class="globalnav-link-chevron">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z"></path>
+											</svg>
+										</span>
+									</a>
+								</li>
+								<li class="globalnav-submenu-trigger-item">
+									<button id="globalnav-menubutton-link-downloads" class="globalnav-submenu-trigger-button" aria-expanded="false" aria-controls="globalnav-submenu-link-downloads" aria-label="Downloads menu">
+										<span class="globalnav-image-regular globalnav-submenu-button-icon">
+											<svg height="10" viewBox="0 0 10 10" width="10" xmlns="http://www.w3.org/2000/svg">
+												<path d="m4.6725 6.635-2.655-2.667a.445.445 0 0 1 -.123-.304.4331.4331 0 0 1 .427-.439h.006a.447.447 0 0 1 .316.135l2.357 2.365 2.356-2.365a.458.458 0 0 1 .316-.135.433.433 0 0 1 .433.433v.006a.4189.4189 0 0 1 -.123.3l-2.655 2.671a.4451.4451 0 0 1 -.327.14.464.464 0 0 1 -.328-.14z"></path>
+											</svg>
+										</span>
+										<span class="globalnav-image-compact globalnav-submenu-button-icon">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m7.4382 24.0621-6.5581-6.4238c-.2368-.2319-.2407-.6118-.0088-.8486.2324-.2373.6123-.2407.8486-.0088l7 6.8569c.1157.1138.1807.2695.1802.4316-.001.1621-.0674.3174-.1846.4297l-7 6.7242c-.1162.1118-.2661.1675-.4155.1675-.1577 0-.3149-.062-.4326-.1846-.2295-.2388-.2222-.6187.0171-.8481l6.5537-6.2959z"></path>
+											</svg>
+										</span>
+									</button>
+								</li>
+							</ul>
+							<div id="globalnav-submenu-link-downloads" class="globalnav-flyout globalnav-submenu" aria-labelledby="globalnav-menubutton-link-downloads" style="--r-globalnav-flyout-item-total: 0; --r-globalnav-flyout-group-number: 0; --r-globalnav-flyout-height: auto; --r-globalnav-flyout-rate: 240ms;">
+								<div class="globalnav-flyout-scroll-container">
+									<div class="globalnav-flyout-content globalnav-submenu-content" style="--r-globalnav-flyout-elevated-group-count: 1; --r-globalnav-flyout-group-total: 2; --r-globalnav-flyout-item-total: 6;">
+										<!-- Explore -->
+										<div class="globalnav-submenu-group globalnav-submenu-group-elevated" style="--r-globalnav-flyout-group-number: 0;">
+
+											<h2 class="globalnav-submenu-header" id="downloads-explore-heading" style="--r-globalnav-flyout-item-number: 1;">Explore Downloads</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="downloads-explore-heading">
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 2;"><a href="/download/" class="globalnav-submenu-link">All Downloads</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 3;"><a href="/download/os/" class="globalnav-submenu-link">Operating Systems<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 4;"><a href="/download/applications/" class="globalnav-submenu-link">Applications<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 5;"><a href="/design/resources/" class="globalnav-submenu-link">Design Resources</a></li>
+											</ul>
+										</div>
+										<!-- Featured -->
+										<div class="globalnav-submenu-group" style="--r-globalnav-flyout-group-number: 1;">
+
+											<h2 class="globalnav-submenu-header" id="downloads-featured-heading" style="--r-globalnav-flyout-item-number: 1;">Featured</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="downloads-featured-heading">
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 2;"><a href="/xcode/" class="globalnav-submenu-link">Xcode</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 3;"><a href="/testflight/" class="globalnav-submenu-link">TestFlight</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 4;"><a href="/fonts/" class="globalnav-submenu-link">Fonts</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 5;"><a href="/sf-symbols/" class="globalnav-submenu-link">SF Symbols</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 6;"><a href="/icon-composer/" class="globalnav-submenu-link">Icon Composer</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="
+  globalnav-item
+  globalnav-item-support
+  globalnav-item-menu
+  globalnav-item-submenu
+" style="--r-globalnav-flyout-item-number: 6;">
+							<ul class="globalnav-submenu-trigger-group">
+								<li class="globalnav-submenu-trigger-item">
+									<a href="/support/" aria-label="Support" class="globalnav-link globalnav-submenu-trigger-link globalnav-link-support">
+										<span class="globalnav-link-text-container">
+											<span class="globalnav-link-text">Support</span>
+										</span>
+										<span class="globalnav-link-chevron">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m8.1155 30.358a.6.6 0 1 1 -.831.8653l-7-6.7242a.6.6 0 0 1 -.0045-.8613l7-6.8569a.6.6 0 1 1 .84.8574l-6.5582 6.4238z"></path>
+											</svg>
+										</span>
+									</a>
+								</li>
+								<li class="globalnav-submenu-trigger-item">
+									<button id="globalnav-menubutton-link-support" class="globalnav-submenu-trigger-button" aria-expanded="false" aria-controls="globalnav-submenu-link-support" aria-label="Support menu">
+										<span class="globalnav-image-regular globalnav-submenu-button-icon">
+											<svg height="10" viewBox="0 0 10 10" width="10" xmlns="http://www.w3.org/2000/svg">
+												<path d="m4.6725 6.635-2.655-2.667a.445.445 0 0 1 -.123-.304.4331.4331 0 0 1 .427-.439h.006a.447.447 0 0 1 .316.135l2.357 2.365 2.356-2.365a.458.458 0 0 1 .316-.135.433.433 0 0 1 .433.433v.006a.4189.4189 0 0 1 -.123.3l-2.655 2.671a.4451.4451 0 0 1 -.327.14.464.464 0 0 1 -.328-.14z"></path>
+											</svg>
+										</span>
+										<span class="globalnav-image-compact globalnav-submenu-button-icon">
+											<svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg">
+												<path d="m7.4382 24.0621-6.5581-6.4238c-.2368-.2319-.2407-.6118-.0088-.8486.2324-.2373.6123-.2407.8486-.0088l7 6.8569c.1157.1138.1807.2695.1802.4316-.001.1621-.0674.3174-.1846.4297l-7 6.7242c-.1162.1118-.2661.1675-.4155.1675-.1577 0-.3149-.062-.4326-.1846-.2295-.2388-.2222-.6187.0171-.8481l6.5537-6.2959z"></path>
+											</svg>
+										</span>
+									</button>
+								</li>
+							</ul>
+							<div id="globalnav-submenu-link-support" class="globalnav-flyout globalnav-submenu" aria-labelledby="globalnav-menubutton-link-support" style="--r-globalnav-flyout-item-total: 0; --r-globalnav-flyout-group-number: 0; --r-globalnav-flyout-height: auto; --r-globalnav-flyout-rate: 240ms;">
+								<div class="globalnav-flyout-scroll-container">
+									<div class="globalnav-flyout-content globalnav-submenu-content" style="--r-globalnav-flyout-elevated-group-count: 1; --r-globalnav-flyout-group-total: 2; --r-globalnav-flyout-item-total: 7;">
+										<!-- Explore -->
+										<div class="globalnav-submenu-group globalnav-submenu-group-elevated" style="--r-globalnav-flyout-group-number: 0;">
+
+											<h2 class="globalnav-submenu-header" id="explore-support" style="--r-globalnav-flyout-item-number: 1;">Explore Support</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="explore-support">
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 2;"><a href="/support/" class="globalnav-submenu-link">Overview</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 3;"><a href="/help/" class="globalnav-submenu-link">Help Guides</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 4;"><a href="/forums/" class="globalnav-submenu-link">Developer Forums<span class="loc-en-only"></span></a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 5;"><a href="/feedback-assistant/" class="globalnav-submenu-link">Feedback Assistant</a></li>
+												<li class="globalnav-submenu-list-item-elevated" style="--r-globalnav-flyout-item-number: 6;"><a href="/contact/" class="globalnav-submenu-link">Contact Us</a></li>
+											</ul>
+										</div>
+										<!-- Featured -->
+										<div class="globalnav-submenu-group" style="--r-globalnav-flyout-group-number: 1;">
+
+											<h2 class="globalnav-submenu-header" id="support-help" style="--r-globalnav-flyout-item-number: 1;">Featured</h2>
+											<ul class="globalnav-submenu-list" aria-labelledby="support-help">
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 2;"><a href="/help/account/" class="globalnav-submenu-link">Account Help</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 3;"><a href="/app-store/review/guidelines/" class="globalnav-submenu-link">App Review Guidelines</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 4;"><a href="/help/app-store-connect/" class="globalnav-submenu-link">App Store Connect Help</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 5;"><a href="/news/upcoming-requirements/" class="globalnav-submenu-link">Upcoming Requirements</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 6;"><a href="/support/terms/" class="globalnav-submenu-link">Agreements and Guidelines</a></li>
+												<li class="globalnav-submenu-list-item" style="--r-globalnav-flyout-item-number: 7;"><a href="/system-status/" class="globalnav-submenu-link">System Status<span class="loc-en-only"></span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<!-- Search -->
+			<li data-topnav-flyout-label="Search" class="globalnav-item globalnav-search shift-0-1" data-globalnav-iconflyout-enabled="true">
+				<a role="button" id="globalnav-menubutton-link-search" href="/search/" data-topnav-flyout-trigger-regular="true" data-topnav-flyout-trigger-compact="true" aria-label="Search" class="globalnav-link globalnav-link-search">
+					<span class="globalnav-image-regular">
+						<svg xmlns="http://www.w3.org/2000/svg" width="15px" height="44px" viewBox="0 0 15 44">
+							<path d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z"></path>
+						</svg>
+					</span>
+					<span class="globalnav-image-compact">
+						<svg height="48" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg">
+							<path d="m16.2294 29.9556-4.1755-4.0821a6.4711 6.4711 0 1 0 -1.2839 1.2625l4.2005 4.1066a.9.9 0 1 0 1.2588-1.287zm-14.5294-8.0017a5.2455 5.2455 0 1 1 5.2455 5.2527 5.2549 5.2549 0 0 1 -5.2455-5.2527z"></path>
+						</svg>
+					</span>
+				</a>
+				<div id="globalnav-submenu-search" aria-labelledby="globalnav-menubutton-link-search" class="globalnav-flyout globalnav-submenu" style="--r-globalnav-flyout-item-total: 0; --r-globalnav-flyout-group-number: 0; --r-globalnav-flyout-height: 388px; --r-globalnav-flyout-rate: 240ms;">
+					<div class="globalnav-flyout-scroll-container">
+						<div class="globalnav-flyout-content globalnav-submenu-content">
+							<form action="/search/" method="get" class="globalnav-searchfield">
+								<div class="globalnav-searchfield-wrapper">
+									<input placeholder="Ask Apple Developer" name="q" aria-label="Ask Apple Developer" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" class="globalnav-searchfield-input">
+									<input id="globalnav-searchfield-src" type="hidden" name="src" value="globalnav">
+									<button aria-label="Clear search" tabindex="-1" type="button" class="globalnav-searchfield-reset" disabled="" aria-hidden="true">
+										<span class="globalnav-image-regular">
+											<svg height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg">
+												<path d="m7 .0339a6.9661 6.9661 0 1 0 6.9661 6.9661 6.9661 6.9661 0 0 0 -6.9661-6.9661zm2.798 8.9867a.55.55 0 0 1 -.778.7774l-2.02-2.02-2.02 2.02a.55.55 0 0 1 -.7784-.7774l2.0206-2.0206-2.0204-2.02a.55.55 0 0 1 .7782-.7778l2.02 2.02 2.02-2.02a.55.55 0 0 1 .778.7778l-2.0203 2.02z"></path>
+											</svg>
+										</span>
+										<span class="globalnav-image-compact">
+											<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+												<path d="m0 8a8.0474 8.0474 0 0 1 7.9922-8 8.0609 8.0609 0 0 1 8.0078 8 8.0541 8.0541 0 0 1 -8 8 8.0541 8.0541 0 0 1 -8-8zm5.6549 3.2863 2.3373-2.353 2.3451 2.353a.6935.6935 0 0 0 .4627.1961.6662.6662 0 0 0 .6667-.6667.6777.6777 0 0 0 -.1961-.4706l-2.3451-2.3373 2.3529-2.3607a.5943.5943 0 0 0 .1961-.4549.66.66 0 0 0 -.6667-.6589.6142.6142 0 0 0 -.447.1961l-2.3686 2.3606-2.353-2.3527a.6152.6152 0 0 0 -.447-.1883.6529.6529 0 0 0 -.6667.651.6264.6264 0 0 0 .1961.4549l2.3451 2.3529-2.3451 2.353a.61.61 0 0 0 -.1961.4549.6661.6661 0 0 0 .6667.6667.6589.6589 0 0 0 .4627-.1961z"></path>
+											</svg>
+										</span>
+									</button>
+									<button aria-label="Submit search" tabindex="-1" aria-hidden="true" type="submit" class="globalnav-searchfield-submit" disabled="">
+										<span class="globalnav-image-regular">
+											<svg height="32" viewBox="0 0 30 32" width="30" xmlns="http://www.w3.org/2000/svg">
+												<path d="m23.3291 23.3066-4.35-4.35c-.0105-.0105-.0247-.0136-.0355-.0235a6.8714 6.8714 0 1 0 -1.5736 1.4969c.0214.0256.03.0575.0542.0815l4.35 4.35a1.1 1.1 0 1 0 1.5557-1.5547zm-15.4507-8.582a5.6031 5.6031 0 1 1 5.603 5.61 5.613 5.613 0 0 1 -5.603-5.61z"></path>
+											</svg>
+										</span>
+										<span class="globalnav-image-compact">
+											<svg width="38" height="40" viewBox="0 0 38 40" xmlns="http://www.w3.org/2000/svg">
+												<path d="m28.6724 27.8633-5.07-5.07c-.0095-.0095-.0224-.0122-.032-.0213a7.9967 7.9967 0 1 0 -1.8711 1.7625c.0254.03.0357.0681.0642.0967l5.07 5.07a1.3 1.3 0 0 0 1.8389-1.8379zm-18.0035-10.0033a6.5447 6.5447 0 1 1 6.545 6.5449 6.5518 6.5518 0 0 1 -6.545-6.5449z"></path>
+											</svg>
+										</span>
+									</button>
+								</div>
+							</form>
+							<div class="globalnav-searchresults">
+								<div class="globalnav-searchresults-current">
+									<div class="globalnav-searchresults-container" style="--r-globalnav-flyout-group-number: 0;">
+
+										<h2 class="globalnav-searchresults-header" style="--r-globalnav-flyout-item-number: 0;">Quick Links</h2>
+										<ul class="globalnav-searchresults-list" role="list">
+											<li class="globalnav-searchresults-list-item" role="listitem" style="--r-globalnav-flyout-item-number: 1;">
+												<a class="globalnav-searchresults-list-link" href="/events/" data-query="no keyword" data-section="quicklinks" data-items="5" data-index="0" data-label="Events">
+													<span class="globalnav-searchresults-list-icon">
+														<span class="globalnav-image-regular globalnav-link-image">
+															<svg height="16" viewBox="0 0 9 16" width="9" xmlns="http://www.w3.org/2000/svg">
+																<path d="m8.6124 8.1035-2.99 2.99a.5.5 0 0 1 -.7071-.7071l2.1366-2.1364h-6.316a.5.5 0 0 1 0-1h6.316l-2.1368-2.1367a.5.5 0 0 1 .7071-.7071l2.99 2.99a.5.5 0 0 1 .0002.7073z"></path>
+															</svg>
+														</span>
+														<span class="globalnav-image-compact globalnav-link-image">
+															<svg height="25" viewBox="0 0 13 25" width="13" xmlns="http://www.w3.org/2000/svg">
+																<path d="m12.3577 13.4238-4.4444 4.4444a.6.6 0 0 1 -.8486-.8477l3.37-3.37h-9.3231a.65.65 0 0 1 0-1.3008h9.3232l-3.37-3.37a.6.6 0 0 1 .8486-.8477l4.4444 4.4444a.5989.5989 0 0 1 -.0001.8474z"></path>
+															</svg>
+														</span>
+													</span>
+													<span class="globalnav-searchresults-list-text">Events</span>
+												</a>
+											</li>
+											<li class="globalnav-searchresults-list-item" role="listitem" style="--r-globalnav-flyout-item-number: 2;">
+												<a class="globalnav-searchresults-list-link" href="/news/" data-query="no keyword" data-section="quicklinks" data-items="5" data-index="1" data-label="News">
+													<span class="globalnav-searchresults-list-icon">
+														<span class="globalnav-image-regular globalnav-link-image">
+															<svg height="16" viewBox="0 0 9 16" width="9" xmlns="http://www.w3.org/2000/svg">
+																<path d="m8.6124 8.1035-2.99 2.99a.5.5 0 0 1 -.7071-.7071l2.1366-2.1364h-6.316a.5.5 0 0 1 0-1h6.316l-2.1368-2.1367a.5.5 0 0 1 .7071-.7071l2.99 2.99a.5.5 0 0 1 .0002.7073z"></path>
+															</svg>
+														</span>
+														<span class="globalnav-image-compact globalnav-link-image">
+															<svg height="25" viewBox="0 0 13 25" width="13" xmlns="http://www.w3.org/2000/svg">
+																<path d="m12.3577 13.4238-4.4444 4.4444a.6.6 0 0 1 -.8486-.8477l3.37-3.37h-9.3231a.65.65 0 0 1 0-1.3008h9.3232l-3.37-3.37a.6.6 0 0 1 .8486-.8477l4.4444 4.4444a.5989.5989 0 0 1 -.0001.8474z"></path>
+															</svg>
+														</span>
+													</span>
+													<span class="globalnav-searchresults-list-text">News</span>
+												</a>
+											</li>
+											<li class="globalnav-searchresults-list-item" role="listitem" style="--r-globalnav-flyout-item-number: 3;">
+												<a class="globalnav-searchresults-list-link" href="/forums/" data-query="no keyword" data-section="quicklinks" data-items="5" data-index="2" data-label="Forums">
+													<span class="globalnav-searchresults-list-icon">
+														<span class="globalnav-image-regular globalnav-link-image">
+															<svg height="16" viewBox="0 0 9 16" width="9" xmlns="http://www.w3.org/2000/svg">
+																<path d="m8.6124 8.1035-2.99 2.99a.5.5 0 0 1 -.7071-.7071l2.1366-2.1364h-6.316a.5.5 0 0 1 0-1h6.316l-2.1368-2.1367a.5.5 0 0 1 .7071-.7071l2.99 2.99a.5.5 0 0 1 .0002.7073z"></path>
+															</svg>
+														</span>
+														<span class="globalnav-image-compact globalnav-link-image">
+															<svg height="25" viewBox="0 0 13 25" width="13" xmlns="http://www.w3.org/2000/svg">
+																<path d="m12.3577 13.4238-4.4444 4.4444a.6.6 0 0 1 -.8486-.8477l3.37-3.37h-9.3231a.65.65 0 0 1 0-1.3008h9.3232l-3.37-3.37a.6.6 0 0 1 .8486-.8477l4.4444 4.4444a.5989.5989 0 0 1 -.0001.8474z"></path>
+															</svg>
+														</span>
+													</span>
+													<span class="globalnav-searchresults-list-text">Forums<span class="loc-en-only"></span></span>
+												</a>
+											</li>
+											<li class="globalnav-searchresults-list-item" role="listitem" style="--r-globalnav-flyout-item-number: 4;">
+												<a class="globalnav-searchresults-list-link" href="/documentation/samplecode/" data-query="no keyword" data-section="quicklinks" data-items="5" data-index="3" data-label="Sample Code">
+													<span class="globalnav-searchresults-list-icon">
+														<span class="globalnav-image-regular globalnav-link-image">
+															<svg height="16" viewBox="0 0 9 16" width="9" xmlns="http://www.w3.org/2000/svg">
+																<path d="m8.6124 8.1035-2.99 2.99a.5.5 0 0 1 -.7071-.7071l2.1366-2.1364h-6.316a.5.5 0 0 1 0-1h6.316l-2.1368-2.1367a.5.5 0 0 1 .7071-.7071l2.99 2.99a.5.5 0 0 1 .0002.7073z"></path>
+															</svg>
+														</span>
+														<span class="globalnav-image-compact globalnav-link-image">
+															<svg height="25" viewBox="0 0 13 25" width="13" xmlns="http://www.w3.org/2000/svg">
+																<path d="m12.3577 13.4238-4.4444 4.4444a.6.6 0 0 1 -.8486-.8477l3.37-3.37h-9.3231a.65.65 0 0 1 0-1.3008h9.3232l-3.37-3.37a.6.6 0 0 1 .8486-.8477l4.4444 4.4444a.5989.5989 0 0 1 -.0001.8474z"></path>
+															</svg>
+														</span>
+													</span>
+													<span class="globalnav-searchresults-list-text">Sample Code<span class="loc-en-only"></span></span>
+												</a>
+											</li>
+											<li class="globalnav-searchresults-list-item" role="listitem" style="--r-globalnav-flyout-item-number: 5;">
+												<a class="globalnav-searchresults-list-link" href="/videos/" data-query="no keyword" data-section="quicklinks" data-items="5" data-index="4" data-label="Videos">
+													<span class="globalnav-searchresults-list-icon">
+														<span class="globalnav-image-regular globalnav-link-image">
+															<svg height="16" viewBox="0 0 9 16" width="9" xmlns="http://www.w3.org/2000/svg">
+																<path d="m8.6124 8.1035-2.99 2.99a.5.5 0 0 1 -.7071-.7071l2.1366-2.1364h-6.316a.5.5 0 0 1 0-1h6.316l-2.1368-2.1367a.5.5 0 0 1 .7071-.7071l2.99 2.99a.5.5 0 0 1 .0002.7073z"></path>
+															</svg>
+														</span>
+														<span class="globalnav-image-compact globalnav-link-image">
+															<svg height="25" viewBox="0 0 13 25" width="13" xmlns="http://www.w3.org/2000/svg">
+																<path d="m12.3577 13.4238-4.4444 4.4444a.6.6 0 0 1 -.8486-.8477l3.37-3.37h-9.3231a.65.65 0 0 1 0-1.3008h9.3232l-3.37-3.37a.6.6 0 0 1 .8486-.8477l4.4444 4.4444a.5989.5989 0 0 1 -.0001.8474z"></path>
+															</svg>
+														</span>
+													</span>
+													<span class="globalnav-searchresults-list-text">Videos</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<!-- Account -->
+			<li id="globalnav-account" class="globalnav-item globalnav-account">
+				<div class="globalnav-account-wrapper">
+					<a href="/account/" aria-label="Account" class="globalnav-link globalnav-link-account">
+						<span class="globalnav-image-regular globalnav-link-image" aria-hidden="true">
+							<svg width="17" height="47" viewBox="0 0 117.045 120" xmlns="http://www.w3.org/2000/svg" focusable="false" preserveAspectRatio="xMidYMid meet">
+								<path fill="currentColor" d="M58.496,109.742c27.503,0 49.825,-22.271 49.825,-49.774c0,-27.503 -22.322,-49.773 -49.825,-49.773c-27.451,0 -49.773,22.27 -49.773,49.773c0,27.503 22.322,49.774 49.773,49.774zM58.496,101.474c-22.945,0 -41.465,-18.561 -41.465,-41.506c0,-22.944 18.52,-41.506 41.465,-41.506c22.945,0 41.506,18.562 41.506,41.506c0,22.945 -18.561,41.506 -41.506,41.506zM91.931,92.156l-0.156,-0.549c-2.433,-7.174 -15.338,-15.037 -33.279,-15.037c-17.92,0 -30.773,7.852 -33.227,15.005l-0.156,0.581c8.825,8.692 23.891,13.762 33.394,13.762c9.575,0 24.525,-5.028 33.424,-13.762zM58.496,68.304c9.398,0.103 16.759,-7.924 16.759,-18.421c0,-9.875 -7.393,-18.048 -16.759,-18.048c-9.314,0 -16.769,8.173 -16.707,18.048c0.052,10.497 7.31,18.317 16.707,18.421z" />
+							</svg>
+						</span>
+						<span class="globalnav-image-compact globalnav-link-image" aria-hidden="true">
+							<svg width="20" height="51" viewBox="0 0 117.045 120" xmlns="http://www.w3.org/2000/svg" focusable="false" preserveAspectRatio="xMidYMid meet">
+								<path fill="currentColor" d="M58.496,109.742c27.503,0 49.825,-22.271 49.825,-49.774c0,-27.503 -22.322,-49.773 -49.825,-49.773c-27.451,0 -49.773,22.27 -49.773,49.773c0,27.503 22.322,49.774 49.773,49.774zM58.496,101.474c-22.945,0 -41.465,-18.561 -41.465,-41.506c0,-22.944 18.52,-41.506 41.465,-41.506c22.945,0 41.506,18.562 41.506,41.506c0,22.945 -18.561,41.506 -41.506,41.506zM91.931,92.156l-0.156,-0.549c-2.433,-7.174 -15.338,-15.037 -33.279,-15.037c-17.92,0 -30.773,7.852 -33.227,15.005l-0.156,0.581c8.825,8.692 23.891,13.762 33.394,13.762c9.575,0 24.525,-5.028 33.424,-13.762zM58.496,68.304c9.398,0.103 16.759,-7.924 16.759,-18.421c0,-9.875 -7.393,-18.048 -16.759,-18.048c-9.314,0 -16.769,8.173 -16.707,18.048c0.052,10.497 7.31,18.317 16.707,18.421z" />
+							</svg>
+						</span>
+					</a>
+				</div>
+			</li>
+		</ul>
+		<div class="globalnav-menutrigger">
+			<button id="globalnav-menutrigger-button" aria-controls="globalnav-list" aria-label="Menu" class="globalnav-menutrigger-button"><svg width="18" height="18" viewBox="0 0 18 18">
+					<polyline id="globalnav-menutrigger-bread-bottom" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="2 12, 16 12" class="globalnav-menutrigger-bread globalnav-menutrigger-bread-bottom">
+						<animate id="globalnav-anim-menutrigger-bread-bottom-open" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"></animate>
+						<animate id="globalnav-anim-menutrigger-bread-bottom-close" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"></animate>
+					</polyline>
+					<polyline id="globalnav-menutrigger-bread-top" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="2 5, 16 5" class="globalnav-menutrigger-bread globalnav-menutrigger-bread-top">
+						<animate id="globalnav-anim-menutrigger-bread-top-open" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"></animate>
+						<animate id="globalnav-anim-menutrigger-bread-top-close" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"></animate>
+					</polyline>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<span style="visibility: hidden; position: absolute; top: 0px; z-index: -1;">&nbsp;</span>
+</nav>
+<!-- <div class="globalnav-placeholder"></div> -->
+<script src="/assets/scripts/ac-globalnav.built.js?35212621148"></script>
+	<!-- metrics -->
+<script>
+	/* RSID: */
+	var s_account="awdappledeveloper"
+</script>	
+<script src="/assets/metrics/scripts/analytics.js"></script>
+<script>
+	s_sections = [
+		{
+			"pattern": "^/documentation",
+			"channel": "www.documentation.developer"
+		},
+		{
+			"pattern": "^/library",
+			"channel": "www.documentation.developer"
+		},
+		{
+			"pattern": "^/tutorials",
+			"channel": "www.documentation.developer"
+		},	
+		{
+			"pattern": "human\\-interface\\-guidelines",
+			"channel": "www.hig.developer"
+		},
+		{
+			"pattern": "/testflight/",
+			"channel": "www.appstoreconnect.developer"
+		},
+		{
+			"pattern": "/app\\-store\\-connect/",
+			"channel": "www.appstoreconnect.developer"
+		},
+		{
+			"pattern": "/support/app\\-store\\-connect/",
+			"channel": "www.appstoreconnect.developer"
+		},
+		{
+			"pattern": "/help/app\\-store\\-connect/",
+			"channel": "www.appstoreconnect.developer"
+		},
+		{
+			"pattern": "/wwdc/",
+			"channel": "www.wwdc.developer"
+		},
+		{
+			"pattern": "/wwdc\\d{2}/",
+			"channel": "www.wwdc.developer"
+		},
+		{
+			"pattern": "/videos/",
+			"channel": "www.videos.developer"
+		},
+		{
+			"pattern": "^/account",
+			"channel": "www.account.developer"
+		},
+		{
+			"pattern": "downloads?",
+			"channel": "www.download.developer"
+		},
+		{
+			"pattern": "/localization/",
+			"channel": "www.appstore.developer"
+		},	
+		{
+			"pattern": "/app\\-store/",
+			"channel": "www.appstore.developer"
+		},
+		{
+			"pattern": "/in\\-app\\-purchase/",
+			"channel": "www.appstore.developer"
+		},
+		{
+			"pattern": "/cn/",
+			"channel": "www.cn.developer"
+		},
+		{
+			"pattern": "/jp/",
+			"channel": "www.jp.developer"
+		},
+		{
+			"pattern": "/kr/",
+			"channel": "www.kr.developer"
+		},
+		{
+			"pattern": "/de/",
+			"channel": "www.de.developer"
+		},
+		{
+			"pattern": "/la/",
+			"channel": "www.la.developer"
+		},
+		{
+			"pattern": "/fr/",
+			"channel": "www.fr.developer"
+		},
+		{
+			"pattern": "/it/",
+			"channel": "www.it.developer"
+		},
+		{
+			"pattern": "/br/",
+			"channel": "www.br.developer"
+		}
+	];
+	
+	s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+	s.channel="www.en.developer";
+	
+	s_sections.forEach((s_section) => {
+		var regex = new RegExp(s_section.pattern);
+		
+		if(location.pathname.search(regex) !== -1) {
+			s.channel=s_section.channel;
+		}
+	});
+	
+	/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+	var s_code=s.t();if(s_code)document.write(s_code)
+</script>
+<!-- /metrics -->
+
+	<link rel="stylesheet" property="stylesheet" href="/assets/styles/localnav.css" type="text/css" />
+<input type="checkbox" id="localnav-menustate" class="localnav-menustate"/>
+<nav id="localnav" class="localnav localnav-scrim" data-sticky role="navigation">
+	<div class="localnav-wrapper">
+		<div class="localnav-background"></div>
+		<div class="localnav-content">
+			<h2 class="localnav-title">
+				<a href="/videos/">Videos</a>
+			</h2>
+
+			<div class="localnav-menu">
+				<a href="#localnav-menustate" class="localnav-menucta-anchor localnav-menucta-anchor-open" id="localnav-menustate-open">
+					<span class="localnav-menucta-anchor-label">Open Menu</span>
+				</a>
+				<a href="#" class="localnav-menucta-anchor localnav-menucta-anchor-close" id="localnav-menustate-close">
+					<span class="localnav-menucta-anchor-label">Close Menu</span>
+				</a>
+				<div class="localnav-menu-tray">
+					<ul class="localnav-menu-items">
+						<li class="localnav-menu-item">
+							<a href="/videos/" class="localnav-menu-link">Collections</a>
+						</li>
+						<li class="localnav-menu-item">
+							<a href="/videos/all-videos/" class="localnav-menu-link">All Videos</a>
+						</li>
+						<li class="localnav-menu-item">
+							<a href="/videos/about/" class="localnav-menu-link">About</a>
+						</li>
+					</ul>
+				</div>
+				<div class="localnav-actions localnav-actions-center">
+					<div class="localnav-action localnav-action-menucta" aria-hidden="true">
+						<label for="localnav-menustate" class="localnav-menucta">
+							<span class="localnav-menucta-chevron"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+<label id="localnav-curtain" for="localnav-menustate"></label>
+<script src="/assets/scripts/ac-localnav.built.js"></script>
+<script type="text/javascript" src="/assets/scripts/localnav.js"></script>
+	<main id="main" class="main " role="main">
+
+		<section >
+
+			<div class="section-content">
+								<section class="row">
+					<section class="column large-12 small-12  padding-top-small large-centered no-padding-bottom">
+						<!-- back link -->
+						<p class="back-link smaller">
+														<a class="icon icon-before icon-chevronleft" href="/videos/">More Videos</a>
+													</p>
+					</section>
+				</section>
+								
+				<!-- video player -->
+				<section class="video-wrapper row">
+					<section class="column large-12 small-12  padding-top-small padding-bottom-small large-centered">
+												<div class="developer-video-player">
+							<div id="video-status-overlay" class="developer-video-overlay" style="display: none">
+								<div class="video-status-content">
+									<div id="video-status-text"></div>
+									<img class="video-status-icon" id="icon-backward" src="/assets/elements/icons/symbols/gobackward5.svg" style="display: none" />
+									<img class="video-status-icon" id="icon-forward" src="/assets/elements/icons/symbols/goforward5.svg" style="display: none" />
+								</div>
+							</div>
+							<video id="video" class="video large-centered" poster="https://devimages-cdn.apple.com/wwdc-services/images/C03E6E6D-A32A-41D0-9E50-C3C6059820AA/9263/9263_wide_900x506_2x.jpg" controls="" preload="none" src="https://devstreaming-cdn.apple.com/videos/wwdc/2024/10135/4/A6AD3D2B-72D9-43AE-901E-8AFDBA304007/cmaf.m3u8" data-id="wwdc2024-10135" data-locale="en" data-hero-source="https://devimages-cdn.apple.com/wwdc-services/images/C03E6E6D-A32A-41D0-9E50-C3C6059820AA/9263/9263_wide_900x506_2x.jpg"></video>
+						</div>
+						<div class="no-video-banner hidden">
+							<div class="no-video-copy">
+								<img src="https://devimages-cdn.apple.com/wwdc-services/images/C03E6E6D-A32A-41D0-9E50-C3C6059820AA/9263/9263_wide_900x506_2x.jpg" style="width:100%">
+							</div>
+							</span>
+						</div>
+
+											</section>
+				</section>
+
+			</section>
+
+		</section>
+
+		<section class="bg-light padding-top-small padding-bottom">
+
+			<div class="section-content">
+		
+			<!-- tab menu -->
+			<section class="tab-menu row divider-bottom">
+
+				<section class="column large-11 small-12  padding-top-small padding-bottom-small large-centered tab-menu-container">
+										 
+																																																																																																																																																																																				<ul class="tabs">
+						
+						<li class="tab"
+							data-supplement-id="details"
+							data-language-code="en"
+							data-video-id="wwdc2024-10135"
+													>
+							<a href="#">
+								<span class="smaller">
+									About
+								</span>
+							</a>
+						</li>
+						
+						
+												<li class="tab"
+							data-supplement-id="transcript"
+							data-language-code="en"
+							data-video-id="wwdc2024-10135"
+						>
+							<a href="#">
+								<span class="smaller">
+									Transcript
+								</span>
+							</a>
+						</li>
+						
+												<li class="tab"
+							data-supplement-id="sample-code"
+							data-language-code="en"
+							data-video-id="wwdc2024-10135"
+						>
+							<a href="#">
+								<span class="smaller">
+									Code
+								</span>
+							</a>
+						</li>
+												
+					</ul>
+									</section>
+
+			</section>
+
+			<!-- supplements -->
+			<section class="row">
+
+				<section class="column large-11 small-12  large-centered no-padding-top no-padding-bottom">
+
+					<ul class="supplements hidden">
+
+						<!-- details -->
+						<li class="supplement details " data-supplement-id="details">
+							
+							<div class="badge-available-on-wrapper">
+																<h1>What’s new in Xcode 16</h1>
+							</div>
+
+							<p>Discover the latest productivity and performance improvements in Xcode 16. Learn about enhancements to code completion, diagnostics, and Xcode Previews. Find out more about updates in builds and explore improvements in debugging and Instruments.</p>
+
+															
+								<h2>Chapters</h2>
+								<ul class="no-bullet chapter-list">
+																	<li class="chapter-item" data-start-time="0">0:00 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=0" data-start-time="0" data-chapter-end-time="29" data-chapter-lenght="29" data-chapter-index="1">Introduction</a></li>
+																	<li class="chapter-item" data-start-time="29">0:29 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=29" data-start-time="29" data-chapter-end-time="33" data-chapter-lenght="4" data-chapter-index="2">Updates in editing</a></li>
+																	<li class="chapter-item" data-start-time="33">0:33 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=33" data-start-time="33" data-chapter-end-time="61" data-chapter-lenght="28" data-chapter-index="3">Code completion</a></li>
+																	<li class="chapter-item" data-start-time="61">1:01 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=61" data-start-time="61" data-chapter-end-time="169" data-chapter-lenght="108" data-chapter-index="4">Adopting Swift 6 data-race safety guarantees</a></li>
+																	<li class="chapter-item" data-start-time="169">2:49 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=169" data-start-time="169" data-chapter-end-time="382" data-chapter-lenght="213" data-chapter-index="5">Improvements to Previews</a></li>
+																	<li class="chapter-item" data-start-time="382">6:22 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=382" data-start-time="382" data-chapter-end-time="386" data-chapter-lenght="4" data-chapter-index="6">Updates in builds</a></li>
+																	<li class="chapter-item" data-start-time="386">6:26 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=386" data-start-time="386" data-chapter-end-time="435" data-chapter-lenght="49" data-chapter-index="7">Explicit modules</a></li>
+																	<li class="chapter-item" data-start-time="435">7:15 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=435" data-start-time="435" data-chapter-end-time="510" data-chapter-lenght="75" data-chapter-index="8">Package resolution</a></li>
+																	<li class="chapter-item" data-start-time="510">8:30 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=510" data-start-time="510" data-chapter-end-time="515" data-chapter-lenght="5" data-chapter-index="9">What's new in debugging</a></li>
+																	<li class="chapter-item" data-start-time="515">8:35 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=515" data-start-time="515" data-chapter-end-time="547" data-chapter-lenght="32" data-chapter-index="10">Build process and debugging</a></li>
+																	<li class="chapter-item" data-start-time="547">9:07 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=547" data-start-time="547" data-chapter-end-time="563" data-chapter-lenght="16" data-chapter-index="11">Thread performance checker</a></li>
+																	<li class="chapter-item" data-start-time="563">9:23 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=563" data-start-time="563" data-chapter-end-time="736" data-chapter-lenght="173" data-chapter-index="12">The organizer</a></li>
+																	<li class="chapter-item" data-start-time="736">12:16 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=736" data-start-time="736" data-chapter-end-time="775" data-chapter-lenght="39" data-chapter-index="13">The RealityKit debugger</a></li>
+																	<li class="chapter-item" data-start-time="775">12:55 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=775" data-start-time="775" data-chapter-end-time="1122" data-chapter-lenght="347" data-chapter-index="14">Meet Swift Testing</a></li>
+																	<li class="chapter-item" data-start-time="1122">18:42 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=1122" data-start-time="1122" data-chapter-end-time="1184" data-chapter-lenght="62" data-chapter-index="15">What's new in Instruments</a></li>
+																	<li class="chapter-item" data-start-time="1184">19:44 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=1184" data-start-time="1184" data-chapter-end-time="1298" data-chapter-lenght="114" data-chapter-index="16">Meet the flame graph</a></li>
+																	<li class="chapter-item" data-start-time="1298">21:38 - <a class="jump-to-time" href="/videos/play/wwdc2024/10135/?time=1298" data-start-time="1298" data-chapter-end-time="1334" data-chapter-lenght="36" data-chapter-index="17">Wrap up</a></li>
+																</ul>
+							
+														<h2>Resources</h2>
+
+							<ul class="links small">
+																																					<li class="document"><a href="https://developer.apple.com/documentation/Xcode/previewing-your-apps-interface-in-xcode" target="_blank">Previewing your app’s interface in Xcode</a></li>
+																																							<li class="guide"><a href="https://developer.apple.com/xcode/" target="_blank">Xcode</a></li>
+																																							<li class="developerForum"><a href="https://developer.apple.com/forums/topics/developer-tools-and-services?cid=vf-a-0010" target="_blank">Forum: Developer Tools & Services</a></li>
+																																							<li class="document"><a href="https://developer.apple.com/documentation/Updates/Xcode" target="_blank">Xcode updates</a></li>
+																											
+																	<li class="download">
+										<ul class="options">
+																						<li><a href="https://devstreaming-cdn.apple.com/videos/wwdc/2024/10135/4/A6AD3D2B-72D9-43AE-901E-8AFDBA304007/downloads/wwdc2024-10135_hd.mp4?dl=1">HD Video</a></li>
+																																	<li><a href="https://devstreaming-cdn.apple.com/videos/wwdc/2024/10135/4/A6AD3D2B-72D9-43AE-901E-8AFDBA304007/downloads/wwdc2024-10135_sd.mp4?dl=1">SD Video</a></li>
+																					</ul>
+									</li>
+																
+															</ul>
+							
+														<div class="divider-top margin-top-small padding-bottom-small"></div>
+							<h2>Related Videos</h2>
+														<h4>WWDC24</h4>
+								<ul class="links small">
+																			<li class="video">
+											<a href="/videos/play/wwdc2024/10172">Break into the RealityKit debugger</a>
+										</li>
+																			<li class="video">
+											<a href="/videos/play/wwdc2024/10171">Demystify explicitly built modules</a>
+										</li>
+																			<li class="video">
+											<a href="/videos/play/wwdc2024/10195">Go further with Swift Testing</a>
+										</li>
+																			<li class="video">
+											<a href="/videos/play/wwdc2024/10179">Meet Swift Testing</a>
+										</li>
+																			<li class="video">
+											<a href="/videos/play/wwdc2024/10169">Migrate your app to Swift 6</a>
+										</li>
+																			<li class="video">
+											<a href="/videos/play/wwdc2024/10198">Run, Break, Inspect: Explore effective debugging in LLDB</a>
+										</li>
+																	</ul>
+														
+						</li>
+
+						<!-- transcript -->
+						<li class="supplement transcript" data-supplement-id="transcript" data-shortcut-base-url="/videos/play/wwdc2024/10135/">
+							<div class="grid grid-gutterless margin-bottom-small">
+								<div class="grid-item large-span-11 medium-span-11 small-span-11">
+									<div class="form-textbox form-textbox-with-lefticon form-textbox-with-righticon">
+										<input type="text" id="transcript-search-box" class="transcript-search searchbar form-textbox-input" aria-labelledby="textbox-label"  />
+										<span class="form-textbox-label" id="textbox-label" aria-hidden="true">Search this video…</span>
+										<div class="form-textbox-lefticon form-icons-focusable">
+											<span class="form-icons form-icons-search15"></span>
+										</div>
+									</div>
+								</div>
+								<div class="grid-item large-span-1 medium-span-1 small-span-1">									
+									<div style="font-size:34px" id="get-transcript">
+										<sf-symbol name="arrow.down.document" weight="light" scale="small" mode="hierarchical"></sf-symbol>
+									</div>
+
+								</div>
+							</div>
+
+							<section id="transcript-content">
+								<p><span class="sentence"><span data-start="7.0">Hi, I’m Daisy. Along with my colleague, Jake, </span></span><span class="sentence"><span data-start="9.0">we’ll show you some of what’s new in Xcode 16. </span></span><span class="sentence"><span data-start="12.0">We’re so excited, so let’s jump right in. </span></span><span class="sentence"><span data-start="16.0">At every phase of app development, Xcode is there with you. </span></span><span class="sentence"><span data-start="19.0">We’ll look at what’s new in Xcode 16 as you edit Swift code, </span></span><span class="sentence"><span data-start="23.0">run builds, debug amd test your code and maximize its performance. </span></span><span class="sentence"><span data-start="29.0">Let's start with three things that are new when editing code.</p><p></span></span><span class="sentence"><span data-start="33.0">First, code completion provides more thorough code suggestions </span></span><span class="sentence"><span data-start="37.0">thanks to an on-device coding models </span></span><span class="sentence"><span data-start="39.0">specifically trained for Swift and Apple SDKs.</p><p></span></span><span class="sentence"><span data-start="45.0">It uses the surrounding code context </span></span><span class="sentence"><span data-start="47.0">like function names and comments to move through your ideas faster.</p><p></span></span><span class="sentence"><span data-start="54.0">This is all made possible by Apple Silicon </span></span><span class="sentence"><span data-start="56.0">and is available when running Xcode 16 on macOS Sequoia. </span></span><span class="sentence"><span data-start="61.0">Now let’s talk about Swift. </span></span><span class="sentence"><span data-start="64.0">Swift 6 brings a new language mode that provides concurrency safety guarantees. </span></span><span class="sentence"><span data-start="68.0">It turns data races normally only experienced at runtime </span></span><span class="sentence"><span data-start="71.0">into compile-time issues. </span></span><span class="sentence"><span data-start="73.0">This is a great way to improve the correctness and safety of your code. </span></span><span class="sentence"><span data-start="77.0">To take advantage of these guarantees, </span></span><span class="sentence"><span data-start="79.0">you’ll want to adopt the Swift 6 language mode. </span></span><span class="sentence"><span data-start="82.0">But you can start today in Xcode 16 </span></span><span class="sentence"><span data-start="84.0">by incrementally enabling warnings for each upcoming language feature. </span></span><span class="sentence"><span data-start="88.0">Let me show you how to do that. </span></span><span class="sentence"><span data-start="91.0">I’m working on an app named BOTanist </span></span><span class="sentence"><span data-start="93.0">where robots show off their planting skills. </span></span><span class="sentence"><span data-start="95.0">I want to prepare this app for Swift 6. </span></span><span class="sentence"><span data-start="97.0">So I’ll I start by navigating to the "Swift Compiler - Upcoming Features" </span></span><span class="sentence"><span data-start="101.0">section in the Build Settings. </span></span><span class="sentence"><span data-start="104.0">Here, I can enable upcoming compiler features one at a time. </span></span><span class="sentence"><span data-start="108.0">I'll start by setting "Isolated Global Variables” to Yes.</p><p></span></span><span class="sentence"><span data-start="116.0">When I build, Xcode displays a new warning in the issues navigator.</p><p></span></span><span class="sentence"><span data-start="123.0">Letting me know that logger, which is a global variable, is not concurrency safe.</p><p></span></span><span class="sentence"><span data-start="129.0">Clicking on the issue, jumps right to where logger is defined.</p><p></span></span><span class="sentence"><span data-start="134.0">I know logger doesn’t need to be mutated so I can change it from var to let. </span></span><span class="sentence"><span data-start="138.0">Making it safe from any data races.</p><p></span></span><span class="sentence"><span data-start="146.0">Adopting upcoming features </span></span><span class="sentence"><span data-start="147.0">allows you to catch and address potential issues before switching to Swift 6. </span></span><span class="sentence"><span data-start="152.0">Where these warnings will appear as errors.</p><p></span></span><span class="sentence"><span data-start="156.0">And when ready, you can set the Swift Language version in the build settings.</p><p></span></span><span class="sentence"><span data-start="162.0">For more on this check out “Migrate your app to Swift 6”.</p><p></span></span><span class="sentence"><span data-start="169.0">Xcode 16 also has some great improvements for Previews. </span></span><span class="sentence"><span data-start="174.0">Previews allow you to quickly iterate </span></span><span class="sentence"><span data-start="176.0">on your UI to help you create great user interfaces. </span></span><span class="sentence"><span data-start="180.0">There are two new APIs that make them simpler to write, </span></span><span class="sentence"><span data-start="182.0">more reusable, and better integrated with your model.</p><p></span></span><span class="sentence"><span data-start="187.0">The first is the Previewable macro. </span></span><span class="sentence"><span data-start="189.0">Previewable can be attached to property wrappers like State, </span></span><span class="sentence"><span data-start="192.0">allowing you to use them directly within a preview block. </span></span><span class="sentence"><span data-start="196.0">Writing wrapper views is no longer necessary. </span></span><span class="sentence"><span data-start="200.0">Let me show you an example in our app.</p><p></span></span><span class="sentence"><span data-start="204.0">Here’s RobotFaceSelectorView. It takes a Binding to a robot face.</p><p></span></span><span class="sentence"><span data-start="210.0">When I create a preview, I can define my state right in the preview's body </span></span><span class="sentence"><span data-start="214.0">and attach the Previewable macro. </span></span><span class="sentence"><span data-start="216.0">This will tell the preview system </span></span><span class="sentence"><span data-start="218.0">to create a wrapper view behind the scenes, so I don’t have to.</p><p></span></span><span class="sentence"><span data-start="223.0">Then I can add my view.</p><p></span></span><span class="sentence"><span data-start="229.0">Which lets me see my UI live with just a couple of lines! </span></span><span class="sentence"><span data-start="240.0">The second new API is PreviewModifier. </span></span><span class="sentence"><span data-start="243.0">PreviewModifier makes it easier to share environment or data for previews. </span></span><span class="sentence"><span data-start="247.0">This not only reduces duplicate code, </span></span><span class="sentence"><span data-start="250.0">but it also enables the preview system to cache the data. </span></span><span class="sentence"><span data-start="254.0">I’ll switch to another view for this. </span></span><span class="sentence"><span data-start="256.0">RobotNameSelectorView requires a RobotNamer to work.</p><p></span></span><span class="sentence"><span data-start="262.0">This type asynchronously retrieves possible robot names from the server. </span></span><span class="sentence"><span data-start="266.0">But hitting the server over and over while building my previews, isn’t necessary. </span></span><span class="sentence"><span data-start="271.0">I can use PreviewModifier to create a RobotNamer for all my previews </span></span><span class="sentence"><span data-start="275.0">without hitting our external server.</p><p></span></span><span class="sentence"><span data-start="278.0">To begin, I’ll define a type that conforms to PreviewModifier. </span></span><span class="sentence"><span data-start="283.0">This protocol has two requirements. </span></span><span class="sentence"><span data-start="285.0">First, I use makeSharedContext to load and store the data. </span></span><span class="sentence"><span data-start="289.0">This method is async and throwing, </span></span><span class="sentence"><span data-start="290.0">so I can load data asynchronously and handle errors. </span></span><span class="sentence"><span data-start="294.0">In this case, I create a RobotNamer with names from a local file </span></span><span class="sentence"><span data-start="297.0">so I don’t hit our external server.</p><p></span></span><span class="sentence"><span data-start="302.0">What’s key is that this method is only called once </span></span><span class="sentence"><span data-start="304.0">for all modifiers of the same type </span></span><span class="sentence"><span data-start="306.0">as the preview system caches this data for me.</p><p></span></span><span class="sentence"><span data-start="310.0">The second requirement is the body method. </span></span><span class="sentence"><span data-start="313.0">The body method lets me wrap the preview with the shared context. </span></span><span class="sentence"><span data-start="316.0">In my conformance, I’ll pass RobotNamer using the environment modifier.</p><p></span></span><span class="sentence"><span data-start="322.0">With my modifier defined, I just need to provide it to my preview using a trait. </span></span><span class="sentence"><span data-start="327.0">But given I'm going to use this modifier a lot, </span></span><span class="sentence"><span data-start="330.0">I like to define an extension on PreviewTrait </span></span><span class="sentence"><span data-start="332.0">to reduce the code at each call site. </span></span><span class="sentence"><span data-start="335.0">All that’s left is to create my preview.</p><p></span></span><span class="sentence"><span data-start="340.0">This particular case is relatively simple. </span></span><span class="sentence"><span data-start="343.0">But PreviewModifier is especially helpful </span></span><span class="sentence"><span data-start="345.0">when you need to share data between previews, </span></span><span class="sentence"><span data-start="348.0">like when using SwiftData’s ModelContainer.</p><p></span></span><span class="sentence"><span data-start="352.0">Beyond the API, this year is a huge leap forward </span></span><span class="sentence"><span data-start="355.0">for the performance and underpinnings of previews. </span></span><span class="sentence"><span data-start="358.0">Enabled by a new execution engine, previews are faster than ever! </span></span><span class="sentence"><span data-start="363.0">Powered by advances in the compiler, the build system, and operating systems, </span></span><span class="sentence"><span data-start="367.0">previews uses the same build products for your project </span></span><span class="sentence"><span data-start="370.0">and reassembles your program on the fly, </span></span><span class="sentence"><span data-start="372.0">no longer needing to produce a separate copy. </span></span><span class="sentence"><span data-start="375.0">Previews is one improvement with builds this year. </span></span><span class="sentence"><span data-start="378.0">To tell you about others, I'll hand it over to Jake. </span></span><span class="sentence"><span data-start="381.0">Thanks, Daisy. Let's rock and roll forward to builds. </span></span><span class="sentence"><span data-start="386.0">Xcode 16 supercharges your builds with Explicit Modules. </span></span><span class="sentence"><span data-start="390.0">This feature provides improved parallelism, </span></span><span class="sentence"><span data-start="393.0">better diagnostics, and faster debugging, </span></span><span class="sentence"><span data-start="396.0">all without changing a single line of code.</p><p></span></span><span class="sentence"><span data-start="400.0">That's unreal! How do you get it? </span></span><span class="sentence"><span data-start="403.0">Well, for C and Objective-C, explicit modules are on by default. </span></span><span class="sentence"><span data-start="408.0">For Swift, you'll need to opt-in. Let's give that a try. </span></span><span class="sentence"><span data-start="413.0">I'll hop over to build settings. </span></span><span class="sentence"><span data-start="416.0">Enable Explicitly Built Modules.</p><p></span></span><span class="sentence"><span data-start="423.0">And kick off a build.</p><p></span></span><span class="sentence"><span data-start="434.0">Hmm. </span></span><span class="sentence"><span data-start="435.0">By the way, with improvements to Swift package integration in Xcode 16, </span></span><span class="sentence"><span data-start="439.0">I was able to queue up that build </span></span><span class="sentence"><span data-start="441.0">without having to wait for package resolution to finish first. </span></span><span class="sentence"><span data-start="445.0">I like that! </span></span><span class="sentence"><span data-start="447.0">So what's actually happening now? </span></span><span class="sentence"><span data-start="450.0">With explicit modules, Xcode splits up the processing of each compilation unit </span></span><span class="sentence"><span data-start="455.0">into three separate phases: </span></span><span class="sentence"><span data-start="457.0">scanning, building modules, and finally building the original code. </span></span><span class="sentence"><span data-start="464.0">The first two of these phases </span></span><span class="sentence"><span data-start="466.0">are now surfaced in the build log as "Scan dependencies" </span></span><span class="sentence"><span data-start="469.0">and "Compile Clang module" or "Compile Swift module", commands. </span></span><span class="sentence"><span data-start="475.0">Previously, these operations were performed implicitly </span></span><span class="sentence"><span data-start="478.0">as part of compiling your source files. </span></span><span class="sentence"><span data-start="481.0">Now, you get a more detailed breakdown of the build, </span></span><span class="sentence"><span data-start="485.0">better parallelism, and clearer error messages </span></span><span class="sentence"><span data-start="488.0">if the build fails due to a module issue.</p><p></span></span><span class="sentence"><span data-start="493.0">Explicit modules are also reflected in the build timeline. </span></span><span class="sentence"><span data-start="496.0">This makes it easier to see where time is being spent during the build process, </span></span><span class="sentence"><span data-start="500.0">and helps you optimize your builds. </span></span><span class="sentence"><span data-start="504.0">To learn more, check out: "Demystify explicitly built modules." </span></span><span class="sentence"><span data-start="510.0">All right! Now that we've written and built some code, it's time to debug it.</p><p></span></span><span class="sentence"><span data-start="516.0">But first, let me tell you about a couple ways </span></span><span class="sentence"><span data-start="519.0">the build process feeds into debugging improvements: </span></span><span class="sentence"><span data-start="523.0">Explicit modules make debugging faster, </span></span><span class="sentence"><span data-start="525.0">since lldb can re-use the build outputs when evaluating expressions, </span></span><span class="sentence"><span data-start="530.0">and DWARF5 is now the default debug symbol format </span></span><span class="sentence"><span data-start="534.0">when building against a deployment target of macOS Sequoia or iOS 18. </span></span><span class="sentence"><span data-start="540.0">With DWARF5, dSYM bundles are smaller, and symbol lookups are faster.</p><p></span></span><span class="sentence"><span data-start="546.0">When running in Xcode 16, the thread performance checker does even more. </span></span><span class="sentence"><span data-start="551.0">In addition to finding main thread hangs and priority inversions, </span></span><span class="sentence"><span data-start="555.0">it will now show excessive disk write and slow app launch diagnostics </span></span><span class="sentence"><span data-start="560.0">to help you improve your app's performance.</p><p></span></span><span class="sentence"><span data-start="564.0">In the Organizer, this comes with a new category </span></span><span class="sentence"><span data-start="566.0">of diagnostic logs for app launches. </span></span><span class="sentence"><span data-start="570.0">If your app takes a long time to launch on customer devices, </span></span><span class="sentence"><span data-start="573.0">Xcode will show you the slowest code path signatures, </span></span><span class="sentence"><span data-start="576.0">so you can prioritize fixing issues with the largest impact.</p><p></span></span><span class="sentence"><span data-start="582.0">And if you're familiar with disk write diagnostics, </span></span><span class="sentence"><span data-start="585.0">you'll love this trendy new update. </span></span><span class="sentence"><span data-start="588.0">Now in the organizer, you can see how the impact of issues has changed </span></span><span class="sentence"><span data-start="591.0">across different versions of your app. </span></span><span class="sentence"><span data-start="595.0">When you go to the disk writes view </span></span><span class="sentence"><span data-start="597.0">you can see that there are up arrows next to some of the signatures. </span></span><span class="sentence"><span data-start="601.0">These arrows are a great place to start, </span></span><span class="sentence"><span data-start="603.0">helping you prioritize issues with the greatest impact to your users.</p><p></span></span><span class="sentence"><span data-start="609.0">While debugging your code, </span></span><span class="sentence"><span data-start="610.0">the Thread Performance Checker will surface the worst of these </span></span><span class="sentence"><span data-start="613.0">as runtime issues, </span></span><span class="sentence"><span data-start="614.0">pinpointing the exact line of code to focus on, </span></span><span class="sentence"><span data-start="617.0">even if the issue isn't reproducing for you locally. </span></span><span class="sentence"><span data-start="622.0">In this example it looks like the Thread Performance Checker </span></span><span class="sentence"><span data-start="625.0">flagged an issue that's impacting our customers. </span></span><span class="sentence"><span data-start="627.0">It says we shouldn't be loading this video asset on the main thread. </span></span><span class="sentence"><span data-start="633.0">I'm going to open up Xcode and set a breakpoint so I can track this down. </span></span><span class="sentence"><span data-start="637.0">I'll go ahead and open the file with the issue </span></span><span class="sentence"><span data-start="645.0">and click in the gutter to set a breakpoint, and run.</p><p></span></span><span class="sentence"><span data-start="654.0">OK, it hit the breakpoint. </span></span><span class="sentence"><span data-start="656.0">To make it easier to trace where this call is coming from, </span></span><span class="sentence"><span data-start="659.0">I'm going to enable the Unified Backtrace View from the Debug Bar.</p><p></span></span><span class="sentence"><span data-start="666.0">This new visualization allows me to follow the call stack </span></span><span class="sentence"><span data-start="669.0">and view the surrounding code in each frame simply by scrolling down. </span></span><span class="sentence"><span data-start="674.0">I can even hover over variables to see their values.</p><p></span></span><span class="sentence"><span data-start="686.0">Oh, here in the View body method there's an "await" calling into that code.</p><p></span></span><span class="sentence"><span data-start="693.0">We've traced the call. It's coming from in-side the app! </span></span><span class="sentence"><span data-start="698.0">It looks like this video player initialization function is asynchronous </span></span><span class="sentence"><span data-start="702.0">and it's being invoked from a SwiftUI task modifier </span></span><span class="sentence"><span data-start="707.0">but it's inheriting the @MainActor context from the enclosing SwiftUI view </span></span><span class="sentence"><span data-start="711.0">and doing I/O on the main thread! </span></span><span class="sentence"><span data-start="715.0">I think I'll fix this issue by marking it nonisolated.</p><p></span></span><span class="sentence"><span data-start="723.0">That ought to do it. </span></span><span class="sentence"><span data-start="726.0">Thanks to the Unified Backtrace View, along with the Thread Performance Checker </span></span><span class="sentence"><span data-start="730.0">and new Organizer reporting, </span></span><span class="sentence"><span data-start="732.0">Xcode helps you focus on what matters most. </span></span><span class="sentence"><span data-start="736.0">Spatial development gets a whole lot easier too, </span></span><span class="sentence"><span data-start="739.0">with the new RealityKit debugger. </span></span><span class="sentence"><span data-start="741.0">Now with the click of a button, </span></span><span class="sentence"><span data-start="743.0">you can capture a snapshot of your running app's entity hierarchy, </span></span><span class="sentence"><span data-start="746.0">and explore it in 3D, right inside of Xcode. </span></span><span class="sentence"><span data-start="750.0">This debugger lets you view entities and their components, </span></span><span class="sentence"><span data-start="753.0">and inspect both built-in and custom properties. </span></span><span class="sentence"><span data-start="757.0">To learn more about the RealityKit debugger, </span></span><span class="sentence"><span data-start="759.0">or the existing debuggers, check out: "Break into the RealityKit debugger", </span></span><span class="sentence"><span data-start="764.0">and "Run, break, and inspect: Explore effective debugging in LLDB." </span></span><span class="sentence"><span data-start="770.0">Now, back to Daisy to test things out! </span></span><span class="sentence"><span data-start="775.0">Awesome debugging Jake! </span></span><span class="sentence"><span data-start="776.0">Just like debugging helps you </span></span><span class="sentence"><span data-start="777.0">solve problems while in the middle of development, </span></span><span class="sentence"><span data-start="780.0">testing is a great way to catch issues and regressions in future iterations. </span></span><span class="sentence"><span data-start="786.0">Swift Testing is a new framework that leverages Swift language features </span></span><span class="sentence"><span data-start="789.0">to make expressing tests more powerful and concise. </span></span><span class="sentence"><span data-start="793.0">And these tests work right along side your existing XCTests. </span></span><span class="sentence"><span data-start="796.0">Let me show you an example of Swift Testing.</p><p></span></span><span class="sentence"><span data-start="800.0">The team and I are adding a new feature to BOTanist. </span></span><span class="sentence"><span data-start="803.0">Robots are getting new planting styles and animation states! </span></span><span class="sentence"><span data-start="807.0">But I haven’t tested them all. So let’s add new tests. </span></span><span class="sentence"><span data-start="811.0">To start, I’ll create a new file in the test folder and name it PlantTests. </span></span><span class="sentence"><span data-start="817.0">To create a test, first I’ll import the Testing framework and our app, </span></span><span class="sentence"><span data-start="821.0">then write a function called plantingRoses. </span></span><span class="sentence"><span data-start="826.0">I can name this function whatever I want </span></span><span class="sentence"><span data-start="828.0">and to benefit from everything Swift Testing provides, </span></span><span class="sentence"><span data-start="831.0">all I need to do is add the Test macro.</p><p></span></span><span class="sentence"><span data-start="836.0">As soon as I added the test macro, Xcode knows this is a test </span></span><span class="sentence"><span data-start="840.0">and displays it in the navigator.</p><p></span></span><span class="sentence"><span data-start="844.0">In this test, I want to verify that a roses’s default planting style is grafting. </span></span><span class="sentence"><span data-start="849.0">The first thing I will do is create a Plant of type rose.</p><p></span></span><span class="sentence"><span data-start="855.0">Next, I’ll create a second Plant of type rose </span></span><span class="sentence"><span data-start="857.0">but give it grafting as its explicit style. </span></span><span class="sentence"><span data-start="862.0">Nice, that’s exactly what I want! </span></span><span class="sentence"><span data-start="865.0">And finally, I’ll verify they are equal using the expect macro. </span></span><span class="sentence"><span data-start="868.0">This macro takes any boolean expression. </span></span><span class="sentence"><span data-start="871.0">You can use it to verify strings, floats, or other types.</p><p></span></span><span class="sentence"><span data-start="879.0">And now let’s run the test.</p><p></span></span><span class="sentence"><span data-start="895.0">Oh-oh. Unfortunately the test failed. </span></span><span class="sentence"><span data-start="898.0">The test is saying that the two roses are not the same. </span></span><span class="sentence"><span data-start="900.0">But based on the error description, they sure look the same </span></span><span class="sentence"><span data-start="904.0">Both display the same emoji! </span></span><span class="sentence"><span data-start="906.0">However, I don’t know what the other properties look like. </span></span><span class="sentence"><span data-start="910.0">With Swift Testing, I can view additional information </span></span><span class="sentence"><span data-start="912.0">about each value by clicking "Show Details" in the error </span></span><span class="sentence"><span data-start="915.0">so I can inspect more closely. </span></span><span class="sentence"><span data-start="918.0">Ahh, the planting styles are different. </span></span><span class="sentence"><span data-start="920.0">Good thing I wrote a test to check the default value! This is a quick fix.</p><p></span></span><span class="sentence"><span data-start="928.0">.Seedling should be .graft.</p><p></span></span><span class="sentence"><span data-start="934.0">Let’s run the test again to verify that it passes. I can do so using quick actions. </span></span><span class="sentence"><span data-start="939.0">To bring up quick actions I use the shortcut command shift A.</p><p></span></span><span class="sentence"><span data-start="947.0">Then I’ll type “test again” to rerun this specific test.</p><p></span></span><span class="sentence"><span data-start="959.0">Super, it passed! </span></span><span class="sentence"><span data-start="961.0">The test macro not only marks functions as tests. </span></span><span class="sentence"><span data-start="964.0">It also accepts a variety of traits </span></span><span class="sentence"><span data-start="966.0">that can add information or change their behavior. </span></span><span class="sentence"><span data-start="969.0">For example, you can provide a display name or arguments to a test function.</p><p></span></span><span class="sentence"><span data-start="977.0">This test checks my robot animation state machine. </span></span><span class="sentence"><span data-start="981.0">I want to make sure these states can transition to celebrate. </span></span><span class="sentence"><span data-start="983.0">Instead of writing multiple test functions, </span></span><span class="sentence"><span data-start="985.0">we provide the test macro the list of states. </span></span><span class="sentence"><span data-start="988.0">And have a single test function that takes a state as its parameter. </span></span><span class="sentence"><span data-start="993.0">Now, let’s run this parameterized test.</p><p></span></span><span class="sentence"><span data-start="1002.0">In Swift Testing each provided argument runs in parallel as its own test case. </span></span><span class="sentence"><span data-start="1007.0">The navigator displays each case individually, </span></span><span class="sentence"><span data-start="1009.0">letting me know which variations failed. </span></span><span class="sentence"><span data-start="1012.0">And it looks like the plant animation state did. </span></span><span class="sentence"><span data-start="1015.0">I probably forgot to include .celebrate as a valid state transition. Let’s fix that.</p><p></span></span><span class="sentence"><span data-start="1023.0">Now, I can rerun just the failing test case by clicking on the button next to it.</p><p></span></span><span class="sentence"><span data-start="1036.0">Excellent! All test cases pass! </span></span><span class="sentence"><span data-start="1039.0">Another benefit of Swift Testing in Xcode is tag-based organization. </span></span><span class="sentence"><span data-start="1044.0">Swift Testing lets me create tags to group tests across different suites. </span></span><span class="sentence"><span data-start="1048.0">I’d really like to do that with this feature </span></span><span class="sentence"><span data-start="1050.0">so I know which tests relate to it. </span></span><span class="sentence"><span data-start="1052.0">To start, I’ll extend the Tag type to include my custom tag, planting. </span></span><span class="sentence"><span data-start="1057.0">Then I’ll add the tag to the Test macro of the tests I want to label. </span></span><span class="sentence"><span data-start="1061.0">I'll add it to this test.</p><p></span></span><span class="sentence"><span data-start="1066.0">And also to plantingRoses.</p><p></span></span><span class="sentence"><span data-start="1072.0">With the tags applied, the navigator's tag view shows them grouped together.</p><p></span></span><span class="sentence"><span data-start="1077.0">If I want to run all tests in the tag, I can click the button next to it. </span></span><span class="sentence"><span data-start="1082.0">Tags can also be used to include and exclude tests from test plans.</p><p></span></span><span class="sentence"><span data-start="1087.0">I’ll go to the test plan by choosing "Edit Test Plan" </span></span><span class="sentence"><span data-start="1090.0">at the top of the navigator. </span></span><span class="sentence"><span data-start="1093.0">The new planting and animation feature is still under development. </span></span><span class="sentence"><span data-start="1096.0">And I don’t want to cause any instability in our CI because of these tests. </span></span><span class="sentence"><span data-start="1100.0">So instead, I'll add the tag for this feature to the excluded tags list </span></span><span class="sentence"><span data-start="1104.0">until I'm ready to enable it.</p><p></span></span><span class="sentence"><span data-start="1108.0">To learn more about Swift Testing, checkout “Meet Swift Testing” </span></span><span class="sentence"><span data-start="1111.0">and “Go further with Swift Testing”.</p><p></span></span><span class="sentence"><span data-start="1115.0">We've debugged and tested our code. </span></span><span class="sentence"><span data-start="1116.0">The tests run fast, but the app doesn’t. I’ll let Jake take a look. </span></span><span class="sentence"><span data-start="1121.0">Thanks, Daisy. </span></span><span class="sentence"><span data-start="1123.0">So we just got done verifying the functionality of our app using testing. </span></span><span class="sentence"><span data-start="1127.0">But when I run it, </span></span><span class="sentence"><span data-start="1128.0">I’ve noticed the launch takes a lot more time than I initially expected.</p><p></span></span><span class="sentence"><span data-start="1133.0">The best tool to diagnose your performance problems is Instruments, </span></span><span class="sentence"><span data-start="1137.0">which you can access from the Profile action right from Xcode. </span></span><span class="sentence"><span data-start="1141.0">I have a trace of our app's launch </span></span><span class="sentence"><span data-start="1143.0">that Daisy recorded using the “Time Profiler” Instrument. </span></span><span class="sentence"><span data-start="1147.0">This Instrument visualizes CPU usage in our code </span></span><span class="sentence"><span data-start="1150.0">and allows us to measure how long it's taking to run. </span></span><span class="sentence"><span data-start="1154.0">Let's take a look at that now.</p><p></span></span><span class="sentence"><span data-start="1161.0">Whoa! That's a lot of CPU usage. </span></span><span class="sentence"><span data-start="1164.0">And a really long hang during the initial launch. Let’s see what we can do about it. </span></span><span class="sentence"><span data-start="1170.0">To understand why it’s happening, </span></span><span class="sentence"><span data-start="1172.0">I'll start by setting the inspection range to the hang interval.</p><p></span></span><span class="sentence"><span data-start="1177.0">Now that I’m only looking at a portion of the trace, let’s analyze the data. </span></span><span class="sentence"><span data-start="1182.0">To help narrow down the problem, </span></span><span class="sentence"><span data-start="1183.0">I'll use Instruments 16's new Flame Graph, </span></span><span class="sentence"><span data-start="1187.0">which I can activate from the jump bar. </span></span><span class="sentence"><span data-start="1190.0">Flame Graph is an excellent high level overview of the trace execution, </span></span><span class="sentence"><span data-start="1194.0">which allows us to spot issues at a glance. </span></span><span class="sentence"><span data-start="1197.0">Execution intervals are weighted by the percentage of time they took in the trace </span></span><span class="sentence"><span data-start="1201.0">and the intervals are sorted left to right. </span></span><span class="sentence"><span data-start="1205.0">This means that the left part of the graph </span></span><span class="sentence"><span data-start="1207.0">will always visualize code that executed the most. </span></span><span class="sentence"><span data-start="1211.0">Let’s take a look at what my program is executing.</p><p></span></span><span class="sentence"><span data-start="1216.0">It looks like this load function is nearly all of the execution time.</p><p></span></span><span class="sentence"><span data-start="1222.0">And it's being called from a SwiftUI View body. </span></span><span class="sentence"><span data-start="1226.0">That doesn't seem right. </span></span><span class="sentence"><span data-start="1229.0">I'll right click on this frame and select “Reveal in Xcode”, </span></span><span class="sentence"><span data-start="1232.0">which will take me right to the code.</p><p></span></span><span class="sentence"><span data-start="1237.0">Ah, I think I see the problem. </span></span><span class="sentence"><span data-start="1240.0">We're loading a bunch of assets serially in a loop, </span></span><span class="sentence"><span data-start="1243.0">and we're doing it on the main thread. Not too good. </span></span><span class="sentence"><span data-start="1247.0">To fix this, I'll parallelize the loading using a task group, </span></span><span class="sentence"><span data-start="1251.0">which will also move execution of this work to the background where it belongs.</p><p></span></span><span class="sentence"><span data-start="1257.0">And now I'll rebuild, </span></span><span class="sentence"><span data-start="1258.0">and take a new Time Profile in Instruments, to see if that helped.</p><p></span></span><span class="sentence"><span data-start="1273.0">Nice! The launch was blazing fast. </span></span><span class="sentence"><span data-start="1276.0">I can see in the flame graph </span></span><span class="sentence"><span data-start="1277.0">that the asset loading is now distributed across multiple background threads, </span></span><span class="sentence"><span data-start="1281.0">and no longer blocking the main thread.</p><p></span></span><span class="sentence"><span data-start="1285.0">Flame graphs work for every Instrument that uses call-trees. </span></span><span class="sentence"><span data-start="1289.0">This visual way of seeing your callstacks is a great way of finding issues, </span></span><span class="sentence"><span data-start="1293.0">and another reason to profile your app regularly.</p><p></span></span><span class="sentence"><span data-start="1299.0">Those are just some of the new and exciting features of Xcode 16. </span></span><span class="sentence"><span data-start="1304.0">To learn more about what you saw or improvements like Faster UI previews, </span></span><span class="sentence"><span data-start="1308.0">the Hardened C++ runtime, improved localization workflows, and more, </span></span><span class="sentence"><span data-start="1314.0">check out our release notes on developer.apple.com. </span></span><span class="sentence"><span data-start="1318.0">Or better yet: download Xcode 16 and give it a try! </span></span><span class="sentence"><span data-start="1322.0">Thanks for watching, and have a great WWDC!</span></span></p>
+							</section>
+						</li>
+
+						<!-- sample code -->
+						<li class="supplement sample-code" data-supplement-id="sample-code">
+							<section>
+								<ul class="no-bullet padding-top-small margin-bottom">
+																													<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>3:37 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=217" data-start-time="217">Inline State within Preview</a></p>
+											<pre class="code-source"><code>#<span class="syntax-type">Preview</span> {
+    <span class="syntax-meta">@Previewable</span> <span class="syntax-meta">@State</span> <span class="syntax-keyword">var</span> currentFace <span class="syntax-operator">=</span> <span class="syntax-type">RobotFace</span>.heart
+}</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>3:45 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=225" data-start-time="225">View using Inline State</a></p>
+											<pre class="code-source"><code><span class="syntax-type">RobotFaceSelectorView</span>(currentFace: <span class="syntax-variable">$currentFace</span>)</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>3:53 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=233" data-start-time="233">Complete Preview using Previewable</a></p>
+											<pre class="code-source"><code>#<span class="syntax-type">Preview</span> {
+    <span class="syntax-meta">@Previewable</span> <span class="syntax-meta">@State</span> <span class="syntax-keyword">var</span> currentFace <span class="syntax-operator">=</span> <span class="syntax-type">RobotFace</span>.heart
+    
+    <span class="syntax-type">RobotFaceSelectorView</span>(currentFace: <span class="syntax-variable">$currentFace</span>)
+}</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>4:40 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=280" data-start-time="280">Type Conforming to PreviewModifier</a></p>
+											<pre class="code-source"><code><span class="syntax-keyword">struct</span> <span class="syntax-title class_">SampleRobotNamer</span>: <span class="syntax-title class_">PreviewModifier</span> {
+    <span class="syntax-keyword">typealias</span> <span class="syntax-type">Context</span> <span class="syntax-operator">=</span> <span class="syntax-type">RobotNamer</span>
+
+    <span class="syntax-keyword">static</span> <span class="syntax-keyword">func</span> <span class="syntax-title function_">makeSharedContext</span>() <span class="syntax-keyword">async</span> <span class="syntax-keyword">throws</span> -&gt; <span class="syntax-type">Context</span> {
+        <span class="syntax-keyword">let</span> url <span class="syntax-operator">=</span> <span class="syntax-type">URL</span>(fileURLWithPath: <span class="syntax-string">&quot;/tmp/local_names.txt&quot;</span>)
+        <span class="syntax-keyword">return</span> <span class="syntax-keyword">try</span> <span class="syntax-keyword">await</span> <span class="syntax-type">RobotNamer</span>(url: url)
+    }
+    
+    <span class="syntax-keyword">func</span> <span class="syntax-title function_">body</span>(<span class="syntax-params">content</span>: <span class="syntax-type">Content</span>, <span class="syntax-params">context</span>: <span class="syntax-type">Context</span>) -&gt; <span class="syntax-keyword">some</span> <span class="syntax-type">View</span> {
+        content.environment(context)
+    }
+}</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>5:29 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=329" data-start-time="329">Extension on PreviewTrait</a></p>
+											<pre class="code-source"><code><span class="syntax-keyword">extension</span> <span class="syntax-title class_">PreviewTrait</span> <span class="syntax-title class_">where</span> <span class="syntax-title class_">T</span> == <span class="syntax-title class_">Preview</span>.<span class="syntax-title class_">ViewTraits</span> {
+    <span class="syntax-meta">@MainActor</span> <span class="syntax-keyword">static</span> <span class="syntax-keyword">var</span> sampleNamer: <span class="syntax-keyword">Self</span> <span class="syntax-operator">=</span> .modifier(<span class="syntax-type">SampleRobotNamer</span>())
+}</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>5:38 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=338" data-start-time="338">Preview using created PreviewModifier</a></p>
+											<pre class="code-source"><code>#<span class="syntax-type">Preview</span>(traits: .sampleNamer) {
+    <span class="syntax-type">RobotNameSelectorView</span>()
+}</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>10:26 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=626" data-start-time="626">AVPlayer Creation</a></p>
+											<pre class="code-source"><code><span class="syntax-keyword">struct</span> <span class="syntax-title class_">BOTanistAVPlayer</span> {
+    <span class="syntax-keyword">func</span> <span class="syntax-title function_">player</span>(<span class="syntax-params">url</span>: <span class="syntax-type">URL</span>) <span class="syntax-keyword">throws</span> -&gt; <span class="syntax-type">AVPlayer</span> {
+        <span class="syntax-keyword">let</span> player <span class="syntax-operator">=</span> <span class="syntax-type">AVPlayer</span>(url: url)
+
+        <span class="syntax-keyword">return</span> player
+    }
+}</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>11:28 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=688" data-start-time="688">AVPlayer Call Site</a></p>
+											<pre class="code-source"><code><span class="syntax-keyword">self</span>.player <span class="syntax-operator">=</span> <span class="syntax-keyword">try?</span> <span class="syntax-keyword">await</span> robotVideoAVPlayer()</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>11:57 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=717" data-start-time="717">AVPlayer Initialization</a></p>
+											<pre class="code-source"><code><span class="syntax-keyword">private</span> <span class="syntax-keyword">nonisolated</span> <span class="syntax-keyword">func</span> <span class="syntax-title function_">robotVideoAVPlayer</span>() <span class="syntax-keyword">async</span> <span class="syntax-keyword">throws</span> -&gt; <span class="syntax-type">AVPlayer</span>? {
+    <span class="syntax-keyword">guard</span> <span class="syntax-keyword">let</span> url <span class="syntax-operator">=</span> <span class="syntax-type">Bundle</span>.main.url(forResource: <span class="syntax-type">RobotVideo</span>.resource, withExtension: <span class="syntax-type">RobotVideo</span>.ext) <span class="syntax-keyword">else</span> {
+        <span class="syntax-keyword">throw</span> <span class="syntax-type">BOTanistAppError</span>.videoNotFound(forResource: <span class="syntax-type">RobotVideo</span>.resource, withExtension: <span class="syntax-type">RobotVideo</span>.ext)
+    }
+
+    <span class="syntax-keyword">let</span> avPlayer <span class="syntax-operator">=</span> <span class="syntax-type">BOTanistAVPlayer</span>()
+    <span class="syntax-keyword">let</span> player <span class="syntax-operator">=</span> <span class="syntax-keyword">try</span> avPlayer.player(url: url)
+
+    <span class="syntax-keyword">return</span> player
+}</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>13:42 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=822" data-start-time="822">Initial Test Scaffolding</a></p>
+											<pre class="code-source"><code><span class="syntax-keyword">import</span> Testing
+<span class="syntax-keyword">@testable</span> <span class="syntax-keyword">import</span> BOTanist
+
+
+<span class="syntax-comment">// When using the default init Plant(type:) make sure the planting style is graft</span>
+<span class="syntax-meta">@Test</span> <span class="syntax-keyword">func</span> <span class="syntax-title function_">plantingRoses</span>() {
+    <span class="syntax-comment">// First create the two Plant structs</span>
+    
+
+    <span class="syntax-comment">// Verify with #expect</span>
+}</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>14:36 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=876" data-start-time="876">Complete Test</a></p>
+											<pre class="code-source"><code><span class="syntax-keyword">import</span> Testing
+<span class="syntax-keyword">@testable</span> <span class="syntax-keyword">import</span> BOTanist
+
+
+<span class="syntax-comment">// When using the default init Plant(type:) make sure the planting style is graft</span>
+<span class="syntax-meta">@Test</span>
+<span class="syntax-keyword">func</span> <span class="syntax-title function_">plantingRoses</span>() {
+    <span class="syntax-comment">// First create the two Plant structs</span>
+    <span class="syntax-keyword">let</span> plant <span class="syntax-operator">=</span> <span class="syntax-type">Plant</span>(type: .rose)
+    <span class="syntax-keyword">let</span> expected <span class="syntax-operator">=</span> <span class="syntax-type">Plant</span>(type: .rose, style: .graft)
+
+    <span class="syntax-comment">// Verify with #expect</span>
+    #expect(plant <span class="syntax-operator">==</span> expected)
+}</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>17:35 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=1055" data-start-time="1055">Custom Tag</a></p>
+											<pre class="code-source"><code><span class="syntax-keyword">extension</span> <span class="syntax-title class_">Tag</span> {
+    <span class="syntax-meta">@Tag</span> <span class="syntax-keyword">static</span> <span class="syntax-keyword">var</span> planting: <span class="syntax-keyword">Self</span>
+}</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>17:42 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=1062" data-start-time="1062">Tag Usage in @Test</a></p>
+											<pre class="code-source"><code>.tags(.planting)</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>20:37 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=1237" data-start-time="1237">Slow Asset Loading</a></p>
+											<pre class="code-source"><code><span class="syntax-keyword">for</span> asset <span class="syntax-keyword">in</span> allAssets {
+    asset.load()
+}</code></pre>
+										</li>
+																				<li class="sample-code-main-container">
+											<button class="btn-copy-code" data-text-copied="Code Copied" data-text-default="Copy Code">Copy Code</button>
+											<p>20:54 - <a class="jump-to-time-sample" href="/videos/play/wwdc2024/10135/?time=1254" data-start-time="1254">Fast Asset Loading</a></p>
+											<pre class="code-source"><code><span class="syntax-keyword">await</span> withDiscardingTaskGroup { group <span class="syntax-keyword">in</span>
+    <span class="syntax-keyword">for</span> asset <span class="syntax-keyword">in</span> allAssets {
+        group.addTask {
+            asset.load()
+        }
+    }
+}</code></pre>
+										</li>
+																			
+								</ul>
+							</section>
+						</li>
+
+						
+					</ul>
+
+				</section>
+
+			</section>
+			</div>
+
+		</section>
+
+		<input id="analytics-meta" type="hidden" data-event-name="WWDC24" 
+		data-event-id="wwdc2024-10135" 
+		data-session-id="10135" 
+		data-video-name="What’s new in Xcode 16" 
+		data-session-response-id="">
+	</main>
+
+	<link rel="stylesheet" href="/assets/styles/footer.dist.css?34212621148">
+<footer data-aa-content-module="global-footer” id="footer" class="footer" role="contentinfo" aria-labelledby="footer-label">
+    <div class="footer-content">
+        <h2 class="footer-label" id="footer-label">Developer Footer</h2>
+	<developer-breadcrumbs>
+		<li class="footer-breadcrumbs-item"><a href="/videos/">Videos</a></li>
+		<li class="footer-breadcrumbs-item"><a href="/videos/wwdc2024/">WWDC24</a></li>		<li class="footer-breadcrumbs-item">What’s new in Xcode 16</li>
+	</developer-breadcrumbs>
+	        <nav class="footer-directory" aria-label="Apple Developer Directory" role="navigation">
+	<!--googleoff: all-->
+	<div class="footer-directory-column">
+		<input class="footer-directory-column-section-state" type="checkbox" id="footer-directory-column-section-state-platform" />
+		<div class="footer-directory-column-section">
+			<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-platform">
+				<h3 class="footer-directory-column-section-title">Platforms</h3>
+			</label>
+			<a href="#footer-directory-column-section-state-platform" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open"> <span class="footer-directory-column-section-anchor-label">Open Menu</span> </a>
+			<a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close"> <span class="footer-directory-column-section-anchor-label">Close Menu</span> </a>
+			<ul class="footer-directory-column-section-list">
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/ios/">iOS</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/ipados/">iPadOS</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/macos/">macOS</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/tvos/">tvOS</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/visionos/">visionOS</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/watchos/">watchOS</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/app-store/">App Store</a></li>
+			</ul>
+		</div>
+
+		<input class="footer-directory-column-section-state" type="checkbox" id="footer-directory-column-section-state-tools" />
+		<div class="footer-directory-column-section">
+			<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-tools">
+				<h3 class="footer-directory-column-section-title">Tools</h3>
+			</label>
+			<a href="#footer-directory-column-section-state-tools" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open"> <span class="footer-directory-column-section-anchor-label">Open Menu</span> </a>
+			<a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close"> <span class="footer-directory-column-section-anchor-label">Close Menu</span> </a>
+			<ul class="footer-directory-column-section-list">
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/swift/">Swift</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/swiftui/">SwiftUI</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/swift-playground/">Swift Playground</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/testflight/">TestFlight</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/xcode/">Xcode</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/xcode-cloud/">Xcode Cloud</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/icon-composer/">Icon Composer</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/sf-symbols/">SF Symbols</a></li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class="footer-directory-column">
+		<input class="footer-directory-column-section-state" type="checkbox" id="footer-directory-column-section-state-topics" />
+		<div class="footer-directory-column-section">
+			<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-topics">
+				<h3 class="footer-directory-column-section-title">Technologies</h3>
+			</label>
+			<a href="#footer-directory-column-section-state-topics" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open"> <span class="footer-directory-column-section-anchor-label">Open Menu</span> </a>
+			<a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close"> <span class="footer-directory-column-section-anchor-label">Close Menu</span> </a>
+			<ul class="footer-directory-column-section-list">
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/documentation/accessibility/">Accessibility<span class="loc-en-only"></span></a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/accessories/">Accessories</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/machine-learning/">AI & Machine Learning</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/apple-intelligence/">Apple Intelligence</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/audio/">Audio &amp; Video<span class="loc-en-only"></span></a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/augmented-reality/">Augmented Reality</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/business/">Business</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/design/">Design</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/distribute/">Distribution</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/education/">Education</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/games/">Games</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/health-fitness/">Health &amp; Fitness</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/in-app-purchase/">In-App Purchase</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/localization/">Localization</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/maps/">Maps &amp; Location</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/security/">Security</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/safari/">Safari &amp; Web<span class="loc-en-only"></span></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="footer-directory-column">
+		<input class="footer-directory-column-section-state" type="checkbox" id="footer-directory-column-section-state-resources" />
+		<div class="footer-directory-column-section">
+			<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-resources">
+				<h3 class="footer-directory-column-section-title">Resources</h3>
+			</label>
+			<a href="#footer-directory-column-section-state-resources" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open"> <span class="footer-directory-column-section-anchor-label">Open Menu</span> </a>
+			<a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close"> <span class="footer-directory-column-section-anchor-label">Close Menu</span> </a>
+			<ul class="footer-directory-column-section-list">
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/documentation/">Documentation<span class="loc-en-only"></span></a></li>
+<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/download/">Downloads</a></li>
+		<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/documentation/samplecode">Sample Code<span class="loc-en-only"></span></a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/videos/">Videos</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/library/archive/navigation/">Documentation Archive<span class="loc-en-only"></span></a></li>
+			</ul>
+		</div>
+
+		<input class="footer-directory-column-section-state" type="checkbox" id="footer-directory-column-section-state-support" />
+		<div class="footer-directory-column-section">
+			<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-support">
+				<h3 class="footer-directory-column-section-title">Support</h3>
+			</label>
+			<a href="#footer-directory-column-section-state-support" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open"> <span class="footer-directory-column-section-anchor-label">Open Menu</span> </a>
+			<a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close"> <span class="footer-directory-column-section-anchor-label">Close Menu</span> </a>
+			<ul class="footer-directory-column-section-list">
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/help/">Help Guides & Articles</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/contact/">Contact Us</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/forums/">Forums<span class="loc-en-only"></span></a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/bug-reporting/">Feedback & Bug Reporting</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/system-status/">System Status<span class="loc-en-only"></span></a></li>
+			</ul>
+		</div>
+
+		<input class="footer-directory-column-section-state" type="checkbox" id="footer-directory-column-section-state-account" />
+		<div class="footer-directory-column-section">
+			<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-account">
+				<h3 class="footer-directory-column-section-title">Account</h3>
+			</label>
+			<a href="#footer-directory-column-section-state-account" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open"> <span class="footer-directory-column-section-anchor-label">Open Menu</span> </a>
+			<a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close"> <span class="footer-directory-column-section-anchor-label">Close Menu</span> </a>
+			<ul class="footer-directory-column-section-list">
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/account/">Apple Developer</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="https://appstoreconnect.apple.com/">App Store Connect</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/account/ios/certificate/">Certificates, IDs, &amp; Profiles<span class="loc-en-only"></span></a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="https://feedbackassistant.apple.com/">Feedback Assistant</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="footer-directory-column">
+		<input class="footer-directory-column-section-state" type="checkbox" id="footer-directory-column-section-state-programs" />
+		<div class="footer-directory-column-section">
+			<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-programs">
+				<h3 class="footer-directory-column-section-title">Programs</h3>
+			</label>
+			<a href="#footer-directory-column-section-state-programs" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open"> <span class="footer-directory-column-section-anchor-label">Open Menu</span> </a>
+			<a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close"> <span class="footer-directory-column-section-anchor-label">Close Menu</span> </a>
+			<ul class="footer-directory-column-section-list">
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/programs/">Apple Developer Program</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/programs/enterprise/">Apple Developer Enterprise Program</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/app-store/small-business-program/">App Store Small Business Program</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="https://mfi.apple.com/">MFi Program<span class="loc-en-only"></span></a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/programs/mini-apps-partner/">Mini Apps Partner Program</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/programs/news-partner/">News Partner Program<span class="loc-en-only"></span></a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/programs/video-partner/">Video Partner Program<span class="loc-en-only"></span></a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/security-bounty/">Security Bounty Program<span class="loc-en-only"></span></a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/programs/security-research-device/">Security Research Device Program<span class="loc-en-only"></span></a></li>
+			</ul>
+		</div>
+
+		<input class="footer-directory-column-section-state" type="checkbox" id="footer-directory-column-section-state-events" />
+		<div class="footer-directory-column-section">
+			<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-events">
+				<h3 class="footer-directory-column-section-title">Events</h3>
+			</label>
+			<a href="#footer-directory-column-section-state-events" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open"> <span class="footer-directory-column-section-anchor-label">Open Menu</span> </a>
+			<a href="#" class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close"> <span class="footer-directory-column-section-anchor-label">Close Menu</span> </a>
+			<ul class="footer-directory-column-section-list">
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/events/">Meet with Apple</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/events/developer-centers/">Apple Developer Centers</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/app-store/app-store-awards/">App Store Awards<span class="loc-en-only"></span></a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/design/awards/">Apple Design Awards</a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/academies/">Apple Developer Academies<span class="loc-en-only"></span></a></li>
+				<li class="footer-directory-column-section-item"><a class="footer-directory-column-section-link" href="/wwdc/">WWDC</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--googleon: all-->
+</nav>
+        <section class="footer-mini" vocab="http://schema.org/" typeof="Organization">
+	<div class="footer-mini-news">
+		<div class="copy">
+			<div class="footer-mini-legal-link">Read the <a href="/news/">latest news</a>.</div> Get the <a href="https://apps.apple.com/us/app/apple-developer/id640199958">Apple Developer app</a>.
+		</div>
+		<div class="content">
+			<div class="color-scheme-toggle"
+				role="radiogroup"
+				tabindex="0"
+				aria-label="Select a color scheme preference">
+
+				<label data-color-scheme-option="light">
+
+					<input type="radio" value="light" autocomplete="off"
+						onchange="window.setPreferredColorScheme(event.target.value)" />
+
+					<div class="text">Light</div>
+
+				</label>
+
+				<label data-color-scheme-option="dark">
+
+					<input type="radio" value="dark" autocomplete="off"
+						onchange="window.setPreferredColorScheme(event.target.value)" />
+
+					<div class="text">Dark</div>
+
+				</label>
+
+				<label data-color-scheme-option="auto">
+
+					<input type="radio" value="auto" autocomplete="off"
+						onchange="window.setPreferredColorScheme(event.target.value)" />
+
+					<div class="text">Auto</div>
+
+				</label>
+
+			</div>
+			<script async src="/assets/scripts/color-scheme-toggle.js"></script>
+		</div>
+	</div>
+	<link rel="stylesheet" href="/assets/styles/language-dropdown.css?35212621148">
+	<div class="language-dropdown dropdown-container legacy-form hidden">
+		<select class="dropdown" aria-label="Language Dropdown"></select>
+		<span class="dropdown-icon icon icon-chevrondown" aria-hidden="true"></span>
+	</div>
+	<script src="/assets/scripts/language-dropdown.js?56212607203"></script>
+	<div class="footer-mini-legal">
+		<div class="footer-mini-legal-copyright">Copyright ©  2026 <a href="https://www.apple.com">Apple Inc.</a> All rights reserved.</div>
+		<div class="footer-mini-legal-links">
+			<a class="footer-mini-legal-link" href="https://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a>
+			<a class="footer-mini-legal-link" href="https://www.apple.com/legal/privacy/">Privacy Policy</a>
+			<a class="footer-mini-legal-link" href="/support/terms/">Agreements and Guidelines</a>
+		</div>
+	</div>
+</section>
+    </div>
+</footer>
+
+	<script src="/videos/scripts/collection/form-input.js?7"></script>
+	<script src="/assets/scripts/params.js"></script>
+	<script src="/assets/scripts/watchable.js"></script>
+	<script src="/assets/scripts/timeout.js"></script>
+	
+	<script src="/videos/scripts/play/play.js?37202648194"></script>
+	<script src="/videos/scripts/hls/rtc.min.js?18162640138"></script>
+	<script src="/videos/scripts/hls/hls.min.js?18162640138"></script>
+</body>
+</html>

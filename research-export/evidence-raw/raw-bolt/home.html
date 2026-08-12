@@ -1,0 +1,634 @@
+<!DOCTYPE html><html lang="en" data-theme="dark" data-theme-option="dark"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="theme-color" content="#111114"/><script type="application/json" id="bolt-build-info">{"revision":"6195b0a","release":"6195b0a5848a4c992ff36d383ad21e2adf86c73d"}</script><script>(function setMinViewport() {
+  const MIN_WIDTH = 360;
+  const meta = document.querySelector('meta[name="viewport"]');
+
+  if (!meta) {
+    return;
+  }
+
+  function update() {
+    /**
+     * Never let the layout drop below the min width: on narrower screens the
+     * browser scales the page down to fit instead of reflowing or scrolling.
+     */
+    const width = Math.max(window.screen.width, MIN_WIDTH);
+    meta.setAttribute('content', 'width=' + width);
+  }
+
+  update();
+  window.addEventListener('resize', update);
+  window.addEventListener('orientationchange', update);
+})();
+</script><title>Bolt AI builder: Websites, apps &amp; prototypes</title><meta name="description" content="Build and scale high-performing websites &amp; apps using your words. Join millions and start building today."/><meta property="og:type" content="object"/><meta property="og:site_name" content="bolt.new"/><meta property="og:title" content="Bolt AI builder: Websites, apps &amp; prototypes"/><meta property="og:description" content="Build and scale high-performing websites &amp; apps using your words. Join millions and start building today."/><meta property="og:image" content="https://bolt.new/static/social_preview_index.jpg"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Bolt AI builder: Websites, apps &amp; prototypes"/><meta name="twitter:description" content="Build and scale high-performing websites &amp; apps using your words. Join millions and start building today."/><meta name="twitter:image" content="https://bolt.new/static/social_preview_index.jpg"/><meta name="twitter:site" content="@StackBlitz"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Bolt.new","url":"https://bolt.new","applicationCategory":"DeveloperApplication","operatingSystem":"Web browser","description":"Build and scale high-performing websites \u0026 apps using your words. Join millions and start building today.","browserRequirements":"Requires JavaScript. Requires HTML5.","image":"https://bolt.new/static/social_preview_index.jpg","publisher":{"@type":"Organization","name":"Bolt.new"},"offers":{"@type":"AggregateOffer","lowPrice":"0","highPrice":"30.00","priceCurrency":"USD","offerCount":"4","availability":"https://schema.org/InStock","url":"https://bolt.new/pricing"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bolt.new","alternateName":"Bolt","description":"Build and scale high-performing websites \u0026 apps using your words. Join millions and start building today.","url":"https://bolt.new","logo":"https://bolt.new/bolt-logo.svg","sameAs":["https://discord.com/invite/stackblitz","https://www.linkedin.com/company/boltdotnew/","https://x.com/boltdotnew","https://www.reddit.com/r/boltnewbuilders/","https://www.youtube.com/@BoltDotNew","https://www.instagram.com/boltdotnew/"]}</script><script>(function detectTheme() {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  globalThis.prefersDark = prefersDark;
+
+  const themeOption = document.documentElement.getAttribute('data-theme-option');
+
+  if (themeOption === 'system') {
+    document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+  }
+})();
+</script><link rel="stylesheet" href="/assets/EmptyState-scVdpVyl.css#"/><link rel="stylesheet" href="/assets/root-BDr8v2JC.css"/><link rel="stylesheet" href="/assets/login-D3NdLlkk.css#"/><link rel="stylesheet" href="/assets/LightRays-apN2LHcc.css#"/><link rel="icon" href="/static/favicon.svg" type="image/svg+xml"/><link rel="icon" href="/static/favicon-48x48.png" type="image/png" sizes="48x48"/><link rel="icon" href="/static/favicon-96x96.png" type="image/png" sizes="96x96"/><link rel="icon" href="/static/favicon-192x192.png" type="image/png" sizes="192x192"/><link rel="apple-touch-icon" href="/static/apple-touch-icon.png" sizes="180x180"/><link rel="stylesheet" href="/assets/tailwind-compat-DeJTMLhw.css"/><link rel="stylesheet" href="/assets/index-9yinAZxV.css"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="preload" href="/static/fonts/inter-display-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><link rel="preload" href="/static/fonts/inter-display-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"/><link rel="stylesheet" href="/static/fonts/fonts.css"/><link rel="stylesheet" href="/assets/Chat-C-pxZWHb.css#"/><link rel="stylesheet" href="/assets/Markdown-DOeOYkw8.css#"/><link rel="stylesheet" href="/assets/Prompt-1LVg7nBt.css#"/><link rel="canonical" href="https://bolt.new"/><script>(function createWorkaroundGlobal() {
+  /**
+   * A bug in wrangler injects a __name call in these script tags.
+   *
+   * @see https://github.com/cloudflare/workers-sdk/issues/7107#issuecomment-2454829854
+   */
+  window['__' + 'name'] = () => {
+    // noop
+  };
+})();
+</script><script>// prevent modifications to the DOM until hydration is finished
+(function blockDOMMutations() {
+  let allowed = false;
+
+  const observer = new MutationObserver((mutations) => {
+    observer.disconnect();
+
+    // we iterate backwards so that the oldValue is always correct by the end, in the case of simultaneous changes
+    mutations.reverse().forEach((mutation) => {
+      if (mutation.type === 'childList') {
+        mutation.addedNodes.forEach((node) => {
+          /**
+           * Modifications to the head do not affect hydration (vite uses this for HMR styles).
+           *
+           * Nodes added as children of the body do not affect hydration (WebContainer uses this for the iframe).
+           */
+          if ([document.head, document.body, document.documentElement].includes(node.parentNode)) {
+            return;
+          }
+
+          if (node.parentNode) {
+            node.parentNode.removeChild(node);
+          }
+        });
+
+        mutation.removedNodes.forEach((node) => {
+          if (mutation.previousSibling) {
+            mutation.target.insertBefore(node, mutation.previousSibling.nextSibling);
+          } else if (mutation.target) {
+            mutation.target.appendChild(node);
+          }
+        });
+      }
+
+      if (mutation.type === 'attributes') {
+        const { target, attributeName, oldValue } = mutation;
+
+        if (attributeName) {
+          if (oldValue === null) {
+            target.removeAttribute(attributeName);
+          } else {
+            target.setAttribute(attributeName, oldValue);
+          }
+        }
+      }
+
+      if (mutation.type === 'characterData') {
+        mutation.target.data = mutation.oldValue ?? '';
+      }
+    });
+
+    observe();
+  });
+
+  function observe() {
+    /**
+     * Deferred module scripts (the client entry that calls __allowDOMMutations and
+     * starts hydration) run BEFORE DOMContentLoaded. Without this guard the observer
+     * would re-arm here after hydration has already begun and revert React's own DOM
+     * writes, breaking hydration ("Root did not complete").
+     */
+    if (allowed) {
+      return;
+    }
+
+    observer.observe(document, {
+      subtree: true,
+      childList: true,
+      attributes: true,
+      attributeOldValue: true,
+      characterData: true,
+      characterDataOldValue: true,
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', observe);
+
+  window.__allowDOMMutations = () => {
+    allowed = true;
+    window.removeEventListener('DOMContentLoaded', observe);
+    observer.disconnect();
+    window.__loadingPrompt = document.querySelector('textarea')?.value;
+  };
+})();
+</script><meta name="sentry-trace" content="32ae728cc7414c3788c5b7e40b19581d-b2bd8e539731db32-0"/><meta name="baggage" content="sentry-environment=production,sentry-release=6195b0a5848a4c992ff36d383ad21e2adf86c73d,sentry-public_key=a2f02ffb9d5f16260f262b40e72c0efe,sentry-trace_id=32ae728cc7414c3788c5b7e40b19581d,sentry-org_id=4509445939331072,sentry-transaction=GET%20%2F,sentry-sampled=false,sentry-sample_rand=0.6835761434617267,sentry-sample_rate=0.5"/></head><body class="bg-bolt-ds-bgAlt"><div id="root" class="w-full h-full"><div class="flex size-full"><div class="flex min-h-0 min-w-0 flex-1 flex-col"><div class="flex min-w-0 flex-1 flex-col border-bolt-ds-borderPrimary light:bg-bolt-ds-bg min-h-0 overflow-hidden"><header class="flex shrink-0 select-none selection-accent items-center pl-5 pr-4 h-[var(--header-height)] z-21 fixed w-full border-bolt-ds-borderPrimary"><div class="flex grow-1 basis-60 items-center gap-2 text-bolt-ds-textPrimary"><div class="z-logo"><a href="/" class="text-2xl font-semibold text-accent flex items-center"><span class="i-bolt:logos-bolt-new?mask h-7 w-[80px] lg:h-6 lg:w-[70.5px] inline-block"></span></a></div></div><nav aria-label="Main" data-orientation="horizontal" dir="ltr" class="relative h-full grow-1 shrink-0 justify-center hidden lg:flex"><div style="position:relative"><ul data-orientation="horizontal" class="flex flex-row gap-3 h-full list-none m-0 p-0 py-0.5" dir="ltr"><li class="h-full"><a href="https://discord.com/invite/stackblitz" target="_blank" rel="noopener noreferrer" class="h-full flex text-sm font-medium items-center px-1 bg-transparent text-bolt-ds-textSecondary [&amp;:hover:where(:not(:disabled))]:text-bolt-ds-textPrimary lg:px-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bolt-ds-brandHover no-underline" data-radix-collection-item="">Community</a></li><li class="h-full"><a href="/enterprise" target="_blank" rel="noopener noreferrer" class="h-full flex text-sm font-medium items-center px-1 bg-transparent text-bolt-ds-textSecondary [&amp;:hover:where(:not(:disabled))]:text-bolt-ds-textPrimary lg:px-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bolt-ds-brandHover no-underline" data-radix-collection-item="">Enterprise</a></li><li class="h-full"><a href="/resources/templates" target="_blank" rel="noopener noreferrer" class="h-full flex text-sm font-medium items-center px-1 bg-transparent text-bolt-ds-textSecondary [&amp;:hover:where(:not(:disabled))]:text-bolt-ds-textPrimary lg:px-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bolt-ds-brandHover no-underline" data-radix-collection-item="">Templates</a></li><li class="h-full"><button id="radix-:Rcqalcj5:-trigger-radix-:R13cqalcj5:" data-state="closed" aria-expanded="false" aria-controls="radix-:Rcqalcj5:-content-radix-:R13cqalcj5:" class="h-full text-sm font-medium px-1 text-bolt-ds-textSecondary [&amp;:hover:where(:not(:disabled))]:text-bolt-ds-textPrimary lg:px-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bolt-ds-brandHover group flex items-center gap-1 bg-transparent border-0 cursor-default data-[state=open]:text-bolt-ds-textPrimary" data-radix-collection-item="">Resources<span class="i-ph:caret-down text-base transition-transform group-data-[state=open]:-rotate-180"></span></button></li><li class="h-full"><a href="/careers" target="_blank" rel="noopener noreferrer" class="h-full flex text-sm font-medium items-center px-1 bg-transparent text-bolt-ds-textSecondary [&amp;:hover:where(:not(:disabled))]:text-bolt-ds-textPrimary lg:px-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bolt-ds-brandHover no-underline" data-radix-collection-item="">Careers</a></li><li class="h-full"><a href="/pricing" target="_blank" rel="noopener noreferrer" class="h-full flex text-sm font-medium items-center px-1 bg-transparent text-bolt-ds-textSecondary [&amp;:hover:where(:not(:disabled))]:text-bolt-ds-textPrimary lg:px-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bolt-ds-brandHover no-underline" data-radix-collection-item="">Pricing</a></li></ul></div><div class="absolute top-full left-1/2 -translate-x-1/2"></div></nav><div class="flex grow-1 basis-60 justify-end items-center gap-2"><div class="items-center gap-3 flex"><button class="items-center justify-center font-medium shrink-0 min-w-0 max-w-full rounded-md focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm border border-bolt-ds-borderPrimary focus-visible:outline-bolt-ds-brandHover shadow-sm text-bolt-ds-textPrimary bg-transparent [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-bgHover focus-visible:bg-bolt-ds-bgHover gap-1 text-xs px-2.5 h-8 hidden lg:inline-flex whitespace-nowrap !bg-bolt-ds-bg hover:!bg-bolt-ds-bgAltHover" type="button"><span class="truncate">Sign in</span></button><button class="flex items-center justify-center font-medium shrink-0 min-w-0 max-w-full rounded-md focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm bg-bolt-ds-brand [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-brandHover shadow-sm text-bolt-ds-onNeutral focus-visible:outline-bolt-ds-brandHover gap-1 whitespace-nowrap h-7 px-2.5 text-xs lg:h-8" type="button"><span class="truncate">Get started</span></button></div><div class="lg:hidden flex items-center"><button class="flex items-center justify-center font-medium shrink-0 min-w-0 max-w-full leading-tight focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm bg-transparent [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-utilHover text-bolt-ds-textPrimary focus-visible:outline-bolt-ds-brandHover size-7 rounded" type="button" aria-label="Open menu"><div class=""><span class="i-heroicons:bars-3 block size-5"></span></div></button></div></div></header><!--$--><div class="_BaseChat_1104v_1 relative flex w-full [--side-menu-width:0px] h-full overflow-hidden bg-bolt-ds-bg" data-chat-visible="true" style="--chat-messages-gap:1.5rem;--workbench-top-offset:1rem"><div class="flex overscroll-contain size-full flex-col relative overflow-auto"><div class="_Chat_1104v_5 selection-accent flex flex-col flex-grow relative z-9"><div class="flex flex-col relative z-10"><section class="relative flex min-h-dvh w-full flex-col pt-[var(--header-height)]"><div class="relative flex flex-1 flex-col overflow-hidden rounded-2xl rounded-b-none mx-4 before:pointer-events-none before:absolute before:inset-0 before:z-20 before:rounded-2xl before:rounded-b-none before:border before:border-b-0 before:border-bolt-ds-borderPrimary before:content-[&#x27;&#x27;] before:[mask-image:linear-gradient(to_bottom,black,transparent)]"><div aria-hidden="true" class="pointer-events-none absolute inset-0"><div class="_image_ojxip_7 _responsiveFill_ojxip_31"></div></div><div class="relative z-10 flex flex-1 flex-col items-center w-full"><div class="flex flex-col items-center w-full my-auto py-25"><div class="relative flex w-full flex-col items-center"><div class="relative z-10 flex w-full flex-col items-center gap-6 px-4"><div class="flex flex-col gap-2 sm:gap-3 lg:gap-4 items-center mb-4 sm:mb-6 lg:mb-8"><h1 class="text-center text-bolt-ds-textPrimary font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight">What will you build today?</h1><p class="font-medium text-base sm:text-lg text-bolt-ds-textSecondary text-center max-w-[90vw] md:max-w-auto">Create stunning apps &amp; websites by chatting with AI.</p></div></div></div><div class="relative z-20 w-full"><div class="relative px-[var(--chat-padding)] w-full max-w-2xl mx-auto z-prompt"><div class="relative"><div class="bg-chat-prompt-bg rounded-3xl border border-bolt-ds-borderPrimary shadow-[0_0_40px_-12px_rgba(0,0,0,0.35)]"><div class="border-b-px border-transparent"></div><div aria-hidden="true" class="px-5 pt-5 text-md md:text-sm text-bolt-ds-textTertiary" style="min-height:84px">Let&#x27;s build a prototype...</div><div class="@container flex justify-between items-center text-sm px-2.5 pb-2.5 pt-2 overflow-hidden gap-2"><div class="flex gap-1 items-center min-w-0 flex-shrink"><button class="flex items-center justify-center font-medium shrink-0 min-w-0 max-w-full leading-tight focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm bg-transparent [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-utilHover text-bolt-ds-textPrimary focus-visible:outline-bolt-ds-brandHover size-8 rounded-full border border-bolt-ds-borderPrimary [&amp;[data-state=open]_i]:rotate-45 [&amp;[data-state=open]_i]:animate-motion-blur" type="button" aria-label="Add context, enhance your prompt, and more" id="radix-:Rjfiikraalcj5:" aria-haspopup="menu" aria-expanded="false" data-state="closed"><div class=""><span class="i-heroicons:plus block size-5 transition-transform duration-300 ease-out"></span></div></button></div><div class="relative flex h-8 flex-1 min-w-0 items-center"><div class="flex-1 hidden sm:block"></div><div class="flex items-center gap-2 flex-shrink-0"><div class="flex items-center gap-2 z-layer-1"><button type="button" class="flex h-8 shrink-0 items-center justify-center gap-1 rounded-full text-xs transition-theme text-bolt-ds-textTertiary bg-transparent hover:text-bolt-ds-textPrimary hover:bg-bolt-ds-utilHover px-3" aria-pressed="false" aria-label="Plan"><span class="i-ph:lightbulb w-4 h-4"></span><span class="hidden @[330px]:inline">Plan</span></button></div></div><div class="pointer-events-none absolute inset-0 flex items-center justify-end overflow-hidden"></div></div><div class="flex items-center flex-shrink-0"><div class="flex items-center gap-2 flex-shrink-0"><span class="inline-flex shrink-0" data-state="closed"><button type="button" class="flex justify-center bg-accent-500 [&amp;:hover:not(:disabled)]:brightness-105 [&amp;:active:not(:disabled)]:brightness-95 text-white rounded-full transition-theme disabled:cursor-not-allowed disabled:opacity-50 shrink-0 items-center gap-2 px-4 h-9 text-sm font-medium" disabled="" aria-label="Send message"><div class="inline-flex items-center gap-2 whitespace-nowrap"><div class="inline-flex items-center gap-2" style="opacity:1;filter:blur(0px);transform:none"><span class="hidden sm:inline">Build now</span><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="m4.497 20.835l16.51-7.363c1.324-.59 1.324-2.354 0-2.944L4.497 3.164c-1.495-.667-3.047.814-2.306 2.202l3.152 5.904c.245.459.245 1 0 1.458l-3.152 5.904c-.74 1.388.81 2.87 2.306 2.202"></path></svg></div></div></button></span></div></div><input type="file" aria-hidden="true" tabindex="-1" style="display:none;visibility:hidden" accept=".jpg,.jpeg,.png,.gif,.webp,.svg,.pdf,.txt,.doc,.docx,.py,.ipynb,.js,.mjs,.cjs,.jsx,.html,.css,.scss,.sass,.ts,.tsx,.java,.cs,.php,.c,.cc,.cpp,.cxx,.h,.hh,.hpp,.rs,.swift,.go,.rb,.kt,.kts,.scala,.sh,.bash,.zsh,.bat,.csv,.log,.ini,.cfg,.config,.json,.yaml,.yml,.toml,.lua,.sql,.md,.tex,.latex,.asm,.ino,.s" multiple=""/></div></div></div><div class=""></div><div class="absolute inset-0 pointer-events-none"></div></div></div><div class="relative flex flex-col gap-5 sm:gap-7 lg:gap-9 w-full min-w-0 max-w-4xl mx-auto justify-center mt-4 sm:mt-6 lg:mt-8 2xl:max-w-[70rem] px-4"><div class="flex justify-center gap-3 sm:gap-4 lg:gap-5 overflow-x-auto py-2"><button class="flex items-center justify-center shrink-0 min-w-0 max-w-full rounded-md focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-utilHover focus-visible:outline-bolt-ds-brandHover h-auto flex-col gap-2 bg-transparent p-0 text-xs font-medium hover:bg-transparent text-bolt-ds-textSecondary hover:text-bolt-ds-textPrimary" type="button" aria-pressed="false"><span class="relative flex size-16 items-center justify-center rounded-xl transition-all _surface_1ublg_6 text-bolt-ds-textSecondary"><span class="relative z-10 size-5 sm:size-6 lg:size-7 i-heroicons:globe-alt"></span></span><span class="text-bolt-ds-textSecondary">Website</span></button><button class="flex items-center justify-center shrink-0 min-w-0 max-w-full rounded-md focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-utilHover focus-visible:outline-bolt-ds-brandHover h-auto flex-col gap-2 bg-transparent p-0 text-xs font-medium hover:bg-transparent text-bolt-ds-textSecondary hover:text-bolt-ds-textPrimary" type="button" aria-pressed="false"><span class="relative flex size-16 items-center justify-center rounded-xl transition-all _surface_1ublg_6 text-bolt-ds-textSecondary"><span class="relative z-10 size-5 sm:size-6 lg:size-7 i-heroicons:presentation-chart-bar"></span><span class="absolute -right-1.5 -top-1.5 z-10 rounded-full bg-bolt-ds-brand px-1.5 py-0.5 text-[10px] font-medium leading-none text-bolt-ds-onBrand">New</span></span><span class="text-bolt-ds-textSecondary">Slides</span></button><button class="flex items-center justify-center shrink-0 min-w-0 max-w-full rounded-md focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-utilHover focus-visible:outline-bolt-ds-brandHover h-auto flex-col gap-2 bg-transparent p-0 text-xs font-medium hover:bg-transparent text-bolt-ds-textSecondary hover:text-bolt-ds-textPrimary" type="button" aria-pressed="false"><span class="relative flex size-16 items-center justify-center rounded-xl transition-all _surface_1ublg_6 text-bolt-ds-textSecondary"><span class="relative z-10 size-5 sm:size-6 lg:size-7 i-ph:devices"></span></span><span class="text-bolt-ds-textSecondary">App</span></button><button class="flex items-center justify-center shrink-0 min-w-0 max-w-full rounded-md focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-utilHover focus-visible:outline-bolt-ds-brandHover h-auto flex-col gap-2 bg-transparent p-0 text-xs font-medium hover:bg-transparent text-bolt-ds-textSecondary hover:text-bolt-ds-textPrimary" type="button" aria-pressed="false"><span class="relative flex size-16 items-center justify-center rounded-xl transition-all _surface_1ublg_6 text-bolt-ds-textSecondary"><span class="relative z-10 size-5 sm:size-6 lg:size-7 i-ph:flask"></span></span><span class="text-bolt-ds-textSecondary">Prototype</span></button></div><div class="flex flex-col sm:flex-row text-sm items-center gap-3 justify-center"><p class="flex-1 sm:flex-none text-center text-bolt-ds-textSecondary">or import from</p><div class="flex gap-3"><button class="flex items-center justify-center font-medium shrink-0 min-w-0 max-w-full focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm bg-transparent [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-utilHover focus-visible:outline-bolt-ds-brandHover gap-1 text-xs px-2 h-7 rounded-full text-bolt-ds-textSecondary hover:text-bolt-ds-textPrimary _surface_1ublg_6" type="button"><span class="i-bolt:logos-figma flex items-center justify-center size-4"></span><span class="truncate"><span class="transition-theme">Figma</span></span></button><button class="flex items-center justify-center font-medium shrink-0 min-w-0 max-w-full focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm bg-transparent [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-utilHover focus-visible:outline-bolt-ds-brandHover gap-1 text-xs px-2 h-7 rounded-full text-bolt-ds-textSecondary hover:text-bolt-ds-textPrimary _surface_1ublg_6" type="button"><span class="i-bolt:logos-github flex items-center justify-center size-4"></span><span class="truncate"><span class="transition-theme">GitHub</span></span></button></div></div></div></div></div></div><div class="flex flex-col gap-2 items-center relative z-10 pb-3"><span class="sr-only">Trusted by Google, Microsoft, Salesforce, AWS, Meta, HubSpot, Accenture, TikTok, Shopify, Chegg, Cloudflare, Netlify, FactSet, ByteDance, PwC, Mozilla, Intel, Xano, Stripe</span><div class="w-full overflow-hidden _Viewport_1c1xv_1" aria-hidden="true"><div class="_Track_1c1xv_7"><div class="flex shrink-0 items-center gap-x-24 pr-24"><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-google?mask w-[135px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-cloudflare?mask w-[168px] h-[25px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-aws?mask w-[82px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-microsoft?mask w-[164px] h-[35px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-stripe?mask w-[92px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-salesforce?mask w-[168px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-chegg?mask w-[104px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-meta?mask w-[141px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-intel?mask w-20 h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-bytedance?mask w-[214px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-pwc?mask w-[98px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-hubspot?mask w-[148px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-xano?mask w-[116px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-mozilla?mask w-[152px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-accenture?mask w-[134px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-netlify?mask w-[145px] h-[50px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-tiktok?mask w-[138px] h-[33px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-shopify?mask w-[140px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-factset?mask w-[141px] h-10"></span></span></div><div class="flex shrink-0 items-center gap-x-24 pr-24"><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-google?mask w-[135px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-cloudflare?mask w-[168px] h-[25px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-aws?mask w-[82px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-microsoft?mask w-[164px] h-[35px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-stripe?mask w-[92px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-salesforce?mask w-[168px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-chegg?mask w-[104px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-meta?mask w-[141px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-intel?mask w-20 h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-bytedance?mask w-[214px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-pwc?mask w-[98px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-hubspot?mask w-[148px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-xano?mask w-[116px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-mozilla?mask w-[152px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-accenture?mask w-[134px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-netlify?mask w-[145px] h-[50px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-tiktok?mask w-[138px] h-[33px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-shopify?mask w-[140px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-factset?mask w-[141px] h-10"></span></span></div><div class="flex shrink-0 items-center gap-x-24 pr-24"><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-google?mask w-[135px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-cloudflare?mask w-[168px] h-[25px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-aws?mask w-[82px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-microsoft?mask w-[164px] h-[35px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-stripe?mask w-[92px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-salesforce?mask w-[168px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-chegg?mask w-[104px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-meta?mask w-[141px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-intel?mask w-20 h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-bytedance?mask w-[214px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-pwc?mask w-[98px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-hubspot?mask w-[148px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-xano?mask w-[116px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-mozilla?mask w-[152px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-accenture?mask w-[134px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-netlify?mask w-[145px] h-[50px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-tiktok?mask w-[138px] h-[33px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-shopify?mask w-[140px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-factset?mask w-[141px] h-10"></span></span></div><div class="flex shrink-0 items-center gap-x-24 pr-24"><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-google?mask w-[135px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-cloudflare?mask w-[168px] h-[25px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-aws?mask w-[82px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-microsoft?mask w-[164px] h-[35px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-stripe?mask w-[92px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-salesforce?mask w-[168px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-chegg?mask w-[104px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-meta?mask w-[141px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-intel?mask w-20 h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-bytedance?mask w-[214px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-pwc?mask w-[98px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-hubspot?mask w-[148px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-xano?mask w-[116px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-mozilla?mask w-[152px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-accenture?mask w-[134px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-netlify?mask w-[145px] h-[50px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-tiktok?mask w-[138px] h-[33px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-shopify?mask w-[140px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-factset?mask w-[141px] h-10"></span></span></div><div class="flex shrink-0 items-center gap-x-24 pr-24"><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-google?mask w-[135px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-cloudflare?mask w-[168px] h-[25px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-aws?mask w-[82px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-microsoft?mask w-[164px] h-[35px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-stripe?mask w-[92px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-salesforce?mask w-[168px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-chegg?mask w-[104px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-meta?mask w-[141px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-intel?mask w-20 h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-bytedance?mask w-[214px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-pwc?mask w-[98px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-hubspot?mask w-[148px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-xano?mask w-[116px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-mozilla?mask w-[152px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-accenture?mask w-[134px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-netlify?mask w-[145px] h-[50px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-tiktok?mask w-[138px] h-[33px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-shopify?mask w-[140px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-factset?mask w-[141px] h-10"></span></span></div><div class="flex shrink-0 items-center gap-x-24 pr-24"><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-google?mask w-[135px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-cloudflare?mask w-[168px] h-[25px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-aws?mask w-[82px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-microsoft?mask w-[164px] h-[35px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-stripe?mask w-[92px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-salesforce?mask w-[168px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-chegg?mask w-[104px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-meta?mask w-[141px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-intel?mask w-20 h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-bytedance?mask w-[214px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-pwc?mask w-[98px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-hubspot?mask w-[148px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-xano?mask w-[116px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-mozilla?mask w-[152px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-accenture?mask w-[134px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-netlify?mask w-[145px] h-[50px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-tiktok?mask w-[138px] h-[33px]"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-shopify?mask w-[140px] h-10"></span></span><span class="flex h-10 shrink-0 items-center"><span class="text-bolt-ds-textTertiary opacity-50 i-bolt:logos-factset?mask w-[141px] h-10"></span></span></div></div></div></div></section></div><div class="relative z-10"></div><div class="h-61"></div><section class="relative bg-slate-12 min-h-screen pb-[120px] -mt-25"><div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6"><div class="text-center mb-12 sm:mb-16 lg:mb-20"><div class="mb-6 sm:mb-8 flex justify-center relative"><div class="absolute -bottom-3 sm:-bottom-5 left-1/2 transform -translate-x-1/2 w-[60px] sm:w-[80px] h-[60px] sm:h-[80px] rounded-full opacity-50" style="background:radial-gradient(circle at center, #ffffff 0%, rgba(17, 114, 226, 0) 50%)"></div><div class="absolute -bottom-[120px] sm:-bottom-[180px] left-1/2 transform -translate-x-1/2 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] rounded-full opacity-60 blur-md" style="background:radial-gradient(circle at center, #1172E2 0%, rgba(17, 114, 226, 0) 70%)"></div><img src="/static/marketing/homepage/value/glow.svg" alt="" class="w-auto h-[100px] sm:h-[150px] relative z-10"/></div><h2 class="relative z-10 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 sm:mb-4 tracking-tight px-4"><span class="text-bolt-ds-textSecondary">Empowering product builders</span><br/><span class="text-bolt-ds-textSecondary">with the </span><span class="text-white">most powerful coding agents</span></h2><p class="text-base sm:text-lg text-white/75 max-w-lg mx-auto leading-relaxed px-4">Bolt does the heavy lifting for you, so you can focus on your vision instead of fighting errors.</p></div><div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-2"><div class="flex flex-col bg-slate-11 rounded-2xl border border-white/10 pt-6 min-h-[180px] gap-y-4 lg:flex-row lg:min-h-[320px] lg:items-center lg:justify-between lg:col-span-2 lg:pl-16 lg:pt-0 md:col-span-2 sm:px-8 sm:pt-8"><div class="flex flex-col gap-1 max-w-full lg:max-w-sm px-6 sm:px-0"><h3 class="text-base sm:text-lg font-semibold text-white">The best model, every time</h3><p class="text-sm sm:text-base text-white/60 leading-relaxed">Bolt automatically routes to the right model for each task, balancing quality and cost. No more juggling platforms or guessing which agent to use.</p></div><div class="mt-0 lg:mt-5.5 min-h-[280px] lg:min-h-[300px] flex-shrink-0 overflow-visible w-full lg:w-auto flex justify-center lg:justify-end px-6 sm:px-0"><div data-theme="light" aria-hidden="true" class="relative flex flex-col gap-1.5 lg:flex-row lg:items-center lg:gap-3 w-full max-w-[540px] mx-auto lg:mx-0 lg:min-h-[290px] mb-3 lg:mb-0"><div data-testid="model-picker-menu" class="min-w-[240px] rounded-md p-0.5 shadow-sm bg-bolt-ds-bgTertiaryAlt border-bolt-ds-borderPrimary border overflow-hidden"><div class="px-2 py-1.5 text-sm text-bolt-ds-textSecondary font-medium">Bolt Agent</div><div class="relative"><div class="relative flex h-9 select-none items-center justify-between pl-8.5 pr-2 text-sm rounded-md transition-theme bg-bolt-ds-utilHover text-bolt-ds-inverseBg"><div class="absolute left-2.5 inline-flex size-4 items-center justify-center"><span class="size-2 rounded-full bg-accent-600 dark:bg-accent-400" aria-hidden="true"></span></div><span>Standard</span><span class="inline-flex justify-center items-center rounded-md bg-bolt-ds-bg text-bolt-ds-textPrimary border border-bolt-ds-borderPrimary text-xs font-medium px-1.5 h-5">All users</span></div></div><div class="relative"><div class="relative flex h-9 select-none items-center justify-between pl-8.5 pr-2 text-sm rounded-md transition-theme opacity-70"><div class="absolute left-2.5 inline-flex size-4 items-center justify-center"><span class="size-2 rounded-full bg-accent-800 dark:bg-accent-600" aria-hidden="true"></span></div><span>Max</span><span class="inline-flex justify-center items-center rounded-md bg-bolt-ds-brandBgSubtle text-bolt-ds-onBrandBgSubtle border border-bolt-ds-brandBorderSubtle text-xs font-medium px-1.5 h-5 gap-1.5"><span class="i-ph:lock-simple size-3" aria-hidden="true"></span>Pro only</span></div></div></div><div class="relative w-full lg:w-[300px] lg:flex-shrink-0"><div style="opacity:0;transform:translateX(8px) translateZ(0)"><div class="text-sm grid rounded-md shadow-sm bg-bolt-ds-bgTertiaryAlt border-bolt-ds-borderPrimary border p-4 w-full"><div class="flex items-center gap-2"><span class="size-2 rounded-full shrink-0 bg-accent-600 dark:bg-accent-400" aria-hidden="true"></span><div class="font-semibold text-bolt-ds-textPrimary">Standard</div></div><div class="mt-2 text-sm text-bolt-ds-textSecondary">Recommended for general development.</div><ul class="mt-3 grid gap-2"><li class="flex items-center gap-2"><span class="i-heroicons:bolt size-5 text-bolt-ds-textSecondary shrink-0" aria-hidden="true"></span><span class="text-bolt-ds-textPrimary">Speed</span><span class="ml-auto font-medium text-bolt-ds-textSecondary whitespace-nowrap">High</span></li><li class="flex items-center gap-2"><span class="i-bolt:brain size-5 text-bolt-ds-textSecondary shrink-0" aria-hidden="true"></span><span class="text-bolt-ds-textPrimary">Intelligence</span><span class="ml-auto font-medium text-bolt-ds-textSecondary whitespace-nowrap">High</span></li><li class="flex items-center gap-2"><span class="i-ph:coin-vertical size-5 text-bolt-ds-textSecondary shrink-0" aria-hidden="true"></span><span class="text-bolt-ds-textPrimary">Token cost</span><span class="ml-auto font-medium text-bolt-ds-textSecondary whitespace-nowrap">Balanced</span></li></ul></div></div></div></div></div></div><div class="flex flex-col gap-4 sm:gap-0 items-center bg-slate-11 rounded-2xl border border-white/10 p-6 sm:p-8 md:col-span-1 lg:col-span-1"><div class="flex-1 flex flex-col items-center justify-center gap-2 font-semibold"><p class="text-7xl sm:text-7xl lg:text-8xl text-slate-4" style="-webkit-text-stroke:1px rgb(var(--bolt-ds-inverseBg) / 0.6);text-shadow:0 0 10px rgb(var(--bolt-ds-inverseBg) / 0.8), inset 0 0 5px rgb(var(--bolt-ds-inverseBg) / 0.5);filter:drop-shadow(0 0 3px rgb(var(--bolt-ds-inverseBg) / 0.4))">98%</p><p class="text-3xl text-bolt-ds-textTertiary">less errors</p></div><p class="text-center text-white/60 text-sm sm:text-base leading-relaxed max-w-xs">Bolt automatically tests, refactors, and iterates reducing errors so you keep building instead of fixing.</p></div><div class="bg-slate-11 rounded-2xl border border-white/10 md:col-span-3 lg:col-span-1"><div class="p-6 sm:p-8 sm:pb-3 lg:pb-7.5 mb-4 sm:mb-0"><h3 class="text-base sm:text-lg font-semibold text-white mb-2">Build big without breaking</h3><p class="text-sm sm:text-base text-white/60 leading-relaxed">Bolt handles <span class="font-medium text-white">projects 1,000 times larger</span> than before. Its improved built-in context management can handle complexity and keep your projects running smoothly.</p></div><img src="/static/marketing/homepage/value/build-without-breaking.png" alt="" class="h-auto w-auto"/></div></div><div class="mt-2"><div class="bg-slate-11 border border-white/10 rounded-xl pt-12 sm:pt-16 px-6 sm:px-8 lg:px-10 pb-6 sm:pb-8 lg:pb-10 flex flex-col items-center gap-3 relative overflow-hidden" style="mask-image:linear-gradient(to bottom, black 0%, black 70%, transparent 100%);-webkit-mask-image:linear-gradient(to bottom, black 0%, black 70%, transparent 100%)"><div class="absolute inset-0 pointer-events-none"></div><div class="flex flex-col items-center gap-3 w-full"><div class="flex gap-2 mb-2"><div class="w-4 h-4 rounded" style="background-color:#3B82F6"></div><div class="w-4 h-4 rounded" style="background-color:#84CC16"></div><div class="w-4 h-4 rounded" style="background-color:#EC4899"></div><div class="w-4 h-4 rounded" style="background-color:#8B5CF6"></div></div><div class="text-center text-white font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight tracking-tight max-w-md sm:max-w-lg lg:max-w-xl drop-shadow-lg"><span class="font-bold">Build with </span><span class="inline-block relative"><img src="/static/marketing/homepage/value/your-1.svg" alt="your" class="inline-block mt-1 h-7 w-20" style="opacity:0;transform:translateY(10px) translateZ(0)"/></span><span class="font-bold"> design system</span></div><p class="text-sm sm:text-base text-white/75 text-center leading-relaxed max-w-xs sm:max-w-sm">Stop building from scratch. Start building on-brand.</p><div class="w-full h-80 relative overflow-hidden"></div></div></div></div></div></section><section class="relative bg-slate-12 overflow-hidden pt-[120px] pb-12 sm:pb-16 lg:pb-20"><span class="absolute top-0 left-0 w-full h-px" style="background:linear-gradient(90deg, #1488FC 8.51%, rgba(20, 136, 252, 0.00) 97.71%)"></span><div class="absolute top-0 left-0 w-[2300px] h-[2300px] pointer-events-none -translate-x-1/2 -translate-y-1/2 z-0" style="background:radial-gradient(50% 50% at 50% 50%, #1E1E21 0%, rgba(30, 30, 33, 0.00) 100%)"></div><div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6"><div class="text-center mb-8 sm:mb-12 lg:mb-16"><h2 class="font-bold text-3xl text-white/60 tracking-tight mb-4 px-4 sm:text-4xl sm:mb-6 lg:text-5xl">Everything you need to scale<!-- --> <span class="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] sm:block sm:text-4xl sm:mt-6 md:text-5xl lg:text-5xl">Built in.</span></h2><p class="text-base text-white/75 max-w-3xl mx-auto px-4 sm:text-lg">Stop stitching together platforms. Bolt Cloud gives you enterprise-grade backend infrastructure including hosting, databases, integrations and more.</p></div><div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-8 grid-rows-5 sm:grid-rows-10 md:grid-cols-12 h-[1400px] sm:h-[1000px] md:h-[600px] lg:h-[500px] md:grid-rows-5"><div class="relative flex flex-col col-span-1 row-span-1 sm:row-span-2 bg-slate-10 border border-white/10 rounded-xl overflow-hidden p-4 sm:p-6 sm:col-span-2 md:col-span-4 lg:col-span-5 lg:row-span-3"><h3 class="text-center font-display font-semibold text-lg text-bolt-ds-textPrimary sm:text-xl">Unlimited databases</h3><img src="/static/marketing/homepage/features/unlimited-db.svg" alt="" class="absolute left-0 w-full h-auto bottom-0"/></div><div class="relative flex flex-col col-span-1 row-span-1 sm:row-span-2 bg-slate-10 border border-white/10 rounded-xl overflow-hidden p-4 sm:p-6 md:col-span-3 lg:row-span-3"><h3 class="text-center font-display font-semibold text-lg text-bolt-ds-textPrimary sm:text-xl">Enterprise-grade</h3><img src="/static/marketing/homepage/features/graph.png" alt="" class="absolute left-0 w-full h-auto -bottom-18 sm:bottom-0 sm:h-full object-bottom md:object-top lg:h-auto"/></div><div class="relative flex flex-col col-span-1 row-span-1 bg-slate-10 border border-white/10 rounded-xl overflow-hidden p-4 sm:p-6 sm:row-span-4 sm:col-span-3 md:col-span-5 md:row-span-2 lg:col-span-4 lg:row-span-5"><h3 class="text-center font-display font-semibold text-lg text-bolt-ds-textPrimary sm:text-xl relative z-layer-1">User Management &amp; Authentication</h3><img src="/static/marketing/homepage/features/auth.svg" alt="" class="absolute left-0 w-full h-auto object-cover md:h-full -bottom-20 lg:bottom-0"/></div><div class="relative flex flex-col col-span-1 row-span-1 sm:row-span-2 bg-slate-10 border border-white/10 rounded-xl overflow-hidden p-4 sm:p-6 sm:col-span-4 lg:col-span-3 lg:row-span-2 lg:pb-4"><h3 class="text-center font-display font-semibold text-lg text-bolt-ds-textPrimary md:mt-auto sm:text-xl xl:text-sm 2xl:text-base">SEO optimization so your project ranks from day one.</h3><img src="/static/marketing/homepage/features/seo.svg" alt="" class="absolute h-60 w-auto left-1/2 -translate-x-1/2 sm:translate-x-0 -bottom-16 sm:bottom-auto md:h-auto md:top-0 md:w-1/2 md:left-1/4"/></div><div class="relative flex flex-col col-span-1 row-span-1 sm:row-span-2 bg-slate-10 border border-white/10 rounded-xl overflow-hidden p-4 sm:p-6 sm:col-span-4 md:col-span-8 lg:col-span-5 lg:row-span-2"><h3 class="text-center font-display font-semibold text-bolt-ds-textPrimary sm:text-xl text-xl md:text-lg relative z-layer-1 md:mt-auto md:text-left">Hosting with analytics &amp; custom domains</h3><img src="/static/marketing/homepage/features/publish.svg" alt="" class="absolute w-full h-auto left-auto bottom-0 sm:bottom-auto md:-top-2 lg:-top-12 lg:w-auto lg:-right-20"/></div></div><div class="relative text-center w-full"><img src="/static/marketing/homepage/features/divider.svg" alt="Divider" class="w-full h-auto"/><p class="font-display font-semibold text-lg text-gray-100 leading-relaxed max-w-2xl mx-auto mt-5 sm:text-xl lg:text-2xl">Bolt gives you everything you need inside one familiar interface no extra accounts, no steep learning curve.</p></div></div></section><section class="relative bg-slate-12 min-h-screen pt-12 sm:pt-16 lg:pt-20 pb-12"><div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="flex flex-col gap-2 items-center text-center mb-8 px-4 sm:mb-12 lg:mb-16 sm:gap-4"><p class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-bolt-ds-textTertiary">Whatever your role</p><h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-bolt-ds-textPrimary drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">Bolt gives you superpowers</h2><p class="text-base sm:text-lg text-bolt-ds-textSecondary max-w-2xl leading-relaxed">From idea to live product, Bolt adapts to the way you work turning every vision into something real &amp; fast</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-2"><div class="flex w-full min-h-[300px] lg:min-h-auto bg-slate-11 border border-white/10 rounded-xl overflow-hidden md:rounded-tl-3xl lg:col-span-2 flex-col gap-4"><div class="flex flex-col gap-1 md:px-8 px-6 pt-8 text-left"><h3 class="text-lg sm:text-xl font-semibold text-bolt-ds-textPrimary font-display">Product managers</h3><p class="text-sm sm:text-base text-bolt-ds-textTertiary leading-relaxed lg:max-w-sm">Go from insight to prototype in hours and test ideas with your team before the day is over.</p></div><img src="/static/marketing/homepage/personas/pm.svg" alt="" class="w-full mt-auto h-[180px] sm:h-[250px] object-cover object-top xl:h-[290px]"/></div><div class="flex w-full min-h-[300px] lg:min-h-auto bg-slate-11 border border-white/10 rounded-xl overflow-hidden lg:rounded-tr-xl lg:col-span-2 md:rounded-tr-3xl flex-col gap-4"><div class="flex flex-col gap-1 md:px-8 px-6 pt-8 text-left"><h3 class="text-lg sm:text-xl font-semibold text-bolt-ds-textPrimary font-display">Entrepreneurs</h3><p class="text-sm sm:text-base text-bolt-ds-textTertiary leading-relaxed lg:max-w-sm">Launch a full business in days, not months. From landing page to product, all in one flow.</p></div><img src="/static/marketing/homepage/personas/entrepreneurs.svg" alt="" class="w-full mt-auto h-[180px] sm:h-[250px] object-cover object-top xl:h-[290px]"/></div><div class="flex w-full min-h-[300px] lg:min-h-auto bg-slate-11 border border-white/10 rounded-xl overflow-hidden lg:rounded-tr-3xl md:col-span-2 md:rounded-tr-xl lg:col-span-2 flex-col gap-4"><div class="flex flex-col gap-1 md:px-8 px-6 pt-8 text-left"><h3 class="text-lg sm:text-xl font-semibold text-bolt-ds-textPrimary font-display">Marketers</h3><p class="text-sm sm:text-base text-bolt-ds-textTertiary leading-relaxed lg:max-w-sm">Spin up high-performing campaign pages in hours, with SEO and hosting built in.</p></div><img src="/static/marketing/homepage/personas/marketers.svg" alt="" class="w-full mt-auto h-[180px] sm:h-[250px] object-cover object-top xl:h-[290px]"/></div><div class="flex w-full min-h-[300px] lg:min-h-auto bg-slate-11 border border-white/10 rounded-xl overflow-hidden md:rounded-bl-3xl lg:col-span-3 flex-col-reverse gap-6"><div class="flex flex-col gap-1 md:px-8 px-6 items-center pb-6 sm:pb-8 text-center"><h3 class="text-lg sm:text-xl font-semibold text-bolt-ds-textPrimary font-display">Agencies</h3><p class="text-sm sm:text-base text-bolt-ds-textTertiary leading-relaxed lg:max-w-sm">Multiply your impact: deliver more projects, faster, without scaling headcount.</p></div><img src="/static/marketing/homepage/personas/agency.png" alt="" class="w-full mt-auto h-[180px] sm:h-[250px] object-cover object-top"/></div><div class="flex w-full min-h-[300px] lg:min-h-auto bg-slate-11 border border-white/10 rounded-xl overflow-hidden md:rounded-br-3xl lg:col-span-3 flex-col-reverse gap-6"><div class="flex flex-col gap-1 md:px-8 px-6 items-center pb-6 sm:pb-8 text-center"><h3 class="text-lg sm:text-xl font-semibold text-bolt-ds-textPrimary font-display">Students &amp; builders</h3><p class="text-sm sm:text-base text-bolt-ds-textTertiary leading-relaxed lg:max-w-sm">Learn by doing. Take ideas from class or side projects and turn them into fully working apps.</p></div><img src="/static/marketing/homepage/personas/students.png" alt="" class="w-full mt-auto h-[180px] sm:h-[250px] object-cover object-[top_-16px_left_-42px] md:object-[top_-38px_left_-90px] lg:object-top"/></div></div></div></section><section class="relative z-10 bg-slate-12 py-20 sm:py-32 lg:py-48 flex items-center justify-center overflow-hidden"><div aria-hidden="true" class="pointer-events-none absolute inset-0 z-0 w-full xl:h-fit rotate-180"><div class="_image_ojxip_7"></div></div><div class="relative z-10 px-4 sm:px-6 flex flex-col xl:flex-row items-center justify-center gap-8 xl:gap-12"><div class="flex flex-col gap-3 sm:gap-4 xl:w-1/3 text-center xl:text-left"><h2 class="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-bolt-ds-textPrimary tracking-tight leading-tight">Ready to build something amazing?</h2><p class="font-semibold text-lg text-bolt-ds-textSecondary">Try it out and start building for free</p></div><div class="flex-shrink-0 w-full xl:w-auto lg:max-w-xl xl:min-w-[500px] xl:max-w-none"><div class="relative px-[var(--chat-padding)] w-full max-w-2xl mx-auto z-prompt"><div class="relative"><div class="bg-chat-prompt-bg rounded-3xl border border-bolt-ds-borderPrimary shadow-[0_0_40px_-12px_rgba(0,0,0,0.35)]"><div class="border-b-px border-transparent"></div><div aria-hidden="true" class="px-5 pt-5 text-md md:text-sm text-bolt-ds-textTertiary" style="min-height:84px">Let&#x27;s build a prototype...</div><div class="@container flex justify-between items-center text-sm px-2.5 pb-2.5 pt-2 overflow-hidden gap-2"><div class="flex gap-1 items-center min-w-0 flex-shrink"><button class="flex items-center justify-center font-medium shrink-0 min-w-0 max-w-full leading-tight focus-visible:outline-2 disabled:op-50 relative disabled:cursor-not-allowed transition-colors focus-visible:shadow-sm bg-transparent [&amp;:hover:where(:not(:disabled))]:bg-bolt-ds-utilHover text-bolt-ds-textPrimary focus-visible:outline-bolt-ds-brandHover size-8 rounded-full border border-bolt-ds-borderPrimary [&amp;[data-state=open]_i]:rotate-45 [&amp;[data-state=open]_i]:animate-motion-blur" type="button" aria-label="Add context, enhance your prompt, and more" id="radix-:R9npaqraalcj5:" aria-haspopup="menu" aria-expanded="false" data-state="closed"><div class=""><span class="i-heroicons:plus block size-5 transition-transform duration-300 ease-out"></span></div></button></div><div class="relative flex h-8 flex-1 min-w-0 items-center"><div class="flex-1 hidden sm:block"></div><div class="flex items-center gap-2 flex-shrink-0"><div class="flex items-center gap-2 z-layer-1"><button type="button" class="flex h-8 shrink-0 items-center justify-center gap-1 rounded-full text-xs transition-theme text-bolt-ds-textTertiary bg-transparent hover:text-bolt-ds-textPrimary hover:bg-bolt-ds-utilHover px-3" aria-pressed="false" aria-label="Plan"><span class="i-ph:lightbulb w-4 h-4"></span><span class="hidden @[330px]:inline">Plan</span></button></div></div><div class="pointer-events-none absolute inset-0 flex items-center justify-end overflow-hidden"></div></div><div class="flex items-center flex-shrink-0"><div class="flex items-center gap-2 flex-shrink-0"><span class="inline-flex shrink-0" data-state="closed"><button type="button" class="flex justify-center bg-accent-500 [&amp;:hover:not(:disabled)]:brightness-105 [&amp;:active:not(:disabled)]:brightness-95 text-white rounded-full transition-theme disabled:cursor-not-allowed disabled:opacity-50 shrink-0 items-center gap-2 px-4 h-9 text-sm font-medium" disabled="" aria-label="Send message"><div class="inline-flex items-center gap-2 whitespace-nowrap"><div class="inline-flex items-center gap-2" style="opacity:1;filter:blur(0px);transform:none"><span class="hidden sm:inline">Build now</span><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="m4.497 20.835l16.51-7.363c1.324-.59 1.324-2.354 0-2.944L4.497 3.164c-1.495-.667-3.047.814-2.306 2.202l3.152 5.904c.245.459.245 1 0 1.458l-3.152 5.904c-.74 1.388.81 2.87 2.306 2.202"></path></svg></div></div></button></span></div></div><input type="file" aria-hidden="true" tabindex="-1" style="display:none;visibility:hidden" accept=".jpg,.jpeg,.png,.gif,.webp,.svg,.pdf,.txt,.doc,.docx,.py,.ipynb,.js,.mjs,.cjs,.jsx,.html,.css,.scss,.sass,.ts,.tsx,.java,.cs,.php,.c,.cc,.cpp,.cxx,.h,.hh,.hpp,.rs,.swift,.go,.rb,.kt,.kts,.scala,.sh,.bash,.zsh,.bat,.csv,.log,.ini,.cfg,.config,.json,.yaml,.yml,.toml,.lua,.sql,.md,.tex,.latex,.asm,.ino,.s" multiple=""/></div></div></div><div class=""></div><div class="absolute inset-0 pointer-events-none"></div></div></div></div></section></div><footer class="z-layer-1 text-sm flex flex-col lg:gap-19 gap-8 border-bolt-ds-borderSecondary border-t py-8 dark:bg-slate-12 bg-white"><div class="w-full lg:max-w-[65rem] grid grid-cols-[1fr] lg:grid-cols-[15rem_auto] mx-auto gap-8 px-5 md:px-8 xl:px-0"><div class="flex flex-col justify-between"><span class="i-bolt:logos-bolt?mask w-[56px] h-6 inline-block"></span></div><nav class="grid grid-cols-[repeat(auto-fit,minmax(7.5rem,1fr))] gap-8 lg:gap-10"><section class="text-sm flex flex-col gap-2"><h3>Resources</h3><ul class="gap-3 flex flex-col"><li><a href="/pricing" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank">Pricing<span class="i-heroicons:arrow-up-right size-4 mt-0.5 text-bolt-ds-textSecondary group-hover:text-bolt-ds-textPrimary"></span></a></li><li><a href="https://support.bolt.new" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank">Support<span class="i-heroicons:arrow-up-right size-4 mt-0.5 text-bolt-ds-textSecondary group-hover:text-bolt-ds-textPrimary"></span></a></li><li><a href="/blog" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank">Blog<span class="i-heroicons:arrow-up-right size-4 mt-0.5 text-bolt-ds-textSecondary group-hover:text-bolt-ds-textPrimary"></span></a></li><li><a href="https://status.bolt.new" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank">Status<span class="i-heroicons:arrow-up-right size-4 mt-0.5 text-bolt-ds-textSecondary group-hover:text-bolt-ds-textPrimary"></span></a></li></ul></section><section class="text-sm flex flex-col gap-2"><h3>Company</h3><ul class="gap-3 flex flex-col"><li><a href="/careers" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank">Careers</a></li><li><a href="https://stackblitz.com/privacy-policy" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank">Privacy</a></li><li><a href="https://stackblitz.com/terms-of-service" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank">Terms</a></li></ul></section><section class="text-sm flex flex-col gap-2"><h3>Social</h3><ul class="gap-3 flex flex-col"><li><a href="https://discord.com/invite/stackblitz" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank"><span class="i-bolt:logos-discord?mask text-bolt-ds-textSecondary size-4 group-hover:text-bolt-ds-textPrimary"></span>Discord</a></li><li><a href="https://www.linkedin.com/company/boltdotnew/" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank"><span class="i-bolt:logos-linkedin?mask text-bolt-ds-textSecondary size-4 group-hover:text-bolt-ds-textPrimary"></span>LinkedIn</a></li><li><a href="https://www.youtube.com/@BoltDotNew" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank"><span class="i-bolt:logos-youtube?mask text-bolt-ds-textSecondary size-4 group-hover:text-bolt-ds-textPrimary"></span>YouTube</a></li><li><a href="https://x.com/boltdotnew" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank"><span class="i-bolt:logos-x?mask text-bolt-ds-textSecondary size-4 group-hover:text-bolt-ds-textPrimary"></span>Twitter/X</a></li><li><a href="https://www.instagram.com/boltdotnew/" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank"><span class="i-bolt:logos-instagram?mask text-bolt-ds-textSecondary size-4 group-hover:text-bolt-ds-textPrimary"></span>Instagram</a></li><li><a href="https://www.reddit.com/r/boltnewbuilders/" class="group text-bolt-ds-textTertiary hover:text-bolt-ds-textPrimary transition-theme flex items-center gap-1.5" target="_blank"><span class="i-bolt:logos-reddit?mask text-bolt-ds-textSecondary size-4 group-hover:text-bolt-ds-textPrimary"></span>Reddit</a></li></ul></section></nav></div><p class="text-center inline"><span class="text-xs text-bolt-ds-textSecondary">© <!-- -->2026<!-- --> StackBlitz - All rights reserved.</span></p></footer></div></div><!--/$--></div></div></div><section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"></section></div><script>((storageKey2, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({ key }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(storageKey2) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error7) {
+      console.error(error7);
+      sessionStorage.removeItem(storageKey2);
+    }
+  })("react-router-scroll-positions", null)</script><link rel="modulepreload" href="/assets/entry.client-DGxdQAc4.js"/><link rel="modulepreload" href="/assets/react-vendor-DFS8c0-u.js"/><link rel="modulepreload" href="/assets/app-version-TgcyjiPD.js"/><link rel="modulepreload" href="/assets/index.esm-D-kwiTE8.js"/><link rel="modulepreload" href="/assets/sentry.client-B583diln.js"/><link rel="modulepreload" href="/assets/breadcrumbs-BBDL7Ot9.js"/><link rel="modulepreload" href="/assets/Toast-DBjQyIqs.js"/><link rel="modulepreload" href="/assets/EmptyState-B4uq9z6n.js"/><link rel="modulepreload" href="/assets/constants-DUULTuzt.js"/><link rel="modulepreload" href="/assets/index-hujMIAWZ.js"/><link rel="modulepreload" href="/assets/bundle-mjs-5MOacnAK.js"/><link rel="modulepreload" href="/assets/root-CNPUBw1H.js"/><link rel="modulepreload" href="/assets/index-DkUFz90d.js"/><link rel="modulepreload" href="/assets/stripIndents-pFh2tRUP.js"/><link rel="modulepreload" href="/assets/compare-IkewsJlg-CZqd2GR-.js"/><link rel="modulepreload" href="/assets/client-only-DwosFz52.js"/><link rel="modulepreload" href="/assets/analytics-CCqpfHQz.js"/><link rel="modulepreload" href="/assets/registration-C_mZCv07.js"/><link rel="modulepreload" href="/assets/ErrorBoundary-nf1YnF8u.js"/><link rel="modulepreload" href="/assets/growthbook-1Nz0whI3.js"/><link rel="modulepreload" href="/assets/theme-DrfSRIs9.js"/><link rel="modulepreload" href="/assets/index-DcbV6Jek.js"/><link rel="modulepreload" href="/assets/login-XafVWru6.js"/><link rel="modulepreload" href="/assets/settings-CQiZzHIQ.js"/><link rel="modulepreload" href="/assets/Alert-DZyNlf_T.js"/><link rel="modulepreload" href="/assets/cello-attribution-Biq_3tnl.js"/><link rel="modulepreload" href="/assets/login-CmtXJQP0.js"/><link rel="modulepreload" href="/assets/preload-helper-2mcYJXfA.js"/><link rel="modulepreload" href="/assets/authFlowRoutes-0PvSSBdp.js"/><link rel="modulepreload" href="/assets/cello-config-BXEYGcji.js"/><link rel="modulepreload" href="/assets/queryClient-BKSf7pHs.js"/><link rel="modulepreload" href="/assets/QueryClientProvider-CWoSfmfP.js"/><link rel="modulepreload" href="/assets/urls-DIAei6Vp.js"/><link rel="modulepreload" href="/assets/database-tabs-DvZimEH-.js"/><link rel="modulepreload" href="/assets/index-DyxeRtzf.js"/><link rel="modulepreload" href="/assets/logger-BLqFwVWq.js"/><link rel="modulepreload" href="/assets/lifecycle-events-Cn4S9rt8.js"/><link rel="modulepreload" href="/assets/Header-B0QkzPuy.js"/><link rel="modulepreload" href="/assets/config-DG6yYR4n.js"/><link rel="modulepreload" href="/assets/classNames-BM_Cwa33.js"/><link rel="modulepreload" href="/assets/Logo-LdsYBklI.js"/><link rel="modulepreload" href="/assets/Link-CE2WXvQp.js"/><link rel="modulepreload" href="/assets/Avatar-BaixDSjP.js"/><link rel="modulepreload" href="/assets/store-dau9lu-f.js"/><link rel="modulepreload" href="/assets/index-ApXL96Jy.js"/><link rel="modulepreload" href="/assets/ai-ptijkNWq.js"/><link rel="modulepreload" href="/assets/index-DRXXH9YX.js"/><link rel="modulepreload" href="/assets/chat-started-DnFATCws.js"/><link rel="modulepreload" href="/assets/noops-TSSrUl-c.js"/><link rel="modulepreload" href="/assets/page-visibility-6WPc68Q5.js"/><link rel="modulepreload" href="/assets/util-C8pwnKxy.js"/><link rel="modulepreload" href="/assets/url-Cws4dZ32.js"/><link rel="modulepreload" href="/assets/index-BwBwXA76.js"/><link rel="modulepreload" href="/assets/text_line_stream-DtdTslVH.js"/><link rel="modulepreload" href="/assets/path-C47uQrgn.js"/><link rel="modulepreload" href="/assets/workDir-sxxUHiEw.js"/><link rel="modulepreload" href="/assets/chat-hooks-BAqhNcy-.js"/><link rel="modulepreload" href="/assets/download-rUGbmDk0.js"/><link rel="modulepreload" href="/assets/retry-DX5j_tUn.js"/><link rel="modulepreload" href="/assets/debounce-SvodA6N5.js"/><link rel="modulepreload" href="/assets/plural-DHUPwgOU.js"/><link rel="modulepreload" href="/assets/artifacts-DxQBXx56.js"/><link rel="modulepreload" href="/assets/description-CjYtOCyk.js"/><link rel="modulepreload" href="/assets/unreachable-dJ0nIuQ4.js"/><link rel="modulepreload" href="/assets/projects-C4tFyRTs.js"/><link rel="modulepreload" href="/assets/useQuery-DdV1-BIE.js"/><link rel="modulepreload" href="/assets/query-B76Wiy5M.js"/><link rel="modulepreload" href="/assets/useMutation-ORLi4bPc.js"/><link rel="modulepreload" href="/assets/mutation-BN55KS5u.js"/><link rel="modulepreload" href="/assets/openWithStackblitzAuth-D0TMuezl.js"/><link rel="modulepreload" href="/assets/menu-A2GXftJB.js"/><link rel="modulepreload" href="/assets/useProjectsOwnerContext-BYx03_vE.js"/><link rel="modulepreload" href="/assets/user-DYxDnlA7.js"/><link rel="modulepreload" href="/assets/useProjectRename-JoKXpwMk.js"/><link rel="modulepreload" href="/assets/animationVariants-Bv1Hcyis.js"/><link rel="modulepreload" href="/assets/easings-BDvTs3Wp.js"/><link rel="modulepreload" href="/assets/teamTemplates-C4oNwVfd.js"/><link rel="modulepreload" href="/assets/queryOptions-dfte2Pzq.js"/><link rel="modulepreload" href="/assets/mutationOptions-DuEc1oJu.js"/><link rel="modulepreload" href="/assets/version-history-DIpAZG-Z.js"/><link rel="modulepreload" href="/assets/LazyLoadWrapper-4XVlJP6o.js"/><link rel="modulepreload" href="/assets/LightRays.client-BSVgysmx.js"/><link rel="modulepreload" href="/assets/LightRaysCore-DtpFr9mX.js"/><link rel="modulepreload" href="/assets/LightRays.module-Bxd9H68z.js"/><link rel="modulepreload" href="/assets/LoadingDots-C8V_WRqk.js"/><link rel="modulepreload" href="/assets/BoltLogoSimple-DkgFDo4D.js"/><link rel="modulepreload" href="/assets/infiniteQueryBehavior-hB9lIGYN.js"/><link rel="modulepreload" href="/assets/_chat-Dshb15Ox.js"/><link rel="modulepreload" href="/assets/AgentSwitchDialog-Cg1xMxjV.js"/><link rel="modulepreload" href="/assets/organizations-B-XNwEwJ.js"/><link rel="modulepreload" href="/assets/useV1AgentRetired-m4ZsQlMd.js"/><link rel="modulepreload" href="/assets/MembersTable-BYW7kcOr.js"/><link rel="modulepreload" href="/assets/designSystemStepper-zDM7dWl0.js"/><link rel="modulepreload" href="/assets/persistentBanner-4G5KdMFK.js"/><link rel="modulepreload" href="/assets/team-CghZTPY6.js"/><link rel="modulepreload" href="/assets/withSpinner-DGE-K6ya.js"/><link rel="modulepreload" href="/assets/MemberDescription-DfMd2lu7.js"/><link rel="modulepreload" href="/assets/TransferProjectDialogContent-BUNIp32q.js"/><link rel="modulepreload" href="/assets/site-protection-Bm94ydNc.js"/><link rel="modulepreload" href="/assets/useFeatureFlags-BjUJ-NRG.js"/><link rel="modulepreload" href="/assets/useDesignSystemMutationHelpers-BgDM5eEx.js"/><link rel="modulepreload" href="/assets/useDesignSystemDraft-DyYFcnaS.js"/><link rel="modulepreload" href="/assets/useDesignSystems-BIYgHZEW.js"/><link rel="modulepreload" href="/assets/StripeLogo-B38cJnFA.js"/><link rel="modulepreload" href="/assets/PricingSelector-BFzCGW48.js"/><link rel="modulepreload" href="/assets/format-FBMKGxjf.js"/><link rel="modulepreload" href="/assets/organizations-Cct6gh6F.js"/><link rel="modulepreload" href="/assets/IndexLayout-BQxawyl9.js"/><link rel="modulepreload" href="/assets/meta-CSEI1Gr2.js"/><link rel="modulepreload" href="/assets/agent-DLQxbdNA.js"/><link rel="modulepreload" href="/assets/SearchInput-B0olF-a6.js"/><link rel="modulepreload" href="/assets/ActionMenu-B3rzkx3R.js"/><link rel="modulepreload" href="/assets/useRequestUpgrade-Cc1znSCz.js"/><link rel="modulepreload" href="/assets/AccountDisplay-AsiqhGa4.js"/><link rel="modulepreload" href="/assets/plan-info-BKYKcyi_.js"/><link rel="modulepreload" href="/assets/ClippedTextTooltip-BZMWvqpa.js"/><link rel="modulepreload" href="/assets/Pagination-Cd3A1WpJ.js"/><link rel="modulepreload" href="/assets/usePaginatedData-DWNLe8aJ.js"/><link rel="modulepreload" href="/assets/confetti.module-W9IyG_S9.js"/><link rel="modulepreload" href="/assets/netlify-DdTwHWa8.js"/><link rel="modulepreload" href="/assets/sites-DAYwIqIZ.js"/><link rel="modulepreload" href="/assets/AccountSelectMenu-CyveSxMy.js"/><link rel="modulepreload" href="/assets/domains-BVrci1_5.js"/><link rel="modulepreload" href="/assets/designSystems-BkBnxKHY.js"/><link rel="modulepreload" href="/assets/index-Bbfe3ZR4.js"/><link rel="modulepreload" href="/assets/index-KQgO_-kF.js"/><link rel="modulepreload" href="/assets/index-JRXZ0H6Y.js"/><link rel="modulepreload" href="/assets/index-BR8qDd1J.js"/><link rel="modulepreload" href="/assets/formatDistanceToNow-COqANUcj.js"/><link rel="modulepreload" href="/assets/constructNow-9vxuxKIZ.js"/><link rel="modulepreload" href="/assets/command-BdUc-NRs.js"/><link rel="modulepreload" href="/assets/AccountSelector.client-D2IwIMe8.js"/><link rel="modulepreload" href="/assets/teamPlans-Db9phX9H.js"/><link rel="modulepreload" href="/assets/github-BDnUX5Hh.js"/><link rel="modulepreload" href="/assets/proctor-Dbcms9d6.js"/><link rel="modulepreload" href="/assets/init-ref-BMTlAF2a.js"/><link rel="modulepreload" href="/assets/Sheet-Cj1esrt6.js"/><link rel="modulepreload" href="/assets/subscription-C590ywkg.js"/><link rel="modulepreload" href="/assets/useInitializeUserStore-D257I7Q1.js"/><link rel="modulepreload" href="/assets/useApplicationOAuthError-BAw5TCUK.js"/><link rel="modulepreload" href="/assets/_chat._index-75s6Clj0.js"/><link rel="modulepreload" href="/assets/Chat.client-D0ETzo8t.js"/><link rel="modulepreload" href="/assets/index-CbycKnko.js"/><link rel="modulepreload" href="/assets/Markdown-CGkdVErq.js"/><link rel="modulepreload" href="/assets/index-B2AMVukF.js"/><link rel="modulepreload" href="/assets/stripe-tm7B9iTw.js"/><link rel="modulepreload" href="/assets/deploy.client-AgLypZGJ.js"/><link rel="modulepreload" href="/assets/UpgradeLink-BsXBzeo9.js"/><link rel="modulepreload" href="/assets/useFreeTrialVariant-BLIHvhYP.js"/><link rel="modulepreload" href="/assets/SupabaseConfigurationDialog.client-Bd1T2MX2.js"/><link rel="modulepreload" href="/assets/csv-DNicIMRr.js"/><link rel="modulepreload" href="/assets/useApplications-wyz5raez.js"/><link rel="modulepreload" href="/assets/UpgradePlanDialogs-Cti5i4Ty.js"/><link rel="modulepreload" href="/assets/ProPlansCard-Cq1ROd91.js"/><link rel="modulepreload" href="/assets/TeamPlansCard-C0sraFks.js"/><link rel="modulepreload" href="/assets/tokens-stats-BWsF6vgl.js"/><link rel="modulepreload" href="/assets/parseISO-C_HjKyON.js"/><link rel="modulepreload" href="/assets/DesignSources-Csmnawg6.js"/><link rel="modulepreload" href="/assets/zod-BOxl0May.js"/><link rel="modulepreload" href="/assets/index.esm-DoGqQlne.js"/><link rel="modulepreload" href="/assets/index-DuQ2pUCS.js"/><link rel="modulepreload" href="/assets/getDefaultOptions-BkjKNS_P.js"/><link rel="modulepreload" href="/assets/TextArea-rzg2-qGQ.js"/><link rel="modulepreload" href="/assets/ProgressBar-DyYbW4ip.js"/><link rel="modulepreload" href="/assets/ConfirmationDialog.client-BX-rM-hp.js"/><link rel="modulepreload" href="/assets/Prompt-CPMw9o2M.js"/><link rel="modulepreload" href="/assets/scroll-overflow-mask-qbmlsycm.js"/><link rel="modulepreload" href="/assets/index-7gO_P7I8.js"/><link rel="modulepreload" href="/assets/skill-frontmatter-DTYyFnVU.js"/><link rel="modulepreload" href="/assets/jszip.min-DhG_DPen.js"/><link rel="modulepreload" href="/assets/store-OUx78_yR.js"/><link rel="modulepreload" href="/assets/selectors-CWa3blmw.js"/><link rel="modulepreload" href="/assets/useSelectedDesignSystem-BN8Oq_2p.js"/><link rel="modulepreload" href="/assets/mcp-known-servers-C1cI3xF0.js"/><link rel="modulepreload" href="/assets/mcp-D4HLsS9S.js"/><link rel="modulepreload" href="/assets/useEnsureSkillsLoaded-BjHsAnjm.js"/><link rel="modulepreload" href="/assets/import-figma-CO2Y9XNI.js"/><link rel="modulepreload" href="/assets/figma-Z9eq1avG.js"/><link rel="modulepreload" href="/assets/Footer-BlANq9IK.js"/><link rel="modulepreload" href="/assets/DiscordSupportModal.client-CTdTcrRH.js"/><link rel="modulepreload" href="/assets/utils-B8-fJJrx.js"/><link rel="modulepreload" href="/assets/useTrackOnMount-C2B265Jf.js"/><link rel="modulepreload" href="/assets/differenceInDays-Cp7owLqy.js"/><link rel="modulepreload" href="/assets/isYesterday-gfcWJeP4.js"/><link rel="modulepreload" href="/assets/addDays-CqaFVKcq.js"/><link rel="modulepreload" href="/assets/sso-B66j0Kcf.js"/><link rel="modulepreload" href="/assets/AllProjects-CNsr67s4.js"/><link rel="modulepreload" href="/assets/FiltersBar-BGN0FsWG.js"/><link rel="modulepreload" href="/assets/RecentProjects-Df8xcfdk.js"/><link rel="modulepreload" href="/assets/useProjectCollaborationV2-BEth4DY0.js"/><link rel="modulepreload" href="/assets/sheetNavigation-B3KuRHxI.js"/><link rel="modulepreload" href="/assets/command-DsKLnxB7.js"/><link rel="modulepreload" href="/assets/chart-DdzRD9Kn.js"/><link rel="modulepreload" href="/assets/serialize-messages-B2Ycr75j.js"/><link rel="modulepreload" href="/assets/index-BDJlJzHK.js"/><link rel="modulepreload" href="/assets/client-error-DejbHZY5.js"/><link rel="modulepreload" href="/assets/support-BAxtWPS-.js"/><link rel="modulepreload" href="/assets/theme-CaxmedKW.js"/><link rel="modulepreload" href="/assets/unpublish-project-Dp98898e.js"/><link rel="modulepreload" href="/assets/organizationMembers-B873SvzC.js"/><link rel="modulepreload" href="/assets/mcp-oauth-listener--b-hiiIl.js"/><link rel="modulepreload" href="/assets/index-C_s9gSTi.js"/><link rel="modulepreload" href="/assets/prepare-body-BaZ3cpAp.js"/><link rel="modulepreload" href="/assets/usePaymentIntentStatusMessage-Pc_YX8Lb.js"/><script>window.__reactRouterContext = {"basename":"/","future":{"unstable_optimizeDeps":false,"v8_passThroughRequests":false,"v8_trailingSlashAwareDataRequests":false,"unstable_previewServerPrerendering":false,"v8_middleware":false,"v8_splitRouteModules":false,"v8_viteEnvironmentApi":false},"routeDiscovery":{"mode":"lazy","manifestPath":"/__manifest"},"ssr":true,"isSpaMode":false};window.__reactRouterContext.stream = new ReadableStream({start(controller){window.__reactRouterContext.streamController = controller;}}).pipeThrough(new TextEncoderStream());</script><script type="module" async="">;
+import * as route0 from "/assets/root-CNPUBw1H.js";
+import * as route1 from "/assets/_chat-Dshb15Ox.js";
+import * as route2 from "/assets/_chat._index-75s6Clj0.js";
+  window.__reactRouterManifest = {
+  "entry": {
+    "module": "/assets/entry.client-DGxdQAc4.js",
+    "imports": [
+      "/assets/react-vendor-DFS8c0-u.js",
+      "/assets/app-version-TgcyjiPD.js",
+      "/assets/index.esm-D-kwiTE8.js",
+      "/assets/sentry.client-B583diln.js",
+      "/assets/breadcrumbs-BBDL7Ot9.js",
+      "/assets/Toast-DBjQyIqs.js",
+      "/assets/EmptyState-B4uq9z6n.js",
+      "/assets/constants-DUULTuzt.js",
+      "/assets/index-hujMIAWZ.js",
+      "/assets/bundle-mjs-5MOacnAK.js"
+    ],
+    "css": [
+      "/assets/EmptyState-scVdpVyl.css#"
+    ]
+  },
+  "routes": {
+    "root": {
+      "id": "root",
+      "path": "",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": true,
+      "module": "/assets/root-CNPUBw1H.js",
+      "imports": [
+        "/assets/react-vendor-DFS8c0-u.js",
+        "/assets/app-version-TgcyjiPD.js",
+        "/assets/index.esm-D-kwiTE8.js",
+        "/assets/sentry.client-B583diln.js",
+        "/assets/breadcrumbs-BBDL7Ot9.js",
+        "/assets/Toast-DBjQyIqs.js",
+        "/assets/EmptyState-B4uq9z6n.js",
+        "/assets/constants-DUULTuzt.js",
+        "/assets/index-hujMIAWZ.js",
+        "/assets/bundle-mjs-5MOacnAK.js",
+        "/assets/index-DkUFz90d.js",
+        "/assets/stripIndents-pFh2tRUP.js",
+        "/assets/compare-IkewsJlg-CZqd2GR-.js",
+        "/assets/client-only-DwosFz52.js",
+        "/assets/analytics-CCqpfHQz.js",
+        "/assets/registration-C_mZCv07.js",
+        "/assets/ErrorBoundary-nf1YnF8u.js",
+        "/assets/growthbook-1Nz0whI3.js",
+        "/assets/theme-DrfSRIs9.js",
+        "/assets/index-DcbV6Jek.js",
+        "/assets/login-XafVWru6.js",
+        "/assets/settings-CQiZzHIQ.js",
+        "/assets/Alert-DZyNlf_T.js",
+        "/assets/cello-attribution-Biq_3tnl.js",
+        "/assets/login-CmtXJQP0.js",
+        "/assets/preload-helper-2mcYJXfA.js",
+        "/assets/authFlowRoutes-0PvSSBdp.js",
+        "/assets/cello-config-BXEYGcji.js",
+        "/assets/queryClient-BKSf7pHs.js",
+        "/assets/QueryClientProvider-CWoSfmfP.js",
+        "/assets/urls-DIAei6Vp.js",
+        "/assets/database-tabs-DvZimEH-.js",
+        "/assets/index-DyxeRtzf.js",
+        "/assets/logger-BLqFwVWq.js",
+        "/assets/lifecycle-events-Cn4S9rt8.js",
+        "/assets/Header-B0QkzPuy.js",
+        "/assets/config-DG6yYR4n.js",
+        "/assets/classNames-BM_Cwa33.js",
+        "/assets/Logo-LdsYBklI.js",
+        "/assets/Link-CE2WXvQp.js",
+        "/assets/Avatar-BaixDSjP.js",
+        "/assets/store-dau9lu-f.js",
+        "/assets/index-ApXL96Jy.js",
+        "/assets/ai-ptijkNWq.js",
+        "/assets/index-DRXXH9YX.js",
+        "/assets/chat-started-DnFATCws.js",
+        "/assets/noops-TSSrUl-c.js",
+        "/assets/page-visibility-6WPc68Q5.js",
+        "/assets/util-C8pwnKxy.js",
+        "/assets/url-Cws4dZ32.js",
+        "/assets/index-BwBwXA76.js",
+        "/assets/text_line_stream-DtdTslVH.js",
+        "/assets/path-C47uQrgn.js",
+        "/assets/workDir-sxxUHiEw.js",
+        "/assets/chat-hooks-BAqhNcy-.js",
+        "/assets/download-rUGbmDk0.js",
+        "/assets/retry-DX5j_tUn.js",
+        "/assets/debounce-SvodA6N5.js",
+        "/assets/plural-DHUPwgOU.js",
+        "/assets/artifacts-DxQBXx56.js",
+        "/assets/description-CjYtOCyk.js",
+        "/assets/unreachable-dJ0nIuQ4.js",
+        "/assets/projects-C4tFyRTs.js",
+        "/assets/useQuery-DdV1-BIE.js",
+        "/assets/query-B76Wiy5M.js",
+        "/assets/useMutation-ORLi4bPc.js",
+        "/assets/mutation-BN55KS5u.js",
+        "/assets/openWithStackblitzAuth-D0TMuezl.js",
+        "/assets/menu-A2GXftJB.js",
+        "/assets/useProjectsOwnerContext-BYx03_vE.js",
+        "/assets/user-DYxDnlA7.js",
+        "/assets/useProjectRename-JoKXpwMk.js",
+        "/assets/animationVariants-Bv1Hcyis.js",
+        "/assets/easings-BDvTs3Wp.js",
+        "/assets/teamTemplates-C4oNwVfd.js",
+        "/assets/queryOptions-dfte2Pzq.js",
+        "/assets/mutationOptions-DuEc1oJu.js",
+        "/assets/version-history-DIpAZG-Z.js",
+        "/assets/LazyLoadWrapper-4XVlJP6o.js",
+        "/assets/LightRays.client-BSVgysmx.js",
+        "/assets/LightRaysCore-DtpFr9mX.js",
+        "/assets/LightRays.module-Bxd9H68z.js",
+        "/assets/LoadingDots-C8V_WRqk.js",
+        "/assets/BoltLogoSimple-DkgFDo4D.js",
+        "/assets/infiniteQueryBehavior-hB9lIGYN.js"
+      ],
+      "css": [
+        "/assets/EmptyState-scVdpVyl.css#",
+        "/assets/root-BDr8v2JC.css",
+        "/assets/login-D3NdLlkk.css#",
+        "/assets/LightRays-apN2LHcc.css#"
+      ]
+    },
+    "routes/_chat": {
+      "id": "routes/_chat",
+      "parentId": "root",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "/assets/_chat-Dshb15Ox.js",
+      "imports": [
+        "/assets/preload-helper-2mcYJXfA.js",
+        "/assets/react-vendor-DFS8c0-u.js",
+        "/assets/index-DkUFz90d.js",
+        "/assets/client-only-DwosFz52.js",
+        "/assets/EmptyState-B4uq9z6n.js",
+        "/assets/AgentSwitchDialog-Cg1xMxjV.js",
+        "/assets/index-DcbV6Jek.js",
+        "/assets/Toast-DBjQyIqs.js",
+        "/assets/organizations-B-XNwEwJ.js",
+        "/assets/constants-DUULTuzt.js",
+        "/assets/useV1AgentRetired-m4ZsQlMd.js",
+        "/assets/MembersTable-BYW7kcOr.js",
+        "/assets/designSystemStepper-zDM7dWl0.js",
+        "/assets/persistentBanner-4G5KdMFK.js",
+        "/assets/team-CghZTPY6.js",
+        "/assets/classNames-BM_Cwa33.js",
+        "/assets/withSpinner-DGE-K6ya.js",
+        "/assets/analytics-CCqpfHQz.js",
+        "/assets/registration-C_mZCv07.js",
+        "/assets/settings-CQiZzHIQ.js",
+        "/assets/MemberDescription-DfMd2lu7.js",
+        "/assets/TransferProjectDialogContent-BUNIp32q.js",
+        "/assets/store-dau9lu-f.js",
+        "/assets/description-CjYtOCyk.js",
+        "/assets/site-protection-Bm94ydNc.js",
+        "/assets/useFeatureFlags-BjUJ-NRG.js",
+        "/assets/Alert-DZyNlf_T.js",
+        "/assets/useDesignSystemMutationHelpers-BgDM5eEx.js",
+        "/assets/useDesignSystemDraft-DyYFcnaS.js",
+        "/assets/useDesignSystems-BIYgHZEW.js",
+        "/assets/config-DG6yYR4n.js",
+        "/assets/urls-DIAei6Vp.js",
+        "/assets/menu-A2GXftJB.js",
+        "/assets/logger-BLqFwVWq.js",
+        "/assets/index-hujMIAWZ.js",
+        "/assets/useQuery-DdV1-BIE.js",
+        "/assets/StripeLogo-B38cJnFA.js",
+        "/assets/index-ApXL96Jy.js",
+        "/assets/queryOptions-dfte2Pzq.js",
+        "/assets/PricingSelector-BFzCGW48.js",
+        "/assets/format-FBMKGxjf.js",
+        "/assets/organizations-Cct6gh6F.js",
+        "/assets/retry-DX5j_tUn.js",
+        "/assets/LazyLoadWrapper-4XVlJP6o.js",
+        "/assets/IndexLayout-BQxawyl9.js",
+        "/assets/meta-CSEI1Gr2.js",
+        "/assets/noops-TSSrUl-c.js",
+        "/assets/bundle-mjs-5MOacnAK.js",
+        "/assets/app-version-TgcyjiPD.js",
+        "/assets/sentry.client-B583diln.js",
+        "/assets/index-DRXXH9YX.js",
+        "/assets/chat-started-DnFATCws.js",
+        "/assets/page-visibility-6WPc68Q5.js",
+        "/assets/cello-attribution-Biq_3tnl.js",
+        "/assets/util-C8pwnKxy.js",
+        "/assets/url-Cws4dZ32.js",
+        "/assets/index-BwBwXA76.js",
+        "/assets/chat-hooks-BAqhNcy-.js",
+        "/assets/agent-DLQxbdNA.js",
+        "/assets/growthbook-1Nz0whI3.js",
+        "/assets/SearchInput-B0olF-a6.js",
+        "/assets/debounce-SvodA6N5.js",
+        "/assets/ActionMenu-B3rzkx3R.js",
+        "/assets/useRequestUpgrade-Cc1znSCz.js",
+        "/assets/AccountDisplay-AsiqhGa4.js",
+        "/assets/Avatar-BaixDSjP.js",
+        "/assets/plan-info-BKYKcyi_.js",
+        "/assets/ClippedTextTooltip-BZMWvqpa.js",
+        "/assets/Pagination-Cd3A1WpJ.js",
+        "/assets/usePaginatedData-DWNLe8aJ.js",
+        "/assets/openWithStackblitzAuth-D0TMuezl.js",
+        "/assets/plural-DHUPwgOU.js",
+        "/assets/index-DyxeRtzf.js",
+        "/assets/theme-DrfSRIs9.js",
+        "/assets/lifecycle-events-Cn4S9rt8.js",
+        "/assets/confetti.module-W9IyG_S9.js",
+        "/assets/LoadingDots-C8V_WRqk.js",
+        "/assets/netlify-DdTwHWa8.js",
+        "/assets/QueryClientProvider-CWoSfmfP.js",
+        "/assets/useMutation-ORLi4bPc.js",
+        "/assets/mutation-BN55KS5u.js",
+        "/assets/projects-C4tFyRTs.js",
+        "/assets/sites-DAYwIqIZ.js",
+        "/assets/AccountSelectMenu-CyveSxMy.js",
+        "/assets/Link-CE2WXvQp.js",
+        "/assets/animationVariants-Bv1Hcyis.js",
+        "/assets/easings-BDvTs3Wp.js",
+        "/assets/domains-BVrci1_5.js",
+        "/assets/designSystems-BkBnxKHY.js",
+        "/assets/mutationOptions-DuEc1oJu.js",
+        "/assets/index-Bbfe3ZR4.js",
+        "/assets/query-B76Wiy5M.js",
+        "/assets/ai-ptijkNWq.js",
+        "/assets/text_line_stream-DtdTslVH.js",
+        "/assets/path-C47uQrgn.js",
+        "/assets/workDir-sxxUHiEw.js",
+        "/assets/download-rUGbmDk0.js",
+        "/assets/artifacts-DxQBXx56.js",
+        "/assets/unreachable-dJ0nIuQ4.js",
+        "/assets/Logo-LdsYBklI.js",
+        "/assets/Header-B0QkzPuy.js",
+        "/assets/login-CmtXJQP0.js",
+        "/assets/login-XafVWru6.js",
+        "/assets/BoltLogoSimple-DkgFDo4D.js",
+        "/assets/useProjectsOwnerContext-BYx03_vE.js",
+        "/assets/user-DYxDnlA7.js",
+        "/assets/useProjectRename-JoKXpwMk.js",
+        "/assets/teamTemplates-C4oNwVfd.js",
+        "/assets/version-history-DIpAZG-Z.js",
+        "/assets/index-KQgO_-kF.js",
+        "/assets/index-JRXZ0H6Y.js",
+        "/assets/index-BR8qDd1J.js",
+        "/assets/formatDistanceToNow-COqANUcj.js",
+        "/assets/constructNow-9vxuxKIZ.js",
+        "/assets/command-BdUc-NRs.js",
+        "/assets/AccountSelector.client-D2IwIMe8.js",
+        "/assets/teamPlans-Db9phX9H.js",
+        "/assets/github-BDnUX5Hh.js",
+        "/assets/cello-config-BXEYGcji.js",
+        "/assets/authFlowRoutes-0PvSSBdp.js",
+        "/assets/proctor-Dbcms9d6.js",
+        "/assets/init-ref-BMTlAF2a.js",
+        "/assets/Sheet-Cj1esrt6.js",
+        "/assets/subscription-C590ywkg.js",
+        "/assets/useInitializeUserStore-D257I7Q1.js",
+        "/assets/useApplicationOAuthError-BAw5TCUK.js"
+      ],
+      "css": [
+        "/assets/EmptyState-scVdpVyl.css#",
+        "/assets/login-D3NdLlkk.css#"
+      ]
+    },
+    "routes/_chat._index": {
+      "id": "routes/_chat._index",
+      "parentId": "routes/_chat",
+      "index": true,
+      "hasAction": false,
+      "hasLoader": false,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "/assets/_chat._index-75s6Clj0.js",
+      "imports": [
+        "/assets/react-vendor-DFS8c0-u.js",
+        "/assets/client-only-DwosFz52.js",
+        "/assets/Chat.client-D0ETzo8t.js",
+        "/assets/constants-DUULTuzt.js",
+        "/assets/index-DcbV6Jek.js",
+        "/assets/preload-helper-2mcYJXfA.js",
+        "/assets/settings-CQiZzHIQ.js",
+        "/assets/index-DRXXH9YX.js",
+        "/assets/logger-BLqFwVWq.js",
+        "/assets/index-hujMIAWZ.js",
+        "/assets/analytics-CCqpfHQz.js",
+        "/assets/app-version-TgcyjiPD.js",
+        "/assets/sentry.client-B583diln.js",
+        "/assets/index-DyxeRtzf.js",
+        "/assets/EmptyState-B4uq9z6n.js",
+        "/assets/bundle-mjs-5MOacnAK.js",
+        "/assets/Toast-DBjQyIqs.js",
+        "/assets/chat-started-DnFATCws.js",
+        "/assets/noops-TSSrUl-c.js",
+        "/assets/page-visibility-6WPc68Q5.js",
+        "/assets/index-CbycKnko.js",
+        "/assets/index-ApXL96Jy.js",
+        "/assets/ai-ptijkNWq.js",
+        "/assets/util-C8pwnKxy.js",
+        "/assets/url-Cws4dZ32.js",
+        "/assets/index-BwBwXA76.js",
+        "/assets/lifecycle-events-Cn4S9rt8.js",
+        "/assets/text_line_stream-DtdTslVH.js",
+        "/assets/path-C47uQrgn.js",
+        "/assets/workDir-sxxUHiEw.js",
+        "/assets/store-dau9lu-f.js",
+        "/assets/chat-hooks-BAqhNcy-.js",
+        "/assets/index-DkUFz90d.js",
+        "/assets/download-rUGbmDk0.js",
+        "/assets/retry-DX5j_tUn.js",
+        "/assets/urls-DIAei6Vp.js",
+        "/assets/debounce-SvodA6N5.js",
+        "/assets/plural-DHUPwgOU.js",
+        "/assets/artifacts-DxQBXx56.js",
+        "/assets/description-CjYtOCyk.js",
+        "/assets/unreachable-dJ0nIuQ4.js",
+        "/assets/index-JRXZ0H6Y.js",
+        "/assets/index-BR8qDd1J.js",
+        "/assets/stripIndents-pFh2tRUP.js",
+        "/assets/Markdown-CGkdVErq.js",
+        "/assets/Alert-DZyNlf_T.js",
+        "/assets/version-history-DIpAZG-Z.js",
+        "/assets/theme-DrfSRIs9.js",
+        "/assets/classNames-BM_Cwa33.js",
+        "/assets/index-B2AMVukF.js",
+        "/assets/easings-BDvTs3Wp.js",
+        "/assets/stripe-tm7B9iTw.js",
+        "/assets/withSpinner-DGE-K6ya.js",
+        "/assets/Link-CE2WXvQp.js",
+        "/assets/database-tabs-DvZimEH-.js",
+        "/assets/deploy.client-AgLypZGJ.js",
+        "/assets/UpgradeLink-BsXBzeo9.js",
+        "/assets/team-CghZTPY6.js",
+        "/assets/config-DG6yYR4n.js",
+        "/assets/openWithStackblitzAuth-D0TMuezl.js",
+        "/assets/cello-attribution-Biq_3tnl.js",
+        "/assets/organizations-B-XNwEwJ.js",
+        "/assets/useFreeTrialVariant-BLIHvhYP.js",
+        "/assets/growthbook-1Nz0whI3.js",
+        "/assets/SupabaseConfigurationDialog.client-Bd1T2MX2.js",
+        "/assets/command-BdUc-NRs.js",
+        "/assets/site-protection-Bm94ydNc.js",
+        "/assets/domains-BVrci1_5.js",
+        "/assets/useQuery-DdV1-BIE.js",
+        "/assets/QueryClientProvider-CWoSfmfP.js",
+        "/assets/query-B76Wiy5M.js",
+        "/assets/queryOptions-dfte2Pzq.js",
+        "/assets/useMutation-ORLi4bPc.js",
+        "/assets/mutation-BN55KS5u.js",
+        "/assets/csv-DNicIMRr.js",
+        "/assets/useApplications-wyz5raez.js",
+        "/assets/Header-B0QkzPuy.js",
+        "/assets/login-CmtXJQP0.js",
+        "/assets/login-XafVWru6.js",
+        "/assets/registration-C_mZCv07.js",
+        "/assets/LoadingDots-C8V_WRqk.js",
+        "/assets/BoltLogoSimple-DkgFDo4D.js",
+        "/assets/Logo-LdsYBklI.js",
+        "/assets/Avatar-BaixDSjP.js",
+        "/assets/projects-C4tFyRTs.js",
+        "/assets/menu-A2GXftJB.js",
+        "/assets/useProjectsOwnerContext-BYx03_vE.js",
+        "/assets/user-DYxDnlA7.js",
+        "/assets/useProjectRename-JoKXpwMk.js",
+        "/assets/animationVariants-Bv1Hcyis.js",
+        "/assets/teamTemplates-C4oNwVfd.js",
+        "/assets/mutationOptions-DuEc1oJu.js",
+        "/assets/LazyLoadWrapper-4XVlJP6o.js",
+        "/assets/UpgradePlanDialogs-Cti5i4Ty.js",
+        "/assets/ProPlansCard-Cq1ROd91.js",
+        "/assets/PricingSelector-BFzCGW48.js",
+        "/assets/format-FBMKGxjf.js",
+        "/assets/TeamPlansCard-C0sraFks.js",
+        "/assets/teamPlans-Db9phX9H.js",
+        "/assets/useFeatureFlags-BjUJ-NRG.js",
+        "/assets/tokens-stats-BWsF6vgl.js",
+        "/assets/formatDistanceToNow-COqANUcj.js",
+        "/assets/constructNow-9vxuxKIZ.js",
+        "/assets/parseISO-C_HjKyON.js",
+        "/assets/designSystemStepper-zDM7dWl0.js",
+        "/assets/useDesignSystemDraft-DyYFcnaS.js",
+        "/assets/AccountDisplay-AsiqhGa4.js",
+        "/assets/plan-info-BKYKcyi_.js",
+        "/assets/ClippedTextTooltip-BZMWvqpa.js",
+        "/assets/AccountSelectMenu-CyveSxMy.js",
+        "/assets/DesignSources-Csmnawg6.js",
+        "/assets/zod-BOxl0May.js",
+        "/assets/index.esm-DoGqQlne.js",
+        "/assets/index-DuQ2pUCS.js",
+        "/assets/getDefaultOptions-BkjKNS_P.js",
+        "/assets/TextArea-rzg2-qGQ.js",
+        "/assets/init-ref-BMTlAF2a.js",
+        "/assets/ProgressBar-DyYbW4ip.js",
+        "/assets/ActionMenu-B3rzkx3R.js",
+        "/assets/MemberDescription-DfMd2lu7.js",
+        "/assets/confetti.module-W9IyG_S9.js",
+        "/assets/useDesignSystems-BIYgHZEW.js",
+        "/assets/designSystems-BkBnxKHY.js",
+        "/assets/index-Bbfe3ZR4.js",
+        "/assets/ConfirmationDialog.client-BX-rM-hp.js",
+        "/assets/Prompt-CPMw9o2M.js",
+        "/assets/scroll-overflow-mask-qbmlsycm.js",
+        "/assets/useV1AgentRetired-m4ZsQlMd.js",
+        "/assets/agent-DLQxbdNA.js",
+        "/assets/index-7gO_P7I8.js",
+        "/assets/skill-frontmatter-DTYyFnVU.js",
+        "/assets/jszip.min-DhG_DPen.js",
+        "/assets/store-OUx78_yR.js",
+        "/assets/selectors-CWa3blmw.js",
+        "/assets/Sheet-Cj1esrt6.js",
+        "/assets/subscription-C590ywkg.js",
+        "/assets/useSelectedDesignSystem-BN8Oq_2p.js",
+        "/assets/mcp-known-servers-C1cI3xF0.js",
+        "/assets/mcp-D4HLsS9S.js",
+        "/assets/useEnsureSkillsLoaded-BjHsAnjm.js",
+        "/assets/persistentBanner-4G5KdMFK.js",
+        "/assets/import-figma-CO2Y9XNI.js",
+        "/assets/figma-Z9eq1avG.js",
+        "/assets/StripeLogo-B38cJnFA.js",
+        "/assets/Footer-BlANq9IK.js",
+        "/assets/DiscordSupportModal.client-CTdTcrRH.js",
+        "/assets/AgentSwitchDialog-Cg1xMxjV.js",
+        "/assets/utils-B8-fJJrx.js",
+        "/assets/useTrackOnMount-C2B265Jf.js",
+        "/assets/compare-IkewsJlg-CZqd2GR-.js",
+        "/assets/SearchInput-B0olF-a6.js",
+        "/assets/proctor-Dbcms9d6.js",
+        "/assets/differenceInDays-Cp7owLqy.js",
+        "/assets/isYesterday-gfcWJeP4.js",
+        "/assets/addDays-CqaFVKcq.js",
+        "/assets/TransferProjectDialogContent-BUNIp32q.js",
+        "/assets/netlify-DdTwHWa8.js",
+        "/assets/sites-DAYwIqIZ.js",
+        "/assets/sso-B66j0Kcf.js",
+        "/assets/AllProjects-CNsr67s4.js",
+        "/assets/FiltersBar-BGN0FsWG.js",
+        "/assets/Pagination-Cd3A1WpJ.js",
+        "/assets/RecentProjects-Df8xcfdk.js",
+        "/assets/github-BDnUX5Hh.js",
+        "/assets/cello-config-BXEYGcji.js",
+        "/assets/authFlowRoutes-0PvSSBdp.js",
+        "/assets/ErrorBoundary-nf1YnF8u.js",
+        "/assets/LightRays.client-BSVgysmx.js",
+        "/assets/LightRaysCore-DtpFr9mX.js",
+        "/assets/LightRays.module-Bxd9H68z.js",
+        "/assets/queryClient-BKSf7pHs.js",
+        "/assets/infiniteQueryBehavior-hB9lIGYN.js",
+        "/assets/useProjectCollaborationV2-BEth4DY0.js",
+        "/assets/usePaginatedData-DWNLe8aJ.js",
+        "/assets/sheetNavigation-B3KuRHxI.js",
+        "/assets/command-DsKLnxB7.js",
+        "/assets/index-KQgO_-kF.js",
+        "/assets/chart-DdzRD9Kn.js",
+        "/assets/serialize-messages-B2Ycr75j.js",
+        "/assets/index-BDJlJzHK.js",
+        "/assets/client-error-DejbHZY5.js",
+        "/assets/support-BAxtWPS-.js",
+        "/assets/theme-CaxmedKW.js",
+        "/assets/unpublish-project-Dp98898e.js",
+        "/assets/organizationMembers-B873SvzC.js",
+        "/assets/organizations-Cct6gh6F.js",
+        "/assets/breadcrumbs-BBDL7Ot9.js",
+        "/assets/mcp-oauth-listener--b-hiiIl.js",
+        "/assets/index-C_s9gSTi.js",
+        "/assets/prepare-body-BaZ3cpAp.js",
+        "/assets/usePaymentIntentStatusMessage-Pc_YX8Lb.js"
+      ],
+      "css": [
+        "/assets/Chat-C-pxZWHb.css#",
+        "/assets/EmptyState-scVdpVyl.css#",
+        "/assets/Markdown-DOeOYkw8.css#",
+        "/assets/login-D3NdLlkk.css#",
+        "/assets/Prompt-1LVg7nBt.css#",
+        "/assets/LightRays-apN2LHcc.css#"
+      ]
+    }
+  },
+  "url": "/assets/manifest-d25ae2a9.js",
+  "version": "d25ae2a9"
+};
+  window.__reactRouterRouteModules = {"root":route0,"routes/_chat":route1,"routes/_chat._index":route2};
+
+import("/assets/entry.client-DGxdQAc4.js");</script></body></html><!--$?--><template id="B:0"></template><!--/$--><div hidden id="S:0"><script>window.__reactRouterContext.streamController.enqueue("[{\"_1\":2,\"_3\":-5,\"_4\":-5},\"loaderData\",{\"_5\":6,\"_7\":8},\"actionData\",\"errors\",\"root\",{\"_10\":-7,\"_11\":12,\"_9\":-5,\"_13\":14,\"_15\":16,\"_17\":18,\"_19\":20,\"_21\":20,\"_22\":23,\"_24\":25,\"_26\":27,\"_28\":29},\"routes/_chat\",{\"_9\":-5},\"user\",\"banner\",\"growthbookPayload\",{\"_37\":38,\"_39\":40,\"_41\":42,\"_43\":44},\"serverTime\",\"2026-08-07T13:55:07.625Z\",\"country\",\"HK\",\"cello\",{\"_30\":20,\"_31\":32,\"_33\":34,\"_35\":36},\"isMobileExperience\",false,\"sidebarCollapsed\",\"turnstileSiteKey\",\"0x4AAAAAABt_LacRZZp7J2A6\",\"swk\",\"ta1kDK49qdEDEfd8KYxI37mW0GPkLKn1\",\"gbk\",\"sdk-ye5YC6vB6I5SoRX\",\"ldk\",\"691f98ebed094f09c14ffbeb\",\"enabled\",\"configured\",true,\"scriptSrc\",\"https://assets.cello.so/app/latest/cello.js\",\"attributionScriptSrc\",\"https://assets.cello.so/attribution/latest/cello-attribution.js\",\"status\",200,\"features\",{\"_45\":46,\"_47\":48,\"_49\":50,\"_51\":52,\"_53\":54,\"_55\":56,\"_57\":58,\"_59\":60,\"_61\":62,\"_63\":64,\"_65\":66,\"_67\":68,\"_69\":70,\"_71\":72,\"_73\":74,\"_75\":76,\"_77\":78,\"_79\":80,\"_81\":82},\"experiments\",[],\"dateUpdated\",\"2026-08-07T12:36:49.479Z\",\"insta-teams\",{\"_83\":20},\"team-aware-switcher\",{\"_83\":20},\"plan-mode-enable\",{\"_83\":20},\"free-trial-popup\",{\"_83\":620},\"free-tier-min-messages-per-day\",{\"_83\":336,\"_85\":558},\"anthropic-model-provider\",{\"_83\":546,\"_85\":547},\"glm-5-1-provider\",{\"_83\":300},\"standard-model-routing\",{\"_83\":354,\"_85\":355},\"max-model-routing\",{\"_83\":315,\"_85\":316},\"harness\",{\"_83\":314},\"kimi-k2-6-provider\",{\"_83\":300},\"glm-5-2-provider\",{\"_83\":300,\"_85\":301},\"google_one_tap\",{\"_83\":20,\"_85\":287},\"send-button-exp\",{\"_83\":20},\"retention-coupon\",{\"_83\":185,\"_85\":186},\"gateway-route-limits\",{\"_83\":132,\"_85\":133},\"agent-activity\",{\"_83\":20,\"_85\":95},\"retire-v1-agent\",{\"_83\":20,\"_85\":92},\"multimodal-failback-model\",{\"_83\":84,\"_85\":86},\"defaultValue\",\"claude-sonnet-4-6\",\"rules\",[87],{\"_88\":89,\"_90\":91},\"id\",\"fr_msdu2ktp\",\"force\",\"gpt-5.6-luna\",[93],{\"_88\":94,\"_90\":32},\"fr_msdl4qvv\",[96,97],{\"_88\":102,\"_99\":103,\"_104\":105,\"_106\":88,\"_107\":108,\"_109\":110,\"_111\":108,\"_112\":113,\"_114\":115,\"_116\":117,\"_118\":119,\"_120\":121},{\"_88\":98,\"_99\":100,\"_90\":32},\"fr_mrxejxl3\",\"condition\",{\"_101\":32},\"internal\",\"fr_19g6mmrumev5o\",{\"_127\":20,\"_128\":129},\"coverage\",1,\"hashAttribute\",\"bucketVersion\",2,\"seed\",\"d531ee26-396d-4c26-8cc1-f2fe6635fe19\",\"hashVersion\",\"variations\",[20,32],\"weights\",[125,126],\"key\",\"agent-activity-ui\",\"meta\",[122,123],\"phase\",\"1\",{\"_116\":124},{\"_116\":121},\"0\",0.9,0.1,\"isPaid\",\"createdAt\",{\"_130\":131},\"$gt\",\"2026-07-27T00:00\",{\"_137\":183,\"_139\":184},[134],{\"_88\":135,\"_90\":136},\"fr_mrl5c69w\",{\"_137\":138,\"_139\":140},\"mode\",\"enforce\",\"routes\",{\"_141\":142,\"_143\":144,\"_145\":146,\"_147\":148,\"_149\":150,\"_151\":152,\"_153\":154,\"_155\":156,\"_157\":158,\"_159\":160,\"_161\":162,\"_163\":164,\"_165\":166,\"_167\":168},\"azure-foundry-oss/glm-5.2\",{\"_169\":182},\"azure-foundry-claude/claude-opus-5\",{\"_169\":171},\"azure-foundry-claude/claude-opus-4-6\",{\"_169\":181},\"azure-foundry-claude/claude-opus-4-7\",{\"_169\":180},\"azure-foundry-claude/claude-opus-4-8\",{\"_169\":179},\"azure-foundry-claude/claude-sonnet-4-6\",{\"_169\":178},\"baseten-dedicated/glm-5.2\",{\"_169\":177},\"baseten-mapi/glm-5.2\",{\"_169\":176},\"baseten-mapi/kimi-k3\",{\"_169\":175},\"bedrock/gpt-5.6-sol\",{\"_169\":174},\"bedrock/gpt-5.6-terra\",{\"_169\":174},\"bedrock/gpt-5.6-luna\",{\"_169\":173},\"bedrock/claude-fable-5\",{\"_169\":171,\"_172\":32},\"azure-foundry-claude/claude-fable-5\",{\"_169\":170},\"itpm\",1899000,9500000,\"disabled\",47500000,19000000,9000000,3000000,100000000,23749000,18999000,15199000,9499000,30000000,\"off\",{},{},[187,188],{\"_88\":246,\"_99\":247,\"_104\":105,\"_106\":88,\"_107\":105,\"_109\":248,\"_111\":108,\"_112\":249,\"_114\":250,\"_116\":251,\"_118\":252,\"_120\":124},{\"_88\":189,\"_99\":190,\"_104\":105,\"_106\":88,\"_107\":105,\"_109\":191,\"_111\":108,\"_112\":192,\"_114\":193,\"_116\":194,\"_118\":195,\"_120\":124},\"fr_19g6qmroxhvqj\",{\"_229\":230,\"_231\":232},\"dee60c23-8e9e-47f1-89ed-002cb94a8842\",[205,206,207,208,209],[204,204,204,204,204],\"cancellation-save-flow---pro-50-\",[196,197,198,199,200],{\"_116\":124},{\"_116\":121},{\"_116\":203},{\"_116\":202},{\"_116\":201},\"4\",\"3\",\"2\",0.2,{},{\"_210\":227,\"_212\":228,\"_214\":222,\"_216\":-5,\"_217\":225,\"_219\":226},{\"_210\":223,\"_212\":224,\"_214\":215,\"_216\":-5,\"_217\":225,\"_219\":226},{\"_210\":220,\"_212\":221,\"_214\":222,\"_216\":-5,\"_217\":218,\"_219\":-5},{\"_210\":211,\"_212\":213,\"_214\":215,\"_216\":-5,\"_217\":218,\"_219\":-5},\"coupon_id\",\"XhuX5u2E\",\"name\",\"33% off for 1 month\",\"percent_off\",33,\"amount_off\",\"duration\",\"once\",\"duration_in_months\",\"C0QNwnHJ\",\"50% off for 1 month\",50,\"DKuQ9DNy\",\"33% off for 3 months\",\"repeating\",3,\"lIpeHL6s\",\"50% off for 3 months\",\"tier\",{\"_233\":234},\"interval\",\"monthly\",\"$in\",[108,226,235,236,237,238,239,240,241,242,243,244,245],4,5,6,7,8,9,10,11,12,13,14,\"fr_19g6rmroxhp6r\",{\"_229\":105,\"_231\":232},\"2055f8c6-38b2-4cba-8c08-6a591c31de17\",[263,264,265,266,267,268,269],[262,262,262,262,262,262,262],\"cancellation-save-flow---pro-25\",[253,254,255,256,257,258,259],{\"_116\":124},{\"_116\":121},{\"_116\":203},{\"_116\":202},{\"_116\":201},{\"_116\":261},{\"_116\":260},\"6\",\"5\",0.14285714285714285,{},{\"_210\":285,\"_212\":286,\"_214\":-5,\"_216\":282,\"_217\":225,\"_219\":226},{\"_210\":283,\"_212\":284,\"_214\":-5,\"_216\":279,\"_217\":225,\"_219\":226},{\"_210\":280,\"_212\":281,\"_214\":-5,\"_216\":282,\"_217\":218,\"_219\":-5},{\"_210\":277,\"_212\":278,\"_214\":-5,\"_216\":279,\"_217\":218,\"_219\":-5},{\"_210\":274,\"_212\":275,\"_214\":276,\"_216\":-5,\"_217\":218,\"_219\":-5},{\"_210\":270,\"_212\":271,\"_214\":-5,\"_216\":272,\"_217\":273,\"_219\":-5},\"81No41IJ\",\"$9 Lite plan\",1600,\"forever\",\"UyfJr6Pl\",\"30-day pause\",100,\"3GAG19Cm\",\"$15 off for 1 month\",1500,\"uveycV0z\",\"$10 off for 1 month\",1000,\"CdP3CQfi\",\"$15 off for 3 months\",\"fMcAcvSX\",\"$10 off for 3 months\",[288],{\"_88\":289,\"_99\":290,\"_104\":105,\"_106\":88,\"_107\":105,\"_109\":291,\"_111\":108,\"_112\":292,\"_114\":293,\"_116\":294,\"_118\":295,\"_120\":124},\"fr_19g6rmr0xpfd9\",{\"_128\":298},\"b7ce3c6c-baae-4f18-a685-17a0f6d4cc49\",[20,32],[125,126],\"google-one-tap-anonymous-signup\",[296,297],{\"_116\":124},{\"_116\":121},{\"_299\":20},\"$exists\",\"baseten\",[302],{\"_88\":303,\"_104\":105,\"_106\":304,\"_109\":305,\"_111\":108,\"_112\":306,\"_114\":307,\"_116\":67,\"_118\":308,\"_120\":124},\"fr_mrupy094\",\"email\",\"ac26aa9d-fd12-46a7-99c2-f563139e92ec\",[300,313],[311,312],[309,310],{\"_116\":124},{\"_116\":121},0.68,0.32,\"foundry\",\"v3\",{\"_347\":348},[317],{\"_88\":318,\"_99\":319,\"_104\":105,\"_106\":88,\"_107\":243,\"_109\":320,\"_111\":108,\"_112\":321,\"_114\":322,\"_116\":323,\"_118\":324,\"_120\":325},\"fr_19g6smq178k71\",{\"_127\":32},\"ce4b8c4e-9ab7-494c-9071-70313598c609\",[339,340,341,342,343,344,345,346],[335,126,126,336,337,338,336,336],\"max-agent-underlying-model\",[326,327,328,329,330,331,332,333],\"13\",{\"_116\":124},{\"_116\":121},{\"_116\":203},{\"_116\":202},{\"_116\":201},{\"_116\":261},{\"_116\":260},{\"_116\":334},\"7\",0.72,0,0.05,0.03,{\"_347\":348},{\"_347\":353},{\"_347\":352},{\"_347\":351},{\"_347\":350},{\"_347\":349},{\"_347\":91},{\"_347\":348},\"default\",\"claude-opus-4-6\",\"gpt-5.6-terra\",\"gpt-5.6-sol\",\"claude-fable-5\",\"claude-opus-4-8\",\"claude-opus-4-7\",{\"_347\":378},[356,357,358],{\"_88\":499,\"_99\":500,\"_104\":105,\"_106\":88,\"_109\":501,\"_111\":108,\"_112\":502,\"_114\":503,\"_116\":504,\"_118\":505,\"_120\":124},{\"_88\":423,\"_99\":424,\"_104\":105,\"_106\":88,\"_109\":425,\"_111\":108,\"_112\":426,\"_114\":427,\"_116\":428,\"_118\":429,\"_120\":124},{\"_88\":359,\"_99\":360,\"_104\":105,\"_106\":88,\"_109\":361,\"_111\":108,\"_112\":362,\"_114\":363,\"_116\":364,\"_118\":365,\"_120\":124},\"fr_19g6mmseyueih\",{\"_381\":382},\"90c844db-350d-4033-9007-9c47f08eef75\",[373,374,375,376,377],[371,372,372,372,372],\"free-users_models-limits_tier-3-countries-2\",[366,367,368,369,370],{\"_116\":124},{\"_116\":121},{\"_116\":203},{\"_116\":201},{\"_116\":334},0.4,0.15,{\"_347\":378},{\"_347\":84,\"_380\":378},{\"_347\":379,\"_380\":378},{\"_347\":379,\"_380\":378},{\"_347\":378},\"zai-org/GLM-5.2\",\"claude-sonnet-5\",\"followup\",\"$and\",[383,384],{\"_127\":20,\"_128\":420},{\"_385\":386},\"$or\",[387,388],{\"_15\":404},{\"_15\":389},{\"_233\":390},[391,392,393,394,395,396,397,398,399,400,401,402,403],\"IS\",\"PR\",\"CY\",\"MT\",\"SI\",\"LU\",\"RE\",\"MV\",\"PY\",\"BA\",\"PA\",\"GN\",\"MU\",{\"_233\":405},[406,16,407,408,409,410,411,412,413,414,415,416,417,418,419],\"JO\",\"SG\",\"MA\",\"PH\",\"UG\",\"CN\",\"KE\",\"NG\",\"VN\",\"EG\",\"IN\",\"ID\",\"PK\",\"BD\",{\"_421\":422},\"$gte\",\"2026-08-04T00:00\",\"fr_19g6mmseyzwo2\",{\"_381\":444},\"a640ec35-d769-4b1b-b351-280ba4d042a8\",[438,439,440,441,442,443],[437,372,372,372,372,338],\"free-users_models-limits_tier-2-countries-2\",[430,431,432,433,434,435],{\"_116\":124},{\"_116\":121},{\"_116\":203},{\"_116\":201},{\"_116\":334},{\"_116\":436},\"8\",0.37,{\"_347\":378},{\"_347\":84,\"_380\":378},{\"_347\":379,\"_380\":378},{\"_347\":379,\"_380\":378},{\"_347\":378},{\"_347\":91,\"_380\":378},[445,446],{\"_127\":20,\"_128\":498},{\"_15\":447},{\"_233\":448},[449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497],\"UY\",\"RO\",\"JP\",\"HR\",\"CR\",\"AE\",\"EE\",\"KR\",\"KH\",\"KW\",\"SA\",\"XK\",\"NL\",\"RS\",\"DE\",\"GR\",\"PL\",\"CL\",\"ES\",\"DO\",\"FI\",\"QA\",\"LT\",\"JM\",\"PT\",\"TR\",\"IT\",\"TH\",\"LV\",\"MX\",\"OM\",\"GE\",\"UA\",\"TW\",\"ZA\",\"SN\",\"MY\",\"AR\",\"CD\",\"BH\",\"CI\",\"AM\",\"GT\",\"KZ\",\"EC\",\"TZ\",\"BR\",\"CO\",\"LB\",{\"_421\":422},\"fr_19g6nmsevj8j8\",{\"_381\":522},\"5037e190-f4ca-4348-8133-40d7a198532f\",[515,516,517,518,519,520,521],[513,514,514,514,514,338,514],\"free-users_models-limits_tier-1-countries\",[506,507,508,509,510,511,512],{\"_116\":124},{\"_116\":121},{\"_116\":203},{\"_116\":201},{\"_116\":334},{\"_116\":261},{\"_116\":260},0.42,0.11,{\"_347\":378},{\"_347\":84,\"_380\":378},{\"_347\":379,\"_380\":378},{\"_347\":379,\"_380\":378},{\"_347\":378},{\"_347\":91,\"_380\":378},{\"_347\":352,\"_380\":378},[523,524],{\"_127\":20,\"_128\":545},{\"_15\":525},{\"_233\":526},[527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544],\"NO\",\"CH\",\"AU\",\"US\",\"NZ\",\"DK\",\"BE\",\"GB\",\"CA\",\"AT\",\"FR\",\"SE\",\"IE\",\"HU\",\"SK\",\"IL\",\"CZ\",\"BG\",{\"_421\":422},\"anthropic\",[548],{\"_88\":549,\"_104\":105,\"_106\":304,\"_107\":244,\"_109\":55,\"_111\":108,\"_112\":550,\"_114\":551,\"_116\":55,\"_118\":552,\"_120\":124},\"fr_19g6rmpd0xd9h\",[546,557,313],[336,337,556],[553,554,555],{\"_116\":124},{\"_116\":121},{\"_116\":203},0.95,\"bedrock\",[559,560,561,562],{\"_88\":602,\"_99\":603,\"_104\":105,\"_106\":88,\"_109\":501,\"_111\":108,\"_112\":604,\"_114\":605,\"_116\":504,\"_118\":606,\"_120\":124},{\"_88\":585,\"_99\":586,\"_104\":105,\"_106\":88,\"_109\":425,\"_111\":108,\"_112\":587,\"_114\":588,\"_116\":428,\"_118\":589,\"_120\":124},{\"_88\":564,\"_99\":565,\"_104\":105,\"_106\":88,\"_109\":361,\"_111\":108,\"_112\":566,\"_114\":567,\"_116\":364,\"_118\":568,\"_120\":124},{\"_88\":563,\"_90\":226},\"fr_mpx0zzuq\",\"fr_19g6mmseyuxj6\",{\"_381\":574},[226,226,226,108,108],[371,372,372,372,372],[569,570,571,572,573],{\"_116\":124},{\"_116\":121},{\"_116\":203},{\"_116\":201},{\"_116\":334},[575,576],{\"_127\":20,\"_128\":584},{\"_385\":577},[578,579],{\"_15\":582},{\"_15\":580},{\"_233\":581},[391,392,393,394,395,396,397,398,399,400,401,402,403],{\"_233\":583},[406,16,407,408,409,410,411,412,413,414,415,416,417,418,419],{\"_421\":422},\"fr_19g6mmsez0jw3\",{\"_381\":596},[226,226,226,108,108,226],[437,372,372,372,372,338],[590,591,592,593,594,595],{\"_116\":124},{\"_116\":121},{\"_116\":203},{\"_116\":201},{\"_116\":334},{\"_116\":436},[597,598],{\"_127\":20,\"_128\":601},{\"_15\":599},{\"_233\":600},[449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497],{\"_421\":422},\"fr_19g6mmsevjshg\",{\"_381\":614},[226,226,226,108,108,226,108],[513,514,514,514,514,338,514],[607,608,609,610,611,612,613],{\"_116\":124},{\"_116\":121},{\"_116\":203},{\"_116\":201},{\"_116\":334},{\"_116\":261},{\"_116\":260},[615,616],{\"_127\":20,\"_128\":619},{\"_15\":617},{\"_233\":618},[527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544],{\"_421\":422},\"OFF\"]\n");</script><!--$?--><template id="B:1"></template><!--/$--></div><script>function $RC(a,b){a=document.getElementById(a);b=document.getElementById(b);b.parentNode.removeChild(b);if(a){a=a.previousSibling;var f=a.parentNode,c=a.nextSibling,e=0;do{if(c&&8===c.nodeType){var d=c.data;if("/$"===d)if(0===e)break;else e--;else"$"!==d&&"$?"!==d&&"$!"!==d||e++}d=c.nextSibling;f.removeChild(c);c=d}while(c);for(;b.firstChild;)f.insertBefore(b.firstChild,c);a.data="$";a._reactRetry&&a._reactRetry()}};$RC("B:0","S:0")</script><div hidden id="S:1"><script>window.__reactRouterContext.streamController.close();</script></div><script>$RC("B:1","S:1")</script>

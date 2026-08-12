@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://iternal.ai/ai-agent-security-checklist",
+    "name": "AI Agent Security Checklist (2026): Agentic Risks & Controls",
+    "snippet": "May 30, 2026 — The 2026 CISO playbook for securing autonomous AI agents : least - privilege and identity controls, audience-scoped tokens Cross-Cutting Defenses  ...",
+    "host_name": "iternal.ai",
+    "rank": 0,
+    "date": "May 30, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cequence.ai/blog/ai/ai-agent-least-privilege-access",
+    "name": "Why AI Agents Need Least Privilege Access Controls",
+    "snippet": "May 12, 2026 — Least privilege access for AI agents means restricting each agent's tool access, API permissions, and data scope to only what its specific task ...",
+    "host_name": "www.cequence.ai",
+    "rank": 1,
+    "date": "May 12, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://supertokens.com/blog/auth-for-ai-agents",
+    "name": "Authentication for AI Agents: Tokens, Tool Calls, and",
+    "snippet": "Mar 22, 2026 — Least - Privilege . An agent token can produce a per-tool capability token carrying an even narrower scope . The rule is: only narrow, never widen. ...",
+    "host_name": "supertokens.com",
+    "rank": 2,
+    "date": "Mar 22, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.okta.com/identity-101/how-to-implement-least-privilege-for-ai-agents",
+    "name": "How to implement least privilege for AI agents",
+    "snippet": "May 11, 2026 — Learn how to implement least privilege for AI agents to strengthen security, reduce attack surface, and meet AI governance and compliance ...",
+    "host_name": "www.okta.com",
+    "rank": 3,
+    "date": "May 11, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/AI_Agents/comments/1q2d3eg/principle_of_least_privilege_for_ai_agent",
+    "name": "Principle of least privilege for AI agent workflows",
+    "snippet": "The principle of least privilege is crucial in ensuring that agents only have access to the resources they need to function. This minimizes ...",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://labs.cloudsecurityalliance.org/agentic/agentic-identity-governance-framework-v1",
+    "name": "Agent Identity Governance Framework – Lab Space",
+    "snippet": "The framework's centerpiece is a just-in-time access model that replaces standing agent privileges with intent-declared, time-bound, scope -limited grants,",
+    "host_name": "labs.cloudsecurityalliance.org",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.elisity.com/blog/ai-agent-network-security-microsegmentation-2026",
+    "name": "AI Agent Security: Why Only Microsegmentation Can Stop",
+    "snippet": "Feb 24, 2026 — It enforces least - privilege access at the network data plane, AI agents authenticate using API keys, service accounts, and persistent tokens . ...",
+    "host_name": "www.elisity.com",
+    "rank": 6,
+    "date": "Feb 24, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cerbos.dev/blog/mcp-and-zero-trust-securing-ai-agents-with-identity-and-policy",
+    "name": "MCP and Zero Trust: Securing AI Agents With Identity and",
+    "snippet": "Jan 9, 2026 — Ensure the agent never possesses long-lived user credentials; instead, let it request narrowly-scoped access tokens when needed. Enforce least ...",
+    "host_name": "www.cerbos.dev",
+    "rank": 7,
+    "date": "Jan 9, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://arxiv.org/html/2607.22445v1",
+    "name": "Dynamic Capability Scoping for Enterprise AI Agents",
+    "snippet": "Jul 24, 2026 — We argue that capability scoping must follow a dynamic least - privilege principle and be treated as a prevention mechanism before a detection one ... Read more",
+    "host_name": "arxiv.org",
+    "rank": 8,
+    "date": "Jul 24, 2026",
+    "favicon": ""
+  }
+]

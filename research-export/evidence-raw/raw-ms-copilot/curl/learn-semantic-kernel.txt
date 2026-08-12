@@ -1,0 +1,129 @@
+TITLE: Semantic Kernel documentation | Microsoft Learn
+
+Semantic Kernel documentation | Microsoft Learn 
+
+- 
+
+- 
+
+Skip to main content
+
+This browser is no longer supported.
+
+Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+
+Download Microsoft Edge
+
+More info about Internet Explorer and Microsoft Edge
+
+Semantic Kernel documentation
+
+Learn to build robust, future-proof AI solutions that evolve with technological advancements.
+
+Getting Started
+
+- 
+Introduction to Semantic Kernel 
+
+- 
+Supported Languages Semantic Kernel 
+
+Quick Start
+
+- 
+Learn how to use Semantic Kernel 
+
+- 
+Check out samples for Semantic Kernel 
+
+Concepts
+
+- 
+Kernel 
+
+- 
+Plugins 
+
+- 
+Memory 
+
+Frameworks
+
+- 
+Process Framework 
+
+- 
+Agent Framework 
+
+Enterprise Components
+
+- 
+Observability 
+
+- 
+Security 
+
+- 
+Filters 
+
+Connect with us
+
+- 
+Read the Semantic Kernel blog 
+
+- 
+Get in touch with the community 
+
+en-us 
+
+Your Privacy Choices 
+
+Theme 
+
+- 
+
+Light 
+
+- 
+
+Dark 
+
+- 
+
+High contrast 
+
+- 
+
+- 
+
+AI Disclaimer 
+
+- 
+
+Previous Versions 
+
+- 
+
+Blog 
+
+- 
+
+Contribute 
+
+- 
+
+Privacy 
+
+- 
+
+Consumer Health Privacy 
+
+- 
+
+Terms of Use 
+
+- 
+
+Trademarks 
+
+- © Microsoft 2026

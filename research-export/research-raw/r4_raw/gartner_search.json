@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://www.bigeye.com",
+    "name": "How to track AI agent costs and token usage",
+    "snippet": "May 19, 2026 — AI agents consume 5 - 30x more tokens per task than standard chatbots , and average enterprise AI spending grew 483% from 2024 to 2026.",
+    "host_name": "www.bigeye.com",
+    "rank": 0,
+    "date": "May 19, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cockroachlabs.com",
+    "name": "The Bill Arrives: How to Manage Agentic AI Costs at Scale",
+    "snippet": "Jun 10, 2026 — According to Gartner's March 2026 analysis, agentic models require between 5 and 30 times more tokens per task than a standard chatbot. Read more",
+    "host_name": "www.cockroachlabs.com",
+    "rank": 1,
+    "date": "Jun 10, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.gartner.com",
+    "name": "How to Optimize Token Consumption for AI Coding Agents",
+    "snippet": "May 7, 2026 — Actionable insights. Not only is Gartner research unbiased, it also contains key take-aways and recommendations for impactful next steps. Read more",
+    "host_name": "www.gartner.com",
+    "rank": 2,
+    "date": "May 7, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.spheron.network",
+    "name": "Agentic AI Inference Cost: Why Agents Burn 5-30x Tokens",
+    "snippet": "Jul 16, 2026 — agentic AI consumes 5 to 30 times more tokens per task than a standard chatbot exchange (Gartner, via NeuralWired).",
+    "host_name": "www.spheron.network",
+    "rank": 3,
+    "date": "Jul 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cmswire.com",
+    "name": "Will AI Cost More Than Offshore Human Agents",
+    "snippet": "Mar 2, 2026 — Gartner says by 2030, generative AI may exceed $3 per resolution, more than offshore human agents . That complexity directly influences token ...",
+    "host_name": "www.cmswire.com",
+    "rank": 4,
+    "date": "Mar 2, 2026",
+    "favicon": ""
+  }
+]

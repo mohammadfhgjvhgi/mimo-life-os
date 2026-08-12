@@ -1,0 +1,633 @@
+TITLE: iMac (21.5-inch, 2017) - Technical Specifications - Apple Support
+
+﻿
+
+- 
+
+- 
+
+iMac (21.5-inch, 2017) - Technical Specifications - Apple Support 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- Apple 
+
+- 
+- Store 
+
+- Mac 
+
+- iPad 
+
+- iPhone 
+
+- Watch 
+
+- 
+Vision 
+
+- AirPods 
+
+- TV & Home 
+
+- Entertainment 
+
+- Accessories 
+
+- Support 
+
+- 
+
+- 0 + 
+
+Documentation 
+
+Open Menu 
+
+Close Menu 
+
+- 
+
+- 
+
+iMac (21.5-inch, 2017) - Technical Specifications
+
+Display
+
+- 21.5-inch (diagonal) LED-backlit display
+
+- 1920‑by‑1080 resolution with support for millions of colors
+
+Processor
+
+- 2.3GHz 
+
+- 2.3GHz dual‑core Intel Core i5, Turbo Boost up to 3.6GHz
+
+Memory
+
+- 2.3GHz 
+
+- 8GB of 2133MHz DDR4 memory
+
+- Configurable to 16GB 
+
+Storage 1 
+
+- 1TB (5400-rpm) hard drive
+
+- Configurable to 1TB Fusion Drive or 256GB SSD 
+
+Graphics
+
+- Intel Iris Plus Graphics 640
+
+Video Support and Camera
+
+- FaceTime HD camera
+
+- Simultaneously supports full native resolution on the built-in display at millions of colors and:
+
+- One 5120‑by‑2880 (5K) external display at 60Hz with support for 1 billion colors, or
+
+- Two 3840-by-2160 (4K UHD) external displays at 60Hz with support for 1 billion colors, or
+
+- Two 4096‑by‑2304 (4K) external displays at 60Hz with support for millions of colors
+
+- Thunderbolt 3 digital video output
+
+- Native DisplayPort output over USB‑C
+
+- Thunderbolt 2, HDMI, DVI, and VGA output supported using adapters (sold separately)
+
+Audio
+
+- Stereo speakers
+
+- Microphone
+
+- 3.5 mm headphone jack
+
+- Support for Apple iPhone headset with microphone
+
+Connections and Expansion
+
+- 3.5 mm headphone jack
+
+- SDXC card slot
+
+- Four USB-A ports
+
+- Two Thunderbolt 3 (USB-C) ports with support for:
+
+- DisplayPort
+
+- Thunderbolt (up to 40Gb/s)
+
+- USB 3.1 Gen 2 (up to 10Gb/s)
+
+- Thunderbolt 2, HDMI, DVI, and VGA supported using adapters (sold separately)
+
+- 10/100/1000BASE-T Gigabit Ethernet (RJ-45 connector)
+
+- Kensington lock slot
+
+Input
+
+- Magic Keyboard
+
+- Magic Mouse
+
+- Configurable with Magic Keyboard with Numeric Keypad
+
+- Configurable with Magic Trackpad
+
+Wireless
+
+- Wi-Fi 
+
+- 802.11ac Wi-Fi wireless networking
+
+- IEEE 802.11a/b/g/n compatible
+
+- Bluetooth 
+
+- Bluetooth 4.2 wireless technology
+
+Size and Weight
+
+- Height: 17.7 inches (45.0 cm)
+
+- Width: 20.8 inches (52.8 cm)
+
+- Stand depth: 6.9 inches (17.5 cm)
+
+- Weight: 12.0 pounds (5.44 kg) 2 
+
+Electrical and Operating Requirements
+
+- Line voltage: 100–240V AC
+
+- Frequency: 50Hz to 60Hz, single phase
+
+- Operating temperature: 50° to 95° F (10° to 35° C)
+
+- Relative humidity: 5% to 90% noncondensing
+
+- Operating altitude: tested up to 16,400 feet (5000 meters)
+
+In the Box
+
+- iMac
+
+- Magic Keyboard
+
+- Magic Mouse
+
+- Power cord
+
+- Lightning to USB Cable
+
+- Polishing cloth
+
+Operating System
+macOS 
+macOS is the most advanced desktop operating system in the world. macOS Big Sur introduces a bold new design and major updates to apps — taking macOS to a new level of power and beauty.
+Learn more about latest operating system 
+
+Accessibility
+Accessibility features help people with disabilities get the most out of their new iMac. With built-in support for vision, hearing, mobility, and learning, you can create and do amazing things.
+Learn more about Accessibility 
+Features include:
+
+- Voice Control
+
+- VoiceOver
+
+- Zoom
+
+- Increase Contrast
+
+- Reduce Motion
+
+- Siri and Dictation
+
+- Switch Control
+
+- Closed Captions
+
+- Text to Speech
+
+Built-in Apps 3 
+
+- Photos
+
+- iMovie
+
+- GarageBand
+
+- Pages
+
+- Numbers
+
+- Keynote
+
+- Siri
+
+- Safari
+
+- Mail
+
+- FaceTime
+
+- Messages
+
+- Maps
+
+- News
+
+- Stocks
+
+- Home
+
+- Voice Memos
+
+- Notes
+
+- Calendar
+
+- Contacts
+
+- Reminders
+
+- Photo Booth
+
+- Preview
+
+- Books
+
+- App Store
+
+- Time Machine
+
+- TV
+
+- Music
+
+- Podcasts
+
+- Find My
+
+- QuickTime Player
+
+Configure to Order
+Configure your iMac with these options.
+Looking for an iMac you can mount on a wall or an adjustable arm? Choose an iMac with a Built-in VESA Mount Adapter 
+
+- Magic Trackpad
+
+- Magic Keyboard with Numeric Keypad
+
+- 16GB memory upgrade
+
+- 1TB Fusion Drive
+
+- 256GB SSD
+
+iMac and the Environment
+We take responsibility for the environmental footprint of our products throughout their life cycle. Learn more about iMac and the Environment 
+The 21.5-inch iMac is designed with the following features to reduce its environmental impact: 4 
+Smarter chemistry 5 
+
+- Arsenic-free display glass
+
+- Mercury-, BFR-, PVC-, and beryllium-free
+
+Responsible packaging
+
+- 100% of virgin wood fiber comes from responsibly managed forests
+
+Learn more 
+Read the 21.5-inch iMac Environmental Report for detailed information on this product’s environmental performance.
+
+Acoustic Performance
+Declared noise emission values in accordance with ECMA-109
+
+Sound Power Level
+L W A,m (B)
+Sound Pressure Level
+Operator Position
+L p A,m (dB)
+
+Idle
+2.0 ( K V = 0.3)
+11
+
+Wireless web
+1.9 ( K V = 0.3)
+11
+
+Hard drive seek
+2.0 ( K V = 0.3)
+12
+
+- L W A,m is the mean A-weighted sound power level, rounded to the nearest 0.1 B.
+
+- L p A,m is the mean A-weighted sound pressure level measured at operator position (rounded to the nearest 1 dB).
+
+- 1 B (bel) = 10 dB (decibel)
+
+- K v is the statistical adder for computing upper-limit of A-weighted sound power level.
+
+- The quantity, L W A,c (formerly called L W Ad ) may be computed from the sum of L W A,m and K v .
+
+- The Wireless web test browses 25 popular websites.
+
+- Configuration tested: 2.3GHz dual-core Intel Core i5 processor, 8GB memory, 1TB hard drive, Intel Iris Plus Graphics 640.
+
+- 1GB = 1 billion bytes and 1TB = 1 trillion bytes; actual formatted capacity less.
+
+- Weight varies by configuration and manufacturing process.
+
+- iMovie, GarageBand, Pages, Numbers, and Keynote are available on the Mac App Store. Downloading apps requires an Apple ID and a device that is compatible with the OS version required for each app.
+
+- Data accurate as of product launch.
+
+- Apple defines its restrictions on harmful substances, including definitions for what Apple considers to be “free of,” in the Apple Regulated Substances Specification . Every Apple product is free of PVC and phthalates with the exception of AC power cords in India, Thailand (for two-prong AC power cords), and South Korea, where we continue to seek government approval for our PVC and phthalates replacement.
+
+Helpful? 
+
+Yes
+
+No
+
+Character limit: 
+250 
+
+Maximum character limit is 250. 
+
+Please don’t include any personal information in your comment. 
+
+Submit
+
+Thanks for your feedback.
+
+Apple Footer
+
+ 
+Apple 
+
+- 
+
+Support 
+
+- 
+iMac (21.5-inch, 2017) - Technical Specifications 
+
+United States 
+
+Copyright © 2026 Apple Inc. All rights reserved.
+
+Privacy Policy Terms of Use Sales and Refunds Site Map 
+
+-

@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks",
+    "name": "MCP Security Notification: Tool Poisoning Attacks",
+    "snippet": "Apr 1, 2025 — A Tool Poisoning Attack occurs when malicious instructions are embedded within MCP tool descriptions that are invisible to users but visible to ... Read more",
+    "host_name": "invariantlabs.ai",
+    "rank": 0,
+    "date": "Apr 1, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cyberark.com/resources/threat-research-blog/poison-everywhere-no-output-from-your-mcp-server-is-safe",
+    "name": "Poison everywhere: No output from your MCP server is safe",
+    "snippet": "May 30, 2025 — In this blog post, we'll briefly explore MCP and dive into a Tool Poisoning Attack (TPA), originally described by Invariant Labs. We'll show ... Read more",
+    "host_name": "www.cyberark.com",
+    "rank": 1,
+    "date": "May 30, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://arxiv.org/html/2508.12538v1",
+    "name": "Systematic Analysis of MCP Security",
+    "snippet": "Aug 18, 2025 — On April 6, 2025, the security company Invariant Labs disclosed that MCP is vulnerable to Tool Poisoning Attacks (TPA) [9] . In these attacks, ... Read more",
+    "host_name": "arxiv.org",
+    "rank": 2,
+    "date": "Aug 18, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.redhat.com/en/blog/model-context-protocol-mcp-understanding-security-risks-and-controls",
+    "name": "Model Context Protocol (MCP): Understanding security",
+    "snippet": "Jul 1, 2025 — We must understand the findings, discard false positives and fix known security vulnerabilities . functionality may be vulnerable to command ...",
+    "host_name": "www.redhat.com",
+    "rank": 3,
+    "date": "Jul 1, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@bluxmit/understanding-tool-poisoning-attacks-in-model-context-protocol-mcp-b165523ab8d8",
+    "name": "Understanding Tool Poisoning Attacks in Model Context",
+    "snippet": "Tool poisoning attacks represent a fundamental vulnerability in the Model Context Protocol ecosystem, exploiting the natural language interface ... Read more",
+    "host_name": "medium.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.elastic.co/security-labs/mcp-tools-attack-defense-recommendations",
+    "name": "MCP Tools: Attack Vectors and Defense",
+    "snippet": "Sep 19, 2025 — We've shown how MCP tools can be exploited – from traditional code flaws to tool poisoning , rug-pull redefinitions, name collisions, and multi- ... Read more",
+    "host_name": "www.elastic.co",
+    "rank": 5,
+    "date": "Sep 19, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://adversa.ai/resources/mcp-security-top-25-mcp-vulnerabilities",
+    "name": "MCP Security: Top 25 MCP Vulnerabilities",
+    "snippet": "Sep 17, 2025 — Attackers poison entire tool schemas making all subsequent interactions malicious while appearing legitimate to monitoring systems. What Is It ... Read more",
+    "host_name": "adversa.ai",
+    "rank": 6,
+    "date": "Sep 17, 2025",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://www.truefoundry.com/blog/what-is-llm-fallback",
+    "name": "What Is LLM Fallback? Meaning and How It Works",
+    "snippet": "Jul 29, 2026 — LLM fallback keeps AI applications available when the primary model or provider fails, slows down, or reaches capacity limits.",
+    "host_name": "www.truefoundry.com",
+    "rank": 0,
+    "date": "Jul 29, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.cognigy.com/ai/agents/develop/gen-ai-and-llms/fallback",
+    "name": "LLM Fallback - Cognigy Documentation",
+    "snippet": "Apr 21, 2026 — LLM Fallback is a mechanism designed to maintain continuous service when a main model fails to respond or encounters an error.",
+    "host_name": "docs.cognigy.com",
+    "rank": 1,
+    "date": "Apr 21, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.newline.co/@zaoyang/5-recovery-strategies-for-multi-agent-llm-failures--673fe4c4",
+    "name": "5 Recovery Strategies for Multi-Agent LLM Failures - newline",
+    "snippet": "Jun 14, 2025 — When multi-agent LLM systems fail, quick recovery is essential to maintain operations . Here are five strategies to handle failures ...",
+    "host_name": "www.newline.co",
+    "rank": 2,
+    "date": "Jun 14, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://towardsdatascience.com/llm-fallbacks-break-agent-pipelines-i-built-the-missing-recovery-layer",
+    "name": "LLM Fallbacks Break Agent Pipelines — I Built the Missing",
+    "snippet": "Jun 16, 2026 — LLM rate limits don't just pause your agents . They ruin your data structure ・ a 100% completion rate ・ state - recovery workflows",
+    "host_name": "towardsdatascience.com",
+    "rank": 3,
+    "date": "Jun 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/anthony-kiplimo-0234384b_a-production-agent-with-one-hardcoded-model-activity-7480932437980733440-cN7P",
+    "name": "Fallback Chains for Agent Reliability | Anthony Kiplimo",
+    "snippet": "Fallback chains are not glamorous , but they are one of the simplest ways to make an agent survive rate limits, outages, and model-specific ... Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://zylos.ai/research/2026-02-20-graceful-degradation-ai-agent-systems",
+    "name": "Graceful Degradation Patterns in AI Agent Systems",
+    "snippet": "Feb 20, 2026 — Without circuit breakers, a failing LLM API causes cascading damage: agents retry the failing endpoint repeatedly, each retry adds latency and ... Read more",
+    "host_name": "zylos.ai",
+    "rank": 5,
+    "date": "Feb 20, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@nraman.n6/versioning-rollback-lifecycle-management-of-ai-agents-treating-intelligence-as-deployable-deac757e4dea",
+    "name": "Versioning, Rollback & Lifecycle Management of AI Agents",
+    "snippet": "This article explains how to apply software engineering discipline — versioning, rollback mechanisms, lifecycle management, deprecation ...",
+    "host_name": "medium.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.buildmvpfast.com/blog/debugging-ai-agents-production-error-recovery-self-healing-2026",
+    "name": "Debugging AI Agents in Production: Error Recovery 2026",
+    "snippet": "Mar 27, 2026 — If you've already built LLM error handling with retries, circuit breakers, and model fallback chains , They handle API-level failures: rate ...",
+    "host_name": "www.buildmvpfast.com",
+    "rank": 7,
+    "date": "Mar 27, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://galileo.ai/blog/multi-agent-ai-system-failure-recovery",
+    "name": "Multi-Agent AI Failure Recovery That Actually Works",
+    "snippet": "Jul 4, 2025 — Learn to design multi-agent AI systems that can recover from failures and maintain workflow continuity.",
+    "host_name": "galileo.ai",
+    "rank": 8,
+    "date": "Jul 4, 2025",
+    "favicon": ""
+  }
+]

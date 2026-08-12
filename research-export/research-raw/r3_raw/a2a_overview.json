@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents",
+    "name": "Linux Foundation Launches the Agent2Agent Protocol",
+    "snippet": "Jun 23, 2025 — The Agent2Agent protocol enables agentic AI interoperability and trusted agent communication across systems and platforms. Read more",
+    "host_name": "www.linuxfoundation.org",
+    "rank": 0,
+    "date": "Jun 23, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/a2aproject/A2A",
+    "name": "Agent2Agent (A2A) is an open protocol enabling",
+    "snippet": "The A2A Protocol is an open source project under the Linux Foundation , contributed by Google . It is licensed under the Apache License 2.0",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developers.googleblog.com/en/google-cloud-donates-a2a-to-linux-foundation",
+    "name": "Google Cloud donates A2A to Linux Foundation",
+    "snippet": "Jun 23, 2025 — The A2A protocol , an open standard for communication and collaboration between distinct AI agents, aims to break down the silos that currently ... Read more",
+    "host_name": "developers.googleblog.com",
+    "rank": 2,
+    "date": "Jun 23, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.techzine.eu/news/applications/132496/google-cloud-transfers-a2a-ai-protocol-to-linux-foundation",
+    "name": "Google Cloud transfers A2A AI protocol to Linux Foundation",
+    "snippet": "Jun 24, 2025 — Google Cloud originally developed A2A as a protocol specification , SDK, and tooling set that enabled communication between AI agents.",
+    "host_name": "www.techzine.eu",
+    "rank": 3,
+    "date": "Jun 24, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.glukhov.org/ai-systems/comparisons/a2a-protocol-2026-adoption",
+    "name": "Google A2A Protocol in 2026: Adoption, Hype, and Reality",
+    "snippet": "A2A has crossed an important line: it is no longer just a Google blog post. It has a formal specification , governance momentum, public examples, SDK work, cloud ... Read more",
+    "host_name": "www.glukhov.org",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.digitalapplied.com/blog/google-a2a-protocol-agent-to-agent-communication-guide",
+    "name": "Google A2A Protocol: Agent-to-Agent Communication Guide",
+    "snippet": "Google's Agent-to-Agent (A2A) protocol enables AI agents to communicate and collaborate. Now at Linux Foundation with 50+ enterprise partners.",
+    "host_name": "www.digitalapplied.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://discuss.google.dev/t/the-a2a-1-0-milestone-ensuring-and-testing-backward-compatibility/352258",
+    "name": "The A2A 1.0 Milestone: Ensuring and Testing Backward",
+    "snippet": "Apr 21, 2026 — The 1.0 milestone applies to the core specification — the underlying Protocol Buffers ( .proto files) that dictate the strict structural schemas ... Read more",
+    "host_name": "discuss.google.dev",
+    "rank": 6,
+    "date": "Apr 21, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://a2aprotocol.ai/blog/impact-analysis-google-donating-a2a-protocol-linux-foundation",
+    "name": "Google Donating A2A Protocol to Linux Foundation",
+    "snippet": "Jun 24, 2025 — June 23, 2025, Google donated A2A to Linux Foundation , promoting AI agent communication standards. Potential Benefits, Neutral governance ... Read more",
+    "host_name": "a2aprotocol.ai",
+    "rank": 7,
+    "date": "Jun 24, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.prnewswire.com/news-releases/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year-302737641.html",
+    "name": "A2A Protocol Surpasses 150 Organizations, Lands in",
+    "snippet": "Apr 9, 2026 — The Agent-to-Agent ( A2A ) Protocol is an open standard that enables AI agents to discover, communicate, and transact with each other across ... Read more",
+    "host_name": "www.prnewswire.com",
+    "rank": 8,
+    "date": "Apr 9, 2026",
+    "favicon": ""
+  }
+]

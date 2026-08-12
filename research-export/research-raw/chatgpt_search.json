@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "name": "ChatGPT — Release Notes",
+    "snippet": "With the new UI , you can tell ChatGPT the traits you want it to have, how you want it to talk to you, and any rules you want it to follow.",
+    "host_name": "help.openai.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=F4kxszXzYNI",
+    "name": "UI design with ChatGPT",
+    "snippet": "In this tutorial, I will show you how to use ChatGPT to generate UI design . You will learn essential prompt writing tricks, understand the ...",
+    "host_name": "www.youtube.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://uxplanet.org/ui-design-with-chatgpt-5-afc67dc501a1",
+    "name": "UI Design with ChatGPT 5",
+    "snippet": "Oct 10, 2025 — In this article, I want to experiment with ChatGPT 5 and generate UI for a mobile application. Product details and writing the initial prompt ... Read more",
+    "host_name": "uxplanet.org",
+    "rank": 2,
+    "date": "Oct 10, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/parth-gaurav_i-asked-chatgpt-how-to-plan-a-website-redesign-activity-7348644761471287296-RsTs",
+    "name": "How to plan a website redesign with ChatGPT",
+    "snippet": "Canvas lets you and ChatGPT work side-by-side on real documents, proposals, presentations, or code. It's like having an AI co-author right in ...",
+    "host_name": "www.linkedin.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://mashable.com/article/openai-unveils-chatgpt-redesign-canvas-interface-writers-coders",
+    "name": "OpenAI unveils major ChatGPT redesign with new 'Canvas",
+    "snippet": "OpenAI announced a new design interface called 'canvas,' which makes it easier for users to revise writing and coding projects . Here's what it looks like.",
+    "host_name": "mashable.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1mhnf64/why_does_ai_still_suck_for_ui_design",
+    "name": "Why does AI still suck for UI design : r/ChatGPTCoding",
+    "snippet": "Why do chatgpt and other AI tools still suck when it comes to UI generation? The design it outputs seems too low effort, amateur and plain wrong.\n\nHow ...",
+    "host_name": "www.reddit.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://adplist.substack.com/p/how-i-created-beautiful-ui-with-chatgpt",
+    "name": "How I created beautiful UI with ChatGPT 4o - AI First Designer",
+    "snippet": "The outputs were clunky, cartoonish claimed better visual generation, text rendering, and contextual accuracy. its Canvas feature.",
+    "host_name": "adplist.substack.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/design-bootcamp/reimagining-chatgpt-ui-ux-redesign-case-study-a9927c171a1b",
+    "name": "Reimagining ChatGPT: UI/UX Redesign Case Study",
+    "snippet": "This redesign project aims to improve user engagement, increase ease of use, and enhance user retention by creating a more user-friendly ... Read more",
+    "host_name": "medium.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

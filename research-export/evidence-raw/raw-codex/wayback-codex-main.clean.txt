@@ -1,0 +1,78 @@
+TITLE: OpenAI Codex
+DESCRIPTION: Codex is OpenAI’s series of AI coding tools that help developers move faster by delegating tasks to powerful cloud and local coding agents.
+
+OpenAI 
+
+# Codex
+One agent for everywhere you code—included in ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.
+
+Get started 
+$ npm i -g @openai/codex 
+
+#### Trusted by engineering teams worldwide
+
+## Your new coding partner
+Switch seamlessly between real-time collaboration and async delegation with Codex in all your tools.
+
+*]:col-start-2 @md:[&>*]:col-span-6 @md:[&>*]:col-end-6">
+### Pair with Codex in your terminal or IDE
+Starting from a prompt or spec, Codex navigates your repo to edit files, run commands, and execute tests. Ship new features, fix bugs, brainstorm solutions, or tackle whatever’s next with the Codex CLI and IDE extension—available in VSCode, Cursor, and Windsurf. 
+
+*]:col-start-2 @md:[&>*]:col-span-6 @md:[&>*]:col-end-6">
+### Delegate to Codex in the cloud
+Codex runs in the background so you can stay in flow and get more done. It runs each task in an isolated sandbox with your repo and environment, generating code you can review, merge, or pull down to your computer to keep working. 
+
+*]:col-start-2 @md:[&>*]:col-span-6 @md:[&>*]:col-end-6">
+### Code on your phone
+Kick off tasks from the ChatGPT mobile app, wherever inspiration strikes. Track progress, review PRs, and merge changes to continue building on the go. 
+
+### Accelerates your team
+Codex plugs into your team’s most important workflows to help you ship faster and more confidently.
+
+Code review in GitHub
+Set up Codex to automatically review new PRs and tag @codex to manually request reviews. It compares PR intent with changes, running the code if needed to provide a detailed review. 
+
+Learn more (opens in a new window) 
+
+Assign tasks from Slack
+Codex can answer questions, fix bugs, and explore ideas right from your team’s Slack channels. It automatically pulls context from the conversation to choose the right repo and start working. 
+
+Learn more (opens in a new window) 
+
+Codex SDK
+Embed Codex in GitHub Actions and internal tools to automate key engineering processes like CI/CD, code maintenance, and issue management so your team stays focused on shipping. 
+
+Learn more (opens in a new window) 
+
+### More resources
+Codex is included in ChatGPT Plus, Pro, Business, Edu, and Enterprise. Get the most out of it with these guides.
+
+### Codex IDE extension
+
+Learn more 
+
+### Codex CLI
+
+Learn more 
+
+### Codex in the cloud
+
+Learn more 
+
+### FAQ
+
+### How do I access Codex through ChatGPT?
+*]:m-0"> Codex CLI, IDE extension, and Codex web all allow you to sign in with ChatGPT if you have a Plus, Pro, Business, Edu, or Enterprise plan. Business and Enterprise admins can learn more about enabling Codex for their workspace here ⁠ (opens in a new window) . 
+
+### What’s the difference between the Codex CLI, IDE extension, and Codex cloud?
+*]:m-0"> Codex is a single agent that runs everywhere you code—terminal, IDE, in the cloud, in GitHub, and on your phone. With your ChatGPT account, you can easily move work between your local environment and Codex’s cloud sandbox without losing state. 
+
+### How much does Codex cost?
+*]:m-0"> Codex is part of ChatGPT Plus, Pro, Business, Edu, and Enterprise plans. Business and Enterprise plans can purchase credits for additional usage. Learn more about usage for each plan here ⁠ (opens in a new window) . 
+
+### Which models can I use with Codex?
+*]:m-0"> With the Codex CLI and IDE extension we recommend using GPT‑5, which is the default model. You can choose the reasoning level. You can also authenticate via API key to use our older models. 
+
+## Try Codex
+Get started 
+$ npm i -g @openai/codex

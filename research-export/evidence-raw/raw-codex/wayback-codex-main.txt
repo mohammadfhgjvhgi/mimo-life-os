@@ -1,0 +1,380 @@
+TITLE: Codex | OpenAI
+
+- 
+
+- 
+
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Codex | OpenAI 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Skip to main content 
+
+Log in 
+
+Switch to
+
+- ChatGPT (opens in a new window) 
+
+- Sora (opens in a new window) 
+
+- API Platform (opens in a new window) 
+
+- Research 
+
+- Safety 
+
+- For Business 
+
+- For Developers 
+
+- ChatGPT 
+
+- Sora 
+
+- Stories 
+
+- Company 
+
+- News 
+
+- Research Back to main menu 
+
+- Research Index 
+
+- Research Overview 
+
+- Research Residency 
+
+- OpenAI for Science 
+
+- Latest Advancements 
+
+- GPT-5.2 
+
+- GPT-5.1 
+
+- Sora 2 
+
+- GPT-5 
+
+- OpenAI o3 and o4-mini 
+
+- GPT-4.5 
+
+- Safety Back to main menu 
+
+- Safety Approach 
+
+- Security & Privacy 
+
+- For Business Back to main menu 
+
+- Business Overview 
+
+- Solutions 
+
+- Learn 
+
+- Startups 
+
+- ChatGPT Pricing 
+
+- API Pricing 
+
+- Contact Sales 
+
+- For Developers Back to main menu 
+
+- API Platform 
+
+- API Pricing 
+
+- Agents 
+
+- Codex 
+
+- Open Models 
+
+- Community (opens in a new window) 
+
+- ChatGPT Back to main menu 
+
+- Explore ChatGPT 
+
+- Business 
+
+- Enterprise 
+
+- Education 
+
+- Pricing 
+
+- Download 
+
+- Sora 
+
+- Stories 
+
+- Company Back to main menu 
+
+- About Us 
+
+- Our Charter 
+
+- Foundation 
+
+- Careers 
+
+- Brand Guidelines 
+
+- News 
+
+Log in 
+
+OpenAI 
+Codex
+One agent for everywhere you code—included in ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.
+
+Get started 
+$ npm i -g @openai/codex 
+
+Trusted by engineering teams worldwide
+
+Your new coding partner
+Switch seamlessly between real-time collaboration and async delegation with Codex in all your tools.
+
+*]:col-start-2 @md:[&>*]:col-span-6 @md:[&>*]:col-end-6"> Pair with Codex in your terminal or IDE
+Starting from a prompt or spec, Codex navigates your repo to edit files, run commands, and execute tests. Ship new features, fix bugs, brainstorm solutions, or tackle whatever’s next with the Codex CLI and IDE extension—available in VSCode, Cursor, and Windsurf. 
+
+*]:col-start-2 @md:[&>*]:col-span-6 @md:[&>*]:col-end-6"> Delegate to Codex in the cloud
+Codex runs in the background so you can stay in flow and get more done. It runs each task in an isolated sandbox with your repo and environment, generating code you can review, merge, or pull down to your computer to keep working. 
+
+*]:col-start-2 @md:[&>*]:col-span-6 @md:[&>*]:col-end-6"> Code on your phone
+Kick off tasks from the ChatGPT mobile app, wherever inspiration strikes. Track progress, review PRs, and merge changes to continue building on the go. 
+
+Accelerates your team
+Codex plugs into your team’s most important workflows to help you ship faster and more confidently.
+
+Code review in GitHub
+Set up Codex to automatically review new PRs and tag @codex to manually request reviews. It compares PR intent with changes, running the code if needed to provide a detailed review. 
+
+Learn more (opens in a new window) 
+
+Assign tasks from Slack
+Codex can answer questions, fix bugs, and explore ideas right from your team’s Slack channels. It automatically pulls context from the conversation to choose the right repo and start working. 
+
+Learn more (opens in a new window) 
+
+Codex SDK
+Embed Codex in GitHub Actions and internal tools to automate key engineering processes like CI/CD, code maintenance, and issue management so your team stays focused on shipping. 
+
+Learn more (opens in a new window) 
+
+More resources
+Codex is included in ChatGPT Plus, Pro, Business, Edu, and Enterprise. Get the most out of it with these guides.
+
+Codex IDE extension
+
+Learn more 
+
+Codex CLI
+
+Learn more 
+
+Codex in the cloud
+
+Learn more 
+
+FAQ
+
+How do I access Codex through ChatGPT?
+*]:m-0"> Codex CLI, IDE extension, and Codex web all allow you to sign in with ChatGPT if you have a Plus, Pro, Business, Edu, or Enterprise plan. Business and Enterprise admins can learn more about enabling Codex for their workspace here ⁠ (opens in a new window) . 
+
+What’s the difference between the Codex CLI, IDE extension, and Codex cloud?
+*]:m-0"> Codex is a single agent that runs everywhere you code—terminal, IDE, in the cloud, in GitHub, and on your phone. With your ChatGPT account, you can easily move work between your local environment and Codex’s cloud sandbox without losing state. 
+
+How much does Codex cost?
+*]:m-0"> Codex is part of ChatGPT Plus, Pro, Business, Edu, and Enterprise plans. Business and Enterprise plans can purchase credits for additional usage. Learn more about usage for each plan here ⁠ (opens in a new window) . 
+
+Which models can I use with Codex?
+*]:m-0"> With the Codex CLI and IDE extension we recommend using GPT‑5, which is the default model. You can choose the reasoning level. You can also authenticate via API key to use our older models. 
+
+Try Codex
+Get started 
+$ npm i -g @openai/codex 
+
+Our Research 
+- Research Index 
+
+- Research Overview 
+
+- Research Residency 
+
+- OpenAI for Science 
+
+Latest Advancements 
+- GPT-5 
+
+- OpenAI o3 
+
+- OpenAI o4-mini 
+
+- GPT-4o 
+
+- GPT-4o mini 
+
+- Sora 
+
+Safety 
+- Safety Approach 
+
+- Security & Privacy 
+
+- Trust & Transparency 
+
+ChatGPT 
+- Explore ChatGPT (opens in a new window) 
+
+- Business 
+
+- Enterprise 
+
+- Education 
+
+- Pricing (opens in a new window) 
+
+- Download (opens in a new window) 
+
+Sora 
+- Sora Overview 
+
+- Features 
+
+- Pricing 
+
+- Sora log in (opens in a new window) 
+
+API Platform 
+- Platform Overview 
+
+- Pricing 
+
+- API log in (opens in a new window) 
+
+- Documentation (opens in a new window) 
+
+- Developer Forum (opens in a new window) 
+
+For Business 
+- Business Overview 
+
+- Solutions 
+
+- Contact Sales 
+
+Company 
+- About Us 
+
+- Our Charter 
+
+- Foundation 
+
+- Careers 
+
+- Brand 
+
+Support 
+- Help Center (opens in a new window) 
+
+More 
+- News 
+
+- Stories 
+
+- Livestreams 
+
+- Podcast 
+
+- RSS 
+
+Terms & Policies 
+- Terms of Use 
+
+- Privacy Policy 
+
+- Other Policies 
+
+(opens in a new window) (opens in a new window) (opens in a new window) (opens in a new window) (opens in a new window) (opens in a new window) (opens in a new window) 
+OpenAI © 2015–2025 Manage Cookies 
+English United States

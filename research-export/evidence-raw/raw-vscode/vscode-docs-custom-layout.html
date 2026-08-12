@@ -1,0 +1,1238 @@
+<html lang="en" data-theme="light" style="--docs-sticky-top: 109px;"><head>
+	<meta charset="UTF-8">
+	<meta name="awa-expId" content="cv-downloadv2:1227264;">
+	<meta name="awa-env" content="prod">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="hNs7DXrTySP_X-0P_AC0WulAXvUwgSXEmgfcO2r79dw">
+
+	<!-- Twitter and Facebook OpenGraph Metadata-->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@code">
+
+	<meta name="description" content="Visual Studio Code custom user interface layout.">
+<meta name="keywords" content="">
+<meta name="ms.prod" content="vs-code">
+<meta name="ms.TOCTitle" content="">
+<meta name="ms.ContentId" content="71e2c9c1-fb19-469a-9620-877d4b08fb0d">
+<meta name="ms.date" content="02/04/2026">
+<meta name="ms.topic" content="conceptual">
+<!-- Twitter and Facebook OpenGraph Metadata-->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://code.visualstudio.com/docs/configure/custom-layout">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Custom Layout">
+<meta property="og:description" content="Visual Studio Code custom user interface layout.">
+
+<meta property="og:image" content="https://code.visualstudio.com/opengraphimg/generated/docs/configure/custom-layout.webp">
+
+
+
+	<link rel="shortcut icon" href="/assets/favicon.ico" sizes="128x128">
+	<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+	<title>Custom Layout</title>
+
+	<link rel="stylesheet" href="/dist/style.css">
+
+	<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
+	<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-4.min.js"></script>
+	
+	<script type="text/javascript">
+	// Leave as var; siteConsent is initialized and referenced elsewhere.
+	var siteConsent = null;
+	
+	const GPC_DataSharingOptIn = false;
+	WcpConsent.onInitCallback(function () {
+		window.appInsights = new oneDS.ApplicationInsights();
+		window.appInsights.initialize({
+			instrumentationKey: "1a3eb3104447440391ad5f2a6ee06a0a-62879566-bc58-4741-9650-302bf2af703f-7103",
+			propertyConfiguration: {
+				userConsented: false,
+				gpcDataSharingOptIn: false,
+				callback: {
+					userConsentDetails: siteConsent ? siteConsent.getConsent : undefined
+				},
+			},
+			cookieCfg: {
+				ignoreCookies: ["MSCC"]
+			},
+			webAnalyticsConfiguration:{ // Web Analytics Plugin configuration
+				urlCollectQuery: true,
+				urlCollectHash: true,
+				autoCapture: {
+					scroll: true,
+					pageView: true,
+					onLoad: true,
+					onUnload: true,
+					click: true,
+					resize: true,
+					jsError: true
+				}
+			}
+		}, []);
+	
+		window.appInsights.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = GPC_DataSharingOptIn;
+	});
+	</script>
+	<link rel="alternate" type="application/atom+xml" title="RSS Feed for code.visualstudio.com" href="/feed.xml">
+</head>
+
+<body class="linux x64">
+	<!-- Setting theme here to avoid FOUC -->
+	<script>
+		function setTheme(themeName) {
+			if (themeName === 'dark') {
+				document.documentElement.removeAttribute('data-theme'); // dark is default, so no data-theme attribute needed
+			}
+
+			if (themeName === 'light') {
+				document.documentElement.setAttribute('data-theme', themeName);
+			}
+			return;
+		}
+
+		// Determine initial theme: user preference or system preference
+		let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		setTheme(theme); // Apply the initial theme
+
+		// Listen for changes in the system theme preference
+		window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+			if (!localStorage.getItem('theme')) { // Only if no user preference is saved
+				setTheme(e.matches ? 'dark' : 'light');
+			}
+		});
+	</script>
+
+	<div id="main">
+		<div class="navbar-fixed-container">
+			<div class="navbar navbar-inverse navbar-fixed-top ">
+				<div id="cookie-banner"></div>		<nav role="navigation" aria-label="Top Level">
+					<div class="container">
+						<div class="nav navbar-header">
+							<a class="navbar-brand" href="/"><span>Visual Studio Code</span></a>
+						</div>
+						<div class="navbar-collapse collapse" style="max-height: min(60vh, 450px);">
+							<ul class="nav navbar-nav navbar-left" data-m="{&quot;cN&quot;:&quot;top-navbar&quot;,&quot;aN&quot;:&quot;navigation&quot;}">
+								<li class="nav-dropdown">
+									<a id="nav-features" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m="{&quot;cN&quot;:&quot;Features&quot;,&quot;aN&quot;:&quot;navigation&quot;,&quot;cT&quot;:&quot;toggle&quot;}">
+										Features <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/features/agents" data-m="{&quot;cN&quot;:&quot;Agents&quot;,&quot;aN&quot;:&quot;navigation - Features&quot;}">Agents</a></li>
+									</ul>
+								</li>
+								<li class="nav-dropdown active">
+									<a id="nav-docs" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m="{&quot;cN&quot;:&quot;Docs&quot;,&quot;aN&quot;:&quot;navigation&quot;,&quot;cT&quot;:&quot;toggle&quot;}">
+										Docs <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/docs" data-m="{&quot;cN&quot;:&quot;Documentation&quot;,&quot;aN&quot;:&quot;navigation - Docs&quot;}">Documentation</a></li>
+										<li role="none"><a role="menuitem" href="/api" data-m="{&quot;cN&quot;:&quot;API&quot;,&quot;aN&quot;:&quot;navigation - Docs&quot;}">API</a></li>
+										<li role="none"><a role="menuitem" id="nav-faqs" href="/docs/supporting/faq" data-m="{&quot;cN&quot;:&quot;FAQ&quot;,&quot;aN&quot;:&quot;navigation - Docs&quot;}">FAQ</a></li>
+									</ul>
+								</li>
+								<li><a id="nav-updates" href="/updates" data-m="{&quot;cN&quot;:&quot;Release Notes&quot;}">Release Notes</a>
+								</li>
+								<li><a id="nav-blogs" href="/blogs" data-m="{&quot;cN&quot;:&quot;Blog&quot;}">Blog</a></li>
+								<li><a id="nav-learn" href="/learn" data-m="{&quot;cN&quot;:&quot;Learn&quot;}">Learn</a></li>
+								<li><a id="nav-events" href="https://aka.ms/vscode/live" target="_blank" rel="noopener" data-m="{&quot;cN&quot;:&quot;Events&quot;}">Events<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+								<li class="nav-dropdown">
+									<a id="nav-resources" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m="{&quot;cN&quot;:&quot;Resources&quot;,&quot;aN&quot;:&quot;navigation&quot;,&quot;cT&quot;:&quot;toggle&quot;}">
+										Resources <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="https://marketplace.visualstudio.com/VSCode" target="_blank" rel="noopener" id="nav-extensions" data-m="{&quot;cN&quot;:&quot;Extensions&quot;,&quot;aN&quot;:&quot;navigation - Resources&quot;}">Extensions<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+										<li role="none"><a role="menuitem" id="nav-mcp" href="/mcp" target="_blank" rel="noopener" data-m="{&quot;cN&quot;:&quot;MCP&quot;,&quot;aN&quot;:&quot;navigation - Resources&quot;}">MCP<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right" role="presentation">
+								<li>
+									<a class="link-button" href="/download" id="nav-download">
+										<span>Download</span>
+									</a><div class="tabloopElement" tabindex="0" style="display: none;"></div>
+								</li>
+							</ul>
+						</div>
+						<div class="navbar-actions">
+							<div class="search" role="presentation">
+								<div class="nav-search search-control" role="button" tabindex="0" aria-label="Open search dialog">
+									<div class="input-group" role="presentation">
+										<span class="input-group-btn">
+											<span class="btn search-icon-container" aria-hidden="true">
+												<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="">
+												<img class="search-icon-light" src="/assets/icons/search.svg" alt="">
+											</span>
+										</span>
+										<span class="search-box form-control" aria-hidden="true" role="presentation"></span>
+										<span class="search-shortcut-placeholder">Search</span>
+										<span class="search-shortcut-overlay" style="opacity: 0.7;">Ctrl+Shift+P</span>
+									</div>
+								</div>					</div>
+							<button type="button" class="theme-switch" id="theme-toggle">
+								<img class="theme-icon-light" src="/assets/icons/theme-light.svg" alt="Switch to the dark theme">
+								<img class="theme-icon-dark" src="/assets/icons/theme-dark.svg" alt="Switch to the light theme">
+							</button>
+							<a class="link-button navbar-actions-download" href="/Download">
+								<span>Download</span>
+							</a>
+						</div>
+						<div class="tabloopElement" tabindex="0" style="display: none;"></div><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Expand and Collapse Menu">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</div>		<div data-announcement-version="2026-06-01-vscode-live-build" class="updates-banner">
+			<div class="container">
+				<p class="message"><a href="https://aka.ms/VSCode/Livestage?source=vsc-website-banner" target="_blank" rel="noopener">📼 Rewatch VS Code Live at MS Build 2026</a></p>
+			</div>
+			<div tabindex="0" role="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn"><span class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span></div>
+		</div>
+		<script>
+			// Hide the banner synchronously (before first paint) if this version was
+			// already dismissed, to avoid a flicker/layout shift once the main bundle loads.
+			(function () {
+				try {
+					var banner = document.currentScript.previousElementSibling;
+					if (banner && localStorage.getItem('dismissedAnnouncementVersion') === banner.getAttribute('data-announcement-version')) {
+						banner.classList.add('js-hidden');
+					}
+				} catch (e) { /* ignore */ }
+			})();
+		</script>
+		<!-- This div wraps around the entire site -->
+		<!-- The body itself should already have a main tag -->
+		<main id="main-content">
+			<script>
+    function closeReportIssue() {
+        var element = document.getElementById('surveypopup');
+        element.parentElement.removeChild(element);
+    }
+
+    function reportIssue(tutorial, page) {
+        var div = document.createElement('div');
+        div.innerHTML = '<div id="surveypopup" class="overlay visible"><div class="surveypopup"><div id="surveytitle">Tell us more<a href="javascript:void(0)" onclick="closeReportIssue()">X</a></div><div id="surveydiv"><iframe frameBorder="0" scrolling="0" src="https://www.research.net/r/PWZWZ52?tutorial=' + tutorial + '&step=' + page + '"></iframe></div></div></div>';
+        document.body.appendChild(div.children[0]);
+    }
+</script>
+
+<div class="body-content docs docs-github-layout">
+    <div class="docs-layout-wrapper">
+        <!-- Left sidebar - Table of Contents -->
+        <aside class="docs-left-sidebar">
+            <nav id="docs-navbar" aria-label="Topics" class="docs-nav visible-md visible-lg" data-m="{&quot;cN&quot;:&quot;docs-left-nav&quot;,&quot;aN&quot;:&quot;navigation&quot;}">
+              <div class="docs-nav-back">
+                <a class="area" href="/docs" aria-label="Back to all documentation"><span class="codicon codicon-arrow-left" aria-hidden="true"></span><span>All Docs</span></a>
+              </div>
+              <h4>Core Editor</h4>
+              <ul class="nav" id="main-nav">
+              <li>
+                <a href="/docs/core-editor/overview" data-m="{&quot;cN&quot;:&quot;Overview&quot;}">Overview</a>
+              </li>
+              
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#editing-articles" data-parent="#main-nav" data-toggle="collapse" data-m="{&quot;cN&quot;:&quot;Write code&quot;,&quot;cT&quot;:&quot;toggle&quot;}" aria-expanded="false">Write code</a>
+              <ul id="editing-articles" class="collapse " aria-expanded="false">
+            
+                    <li>
+                      <a href="/docs/editing/getting-started" data-m="{&quot;cN&quot;:&quot;Tutorial&quot;,&quot;aN&quot;:&quot;Write code&quot;}">Tutorial</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/editing/userinterface" data-m="{&quot;cN&quot;:&quot;User Interface&quot;,&quot;aN&quot;:&quot;Write code&quot;}">User Interface</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/editing/tips-and-tricks" data-m="{&quot;cN&quot;:&quot;Tips and Tricks&quot;,&quot;aN&quot;:&quot;Write code&quot;}">Tips and Tricks</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/editing/codebasics" data-m="{&quot;cN&quot;:&quot;Basic Editing&quot;,&quot;aN&quot;:&quot;Write code&quot;}">Basic Editing</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/editing/intellisense" data-m="{&quot;cN&quot;:&quot;IntelliSense&quot;,&quot;aN&quot;:&quot;Write code&quot;}">IntelliSense</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/editing/ai-powered-suggestions" data-m="{&quot;cN&quot;:&quot;Inline Suggestions&quot;,&quot;aN&quot;:&quot;Write code&quot;}">Inline Suggestions</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/editing/copilot-smart-actions" data-m="{&quot;cN&quot;:&quot;Smart Actions&quot;,&quot;aN&quot;:&quot;Write code&quot;}">Smart Actions</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/editing/editingevolved" data-m="{&quot;cN&quot;:&quot;Code Navigation&quot;,&quot;aN&quot;:&quot;Write code&quot;}">Code Navigation</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/editing/refactoring" data-m="{&quot;cN&quot;:&quot;Refactoring&quot;,&quot;aN&quot;:&quot;Write code&quot;}">Refactoring</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/editing/userdefinedsnippets" data-m="{&quot;cN&quot;:&quot;Snippets&quot;,&quot;aN&quot;:&quot;Write code&quot;}">Snippets</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#editing-workspaces-articles" data-toggle="collapse" data-m="{&quot;cN&quot;:&quot;Workspaces&quot;,&quot;aN&quot;:&quot;Write code&quot;,&quot;cT&quot;:&quot;toggle&quot;}" aria-expanded="false">Workspaces</a>
+              <ul id="editing-workspaces-articles" class="collapse " aria-expanded="false">
+            
+                    <li>
+                      <a href="/docs/editing/workspaces/workspaces" data-m="{&quot;cN&quot;:&quot;Overview&quot;,&quot;aN&quot;:&quot;Write code - Workspaces&quot;}">Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/editing/workspaces/multi-root-workspaces" data-m="{&quot;cN&quot;:&quot;Multi-Root Workspaces&quot;,&quot;aN&quot;:&quot;Write code - Workspaces&quot;}">Multi-Root Workspaces</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/editing/workspaces/workspace-trust" data-m="{&quot;cN&quot;:&quot;Workspace Trust&quot;,&quot;aN&quot;:&quot;Write code - Workspaces&quot;}">Workspace Trust</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+              </ul>
+            </li>
+                
+            <li class="panel active expanded">
+              <a class="area" role="button" href="#configure-articles" data-parent="#main-nav" data-toggle="collapse" data-m="{&quot;cN&quot;:&quot;Configure the editor&quot;,&quot;cT&quot;:&quot;toggle&quot;}" aria-expanded="true">Configure the editor</a>
+              <ul id="configure-articles" class="collapse in" aria-expanded="true">
+            
+                    <li>
+                      <a href="/docs/configure/locales" data-m="{&quot;cN&quot;:&quot;Display Language&quot;,&quot;aN&quot;:&quot;Configure the editor&quot;}">Display Language</a>
+                    </li>
+                      
+                    <li class="active">
+                      <a href="/docs/configure/custom-layout" data-m="{&quot;cN&quot;:&quot;Layout&quot;,&quot;aN&quot;:&quot;Configure the editor&quot;}" aria-label="Current Page: Layout">Layout</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/configure/keybindings" data-m="{&quot;cN&quot;:&quot;Keyboard Shortcuts&quot;,&quot;aN&quot;:&quot;Configure the editor&quot;}">Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/configure/settings" data-m="{&quot;cN&quot;:&quot;Settings&quot;,&quot;aN&quot;:&quot;Configure the editor&quot;}">Settings</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/configure/settings-sync" data-m="{&quot;cN&quot;:&quot;Settings Sync&quot;,&quot;aN&quot;:&quot;Configure the editor&quot;}">Settings Sync</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-extensions-articles" data-toggle="collapse" data-m="{&quot;cN&quot;:&quot;Extensions&quot;,&quot;aN&quot;:&quot;Configure the editor&quot;,&quot;cT&quot;:&quot;toggle&quot;}" aria-expanded="false">Extensions</a>
+              <ul id="configure-extensions-articles" class="collapse " aria-expanded="false">
+            
+                    <li>
+                      <a href="/docs/configure/extensions/extensions" data-m="{&quot;cN&quot;:&quot;Overview&quot;,&quot;aN&quot;:&quot;Configure the editor - Extensions&quot;}">Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/configure/extensions/extension-marketplace" data-m="{&quot;cN&quot;:&quot;Extension Marketplace&quot;,&quot;aN&quot;:&quot;Configure the editor - Extensions&quot;}">Extension Marketplace</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/configure/extensions/extension-runtime-security" data-m="{&quot;cN&quot;:&quot;Extension Runtime Security&quot;,&quot;aN&quot;:&quot;Configure the editor - Extensions&quot;}">Extension Runtime Security</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li>
+                      <a href="/docs/configure/themes" data-m="{&quot;cN&quot;:&quot;Themes&quot;,&quot;aN&quot;:&quot;Configure the editor&quot;}">Themes</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/configure/profiles" data-m="{&quot;cN&quot;:&quot;Profiles&quot;,&quot;aN&quot;:&quot;Configure the editor&quot;}">Profiles</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-accessibility-articles" data-toggle="collapse" data-m="{&quot;cN&quot;:&quot;Accessibility&quot;,&quot;aN&quot;:&quot;Configure the editor&quot;,&quot;cT&quot;:&quot;toggle&quot;}" aria-expanded="false">Accessibility</a>
+              <ul id="configure-accessibility-articles" class="collapse " aria-expanded="false">
+            
+                    <li>
+                      <a href="/docs/configure/accessibility/accessibility" data-m="{&quot;cN&quot;:&quot;Overview&quot;,&quot;aN&quot;:&quot;Configure the editor - Accessibility&quot;}">Overview</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/configure/accessibility/voice" data-m="{&quot;cN&quot;:&quot;Voice Interactions&quot;,&quot;aN&quot;:&quot;Configure the editor - Accessibility&quot;}">Voice Interactions</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li>
+                      <a href="/docs/configure/command-line" data-m="{&quot;cN&quot;:&quot;Command Line Interface&quot;,&quot;aN&quot;:&quot;Configure the editor&quot;}">Command Line Interface</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/configure/telemetry" data-m="{&quot;cN&quot;:&quot;Telemetry&quot;,&quot;aN&quot;:&quot;Configure the editor&quot;}">Telemetry</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#reference-articles" data-parent="#main-nav" data-toggle="collapse" data-m="{&quot;cN&quot;:&quot;Reference&quot;,&quot;cT&quot;:&quot;toggle&quot;}" aria-expanded="false">Reference</a>
+              <ul id="reference-articles" class="collapse " aria-expanded="false">
+            
+                    <li>
+                      <a href="/docs/reference/default-keybindings" data-m="{&quot;cN&quot;:&quot;Default Keyboard Shortcuts&quot;,&quot;aN&quot;:&quot;Reference&quot;}">Default Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/reference/default-settings" data-m="{&quot;cN&quot;:&quot;Default Settings&quot;,&quot;aN&quot;:&quot;Reference&quot;}">Default Settings</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/reference/variables-reference" data-m="{&quot;cN&quot;:&quot;Substitution Variables&quot;,&quot;aN&quot;:&quot;Reference&quot;}">Substitution Variables</a>
+                    </li>
+                      
+                    <li>
+                      <a href="/docs/reference/tasks-appendix" data-m="{&quot;cN&quot;:&quot;Tasks Schema&quot;,&quot;aN&quot;:&quot;Reference&quot;}">Tasks Schema</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+              </ul>
+            </nav>
+            
+            <nav id="small-nav" aria-label="Topics" class="docs-nav hidden-md hidden-lg">
+              <label class="faux-h4" for="small-nav-dropdown-core-editor">Topics</label>
+              <select id="small-nav-dropdown-core-editor" aria-label="topics">
+                <option value="/docs/core-editor/overview">Overview</option>
+            
+              <optgroup label="Write code">
+            
+                    <option value="/docs/editing/getting-started">Tutorial</option>
+                    
+                    <option value="/docs/editing/userinterface">User Interface</option>
+                    
+                    <option value="/docs/editing/tips-and-tricks">Tips and Tricks</option>
+                    
+                    <option value="/docs/editing/codebasics">Basic Editing</option>
+                    
+                    <option value="/docs/editing/intellisense">IntelliSense</option>
+                    
+                    <option value="/docs/editing/ai-powered-suggestions">Inline Suggestions</option>
+                    
+                    <option value="/docs/editing/copilot-smart-actions">Smart Actions</option>
+                    
+                    <option value="/docs/editing/editingevolved">Code Navigation</option>
+                    
+                    <option value="/docs/editing/refactoring">Refactoring</option>
+                    
+                    <option value="/docs/editing/userdefinedsnippets">Snippets</option>
+                    
+                    <option disabled="">Workspaces</option>
+            
+                    <option value="/docs/editing/workspaces/workspaces">&nbsp;&nbsp;&nbsp;&nbsp;Overview</option>
+                    
+                    <option value="/docs/editing/workspaces/multi-root-workspaces">&nbsp;&nbsp;&nbsp;&nbsp;Multi-Root Workspaces</option>
+                    
+                    <option value="/docs/editing/workspaces/workspace-trust">&nbsp;&nbsp;&nbsp;&nbsp;Workspace Trust</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Configure the editor">
+            
+                    <option value="/docs/configure/locales">Display Language</option>
+                    
+                    <option value="/docs/configure/custom-layout" selected="">Layout</option>
+                    
+                    <option value="/docs/configure/keybindings">Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/configure/settings">Settings</option>
+                    
+                    <option value="/docs/configure/settings-sync">Settings Sync</option>
+                    
+                    <option disabled="">Extensions</option>
+            
+                    <option value="/docs/configure/extensions/extensions">&nbsp;&nbsp;&nbsp;&nbsp;Overview</option>
+                    
+                    <option value="/docs/configure/extensions/extension-marketplace">&nbsp;&nbsp;&nbsp;&nbsp;Extension Marketplace</option>
+                    
+                    <option value="/docs/configure/extensions/extension-runtime-security">&nbsp;&nbsp;&nbsp;&nbsp;Extension Runtime Security</option>
+                    
+                    <option value="/docs/configure/themes">Themes</option>
+                    
+                    <option value="/docs/configure/profiles">Profiles</option>
+                    
+                    <option disabled="">Accessibility</option>
+            
+                    <option value="/docs/configure/accessibility/accessibility">&nbsp;&nbsp;&nbsp;&nbsp;Overview</option>
+                    
+                    <option value="/docs/configure/accessibility/voice">&nbsp;&nbsp;&nbsp;&nbsp;Voice Interactions</option>
+                    
+                    <option value="/docs/configure/command-line">Command Line Interface</option>
+                    
+                    <option value="/docs/configure/telemetry">Telemetry</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Reference">
+            
+                    <option value="/docs/reference/default-keybindings">Default Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/reference/default-settings">Default Settings</option>
+                    
+                    <option value="/docs/reference/variables-reference">Substitution Variables</option>
+                    
+                    <option value="/docs/reference/tasks-appendix">Tasks Schema</option>
+                    
+              </optgroup>
+              
+              </select>
+            </nav>        </aside>
+        
+        <!-- Content wrapper contains main content + right sidebar -->
+        <div class="docs-content-wrapper">
+            <!-- Right sidebar - On This Page -->
+            <aside class="docs-right-sidebar hidden-xs">
+                <div class="docs-markdown-actions">
+                    <div class="docs-markdown-dropdown" data-raw-url="/raw/docs/configure/custom-layout.md">
+                        <button type="button" class="docs-markdown-btn-main" data-action="copy-markdown" aria-label="Copy as Markdown">
+                            <span class="codicon codicon-copy" aria-hidden="true"></span>
+                            <span>Copy as Markdown</span>
+                        </button>
+                        <button type="button" class="docs-markdown-btn-trigger" aria-haspopup="true" aria-expanded="false" aria-label="More Markdown options">
+                            <span class="codicon codicon-chevron-down docs-markdown-chevron" aria-hidden="true"></span>
+                        </button>
+                        <ul class="docs-markdown-menu" role="menu" aria-label="Markdown options">
+                            <li role="menuitem" tabindex="0" data-action="copy-markdown">
+                                <span class="codicon codicon-copy" aria-hidden="true"></span>
+                                <span>Copy as Markdown</span>
+                            </li>
+                            <li role="menuitem" tabindex="0" data-action="view-markdown">
+                                <span class="codicon codicon-file" aria-hidden="true"></span>
+                                <span>View as Markdown</span>
+                                <span class="codicon codicon-link-external" aria-hidden="true"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav id="docs-subnavbar" aria-label="On Page">
+                    
+                    <h4><span class="sr-only">On this page there are 6 sections</span><span aria-hidden="true">On this page</span></h4>
+                    <ul class="nav">
+                        
+                        <li><a href="#_workbench">Workbench</a></li>
+                        
+                        <li><a href="#_panel">Panel</a></li>
+                        
+                        <li><a href="#_notifications">Notifications</a></li>
+                        
+                        <li><a href="#_tool-bars">Tool bars</a></li>
+                        
+                        <li><a href="#_editor">Editor</a></li>
+                        
+                        <li><a href="#_next-steps">Next steps</a></li>
+                        
+                    </ul>
+                    
+                </nav>
+                
+            </aside>
+            
+            <!-- Main article content -->
+            <main class="docs-main-content body">
+                <h1>Custom Layout</h1>
+<p>Visual Studio Code comes with a simple user interface and convenient default layout. At the same time, VS Code provides options and settings to let you customize the UI layout to suit your preferences and work style. In this topic, we'll highlight various UI customizations so you can display views, editors, and panels in the way that's most productive for you.</p>
+<p>This article starts by discussing <a href="#_workbench">Workbench</a> customizations to rearrange UI elements such as the side bars, views, and panels. Later in the article, we'll cover customization of the <a href="#_editor">Editor</a> region with editor groups, split editors, and editor tabs.</p>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>If you are new to VS Code, you may want to start with the <a href="/docs/editing/userinterface">user interface overview</a> or take a look at the <a href="/docs/editing/tips-and-tricks">Tips and Tricks</a> article.</p>
+</div><h2 id="_workbench" data-needslink="_workbench"><a class="hash-link" href="#_workbench">Workbench</a></h2>
+<h3 id="_primary-side-bar" data-needslink="_primary-side-bar"><a class="hash-link" href="#_primary-side-bar">Primary Side Bar</a></h3>
+<p>By default, the Primary Side Bar is located on the left of the workbench and shows views such as the Explorer, Search, and Source Control views. You can quickly switch between views by selecting the icons in the Activity Bar.</p>
+<p><span class="expandable-image-wrapper" role="button" tabindex="0" aria-label="Explorer view opened in the Primary Side Bar, located on the left of the screen.. Press Enter or Space to view larger."><img src="/assets/docs/configure/custom-layout/primary-side-bar.png" alt="Explorer view opened in the Primary Side Bar, located on the left of the screen." loading="lazy" class="expandable-image"></span></p>
+<p>To change the position of the Primary Side Bar, you can:</p>
+<ul>
+<li>Right-click the Activity Bar and select <strong>Move Primary Side Bar Right</strong></li>
+<li>Run <strong>View: Toggle Primary Side Bar Position</strong> to switch the Primary Side Bar right and left</li>
+<li>Use the <strong>View</strong> &gt; <strong>Appearance</strong> &gt; <strong>Move Primary Side Bar Right</strong> menu item</li>
+<li>Set the <strong>Workbench &gt; Side Bar: Location</strong> (<span class="setting"><span class="setting-dropdown" data-setting-id="workbench.sideBar.location">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.sideBar.location
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>) setting to <code>right</code> in the <a href="/docs/configure/settings">Settings editor</a></li>
+</ul>
+<h3 id="_secondary-side-bar" data-needslink="_secondary-side-bar"><a class="hash-link" href="#_secondary-side-bar">Secondary Side Bar</a></h3>
+<p>By default, VS Code shows views in the Primary Side Bar located to the left of the editor region. It can be useful to see two views open at the same time. To do this, you can use the <strong>Secondary Side Bar</strong> to show views opposite the Primary Side Bar. The Secondary Side Bar is always positioned opposite the Primary Side Bar, regardless if you switched the position of the Primary Side Bar.</p>
+<p>When you first open a folder or multi-root workspace, the Secondary Side Bar is shown by default. In an empty window, it's hidden by default. You can configure this behavior with the <span class="setting"><span class="setting-dropdown" data-setting-id="workbench.secondarySideBar.defaultVisibility">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.secondarySideBar.defaultVisibility
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting.</p>
+<p>The following image shows the Explorer view in the Primary Side Bar and the Copilot Chat view in the Secondary Side Bar:</p>
+<p><img src="/assets/docs/configure/custom-layout/secondary-side-bar.png" alt="Explorer view in the Primary Side Bar and Copilot Chat view in the Secondary Side Bar." loading="lazy"></p>
+<p>If the Secondary Side Bar is hidden, you can show it by using the layout controls in the VS Code title bar. If the layout controls are not visible, right-click the VS Code title bar and select <strong>Layout Controls</strong>.</p>
+<p><span class="expandable-image-wrapper" role="button" tabindex="0" aria-label="Title bar buttons to toggle main UI elements, with hover on Toggle Secondary Side Bar.. Press Enter or Space to view larger."><img src="/assets/docs/configure/custom-layout/toggle-secondary-side-bar.png" alt="Title bar buttons to toggle main UI elements, with hover on Toggle Secondary Side Bar." loading="lazy" class="expandable-image"></span></p>
+<p>Alternatively, you can also open the Secondary Side Bar as follows:</p>
+<ul>
+<li>Run the <strong>View: Toggle Secondary Side Bar Visibility</strong> command (or press <span class="dynamic-keybinding keybinding linux" data-commandid="workbench.action.toggleAuxiliaryBar" data-osx="⌥⌘B" data-win="Ctrl+Alt+B" data-linux="Ctrl+Alt+B" title="macOS: ⌥⌘B, Windows: Ctrl+Alt+B">Ctrl+Alt+B</span>)</li>
+<li>Use the <strong>View</strong> &gt; <strong>Appearance</strong> &gt; <strong>Secondary Side Bar</strong> menu item</li>
+</ul>
+<p>At any time, you can drag and drop views and panels into the Primary or Secondary Side Bar. VS Code will remember the layout of views and panels across your sessions.</p>
+<p><span class="expandable-image-wrapper" role="button" tabindex="0" aria-label="Drag and drop views and panels between the Primary and Secondary Side Bar. Press Enter or Space to view larger."><img src="/assets/docs/configure/custom-layout/drag-and-drop-views.gif" alt="Drag and drop views and panels between the Primary and Secondary Side Bar" loading="lazy" class="expandable-image"></span></p>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>You can reset views and panels back to their default locations with the <strong>View: Reset View Locations</strong> command.</p>
+</div><h3 id="_command-palette-position" data-needslink="_command-palette-position"><a class="hash-link" href="#_command-palette-position">Command Palette position</a></h3>
+<p>You can move the Command Palette to another location by grabbing the top edge with the mouse cursor and dragging it somewhere else. You can also select the <strong>Customize Layout</strong> control in the title bar, and then select one of the preconfigured <strong>Quick Input Positions</strong>.</p>
+<p><span class="expandable-image-wrapper" role="button" tabindex="0" aria-label="Screenshot that shows the Command Palette in a different location, highlighting the Customize Layout control in the title bar and the preconfigured position options.. Press Enter or Space to view larger."><img src="/assets/docs/configure/custom-layout/command-palette-position.png" alt="Screenshot that shows the Command Palette in a different location, highlighting the Customize Layout control in the title bar and the preconfigured position options." loading="lazy" class="expandable-image"></span></p>
+<h3 id="_activity-bar-position" data-needslink="_activity-bar-position"><a class="hash-link" href="#_activity-bar-position">Activity Bar position</a></h3>
+<p>By default, the Activity Bar moves with the Primary Side Bar and remains on the outer edge of the workbench. You can also choose to hide the Activity Bar, or move it to the top or bottom of the Primary Side Bar.</p>
+<p>The <strong>Activity Bar Position</strong> menu is available from the Activity Bar context menu, or under <strong>View</strong> &gt; <strong>Appearance</strong> &gt; <strong>Activity Bar Position</strong> has the options <strong>Default</strong>, <strong>Top</strong>, <strong>Bottom</strong>, or <strong>Hidden</strong>.</p>
+<p>When the Activity Bar is in the top or bottom position, the <strong>Account</strong> and <strong>Manage</strong> buttons, usually at the bottom of the Activity Bar, move to the right side of the title bar.</p>
+<p><img src="/assets/docs/configure/custom-layout/activity-bar-top.png" alt="Activity Bar in top position with Account and Manage buttons on the right of the title bar" loading="lazy"></p>
+<h3 id="_activity-bar-size" data-needslink="_activity-bar-size"><a class="hash-link" href="#_activity-bar-size">Activity Bar size</a></h3>
+<p>The Activity Bar supports two sizes: the larger default size and a compact size that matches the classic Activity Bar appearance. To switch to compact mode, set <span class="setting"><span class="setting-dropdown" data-setting-id="workbench.activityBar.compact">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.activityBar.compact
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> to <code>true</code>.</p>
+<p>You can also toggle between sizes by right-clicking the Activity Bar and selecting <strong>Default</strong> or <strong>Compact</strong> from the <strong>Activity Bar Size</strong> submenu.</p>
+<p><img src="/assets/docs/configure/custom-layout/activity-bar-size.png" alt="Screenshot of the Activity Bar context menu showing the Activity Bar Size submenu with Default and Compact options." loading="lazy"></p>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>The <strong>Activity Bar Size</strong> submenu only appears when the Activity Bar is in its default (side) position. If the Activity Bar is moved to the top or bottom, the size option is not available.</p>
+</div><h3 id="_customize-layout-control" data-needslink="_customize-layout-control"><a class="hash-link" href="#_customize-layout-control">Customize Layout control</a></h3>
+<p>The VS Code title bar also has buttons to toggle the visibility of the main UI elements (Side bars and Panel region).</p>
+<p><img src="/assets/docs/configure/custom-layout/toggle-UI-visibility.png" alt="Title bar buttons to toggle main UI elements, with hover on Toggle Panel" loading="lazy"></p>
+<p>The rightmost button brings up the <strong>Customize Layout</strong> dropdown, where you can further change the visibility and layout of various UI elements and includes several layout modes:</p>
+<p><img src="/assets/docs/configure/custom-layout/customize-layout-dropdown.png" alt="Customize Layout dropdown shown via the Customize Layout button in the title bar" loading="lazy"></p>
+<p>The layout modes are:</p>
+<ul>
+<li><strong>Full Screen</strong> - Set the editor to fill the full display screen. <strong>View: Toggle Full Screen</strong> (<span class="dynamic-keybinding keybinding linux" data-commandid="workbench.action.toggleFullScreen" data-osx="⌃⌘F" data-win="F11" data-linux="F11" title="macOS: ⌃⌘F, Windows: F11">F11</span>).</li>
+<li><strong>Zen Mode</strong> - Hide all UI except for the editor area. <strong>View: Toggle Zen Mode</strong> (<span class="dynamic-keybinding keybinding linux" data-commandid="workbench.action.toggleZenMode" data-osx="⌘K Z" data-win="Ctrl+K Z" data-linux="Ctrl+K Z" title="macOS: ⌘K Z, Windows: Ctrl+K Z">Ctrl+K Z</span>).</li>
+<li><strong>Centered Layout</strong> - Centers the editor inside the editor region. <strong>View: Toggle Centered Layout</strong>.</li>
+</ul>
+<h3 id="_window-and-menu-style" data-needslink="_window-and-menu-style"><a class="hash-link" href="#_window-and-menu-style">Window and menu style</a></h3>
+<p>You can customize the appearance of the VS Code window and menu bar with the following settings:</p>
+<ul>
+<li>
+<p><span class="setting"><span class="setting-dropdown" data-setting-id="window.titleBarStyle">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      window.titleBarStyle
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>: adjust the appearance of the VS Code window title bar to be native by the OS or custom. Changes require a full restart to apply.</p>
+</li>
+<li>
+<p><span class="setting"><span class="setting-dropdown" data-setting-id="window.title">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      window.title
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>: configure the VS Code window title based on the current context such as the opened workspace or active editor. Variables are substituted based on the context. For example, <code>${activeEditorShort}</code> will show the file name of the currently active editor. You can combine multiple variables, for example, <code>${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}</code>.</p>
+</li>
+<li>
+<p><span class="setting"><span class="setting-dropdown" data-setting-id="window.titleSeparator">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      window.titleSeparator
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>: the separator character that is used in the <span class="setting"><span class="setting-dropdown" data-setting-id="window.title">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      window.title
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting.</p>
+</li>
+<li>
+<p><span class="setting"><span class="setting-dropdown" data-setting-id="window.menuStyle">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      window.menuStyle
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>: adjust the menu style to either be native by the OS, custom, or inherited from the title bar style (defined in <span class="setting"><span class="setting-dropdown" data-setting-id="window.titleBarStyle">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      window.titleBarStyle
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>). This also affects the context menu appearance. Changes require a full restart to apply.</p>
+</li>
+<li>
+<p><span class="setting"><span class="setting-dropdown" data-setting-id="window.menuBarVisibility">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      window.menuBarVisibility
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>: configure the visibility of the menu bar.</p>
+<ul>
+<li><code>classic</code>: the menu bar is shown at the top of the window, and only hidden when the window is in full screen mode.</li>
+<li><code>visible</code>: the menu bar is always visible, also when the window is in full screen mode.</li>
+<li><code>toggle</code>: the menu bar is hidden and a single press of the Alt key makes it visible.</li>
+<li><code>compact</code>: the menu is moved into the Side Bar.</li>
+<li><code>hidden</code>: the menu bar is always hidden.</li>
+</ul>
+</li>
+</ul>
+<h2 id="_panel" data-needslink="_panel"><a class="hash-link" href="#_panel">Panel</a></h2>
+<p>The Panel region displays UI elements such as the Problems, Terminal, and Output panels and by default is located under the editor region.</p>
+<h3 id="_panel-position" data-needslink="_panel-position"><a class="hash-link" href="#_panel-position">Panel position</a></h3>
+<p>You can move the region to the left, right, bottom, or top of the editor. You can configure these options in the menu under <strong>View</strong> &gt; <strong>Appearance</strong> &gt; <strong>Panel Position</strong>, or via the Panel title bar context menu.</p>
+<p><img src="/assets/docs/configure/custom-layout/panel-context-menu-position.png" alt="Panel title bar context menu with Panel Position options" loading="lazy"></p>
+<p>You can also use the <strong>Move Panel</strong> commands in the Command Palette:</p>
+<ul>
+<li><strong>View: Move Panel Left</strong> (<code>workbench.action.positionPanelLeft</code>)</li>
+<li><strong>View: Move Panel Right</strong> (<code>workbench.action.positionPanelRight</code>)</li>
+<li><strong>View: Move Panel To Bottom</strong> (<code>workbench.action.positionPanelBottom</code>)</li>
+<li><strong>View: Move Panel To Top</strong> (<code>workbench.action.positionPanelTop</code>)</li>
+</ul>
+<h3 id="_panel-alignment" data-needslink="_panel-alignment"><a class="hash-link" href="#_panel-alignment">Panel alignment</a></h3>
+<p>This option lets you configure how far the bottom Panel spans across your window. There are four options:</p>
+<ul>
+<li><strong>Center</strong> - This is the default behavior. The panel spans the width of the editor area only.</li>
+<li><strong>Justify</strong> - The panel spans the full width of the window.</li>
+<li><strong>Left</strong> - The panel spans from the left edge of the window to the right edge of the editor area.</li>
+<li><strong>Right</strong> - The panel spans from the right edge of the window to the left edge of the editor area.</li>
+</ul>
+<p>With all Panel alignment options, the Activity Bar is considered the edge of the window.</p>
+<p>You can configure these options in the menu under <strong>View</strong> &gt; <strong>Appearance</strong> &gt; <strong>Align Panel</strong>, Panel title context menu, or using the new <strong>Set Panel Alignment to...</strong> commands.</p>
+<p><img src="/assets/docs/configure/custom-layout/panel-alignment-context-menu.png" alt="Align Panel options from Panel title context menu" loading="lazy"></p>
+<h3 id="_maximize-panel-size" data-needslink="_maximize-panel-size"><a class="hash-link" href="#_maximize-panel-size">Maximize Panel size</a></h3>
+<p>When the Panel alignment is <strong>Center</strong>, you can quickly toggle the Panel region to fill the entire editor area with the <strong>Maximize Panel Size</strong> chevron button in the upper right of the Panel region. The chevron button points downwards in the maximized panel to restore the panel to the original size.</p>
+<p><img src="/assets/docs/configure/custom-layout/maximize-panel-size.png" alt="Maximize Panel Size button in the upper right of the Panel region" loading="lazy"></p>
+<p>You can also maximize the Panel region via the <strong>View: Toggle Maximized Panel</strong> command.</p>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>Besides customizing the overall Panel region display, individual panels may have their own layout customizations. For example, the Terminal lets you have <a href="/docs/terminal/basics#_managing-terminals">multiple open tabs</a> and <a href="/docs/terminal/basics#_groups-split-panes">split existing terminals</a>.</p>
+</div><h3 id="_drag-and-drop-views-and-panels" data-needslink="_drag-and-drop-views-and-panels"><a class="hash-link" href="#_drag-and-drop-views-and-panels">Drag and drop views and panels</a></h3>
+<p>VS Code has a default layout of views and panels in the Primary Side bar and Panel region but you can drag and drop views and panels between these regions. For example, you can drag and drop the Source Control view into the Panel region or put the Problems panel into the Primary Side bar:</p>
+<p><img src="/assets/docs/configure/custom-layout/non-default-layout.png" alt="The Source Control view in the Panel region and Problem panel in the Primary Side bar" loading="lazy"></p>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>Remember that you can reset a view and panel back to its default location with the <strong>Reset Location</strong> context menu item or all views and panels with the general <strong>View: Reset View Locations</strong> command.</p>
+</div><p>You can also add views and panels to existing view or panel to create groups. For example, you could move the Output panel to the Explorer view group by dragging over the Explorer Activity Bar item and then dropping into the view:</p>
+<p><img src="/assets/docs/configure/custom-layout/output-in-explorer-group.png" alt="Output panel moved to the Explorer view group" loading="lazy"></p>
+<p>You are not limited to using the mouse for moving views and panels. You can also customize layouts via the keyboard with the <strong>View: Move View</strong> and <strong>View: Move Focused View</strong> commands, where dropdowns let you pick the UI element to move and the destination, either a location like the Side bar or Panel region or an existing view or panel to create a group.</p>
+<h2 id="_notifications" data-needslink="_notifications"><a class="hash-link" href="#_notifications">Notifications</a></h2>
+<p>By default, Visual Studio Code shows notification toasts and the Notification Center in the bottom-right corner of the workbench. You can change the position of notifications with the <span class="setting"><span class="setting-dropdown" data-setting-id="workbench.notifications.position">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.notifications.position
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting (experimental).</p>
+<p>The available positions are:</p>
+<ul>
+<li><code>bottom-right</code> (default) - Notifications appear in the bottom-right corner. The bell icon is in the Status Bar.</li>
+<li><code>bottom-left</code> - Notifications appear in the bottom-left corner. The bell icon moves to the left side of the Status Bar.</li>
+<li><code>top-right</code> - Notifications slide in from the top-right corner, similar to OS-level notifications. The bell icon moves from the Status Bar to the title bar.</li>
+</ul>
+<p>You can also change the notification position directly from the Notification Center. Open the Notification Center by selecting the bell icon, and then select the position icon in the header toolbar to choose a different position.</p>
+<p>When the notification position is set to <code>top-right</code>, use the <span class="setting"><span class="setting-dropdown" data-setting-id="workbench.notifications.showInTitleBar">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.notifications.showInTitleBar
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting to control whether the bell icon is visible in the title bar.</p>
+<h2 id="_tool-bars" data-needslink="_tool-bars"><a class="hash-link" href="#_tool-bars">Tool bars</a></h2>
+<p>Most VS Code views and panels have tool bars displayed on the top right of their UI. For example, the Search view has a tool bar with actions such as <strong>Refresh</strong>, <strong>Clear Search Results</strong>, etc.:</p>
+<p><img src="/assets/docs/configure/custom-layout/search-view-toolbar.png" alt="Search view tool bar with hover over Clear Search Results action" loading="lazy"></p>
+<h3 id="_hide-items-in-tool-bars" data-needslink="_hide-items-in-tool-bars"><a class="hash-link" href="#_hide-items-in-tool-bars">Hide items in tool bars</a></h3>
+<p>If you think a tool bar is too busy and you'd like to hide less frequently used actions, you can right-click on any action and select its <strong>Hide</strong> command (for example <strong>Hide 'Clear Search Results'</strong>) or uncheck any of the actions from the dropdown. Hidden actions are moved to the <code>...</code> <strong>More Actions</strong> menu and can be invoked from there.</p>
+<p>To restore an action to the tool bar, right-click the tool bar button area and select the <strong>Reset Menu</strong> command or recheck the hidden action. To restore all menus in VS Code, run <strong>View: Reset All Menus</strong> from the Command Palette (<span class="dynamic-keybinding keybinding linux" data-commandid="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P" title="macOS: ⇧⌘P, Windows: Ctrl+Shift+P">Ctrl+Shift+P</span>).</p>
+<p><img src="/assets/docs/configure/custom-layout/reset-tool-bar-menu.png" alt="Search tool bar context menu with Reset menu command" loading="lazy"></p>
+<h2 id="_editor" data-needslink="_editor"><a class="hash-link" href="#_editor">Editor</a></h2>
+<p>You can customize the layout of the VS Code editor region independently of the workbench user interface. By default, the editor region displays useful features such as the minimap, breadcrumbs, editor tabs, and has optional UI such as Sticky Scroll. You can also adjust the layout of the editors themselves or move them into floating windows.</p>
+<h3 id="_minimap-and-breadcrumbs" data-needslink="_minimap-and-breadcrumbs"><a class="hash-link" href="#_minimap-and-breadcrumbs">Minimap and breadcrumbs</a></h3>
+<p>The <strong>View</strong> &gt; <strong>Appearance</strong> menu has a section for customizing the editor region. There you'll find toggles for:</p>
+<ul>
+<li><strong>Minimap</strong> - A <a href="/docs/editing/userinterface#_minimap">visual overview</a> of your current file. <strong>View: Toggle Minimap</strong>.</li>
+<li><strong>Breadcrumbs</strong> - Display <a href="/docs/editing/userinterface#_breadcrumbs">folder, file, and current symbol</a> information for the active file. <strong>View: Toggle Breadcrumbs</strong>.</li>
+<li><strong>Sticky Scroll</strong> - Display <a href="/docs/editing/userinterface#_sticky-scroll">nested symbol scopes</a> in the active file. <strong>View: Toggle Sticky Scroll</strong>.</li>
+</ul>
+<h3 id="_editor-groups" data-needslink="_editor-groups"><a class="hash-link" href="#_editor-groups">Editor groups</a></h3>
+<p>By default, each opened editor goes into the same <strong>editor group</strong> and adds a new editor tab to the right. You can create new editor groups in order to group similar or related files,  or to allow <a href="/docs/editing/userinterface#_side-by-side-editing">side by side editing</a> of the same file.</p>
+<p>Create a new editor group by dragging an editor to the side, or by using one of the <strong>Split</strong> commands in the editor tab context menu to duplicate the current editor into a new editor group to the left, right, above, or below.</p>
+<p><img src="/assets/docs/configure/custom-layout/split-editor-commands.png" alt="Split editor commands in the editor tab context menu" loading="lazy"></p>
+<p>The <strong>Split</strong> editor commands are also available from the <strong>View</strong> &gt; <strong>Editor Layout</strong> menu and through the Command Palette.</p>
+<p>If you'd like to go quickly between vertical and horizontal editor group layout, you can use the <strong>Toggle Vertical/Horizontal Editor Layout</strong> command (<span class="dynamic-keybinding keybinding linux" data-commandid="workbench.action.toggleEditorGroupLayout" data-osx="⌥⌘0" data-win="Shift+Alt+0" data-linux="Shift+Alt+0" title="macOS: ⌥⌘0, Windows: Shift+Alt+0">Shift+Alt+0</span>).</p>
+<h3 id="_maximize-and-expand-an-editor-group" data-needslink="_maximize-and-expand-an-editor-group"><a class="hash-link" href="#_maximize-and-expand-an-editor-group">Maximize and expand an editor group</a></h3>
+<p>When you work with multiple editor groups, you can temporarily give the active group more space. Double-click an editor tab to toggle the size of its editor group, or use the <strong>View: Toggle Maximize Editor Group</strong> command (<span class="dynamic-keybinding keybinding linux" data-commandid="workbench.action.toggleMaximizeEditorGroup" data-osx="⌘K ⌘M" data-win="Ctrl+K Ctrl+M" data-linux="Ctrl+K Ctrl+M" title="macOS: ⌘K ⌘M, Windows: Ctrl+K Ctrl+M">Ctrl+K Ctrl+M</span>).</p>
+<p>The <strong>Workbench &gt; Editor: Double Click Tab To Toggle Editor Group Sizes</strong> (<span class="setting"><span class="setting-dropdown" data-setting-id="workbench.editor.doubleClickTabToToggleEditorGroupSizes">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.editor.doubleClickTabToToggleEditorGroupSizes
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>) setting controls how the editor group is resized when you double-click a tab:</p>
+<ul>
+<li>
+<p><code>expand</code>: The editor group takes as much space as possible by making all other editor groups as small as possible. This is the default.</p>
+</li>
+<li>
+<p><code>maximize</code>: All other editor groups are hidden and the current editor group is maximized to fill the entire editor area.</p>
+</li>
+<li>
+<p><code>off</code>: No editor group is resized when you double-click a tab.</p>
+</li>
+</ul>
+<p>This setting applies only when <span class="setting"><span class="setting-dropdown" data-setting-id="workbench.editor.showTabs">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.editor.showTabs
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> is set to <code>multiple</code>.</p>
+<h3 id="_split-in-group" data-needslink="_split-in-group"><a class="hash-link" href="#_split-in-group">Split in group</a></h3>
+<p>You can also split an editor in the same group for side by side editing with the <strong>View: Split Editor in Group</strong> command (<span class="dynamic-keybinding keybinding linux" data-commandid="workbench.action.splitEditorInGroup" data-osx="⌘K ⇧⌘\" data-win="Ctrl+K Ctrl+Shift+\" data-linux="Ctrl+K Ctrl+Shift+\" title="macOS: ⌘K ⇧⌘\, Windows: Ctrl+K Ctrl+Shift+\">Ctrl+K Ctrl+Shift+\</span>).</p>
+<p>When using the split in group feature, there are specific commands for toggling this mode and navigating between the two split editors:</p>
+<ul>
+<li><strong>View: Split Editor in Group</strong> - Split the current editor.</li>
+<li><strong>View: Toggle Split Editor in Group</strong> - Toggle between split mode for the active editor.</li>
+<li><strong>View: Join Editor in Group</strong> - Go back to a single editor for the active file.</li>
+<li><strong>View: Toggle Layout of Split Editor in Group</strong> - Toggle between horizontal and vertical layout.</li>
+</ul>
+<p>To navigate between the sides:</p>
+<ul>
+<li><strong>View: Focus First Side in Active Editor</strong> - Move focus to the first (left or top) side of split editor.</li>
+<li><strong>View: Focus Second Side in Active Editor</strong> - Move focus to the second (right or bottom) side.</li>
+<li><strong>View: Focus Other Side in Active Editor</strong> - Toggle between the split editor sides.</li>
+</ul>
+<p>The <strong>Workbench &gt; Editor: Split in Group Layout</strong> (<span class="setting"><span class="setting-dropdown" data-setting-id="workbench.editor.splitInGroupLayout">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.editor.splitInGroupLayout
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>) <a href="/docs/configure/settings">setting</a> lets you set the preferred split editor layout to either horizontal (default) or vertical.</p>
+<h3 id="_grid-layout" data-needslink="_grid-layout"><a class="hash-link" href="#_grid-layout">Grid layout</a></h3>
+<p>If you'd like more control over the editor group layout, you can use the <a href="/docs/editing/userinterface#_grid-editor-layout">grid layout</a>, where you can have multiple rows and columns of editor groups visible. The <strong>View</strong> &gt; <strong>Editor Layout</strong> menu lists various editor layout options (for example, <strong>Two Columns</strong>, <strong>Three Columns</strong>, <strong>Grid (2x2)</strong>) and you can adjust the group sizes by grabbing and moving the sash between them.</p>
+<p><img src="/assets/docs/configure/custom-layout/grid-editor-layout.png" alt="Editor Grid 2x2 layout with the sash highlighted" loading="lazy"></p>
+<h3 id="_floating-windows" data-needslink="_floating-windows"><a class="hash-link" href="#_floating-windows">Floating windows</a></h3>
+<p>You can open an editor, the terminal, or specific views in a floating window. This is useful in a multi-monitor setup, where you can move the editor to another monitor or even to a different location on the same monitor.</p>
+<p>To open an editor in a floating window, drag it out of the main window and drop it anywhere outside of the current VS Code window.</p>
+<p><video src="/assets/docs/configure/custom-layout/floating-windows.mp4" title="Video showing dragging an editor tab outside the VS Code window to open the file in a floating window." autoplay="" loop="" controls="" muted=""></video></p>
+<p>Floating windows are capable of opening as many editors as you like in a grid layout. The windows will restore at their location after restart and reopen all the editors within.</p>
+<p>Another way to detach an editor is to right-click on an editor tab, and select the option <strong>Move into New Window</strong> (<code>workbench.action.moveEditorToNewWindow</code>) or <strong>Copy into New Window</strong> (<span class="dynamic-keybinding keybinding linux" data-commandid="workbench.action.copyEditorToNewWindow" data-osx="⌘K O" data-win="Ctrl+K O" data-linux="Ctrl+K O" title="macOS: ⌘K O, Windows: Ctrl+K O">Ctrl+K O</span>).</p>
+<p><img src="/assets/docs/configure/custom-layout/floating-windows.png" alt="Floating windows from editor tab menu" loading="lazy"></p>
+<p>To move an entire editor group, use the <strong>Move Editor Group into New Window</strong> (<span class="dynamic-keybinding keybinding linux" data-commandid="workbench.action.moveEditorGroupToNewWindow" title="workbench.action.moveEditorGroupToNewWindow">workbench.action.moveEditorGroupToNewWindow</span>) or <strong>Copy Editor Group into New Window</strong> (<span class="dynamic-keybinding keybinding linux" data-commandid="workbench.action.copyEditorGroupToNewWindow" title="workbench.action.copyEditorGroupToNewWindow">workbench.action.copyEditorGroupToNewWindow</span>) commands.</p>
+<h4 id="_compact-mode" data-needslink="_compact-mode"><a class="hash-link" href="#_compact-mode">Compact mode</a></h4>
+<p>To remove unnecessary UI elements from a floating window and make more room for the content, select the <strong>Set Compact Mode</strong> option the floating window title bar. Select it again to restore the floating window to its original mode.</p>
+<p><img src="/assets/docs/configure/custom-layout/compact-mode.png" alt="Floating window title bar with Compact Mode option highlighted" loading="lazy"></p>
+<h4 id="_pin-to-top" data-needslink="_pin-to-top"><a class="hash-link" href="#_pin-to-top">Pin to top</a></h4>
+<p>You can pin a floating window to the top of the screen by selecting the <strong>Set Always on Top</strong> option in the floating window title bar. This can be useful to keep a terminal or preview window always visible while you work in the main VS Code window. Select it again to unpin the floating window.</p>
+<p><img src="/assets/docs/configure/custom-layout/always-on-top.png" alt="Floating window title bar with Always on Top option highlighted" loading="lazy"></p>
+<h3 id="_pinned-tabs" data-needslink="_pinned-tabs"><a class="hash-link" href="#_pinned-tabs">Pinned tabs</a></h3>
+<p>If you'd like an editor tab to always be visible, you can pin it to the editor tab bar. You can pin an editor tab from either the context menu or using the command <strong>View: Pin Editor</strong> (<span class="dynamic-keybinding keybinding linux" data-commandid="workbench.action.pinEditor" data-osx="⌘K ⇧Enter" data-win="Ctrl+K Shift+Enter" data-linux="Ctrl+K Shift+Enter" title="macOS: ⌘K ⇧Enter, Windows: Ctrl+K Shift+Enter">Ctrl+K Shift+Enter</span>).</p>
+<p><img src="/assets/docs/configure/custom-layout/pinned-editor-tab.png" alt="Pinned editor tab with pin button highlighted" loading="lazy"></p>
+<p>Pinned tabs help access files that are important to you as:</p>
+<ul>
+<li>Pinned tabs always appear first before non-pinned tabs.</li>
+<li>They do not scroll out of view if you have many tabs opened.</li>
+<li>They do not close when using editor tab commands such as <strong>Close Others</strong> or <strong>Close All</strong>.</li>
+<li>They do not close even when you exceed a set limit of opened editors.</li>
+</ul>
+<p>Unpin an editor by clicking on the pin icon, using the <strong>Unpin</strong> editor tab context menu item, or the <strong>View: Unpin Editor</strong> command.</p>
+<p>You can choose how you'd like to display pinned editors with the <strong>Workbench &gt; Editor: Pinned Tab Sizing</strong> (<span class="setting"><span class="setting-dropdown" data-setting-id="workbench.editor.pinnedTabSizing">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.editor.pinnedTabSizing
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>) setting. The options are:</p>
+<ul>
+<li><code>normal</code>: A pinned tab inherits the look of other tabs (default)</li>
+<li><code>shrink</code>: A pinned tab shrinks to a fixed size showing parts of the editor label.</li>
+<li><code>compact</code>: A pinned tab will only show as icon or first letter of the editor label.</li>
+</ul>
+<p>You can also show pinned editor tabs on a separate row above the regular editor tab bar by setting <strong>Workbench &gt; Editor: Pinned Tabs On Separate Row</strong>. You can pin and unpin editors by dragging and dropping their tabs between the two rows.</p>
+<h3 id="_locked-editor-groups" data-needslink="_locked-editor-groups"><a class="hash-link" href="#_locked-editor-groups">Locked editor groups</a></h3>
+<p>When using multiple editors, it's common to have one or more that you want to always keep visible. The locked editor group feature, where an entire editor group is locked and visible, provides a stable display and any request to open a new editor will create it in another group. You can tell whether an editor group is locked by the lock icon in the editor group tool bar.</p>
+<p><img src="/assets/docs/configure/custom-layout/locked-editor-group.png" alt="Locked editor group with lock icon highlighted" loading="lazy"></p>
+<p>You can lock an editor group by selecting <strong>Lock Group</strong> from the editor tool bar <strong>More Actions</strong> <code>...</code> dropdown or running the <strong>View: Lock Editor Group</strong> command.</p>
+<p><img src="/assets/docs/configure/custom-layout/lock-group-command.png" alt="Lock Group command in the editor tool bar More Actions dropdown" loading="lazy"></p>
+<p>You can unlock an editor group by clicking on the lock icon or running the <strong>View: Unlock Editor Group</strong> command.</p>
+<p>Locked groups behave differently than unlocked groups:</p>
+<ul>
+<li>New editors will not open in a locked group unless explicitly moved there (for example, via drag and drop).</li>
+<li>If a new editor skips a locked group, it will either open in the most recently used unlocked group or create a new group to the side of the locked one.</li>
+<li>The locked state of an editor group is persisted and restored across restarts.</li>
+<li>You can lock empty groups as well, allowing for a more stable editor layout.</li>
+</ul>
+<p>The primary use case is for <a href="/docs/terminal/basics#_terminals-in-editor-area">terminals in the editor area</a>. For example, you might want to edit text on the left and have a terminal on the right that is always visible. When a terminal editor is created and moved to the side, it will automatically lock. This means that even when the terminal on the right is focused, opening a file will open it on the left side without needing to manually change focus first.</p>
+<p>Auto locking groups can be configured using the <span class="setting"><span class="setting-dropdown" data-setting-id="workbench.editor.autoLockGroups">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.editor.autoLockGroups
+    </span>
+    <button type="button" class="setting-dropdown-trigger" aria-haspopup="menu" aria-expanded="false" aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> setting, which defaults to only terminal editors but any editor type can be added to get the same behavior.</p>
+<p><img src="/assets/docs/configure/custom-layout/autolockgroup-setting.png" alt="Auto Lock Groups setting with Terminal checked in the Settings editor" loading="lazy"></p>
+<p>The commands related to editor group locking:</p>
+<ul>
+<li><strong>View: Lock Editor Group</strong> - Lock the active editor group.</li>
+<li><strong>View: Unlock Editor Group</strong> - Unlock the active locked editor group.</li>
+<li><strong>View: Toggle Editor Group Lock</strong> - Lock or unlock the active editor group.</li>
+</ul>
+<p>You must have more that one editor group for these commands to be available.</p>
+<h2 id="_next-steps" data-needslink="_next-steps"><a class="hash-link" href="#_next-steps">Next steps</a></h2>
+<p>Read on to find out about:</p>
+<ul>
+<li><a href="/docs/editing/userinterface">Visual Studio Code User Interface</a> - A quick orientation to VS Code.</li>
+<li><a href="/docs/editing/codebasics">Basic Editing</a> - Learn about the powerful VS Code editor.</li>
+<li><a href="/docs/editing/editingevolved">Code Navigation</a> - Move quickly through your source code.</li>
+</ul>
+
+                <div class="feedback" data-edit-url="https://vscode.dev/github/microsoft/vscode-docs/blob/main/docs/configure/custom-layout.md"><section class="feedback-section" aria-labelledby="feedback-heading"><h2 id="feedback-heading" class="sr-only">Help and support</h2><div class="feedback-container"><div class="feedback-left"><div class="widget"><form aria-label="Feedback"><div class="buttons"><h3 class="feedback-header">Was this page helpful?</h3><br><button value="1">Yes<span class="sr-only"> , this page was helpful</span></button><button value="0">No<span class="sr-only"> , this page was not helpful</span></button></div></form></div></div><div class="feedback-middle"><h3>Still need help?</h3><ul class="support-links"><li><a href="https://stackoverflow.com/questions/tagged/vscode" target="_blank" rel="noopener noreferrer"><img alt="" src="/assets/community/sidebar/stackoverflow.svg" aria-hidden="true">Ask the community</a></li><li><a href="https://go.microsoft.com/fwlink/?LinkID=533482" target="_blank" rel="noopener noreferrer"><img alt="" src="/assets/community/sidebar/github.svg" aria-hidden="true">Request features</a></li><li><a href="https://www.github.com/Microsoft/vscode/issues" target="_blank" rel="noopener noreferrer"><img alt="" src="/assets/community/sidebar/issue.svg" aria-hidden="true">Report issues</a></li></ul></div><div class="feedback-right"><h3>Help us improve</h3><div class="buttons"><button type="button">Edit this page</button></div></div></div></section></div>
+                
+                <div class="body-footer">02/04/2026</div>
+                
+            </main>
+        </div>
+        
+        <!-- Mobile connect widget -->
+        <div class="docs-mobile-widgets visible-xs">
+            <div class="connect-widget"><ul class="connect-links"><li><a href="/feed.xml" target="_blank"><img alt="RSS" src="/assets/community/sidebar/rss.svg">RSS Feed</a></li><li><a href="https://stackoverflow.com/questions/tagged/vscode" target="_blank" rel="noopener noreferrer"><img alt="Stackoverflow" src="/assets/community/sidebar/stackoverflow.svg">Ask questions</a></li><li><a href="https://go.microsoft.com/fwlink/?LinkID=533687" target="_blank" rel="noopener noreferrer"><img alt="Twitter" src="/assets/community/sidebar/twitter.svg">Follow @code</a></li><li id="connect-uservoice"><a href="https://go.microsoft.com/fwlink/?LinkID=533482" target="_blank" rel="noopener noreferrer"><img alt="GitHub" src="/assets/community/sidebar/github.svg">Request features</a></li><li id="connect-github"><a href="https://www.github.com/Microsoft/vscode/issues" target="_blank" rel="noopener noreferrer"><img alt="Issues" src="/assets/community/sidebar/issue.svg">Report issues</a></li><li id="connect-youtube"><a href="https://www.youtube.com/channel/UCs5Y5_7XK8HLDX0SLNwkd3w" target="_blank" rel="noopener noreferrer"><img alt="YouTube" src="/assets/community/sidebar/youtube.svg">Watch videos</a></li></ul></div>
+        </div>
+    </div>
+</div>
+		</main>
+	</div>
+
+	<div id="search-popup-overlay" class="search-popup-overlay" role="dialog" aria-modal="true" aria-label="Search">
+		<div class="search-popup-container">
+			<div class="search-popup-header">
+				<form class="search-popup-form">
+					<div class="input-group">
+						<input type="text" name="q" class="search-box form-control" placeholder="Search the website" aria-label="Search text" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="search-results-listbox" aria-activedescendant="">
+						<span class="input-group-btn">
+							<button tabindex="0" class="btn" type="submit" aria-label="Search">
+								<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="Search">
+								<img class="search-icon-light" src="/assets/icons/search.svg" alt="Search">
+							</button>
+						</span>
+					</div>
+				</form>
+				<button class="search-popup-close" type="button" aria-label="Close search"><i class="codicon codicon-close" aria-hidden="true"></i></button>
+			</div>
+			<div class="search-popup-results">
+				<ul class="search-popup-results-list" id="search-results-listbox" role="listbox" aria-label="Search results"></ul>
+			</div>
+			<div class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="search-popup-status"></div>
+		</div>
+	</div>
+
+
+	<footer role="contentinfo" class="container">
+		<div class="footer-container">
+			<div class="footer-row">
+				<div class="footer-social">
+					<ul class="links">
+						<li>
+							<a href="https://github.com/microsoft/vscode"><img src="/assets/icons/github-icon.svg" alt="VS Code on Github"></a>
+						</li>
+						<li>
+							<a href="https://go.microsoft.com/fwlink/?LinkID=533687"><img src="/assets/icons/x-icon.svg" class="x-icon" alt="Follow us on X"></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/showcase/vs-code"><img src="/assets/icons/linkedin-icon.svg" alt="VS Code on LinkedIn"></a>
+						</li>
+						<li>
+							<a href="https://bsky.app/profile/vscode.dev"><img src="/assets/icons/bluesky-icon.svg" alt="VS Code on Bluesky"></a>
+						</li>
+						<li>
+							<a href="https://www.reddit.com/r/vscode/"><img src="/assets/icons/reddit-icon.svg" alt="Join the VS Code community on Reddit"></a>
+						</li>
+						<li>
+							<a href="https://www.vscodepodcast.com"><img src="/assets/icons/podcast-icon.svg" alt="The VS Code Insiders Podcast"></a>
+						</li>
+						<li>
+							<a href="https://www.tiktok.com/@vscode"><img src="/assets/icons/tiktok-icon.svg" alt="VS Code on TikTok"></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@code"><img src="/assets/icons/youtube-icon.svg" alt="VS Code on YouTube"></a>
+						</li>
+						<script>
+							function manageConsent() {
+								if (siteConsent && siteConsent.isConsentRequired) {
+									siteConsent.manageConsent();
+								}
+							}
+						</script>
+					</ul>
+					<a id="footer-microsoft-link" class="microsoft-logo" href="https://www.microsoft.com">
+						<img src="/assets/icons/microsoft.svg" alt="Microsoft homepage">
+					</a>
+				</div>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li><a id="footer-support-link" href="https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=d66407ed-3967-b000-4cfb-2c318cad363d" target="_blank" rel="noopener" title="Get support for VS Code" aria-label="Get support for VS Code (opens in new tab)">Support</a></li>
+					<li><a id="footer-privacy-link" href="https://go.microsoft.com/fwlink/?LinkId=521839" target="_blank" rel="noopener" title="View the Microsoft privacy statement" aria-label="Microsoft privacy statement (opens in new tab)">Privacy</a></li>
+					<li style="display: none;"><a id="footer-cookie-link" style="cursor: pointer;" onclick="manageConsent()" target="_blank" rel="noopener">Manage Cookies</a></li>
+					<li><a id="footer-terms-link" href="https://www.microsoft.com/legal/terms-of-use" target="_blank" rel="noopener" title="View the Microsoft Terms of Use" aria-label="Microsoft Terms of Use (opens in new tab)">Terms of Use</a></li>
+					<li><a id="footer-license-link" href="/License" target="_blank" rel="noopener" title="View the Visual Studio Code license" aria-label="Visual Studio Code license (opens in new tab)">License</a></li>
+				</ul>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li>
+						<svg class="privacy-choices" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43">
+							<title>Your Privacy Choices Opt-Out Icon</title>
+							<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+							<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+							<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+							<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+						</svg>
+						<a id="footer-privacy-choices-link" href="https://aka.ms/YourCaliforniaPrivacyChoices" target="_blank" rel="noopener" title="View Your Privacy Choices" aria-label="Your Privacy Choices (opens in new tab)">Your Privacy Choices</a></li>
+					<li><a id="footer-consumer-health-privacy-link" href="https://go.microsoft.com/fwlink/?linkid=2259814" target="_blank" rel="noopener" title="View the Microsoft Consumer Health Privacy policy" aria-label="Microsoft Consumer Health Privacy policy (opens in new tab)">Consumer Health Privacy</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="module">
+		document.addEventListener('DOMContentLoaded', () => {
+			const copilotDeepLinks = document.querySelectorAll('.copilot-deep-link');
+			if (copilotDeepLinks.length === 0) {
+				return;
+			}
+			if (window.innerWidth < 992) {
+				for (const link of copilotDeepLinks) {
+					link.href = 'https://aka.ms/vscode-activatecopilotfree';
+				}
+			}
+		});
+	</script>
+
+	<script src="/dist/index.js"></script>
+
+	
+
+	<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type" : "SoftwareApplication",
+			"name" : "Visual Studio Code",
+			"softwareVersion": "1.132",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			},
+			"applicationCategory": "DeveloperApplication",
+			"applicationSubCategory": "AI Code Editor",
+			"description": "Visual Studio Code is a free, open source AI code editor for agent-first development. Build with AI agents, manage multi-agent workflows, and code across any environment.",
+			"alternateName": "VS Code",
+			"datePublished": "2021-11-03",
+			"operatingSystem": "Mac, Linux, Windows",
+			"logo": "https://code.visualstudio.com/assets/apple-touch-icon.png",
+			"screenshot": "https://code.visualstudio.com/assets/images/product-screenshot.png",
+			"releaseNotes": "https://code.visualstudio.com/updates",
+			"downloadUrl": "https://code.visualstudio.com/download",
+			"license": "https://code.visualstudio.com/license",
+			"softwareRequirements": "https://code.visualstudio.com/docs/supporting/requirements",
+			"url" : "https://code.visualstudio.com",
+			"author": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"maintainer": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://code.visualstudio.com/Search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			},
+			"sameAs" : [
+				"https://en.wikipedia.org/wiki/Visual_Studio_Code",
+				"https://twitter.com/code",
+				"https://www.youtube.com/code",
+				"https://www.tiktok.com/@vscode",
+				"https://github.com/microsoft/vscode"
+			]
+		}
+	</script>
+
+
+</body></html>

@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="awa-expId" content="cv-downloadv2:1227264;" />
+	<meta name="awa-env" content="prod" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="hNs7DXrTySP_X-0P_AC0WulAXvUwgSXEmgfcO2r79dw" />
+
+	<!-- Twitter and Facebook OpenGraph Metadata-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@code" />
+
+	<meta name="description" content="Customize keyboard shortcuts in Visual Studio Code, including keybinding rules, command arguments, chords, and system-wide shortcuts." />
+<meta name="keywords" content="" />
+<meta name="ms.prod" content="vs-code" />
+<meta name="ms.TOCTitle" content="" />
+<meta name="ms.ContentId" content="045980C1-62C7-4E8E-8CE4-BAD722FFE31E" />
+<meta name="ms.date" content="08/05/2026" />
+<meta name="ms.topic" content="conceptual" />
+<!-- Twitter and Facebook OpenGraph Metadata-->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:url" content="https://code.visualstudio.com/docs/configure/keybindings" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Keyboard shortcuts for Visual Studio Code" />
+<meta property="og:description" content="Customize keyboard shortcuts in Visual Studio Code, including keybinding rules, command arguments, chords, and system-wide shortcuts." />
+
+<meta property="og:image" content="https://code.visualstudio.com/opengraphimg/generated/docs/configure/keybindings.webp" />
+
+
+
+	<link rel="shortcut icon" href="/assets/favicon.ico" sizes="128x128" />
+	<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+	<title>Keyboard shortcuts for Visual Studio Code</title>
+
+	<link rel="stylesheet" href="/dist/style.css">
+
+	<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
+	<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-4.min.js"></script>
+	
+	<script type="text/javascript">
+	// Leave as var; siteConsent is initialized and referenced elsewhere.
+	var siteConsent = null;
+	
+	const GPC_DataSharingOptIn = false;
+	WcpConsent.onInitCallback(function () {
+		window.appInsights = new oneDS.ApplicationInsights();
+		window.appInsights.initialize({
+			instrumentationKey: "1a3eb3104447440391ad5f2a6ee06a0a-62879566-bc58-4741-9650-302bf2af703f-7103",
+			propertyConfiguration: {
+				userConsented: false,
+				gpcDataSharingOptIn: false,
+				callback: {
+					userConsentDetails: siteConsent ? siteConsent.getConsent : undefined
+				},
+			},
+			cookieCfg: {
+				ignoreCookies: ["MSCC"]
+			},
+			webAnalyticsConfiguration:{ // Web Analytics Plugin configuration
+				urlCollectQuery: true,
+				urlCollectHash: true,
+				autoCapture: {
+					scroll: true,
+					pageView: true,
+					onLoad: true,
+					onUnload: true,
+					click: true,
+					resize: true,
+					jsError: true
+				}
+			}
+		}, []);
+	
+		window.appInsights.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = GPC_DataSharingOptIn;
+	});
+	</script>
+	<link rel="alternate" type="application/atom+xml" title="RSS Feed for code.visualstudio.com" href="/feed.xml" />
+</head>
+
+<body >
+	<!-- Setting theme here to avoid FOUC -->
+	<script>
+		function setTheme(themeName) {
+			if (themeName === 'dark') {
+				document.documentElement.removeAttribute('data-theme'); // dark is default, so no data-theme attribute needed
+			}
+
+			if (themeName === 'light') {
+				document.documentElement.setAttribute('data-theme', themeName);
+			}
+			return;
+		}
+
+		// Determine initial theme: user preference or system preference
+		let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		setTheme(theme); // Apply the initial theme
+
+		// Listen for changes in the system theme preference
+		window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+			if (!localStorage.getItem('theme')) { // Only if no user preference is saved
+				setTheme(e.matches ? 'dark' : 'light');
+			}
+		});
+	</script>
+
+	<div id="main">
+		<div class="navbar-fixed-container">
+			<div class="navbar navbar-inverse navbar-fixed-top ">
+				<div id='cookie-banner'></div>		<nav role="navigation" aria-label="Top Level">
+					<div class="container">
+						<div class="nav navbar-header">
+							<a class="navbar-brand" href="/"><span>Visual Studio Code</span></a>
+						</div>
+						<div class="navbar-collapse collapse">
+							<ul class="nav navbar-nav navbar-left" data-m='{"cN":"top-navbar","aN":"navigation"}'>
+								<li class="nav-dropdown">
+									<a id="nav-features" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Features","aN":"navigation","cT":"toggle"}'>
+										Features <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/features/agents" data-m='{"cN":"Agents","aN":"navigation - Features"}'>Agents</a></li>
+									</ul>
+								</li>
+								<li class="nav-dropdown active">
+									<a id="nav-docs" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Docs","aN":"navigation","cT":"toggle"}'>
+										Docs <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/docs" data-m='{"cN":"Documentation","aN":"navigation - Docs"}'>Documentation</a></li>
+										<li role="none"><a role="menuitem" href="/api" data-m='{"cN":"API","aN":"navigation - Docs"}'>API</a></li>
+										<li role="none"><a role="menuitem" id="nav-faqs" href="/docs/supporting/faq" data-m='{"cN":"FAQ","aN":"navigation - Docs"}'>FAQ</a></li>
+									</ul>
+								</li>
+								<li ><a id="nav-updates" href="/updates" data-m='{"cN":"Release Notes"}'>Release Notes</a>
+								</li>
+								<li ><a id="nav-blogs" href="/blogs" data-m='{"cN":"Blog"}'>Blog</a></li>
+								<li ><a id="nav-learn" href="/learn" data-m='{"cN":"Learn"}'>Learn</a></li>
+								<li><a id="nav-events" href="https://aka.ms/vscode/live" target="_blank" rel="noopener" data-m='{"cN":"Events"}'>Events<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+								<li class="nav-dropdown">
+									<a id="nav-resources" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Resources","aN":"navigation","cT":"toggle"}'>
+										Resources <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="https://marketplace.visualstudio.com/VSCode" target="_blank" rel="noopener"
+												id="nav-extensions" data-m='{"cN":"Extensions","aN":"navigation - Resources"}'>Extensions<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+										<li role="none"><a role="menuitem" id="nav-mcp" href="/mcp" target="_blank" rel="noopener" data-m='{"cN":"MCP","aN":"navigation - Resources"}'>MCP<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right" role="presentation">
+								<li>
+									<a class="link-button" href="/download" id="nav-download">
+										<span>Download</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="navbar-actions">
+							<div class="search" role="presentation">
+								<div class="nav-search search-control" role="button" tabindex="0" aria-label="Open search dialog">
+									<div class="input-group" role="presentation">
+										<span class="input-group-btn">
+											<span class="btn search-icon-container" aria-hidden="true">
+												<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="" />
+												<img class="search-icon-light" src="/assets/icons/search.svg" alt="" />
+											</span>
+										</span>
+										<span class="search-box form-control" aria-hidden="true" role="presentation"></span>
+										<span class="search-shortcut-placeholder">Search</span>
+										<span class="search-shortcut-overlay"></span>
+									</div>
+								</div>					</div>
+							<button type="button" class="theme-switch" id="theme-toggle">
+								<img class="theme-icon-light" src="/assets/icons/theme-light.svg" alt="Switch to the dark theme" />
+								<img class="theme-icon-dark" src="/assets/icons/theme-dark.svg" alt="Switch to the light theme" />
+							</button>
+							<a class="link-button navbar-actions-download" href="/Download">
+								<span>Download</span>
+							</a>
+						</div>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
+							aria-label="Expand and Collapse Menu">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</div>		<div data-announcement-version="2026-06-01-vscode-live-build" class="updates-banner ">
+			<div class="container">
+				<p class="message"><a href="https://aka.ms/VSCode/Livestage?source=vsc-website-banner" target="_blank" rel="noopener">📼 Rewatch VS Code Live at MS Build 2026</a></p>
+			</div>
+			<div tabindex="0" role="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn"><span class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span></div>
+		</div>
+		<script>
+			// Hide the banner synchronously (before first paint) if this version was
+			// already dismissed, to avoid a flicker/layout shift once the main bundle loads.
+			(function () {
+				try {
+					var banner = document.currentScript.previousElementSibling;
+					if (banner && localStorage.getItem('dismissedAnnouncementVersion') === banner.getAttribute('data-announcement-version')) {
+						banner.classList.add('js-hidden');
+					}
+				} catch (e) { /* ignore */ }
+			})();
+		</script>
+		<!-- This div wraps around the entire site -->
+		<!-- The body itself should already have a main tag -->
+		<main id="main-content">
+			<script>
+    function closeReportIssue() {
+        var element = document.getElementById('surveypopup');
+        element.parentElement.removeChild(element);
+    }
+
+    function reportIssue(tutorial, page) {
+        var div = document.createElement('div');
+        div.innerHTML = '<div id="surveypopup" class="overlay visible"><div class="surveypopup"><div id="surveytitle">Tell us more<a href="javascript:void(0)" onclick="closeReportIssue()">X</a></div><div id="surveydiv"><iframe frameBorder="0" scrolling="0" src="https://www.research.net/r/PWZWZ52?tutorial=' + tutorial + '&step=' + page + '"></iframe></div></div></div>';
+        document.body.appendChild(div.children[0]);
+    }
+</script>
+
+<div class="body-content docs docs-github-layout">
+    <div class="docs-layout-wrapper">
+        <!-- Left sidebar - Table of Contents -->
+        <aside class="docs-left-sidebar">
+            <nav id="docs-navbar" aria-label="Topics" class="docs-nav visible-md visible-lg" data-m='{"cN":"docs-left-nav","aN":"navigation"}'>
+              <div class="docs-nav-back">
+                <a class="area" href="/docs" aria-label="Back to all documentation"><span class="codicon codicon-arrow-left" aria-hidden="true"></span><span>All Docs</span></a>
+              </div>
+              <h4>Core Editor</h4>
+              <ul class="nav" id="main-nav">
+              <li >
+                <a href="/docs/core-editor/overview" data-m='{"cN":"Overview"}' >Overview</a>
+              </li>
+              
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#editing-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Write code","cT":"toggle"}'>Write code</a>
+              <ul id="editing-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/editing/getting-started" data-m='{"cN":"Tutorial","aN":"Write code"}' >Tutorial</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/userinterface" data-m='{"cN":"User Interface","aN":"Write code"}' >User Interface</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/tips-and-tricks" data-m='{"cN":"Tips and Tricks","aN":"Write code"}' >Tips and Tricks</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/codebasics" data-m='{"cN":"Basic Editing","aN":"Write code"}' >Basic Editing</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/intellisense" data-m='{"cN":"IntelliSense","aN":"Write code"}' >IntelliSense</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/ai-powered-suggestions" data-m='{"cN":"Inline Suggestions","aN":"Write code"}' >Inline Suggestions</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/copilot-smart-actions" data-m='{"cN":"Smart Actions","aN":"Write code"}' >Smart Actions</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/editingevolved" data-m='{"cN":"Code Navigation","aN":"Write code"}' >Code Navigation</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/refactoring" data-m='{"cN":"Refactoring","aN":"Write code"}' >Refactoring</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/userdefinedsnippets" data-m='{"cN":"Snippets","aN":"Write code"}' >Snippets</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#editing-workspaces-articles" data-toggle="collapse" data-m='{"cN":"Workspaces","aN":"Write code","cT":"toggle"}'>Workspaces</a>
+              <ul id="editing-workspaces-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/editing/workspaces/workspaces" data-m='{"cN":"Overview","aN":"Write code - Workspaces"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/workspaces/multi-root-workspaces" data-m='{"cN":"Multi-Root Workspaces","aN":"Write code - Workspaces"}' >Multi-Root Workspaces</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/editing/workspaces/workspace-trust" data-m='{"cN":"Workspace Trust","aN":"Write code - Workspaces"}' >Workspace Trust</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+              </ul>
+            </li>
+                
+            <li class="panel active expanded">
+              <a class="area" role="button" href="#configure-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Configure the editor","cT":"toggle"}'>Configure the editor</a>
+              <ul id="configure-articles" class="collapse in">
+            
+                    <li >
+                      <a href="/docs/configure/locales" data-m='{"cN":"Display Language","aN":"Configure the editor"}' >Display Language</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/custom-layout" data-m='{"cN":"Layout","aN":"Configure the editor"}' >Layout</a>
+                    </li>
+                      
+                    <li class="active">
+                      <a href="/docs/configure/keybindings" data-m='{"cN":"Keyboard Shortcuts","aN":"Configure the editor"}' aria-label="Current Page: Keyboard Shortcuts">Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/settings" data-m='{"cN":"Settings","aN":"Configure the editor"}' >Settings</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/settings-sync" data-m='{"cN":"Settings Sync","aN":"Configure the editor"}' >Settings Sync</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-extensions-articles" data-toggle="collapse" data-m='{"cN":"Extensions","aN":"Configure the editor","cT":"toggle"}'>Extensions</a>
+              <ul id="configure-extensions-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/extensions/extensions" data-m='{"cN":"Overview","aN":"Configure the editor - Extensions"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/extensions/extension-marketplace" data-m='{"cN":"Extension Marketplace","aN":"Configure the editor - Extensions"}' >Extension Marketplace</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/extensions/extension-runtime-security" data-m='{"cN":"Extension Runtime Security","aN":"Configure the editor - Extensions"}' >Extension Runtime Security</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li >
+                      <a href="/docs/configure/themes" data-m='{"cN":"Themes","aN":"Configure the editor"}' >Themes</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/profiles" data-m='{"cN":"Profiles","aN":"Configure the editor"}' >Profiles</a>
+                    </li>
+                      
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#configure-accessibility-articles" data-toggle="collapse" data-m='{"cN":"Accessibility","aN":"Configure the editor","cT":"toggle"}'>Accessibility</a>
+              <ul id="configure-accessibility-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/configure/accessibility/accessibility" data-m='{"cN":"Overview","aN":"Configure the editor - Accessibility"}' >Overview</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/accessibility/voice" data-m='{"cN":"Voice Interactions","aN":"Configure the editor - Accessibility"}' >Voice Interactions</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                    
+                    <li >
+                      <a href="/docs/configure/command-line" data-m='{"cN":"Command Line Interface","aN":"Configure the editor"}' >Command Line Interface</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/configure/telemetry" data-m='{"cN":"Telemetry","aN":"Configure the editor"}' >Telemetry</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+            <li class="panel collapsed">
+              <a class="area" role="button" href="#reference-articles" data-parent="#main-nav" data-toggle="collapse" data-m='{"cN":"Reference","cT":"toggle"}'>Reference</a>
+              <ul id="reference-articles" class="collapse ">
+            
+                    <li >
+                      <a href="/docs/reference/default-keybindings" data-m='{"cN":"Default Keyboard Shortcuts","aN":"Reference"}' >Default Keyboard Shortcuts</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/default-settings" data-m='{"cN":"Default Settings","aN":"Reference"}' >Default Settings</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/variables-reference" data-m='{"cN":"Substitution Variables","aN":"Reference"}' >Substitution Variables</a>
+                    </li>
+                      
+                    <li >
+                      <a href="/docs/reference/tasks-appendix" data-m='{"cN":"Tasks Schema","aN":"Reference"}' >Tasks Schema</a>
+                    </li>
+                      
+              </ul>
+            </li>
+                
+              </ul>
+            </nav>
+            
+            <nav id="small-nav" aria-label="Topics" class="docs-nav hidden-md hidden-lg">
+              <label class="faux-h4" for="small-nav-dropdown-core-editor">Topics</label>
+              <select id="small-nav-dropdown-core-editor" aria-label="topics">
+                <option value="/docs/core-editor/overview" >Overview</option>
+            
+              <optgroup label="Write code">
+            
+                    <option value="/docs/editing/getting-started" >Tutorial</option>
+                    
+                    <option value="/docs/editing/userinterface" >User Interface</option>
+                    
+                    <option value="/docs/editing/tips-and-tricks" >Tips and Tricks</option>
+                    
+                    <option value="/docs/editing/codebasics" >Basic Editing</option>
+                    
+                    <option value="/docs/editing/intellisense" >IntelliSense</option>
+                    
+                    <option value="/docs/editing/ai-powered-suggestions" >Inline Suggestions</option>
+                    
+                    <option value="/docs/editing/copilot-smart-actions" >Smart Actions</option>
+                    
+                    <option value="/docs/editing/editingevolved" >Code Navigation</option>
+                    
+                    <option value="/docs/editing/refactoring" >Refactoring</option>
+                    
+                    <option value="/docs/editing/userdefinedsnippets" >Snippets</option>
+                    
+                    <option disabled>Workspaces</option>
+            
+                    <option value="/docs/editing/workspaces/workspaces" >    Overview</option>
+                    
+                    <option value="/docs/editing/workspaces/multi-root-workspaces" >    Multi-Root Workspaces</option>
+                    
+                    <option value="/docs/editing/workspaces/workspace-trust" >    Workspace Trust</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Configure the editor">
+            
+                    <option value="/docs/configure/locales" >Display Language</option>
+                    
+                    <option value="/docs/configure/custom-layout" >Layout</option>
+                    
+                    <option value="/docs/configure/keybindings" selected>Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/configure/settings" >Settings</option>
+                    
+                    <option value="/docs/configure/settings-sync" >Settings Sync</option>
+                    
+                    <option disabled>Extensions</option>
+            
+                    <option value="/docs/configure/extensions/extensions" >    Overview</option>
+                    
+                    <option value="/docs/configure/extensions/extension-marketplace" >    Extension Marketplace</option>
+                    
+                    <option value="/docs/configure/extensions/extension-runtime-security" >    Extension Runtime Security</option>
+                    
+                    <option value="/docs/configure/themes" >Themes</option>
+                    
+                    <option value="/docs/configure/profiles" >Profiles</option>
+                    
+                    <option disabled>Accessibility</option>
+            
+                    <option value="/docs/configure/accessibility/accessibility" >    Overview</option>
+                    
+                    <option value="/docs/configure/accessibility/voice" >    Voice Interactions</option>
+                    
+                    <option value="/docs/configure/command-line" >Command Line Interface</option>
+                    
+                    <option value="/docs/configure/telemetry" >Telemetry</option>
+                    
+              </optgroup>
+              
+              <optgroup label="Reference">
+            
+                    <option value="/docs/reference/default-keybindings" >Default Keyboard Shortcuts</option>
+                    
+                    <option value="/docs/reference/default-settings" >Default Settings</option>
+                    
+                    <option value="/docs/reference/variables-reference" >Substitution Variables</option>
+                    
+                    <option value="/docs/reference/tasks-appendix" >Tasks Schema</option>
+                    
+              </optgroup>
+              
+              </select>
+            </nav>        </aside>
+        
+        <!-- Content wrapper contains main content + right sidebar -->
+        <div class="docs-content-wrapper">
+            <!-- Right sidebar - On This Page -->
+            <aside class="docs-right-sidebar hidden-xs">
+                <div class="docs-markdown-actions">
+                    <div class="docs-markdown-dropdown" data-raw-url="/raw/docs/configure/keybindings.md">
+                        <button type="button" class="docs-markdown-btn-main" data-action="copy-markdown" aria-label="Copy as Markdown">
+                            <span class="codicon codicon-copy" aria-hidden="true"></span>
+                            <span>Copy as Markdown</span>
+                        </button>
+                        <button type="button" class="docs-markdown-btn-trigger" aria-haspopup="true" aria-expanded="false" aria-label="More Markdown options">
+                            <span class="codicon codicon-chevron-down docs-markdown-chevron" aria-hidden="true"></span>
+                        </button>
+                        <ul class="docs-markdown-menu" role="menu" aria-label="Markdown options">
+                            <li role="menuitem" tabindex="0" data-action="copy-markdown">
+                                <span class="codicon codicon-copy" aria-hidden="true"></span>
+                                <span>Copy as Markdown</span>
+                            </li>
+                            <li role="menuitem" tabindex="0" data-action="view-markdown">
+                                <span class="codicon codicon-file" aria-hidden="true"></span>
+                                <span>View as Markdown</span>
+                                <span class="codicon codicon-link-external" aria-hidden="true"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav id="docs-subnavbar" aria-label="On Page">
+                    
+                    <h4><span class="sr-only">On this page there are 19 sections</span><span
+                            aria-hidden="true">On this page</span></h4>
+                    <ul class="nav">
+                        
+                        <li><a href="#_keyboard-shortcuts-editor">Keyboard Shortcuts editor</a></li>
+                        
+                        <li><a href="#_customize-shortcuts-for-ui-actions">Customize shortcuts for UI actions</a></li>
+                        
+                        <li><a href="#_keymap-extensions">Keymap extensions</a></li>
+                        
+                        <li><a href="#_keyboard-shortcuts-reference">Keyboard Shortcuts reference</a></li>
+                        
+                        <li><a href="#_detecting-keyboard-shortcut-conflicts">Detecting keyboard shortcut conflicts</a></li>
+                        
+                        <li><a href="#_troubleshooting-keyboard-shortcuts">Troubleshooting keyboard shortcuts</a></li>
+                        
+                        <li><a href="#_viewing-modified-keyboard-shortcuts">Viewing modified keyboard shortcuts</a></li>
+                        
+                        <li><a href="#_advanced-customization">Advanced customization</a></li>
+                        
+                        <li><a href="#_keyboard-rules">Keyboard rules</a></li>
+                        
+                        <li><a href="#_accepted-keys">Accepted keys</a></li>
+                        
+                        <li><a href="#_command-arguments">Command arguments</a></li>
+                        
+                        <li><a href="#_running-multiple-commands">Running multiple commands</a></li>
+                        
+                        <li><a href="#_removing-a-keyboard-shortcut">Removing a keyboard shortcut</a></li>
+                        
+                        <li><a href="#_keyboard-layouts">Keyboard layouts</a></li>
+                        
+                        <li><a href="#_keyboard-layout-independent-bindings">Keyboard layout-independent bindings</a></li>
+                        
+                        <li><a href="#_when-clause-contexts">when clause contexts</a></li>
+                        
+                        <li><a href="#_custom-keyboard-shortcuts-for-refactorings">Custom keyboard shortcuts for refactorings</a></li>
+                        
+                        <li><a href="#_related-resources">Related resources</a></li>
+                        
+                        <li><a href="#_common-questions">Common questions</a></li>
+                        
+                    </ul>
+                    
+                </nav>
+                
+            </aside>
+            
+            <!-- Main article content -->
+            <main class="docs-main-content body">
+                <h1>Keyboard shortcuts for Visual Studio Code</h1>
+<p>Visual Studio Code lets you perform most tasks directly from the keyboard. This article explains how you can modify the default keyboard shortcuts that come with VS Code.</p>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>If you visit this page on a Mac, you will see the keyboard shortcuts for the Mac. If you visit using Windows or Linux, you will see the keys for that platform. If you need the keyboard shortcuts for another platform, hover your mouse over the key you are interested in.</p>
+</div><h2 id="_keyboard-shortcuts-editor" data-needslink="_keyboard-shortcuts-editor">Keyboard Shortcuts editor</h2>
+<p>VS Code provides a rich keyboard shortcut editing experience with the Keyboard Shortcuts editor. The editor lists all available commands with and without keyboard shortcuts, and enables you to change, remove, or reset their keyboard shortcuts using the available actions. To find commands or keyboard shortcuts, use the search box and enter a command or shortcut to filter the list.</p>
+<p>To open the Keyboard Shortcuts editor, select the <span class="filePreferencesPath"><strong>File</strong> &gt; <strong>Preferences</strong></span> &gt; <strong>Keyboard Shortcuts</strong> menu, or use the <strong>Preferences: Open Keyboard Shortcuts</strong> command (<span class="dynamic-keybinding" data-commandId="workbench.action.openGlobalKeybindings" data-osx="⌘K ⌘S" data-win="Ctrl+K Ctrl+S" data-linux="Ctrl+K Ctrl+S"><span class="keybinding">⌘K ⌘S</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+S</span>)</span>) in the Command Palette. The Keyboard Shortcuts editor opens by default in a <a href="/docs/editing/userinterface#_modal-editors">modal overlay</a> on top of the editor area.</p>
+<p><img src="/assets/docs/configure/keybinding/keyboard-shortcuts.gif" alt="Keyboard Shortcuts" loading="lazy"></p>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>The keyboard shortcuts match your current keyboard layout. For example, keyboard shortcut <span class="keybinding">Cmd+\</span> in US keyboard layout will be shown as <span class="keybinding">Ctrl+Shift+Alt+Cmd+7</span> when the layout is changed to German. The dialog to change a keyboard shortcut assigns the correct and desired keyboard shortcut according to your keyboard layout.</p>
+</div><h2 id="_customize-shortcuts-for-ui-actions" data-needslink="_customize-shortcuts-for-ui-actions">Customize shortcuts for UI actions</h2>
+<p>To customize a keyboard shortcut for a UI action, right-click on any action item in your workbench, and select <strong>Configure Keybinding</strong>. This opens the Keyboard Shortcuts editor, filtered to the corresponding command. If the action has a <code>when</code> clause, it's automatically included, making it easier to set up your keyboard shortcuts just the way you need them.</p>
+<p><video src="/assets/docs/configure/keybinding/customize-keybinding.mp4" title="Video that shows how to customize the keyboard shortcut for the split editor action." autoplay loop controls muted></video></p>
+<h2 id="_keymap-extensions" data-needslink="_keymap-extensions">Keymap extensions</h2>
+<p>Keymap extensions modify the VS Code shortcuts to match those of other editors, so you don't need to learn new keyboard shortcuts.</p>
+<p>Select the <span class="filePreferencesPath"><strong>File</strong> &gt; <strong>Preferences</strong></span> &gt; <strong>Migrate Keyboard Shortcuts from...</strong> menu to get a list of popular keymap extensions. There is also a <a href="https://marketplace.visualstudio.com/search?target=VSCode&amp;category=Keymaps&amp;sortBy=Installs" class="external-link" target="_blank">Keymaps category</a> of extensions in the Marketplace.</p>
+<div class="marketplace-extensions-curated-keymaps"></div>
+<h2 id="_keyboard-shortcuts-reference" data-needslink="_keyboard-shortcuts-reference">Keyboard Shortcuts reference</h2>
+<p>We have a printable version of the default keyboard shortcuts. Select <strong>Help</strong> &gt; <strong>Keyboard Shortcut Reference</strong> to display a condensed PDF version suitable for printing as an easy reference.</p>
+<p>The following links provide access to the three platform-specific versions (US English keyboard):</p>
+<ul>
+<li><a href="https://go.microsoft.com/fwlink/?linkid=832145" class="external-link" target="_blank">Windows</a></li>
+<li><a href="https://go.microsoft.com/fwlink/?linkid=832143" class="external-link" target="_blank">macOS</a></li>
+<li><a href="https://go.microsoft.com/fwlink/?linkid=832144" class="external-link" target="_blank">Linux</a></li>
+</ul>
+<h2 id="_detecting-keyboard-shortcut-conflicts" data-needslink="_detecting-keyboard-shortcut-conflicts">Detecting keyboard shortcut conflicts</h2>
+<p>If you have many extensions installed or you have modified your keyboard shortcuts, there might be keyboard shortcut conflicts, where the same keyboard shortcut is mapped to multiple commands. This can result in confusing behavior, especially if different keyboard shortcuts are going in and out of scope as you move around the editor.</p>
+<p>Right-click on an item in the list of keyboard shortcuts, and select <strong>Show Same Keybindings</strong> to view all entries with the same keyboard shortcut.</p>
+<p><img src="/assets/docs/configure/keybinding/show-conflicts-menu.png" alt="show keyboard shortcut conflicts menu" loading="lazy"></p>
+<h2 id="_troubleshooting-keyboard-shortcuts" data-needslink="_troubleshooting-keyboard-shortcuts">Troubleshooting keyboard shortcuts</h2>
+<p>To troubleshoot keyboard shortcut problems, you can execute the command <strong>Developer: Toggle Keyboard Shortcuts Troubleshooting</strong>. This activates logging of dispatched keyboard shortcuts and opens the Output panel with the corresponding log file.</p>
+<p>You can then press your desired keyboard shortcut and check what keyboard shortcut VS Code detects and what command is invoked.</p>
+<p>For example, when pressing <code>cmd+/</code> in a code editor on macOS, the logging output would be:</p>
+<pre class="shiki" data-lang="text" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span>[KeybindingService]: / Received  keydown event - modifiers: [meta], code: MetaLeft, keyCode: 91, key: Meta</span></span>
+<span class="line"><span>[KeybindingService]: | Converted keydown event - modifiers: [meta], code: MetaLeft, keyCode: 57 ('Meta')</span></span>
+<span class="line"><span>[KeybindingService]: \ Keyboard event cannot be dispatched.</span></span>
+<span class="line"><span>[KeybindingService]: / Received  keydown event - modifiers: [meta], code: Slash, keyCode: 191, key: /</span></span>
+<span class="line"><span>[KeybindingService]: | Converted keydown event - modifiers: [meta], code: Slash, keyCode: 85 ('/')</span></span>
+<span class="line"><span>[KeybindingService]: | Resolving meta+[Slash]</span></span>
+<span class="line"><span>[KeybindingService]: \ From 2 keybinding entries, matched editor.action.commentLine, when: editorTextFocus &#x26;&#x26; !editorReadonly, source: built-in.</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>In the example log, the first keydown event is for the <code>MetaLeft</code> key (<code>cmd</code>) and cannot be dispatched. The second keydown event is for the <code>Slash</code> key (<code>/</code>) and is dispatched as <code>meta+[Slash]</code>. There were two keyboard shortcut entries mapped from <code>meta+[Slash]</code> and the one that matched was for the command <code>editor.action.commentLine</code>, which has the <code>when</code> condition <code>editorTextFocus &amp;&amp; !editorReadonly</code> and is a built-in keyboard shortcut entry.</p>
+<h2 id="_viewing-modified-keyboard-shortcuts" data-needslink="_viewing-modified-keyboard-shortcuts">Viewing modified keyboard shortcuts</h2>
+<p>To filter the list to only show the shortcuts you have modified, select the <strong>Show User Keybindings</strong> command in the <strong>More Actions</strong> (<strong>...</strong>) menu. This applies the <code>@source:user</code> filter to the <strong>Keyboard Shortcuts</strong> editor (<strong>Source</strong> is 'User').</p>
+<p><img src="/assets/docs/configure/keybinding/user-keyboard-shortcuts.png" alt="Default Keyboard Shortcuts" loading="lazy"></p>
+<h2 id="_advanced-customization" data-needslink="_advanced-customization">Advanced customization</h2>
+<p>VS Code keeps track of the keyboard shortcuts you have customized in the <code>keybindings.json</code> file. For advanced customization, you can also directly modify the <code>keybindings.json</code> file.</p>
+<p>To open the <code>keybindings.json</code> file:</p>
+<ul>
+<li>
+<p>Open <strong>Keyboard Shortcuts</strong> editor, and then select the <strong>Open Keyboard Shortcuts (JSON)</strong> button on the right of the editor title bar.</p>
+<p><img src="/assets/docs/configure/keybinding/open-keyboard-shortcuts-json.png" alt="Open Keyboard Shortcuts JSON button" loading="lazy"></p>
+</li>
+<li>
+<p>Alternatively, use the <strong>Open Default Keyboard Shortcuts (JSON)</strong> command in the Command Palette (<span class="dynamic-keybinding" data-commandId="workbench.action.showCommands" data-osx="⇧⌘P" data-win="Ctrl+Shift+P" data-linux="Ctrl+Shift+P"><span class="keybinding">⇧⌘P</span> (Windows, Linux <span class="keybinding">Ctrl+Shift+P</span>)</span>).</p>
+</li>
+</ul>
+<h3 id="_system-wide-keyboard-shortcuts" data-needslink="_system-wide-keyboard-shortcuts">System-wide keyboard shortcuts</h3>
+<p>To run a VS Code command even when VS Code is not in focus, add <code>&quot;systemWide&quot;: true</code> to a user keyboard shortcut. For example, the following keyboard shortcut opens the Agents window from any application on macOS:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"cmd+shift+a"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.action.openAgentsWindow"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "systemWide"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<p>System-wide keyboard shortcuts have the following restrictions:</p>
+<ul>
+<li>They are available only in the desktop version of VS Code.</li>
+<li>They apply only to user-defined keyboard shortcuts, not default or extension-contributed shortcuts.</li>
+<li>They support a single key combination, not chords.</li>
+<li>For the system-wide trigger, they ignore the <code>when</code> clause and remain active while VS Code is running.</li>
+<li>They might fail to register if the operating system or another application uses the same key combination. VS Code shows a notification when registration fails.</li>
+</ul>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>A system-wide keyboard shortcut captures its key combination from other applications while VS Code is running.</p>
+</div><p>The command determines whether to bring a VS Code window to the foreground. To reveal the current window before running a command, use <code>runCommands</code> with <code>workbench.action.focusWindow</code>. For example:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ctrl+cmd+p"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"runCommands"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "commands"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.action.focusWindow"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.action.quickOpen"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">]</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">  },</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "systemWide"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF">true</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<h2 id="_keyboard-rules" data-needslink="_keyboard-rules">Keyboard rules</h2>
+<p>A keyboard shortcut configuration in VS Code is also known as a <em>keyboard rule</em>. Each rule consists of the following attributes:</p>
+<ul>
+<li><code>key</code>: describes the pressed key(s), for example <span class="dynamic-keybinding" data-commandId="actions.find" data-osx="⌘F" data-win="Ctrl+F" data-linux="Ctrl+F"><span class="keybinding">⌘F</span> (Windows, Linux <span class="keybinding">Ctrl+F</span>)</span>.</li>
+<li><code>command</code>: the identifier of the VS Code command to execute, for example <code>workbench.view.explorer</code> to open the Explorer view.</li>
+<li><code>when</code>: (optional) clause containing a boolean expression that is evaluated depending on the current <a href="#_when-clause-contexts">context</a>.</li>
+<li><code>systemWide</code>: (optional) boolean that registers a <a href="#_system-wide-keyboard-shortcuts">system-wide keyboard shortcut</a>.</li>
+</ul>
+<p>Chords (two separate keypress actions) are described by separating the two keypresses with a space. For example, <span class="keybinding">Ctrl+K Ctrl+C</span>.</p>
+<p>When a key is pressed, the following evaluation rules are applied:</p>
+<ul>
+<li>Rules are evaluated from <strong>bottom</strong> to <strong>top</strong>.</li>
+<li>The first rule that matches both the <code>key</code> and <code>when</code> clause, is accepted.</li>
+<li>If a rule is found, no more rules are processed.</li>
+<li>If a rule is found and has a <code>command</code> set, the <code>command</code> is executed.</li>
+</ul>
+<p>The additional <code>keybindings.json</code> rules are appended at runtime to the bottom of the default rules, thus allowing them to overwrite the default rules. The <code>keybindings.json</code> file is watched by VS Code, so editing it while VS Code is running will update the rules at run-time.</p>
+<p>The keyboard shortcuts dispatching is done by analyzing a list of rules that are expressed in JSON. Here are some examples:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// Keyboard shortcuts that are active when the focus is in the editor</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"home"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,            </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"cursorHome"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,                  </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editorTextFocus"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"shift+home"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,      </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"cursorHomeSelect"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,            </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editorTextFocus"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// Keyboard shortcuts that are complementary</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"f5"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,              </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.action.debug.continue"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"inDebugMode"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"f5"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,              </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.action.debug.start"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,    </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"!inDebugMode"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// Global keyboard shortcuts</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ctrl+f"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,          </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"actions.find"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"alt+left"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,        </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.action.navigateBack"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"alt+right"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,       </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.action.navigateForward"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// Global keyboard shortcuts using chords (two separate keypress actions)</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ctrl+k enter"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,    </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.action.keepEditor"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ctrl+k ctrl+w"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,   </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.action.closeAllEditors"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"></span></code></pre>
+<h2 id="_accepted-keys" data-needslink="_accepted-keys">Accepted keys</h2>
+<p>The <code>key</code> is made up of modifiers and the key itself.</p>
+<p>The following modifiers are accepted:</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Platform</th>
+<th>Modifiers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>macOS</td>
+<td><span class="keybinding">Ctrl+</span>, <span class="keybinding">Shift+</span>, <span class="keybinding">Alt+</span>, <span class="keybinding">Cmd+</span></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td><span class="keybinding">Ctrl+</span>, <span class="keybinding">Shift+</span>, <span class="keybinding">Alt+</span>, <span class="keybinding">Win+</span></td>
+</tr>
+<tr>
+<td>Linux</td>
+<td><span class="keybinding">Ctrl+</span>, <span class="keybinding">Shift+</span>, <span class="keybinding">Alt+</span>, <span class="keybinding">Meta+</span></td>
+</tr>
+</tbody>
+</table>
+<p>The following keys are accepted:</p>
+<ul>
+<li><span class="keybinding">f1-f19</span>, <span class="keybinding">a-z</span>, <span class="keybinding">0-9</span></li>
+<li><span class="keybinding">`</span>, <span class="keybinding">-</span>, <span class="keybinding">=</span>, <span class="keybinding">[</span>, <span class="keybinding">]</span>, <span class="keybinding">\</span>, <span class="keybinding">;</span>, <span class="keybinding">'</span>, <span class="keybinding">,</span>, <span class="keybinding">.</span>, <span class="keybinding">/</span></li>
+<li><span class="keybinding">left</span>, <span class="keybinding">up</span>, <span class="keybinding">right</span>, <span class="keybinding">down</span>, <span class="keybinding">pageup</span>, <span class="keybinding">pagedown</span>, <span class="keybinding">end</span>, <span class="keybinding">home</span></li>
+<li><span class="keybinding">tab</span>, <span class="keybinding">enter</span>, <span class="keybinding">escape</span>, <span class="keybinding">space</span>, <span class="keybinding">backspace</span>, <span class="keybinding">delete</span></li>
+<li><span class="keybinding">pausebreak</span>, <span class="keybinding">capslock</span>, <span class="keybinding">insert</span></li>
+<li><span class="keybinding">numpad0-numpad9</span>, <span class="keybinding">numpad_multiply</span>, <span class="keybinding">numpad_add</span>, <span class="keybinding">numpad_separator</span></li>
+<li><span class="keybinding">numpad_subtract</span>, <span class="keybinding">numpad_decimal</span>, <span class="keybinding">numpad_divide</span></li>
+</ul>
+<h2 id="_command-arguments" data-needslink="_command-arguments">Command arguments</h2>
+<p>You can invoke a command with arguments. This is useful if you often perform the same operation on a specific file or folder. You can add a custom keyboard shortcut to do exactly what you want.</p>
+<p>The following is an example overriding the <span class="keybinding">Enter</span> key to print some text:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"enter"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"type"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: { </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"text"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"Hello World"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editorTextFocus"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<p>The <code>type</code> command will receive <code>{&quot;text&quot;: &quot;Hello World&quot;}</code> as its first argument, and add &quot;Hello World&quot; to the file instead of producing the default command.</p>
+<p>For more information on commands that take arguments, refer to <a href="/api/references/commands">Built-in Commands</a>.</p>
+<h2 id="_running-multiple-commands" data-needslink="_running-multiple-commands">Running multiple commands</h2>
+<p>A keyboard shortcut can be configured to run multiple commands sequentially by using the command <code>runCommands</code>.</p>
+<ul>
+<li>
+<p>Run several commands without arguments:</p>
+<p>The following example copies the current line down, marks the current line as a comment, and moves the cursor to the copied line.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ctrl+alt+c"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"runCommands"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "commands"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">      "editor.action.copyLinesDownAction"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">      "cursorUp"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">      "editor.action.addCommentLine"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">      "cursorDown"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    ]</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">  }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">},</span></span>
+<span class="line"></span></code></pre>
+</li>
+<li>
+<p>To pass arguments to commands:</p>
+<p>This example creates a new untitled TypeScript file and inserts a custom snippet.</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ctrl+n"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"runCommands"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "commands"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">      {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.action.files.newUntitledFile"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">          "languageId"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"typescript"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">      },</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">      {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.action.insertSnippet"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">          "langId"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"typescript"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">          "snippet"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"class ${1:ClassName} {</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n\t</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">constructor() {</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n\t\t</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">$0</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n\t</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">}</span><span style="--shiki-dark:#D7BA7D;--shiki-light:#EE0000">\n</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">}"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">        }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">      }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    ]</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">  }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">},</span></span>
+<span class="line"></span></code></pre>
+</li>
+</ul>
+<p>Note that commands run by <code>runCommands</code> receive the value of <code>&quot;args&quot;</code> as the first argument. In the previous example, <code>workbench.action.files.newUntitledFile</code> receives <code>{&quot;languageId&quot;: &quot;typescript&quot; }</code> as its first and only argument.</p>
+<p>To pass several arguments, you need to have <code>&quot;args&quot;</code> as an array:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ctrl+shift+e"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"runCommands"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "commands"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">      {</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">        // command invoked with 2 arguments: vscode.executeCommand("myCommand", "arg1", "arg2")</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"myCommand"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">        "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: [</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"arg1"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"arg2"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">]</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">      }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">    ]</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">  }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<p>To pass an array as the first argument, wrap the array in another array: <code>&quot;args&quot;: [ [1, 2, 3] ]</code>.</p>
+<h2 id="_removing-a-keyboard-shortcut" data-needslink="_removing-a-keyboard-shortcut">Removing a keyboard shortcut</h2>
+<p>To remove a keyboard shortcut, right-click on the entry in the Keyboard Shortcuts editor, and select <strong>Remove Keybinding</strong>.</p>
+<p>To remove a keyboard shortcut by using the <code>keybindings.json</code> file, add a <code>-</code> to the <code>command</code> and the rule will be a removal rule.</p>
+<p>Here is an example:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// In Default Keyboard Shortcuts</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">...</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"tab"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"tab"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#F44747;--shiki-light:#CD3131">...</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"tab"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"jumpToNextSnippetPlaceholder"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#F44747;--shiki-light:#CD3131">...</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"tab"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"acceptSelectedSuggestion"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#F44747;--shiki-light:#CD3131">...</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// To remove the second rule, for example, add in keybindings.json:</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"tab"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"-jumpToNextSnippetPlaceholder"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> }</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<p>To override a specific keyboard shortcut rule with an empty action, you can specify an empty command:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// To override and disable any `tab` keyboard shortcut, for example, add in keybindings.json:</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"tab"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">""</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> }</span></span>
+<span class="line"></span></code></pre>
+<h2 id="_keyboard-layouts" data-needslink="_keyboard-layouts">Keyboard layouts</h2>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>This section relates only to keyboard shortcuts, not to typing in the editor.</p>
+</div><p>Keys are string representations for virtual keys and do not necessarily relate to the produced character when they are pressed. More precisely:</p>
+<ul>
+<li>Reference: <a href="https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes" class="external-link" target="_blank">Virtual-Key Codes (Windows)</a></li>
+<li><span class="keybinding">tab</span> for <code>VK_TAB</code> (<code>0x09</code>)</li>
+<li><span class="keybinding">;</span> for <code>VK_OEM_1</code> (<code>0xBA</code>)</li>
+<li><span class="keybinding">=</span> for <code>VK_OEM_PLUS</code> (<code>0xBB</code>)</li>
+<li><span class="keybinding">,</span> for <code>VK_OEM_COMMA</code> (<code>0xBC</code>)</li>
+<li><span class="keybinding">-</span> for <code>VK_OEM_MINUS</code> (<code>0xBD</code>)</li>
+<li><span class="keybinding">.</span> for <code>VK_OEM_PERIOD</code> (<code>0xBE</code>)</li>
+<li><span class="keybinding">/</span> for <code>VK_OEM_2</code> (<code>0xBF</code>)</li>
+<li><span class="keybinding">`</span> for <code>VK_OEM_3</code> (<code>0xC0</code>)</li>
+<li><span class="keybinding">[</span> for <code>VK_OEM_4</code> (<code>0xDB</code>)</li>
+<li><span class="keybinding">\</span> for <code>VK_OEM_5</code> (<code>0xDC</code>)</li>
+<li><span class="keybinding">]</span> for <code>VK_OEM_6</code> (<code>0xDD</code>)</li>
+<li><span class="keybinding">'</span> for <code>VK_OEM_7</code> (<code>0xDE</code>)</li>
+<li>etc.</li>
+</ul>
+<p>Different keyboard layouts usually reposition these virtual keys or change the characters produced when they are pressed. When using a different keyboard layout than the standard US, Visual Studio Code does the following:</p>
+<p>All the keyboard shortcuts are rendered in the UI using the current system's keyboard layout. For example, <code>Split Editor</code> when using a French (France) keyboard layout is now rendered as <span class="keybinding">Ctrl+*</span>:</p>
+<p><img src="/assets/docs/configure/keybinding/render-key-binding.png" alt="render keyboard shortcut" loading="lazy"></p>
+<p>When editing <code>keybindings.json</code>, VS Code highlights misleading keyboard shortcuts, those that are represented in the file with the character produced under the standard US keyboard layout, but that need pressing keys with different labels under the current system's keyboard layout. For example, here is how the default keyboard shortcut rules look like when using a French (France) keyboard layout:</p>
+<p><img src="/assets/docs/configure/keybinding/keybindings-json.png" alt="keybindings.json guidance" loading="lazy"></p>
+<p>There is also a UI control that helps input the keyboard shortcut rule when editing <code>keybindings.json</code>. To launch the <strong>Define Keybinding</strong> control, press <span class="dynamic-keybinding" data-commandId="editor.action.defineKeybinding" data-osx="⌘K ⌘K" data-win="Ctrl+K Ctrl+K" data-linux="Ctrl+K Ctrl+K"><span class="keybinding">⌘K ⌘K</span> (Windows, Linux <span class="keybinding">Ctrl+K Ctrl+K</span>)</span>. The control listens for key presses and renders the serialized JSON representation in the text box and below it, the keys that VS Code has detected under your current keyboard layout. Once you've typed the key combination you want, you can press <span class="keybinding">Enter</span> and a rule snippet is inserted.</p>
+<p><img src="/assets/docs/configure/keybinding/key-binding-widget.png" alt="keyboard shortcut widget" loading="lazy"></p>
+<div class="markdown-alert note" dir="auto">
+      <span>
+        <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+          </path>
+        </svg>
+        Note
+      </span><p>On Linux, VS Code detects your current keyboard layout on startup, and then caches this information. We recommend that you restart VS Code when you change your keyboard layout.</p>
+</div><h2 id="_keyboard-layout-independent-bindings" data-needslink="_keyboard-layout-independent-bindings">Keyboard layout-independent bindings</h2>
+<p>Using scan codes, it is possible to define keyboard shortcuts that do not change with the change of the keyboard layout. For example:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"cmd+[Slash]"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.action.commentLine"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">, </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editorTextFocus"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> }</span></span>
+<span class="line"></span></code></pre>
+<p>Accepted scan codes:</p>
+<ul>
+<li><span class="keybinding">[F1]-[F19]</span>, <span class="keybinding">[KeyA]-[KeyZ]</span>, <span class="keybinding">[Digit0]-[Digit9]</span></li>
+<li><span class="keybinding">[Backquote]</span>, <span class="keybinding">[Minus]</span>, <span class="keybinding">[Equal]</span>, <span class="keybinding">[BracketLeft]</span>, <span class="keybinding">[BracketRight]</span>, <span class="keybinding">[Backslash]</span>, <span class="keybinding">[Semicolon]</span>, <span class="keybinding">[Quote]</span>, <span class="keybinding">[Comma]</span>, <span class="keybinding">[Period]</span>, <span class="keybinding">[Slash]</span></li>
+<li><span class="keybinding">[ArrowLeft]</span>, <span class="keybinding">[ArrowUp]</span>, <span class="keybinding">[ArrowRight]</span>, <span class="keybinding">[ArrowDown]</span>, <span class="keybinding">[PageUp]</span>, <span class="keybinding">[PageDown]</span>, <span class="keybinding">[End]</span>, <span class="keybinding">[Home]</span></li>
+<li><span class="keybinding">[Tab]</span>, <span class="keybinding">[Enter]</span>, <span class="keybinding">[Escape]</span>, <span class="keybinding">[Space]</span>, <span class="keybinding">[Backspace]</span>, <span class="keybinding">[Delete]</span></li>
+<li><span class="keybinding">[Pause]</span>, <span class="keybinding">[CapsLock]</span>, <span class="keybinding">[Insert]</span></li>
+<li><span class="keybinding">[Numpad0]-[Numpad9]</span>, <span class="keybinding">[NumpadMultiply]</span>, <span class="keybinding">[NumpadAdd]</span>, <span class="keybinding">[NumpadComma]</span></li>
+<li><span class="keybinding">[NumpadSubtract]</span>, <span class="keybinding">[NumpadDecimal]</span>, <span class="keybinding">[NumpadDivide]</span></li>
+</ul>
+<h2 id="_when-clause-contexts" data-needslink="_when-clause-contexts">when clause contexts</h2>
+<p>VS Code gives you precise control over when your keyboard shortcuts are enabled through the optional <code>when</code> clause.  If your keyboard shortcut doesn't have a <code>when</code> clause, the keyboard shortcut is globally available at all times. A <code>when</code> clause evaluates to either true or false for enabling keyboard shortcuts.</p>
+<p>VS Code sets various context keys and specific values depending on what elements are visible and active in the VS Code UI. For example, the built-in <strong>Start Debugging</strong> command has the keyboard shortcut <span class="dynamic-keybinding" data-commandId="workbench.action.debug.start" data-osx="F5" data-win="F5" data-linux="F5"><span class="keybinding">F5</span></span>, which is only enabled when there is an appropriate debugger available (context <code>debuggersAvailable</code> is true) and the editor isn't in debug mode (context <code>inDebugMode</code> is false):</p>
+<p><img src="/assets/docs/configure/keybinding/start-debugging-when-clause.png" alt="Start Debugging when clause in the Keyboard Shorts editor" loading="lazy"></p>
+<p>You can also view a keyboard shortcut's when clause directly in the default <code>keybinding.json</code> (<strong>Preferences: Open Default Keyboard Shortcuts (JSON)</strong>):</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"f5"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,  </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"workbench.action.debug.start"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">                   "when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"debuggersAvailable &#x26;&#x26; !inDebugMode"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"></span></code></pre>
+<h3 id="_conditional-operators" data-needslink="_conditional-operators">Conditional operators</h3>
+<p>For <code>when</code> clause conditional expressions, the following conditional operators are useful for keyboard shortcuts:</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Operator</th>
+<th>Symbol</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equality</td>
+<td><code>==</code></td>
+<td><code>&quot;editorLangId == typescript&quot;</code></td>
+</tr>
+<tr>
+<td>Inequality</td>
+<td><code>!=</code></td>
+<td><code>&quot;resourceExtname != .js&quot;</code></td>
+</tr>
+<tr>
+<td>Or</td>
+<td><code>||</code></td>
+<td><code>&quot;isLinux</code><code>||</code><code>isWindows&quot;</code></td>
+</tr>
+<tr>
+<td>And</td>
+<td><code>&amp;&amp;</code></td>
+<td><code>&quot;textInputFocus &amp;&amp; !editorReadonly&quot;</code></td>
+</tr>
+<tr>
+<td>Matches</td>
+<td><code>=~</code></td>
+<td><code>&quot;resourceScheme =~ /^untitled$|^file$/&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<p>You can find the full list of when clause conditional operators in the <a href="/api/references/when-clause-contexts#conditional-operators">when clause contexts</a> reference.</p>
+<h3 id="_available-contexts" data-needslink="_available-contexts">Available contexts</h3>
+<p>You can find some of the available <code>when</code> clause contexts in the <a href="/api/references/when-clause-contexts">when clause context reference</a>.</p>
+<p>The list there isn't exhaustive and you can find other <code>when</code> clause contexts by searching and filtering in the Keyboard Shortcuts editor (<strong>Preferences: Open Keyboard Shortcuts</strong> ) or reviewing the default <code>keybindings.json</code> file (<strong>Preferences: Open Default Keyboard Shortcuts (JSON)</strong>).</p>
+<h2 id="_custom-keyboard-shortcuts-for-refactorings" data-needslink="_custom-keyboard-shortcuts-for-refactorings">Custom keyboard shortcuts for refactorings</h2>
+<p>The <code>editor.action.codeAction</code> command lets you configure keyboard shortcuts for specific <a href="/docs/editing/refactoring">Refactorings</a> (Code Actions). For example, the keyboard shortcut below triggers the <strong>Extract function</strong> refactoring Code Action:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ctrl+shift+r ctrl+e"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.action.codeAction"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">  "args"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: {</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">    "kind"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"refactor.extract.function"</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">  }</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">}</span></span>
+<span class="line"></span></code></pre>
+<p>This is covered in depth in the <a href="/docs/editing/refactoring#_keyboard-shortcuts-for-code-actions">Refactoring</a> article, where you can learn about different kinds of Code Actions and how to prioritize them in the case of multiple possible refactorings.</p>
+<h2 id="_related-resources" data-needslink="_related-resources">Related resources</h2>
+<ul>
+<li><a href="/docs/reference/default-keybindings">VS Code default keyboard shortcuts reference</a></li>
+</ul>
+<h2 id="_common-questions" data-needslink="_common-questions">Common questions</h2>
+<h3 id="_how-can-i-find-out-what-command-is-bound-to-a-specific-key" data-needslink="_how-can-i-find-out-what-command-is-bound-to-a-specific-key">How can I find out what command is bound to a specific key?</h3>
+<p>In the Keyboard Shortcuts editor, you can filter on specific keystrokes to see which commands are bound to which keys. In the following screenshot, you can see that <span class="keybinding">Ctrl+Shift+P</span> is bound to <strong>Show All Commands</strong> to bring up the Command Palette.</p>
+<p><img src="/assets/docs/configure/keybinding/filter-on-keys.png" alt="Keyboard shortcuts quick outline" loading="lazy"></p>
+<h3 id="_how-to-add-a-keyboard-shortcut-to-an-action-for-example-add-ctrld-to-delete-lines" data-needslink="_how-to-add-a-keyboard-shortcut-to-an-action-for-example-add-ctrld-to-delete-lines">How to add a keyboard shortcut to an action, for example, add Ctrl+D to Delete Lines</h3>
+<p>Find a rule that triggers the action in the <strong>Default Keyboard Shortcuts</strong> and write a modified version of it in your <code>keybindings.json</code> file:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// Original, in Default Keyboard Shortcuts</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ctrl+shift+k"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,          </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.action.deleteLines"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">                                     "when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editorTextFocus"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000">// Modified, in User/keybindings.json, Ctrl+D now will also trigger this action</span></span>
+<span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"ctrl+d"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,                </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.action.deleteLines"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">                                     "when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editorTextFocus"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"></span></code></pre>
+<h3 id="_how-can-i-add-a-keyboard-shortcut-for-only-certain-file-types" data-needslink="_how-can-i-add-a-keyboard-shortcut-for-only-certain-file-types">How can I add a keyboard shortcut for only certain file types?</h3>
+<p>Use the <code>editorLangId</code> context key in your <code>when</code> clause:</p>
+<pre class="shiki" data-lang="json" shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">{ </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"key"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"shift+alt+a"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,           </span><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">"command"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editor.action.blockComment"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">,</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5">                                     "when"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">"editorTextFocus &#x26;&#x26; editorLangId == csharp"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> },</span></span>
+<span class="line"></span></code></pre>
+<h3 id="_i-have-modified-my-keyboard-shortcuts-in-keybindingsjson-why-dont-they-work" data-needslink="_i-have-modified-my-keyboard-shortcuts-in-keybindingsjson-why-dont-they-work">I have modified my keyboard shortcuts in <code>keybindings.json</code>; why don't they work?</h3>
+<p>The most common problem is a syntax error in the file. Otherwise, try removing the <code>when</code> clause or picking a different <code>key</code>. Unfortunately, at this point, it is a trial and error process.</p>
+
+                <div class="feedback" data-edit-url="https://vscode.dev/github/microsoft/vscode-docs/blob/main/docs/configure/keybindings.md"></div>
+                
+                <div class="body-footer">08/05/2026</div>
+                
+            </main>
+        </div>
+        
+        <!-- Mobile connect widget -->
+        <div class="docs-mobile-widgets visible-xs">
+            <div class="connect-widget"></div>
+        </div>
+    </div>
+</div>
+		</main>
+	</div>
+
+	<div id="search-popup-overlay" class="search-popup-overlay" role="dialog" aria-modal="true" aria-label="Search">
+		<div class="search-popup-container">
+			<div class="search-popup-header">
+				<form class="search-popup-form">
+					<div class="input-group">
+						<input type="text" name="q" class="search-box form-control" placeholder="Search the website"
+							aria-label="Search text" role="combobox" aria-expanded="false"
+							aria-autocomplete="list" aria-controls="search-results-listbox"
+							aria-activedescendant="" />
+						<span class="input-group-btn">
+							<button tabindex="0" class="btn" type="submit" aria-label="Search">
+								<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="Search" />
+								<img class="search-icon-light" src="/assets/icons/search.svg" alt="Search" />
+							</button>
+						</span>
+					</div>
+				</form>
+				<button class="search-popup-close" type="button" aria-label="Close search"><i class="codicon codicon-close" aria-hidden="true"></i></button>
+			</div>
+			<div class="search-popup-results">
+				<ul class="search-popup-results-list" id="search-results-listbox" role="listbox" aria-label="Search results"></ul>
+			</div>
+			<div class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="search-popup-status"></div>
+		</div>
+	</div>
+
+
+	<footer role="contentinfo" class="container">
+		<div class="footer-container">
+			<div class="footer-row">
+				<div class="footer-social">
+					<ul class="links">
+						<li>
+							<a href="https://github.com/microsoft/vscode"><img src="/assets/icons/github-icon.svg" alt="VS Code on Github"></a>
+						</li>
+						<li>
+							<a href="https://go.microsoft.com/fwlink/?LinkID=533687"><img src="/assets/icons/x-icon.svg" class="x-icon" alt="Follow us on X"></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/showcase/vs-code"><img src="/assets/icons/linkedin-icon.svg" alt="VS Code on LinkedIn"></a>
+						</li>
+						<li>
+							<a href="https://bsky.app/profile/vscode.dev"><img src="/assets/icons/bluesky-icon.svg" alt="VS Code on Bluesky"></a>
+						</li>
+						<li>
+							<a href="https://www.reddit.com/r/vscode/"><img src="/assets/icons/reddit-icon.svg" alt="Join the VS Code community on Reddit"></a>
+						</li>
+						<li>
+							<a href="https://www.vscodepodcast.com"><img src="/assets/icons/podcast-icon.svg" alt="The VS Code Insiders Podcast"></a>
+						</li>
+						<li>
+							<a href="https://www.tiktok.com/@vscode"><img src="/assets/icons/tiktok-icon.svg" alt="VS Code on TikTok"></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@code"><img src="/assets/icons/youtube-icon.svg" alt="VS Code on YouTube"></a>
+						</li>
+						<script>
+							function manageConsent() {
+								if (siteConsent && siteConsent.isConsentRequired) {
+									siteConsent.manageConsent();
+								}
+							}
+						</script>
+					</ul>
+					<a id="footer-microsoft-link" class="microsoft-logo" href="https://www.microsoft.com">
+						<img src="/assets/icons/microsoft.svg" alt="Microsoft homepage" />
+					</a>
+				</div>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li><a id="footer-support-link" href="https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=d66407ed-3967-b000-4cfb-2c318cad363d"
+						target="_blank" rel="noopener" title="Get support for VS Code"
+						aria-label="Get support for VS Code (opens in new tab)">Support</a></li>
+					<li><a id="footer-privacy-link" href="https://go.microsoft.com/fwlink/?LinkId=521839"
+						target="_blank" rel="noopener" title="View the Microsoft privacy statement"
+						aria-label="Microsoft privacy statement (opens in new tab)">Privacy</a></li>
+					<li style="display: none;"><a id="footer-cookie-link" style="cursor: pointer;" onclick="manageConsent()"
+						target="_blank" rel="noopener">Manage Cookies</a></li>
+					<li><a id="footer-terms-link" href="https://www.microsoft.com/legal/terms-of-use"
+						target="_blank" rel="noopener" title="View the Microsoft Terms of Use"
+						aria-label="Microsoft Terms of Use (opens in new tab)">Terms of Use</a></li>
+					<li><a id="footer-license-link" href="/License"
+						target="_blank" rel="noopener" title="View the Visual Studio Code license"
+						aria-label="Visual Studio Code license (opens in new tab)">License</a></li>
+				</ul>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li>
+						<svg class="privacy-choices" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43">
+							<title>Your Privacy Choices Opt-Out Icon</title>
+							<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+							<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+							<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+							<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+						</svg>
+						<a id="footer-privacy-choices-link" href="https://aka.ms/YourCaliforniaPrivacyChoices"
+						target="_blank" rel="noopener" title="View Your Privacy Choices"
+						aria-label="Your Privacy Choices (opens in new tab)">Your Privacy Choices</a></li>
+					<li><a id="footer-consumer-health-privacy-link" href="https://go.microsoft.com/fwlink/?linkid=2259814"
+						target="_blank" rel="noopener" title="View the Microsoft Consumer Health Privacy policy"
+						aria-label="Microsoft Consumer Health Privacy policy (opens in new tab)">Consumer Health Privacy</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="module">
+		document.addEventListener('DOMContentLoaded', () => {
+			const copilotDeepLinks = document.querySelectorAll('.copilot-deep-link');
+			if (copilotDeepLinks.length === 0) {
+				return;
+			}
+			if (window.innerWidth < 992) {
+				for (const link of copilotDeepLinks) {
+					link.href = 'https://aka.ms/vscode-activatecopilotfree';
+				}
+			}
+		});
+	</script>
+
+	<script src="/dist/index.js"></script>
+
+	
+
+	<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type" : "SoftwareApplication",
+			"name" : "Visual Studio Code",
+			"softwareVersion": "1.132",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			},
+			"applicationCategory": "DeveloperApplication",
+			"applicationSubCategory": "AI Code Editor",
+			"description": "Visual Studio Code is a free, open source AI code editor for agent-first development. Build with AI agents, manage multi-agent workflows, and code across any environment.",
+			"alternateName": "VS Code",
+			"datePublished": "2021-11-03",
+			"operatingSystem": "Mac, Linux, Windows",
+			"logo": "https://code.visualstudio.com/assets/apple-touch-icon.png",
+			"screenshot": "https://code.visualstudio.com/assets/images/product-screenshot.png",
+			"releaseNotes": "https://code.visualstudio.com/updates",
+			"downloadUrl": "https://code.visualstudio.com/download",
+			"license": "https://code.visualstudio.com/license",
+			"softwareRequirements": "https://code.visualstudio.com/docs/supporting/requirements",
+			"url" : "https://code.visualstudio.com",
+			"author": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"maintainer": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://code.visualstudio.com/Search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			},
+			"sameAs" : [
+				"https://en.wikipedia.org/wiki/Visual_Studio_Code",
+				"https://twitter.com/code",
+				"https://www.youtube.com/code",
+				"https://www.tiktok.com/@vscode",
+				"https://github.com/microsoft/vscode"
+			]
+		}
+	</script>
+</body>
+
+</html>

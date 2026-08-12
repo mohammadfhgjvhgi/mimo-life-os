@@ -1,0 +1,480 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- Cloud browser - Manus Documentation 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
+## Documentation Index
+Fetch the complete documentation index at: /docs/llms.txt 
+Use this file to discover all available pages before exploring further.
+Skip to main content 
+Manus Documentation home page English 
+
+Search...
+
+⌘ K Ask Assistant 
+
+Search... 
+
+Navigation 
+Cloud browser
+
+Introduction 
+Features 
+Website Builder 
+Integrations 
+
+- Projects 
+
+- Manus Skills 
+
+- Design View 
+
+- Wide Research 
+
+- Manus Slides 
+
+- Scheduled Tasks 
+
+- Data Analysis & Visualization 
+
+- Multimedia Processing 
+
+- Mail Manus 
+
+- Manus Collab 
+
+- Cloud browser 
+
+- Browser Operator 
+
+- Desktop 
+
+- Meeting minutes 
+
+## On this page 
+
+- What is Cloud Browser? 
+
+- Why Cloud Browser Matters 
+
+- How Cloud Browser Works 
+- 1. Manus Operates the Browser 
+
+- 2. You Can Log Into Your Accounts 
+
+- 3. Take Over When Needed 
+
+- 4. Security and Privacy 
+
+- Cloud Browser Settings 
+- Available Settings 
+
+- Managing Logged-in Accounts 
+
+- Websites to Log Into for Better Automation 
+- Productivity & Communication 
+
+- Business & CRM 
+
+- Research & Data 
+
+- Development & Tools 
+
+- Social Media 
+
+- Important: Data Center IP Considerations 
+- Cloud Browser Uses Data Center IPs 
+
+- When to Use My Browser Instead 
+
+- Choosing Between Cloud Browser and My Browser 
+
+- Tips for Effective Cloud Browser Use 
+- Log Into Accounts in Advance 
+
+- Be Specific About Actions 
+
+- Use Take Over for Complex Verifications 
+
+- Monitor First-Time Logins 
+
+- Consider My Browser for Sensitive Sites 
+
+- Manage Sessions Regularly 
+
+- Common Questions 
+
+# Cloud browser
+
+Manus’s cloud-based browser that operates like a real person
+
+## ​ 
+
+What is Cloud Browser? 
+
+Cloud Browser is Manus’s dedicated browser environment that runs in the cloud. Unlike traditional AI assistants that can only read text, Manus can actually operate this browser like a real person—visiting websites, clicking buttons, filling forms, extracting data, and completing multi-step workflows. 
+More importantly, you can log into your personal or work accounts in this browser, authorizing Manus to perform tasks that require authentication—such as checking your email, updating your CRM, posting on social media, or accessing premium research tools. 
+This transforms Manus from a text-based assistant into an agent that can take action on your behalf across the web. 
+
+## ​ 
+
+Why Cloud Browser Matters 
+
+Most AI tools can only work with information you provide. They can’t visit websites, interact with web applications, or access content behind logins. 
+Cloud Browser enables Manus to: 
+
+- Browse the web autonomously to gather real-time information
+
+- Log into your accounts to perform authenticated actions
+
+- Interact with web applications like a human would
+
+- Extract data from websites that don’t have APIs
+
+- Complete multi-step workflows across multiple web pages
+
+This is what makes Manus a true AI agent, not just a chatbot. 
+
+## ​ 
+
+How Cloud Browser Works 
+
+### ​ 
+
+1. Manus Operates the Browser 
+
+When you give Manus a task that requires web access, Manus automatically opens Cloud Browser and navigates to the relevant websites. 
+Manus: 
+
+- Opens Cloud Browser
+
+- Visits relevant news sites, databases, and startup directories
+
+- Extracts information from multiple sources
+
+- Compiles results into a structured report
+
+You see everything Manus is doing in real-time. 
+
+### ​ 
+
+2. You Can Log Into Your Accounts 
+
+For tasks that require authentication, you can log into your accounts in Cloud Browser. Manus will then use those authenticated sessions to perform actions on your behalf. 
+Example : 
+
+Manus: 
+
+- Opens Cloud Browser
+
+- Accesses your logged-in LinkedIn account
+
+- Drafts personalized responses for your review
+
+### ​ 
+
+3. Take Over When Needed 
+
+When Manus encounters complex verifications (SMS codes, CAPTCHA, multi-factor authentication), the system will prompt you to “Take Over” the browser. 
+How Take Over Works : 
+
+- Manus encounters a verification challenge
+
+- You receive a notification to take over
+
+- You complete the verification (enter code, solve CAPTCHA, etc.)
+
+- You hand control back to Manus
+
+- Manus continues the task
+
+This ensures Manus can complete tasks even when human verification is required. 
+
+### ​ 
+
+4. Security and Privacy 
+
+Your login credentials and browsing activity are managed with strict security: 
+
+- Encrypted sessions : All browser sessions are encrypted
+
+- Isolated environments : Each user has a separate, isolated browser instance
+
+- No credential storage : Manus doesn’t store your passwords
+
+- Access control : You control which accounts Manus can access
+
+- Session management : You can log out or clear sessions anytime
+
+## ​ 
+
+Cloud Browser Settings 
+
+You can configure Cloud Browser in Manus Settings → Cloud Browser . 
+
+### ​ 
+
+Available Settings 
+
+Setting Description 
+Logged-in Accounts View and manage accounts you’ve logged into in Cloud Browser 
+Session Management Log out of specific accounts or clear all sessions 
+Take Over Notifications Configure how you’re notified when take over is needed 
+Browser History View recent Cloud Browser activity 
+Security Settings Manage access permissions and security preferences 
+
+### ​ 
+
+Managing Logged-in Accounts 
+
+To see which accounts you’re logged into: 
+
+- Go to Settings → Cloud Browser → Logged-in Accounts 
+
+- View all active sessions
+
+- Log out of specific accounts if needed
+
+- Clear all sessions to start fresh
+
+## ​ 
+
+Websites to Log Into for Better Automation 
+
+Logging into these types of accounts enables Manus to perform more powerful automation: 
+
+### ​ 
+
+Productivity & Communication 
+
+- Gmail / Outlook : Read, send, and organize emails
+
+- Slack : Send messages, create channels, manage notifications
+
+- Notion : Create pages, update databases, organize content
+
+- Google Calendar : Schedule meetings, check availability, send invites
+
+### ​ 
+
+Business & CRM 
+
+- Salesforce / HubSpot : Update leads, create contacts, log activities
+
+- LinkedIn : Send connection requests, post updates, message contacts
+
+- Stripe : Check payments, create invoices, manage subscriptions
+
+### ​ 
+
+Research & Data 
+
+- Crunchbase : Research companies, funding data, and investors
+
+- PitchBook : Access private company data and market research
+
+- SimilarWeb : Analyze website traffic and competitor data
+
+- Financial Times / WSJ : Access premium news and analysis
+
+### ​ 
+
+Development & Tools 
+
+- GitHub : Create issues, review pull requests, manage repositories
+
+- Jira : Update tickets, track progress, manage sprints
+
+- Figma : View designs, leave comments, export assets
+
+### ​ 
+
+Social Media 
+
+- Twitter / X : Post updates, schedule tweets, monitor mentions
+
+- Instagram : Post content, respond to comments, analyze engagement
+
+- Facebook : Manage pages, post updates, respond to messages
+
+Example Workflows : 
+
+- “Check my LinkedIn messages and draft responses to connection requests”
+
+- “Update our Notion project tracker with this week’s completed tasks”
+
+- “Research these 20 companies on Crunchbase and create a funding summary”
+
+- “Post this announcement to our company Twitter and LinkedIn accounts”
+
+## ​ 
+
+Important: Data Center IP Considerations 
+
+### ​ 
+
+Cloud Browser Uses Data Center IPs 
+
+Cloud Browser operates from data center IP addresses, not residential IPs. This means: 
+
+- Some websites may trigger additional verification (CAPTCHA, security checks)
+
+- Certain services may flag the activity as automated
+
+- You may encounter more frequent authentication challenges
+
+### ​ 
+
+When to Use My Browser Instead 
+
+For tasks that require residential IP addresses or encounter frequent verification challenges, consider using My Browser (Browser Operator) instead. 
+My Browser uses your local browser with your actual IP address, which: 
+
+- Avoids data center IP detection
+
+- Reduces CAPTCHA and verification prompts
+
+- Works better with security-sensitive websites
+
+- Maintains your existing logged-in sessions
+
+### ​ 
+
+Choosing Between Cloud Browser and My Browser 
+
+Use Cloud Browser When Use My Browser When 
+Researching public websites Logging into security-sensitive accounts 
+Extracting data at scale Performing actions on banking/financial sites 
+Running long-running tasks Avoiding CAPTCHA challenges 
+You don’t mind occasional verification You need residential IP address 
+Task doesn’t require login Website blocks data center IPs 
+
+Example : 
+
+- ✅ Cloud Browser: “Research 50 competitors and extract their pricing”
+
+- ✅ My Browser: “Log into my bank and download last month’s statements”
+
+## ​ 
+
+Tips for Effective Cloud Browser Use 
+
+### ​ 
+
+Log Into Accounts in Advance 
+
+✅ Good : Log into frequently used accounts (Gmail, Notion, LinkedIn) before assigning tasks 
+Why : Manus can immediately access these accounts without interrupting your workflow for login 
+
+### ​ 
+
+Be Specific About Actions 
+
+✅ Good : “Check my Gmail for emails from potential clients this week. Draft responses highlighting our Q4 availability.” 
+❌ Vague : “Check my email” 
+Specific instructions help Manus perform exactly the right actions. 
+
+### ​ 
+
+Use Take Over for Complex Verifications 
+
+When Manus prompts for take over: 
+
+- Respond quickly to keep the task moving
+
+- Complete only the verification step
+
+- Hand control back to Manus immediately
+
+### ​ 
+
+Monitor First-Time Logins 
+
+The first time you log into an account in Cloud Browser: 
+
+- Watch the process to ensure it works correctly
+
+- Complete any first-time verifications
+
+- Confirm Manus can access the account properly
+
+### ​ 
+
+Consider My Browser for Sensitive Sites 
+
+For banking, financial accounts, or sites that frequently trigger CAPTCHA: 
+
+- Use My Browser instead of Cloud Browser
+
+- This avoids data center IP detection
+
+- Reduces verification challenges
+
+### ​ 
+
+Manage Sessions Regularly 
+
+Periodically review and clear logged-in sessions: 
+
+- Go to Settings → Cloud Browser → Logged-in Accounts 
+
+- Log out of accounts you no longer need Manus to access
+
+- Clear all sessions if you’re changing workflows
+
+## ​ 
+
+Common Questions 
+
+Is Cloud Browser secure for logging into my accounts?
+
+Yes. Cloud Browser uses encrypted sessions, isolated environments, and doesn’t store your passwords. You control which accounts Manus can access. 
+
+What happens if I log into my account in Cloud Browser?
+
+Manus can then perform authenticated actions on your behalf (reading emails, updating CRM, posting content, etc.). You remain in control and can log out anytime. 
+
+Can I see what Manus is doing in Cloud Browser?
+
+Yes. You can watch Manus navigate websites in real-time, just like watching someone use a browser 
+
+What is "Take Over" and when do I need it? 
+
+Take Over lets you temporarily control the browser when Manus encounters verifications (CAPTCHA, SMS codes, etc.). You complete the verification, then hand control back to Manus. 
+
+What's the difference between Cloud Browser and My Browser?
+
+Cloud Browser runs in the cloud with data center IPs. My Browser uses your local browser with your residential IP. Use My Browser for security-sensitive sites or to avoid CAPTCHA. 
+
+How do I log out of an account in Cloud Browser?
+
+Go to Settings → Cloud Browser → Logged-in Accounts and log out of specific accounts. 
+
+Manus Collab
+Browser Operator
+⌘ I 
+
+instagram linkedin x youtube 
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform 
+
+Assistant 
+
+Responses are generated using AI and may contain mistakes.

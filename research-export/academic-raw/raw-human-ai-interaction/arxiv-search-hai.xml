@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/wO16VXP/carEowMIEVewBDcTsns</id>
+  <title>arXiv Query: search_query=all:"human-AI interaction" AND cat:cs.HC&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-08-07T14:57:06Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22human-AI+interaction%22+AND+cat:cs.HC&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>407</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.01895v1</id>
+    <title>Emotional Expression in Persuasion by Quadruped Virtual Agents: Toward Cross-Species Design Patterns</title>
+    <updated>2026-08-03T08:34:59Z</updated>
+    <link href="https://arxiv.org/abs/2608.01895v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.01895v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Persuasive technologies increasingly use virtual agents to influence attitudes and behavior, but research has focused mainly on humanoid agents. The persuasive design of non-humanoid, quadruped agents remains underexplored, and it is unclear whether emotional expression works consistently across animal species or whether species-specific motion is necessary.
+  We developed virtual dog, cat, and horse agents and compared three behavioral conditions: species-specific behavior, shared behavior across species, and a bark-only baseline. Participants completed everyday tasks involving trash disposal, feeding, and refraining from smartphone use. We evaluated intention understanding, behavioral intention, actual behavior, psychological reactance, discomfort, familiarity, and agent acceptance.
+  In several task contexts, the bark-only baseline produced lower intention-understanding and behavioral scores than the expressive conditions. Emotional expression and attention-guiding cues therefore appear to improve interpretation of agent intention and support behavior change. However, no consistent significant differences emerged between species-specific and shared behavior, suggesting that faithful reproduction of animal-specific motion is not the main determinant of persuasive effectiveness. Psychological reactance and discomfort remained low, while familiarity with an animal species was associated with actual behavior in some conditions.
+  These findings indicate that persuasion by quadruped virtual agents depends more on functional cues, including emotional expression, attention guidance, and intention readability, than on accurate species-specific behavior. The results support cross-species generalizability and provide a basis for reusable design patterns in persuasive technology and human-AI interaction.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-03T08:34:59Z</published>
+    <arxiv:comment>Preprint. 68 pages, 4 figures, 8 tables. Submitted to Frontiers in AI</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Kaoru Sumi</name>
+    </author>
+    <author>
+      <name>Souki Osawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.14593v2</id>
+    <title>Memory-Driven Self-Disclosure and Relational Turning Points: A Longitudinal Multimodal Study of Human-AI Interaction</title>
+    <updated>2026-07-17T08:40:55Z</updated>
+    <link href="https://arxiv.org/abs/2607.14593v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.14593v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As conversational AI systems are designed for repeated use, a central question is how a series of interactions becomes a relationship. We present a longitudinal multimodal study of a memory-augmented conversational agent (24 participants x 10 sessions), in which participants rated five relational constructs -- familiarity, self-disclosure, perceived memory, conversational quality, and enjoyment -- after each session. Two complementary dynamics emerge. First, conversational quality strongly shapes how enjoyable a session feels in the moment but does not carry forward across sessions, whereas perceived memory is relationally conditioned -- predicted by prior relational state rather than reflecting system capability alone -- and it shapes later enjoyment indirectly, via subsequent self-disclosure. Second, relationships are punctuated by discrete turning points -- crashes and surges -- that are partially traceable in multimodal behavior and open different intervention windows: surges are more behaviorally detectable in the moment, enjoyment surges persist more reliably than enjoyment crashes recover, and some crashes are better forecast from person-specific behavioral drift than detected after they have already occurred. Together, the findings suggest that longitudinal human-AI relationships are built through both slow accumulation and abrupt turning points.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T05:43:06Z</published>
+    <arxiv:comment>15 pages, 3 figures. Accepted to ICMI 2026 (International Conference on Multimodal Interaction), October 5-9, 2026, Napoli, Italy</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Ryuichi Sumida</name>
+    </author>
+    <author>
+      <name>Mao Saeki</name>
+    </author>
+    <author>
+      <name>Masaki Eguchi</name>
+    </author>
+    <author>
+      <name>Sadahiro Yoshikawa</name>
+    </author>
+    <author>
+      <name>Koji Inoue</name>
+    </author>
+    <author>
+      <name>Tatsuya Kawahara</name>
+    </author>
+    <author>
+      <name>Yoichi Matsuyama</name>
+    </author>
+    <arxiv:doi>10.1145/3776574.3831135</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3776574.3831135" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.09018v1</id>
+    <title>Central Tendency Bias in Human Selection of AI-Generated Design Variations</title>
+    <updated>2026-07-10T00:53:30Z</updated>
+    <link href="https://arxiv.org/abs/2607.09018v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.09018v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Image-generation AI systems increasingly support creative work by producing multiple design variations for users to evaluate and select. In such human-AI co-creation workflows, selection becomes a critical stage where human judgment guides AI-generated possibilities toward final outcomes. While presenting multiple alternatives is intended to encourage exploration, the simultaneous multi-option presentation may introduce systematic biases in human decision making. Drawing on ensemble perception theory, we investigate whether these interfaces induce central tendency bias-the tendency to favor options closer to the center of a design set. We conducted a controlled experiment manipulating the variance of design sets (high vs. low) and measured participants' selections in both aesthetic preference and representativeness tasks. Results show that higher variance increases the selection of center-proximal designs across both tasks. These findings suggest that multi-variation interfaces in image-generation AI systems may constrain selection diversity, revealing a potential tension between diversity in generated outputs and diversity in human selection outcomes.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-10T00:53:30Z</published>
+    <arxiv:comment>Accepted at the 2026 Human-AI Interaction and Experience Design (HAXD 2026) Conference</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Huiyang Chen</name>
+    </author>
+    <author>
+      <name>Keqing Jiao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.07521v1</id>
+    <title>Creativity from Friction: Human-AI Interaction for Exploratory Structural Design</title>
+    <updated>2026-07-08T15:17:23Z</updated>
+    <link href="https://arxiv.org/abs/2607.07521v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.07521v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AI agents that generate final answers based on user input often do not meet the needs of creative fields. Fields such as structural design and architecture need interactive systems that help users externalise and develop ideas, explore alternatives, and refine partial solutions. The final product of such designs needs to comply with many constraints concerning, e.g., spatial configuration, mechanical behaviour, material quantities, and costs. These constraints create friction in the design process, which can stimulate novel and creative solutions. In this paper, we discuss the misalignment between current generative AI goals to remove friction and provide final solutions and the needs of creators, such as structural designers, who develop ideas through iterative work. We present the design dimensions of systems allowing for constrained human-AI co-creation that rely on vision-language models making structural exploration conversational, multimodal, and responsive to evolving human intent in ways that follow and augment the discipline's creative process. Through a pilot design interface based on these principles and a study with experts in the field, this paper shows how structural designers perceive interactive AI systems and how such systems can support design space exploration by reducing repetitive modelling friction while preserving reflective design friction.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-08T15:17:23Z</published>
+    <arxiv:comment>Accepted at ICML 2026, Workshop on Human-AI Co-Creativity</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Ricardo Maia Avelino</name>
+    </author>
+    <author>
+      <name>Rita Sevastjanova</name>
+    </author>
+    <author>
+      <name>Tom Van Mele</name>
+    </author>
+    <author>
+      <name>Philippe Block</name>
+    </author>
+    <author>
+      <name>Mennatallah El-Assady</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.05593v1</id>
+    <title>Collective Cognition in Hybrid Groups: A Network Science Synthesis</title>
+    <updated>2026-07-06T19:44:36Z</updated>
+    <link href="https://arxiv.org/abs/2607.05593v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.05593v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The growing integration of AI agents into human teams calls for a principled understanding of how collective intelligence emerges in hybrid systems. Recent frameworks clarify how attention, memory, and reasoning differences shape human-AI interaction at the individual and dyadic levels, but a formal account of how these differences scale to group-level dynamics is lacking. Most network science has examined either human-only or multi-agent AI-only systems, leaving open how its findings and parametrizations translate to hybrid groups. This chapter synthesizes network science, collective cognition, and multi-agent systems through the lens of attention, memory, and reasoning. We review how task environments, group topologies, agent-level processes, and incentive structures shape collective outcomes in human-only and AI-only networks, then examine how these results extend to hybrid settings, conceptualizing hybrid networks as heterogeneous human-AI nodes and links with distinct individual and transactive constraints. Our comparative analysis identifies which network effects are robust across agent types and which require revision, and highlights configurations that were peripheral in single-type traditions, such as human gatekeepers of AI sub-networks, but become structurally central in hybrid teams. Integrating a cognitive systems perspective with network science, we clarify how established exploration-exploitation and efficiency-redundancy trade-offs may operate differently in hybrid teams, and conclude with implications for organizational design, governance, and the responsible development of hybrid intelligence systems.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-06T19:44:36Z</published>
+    <arxiv:comment>Non-authoritative author's version of forthcoming chapter in the Springer Nature Handbook of Hybrid Intelligence</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Babak Hemmatian</name>
+    </author>
+    <author>
+      <name>Razan Baltaji</name>
+    </author>
+    <author>
+      <name>Lav R. Varshney</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.02723v1</id>
+    <title>Doom Researching: A Conceptual Framework for Repetitive AI-Assisted Information Seeking, Cognitive Offloading, and the Illusion of Knowing</title>
+    <updated>2026-07-02T19:18:21Z</updated>
+    <link href="https://arxiv.org/abs/2607.02723v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.02723v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative artificial intelligence (GenAI) systems such as ChatGPT, Claude, and Gemini have made information seeking faster, more conversational, and more cognitively comfortable. These affordances can support learning and productivity, but they can also encourage a repetitive pattern in which users continue querying AI systems for explanations, summaries, comparisons, plans, and reassurance without converting those interactions into durable understanding, decisions, or finished work. This conceptual paper proposes the term doom researching to describe this AI-mediated pattern of repetitive information seeking without proportional synthesis or output. Building on research on doomscrolling, information seeking, cognitive offloading, transactive memory, human-AI interaction, productivity loss, and the illusion of knowing, the paper develops a framework in which fluent AI responses reduce cognitive effort, inflate perceived knowledge, and increase the likelihood of further querying. The framework distinguishes doom researching from doomscrolling, cyberchondria, ordinary research, and productive AI-assisted work. It introduces a formal model of the doom researching loop, a candidate risk index for empirical measurement, and testable propositions for future studies. It then extends the construct through the lens of the extended mind thesis, distinguishing assistive, substitutive, and disruptive forms of cognitive offloading, and connects individual doom researching to the broader literature on AI-driven homogenization and knowledge collapse. The paper argues that doom researching is not simply "too much AI use" but a misalignment among inquiry, metacognition, and output. The goal is to provide a vocabulary and research agenda for studying when AI-assisted inquiry becomes a substitute for thinking, synthesis, and action.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-02T19:18:21Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Santosh Premi Adhikari</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.00542v1</id>
+    <title>AI-Centered Grand Challenges in Visual Analytics for Healthcare: Synthesizing the VAHC 2025 Community Experience</title>
+    <updated>2026-07-01T07:33:30Z</updated>
+    <link href="https://arxiv.org/abs/2607.00542v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.00542v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The intersection of AI, healthcare, and visualization is evolving rapidly, posing challenges that cut across disciplinary boundaries and resist easy resolution. The Visual Analytics in Healthcare workshop (VAHC), co-located every other year at the IEEE VIS conference and the AMIA (American Medical Informatics Association) annual conference, has served as a forum to connect the visualization and medical informatics community since 2010. In 2025, to celebrate the 16th edition, we used the workshop as an opportunity to consolidate the community's collective experience (and expertise) and identify Grand Challenges where the field should prioritize going forward. We combined thematic coding of the 15 accepted VAHC workshop papers with structured group discussions among more than 40 participants, organized around three major themes: "Technical innovation vs. clinical reality", "Human-centered and scalable VAHC", and "From foundations to actionable insights", followed by post-workshop reflexive analysis. Across all three groups, AI emerged as the most consistently recurring concern. In this paper, we report our AI-centered insights from the VAHC 2025 group activity, contextualize them against the broader literature along five Grand Challenges themes, and distill them into five challenge clusters, each concluded with recommendations for future research directions that cross disciplinary boundaries: (1) trust and bias, (2) data and infrastructure, (3) explainability and communication, (4) human-AI interaction, and (5) model reliability and validation. We share these challenges and their associated research directions as a starting point for discussion and collaboration across the healthcare, AI, and visualization communities. All supplemental materials are available at https://osf.io/p79uj.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-01T07:33:30Z</published>
+    <arxiv:comment>4 pages, 2 tables, reference to the OSF project behind: https://osf.io/p79uj</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Jürgen Bernard</name>
+    </author>
+    <author>
+      <name>David Gotz</name>
+    </author>
+    <author>
+      <name>Robert S Laramee</name>
+    </author>
+    <author>
+      <name>Silvia Miksch</name>
+    </author>
+    <author>
+      <name>Gabriela Morgenshtern</name>
+    </author>
+    <author>
+      <name>Renata G. Raidou</name>
+    </author>
+    <author>
+      <name>Alessio Arleo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.00211v1</id>
+    <title>Constructing Epistemic AI Literacy: Detecting Epistemic Aims and Processes in Student-AI Co-Programming</title>
+    <updated>2026-06-30T21:43:35Z</updated>
+    <link href="https://arxiv.org/abs/2607.00211v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.00211v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Epistemic thinking plays a central role in students' learning processes when applying generative artificial intelligence (GenAI), particularly in programming contexts where learners must construct queries, evaluate and validate AI-generated outputs, and regulate problem-solving strategies. This study introduces the conceptual framework of Epistemic AI Literacy (EAIL), reframing AI literacy as a process-oriented epistemic phenomenon that emerges through dynamic human-AI interactions across different domains. Drawing on the AIR (epistemic aims, ideals and reliable epistemic processes) framework, this study examines how epistemic aims and epistemic processes are enacted in GenAI-supported co-programming activities and explores scalable approaches for operationalizing these constructs in interaction data. Using a large dialogue dataset of human-AI co-programming, this study identifies observable dimensions of epistemic aims (i.e., mastery-oriented aims) and epistemic processes (i.e., outsourcing, explanation seeking, verification seeking, prompt monitoring, and epistemic justification). The results reveal a prevalent lack of EAIL, with 78.8% of student-GenAI interactions relying on non-mastery-oriented aims and less reliable epistemic strategies like outsourcing and verification-seeking. Conversely, only 11.1% of interactions showed high epistemic engagement, where mastery-oriented aims were coupled with advanced epistemic strategies like epistemic justification in a more reliable epistemic process.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-30T21:43:35Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Mengqian Wu</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-11-25/client/elicitation",
+    "name": "Elicitation",
+    "snippet": "Nov 25, 2025 — Elicitation in MCP allows servers to implement interactive workflows by enabling user input requests to occur nested inside other MCP server ... Read more",
+    "host_name": "modelcontextprotocol.io",
+    "rank": 0,
+    "date": "Nov 25, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-06-18/client/elicitation",
+    "name": "Elicitation",
+    "snippet": "Jun 18, 2025 — Clients can use this schema to: Generate appropriate input forms ; Validate user input before sending; Provide better guidance to users. Note ... Read more",
+    "host_name": "modelcontextprotocol.io",
+    "rank": 1,
+    "date": "Jun 18, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/kirodotdev/Kiro/issues/4785",
+    "name": "Support for MCP Specification 2025-11-25 and URL Mode",
+    "snippet": "Jan 7, 2026 — Feature Description. Add support for the MCP specification version 2025 -11-25, specifically the URL mode elicitation capability (SEP-1036). Read more",
+    "host_name": "github.com",
+    "rank": 2,
+    "date": "Jan 7, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://workos.com/blog/mcp-elicitation",
+    "name": "MCP elicitation: Request user input at runtime",
+    "snippet": "Jun 20, 2025 — A new runtime feature in the MCP ecosystem lets servers ask the user for exactly the context they need—when they need it.",
+    "host_name": "workos.com",
+    "rank": 3,
+    "date": "Jun 20, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=JrAllAJf7L4",
+    "name": "MCP Elicitations in Spring AI: Request Missing Information",
+    "snippet": "In this tutorial, you'll learn how to implement MCP Elicitations in Spring AI, a standardized approach for servers to request additional ...",
+    "host_name": "www.youtube.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://glama.ai/blog/2025-09-03-elicitation-in-mcp-bridging-the-human-ai-gap",
+    "name": "Enabling Human-in-the-Loop Workflows with MCP Elicitation",
+    "snippet": "Sep 3, 2025 — Elicitation provides a dynamic mechanism for an MCP server to request structured input from a user via the MCP client .",
+    "host_name": "glama.ai",
+    "rank": 5,
+    "date": "Sep 3, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://gofastmcp.com/servers/elicitation",
+    "name": "User Elicitation",
+    "snippet": "User elicitation allows MCP servers to request input from users during tool execution. The MCP spec only supports a limited subset of JSON Schema types for  ...",
+    "host_name": "gofastmcp.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@puneetsharma41/mcp-server-primitives-in-practice-how-tools-resources-and-prompts-make-ai-agents-reliable-bcd93fbd1bd0",
+    "name": "MCP Server Primitives in Practice: How Tools, Resources",
+    "snippet": "In this article, we will discuss : MCP server primitives ; How AI Applications Use MCP Servers; A real-world e-commerce example showing all ... Read more",
+    "host_name": "medium.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://forgecode.dev/blog/mcp-spec-updates",
+    "name": "MCP 2025-06-18 Spec Update: AI Security, Structured",
+    "snippet": "Jul 1, 2025 — The new update adds elicitation support. A server can now ask the user for additional information mid-session by sending an elicitation /create ... Read more",
+    "host_name": "forgecode.dev",
+    "rank": 8,
+    "date": "Jul 1, 2025",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,555 @@
+TITLE: Understanding Cursor's AI feature
+DESCRIPTION: If I describe what I want to do to the cursor, can it write me code? 
+
+
+If I upload the code I generated with ChatGPT / Claude to Cursor, can Cursor see and fix errors?
+
+Understanding Cursor's AI feature - Help - Cursor - Community Forum 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- = 40rem)" rel="stylesheet" data-target="discourse-ai_desktop" />
+
+- = 40rem)" rel="stylesheet" data-target="discourse-reactions_desktop" />
+
+- = 40rem)" rel="stylesheet" data-target="poll_desktop" />
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
+
+- = 40rem)" rel="stylesheet" data-target="desktop_theme" data-theme-id="62" data-theme-name="<cursor> alternative voting category style"/>
+
+- = 40rem)" rel="stylesheet" data-target="desktop_theme" data-theme-id="190" data-theme-name="<cursor>alternative voting category style 2"/>
+
+- = 40rem)" rel="stylesheet" data-target="desktop_theme" data-theme-id="200" data-theme-name="featured cards"/>
+
+- = 40rem)" rel="stylesheet" data-target="desktop_theme" data-theme-id="238" data-theme-name="group-specific banner"/>
+
+Cursor - Community Forum 
+
+# 
+Understanding Cursor's AI feature 
+
+Support 
+
+Help 
+
+- 
+
+commander 
+
+(Bora)
+
+August 7, 2024, 7:01pm
+
+1 
+
+- 
+If I describe what I want to do to the cursor, can it write me code?
+
+- 
+If I upload the code I generated with ChatGPT / Claude to Cursor, can Cursor see and fix errors?
+
+litecode 
+
+August 7, 2024, 7:42pm
+
+2 
+
+Hi @commander ,
+
+In response to your questions - yes and yes.
+
+Below is some more detail.
+
+Cursor is a fork of VS Code.
+
+VS Code is a Code Editor by Microsoft:
+
+https://code.visualstudio.com/ 
+
+The company who created Cursor are Anysphere:
+
+https://anysphere.inc/ 
+
+Anysphere received some funding from OpenAI, the company behind Chat GPT:
+
+https://anysphere.inc/blog/openai-fund 
+
+Update - they recently raised some more funds:
+
+https://www.cursor.com/blog/series-a 
+
+Cursor’s official Features page is here:
+
+https://www.cursor.com/features 
+
+Cursor’s official Docs are here:
+
+https://docs.cursor.com 
+
+The docs are also on GitHub:
+
+https://github.com/getcursor/docs 
+
+Cursor includes built in AI functionality.
+
+This functionality is accessed in several ways.
+
+When you have a file open in Cursor, you can press one of several different key combinations to access different functionality.
+
+These are:
+
+- Ctrl + K for in-file code generation
+
+- Ctrl + L to open up an AI chat panel in the sidebar
+
+- Ctrl + I to create and edit code across multiple files
+
+You can select two different ‘modes’ in Ctrl + L :
+
+- Normal
+
+- Interpreter
+
+Interpreter mode generates executable Python code that can be run on your local file system.
+
+You can also press Ctrl + K in the terminal within Cursor to generate terminal commands from natural language prompts.
+
+I only found Cursor three weeks ago myself, but have been a fan ever since.
+
+I have created some other posts which try to outline Cursor’s features to newcomers:
+
+Cursor feature summary for colleagues (with annotated screenshots) General 
+
+Hello, 
+I just thought I would share some text and annotated screenshots I have recently used when telling colleagues about Cursor. 
+I find documenting things is a good way to learn them quickly. 
+I only started using Cursor last weekend, and I normally use Sublime Text, so it is all very new to me at the moment. 
+But I thought I would share these resources in case it saves you some time when telling your colleagues about it. 
+The official ‘features’ page is here: 
+https://www.cursor.com/feature… 
+
+Comprehensive and Succinct List of Cursor Features General 
+
+Hello, 
+I started using Cursor last weekend, and I was working on a Google Sheet of Cursor features for my own reference. 
+I thought my research might assist others learning how to use Cursor. 
+So I published the Google Sheet as a web page, but that removed the sorting and filtering functionality. 
+So I’ve created a GitHub Pages site that retains the sorting and filtering features: 
+https://litecodeai.github.io/cursorfeatures 
+I will keep adding to it over the coming weeks, make it more user fri…
+
+Separate the visual UI inlay hints into multiple togglable options Feature Requests 
+
+Hi @ryunuck , 
+I did this test when running Cursor 0.39.0: 
+
+Confirmed that Show chat/edit tooltip setting was OFF 
+
+Made some edits to see if the various ‘Cursor Tab’ features were working 
+
+Attached are screenshots of: 
+
+The Show chat/edit tooltip setting turned to OFF 
+
+Various ‘Cursor Tab’ functionality still being present, ie: 
+
+Code Generation
+Multi-Line Edits
+Smart Rewrites
+Cursor Prediction
+
+Toolbar settings for ‘Cursor Tab’ in bottom-right of screen 
+
+I must admit, however, that…
+
+Multi-file edits - 0.37 update Feedback 
+
+@smaccoun 
+Here is a simple demonstration of what is possible in Composer, in case you were still wondering. 
+I entered this prompt in Composer: 
+
+I want to demonstrate the multiple file editing capabilities of the new Composer feature in Cursor (the fork of VS Code). 
+Plese create a folder called ‘TestHTMLSite’ that contains an index.html file and css and js folders that contain the code required to create a simple HTML website. 
+Add any simple JS functionality that you think would be cool. 
+Th…
+
+Here are some videos about Cursor as well:
+
+ALL ROADS LEAD to AI CODING: Cursor, Aider in the browser, Multi file Prompting 
+
+(20 mins, IndyDevDan)
+
+Cursor - an AI-powered VSCode fork 
+
+(12 mins, Jeffrey Codes)
+
+Cursor IDE deep dive and why it is the best tool for coding 
+
+(26 mins, echohive)
+
+Cursor - The AI-first Code Editor 
+
+(8 mins, AI Tube)
+
+How to use Interpreter Mode and Terminal Commands in Cursor 
+
+(5 mins, echohive)
+
+I am away from the computer at the moment, but hopefully this explanation and these posts and videos will give you a good idea of what Cursor is capable of.
+
+Beginner Tutorial Available? 
+
+How cursor different from default Ai models? 
+
+Open_ai_api_key issue 
+
+How can i allow cursor to create files 
+
+Am I going crazy, cannot open more than one file (side-by-side) in the same editor 
+
+Cursor course suggestions 
+
+Is there a way to configure Cursor so that it can access or interact with the terminal directly? 
+
+### 
+Related topics
+
+Topic 
+
+Replies 
+Views 
+Activity 
+
+How cursor different from default Ai models? 
+
+Help 
+
+3 
+
+6205 
+
+August 25, 2024
+
+What makes cursor good? 
+
+Discussions 
+
+8 
+
+2953 
+
+October 13, 2025
+
+Cursor feature summary for colleagues (with annotated screenshots) 
+
+Guides 
+
+2 
+
+1522 
+
+July 23, 2024
+
+Learning cursor and have a few questions 
+
+Help 
+
+2 
+
+236 
+
+September 21, 2024
+
+Cursor course suggestions 
+
+Discussions 
+
+6 
+
+1758 
+
+March 21, 2025
+
+- 
+
+Home 
+
+- 
+
+Categories 
+
+- 
+
+Guidelines 
+
+- 
+
+Terms of Service 
+
+- 
+
+Privacy Policy 
+
+Powered by Discourse , best viewed with JavaScript enabled

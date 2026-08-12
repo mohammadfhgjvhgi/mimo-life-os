@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol",
+    "name": "Announcing Agent Payments Protocol (AP2)",
+    "snippet": "Sep 16, 2025 — This mandate specifies the rules of engagement—price limits, timing, and other conditions. It serves as verifiable, pre-authorized proof that ... Read more",
+    "host_name": "cloud.google.com",
+    "rank": 0,
+    "date": "Sep 16, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://cloudsecurityalliance.org/blog/2025/10/06/secure-use-of-the-agent-payments-protocol-ap2-a-framework-for-trustworthy-ai-driven-transactions",
+    "name": "Secure Use of the Agent Payments Protocol (AP2)",
+    "snippet": "Oct 6, 2025 — The Agent Payments Protocol ( AP2 ) [1], an open extension to Agent2Agent (A2A) introduces Verifiable Credentials (VCs) AP2's Cart Mandate ...",
+    "host_name": "cloudsecurityalliance.org",
+    "rank": 1,
+    "date": "Oct 6, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://ap2-protocol.org",
+    "name": "AP2 - Agent Payments Protocol Documentation",
+    "snippet": "Sep 16, 2025 — The Agent Payments Protocol (AP2 ) is a solution for enabling gen AI agents to make payments on behalf of users, safely, securely, ...",
+    "host_name": "ap2-protocol.org",
+    "rank": 2,
+    "date": "Sep 16, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://eco.com/support/en/articles/15192002-ap2-protocol-explained-google-s-agentic-commerce-standard-2026",
+    "name": "AP2 Protocol Explained: Google's Agentic Commerce  - Eco",
+    "snippet": "Jul 16, 2026 — Google's open Agent Payments Protocol uses signed Intent, Cart, and Payment Mandates to let AI agents pay across cards and stablecoins. Read more",
+    "host_name": "eco.com",
+    "rank": 3,
+    "date": "Jul 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://developer.paypal.com/community/blog/PayPal-Agent-Payments-Protocol",
+    "name": "Agent Payments Protocol: Building Verifiable Trust for",
+    "snippet": "Sep 16, 2025 — AP2 is designed to ensure that as AI agents begin to shop and pay on behalf of users, that transactions remain and two-sided network have been ...",
+    "host_name": "developer.paypal.com",
+    "rank": 4,
+    "date": "Sep 16, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://gohsoonheng00.medium.com/the-missing-trust-layer-a-deep-dive-into-the-agent-payments-protocol-ap2-and-verifiable-mandates-4cd2a1674316",
+    "name": "A Deep Dive into the Agent Payments Protocol (AP2  - Medium",
+    "snippet": "Intent Mandate : The objective is to capture the user's authonrization for the agent to act on their behalf under specified condition. · Cart ... Read more",
+    "host_name": "gohsoonheng00.medium.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/nynymike_agent-payments-protocol-ap2-activity-7374192516910346241-shea",
+    "name": "Understanding Mandates in Verifiable Credentials: Cart,",
+    "snippet": "Google's brand new Agent Payments Protocol (AP2 ) introduces a technical framework enabling AI agents to transact on behalf of people. Here are ... Read more",
+    "host_name": "www.linkedin.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.connect.worldline-solutions.com/documentation/ConnectAI/agent-payments-protocol-ap2",
+    "name": "Agent Payments Protocol (AP2) - Worldline Connect",
+    "snippet": "The Intent Mandate serves as the foundational proof of the consumer's consent . Cart Mandate: Once an agent presents a specific cart of items, this mandate ... Read more",
+    "host_name": "docs.connect.worldline-solutions.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

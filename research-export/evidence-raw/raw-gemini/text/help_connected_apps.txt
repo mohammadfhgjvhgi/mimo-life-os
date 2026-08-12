@@ -1,0 +1,361 @@
+Use & manage Connected Apps in Gemini - Computer - Gemini Apps Help Skip to main content 
+
+Gemini Apps Help 
+
+Sign in 
+
+Google Help 
+
+Help Center
+Community
+Gemini Apps 
+
+Privacy Policy
+Terms of Service
+Submit feedback
+
+Send feedback on...
+
+This help content & information 
+
+General Help Center experience 
+
+Next 
+
+Help Center 
+Community 
+Privacy Hub 
+
+Gemini Apps 
+
+Use & manage Connected Apps in Gemini
+Gemini Apps can connect to other apps to complete your request and give you more helpful responses. With your permission, Gemini can also help you with your info and content in other apps.
+
+Here are a few examples of what you can ask Gemini to help you with:
+
+Boost productivity: Summarize emails from Gmail, create events in Google Calendar or third-party apps, or help with code from GitHub.
+
+Find & play media: Play music from YouTube Music or Spotify, or search your Google Photos or Samsung Gallery.
+
+Connect with people: Make calls and send messages with your default apps or WhatsApp on Android devices.
+
+Control your devices: Manage your smart home devices in Google Home or use the Utilities app on Android devices to set alarms, change device settings, and more.
+
+Learn more about apps Gemini can connect to .
+
+Tip: You can also get personalized Gemini experiences based on your data in certain Google apps when you connect them to Gemini Apps. Learn more about personalization based on Connected Apps .
+
+Important for users with a work or school account: The info below is for users who access Gemini Apps with a personal account. If you’re using a work or school account, learn how to use Connected Apps in Gemini with a work and school Google Account .
+
+Get started with Connected Apps in Gemini
+
+Important: For now, Gemini can’t use Connected Apps in Gemini in Google Messages.
+
+Sign in to the Gemini app. You must be signed in to use Connected Apps. Learn how to sign in to Gemini Apps .
+
+Check your Keep Activity setting. 
+
+When Keep Activity is off, Connected Apps won’t be available on gemini.google.com , iOS devices, or smart watches. On Android devices, only the Utilities, Phone, Messages, and WhatsApp apps will be available if the setting is off.
+
+Choose which apps Gemini connects to. You can connect or disconnect apps in your Connected Apps settings anytime. Learn how to connect or disconnect apps in Gemini .
+
+Gemini automatically uses public information from certain Google services. Learn more about Gemini and these Google services .
+
+How to use Connected Apps in Gemini
+
+Important: Some Connected Apps are designed to automatically work with Gemini. You can disconnect apps in your Connected Apps settings anytime. Learn how to disconnect apps in Gemini .
+
+On your computer, go to gemini.google.com .
+
+In the text box at the bottom, enter your question or prompt.
+
+To specify an app for Gemini to use, enter @ and select the app. If the app you select isn't connected, it’ll either be connected or Gemini will ask for your permission to connect it.
+
+Click Submit . If an app is available, Gemini automatically uses it.
+
+Follow any on-screen instructions.
+
+Browse available apps
+
+You can find apps that you can connect to Gemini in your Connected Apps settings. Learn more about the apps on the Connected Apps settings page .
+
+On your computer, go to gemini.google.com .
+
+At the bottom, click Settings & help Connected Apps .
+
+If you don’t find “Connected Apps,” first click Personal Intelligence Connected Apps . Learn about Personal Intelligence and Connected Apps .
+
+Browse Connected Apps 
+
+About apps in Connected Apps settings 
+
+The apps in Connected Apps settings vary by Gemini app, device, country, and more. For example, apps that are only available in the Gemini mobile app on Android won’t show in Connected Apps settings on iOS devices or in the Gemini web app at gemini.google.com .
+
+Also, Gemini automatically uses public information from certain Google services. Connected Apps settings don’t change Gemini’s use of this public information. Learn more about Google services that Gemini automatically uses info from .
+
+Control which apps Gemini works with
+
+Important: You can learn more about your data and Connected Apps in the Gemini Apps Privacy Hub:
+
+What happens when you disconnect an app in Gemini 
+
+How your data is handled when you use Connected Apps in Gemini 
+
+You can disconnect or connect apps in your Connected Apps settings anytime.
+
+On your computer, go to gemini.google.com .
+
+At the bottom, click Settings & help Connected Apps .
+
+If you don’t find “Connected Apps,” first click Personal Intelligence Connected Apps . Learn about Personal Intelligence and Connected Apps .
+
+Find the app you want to connect or disconnect.
+
+To connect an app, turn it on .
+
+To disconnect an app, turn it off .
+
+Follow any on-screen instructions.
+
+About Google services that Gemini automatically uses info from 
+
+Gemini automatically uses public information from certain Google services, including:
+
+Google Search
+
+Google Flights 
+
+Google Hotels 
+
+Google Maps 
+
+YouTube 
+
+Gemini won’t access your personal information or content in these services without your permission.
+
+To use public information from Google Flights, Google Hotels, Google Maps, and YouTube, Keep Activity must be on. Gemini can always use public information from Google Search, even if Keep Activity is off or you’re signed out.
+
+Connect custom apps for Gemini Spark
+
+Important: For now, custom Connected Apps are only available to users with Gemini Spark access and within Spark tasks. Learn more about Gemini Spark .
+
+You can connect personal or third-party apps by linking their Model Context Protocol (MCP) server. This adds a custom app in your Connected Apps settings. Once connected, you can use the custom app in your Gemini Spark tasks to build highly customized workflows. Learn how to connect custom apps .
+
+Learn more about Connected Apps
+
+Important: Availability of Connected Apps vary by location, language, device, and Gemini app. For details, review the articles below.
+
+You can learn about the tools and services that Gemini Apps can interact with below.
+
+Tip: Some Connected Apps are available in your Gemini Live chats. Learn how to use Connected Apps in Live chats .
+
+Communication apps 
+
+On Android phones and tablets, you can ask the Gemini mobile app to make calls and send messages with:
+
+Your default calling app with the Phone app 
+
+Your default messaging app with the Messages app 
+
+WhatsApp 
+
+Tip: You can use Gemini to make calls or send messages with these apps even when Keep Activity is off. Learn how to connect and disconnect these apps .
+
+You can also ask Gemini Apps to find and manage details about people in your contacts with the Contacts app .
+
+Device control apps 
+
+You can ask some Gemini Apps to control your:
+
+Smart home devices with the Google Home app 
+
+Android mobile device with the Utilities app , including actions like:
+
+Set & manage alarms & timers in your clock app
+
+Open websites, apps, and settings
+
+Check and control device features
+
+Tip: Gemini can use the Utilities app even when Keep Activity is off. Learn how to connect and disconnect this app .
+
+Lifestyle apps 
+
+You can ask Gemini Apps to help with everyday tasks, like exploring apps, grocery shopping, or booking reservations, using the following Connected Apps:
+
+Google Play : Find and install apps from the Google Play Store.
+
+Instacart : Shop for groceries and household items.
+
+OpenTable : Find, book, and manage reservations.
+
+Zillow : Find rental properties, review tour schedules, and book tours.
+
+Media apps 
+
+You can ask Gemini Apps to play media and more from:
+
+Spotify 
+
+YouTube Music 
+
+You can also ask Gemini Apps to search for photos, videos, and more from:
+
+Google Photos 
+
+Samsung Gallery 
+
+Productivity apps 
+
+You can ask Gemini Apps to interact with a number of apps and services through the Google Workspace app , including:
+
+Gmail 
+
+Google Calendar 
+
+Google Docs 
+
+Google Drive 
+
+Google Keep 
+
+Google Tasks 
+
+On specific Android mobile devices, you can ask the Gemini mobile app to interact with third-party productivity apps, including:
+
+HONOR Calendar 
+
+HONOR Notes 
+
+Lenovo Notes 
+
+OnePlus Mind Space 
+
+OnePlus Notes 
+
+OPPO Calendar 
+
+OPPO Notes 
+
+Samsung Calendar 
+
+Samsung Notes 
+
+Samsung Reminder 
+
+TECNO Calendar 
+
+TECNO Notepad 
+
+vivo Notes 
+
+Xiaomi Calendar 
+
+Xiaomi Notes 
+
+You can also connect and use the following apps:
+
+Dropbox : Find, summarize, share, and manage your Dropbox files and folders.
+
+GitHub : Import a GitHub repository to your chat and ask Gemini about its code.
+
+Google Business Profile : Manage your Business Profile on Google and create a Business Notebook with proactive insights.
+
+Travel & activities apps 
+
+You can ask Gemini Apps to help you with your travel plans. Gemini can find activities and experiences that match your preferences using Connected Apps, like:
+
+Viator : Find activities and experiences for your next trip.
+
+How your data is handled
+
+Learn more about how your data is handled when Gemini works with Connected Apps .
+
+Related resources
+
+Use Gemini Apps 
+
+Gemini Apps Privacy Hub 
+
+Find & manage your recent chats in Gemini Apps 
+
+Computer Android iPhone & iPad More 
+
+Need more help?
+Try these next steps:
+
+Post to the help community Get answers from community members 
+
+true
+Help 
+1 of 17
+Use Gemini Apps 
+2 of 17
+What you need to sign in to Gemini Apps 
+3 of 17
+Gemini Apps limits & upgrades for Google AI subscribers 
+4 of 17
+Find & manage your recent chats in Gemini Apps 
+5 of 17
+Use & manage Connected Apps in Gemini 
+6 of 17
+Manage your Google AI plan from Gemini Apps 
+7 of 17
+Where you can use the Gemini web app 
+8 of 17
+Upload & analyze files in Gemini Apps 
+9 of 17
+Create and use notebooks in Gemini Apps 
+10 of 17
+Schedule actions in Gemini Apps 
+11 of 17
+Use Deep Think in Gemini Apps 
+12 of 17
+Verify AI-generated images, videos, and audio 
+13 of 17
+Import from other AI platforms to Gemini Apps 
+14 of 17
+Learn about generative AI 
+15 of 17
+Learn in creative ways with generative AI 
+16 of 17
+Guide your child's Gemini Apps experience 
+17 of 17
+Use the Gemini app on Mac 
+
+©2026 Google Privacy Policy 
+Terms of Service 
+
+Language Afrikaans&lrm; azərbaycan&lrm; bosanski&lrm; català&lrm; dansk&lrm; Deutsch&lrm; eesti&lrm; English (United Kingdom)&lrm; español&lrm; español (Latinoamérica)&lrm; euskara&lrm; Filipino&lrm; français&lrm; français (Canada)&lrm; galego&lrm; hrvatski&lrm; Indonesia&lrm; isiZulu&lrm; italiano&lrm; Kiswahili&lrm; latviešu&lrm; lietuvių&lrm; magyar&lrm; Melayu&lrm; Nederlands&lrm; norsk&lrm; o‘zbek&lrm; polski&lrm; português&lrm; português (Brasil)&lrm; română&lrm; shqip&lrm; slovenčina&lrm; slovenščina&lrm; suomi&lrm; svenska&lrm; Tiếng Việt&lrm; Türkçe&lrm; íslenska&lrm; čeština&lrm; Ελληνικά&lrm; беларуская&lrm; български&lrm; македонски&lrm; монгол&lrm; русский&lrm; српски&lrm; українська&lrm; қазақ тілі&lrm; հայերեն&lrm; &rlm; עברית &rlm; اردو &rlm; العربية &rlm; فارسی नेपाली&lrm; मराठी&lrm; हिन्दी&lrm; অসমীয়া&lrm; বাংলা&lrm; ਪੰਜਾਬੀ&lrm; ଓଡ଼ିଆ&lrm; தமிழ்&lrm; తెలుగు&lrm; ไทย&lrm; ລາວ&lrm; ქართული&lrm; አማርኛ&lrm; ខ្មែរ&lrm; 中文（简体）&lrm; 中文（繁體）&lrm; 中文（香港）&lrm; 日本語&lrm; 한국어&lrm; English&lrm; Enable Dark Mode
+
+Send feedback on...
+This help content & information General Help Center experience 
+
+Search
+Clear search
+Close search
+Google apps
+Main menu
+
+3976937326542294935
+true
+
+Search Help Center
+false
+true
+
+true
+
+true
+
+true
+true
+5295044
+false
+
+false
+
+false
+false
+
+false

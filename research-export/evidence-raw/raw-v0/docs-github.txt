@@ -1,0 +1,467 @@
+- 
+- 
+- 
+- 
+- 
+- GitHub | v0 Docs 
+- 
+- 
+- 
+- 
+- 
+- 
+
+- Docs 
+
+- API 
+
+Search… ⌘ K Ask AI Ask AI 
+Search… ⌘ K 
+Docs API 
+
+- Getting Started 
+
+- What is v0? 
+
+- Agentic features 
+
+- Sandbox 
+
+- Vercel Integration 
+
+- Quickstart 
+
+- FAQs 
+
+- Prompt 
+
+- Text Prompting 
+
+- Screenshots and Files 
+
+- Figma 
+
+- Iterate 
+
+- Code editing 
+
+- Terminal commands 
+
+- Design mode 
+
+- Design Systems 2.0 
+
+- Images, videos, and file uploads 
+
+- Versions 
+
+- Integrate 
+
+- AI models 
+
+- Databases 
+
+- Snowflake 
+
+- Shopify 
+
+- External APIs 
+
+- GitHub 
+
+- MCP Integrations 
+
+- Pre-installed Agents 
+
+- Slack 
+
+- Ship 
+
+- Deployments 
+
+- Custom domain 
+
+- Sharing 
+
+- Templates 
+
+- Manage 
+
+- Account 
+
+- Enterprise 
+
+- Instructions 
+
+- Folders 
+
+- Projects 
+
+- Pricing 
+
+- Usage & Activity 
+
+- Teams 
+
+- Security 
+
+- Guides 
+
+- Full-stack apps 
+
+- Prototyping 
+
+- PRD design 
+
+- 
+
+- Compare 
+
+Menu 
+
+# GitHub
+Copy page Copy page 
+
+Connect your GitHub repositories to v0 to automatically create projects and track changes.
+Copy for LLM View Markdown Ask AI about this page 
+
+v0 allows you to connect your chats with GitHub for:
+
+- Version Control: Track and revert code changes
+
+- Collaboration: Work on the same codebase together
+
+- CI/CD: Deploy automatically when pushing to Git
+
+- Pull Requests: Review changes before merging
+
+Plus plans: By default, team members must have access to a GitHub
+repository to collaborate on its associated chat and generate previews. To
+allow members without GitHub access to participate, enable Allow v0 to Act
+on Behalf of Members in your workspace
+settings . See Teams → GitHub
+repository access for details.
+
+## How v0 works with Git 
+
+When you connect a chat to GitHub, v0 creates a working branch from a base branch. This keeps changes isolated until you open and merge a pull request.
+
+- Automatic branching: v0 creates a dedicated branch (for example, v0/username-abc123 ) for each chat
+
+- Auto-commits: Every message you send that changes code automatically creates a commit
+
+- Isolated changes: v0 commits generated changes to the chat's working branch instead of pushing them directly to its base branch
+
+- Merge when ready: When you're done, create a PR targeting the base branch and merge your changes
+
+Three branch settings can be involved:
+
+Branch How v0 uses it 
+Default branch The repository's default branch on GitHub. v0 selects it initially when you import an existing repository. A repository created by v0 uses the GitHub owner's configured default branch name. 
+Base branch The branch selected when the chat is connected or imported. v0 creates the working branch from it and targets it when opening a pull request. 
+Production branch The branch configured on the linked Vercel project to create production deployments. It is often the default or base branch, but it can be different. Other branches create preview deployments. 
+
+If you used v0's previous Git integration, the new workflow is fully
+automatic. No manual commits or branch management needed.
+
+## Connecting to GitHub 
+
+Important: Once a GitHub repository is connected, it becomes the source of
+truth for your project. v0 does not store a separate copy of your code. If the
+repository is deleted from GitHub, your code may become unrecoverable.
+
+To connect your chat to GitHub:
+
+- In the sidebar panel , click on the Git section.
+
+- Click Connect to start the connection process.
+
+- In the Create Repository modal, select your Git Scope (the GitHub account or organization) and enter a Repository Name .
+
+- Click Create Repository to link your chat to a new private GitHub repository.
+
+You can also manage your GitHub connection from the Project Menu ... in
+the same top right of the chat UI.
+
+### Importing an existing repository 
+
+To start from an existing repository, use Git Import . Choose the branch v0 should use as the base, then either link an existing Vercel project or create a new Vercel project for the import.
+
+Importing does not duplicate the repository on GitHub. It creates a v0 chat and a working branch in the selected repository. Importing the same repository again creates another chat and working branch; it does not create another GitHub repository. You can link the import to the same Vercel project or create a separate Vercel project.
+
+Once connected, you'll see information about your repository including:
+
+- Branch: The current working branch (for example, v0/username-e7bad8e4 )
+
+- Merges into: The base branch that a pull request will target
+
+- Status: Whether your branch is up to date
+
+- PR: The status of any open pull request
+
+- Activity: A timeline of changes and commits
+
+## Creating a Pull Request 
+
+When you're ready to merge your changes:
+
+- Click the Publish button (which now shows a PR icon when connected to GitHub).
+
+- Select Open PR to create a pull request from your working branch to its base branch.
+
+- The publish modal will update to show your open PR with options to View PR or Merge PR .
+
+## Merging and continuing work 
+
+After merging your PR:
+
+- Your current chat branch is merged into its base branch.
+
+- To continue working, click New Chat to create a new branch.
+
+- Each new chat acts as a new feature branch where you can make changes.
+
+- When ready, create another PR and repeat the process.
+
+If the base branch is also the linked Vercel project's production branch, merging it triggers a production deployment. If they differ, the merge follows the Vercel project's configured branch behavior.
+
+## Creating branches 
+
+v0 supports flexible branching workflows:
+
+- Branch from the base: Create a new chat to start a fresh working branch from the connected base branch
+
+- Branch from a working branch: Click the branch name in the chat header and select Duplicate Branch... 
+
+For a Git-connected chat, Duplicate Branch creates a new chat and branch containing the current branch's commits. The new branch stays in the same GitHub repository, keeps the same Vercel project and configuration, and targets the same base branch for pull requests.
+
+The destination choice applies only when duplicating a chat that is not connected to GitHub:
+
+- Vercel project only: Continue with the same Vercel project and configuration, or create a new project without carrying the connection over.
+
+- No GitHub or Vercel project: The duplicate starts as a new project.
+
+Previous External APIs Next MCP Integrations 
+
+On this page
+How v0 works with Git Connecting to GitHub Importing an existing repository Creating a Pull Request Merging and continuing work Creating branches 
+
+Scroll to top Give feedback 
+
+## Product
+
+- Home 
+
+- Enterprise 
+
+- Pricing 
+
+- v0 for Students 
+
+## Company
+
+- Terms 
+
+- AI Policy 
+
+- Privacy 
+
+- Cookies 
+
+## Resources
+
+- FAQs 
+
+- Docs 
+
+- Vercel Community 
+
+- Vercel 
+
+## Social
+
+- Twitter 
+
+- LinkedIn 
+
+## Agent Stack
+
+- AI SDK 
+
+- AI Gateway 
+
+- Sandbox 
+
+- Workflows 
+
+- Connect New 
+
+- Passport New 
+
+- eve New 
+
+## Core Platform
+
+- CI/CD 
+
+- Content Delivery 
+
+- Fluid Compute 
+
+- Observability 
+
+## Security
+
+- Platform Security 
+
+- WAF 
+
+- Bot Management 
+
+- Bot ID 
+
+## Tools
+
+- Vercel Drop New 
+
+- Vercel Agent 
+
+- Vercel Plugin New 
+
+- Agent Skills 
+
+- Next.js 
+
+- Domains 
+
+- v0 
+
+## Frameworks
+
+- eve New 
+
+- Nuxt 
+
+- SvelteKit 
+
+- Nitro 
+
+- Turborepo 
+
+- Tanstack Start 
+
+- FastAPI 
+
+- xmcp 
+
+- All frameworks 
+
+## SDKs
+
+- Vercel SDK 
+
+- Workflow SDK New 
+
+- Flags SDK 
+
+- Chat SDK New 
+
+- Queues SDK New 
+
+- Streamdown 
+
+## Build
+
+- AI Apps 
+
+- Web Apps 
+
+- Marketing Sites 
+
+- Platforms 
+
+- Commerce 
+
+- Platform Engineers 
+
+- Design Engineers 
+
+## Learn
+
+- Docs 
+
+- Blog 
+
+- Changelog 
+
+- Knowledge Base 
+
+- Academy 
+
+- Articles 
+
+- Community 
+
+## Explore
+
+- Customers 
+
+- Marketplace 
+
+- Templates 
+
+- Partner Finder 
+
+- Vercel + AWS 
+
+## Company
+
+- About 
+
+- Careers 
+
+- Press 
+
+- Events 
+
+- Startups 
+
+- Shipped on Vercel 
+
+- Open Source Program 
+
+- Enterprise 
+
+- Pricing 
+
+- Help 
+
+## Legal & Trust
+
+- Privacy Policy 
+
+- Terms of Service 
+
+- Cookie Policy 
+
+- DPA 
+
+- Acceptable Use Policy 
+
+- Legal 
+
+- Trust Center 
+
+- Status 
+
+## Social
+
+- GitHub 
+
+- X 
+
+- LinkedIn 
+
+- YouTube 
+
+- Instagram

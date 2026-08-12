@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.linuxfoundation.org/press/linux-foundation-welcomes-the-agntcy-project-to-standardize-open-multi-agent-system-infrastructure-and-break-down-ai-agent-silos",
+    "name": "Linux Foundation Welcomes the AGNTCY Project to",
+    "snippet": "Jul 29, 2025 — Initially open sourced by Cisco in March 2025, with collaboration from LangChain and Galileo, AGNTCY has grown to include more than 65 ...",
+    "host_name": "www.linuxfoundation.org",
+    "rank": 0,
+    "date": "Jul 29, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://outshift.cisco.com/blog/ai-ml/building-the-internet-of-agents-introducing-the-agntcy",
+    "name": "Building the Internet of Agents: Introducing AGNTCY.org",
+    "snippet": "Mar 6, 2025 — Today, we're announcing the AGNTCY - an open source collective building the critical infrastructure for AI agents to work together. Cisco, ...",
+    "host_name": "outshift.cisco.com",
+    "rank": 1,
+    "date": "Mar 6, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://outshift.cisco.com/the-internet-of-agents",
+    "name": "Outshift | Internet of Agents",
+    "snippet": "Solution SoftServe partnered with AGNTCY to deploy a multi-agent video intelligence system powered by SLIM (Secure Low-latency Interactive Messaging).",
+    "host_name": "outshift.cisco.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://outshift.cisco.com/events/agntcy-summit-2025",
+    "name": "CISCO Outshift: Join Us at the Agency Summit 2025!",
+    "snippet": "Join CISCO Outshift at the Agntcy Summit 2025 to explore cutting-edge strategies and innovations. AGNTCY and more. OCT 22, 2025 2 PM PDT. San Francisco from ...",
+    "host_name": "outshift.cisco.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://agntcy.org",
+    "name": "AGNTCY.org — Building the Internet of Agents (IoA)",
+    "snippet": "AGNTCY delivers an open-source stack enabling AI agents to collaborate across vendors and frameworks through discovery, identity, messaging, and observability. Read more",
+    "host_name": "agntcy.org",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://tfir.io/ciscos-agntcy-takes-on-ai-agent-fragmentation-under-linux-foundation-umbrella",
+    "name": "CISCO's AGNTCY Takes On AI Agent Fragmentation",
+    "snippet": "Aug 1, 2025 — AGNTCY protocol under Linux Foundation aims to solve AI agent fragmentation with decentralized discovery, identity, messaging and observability ... Read more",
+    "host_name": "tfir.io",
+    "rank": 5,
+    "date": "Aug 1, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.ciscolive.com/c/dam/r/ciscolive/apjc/docs/2025/pdf/BRKCLD-2070.pdf",
+    "name": "AI-First Ops: Streamlining Cisco Infrastructure with Agents,",
+    "snippet": "Nov 14, 2025 — New tools, protocols , projects … agents provide richer context by accessing data from multiple sources, What is an agent more about AGNTCY .org ... 35 pages",
+    "host_name": "www.ciscolive.com",
+    "rank": 6,
+    "date": "Nov 14, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cloudnativenotes.com/post/navigating-internet-of-agents",
+    "name": "Internet of Agents: What It Is & Why It Matters for Enterprise AI",
+    "snippet": "May 6, 2025 — Now, onto Cisco's AGNTCY . Announced in March 2025 (Outshift Blog - Announcement, Outshift Blog - GitHub Release), this one is interesting. Cisco ... Read more",
+    "host_name": "www.cloudnativenotes.com",
+    "rank": 7,
+    "date": "May 6, 2025",
+    "favicon": ""
+  }
+]

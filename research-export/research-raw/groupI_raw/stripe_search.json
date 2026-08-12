@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://stripe.com/sessions/2025/developer-keynote",
+    "name": "Developer keynote (2025) | Stripe Sessions",
+    "snippet": "May 6, 2025 — In this keynote, see how Stripe is evolving to make your development more efficient . Learn how we're using AI to improve API design, see a new ... Read more",
+    "host_name": "stripe.com",
+    "rank": 0,
+    "date": "May 6, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://raw.studio/blog/how-stripe-uses-4-developer-first-ux-principles-to-drive-massive-adoption",
+    "name": "How Stripe Uses 4 Developer-First UX Principles to Drive",
+    "snippet": "May 27, 2026 — Stripe UX is one of the clearest examples of how developer-first design can turn a complex technical product into a default choice.",
+    "host_name": "raw.studio",
+    "rank": 1,
+    "date": "May 27, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://stripe.com/careers/listing/product-designer-dashboard/7980578",
+    "name": "Stripe Careers | Product Designer - Dashboard",
+    "snippet": "In this role, you will help build and enhance the Stripe Dashboard by designing, concepting, and prototyping high-quality core dashboard and product  ...",
+    "host_name": "stripe.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.moesif.com/blog/best-practices/api-product-management/the-stripe-developer-experience-and-docs-teardown",
+    "name": "Stripe Developer Experience Teardown: What to Steal in",
+    "snippet": "May 22, 2026 — A 2026 teardown of Stripe's developer experience : three-column docs, Markdoc, interactive code panes, and the AI-readable patterns to copy.",
+    "host_name": "www.moesif.com",
+    "rank": 3,
+    "date": "May 22, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://stripe.dev/blog/sessions-2025-dev-track-resources",
+    "name": "Sessions 2025 Developer Track resources",
+    "snippet": "May 7, 2025 — New UI components for Stripe Apps. With Stripe Apps' new features, you can create experiences that feel native within the Stripe Dashboard . Read more",
+    "host_name": "stripe.dev",
+    "rank": 4,
+    "date": "May 7, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://stripe.com/payments/elements",
+    "name": "Stripe Elements | Custom Checkout Design and UI",
+    "snippet": "Use Stripe's suite of rich UI building blocks to design a secure payments experience that perfectly matches your site and helps drive conversion.",
+    "host_name": "stripe.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

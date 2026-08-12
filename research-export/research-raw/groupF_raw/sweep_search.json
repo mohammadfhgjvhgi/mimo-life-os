@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://github.com/sweepai",
+    "name": "Sweep AI",
+    "snippet": "Sweep is a world-class AI coding agent and autocomplete built for JetBrains developers. We are the only AI Assistant that supports next-edit autocomplete.",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://sweep.dev",
+    "name": "Sweep - AI for JetBrains IDEs",
+    "snippet": "The fastest coding assistant for JetBrains. Sweep lets you write code 10x faster . Trusted every day by thousands of professional developers.",
+    "host_name": "sweep.dev",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=DZmk5OTq7BU",
+    "name": "Auto git Pull Request (PR) and issue resolution using Sweep AI",
+    "snippet": "Sweep is an AI-Agent that helps in auto PR generation and issues resolution using git UI. How does it work? check the demo.",
+    "host_name": "www.youtube.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/e2b-dev/awesome-ai-agents",
+    "name": "e2b-dev/awesome-ai-agents: A list of AI autonomous agents",
+    "snippet": "Description. Deploy, manage, and run AI agents that serve as your virtual teammates. Built for teams, with organizational memory and collaboration in mind. Read more",
+    "host_name": "github.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/Upsonic/sweep",
+    "name": "Sweep: AI-powered Junior Developer for small features",
+    "snippet": "Sweep is an AI junior developer that turns bugs and feature requests into code changes. Sweep automatically handles devex improvements like adding typehints/ ...",
+    "host_name": "github.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://skywork.ai/skypage/en/sweep-ai-development-guide/1976898964182593536",
+    "name": "Sweep AI Deep Dive: Your Guide to the Future of AI-",
+    "snippet": "Oct 14, 2025 — At its core, Sweep AI 's value proposition is simple yet profound: it's an AI agent designed to function like a junior developer on your team. Read more",
+    "host_name": "skywork.ai",
+    "rank": 5,
+    "date": "Oct 14, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/sweepai/sweep",
+    "name": "Sweep: AI coding assistant for JetBrains",
+    "snippet": "Sweep: AI coding assistant for JetBrains . Contribute to sweepai/sweep development by creating an account on GitHub.",
+    "host_name": "github.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/ChatGPTCoding/comments/152b9xt/sweep_ai_junior_developer_that_code_solution_to",
+    "name": "Sweep: AI Junior Developer that code solution to GitHub issues",
+    "snippet": "Sweep: Open Source AI junior developer that writes and fixes it's own pull requests. 3. 1. What is one AI use case that actually improved your ...",
+    "host_name": "www.reddit.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

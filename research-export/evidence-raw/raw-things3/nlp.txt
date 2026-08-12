@@ -1,0 +1,185 @@
+
+
+Using Natural Language Input - Things Support
+
+[/things/] Things
+
+[/things/features/] 
+
+Features
+
+[/things/support/] 
+
+Support
+
+[/things/blog/] 
+
+Blog
+
+Using Natural Language Input
+
+Use natural language to quickly schedule to-dos, add reminders, or set deadlines.
+
+It’s easy to set a start date , reminder , or deadline in Things by using your own words. No need to do any math or scroll through the date picker – the natural language processor will figure out when exactly “17 days from July 9” is.
+
+The following languages are currently supported for natural language input: English, German, French, Italian, Spanish, Russian, Chinese, and Japanese.
+
+See Natural Language Input in action
+
+Mac
+
+Use natural language to assign start dates, reminders, and deadlines. Keyboard shortcuts like ⌘ Cmd S or ⇧ Shift ⌘ Cmd D even work on closed to-dos.
+
+Add a start date and/or reminder
+
+On your Mac, open Things.
+
+Select any to-do, or create a new one.
+
+Press ⌘ Cmd S
+
+In the When popover, type the start date, for example tues 8am (Tuesday at 8am).
+
+Press Return to save it.
+
+Add a deadline
+
+On your Mac, open Things.
+
+Select any to-do, or create a new one.
+
+Click the icon, or press ⇧ Shift ⌘ Cmd D
+
+Type the date.
+
+Press Return to save it.
+
+iPad & iPhone
+
+To quickly access the date picker, swipe right on a to-do. Pull down in the date picker to use natural language.
+
+Add a start date and/or reminder
+
+On your iPad or iPhone, open Things.
+
+Swipe right on any to-do to reveal When.
+
+Pull down in the popover to see Search.
+
+Type the start date, for example tues 8am (Tuesday at 8am).
+
+Tap the blue Return key on your keyboard.
+
+iPad users with a hardware keyboard can use natural language in the Deadline picker as well as handy [../2939808/#eegtb] keyboard shortcuts to speed up the process.
+
+Vision
+
+In Things for Vision, please follow the same steps as described in the iPad & iPhone tab above.
+
+Natural Language Input examples
+
+The following list is by no means exhaustive, but it showcases examples of natural language that Things understands. Also, feel free to be lazy – you don’t need to completely spell out words for them to be recognized.
+
+Input
+Result
+
+tod…
+Today / Today
+
+Any relative date can be used in both When and Deadline, like tomorrow, Monday, next week, etc.
+
+10-3
+October 3 / October 3
+
+The format of the actual date input depends on your device’s region settings.
+
+10-3 9
+9AM/PM on October 3 
+
+Reminders can only be attached to start dates, not deadlines.
+
+2p
+2PM reminder
+
+17d
+17 days from today
+
+Use w for weeks, mo for months, and y for years.
+
+17d from jul9
+17 days from the specified date (July 9)
+
+Alternatively, type jul9 + 17d
+
+wed jul…
+Pick any Wednesday in July from a list of suggestions
+
+3rd wed jul…
+Third Wednesday in July
+
+3rd wed jul 2026
+Third Wednesday in July in 2026
+
+last fri jul…
+Last Friday in July
+
+Use natural language in When and to set Reminders on Mac, iPad, iPhone, and Vision. Natural language for Deadlines is only supported on Mac, and iPads & Vision with a hardware keyboard.
+
+Related Articles
+
+[../2803579/] Scheduling To-dos
+
+[../2803585/] Setting a Reminder
+
+Didn’t find what you were looking for?
+
+[/contact/form/] Contact Us
+
+Products
+
+[/things/mac/] Things for Mac
+
+[/things/iphone/] Things for iPhone
+
+[/things/watch/] Things for Watch
+
+[/things/ipad/] Things for iPad
+
+[/things/vision/] Things for Vision
+
+Support
+
+[/things/support/] Help
+
+[/contact/] Contact
+
+[/things/guide/] Getting Productive
+
+News
+
+[/things/blog/] Blog
+
+[/mailinglist/subscribe/] Newsletter
+
+[/status/] Status Board
+
+[/follow/bluesky/] 
+[/follow/x/] 
+[/follow/threads/] 
+[/follow/instagram/] 
+[/follow/mastodon/] 
+
+Company
+
+[/about/] About Us
+
+[/jobs/] Jobs 
+
+[/privacy/] Privacy Policy
+
+[/terms/] Terms
+
+[/press/] Press
+
+[/] Cultured Code
+

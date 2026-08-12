@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://www.figma.com/blog/introducing-figma-motion",
+    "name": "Introducing Figma Motion: Your Canvas Now Has a Timeline",
+    "snippet": "Jun 24, 2026 — And with Dev Mode access and functionality, the whole experience is built for a much smoother handoff. Design and animate in the same file.",
+    "host_name": "www.figma.com",
+    "rank": 0,
+    "date": "Jun 24, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com/posts/daneoleary_motion-tokens-were-the-missing-piece-of-your-activity-7482437440947953665-SfQq",
+    "name": "Adding Motion to Design Systems with Figma Motion",
+    "snippet": "Dev Mode shows the full timeline and hands developers copy-ready CSS, JSON, or React. C-community design tokens format yet every 300ms gets ...",
+    "host_name": "www.linkedin.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=AxLIfW9y5yw&vl=en",
+    "name": "Config 2025: How to make interactive animations with Figma",
+    "snippet": "Discover how to create interactive animations that bridge the gap between design and code. to design and export animations, handoff to ...",
+    "host_name": "www.youtube.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.figma.com/blog/schema-2025-design-systems-recap",
+    "name": "Schema 2025: Design Systems For A New Era",
+    "snippet": "Oct 28, 2025 — Make : A new way to test, edit, and prompt designs . Config 2025 to help teams prototype, validate, and build more easily across the product  ...",
+    "host_name": "www.figma.com",
+    "rank": 3,
+    "date": "Oct 28, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/FigmaDesign/comments/1kh5a59/any_updates_on_design_tokens_from_config_2025",
+    "name": "Any updates on design tokens from Config 2025?",
+    "snippet": "I'm not at the event and was hoping that those who have access to the hallway track could provide any updates on whether there have been any advancements ...",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.figma.com/dev-mode",
+    "name": "Dev Mode: Design-to-Development",
+    "snippet": "Figma's Development Mode helps developers transfer design into code . Streamline workflows between design and development so that there is more clarity on ...",
+    "host_name": "www.figma.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

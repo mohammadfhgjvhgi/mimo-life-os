@@ -1,0 +1,268 @@
+{
+  "total_count": 2,
+  "incomplete_results": false,
+  "items": [
+    {
+      "url": "https://api.github.com/repos/continuedev/continue/issues/10223",
+      "repository_url": "https://api.github.com/repos/continuedev/continue",
+      "labels_url": "https://api.github.com/repos/continuedev/continue/issues/10223/labels{/name}",
+      "comments_url": "https://api.github.com/repos/continuedev/continue/issues/10223/comments",
+      "events_url": "https://api.github.com/repos/continuedev/continue/issues/10223/events",
+      "html_url": "https://github.com/continuedev/continue/issues/10223",
+      "id": 3901706896,
+      "node_id": "I_kwDOJm0kOc7oj1KQ",
+      "number": 10223,
+      "title": "Hugging Face provider models not showing in VS Code model select with huggingface-inference-providers configuration",
+      "user": {
+        "login": "AlexisPelcik",
+        "id": 32672208,
+        "node_id": "MDQ6VXNlcjMyNjcyMjA4",
+        "avatar_url": "https://avatars.githubusercontent.com/u/32672208?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/AlexisPelcik",
+        "html_url": "https://github.com/AlexisPelcik",
+        "followers_url": "https://api.github.com/users/AlexisPelcik/followers",
+        "following_url": "https://api.github.com/users/AlexisPelcik/following{/other_user}",
+        "gists_url": "https://api.github.com/users/AlexisPelcik/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/AlexisPelcik/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/AlexisPelcik/subscriptions",
+        "organizations_url": "https://api.github.com/users/AlexisPelcik/orgs",
+        "repos_url": "https://api.github.com/users/AlexisPelcik/repos",
+        "events_url": "https://api.github.com/users/AlexisPelcik/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/AlexisPelcik/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "labels": [
+        {
+          "id": 7177611717,
+          "node_id": "LA_kwDOJm0kOc8AAAABq9GpxQ",
+          "url": "https://api.github.com/repos/continuedev/continue/labels/kind:bug",
+          "name": "kind:bug",
+          "color": "fa9999",
+          "default": false,
+          "description": "Indicates an unexpected problem or unintended behavior"
+        },
+        {
+          "id": 7177611802,
+          "node_id": "LA_kwDOJm0kOc8AAAABq9GqGg",
+          "url": "https://api.github.com/repos/continuedev/continue/labels/ide:vscode",
+          "name": "ide:vscode",
+          "color": "0864bc",
+          "default": false,
+          "description": "Relates specifically to VS Code extension"
+        },
+        {
+          "id": 7684241268,
+          "node_id": "LA_kwDOJm0kOc8AAAABygQ3dA",
+          "url": "https://api.github.com/repos/continuedev/continue/labels/area:integration",
+          "name": "area:integration",
+          "color": "fef2c0",
+          "default": false,
+          "description": "Integrations (context providers, model providers, etc.)"
+        },
+        {
+          "id": 8232323192,
+          "node_id": "LA_kwDOJm0kOc8AAAAB6q9IeA",
+          "url": "https://api.github.com/repos/continuedev/continue/labels/stale",
+          "name": "stale",
+          "color": "ededed",
+          "default": false,
+          "description": null
+        },
+        {
+          "id": 8566492850,
+          "node_id": "LA_kwDOJm0kOc8AAAAB_ppOsg",
+          "url": "https://api.github.com/repos/continuedev/continue/labels/os:linux",
+          "name": "os:linux",
+          "color": "436294",
+          "default": false,
+          "description": "Happening specifically on Linux"
+        }
+      ],
+      "state": "closed",
+      "locked": false,
+      "assignees": [
+        {
+          "login": "Patrick-Erichsen",
+          "id": 20157849,
+          "node_id": "MDQ6VXNlcjIwMTU3ODQ5",
+          "avatar_url": "https://avatars.githubusercontent.com/u/20157849?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Patrick-Erichsen",
+          "html_url": "https://github.com/Patrick-Erichsen",
+          "followers_url": "https://api.github.com/users/Patrick-Erichsen/followers",
+          "following_url": "https://api.github.com/users/Patrick-Erichsen/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Patrick-Erichsen/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Patrick-Erichsen/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Patrick-Erichsen/subscriptions",
+          "organizations_url": "https://api.github.com/users/Patrick-Erichsen/orgs",
+          "repos_url": "https://api.github.com/users/Patrick-Erichsen/repos",
+          "events_url": "https://api.github.com/users/Patrick-Erichsen/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Patrick-Erichsen/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        }
+      ],
+      "milestone": null,
+      "comments": 3,
+      "created_at": "2026-02-05T13:53:21Z",
+      "updated_at": "2026-06-07T02:21:56Z",
+      "closed_at": "2026-06-07T02:21:56Z",
+      "assignee": {
+        "login": "Patrick-Erichsen",
+        "id": 20157849,
+        "node_id": "MDQ6VXNlcjIwMTU3ODQ5",
+        "avatar_url": "https://avatars.githubusercontent.com/u/20157849?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Patrick-Erichsen",
+        "html_url": "https://github.com/Patrick-Erichsen",
+        "followers_url": "https://api.github.com/users/Patrick-Erichsen/followers",
+        "following_url": "https://api.github.com/users/Patrick-Erichsen/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Patrick-Erichsen/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Patrick-Erichsen/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Patrick-Erichsen/subscriptions",
+        "organizations_url": "https://api.github.com/users/Patrick-Erichsen/orgs",
+        "repos_url": "https://api.github.com/users/Patrick-Erichsen/repos",
+        "events_url": "https://api.github.com/users/Patrick-Erichsen/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Patrick-Erichsen/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "author_association": "NONE",
+      "issue_field_values": [
+
+      ],
+      "type": null,
+      "active_lock_reason": null,
+      "sub_issues_summary": {
+        "total": 0,
+        "completed": 0,
+        "percent_completed": 0
+      },
+      "issue_dependencies_summary": {
+        "blocked_by": 0,
+        "total_blocked_by": 0,
+        "blocking": 0,
+        "total_blocking": 0
+      },
+      "body": "### Before submitting your bug report\n\n- [ ] I've tried using the \"Ask AI\" feature on the [Continue docs site](https://docs.continue.dev/) to see if the docs have an answer\n- [x] I'm not able to find a related conversation on [GitHub discussions](https://github.com/continuedev/continue/discussions) that reports the same bug\n- [x] I'm not able to find an [open issue](https://github.com/continuedev/continue/issues?q=is%3Aopen+is%3Aissue) that reports the same bug\n- [x] I've seen the [troubleshooting guide](https://docs.continue.dev/troubleshooting) on the Continue Docs\n\n### Relevant environment info\n\n```Markdown\n- OS: Linux\n- Continue version: v1.3.30\n- IDE version: VSCode 1.109.0\n- Model: Qwen/Qwen3-Coder-Next:novita\n- config:\n  \nname: Local Config\nversion: 1.0.0\n\nschema: v1\nmodels:\n  - name: huggingfacembe\n    provider: huggingface-inference-providers\n    model: Qwen/Qwen3-VL-Embedding-2B\n    apiKey: hf_XXXXXX\n    apiBase: https://router.huggingface.co/v1\n    roles:\n      - embed\n\n  - name: huggingfaceAutocomplete\n    provider: huggingface-inference-providers\n    model: Qwen/Qwen2.5-Coder-7B:fastest\n    apiKey: hf_XXXXXX\n    apiBase: https://router.huggingface.co/v1\n    roles:\n      - autocomplete\n\n  - name: huggingface\n    provider: huggingface-inference-providers\n    model: Qwen/Qwen3-Coder-Next:cheapest\n    apiKey: hf_XXXXXXX\n    apiBase: https://router.huggingface.co/v1\n    roles:\n      - chat\n      - edit\n      - apply\n```\n\n### Description\n\nI’m trying to use Hugging Face models in Continue (VS Code extension) by following the documented configuration format. However, the configured model never shows up in the model picker UI.\n\nIf I modify the provider to:\n```yaml\nprovider: huggingface-inference-api\n```\n\nthen it does show up in the picker but using that provider results in 404 errors from Hugging Face.\n\nThis makes it impossible to use Hugging Face inference providers the way the docs describe: Continue doesn’t show models for huggingface-inference-providers, but only for huggingface-inference-api, which fails in practice.\n\n### To reproduce\n\nAdd a Hugging Face inference model definition in config.json or VS Code config, e.g.:\n\n```yaml\n- name: huggingface\n  provider: huggingface-inference-providers\n  model: Qwen/Qwen3-Coder-Next:cheapest\n  apiKey: hf_XXXXX\n  apiBase: https://router.huggingface.co/v1\n  roles:\n    - chat\n```\n\n### Log output\n\n```Shell\n\n```",
+      "reactions": {
+        "url": "https://api.github.com/repos/continuedev/continue/issues/10223/reactions",
+        "total_count": 0,
+        "+1": 0,
+        "-1": 0,
+        "laugh": 0,
+        "hooray": 0,
+        "confused": 0,
+        "heart": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "timeline_url": "https://api.github.com/repos/continuedev/continue/issues/10223/timeline",
+      "performed_via_github_app": null,
+      "state_reason": "not_planned",
+      "pinned_comment": null,
+      "score": 1.0
+    },
+    {
+      "url": "https://api.github.com/repos/continuedev/continue/issues/10600",
+      "repository_url": "https://api.github.com/repos/continuedev/continue",
+      "labels_url": "https://api.github.com/repos/continuedev/continue/issues/10600/labels{/name}",
+      "comments_url": "https://api.github.com/repos/continuedev/continue/issues/10600/comments",
+      "events_url": "https://api.github.com/repos/continuedev/continue/issues/10600/events",
+      "html_url": "https://github.com/continuedev/continue/pull/10600",
+      "id": 3954387895,
+      "node_id": "PR_kwDOJm0kOc7EcVfj",
+      "number": 10600,
+      "title": "feat: Claude Sonnet and Opus 4.6 updates",
+      "user": {
+        "login": "RomneyDa",
+        "id": 6581799,
+        "node_id": "MDQ6VXNlcjY1ODE3OTk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6581799?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/RomneyDa",
+        "html_url": "https://github.com/RomneyDa",
+        "followers_url": "https://api.github.com/users/RomneyDa/followers",
+        "following_url": "https://api.github.com/users/RomneyDa/following{/other_user}",
+        "gists_url": "https://api.github.com/users/RomneyDa/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/RomneyDa/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/RomneyDa/subscriptions",
+        "organizations_url": "https://api.github.com/users/RomneyDa/orgs",
+        "repos_url": "https://api.github.com/users/RomneyDa/repos",
+        "events_url": "https://api.github.com/users/RomneyDa/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/RomneyDa/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "labels": [
+        {
+          "id": 8578182731,
+          "node_id": "LA_kwDOJm0kOc8AAAAB_0yuSw",
+          "url": "https://api.github.com/repos/continuedev/continue/labels/size:L",
+          "name": "size:L",
+          "color": "eb9500",
+          "default": false,
+          "description": "This PR changes 100-499 lines, ignoring generated files."
+        },
+        {
+          "id": 9017707590,
+          "node_id": "LA_kwDOJm0kOc8AAAACGX9MRg",
+          "url": "https://api.github.com/repos/continuedev/continue/labels/tier%202",
+          "name": "tier 2",
+          "color": "1a7f37",
+          "default": false,
+          "description": "Important feature that adds new capabilities to the platform or improves critical user journeys"
+        }
+      ],
+      "state": "closed",
+      "locked": true,
+      "assignees": [
+
+      ],
+      "milestone": null,
+      "comments": 2,
+      "created_at": "2026-02-17T19:49:49Z",
+      "updated_at": "2026-02-18T04:06:00Z",
+      "closed_at": "2026-02-18T04:05:45Z",
+      "assignee": null,
+      "author_association": "CONTRIBUTOR",
+      "issue_field_values": [
+
+      ],
+      "type": null,
+      "active_lock_reason": null,
+      "draft": false,
+      "pull_request": {
+        "url": "https://api.github.com/repos/continuedev/continue/pulls/10600",
+        "html_url": "https://github.com/continuedev/continue/pull/10600",
+        "diff_url": "https://github.com/continuedev/continue/pull/10600.diff",
+        "patch_url": "https://github.com/continuedev/continue/pull/10600.patch",
+        "merged_at": "2026-02-18T04:05:44Z"
+      },
+      "body": "Add claude-sonnet-4-6 and claude-opus-4-6 as the new default Sonnet and Opus models across providers, GUI configs, schemas, cost calculation, and CLI defaults. Update display names for all >= 4.5 models to use name-first format (e.g. \"Claude Sonnet 4.5\" not \"Claude 4.5 Sonnet\").\n\n---\n\n<!-- continue-task-summary-start -->\n**Continue Tasks:** ▶️ 7 not started · ✅ 20 no changes · ✅ 1 merged — [View all](https://hub.continue-stage.tools/inbox/pr/continuedev/continue/10600?utm_source=github_pr&utm_medium=pr_body&utm_campaign=continue_tasks)\n<!-- continue-task-summary-end -->\n\n<!-- This is an auto-generated description by cubic. -->\n---\n## Summary by cubic\nAdd Claude Sonnet 4.6 and Claude Opus 4.6 and set them as the new defaults across core, CLI, GUI, schemas, and cost calculator. Standardize display names to “Claude <Name> <Version>” for all 4.5+ models.\n\n- **New Features**\n  - Default Anthropic model changed to claude-sonnet-4-6 (core and CLI).\n  - 4.6 models added to providers (Anthropic, CometAPI), GUI catalog, VS Code schema, and YAML slugs.\n  - Pricing added for 4.6 models in the request cost calculator.\n  - Tests and YAML updater updated to target 4.6.\n  - Display names updated to name-first format (e.g., “Claude Sonnet 4.5”, “Claude Haiku 4.5”, “Claude Opus 4.5”).\n\n- **Migration**\n  - New configs will default to Sonnet 4.6. Pin a specific model in your config if you want to keep 4.5 or another version.\n\n<sup>Written for commit c006d4b231dac2b02b05b51645dc462b38fa5531. Summary will update on new commits.</sup>\n\n<!-- End of auto-generated description by cubic. -->\n\n",
+      "reactions": {
+        "url": "https://api.github.com/repos/continuedev/continue/issues/10600/reactions",
+        "total_count": 0,
+        "+1": 0,
+        "-1": 0,
+        "laugh": 0,
+        "hooray": 0,
+        "confused": 0,
+        "heart": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "timeline_url": "https://api.github.com/repos/continuedev/continue/issues/10600/timeline",
+      "performed_via_github_app": null,
+      "state_reason": null,
+      "score": 1.0
+    }
+  ],
+  "search_type": "lexical"
+}

@@ -1,0 +1,3303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    
+  <url>
+    <loc>https://manus.im/docs/ar/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:16.809Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:16.808Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/projects</loc>
+    <lastmod>2026-02-03T13:59:54.991Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/skills</loc>
+    <lastmod>2026-07-06T11:56:17.201Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/features/wide-research</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/integrations/integrations</loc>
+    <lastmod>2026-07-06T11:56:17.200Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:03.968Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:17.233Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T13:59:56.373Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T13:59:56.392Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/github-integration</loc>
+    <lastmod>2025-12-26T13:55:17.988Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:17.251Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/publishing</loc>
+    <lastmod>2026-01-02T12:45:14.004Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:17.533Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:39.907Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ar/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:17.810Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:17.806Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/projects</loc>
+    <lastmod>2026-02-03T13:59:56.683Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/skills</loc>
+    <lastmod>2026-07-06T11:56:17.807Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/features/wide-research</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/integrations/integrations</loc>
+    <lastmod>2026-01-06T12:39:23.185Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:03.961Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:18.124Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T13:59:57.215Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T13:59:57.243Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/github-integration</loc>
+    <lastmod>2025-12-26T13:55:18.595Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:18.145Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/publishing</loc>
+    <lastmod>2026-01-02T12:45:14.765Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:18.144Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:40.288Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/de/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:18.506Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:18.796Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/projects</loc>
+    <lastmod>2026-02-03T13:59:57.581Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/skills</loc>
+    <lastmod>2026-07-06T11:56:18.798Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/features/wide-research</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/integrations/integrations</loc>
+    <lastmod>2026-01-06T12:39:23.523Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:03.962Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:18.981Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T13:59:58.084Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T13:59:58.111Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/github-integration</loc>
+    <lastmod>2025-12-26T13:55:19.034Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:18.983Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/publishing</loc>
+    <lastmod>2026-01-02T12:45:15.352Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:19.304Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:40.699Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/es/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/browser-operator</loc>
+    <lastmod>2025-12-24T08:42:20.542Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/cloud-browser</loc>
+    <lastmod>2025-12-12T08:39:04.918Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/collab</loc>
+    <lastmod>2025-11-24T03:52:56.587Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/data-visualization</loc>
+    <lastmod>2025-11-24T05:17:45.674Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:19.574Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:19.572Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/multi-modal</loc>
+    <lastmod>2025-12-12T08:39:04.920Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/projects</loc>
+    <lastmod>2026-02-03T13:59:58.433Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/scheduled-tasks</loc>
+    <lastmod>2025-12-12T08:39:04.917Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/skills</loc>
+    <lastmod>2026-07-06T11:56:19.594Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/slides</loc>
+    <lastmod>2025-12-12T08:39:04.915Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/features/wide-research</loc>
+    <lastmod>2025-12-12T08:39:05.584Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:19.592Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:19.872Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/projects</loc>
+    <lastmod>2026-02-03T13:59:58.834Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/skills</loc>
+    <lastmod>2026-07-06T11:56:19.876Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/features/wide-research</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/integrations/integrations</loc>
+    <lastmod>2026-01-06T12:39:23.999Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:03.963Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:19.914Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T13:59:59.582Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T13:59:59.582Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/github-integration</loc>
+    <lastmod>2025-12-26T13:55:19.391Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:19.936Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/publishing</loc>
+    <lastmod>2026-01-02T12:45:15.818Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:19.933Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:41.038Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/fr/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/browser-operator</loc>
+    <lastmod>2026-02-03T13:59:59.851Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/design-view</loc>
+    <lastmod>2026-02-03T13:59:59.853Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:20.306Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:20.303Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/projects</loc>
+    <lastmod>2026-02-03T14:00:00.397Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/skills</loc>
+    <lastmod>2026-07-06T11:56:20.706Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/features/wide-research</loc>
+    <lastmod>2026-02-03T14:00:00.398Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/integrations/integrations</loc>
+    <lastmod>2026-01-06T12:39:24.312Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:03.964Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:20.727Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T14:00:00.818Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T14:00:00.819Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/github-integration</loc>
+    <lastmod>2026-02-03T14:00:00.816Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:20.745Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/publishing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:21.073Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/seo</loc>
+    <lastmod>2026-02-03T14:00:02.163Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/hi/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/data-visualization</loc>
+    <lastmod>2026-02-03T14:00:02.166Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:21.360Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:21.361Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/projects</loc>
+    <lastmod>2026-02-03T14:00:02.682Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/skills</loc>
+    <lastmod>2026-07-06T11:56:21.348Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/features/wide-research</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/integrations/integrations</loc>
+    <lastmod>2026-01-06T12:39:24.639Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:03.968Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:21.655Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T14:00:03.029Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T14:00:03.031Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/github-integration</loc>
+    <lastmod>2026-01-12T04:37:49.865Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:21.673Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/publishing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:21.670Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/seo</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/id/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/integrations/integrations</loc>
+    <lastmod>2026-01-06T02:48:28.138Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/integrations/manus-browser-operator</loc>
+    <lastmod>2025-12-12T08:39:06.923Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/integrations/slack-integration</loc>
+    <lastmod>2025-11-21T14:49:30.483Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/introduction/plans</loc>
+    <lastmod>2026-02-05T03:03:26.958Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:22.126Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:22.458Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/projects</loc>
+    <lastmod>2026-02-03T14:00:03.359Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/skills</loc>
+    <lastmod>2026-07-06T11:56:22.461Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/features/wide-research</loc>
+    <lastmod>2026-07-06T11:56:22.460Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/integrations/integrations</loc>
+    <lastmod>2026-01-06T12:39:25.462Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:03.970Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:22.498Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T14:00:03.748Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T14:00:03.751Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/github-integration</loc>
+    <lastmod>2026-01-12T04:37:49.863Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:22.495Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/publishing</loc>
+    <lastmod>2026-01-02T12:45:21.105Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:22.786Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:41.484Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/it/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:23.071Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:23.067Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/projects</loc>
+    <lastmod>2026-02-03T14:00:04.067Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/skills</loc>
+    <lastmod>2026-07-06T11:56:23.375Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/features/wide-research</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/integrations/integrations</loc>
+    <lastmod>2026-01-06T12:39:25.500Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:03.965Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:23.415Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T14:00:04.460Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T14:00:04.465Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/github-integration</loc>
+    <lastmod>2026-01-12T04:37:49.862Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:23.445Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/publishing</loc>
+    <lastmod>2026-01-02T12:45:21.390Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:23.742Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:41.803Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ja/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:23.714Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:24.069Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/projects</loc>
+    <lastmod>2026-02-03T14:00:04.767Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/skills</loc>
+    <lastmod>2026-07-06T11:56:24.068Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/features/wide-research</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/integrations/integrations</loc>
+    <lastmod>2026-01-06T12:39:25.853Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:03.966Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:24.108Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T14:00:05.148Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T14:00:05.149Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/github-integration</loc>
+    <lastmod>2025-12-26T13:55:20.468Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:24.129Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/publishing</loc>
+    <lastmod>2026-01-02T12:45:21.732Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:24.126Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:42.129Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/ko/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:24.439Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:24.423Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/projects</loc>
+    <lastmod>2026-02-03T14:00:05.448Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/skills</loc>
+    <lastmod>2026-07-06T11:56:24.794Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/features/wide-research</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/integrations/integrations</loc>
+    <lastmod>2026-01-06T12:39:26.191Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:04.010Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:24.814Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T14:00:05.815Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T14:00:05.818Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/github-integration</loc>
+    <lastmod>2025-12-26T13:55:20.744Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:24.831Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/publishing</loc>
+    <lastmod>2026-01-02T12:45:22.030Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:25.104Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:42.401Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/pt-br/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:25.380Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:25.378Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/projects</loc>
+    <lastmod>2026-02-03T14:00:06.146Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/skills</loc>
+    <lastmod>2026-07-06T11:56:25.376Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/features/wide-research</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/integrations/integrations</loc>
+    <lastmod>2026-01-06T12:39:26.488Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:04.027Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:25.724Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T14:00:06.514Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T14:00:06.512Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/github-integration</loc>
+    <lastmod>2025-12-26T13:55:21.083Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:25.747Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/publishing</loc>
+    <lastmod>2026-01-02T12:45:22.329Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:25.743Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:42.699Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/tr/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:26.665Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:27.161Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/projects</loc>
+    <lastmod>2026-02-03T14:00:06.877Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/skills</loc>
+    <lastmod>2026-07-06T11:56:27.183Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/features/wide-research</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/integrations/data-sources</loc>
+    <lastmod>2026-02-03T14:00:06.880Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/integrations/integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:04.029Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:27.219Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T14:00:07.228Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T14:00:07.232Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/github-integration</loc>
+    <lastmod>2025-12-26T13:55:21.453Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:27.221Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/publishing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:27.503Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:43.015Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/vi/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/access-control</loc>
+    <lastmod>2025-12-05T02:44:48.178Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/ai-capabilities</loc>
+    <lastmod>2026-06-12T04:22:58.975Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:27.792Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/getting-started</loc>
+    <lastmod>2026-01-21T13:02:13.075Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T14:00:07.534Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/github-integration</loc>
+    <lastmod>2026-01-12T04:37:49.864Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:27.790Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/notifications</loc>
+    <lastmod>2025-11-24T08:55:12.325Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/payments</loc>
+    <lastmod>2025-11-24T08:55:12.323Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/project-analytics</loc>
+    <lastmod>2025-12-12T08:39:23.889Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/publishing</loc>
+    <lastmod>2026-06-12T12:54:54.963Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:27.815Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:43.298Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/website-builder/third-party-integrations</loc>
+    <lastmod>2026-06-03T09:29:08.663Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:27.837Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:27.836Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/projects</loc>
+    <lastmod>2026-02-03T14:00:07.805Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/skills</loc>
+    <lastmod>2026-07-06T11:56:28.124Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/features/wide-research</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/integrations/integrations</loc>
+    <lastmod>2026-01-06T12:39:26.852Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:04.031Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:28.143Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T14:00:08.180Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T14:00:08.181Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/github-integration</loc>
+    <lastmod>2025-12-26T13:55:21.789Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/import-figma</loc>
+    <lastmod>2026-07-06T11:56:28.153Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:28.163Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/publishing</loc>
+    <lastmod>2026-01-02T12:45:22.966Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:28.498Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:43.606Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-cn/website-builder/third-party-integrations</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/cloud-browser</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/collab</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/data-visualization</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/design-view</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/desktop</loc>
+    <lastmod>2026-07-06T11:56:28.430Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/mail-manus</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/meeting-minutes</loc>
+    <lastmod>2026-07-06T11:56:28.769Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/multi-modal</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/projects</loc>
+    <lastmod>2026-02-03T14:00:08.424Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/scheduled-tasks</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/skills</loc>
+    <lastmod>2026-07-06T11:56:28.768Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/slides</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/features/wide-research</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/integrations/custom-mcp</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/integrations/data-sources</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/integrations/integrations</loc>
+    <lastmod>2026-01-06T12:39:27.078Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/integrations/manus-api</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/integrations/manus-browser-operator</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/integrations/mcp-connectors</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/integrations/nano-banana-pro</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/integrations/slack-integration</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/integrations/zapier</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/introduction/plans</loc>
+    <lastmod>2026-02-06T13:16:04.031Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/introduction/welcome</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/access-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/ai-capabilities</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/app-publishing</loc>
+    <lastmod>2026-07-06T11:56:28.836Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/cloud-infrastructure</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/code-control</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/custom-domains</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/editing-and-previewing</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/getting-started</loc>
+    <lastmod>2026-02-03T14:00:08.724Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/getting-started/usage-and-pricing</loc>
+    <lastmod>2026-02-03T14:00:08.726Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/github-integration</loc>
+    <lastmod>2025-12-26T13:55:22.035Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/import-figma</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/make-a-copy</loc>
+    <lastmod>2026-07-06T11:56:28.857Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/notifications</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/payments</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/project-analytics</loc>
+    
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/publishing</loc>
+    <lastmod>2026-01-02T12:45:23.208Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/schedules</loc>
+    <lastmod>2026-07-06T11:56:28.854Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/seo</loc>
+    <lastmod>2025-12-30T13:23:43.889Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://manus.im/docs/zh-tw/website-builder/third-party-integrations</loc>
+    
+  </url>
+</urlset>

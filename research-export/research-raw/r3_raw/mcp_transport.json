@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://modelcontextprotocol.io/specification/2025-03-26/basic/transports",
+    "name": "Transports",
+    "snippet": "Mar 26, 2025 — This transport uses HTTP POST and GET requests. Server can optionally make use of Server-Sent Events ( SSE ) to stream multiple server messages. Read more",
+    "host_name": "modelcontextprotocol.io",
+    "rank": 0,
+    "date": "Mar 26, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://builder.aws.com/content/35A0IphCeLvYzly9Sw40G1dVNzc/mcp-transport-mechanisms-stdio-vs-streamable-http",
+    "name": "MCP Transport Mechanisms: STDIO vs Streamable HTTP",
+    "snippet": "Nov 7, 2025 — Streamable HTTP transport replaced the deprecated HTTP + SSE transport from protocol version 2024-11-05 (as of specification version 2025 -03-26). Read more",
+    "host_name": "builder.aws.com",
+    "rank": 1,
+    "date": "Nov 7, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.truefoundry.com/blog/mcp-stdio-vs-streamable-http-enterprise",
+    "name": "MCP Transport: Stdio vs Streamable HTTP",
+    "snippet": "May 21, 2026 — Streamable HTTP , introduced in MCP spec 2025 -03-26 and retained in the November 2025 revision, replaces the older HTTP + SSE transport with a ... Read more",
+    "host_name": "www.truefoundry.com",
+    "rank": 2,
+    "date": "May 21, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports",
+    "name": "Overview - Model Context Protocol",
+    "snippet": "Jul 28, 2026 — Streamable HTTP : each message is an HTTP POST to a single MCP endpoint; replies arrive as a JSON object or a request-scoped SSE stream .",
+    "host_name": "modelcontextprotocol.io",
+    "rank": 3,
+    "date": "Jul 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/mcp/comments/1ng6a8g/is_anybody_still_using_sse_transport",
+    "name": "Is anybody still using SSE transport? : r/mcp",
+    "snippet": "Server-Sent Events (SSE) transport was deprecated by the MCP official spec quite a while ago.\n\nAFAIK every new MCP server uses either streamable ...",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://brightdata.com/blog/ai/sse-vs-streamable-http",
+    "name": "SSE vs Streamable HTTP: Why MCP Switched Transport",
+    "snippet": "Learn why MCP moved from SSE to Streamable HTTP . Discover protocol history, how each method works, and key advantages for AI applications.",
+    "host_name": "brightdata.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@vkrishnan9074/mcp-clients-stdio-vs-sse-a53843d9aabb",
+    "name": "MCP Clients : Stdio vs SSE",
+    "snippet": "MCP Clients : Stdio vs SSE · STDIO (Standard Input/Output) Transport is primarily used for inter-process communication within the same system. Read more",
+    "host_name": "medium.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://godspeed.systems/docs/saarthi/features/mcp/server-transports",
+    "name": "MCP Server Transports: STDIO, Streamable HTTP & SSE",
+    "snippet": "Streamable HTTP transport is the modern standard for remote MCP server communication, replacing the older HTTP+SSE transport. It operates over HTTP/HTTPS and ... Read more",
+    "host_name": "godspeed.systems",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

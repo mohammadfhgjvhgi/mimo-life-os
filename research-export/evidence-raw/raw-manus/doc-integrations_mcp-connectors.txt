@@ -1,0 +1,239 @@
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- MCP Connectors - Manus Documentation 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
+## Documentation Index
+Fetch the complete documentation index at: /docs/llms.txt 
+Use this file to discover all available pages before exploring further.
+Skip to main content 
+Manus Documentation home page English 
+
+Search...
+
+⌘ K Ask Assistant 
+
+Search... 
+
+Navigation 
+MCP Connectors
+
+Introduction 
+Features 
+Website Builder 
+Integrations 
+
+- Integrate Manus with Your Existing Tools 
+
+- MCP Connectors 
+
+- Custom MCP Servers 
+
+- Manus Browser Operator 
+
+- Slack Integration 
+
+- Zapier 
+
+- Manus API 
+
+- Nano Banana Pro 
+
+- Data Sources 
+
+## On this page 
+
+- What are MCP Connectors? 
+- Integrate Manus with your tools using MCP servers 
+
+- Why connect MCP servers 
+
+- How MCP Connectors Work 
+
+- Multi-App Workflow Examples 
+- Notion + Google Calendar 
+
+- Gmail + Document Analysis 
+
+- Stripe + Data Analysis 
+
+- HubSpot + Gmail + Notion 
+
+- Available Connectors 
+
+# MCP Connectors
+
+Connect Manus to your team’s tools and enable context-driven creation — moving from idea to validation to live app faster than ever.
+
+## ​ 
+
+What are MCP Connectors? 
+
+MCP (Model Context Protocol) connectors are prebuilt integrations that connect Manus to popular tools and services in your workflow. When you connect an app through MCP, Manus can read data from that app, perform actions within it, and coordinate workflows across multiple platforms—all from a single natural language prompt. 
+MCP connectors eliminate the need to manually switch between apps, copy information, or perform repetitive tasks across different tools. Instead of working in isolation, Manus becomes a central orchestration layer that understands your entire digital workspace. 
+
+### ​ 
+
+Integrate Manus with your tools using MCP servers 
+
+MCP (Model Context Protocol) is an open standard that connects AI Agents, like Manus, to external tools, services, and data sources. By connecting Manus to tools such as Notion, Atlassian, or Linear, the Manus Agent can use real team context to generate more accurate code, prototypes, and documentation. 
+When you connect an MCP server, Manus can read structured data (like text from docs, issues, or diagrams) and, where supported, perform limited actions such as creating or updating items. Manus includes several prebuilt MCP servers on all plans. 
+
+## ​ 
+
+Why connect MCP servers 
+
+In Manus, MCP servers unlock two key capabilities: 
+
+- Bring your existing context into Manus. 
+
+Manus can read your team’s documentation, tickets, and design files to build prototypes and flows aligned with your standards.
+
+- Connect Manus to your workflows. 
+
+Manus can take follow-up actions in your connected tools — such as updating ticket statuses, adding prototype links as comments, or creating new items when supported.
+
+Manus becomes more powerful when it understands your team’s world — eliminating guesswork, speeding up iteration, and helping you go from idea to live app faster than ever**.** 
+
+## ​ 
+
+How MCP Connectors Work 
+
+Connecting an app to Manus follows a simple three-step process: 
+
+- Select a Connector: Choose from available integrations in your Manus settings. Popular options include Gmail, Notion, Stripe, HubSpot, Slack, Google Calendar, and Hugging Face.
+
+- Authenticate: Sign in to the service you want to connect and grant Manus the permissions it needs. This uses OAuth 2.0, the same secure authentication method used by major platforms. You control exactly what Manus can access.
+
+- Start Using: Once connected, simply mention the app in your prompts. Manus automatically uses the appropriate connector to read data or perform actions. ​ 
+
+## ​ 
+
+Multi-App Workflow Examples 
+
+The real power of MCP connectors emerges when you combine multiple integrations in a single workflow. Here are examples of what becomes possible: 
+
+### ​ 
+
+Notion + Google Calendar 
+
+Prompt : 
+
+Here's a link to my Notion event planning document. Write event descriptions for each item and add them to my Google Calendar." 
+
+What Manus Does : 
+
+- Reads the Notion document to understand the event list
+
+- Generates appropriate descriptions for each event
+
+- Creates calendar entries in Google Calendar with the details
+
+- Updates the Notion document to reflect that events have been scheduled
+
+Why This Works : Instead of manually copying information between Notion and Calendar, Manus handles the entire workflow. Information stays synchronized, and you save time on repetitive data entry. 
+
+### ​ 
+
+Gmail + Document Analysis 
+
+Prompt : 
+
+Check my Gmail for startup pitch emails from this week. Analyze the attached pitch decks and create a summary with key questions for each founder. 
+
+What Manus Does: 
+
+- Searches Gmail for relevant emails based on your criteria
+
+- Downloads and analyzes pitch deck attachments
+
+- Extracts key information (problem, solution, team, metrics, risks)
+
+- Generates thoughtful questions for each founder
+
+- Creates a summary document with analysis and questions
+
+Why This Works: Manus processes multiple emails and documents in parallel, extracting insights and preparing you for meetings without requiring you to manually review each pitch. 
+
+### ​ 
+
+Stripe + Data Analysis 
+
+Prompt : 
+
+Pull my Stripe revenue data for the past quarter, combine it with this CSV file of expenses, and create a financial projection spreadsheet. 
+
+What Manus Does: 
+
+- Connects to your Stripe account and retrieves transaction data
+
+- Processes the uploaded CSV file with expense information
+
+- Combines both data sources into a unified dataset
+
+- Generates financial projections based on historical trends
+
+- Creates a formatted spreadsheet with charts and insights
+
+Why This Works: Manus accesses real financial data from Stripe, eliminating manual export and data entry. The result is an accurate, up-to-date financial analysis based on your actual business metrics. 
+
+### ​ 
+
+HubSpot + Gmail + Notion 
+
+Prompt : 
+
+Find my sales call notes from Gmail, update the deal status in HubSpot, and create follow-up tasks in Notion." 
+
+What Manus Does: 
+
+- Searches Gmail for sales call notes
+
+- Extracts key information and outcomes from the notes
+
+- Updates the corresponding deal in HubSpot with new status and notes
+
+- Creates actionable follow-up tasks in Notion with deadlines
+
+- Links all three systems so information stays synchronized
+
+Why This Works: A single workflow updates your CRM, task manager, and email system. No manual data entry, no risk of forgetting to update a system, and complete visibility across platforms. 
+
+## ​ 
+
+Available Connectors 
+
+Manus offers MCP connectors for a growing list of popular tools and services, organized by category: 
+Category Connectors 
+Productivity Gmail, Google Calendar, Google Drive, Notion 
+Business & CRM HubSpot, Stripe 
+Development GitHub, Hugging Face 
+
+Note : This list represents commonly used connectors. Additional integrations are available, and new connectors are added regularly. Check your Manus settings to see the full list of available integrations. 
+Integrate Manus with Your Existing Tools
+Custom MCP Servers
+⌘ I 
+
+instagram linkedin x youtube 
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform 
+
+Assistant 
+
+Responses are generated using AI and may contain mistakes.
