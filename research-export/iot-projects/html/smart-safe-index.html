@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>الخزنة الذكية</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --bg: #1a1a2e;
+            --bg2: #16213e;
+            --bg3: #0f3460;
+            --accent: #e94560;
+            --accent2: #ff6b6b;
+            --success: #00d9a0;
+            --warning: #ffc93c;
+            --text: #ffffff;
+            --text2: #a0a0a0;
+            --card: #1f1f3a;
+            --border: #2d2d5a;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 50%, var(--bg3) 100%);
+            min-height: 100vh;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+        
+        /* Loader */
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: var(--bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: 0.5s;
+        }
+        .loader.hide { opacity: 0; pointer-events: none; }
+        .loader-circle {
+            width: 60px; height: 60px;
+            border: 4px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loader-text { margin-top: 20px; color: var(--text2); font-size: 1.1rem; }
+        
+        /* Login */
+        .login-page {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: 0.5s;
+        }
+        .login-page.hide { opacity: 0; pointer-events: none; }
+        
+        .login-card {
+            background: var(--card);
+            border-radius: 30px;
+            padding: 50px 40px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border: 1px solid var(--border);
+        }
+        
+        .login-logo {
+            width: 100px; height: 100px;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 25px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(233, 69, 96, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(233, 69, 96, 0); }
+        }
+        
+        .login-title {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--accent), var(--warning));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .login-sub { color: var(--text2); margin-bottom: 30px; }
+        
+        .login-input {
+            width: 100%;
+            padding: 18px;
+            background: var(--bg);
+            border: 2px solid var(--border);
+            border-radius: 15px;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+        .login-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .login-input.error { border-color: var(--accent); animation: shake 0.4s; }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            border: none;
+            border-radius: 15px;
+            color: white;
+            font-family: inherit;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .login-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(233, 69, 96, 0.4); }
+        
+        .login-error { color: var(--accent); margin-top: 15px; font-size: 0.9rem; }
+        
+        /* App */
+        .app { display: none; }
+        .app.show { display: block; }
+        
+        /* Header */
+        .header {
+            background: var(--card);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .brand { display: flex; align-items: center; gap: 12px; }
+        .brand-icon {
+            width: 45px; height: 45px;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .brand-text h1 { font-size: 1.1rem; font-weight: 700; }
+        .brand-text span { font-size: 0.75rem; color: var(--text2); }
+        
+        .status-pill {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .status-pill.online { background: rgba(0, 217, 160, 0.15); color: var(--success); }
+        .status-pill.offline { background: rgba(233, 69, 96, 0.15); color: var(--accent); }
+        .status-dot {
+            width: 6px; height: 6px;
+            background: currentColor;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        
+        .header-btns { display: flex; gap: 8px; }
+        .icon-btn {
+            width: 42px; height: 42px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .icon-btn:hover { background: var(--border); }
+        
+        /* Tabs */
+        .tabs-wrap {
+            background: var(--card);
+            margin: 15px;
+            border-radius: 20px;
+            padding: 6px;
+        }
+        .tabs { display: flex; gap: 4px; }
+        .tab {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            border: none;
+            border-radius: 14px;
+            color: var(--text2);
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .tab.active {
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            color: white;
+        }
+        
+        .tab-page { display: none; padding: 0 15px 120px; }
+        .tab-page.active { display: block; }
+        
+        /* Lock Control */
+        .lock-area {
+            background: var(--card);
+            border-radius: 30px;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+        
+        .lock-circle {
+            width: 160px; height: 160px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 5px solid var(--accent);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            cursor: pointer;
+            transition: 0.4s;
+            position: relative;
+        }
+        .lock-circle::before {
+            content: '';
+            position: absolute;
+            inset: -15px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(233, 69, 96, 0.2) 0%, transparent 70%);
+            animation: glow 2s ease-in-out infinite;
+        }
+        .lock-circle.open { border-color: var(--success); }
+        .lock-circle.open::before { background: radial-gradient(circle, rgba(0, 217, 160, 0.2) 0%, transparent 70%); }
+        @keyframes glow {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        .lock-circle:active { transform: scale(0.95); }
+        
+        .lock-label {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .lock-label.open { color: var(--success); }
+        .lock-label.closed { color: var(--accent); }
+        
+        .lock-time { color: var(--text2); font-size: 0.9rem; }
+        
+        /* Stats */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .stat-box {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 15px 10px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .stat-box .num {
+            font-size: 1.4rem;
+            font-weight: 900;
+            margin-bottom: 4px;
+        }
+        .stat-box .label {
+            font-size: 0.65rem;
+            color: var(--text2);
+            text-transform: uppercase;
+        }
+        
+        /* Action Buttons */
+        .actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .action-card {
+            background: var(--card);
+            border-radius: 18px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .action-card:hover { transform: translateY(-3px); }
+        .action-card:active { transform: scale(0.97); }
+        .action-card.danger { border-color: rgba(233, 69, 96, 0.3); }
+        .action-card.warning { border-color: rgba(255, 201, 60, 0.3); }
+        .action-card.success { border-color: rgba(0, 217, 160, 0.3); }
+        .action-card.active { background: rgba(233, 69, 96, 0.1); border-color: var(--accent); }
+        .action-card .icon { font-size: 2rem; margin-bottom: 8px; }
+        .action-card .name { font-size: 0.9rem; font-weight: 600; }
+        
+        /* Section Title */
+        .section-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 25px 0 15px;
+            font-weight: 700;
+        }
+        .section-head::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+        
+        /* List */
+        .list-card {
+            background: var(--card);
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        .list-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+        .list-title { font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .list-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 5px 12px;
+            color: var(--text2);
+            font-family: inherit;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+        
+        .list-body { max-height: 200px; overflow-y: auto; }
+        
+        .list-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border);
+        }
+        .list-row:last-child { border-bottom: none; }
+        
+        .list-icon {
+            width: 38px; height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        .list-icon.open { background: rgba(0, 217, 160, 0.15); }
+        .list-icon.close { background: rgba(233, 69, 96, 0.15); }
+        .list-icon.warn { background: rgba(255, 201, 60, 0.15); }
+        
+        .list-info { flex: 1; }
+        .list-info .title { font-weight: 600; font-size: 0.9rem; }
+        .list-info .sub { color: var(--text2); font-size: 0.75rem; }
+        
+        .tag {
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.65rem;
+            font-weight: 700;
+        }
+        .tag.app { background: rgba(233, 69, 96, 0.15); color: var(--accent); }
+        .tag.rfid { background: rgba(0, 217, 160, 0.15); color: var(--success); }
+        .tag.auto { background: rgba(255, 201, 60, 0.15); color: var(--warning); }
+        .tag.guest { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
+        .tag.fail { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+        
+        .empty { text-align: center; color: var(--text2); padding: 30px; font-size: 0.9rem; }
+        
+        /* Cards List */
+        .card-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border);
+        }
+        .card-row:last-child { border-bottom: none; }
+        .card-left { display: flex; align-items: center; gap: 12px; }
+        .card-badge {
+            width: 42px; height: 42px;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .card-uid { font-family: monospace; font-weight: 700; }
+        .card-label { color: var(--text2); font-size: 0.75rem; }
+        .del-btn {
+            background: rgba(233, 69, 96, 0.15);
+            border: none;
+            border-radius: 8px;
+            padding: 6px 14px;
+            color: var(--accent);
+            font-family: inherit;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+        
+        /* Settings */
+        .settings-group {
+            background: var(--card);
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .settings-title {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .setting-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 15px;
+            border-bottom: 1px solid var(--border);
+        }
+        .setting-row:last-child { border-bottom: none; }
+        .setting-text .name { font-weight: 600; }
+        .setting-text .desc { color: var(--text2); font-size: 0.75rem; }
+        
+        .switch {
+            width: 50px; height: 28px;
+            background: var(--border);
+            border-radius: 14px;
+            position: relative;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .switch.on { background: var(--accent); }
+        .switch::after {
+            content: '';
+            position: absolute;
+            top: 3px; left: 3px;
+            width: 22px; height: 22px;
+            background: white;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .switch.on::after { transform: translateX(22px); }
+        
+        .sel {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 8px 14px;
+            color: var(--text);
+            font-family: inherit;
+            cursor: pointer;
+        }
+        
+        .sml-btn {
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            border: none;
+            border-radius: 10px;
+            padding: 10px 18px;
+            color: white;
+            font-family: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        /* Chart */
+        .chart-card {
+            background: var(--card);
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .chart-card h3 { font-size: 0.95rem; margin-bottom: 15px; }
+        
+        /* Modal */
+        .modal-bg {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 500;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+        .modal-bg.show { opacity: 1; visibility: visible; }
+        
+        .modal-card {
+            background: var(--card);
+            border-radius: 25px;
+            padding: 30px;
+            width: 100%;
+            max-width: 350px;
+            transform: scale(0.9);
+            transition: 0.3s;
+        }
+        .modal-bg.show .modal-card { transform: scale(1); }
+        
+        .modal-head {
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .modal-input {
+            width: 100%;
+            padding: 14px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text);
+            font-family: inherit;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .modal-input:focus { outline: none; border-color: var(--accent); }
+        
+        .modal-btns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .modal-btn {
+            padding: 14px;
+            border-radius: 12px;
+            font-family: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .modal-btn.main { background: var(--accent); border: none; color: white; }
+        .modal-btn.sec { background: transparent; border: 1px solid var(--border); color: var(--text2); }
+        
+        /* Toast */
+        .toast {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100px);
+            padding: 14px 28px;
+            border-radius: 15px;
+            font-weight: 600;
+            z-index: 600;
+            transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .toast.show { transform: translateX(-50%) translateY(0); }
+        .toast.ok { background: var(--success); color: white; }
+        .toast.err { background: var(--accent); color: white; }
+        .toast.inf { background: var(--bg3); color: white; }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+        
+        /* Responsive */
+        @media (max-width: 480px) {
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (min-width: 768px) {
+            .tabs-wrap, .tab-page { max-width: 600px; margin-left: auto; margin-right: auto; }
+            .header { padding: 15px 40px; }
+        }
+        
+        @media (min-width: 1024px) {
+            .tabs-wrap, .tab-page { max-width: 700px; }
+            .lock-circle { width: 180px; height: 180px; font-size: 4.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">جاري التحميل...</div>
+    </div>
+
+    <!-- Login -->
+    <div class="login-page" id="loginPage">
+        <div class="login-card">
+            <div class="login-logo">🔐</div>
+            <h1 class="login-title">الخزنة الذكية</h1>
+            <p class="login-sub">أدخل كلمة المرور للوصول</p>
+            <input type="password" class="login-input" id="passIn" placeholder="••••••" maxlength="10">
+            <button class="login-btn" id="loginGo">دخول</button>
+            <div class="login-error" id="loginErr"></div>
+        </div>
+    </div>
+
+    <!-- App -->
+    <div class="app" id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">🔐</div>
+                <div class="brand-text">
+                    <h1>الخزنة الذكية</h1>
+                    <span id="statusPill" class="status-pill offline"><span class="status-dot"></span>غير متصل</span>
+                </div>
+            </div>
+            <div class="header-btns">
+                <button class="icon-btn" id="notifyBtn">🔔</button>
+                <button class="icon-btn" id="logoutBtn">🚪</button>
+            </div>
+        </header>
+
+        <!-- Tabs -->
+        <div class="tabs-wrap">
+            <div class="tabs">
+                <button class="tab active" data-tab="main">التحكم</button>
+                <button class="tab" data-tab="cards">البطاقات</button>
+                <button class="tab" data-tab="settings">الإعدادات</button>
+                <button class="tab" data-tab="stats">الإحصائيات</button>
+            </div>
+        </div>
+
+        <!-- Main Tab -->
+        <div class="tab-page active" id="mainPage">
+            <div class="lock-area">
+                <div class="lock-circle" id="lockCircle">🔒</div>
+                <div class="lock-label closed" id="lockLabel">الخزنة مقفلة</div>
+                <div class="lock-time" id="lockTime">انقر للفتح</div>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-box">
+                    <div class="num" id="sOpens" style="color: var(--accent)">0</div>
+                    <div class="label">فتحات</div>
+                </div>
+                <div class="stat-box">
+                    <div class="num" id="sAuto" style="color: var(--warning)">3ث</div>
+                    <div class="label">إغلاق تلقائي</div>
+                </div>
+                <div class="stat-box">
+                    <div class="num" id="sType" style="color: var(--success)">-</div>
+                    <div class="label">طريقة الفتح</div>
+                </div>
+                <div class="stat-box">
+                    <div class="num" id="sTime" style="color: var(--bg3)">-</div>
+                    <div class="label">آخر نشاط</div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <div class="action-card danger" id="alarmBtn">
+                    <div class="icon">🚨</div>
+                    <div class="name">إنذار طوارئ</div>
+                </div>
+                <div class="action-card warning" id="guestBtn">
+                    <div class="icon">👤</div>
+                    <div class="name">وضع الضيف</div>
+                </div>
+                <div class="action-card success" id="silentBtn">
+                    <div class="icon">🔊</div>
+                    <div class="name">الصوت</div>
+                </div>
+                <div class="action-card" id="exportBtn">
+                    <div class="icon">📥</div>
+                    <div class="name">تصدير السجل</div>
+                </div>
+            </div>
+
+            <div class="section-head">📋 سجل العمليات</div>
+            <div class="list-card">
+                <div class="list-head">
+                    <div class="list-title">📋 السجل</div>
+                    <button class="list-btn" id="clearLogBtn">مسح</button>
+                </div>
+                <div class="list-body" id="logBody">
+                    <div class="empty">لا توجد عمليات</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards Tab -->
+        <div class="tab-page" id="cardsPage">
+            <div class="section-head">💳 البطاقات المصرحة</div>
+            <div class="list-card" id="cardsBody">
+                <div class="empty">لا توجد بطاقات</div>
+            </div>
+            <div class="action-card" id="addCardBtn" style="margin-top: 15px;">
+                <div class="icon">➕</div>
+                <div class="name">إضافة بطاقة جديدة</div>
+            </div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div class="tab-page" id="settingsPage">
+            <div class="settings-group">
+                <div class="settings-title">🔒 الأمان</div>
+                <div class="setting-row">
+                    <div class="setting-text">
+                        <div class="name">كلمة السر</div>
+                        <div class="desc">تغيير كلمة سر التطبيق</div>
+                    </div>
+                    <button class="sml-btn" id="changePassBtn">تغيير</button>
+                </div>
+            </div>
+
+            <div class="settings-group">
+                <div class="settings-title">⏱️ التوقيت</div>
+                <div class="setting-row">
+                    <div class="setting-text">
+                        <div class="name">الإغلاق التلقائي</div>
+                        <div class="desc">الوقت قبل الإغلاق التلقائي</div>
+                    </div>
+                    <select class="sel" id="autoSelect">
+                        <option value="3">3 ثواني</option>
+                        <option value="5">5 ثواني</option>
+                        <option value="10">10 ثواني</option>
+                        <option value="15">15 ثانية</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="settings-group">
+                <div class="settings-title">🎛️ الأوضاع</div>
+                <div class="setting-row">
+                    <div class="setting-text">
+                        <div class="name">وضع الضيف</div>
+                        <div class="desc">فتح لمرة واحدة فقط</div>
+                    </div>
+                    <div class="switch" id="guestSw"></div>
+                </div>
+                <div class="setting-row">
+                    <div class="setting-text">
+                        <div class="name">الوضع الصامت</div>
+                        <div class="desc">تعطيل أصوات التطبيق</div>
+                    </div>
+                    <div class="switch" id="silentSw"></div>
+                </div>
+            </div>
+
+            <div class="settings-group">
+                <div class="settings-title">🔔 الإشعارات</div>
+                <div class="setting-row">
+                    <div class="setting-text">
+                        <div class="name">إشعارات Push</div>
+                        <div class="desc">تنبيه عند الفتح أو الإنذار</div>
+                    </div>
+                    <div class="switch" id="notifySw"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Tab -->
+        <div class="tab-page" id="statsPage">
+            <div class="stats-row">
+                <div class="stat-box">
+                    <div class="num" id="stTotal" style="color: var(--success)">0</div>
+                    <div class="label">إجمالي الفتحات</div>
+                </div>
+                <div class="stat-box">
+                    <div class="num" id="stApp" style="color: var(--accent)">0</div>
+                    <div class="label">من التطبيق</div>
+                </div>
+                <div class="stat-box">
+                    <div class="num" id="stRfid" style="color: var(--success)">0</div>
+                    <div class="label">من البطاقة</div>
+                </div>
+                <div class="stat-box">
+                    <div class="num" id="stFail" style="color: var(--warning)">0</div>
+                    <div class="label">محاولات فاشلة</div>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h3>📈 توزيع طريقة الفتح</h3>
+                <canvas id="ch"></canvas>
+            </div>
+
+            <div class="section-head">⚠️ المحاولات الفاشلة</div>
+            <div class="list-card">
+                <div class="list-body" id="failBody" style="max-height: 150px;">
+                    <div class="empty">لا توجد محاولات فاشلة</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Card Modal -->
+    <div class="modal-bg" id="cardModal">
+        <div class="modal-card">
+            <div class="modal-head">💳 إضافة بطاقة</div>
+            <input type="text" class="modal-input" id="newUid" placeholder="UID (مثال: FE191905)" maxlength="8">
+            <div class="modal-btns">
+                <button class="modal-btn sec" id="cardCancel">إلغاء</button>
+                <button class="modal-btn main" id="cardOk">إضافة</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Modal -->
+    <div class="modal-bg" id="passModal">
+        <div class="modal-card">
+            <div class="modal-head">🔑 تغيير كلمة السر</div>
+            <input type="password" class="modal-input" id="oldPass" placeholder="كلمة السر الحالية">
+            <input type="password" class="modal-input" id="newPass" placeholder="كلمة السر الجديدة">
+            <input type="password" class="modal-input" id="confPass" placeholder="تأكيد كلمة السر">
+            <div class="modal-btns">
+                <button class="modal-btn sec" id="passCancel">إلغاء</button>
+                <button class="modal-btn main" id="passOk">تغيير</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // Firebase
+        const fbConfig = {
+            apiKey: "AIzaSyDI-eFQnkntPMgRbe07ymzuVebmnsRe0SE",
+            authDomain: "sssss-8d760.firebaseapp.com",
+            databaseURL: "https://sssss-8d760-default-rtdb.firebaseio.com",
+            projectId: "sssss-8d760",
+            storageBucket: "sssss-8d760.firebasestorage.app",
+            messagingSenderId: "601253161068",
+            appId: "1:601253161068:web:b8fda4072eaa824acf1049"
+        };
+
+        // State
+        let db, connected = false, open = false, guest = false, silent = false, notify = false, autoTime = 3, count = 0, cards = {}, logs = {}, chart = null;
+
+        // DOM
+        const $ = id => document.getElementById(id);
+        const loader = $('loader'), loginPage = $('loginPage'), app = $('app'), passIn = $('passIn'), loginGo = $('loginGo'), loginErr = $('loginErr');
+        const statusPill = $('statusPill'), lockCircle = $('lockCircle'), lockLabel = $('lockLabel'), lockTime = $('lockTime');
+        const sOpens = $('sOpens'), sAuto = $('sAuto'), sType = $('sType'), sTime = $('sTime');
+        const alarmBtn = $('alarmBtn'), guestBtn = $('guestBtn'), silentBtn = $('silentBtn'), exportBtn = $('exportBtn');
+        const clearLogBtn = $('clearLogBtn'), logBody = $('logBody'), cardsBody = $('cardsBody'), addCardBtn = $('addCardBtn');
+        const cardModal = $('cardModal'), newUid = $('newUid'), cardCancel = $('cardCancel'), cardOk = $('cardOk');
+        const changePassBtn = $('changePassBtn'), passModal = $('passModal'), oldPass = $('oldPass'), newPass = $('newPass'), confPass = $('confPass'), passCancel = $('passCancel'), passOk = $('passOk');
+        const autoSelect = $('autoSelect'), guestSw = $('guestSw'), silentSw = $('silentSw'), notifySw = $('notifySw');
+        const stTotal = $('stTotal'), stApp = $('stApp'), stRfid = $('stRfid'), stFail = $('stFail'), failBody = $('failBody');
+        const notifyBtn = $('notifyBtn'), logoutBtn = $('logoutBtn'), toast = $('toast');
+
+        // Toast
+        function toastMsg(msg, type = 'inf') {
+            toast.textContent = msg;
+            toast.className = 'toast ' + type + ' show';
+            setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+
+        // Login
+        async function doLogin() {
+            const p = passIn.value.trim();
+            if (!p) { passIn.classList.add('error'); loginErr.textContent = 'أدخل كلمة المرور'; setTimeout(() => passIn.classList.remove('error'), 400); return; }
+            
+            let correct = '123456';
+            try { const s = await db.ref('app_password').once('value'); if (s.exists()) correct = s.val(); } catch(e) {}
+            
+            if (p === correct) {
+                loginPage.classList.add('hide');
+                app.classList.add('show');
+                sessionStorage.setItem('auth', '1');
+            } else {
+                passIn.classList.add('error');
+                loginErr.textContent = 'كلمة المرور غير صحيحة';
+                setTimeout(() => passIn.classList.remove('error'), 400);
+            }
+        }
+        loginGo.onclick = doLogin;
+        passIn.onkeypress = e => { if (e.key === 'Enter') doLogin(); };
+        logoutBtn.onclick = () => { sessionStorage.removeItem('auth'); location.reload(); };
+
+        // Tabs
+        document.querySelectorAll('.tab').forEach(t => {
+            t.onclick = () => {
+                document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+                document.querySelectorAll('.tab-page').forEach(x => x.classList.remove('active'));
+                t.classList.add('active');
+                $(t.dataset.tab + 'Page').classList.add('active');
+                if (t.dataset.tab === 'stats') setTimeout(drawChart, 100);
+            };
+        });
+
+        // Init
+        function init() {
+            firebase.initializeApp(fbConfig);
+            db = firebase.database();
+
+            if (sessionStorage.getItem('auth') === '1') {
+                loginPage.classList.add('hide');
+                app.classList.add('show');
+            }
+
+            db.ref('.info/connected').on('value', s => {
+                connected = s.val();
+                statusPill.className = 'status-pill ' + (connected ? 'online' : 'offline');
+                statusPill.innerHTML = `<span class="status-dot"></span>${connected ? 'متصل' : 'غير متصل'}`;
+            });
+
+            db.ref('safe_status').on('value', s => { open = s.val() === true; updateLock(); });
+            db.ref('auto_close_time').on('value', s => { autoTime = s.val() || 3; autoSelect.value = autoTime; sAuto.textContent = autoTime + 'ث'; });
+            db.ref('open_count').on('value', s => { count = s.val() || 0; sOpens.textContent = count; stTotal.textContent = count; });
+            db.ref('guest_mode').on('value', s => { guest = s.val() === true; guestSw.classList.toggle('on', guest); guestBtn.classList.toggle('active', guest); });
+            db.ref('silent_mode').on('value', s => { silent = s.val() === true; silentSw.classList.toggle('on', silent); silentBtn.classList.toggle('active', silent); silentBtn.querySelector('.name').textContent = silent ? 'صامت' : 'الصوت'; silentBtn.querySelector('.icon').textContent = silent ? '🔇' : '🔊'; });
+            db.ref('access_type').on('value', s => { const t = s.val(); sType.textContent = t === 'APP' ? 'تطبيق' : t === 'RFID' ? 'بطاقة' : t === 'AUTO' ? 'تلقائي' : t === 'GUEST' ? 'ضيف' : '-'; });
+            db.ref('last_access').on('value', s => { const v = s.val(); if (v && v !== '-') sTime.textContent = v.split(' ')[1] || v; });
+            db.ref('authorized_cards').on('value', s => { cards = s.val() || {}; renderCards(); });
+            db.ref('operation_log').orderByKey().limitToLast(50).on('value', s => { logs = s.val() || {}; renderLog(); calcStats(); });
+            db.ref('alarm').on('value', s => { if (s.val() === true) { toastMsg('🚨 تم تفعيل الإنذار!', 'err'); if (notify) pushNotify('إنذار!', 'تم تفعيل إنذار الخزنة'); } });
+
+            setTimeout(() => loader.classList.add('hide'), 300);
+        }
+
+        function updateLock() {
+            lockCircle.classList.toggle('open', open);
+            lockCircle.textContent = open ? '🔓' : '🔒';
+            lockLabel.className = 'lock-label ' + (open ? 'open' : 'closed');
+            lockLabel.textContent = open ? 'الخزنة مفتوحة' : 'الخزنة مقفلة';
+            lockTime.textContent = open ? 'انقر للإغلاق' : 'انقر للفتح';
+        }
+
+        // Lock Control
+        lockCircle.onclick = async () => {
+            if (!connected) { toastMsg('⚠️ غير متصل', 'err'); return; }
+            const ns = !open;
+            const ts = getTime();
+            await db.ref('safe_status').set(ns);
+            await db.ref('access_type').set(guest ? 'GUEST' : 'APP');
+            await db.ref('last_access').set(ts);
+            if (ns) {
+                await db.ref('open_count').set(firebase.database.ServerValue.increment(1));
+                if (guest) { await db.ref('guest_mode').set(false); toastMsg('✅ فتح الضيف - تم التعطيل', 'ok'); }
+                else toastMsg('✅ تم الفتح', 'ok');
+                if (notify) pushNotify('تم الفتح', 'تم فتح الخزنة');
+            } else toastMsg('🔒 تم الإغلاق', 'inf');
+            await db.ref('operation_log').push({ timestamp: ts, source: guest ? 'GUEST' : 'APP', action: ns ? 'OPENED' : 'CLOSED' });
+        };
+
+        // Actions
+        alarmBtn.onclick = async () => { if (!connected) { toastMsg('⚠️ غير متصل', 'err'); return; } await db.ref('alarm').set(true); toastMsg('🚨 تم تشغيل الإنذار!', 'err'); if (notify) pushNotify('إنذار!', 'إنذار طوارئ'); };
+        guestBtn.onclick = async () => { if (!connected) return; await db.ref('guest_mode').set(!guest); toastMsg(guest ? '👤 تعطيل وضع الضيف' : '✅ تفعيل وضع الضيف', 'inf'); };
+        silentBtn.onclick = async () => { if (!connected) return; await db.ref('silent_mode').set(!silent); };
+        guestSw.onclick = () => guestBtn.onclick();
+        silentSw.onclick = () => silentBtn.onclick();
+        autoSelect.onchange = async () => { if (!connected) return; const v = parseInt(autoSelect.value); await db.ref('auto_close_time').set(v); sAuto.textContent = v + 'ث'; toastMsg('✅ تم التحديث', 'ok'); };
+
+        exportBtn.onclick = () => {
+            const e = Object.values(logs);
+            if (!e.length) { toastMsg('❌ لا يوجد سجل', 'err'); return; }
+            let csv = 'التاريخ,الوقت,المصدر,العملية\n';
+            e.forEach(l => { const p = (l.timestamp || '-').split(' '); csv += `${p[0] || '-'},${p[1] || '-'},${l.source || '-'},${l.action || '-'}\n`; });
+            const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = 'safe_' + new Date().toISOString().split('T')[0] + '.csv'; a.click();
+            toastMsg('✅ تم التصدير', 'ok');
+        };
+
+        // Cards
+        function renderCards() {
+            const l = Object.entries(cards);
+            if (!l.length) { cardsBody.innerHTML = '<div class="empty">لا توجد بطاقات</div>'; return; }
+            cardsBody.innerHTML = l.map(([k, v]) => `<div class="card-row"><div class="card-left"><div class="card-badge">💳</div><div><div class="card-uid">${v}</div><div class="card-label">بطاقة مصرحة</div></div></div><button class="del-btn" data-k="${k}">حذف</button></div>`).join('');
+            cardsBody.querySelectorAll('.del-btn').forEach(b => b.onclick = async () => { if (confirm('حذف البطاقة؟')) { await db.ref('authorized_cards/' + b.dataset.k).remove(); toastMsg('✅ تم الحذف', 'ok'); } });
+        }
+        addCardBtn.onclick = () => { newUid.value = ''; cardModal.classList.add('show'); };
+        cardCancel.onclick = () => cardModal.classList.remove('show');
+        cardOk.onclick = async () => { 
+            const u = newUid.value.toUpperCase().trim(); 
+            if (!u || u.length < 4) { toastMsg('❌ UID غير صالح', 'err'); return; }
+            
+            // Find next card number
+            const keys = Object.keys(cards);
+            let nextNum = 1;
+            keys.forEach(k => {
+                const n = parseInt(k.replace('card', ''));
+                if (n >= nextNum) nextNum = n + 1;
+            });
+            
+            await db.ref('authorized_cards/card' + nextNum).set(u); 
+            cardModal.classList.remove('show'); 
+            toastMsg('✅ تمت الإضافة', 'ok'); 
+        };
+
+        // Log
+        function renderLog() {
+            const e = Object.entries(logs).reverse();
+            if (!e.length) { logBody.innerHTML = '<div class="empty">لا توجد عمليات</div>'; failBody.innerHTML = '<div class="empty">لا توجد محاولات فاشلة</div>'; return; }
+            let n = '', f = '';
+            e.slice(0, 15).forEach(([k, l]) => { const item = logItem(l); if (l.action === 'ALARM' || l.action === 'FAILED') f += item; n += item; });
+            logBody.innerHTML = n || '<div class="empty">لا توجد عمليات</div>';
+            failBody.innerHTML = f || '<div class="empty">لا توجد محاولات فاشلة</div>';
+        }
+        function logItem(l) {
+            const isO = l.action === 'OPENED', isC = l.action === 'CLOSED' || l.action === 'LOCKED', isA = l.action === 'ALARM', isF = l.action === 'FAILED';
+            let ic = 'open', i = '🔓', a = 'فتح الخزنة';
+            if (isC) { ic = 'close'; i = '🔒'; a = 'إغلاق الخزنة'; }
+            else if (isA) { ic = 'warn'; i = '🚨'; a = 'إنذار'; }
+            else if (isF) { ic = 'warn'; i = '⚠️'; a = 'محاولة فاشلة'; }
+            let tc = 'app', t = 'تطبيق';
+            if (l.source === 'RFID') { tc = 'rfid'; t = 'بطاقة'; }
+            else if (l.source === 'AUTO') { tc = 'auto'; t = 'تلقائي'; }
+            else if (l.source === 'GUEST') { tc = 'guest'; t = 'ضيف'; }
+            else if (l.source === 'UNAUTHORIZED') { tc = 'fail'; t = 'غير مصرح'; }
+            return `<div class="list-row"><div class="list-icon ${ic}">${i}</div><div class="list-info"><div class="title">${a}</div><div class="sub">${l.timestamp || '-'}</div></div><span class="tag ${tc}">${t}</span></div>`;
+        }
+        clearLogBtn.onclick = async () => { if (confirm('مسح السجل؟')) { await db.ref('operation_log').remove(); toastMsg('✅ تم المسح', 'inf'); } };
+
+        // Stats
+        function calcStats() {
+            const e = Object.values(logs); let a = 0, r = 0, f = 0;
+            e.forEach(l => { if (l.action === 'OPENED') { if (l.source === 'APP' || l.source === 'GUEST') a++; else if (l.source === 'RFID') r++; } if (l.action === 'ALARM' || l.action === 'FAILED') f++; });
+            stApp.textContent = a; stRfid.textContent = r; stFail.textContent = f;
+        }
+        function drawChart() {
+            const e = Object.values(logs); let a = 0, r = 0, u = 0, g = 0;
+            e.forEach(l => { if (l.action === 'OPENED') { if (l.source === 'APP') a++; else if (l.source === 'RFID') r++; else if (l.source === 'AUTO') u++; else if (l.source === 'GUEST') g++; } });
+            if (chart) chart.destroy();
+            chart = new Chart($('ch'), { type: 'doughnut', data: { labels: ['تطبيق', 'بطاقة', 'تلقائي', 'ضيف'], datasets: [{ data: [a, r, u, g], backgroundColor: ['#e94560', '#00d9a0', '#ffc93c', '#a855f7'], borderWidth: 0 }] }, options: { responsive: true, plugins: { legend: { position: 'bottom', labels: { color: '#a0a0a0', font: { family: 'Cairo' } } } } } });
+        }
+
+        // Password
+        changePassBtn.onclick = () => { oldPass.value = ''; newPass.value = ''; confPass.value = ''; passModal.classList.add('show'); };
+        passCancel.onclick = () => passModal.classList.remove('show');
+        passOk.onclick = async () => {
+            const o = oldPass.value, n = newPass.value, c = confPass.value;
+            const s = await db.ref('app_password').once('value'); const cr = s.exists() ? s.val() : '123456';
+            if (o !== cr) { toastMsg('❌ كلمة السر الحالية خطأ', 'err'); return; }
+            if (n.length < 4) { toastMsg('❌ كلمة السر قصيرة', 'err'); return; }
+            if (n !== c) { toastMsg('❌ غير متطابقتين', 'err'); return; }
+            await db.ref('app_password').set(n); passModal.classList.remove('show'); toastMsg('✅ تم التغيير', 'ok');
+        };
+
+        // Notifications
+        notifyBtn.onclick = notifySw.onclick = async () => {
+            if (!('Notification' in window)) { toastMsg('❌ المتصفح لا يدعم الإشعارات', 'err'); return; }
+            if (Notification.permission === 'granted') { notify = !notify; notifySw.classList.toggle('on', notify); toastMsg(notify ? '✅ تفعيل الإشعارات' : '🔕 تعطيل الإشعارات', 'inf'); }
+            else if (Notification.permission !== 'denied') { const p = await Notification.requestPermission(); if (p === 'granted') { notify = true; notifySw.classList.add('on'); toastMsg('✅ تفعيل الإشعارات', 'ok'); } }
+            else toastMsg('❌ الإشعارات محظورة', 'err');
+        };
+        function pushNotify(t, b) { if (notify && Notification.permission === 'granted') new Notification(t, { body: b, icon: '🔐' }); }
+
+        // Helpers
+        function getTime() { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}:${String(d.getSeconds()).padStart(2,'0')}`; }
+
+        // Modal close
+        document.querySelectorAll('.modal-bg').forEach(m => m.onclick = e => { if (e.target === m) m.classList.remove('show'); });
+
+        // Start
+        window.onload = init;
+    </script>
+</body>
+</html>

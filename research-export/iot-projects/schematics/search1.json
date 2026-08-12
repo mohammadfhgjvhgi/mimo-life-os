@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://www.electronicwings.com/arduino/esp8266-wifi-module-interfacing-with-arduino-uno",
+    "name": "ESP8266 WiFi Module Interfacing with Arduino UNO | Arduino",
+    "snippet": "Let’s program Arduino UNO to configure the ESP8266 wifi module as TCP Client and Receive/Send data from/to the Server using WIFI. Here, we are using the Thingspeak server for TCP Client demo purposes.",
+    "host_name": "www.electronicwings.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.arduino.cc/t/using-tx-rx-pins-of-uno-for-sending-values-to-esp8266/967812",
+    "name": "Using Tx/Rx pins of UNO for sending values to ESP8266",
+    "snippet": "You are trying to use software serial on the Uno on the pins that already have hardware serial on them, you can't use the same pins for 2 completely difference serial ports, you need to choose different pins.",
+    "host_name": "forum.arduino.cc",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://randomnerdtutorials.com/sending-data-from-an-arduino-to-the-esp8266-via-serial",
+    "name": "Sending Data From an Arduino to the ESP8266 via Serial",
+    "snippet": "In this project you’re going to learn how to send data from an Arduino to the ESP8266 via serial communication.",
+    "host_name": "randomnerdtutorials.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://iotcircuithub.com/esp8266-programming-arduino",
+    "name": "ESP8266 programming with Arduino UNO - IotCircuitHub",
+    "snippet": "In this article, I have explained all the steps of ESP8266 programming, how to connect ESP8266 to Arduino UNO. I have also explained how to use FTDI232 USB to TTL as an ESP01 programmer with the circuit diagram.",
+    "host_name": "iotcircuithub.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.sparkfun.com/t/arduino-mega-to-esp8266-wifi-shield-serial-connection/39063",
+    "name": "Arduino Mega to ESP8266 WiFi shield serial connection",
+    "snippet": "I have had great success connecting the Arduino Uno to my wifi network using the ESP8266 WiFi shield and the software serial library. I have an app now where I need the larger memory capability of the Arduino Mega.",
+    "host_name": "community.sparkfun.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.martyncurrey.com/arduino-to-esp8266-serial-commincation",
+    "name": "Arduino to ESP8266 By Serial Communication - Martyn Currey",
+    "snippet": "You only need the voltage divider on the Arduino TX pin. The 5V Arduino will read 3.3v as HIGH so you can connect the ESP8266 TX pin directly to the Arduino RX pin. Make sure the ESP8266 has enough current. If it does not it may keep resetting and may not broadcast a signal.",
+    "host_name": "www.martyncurrey.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.instructables.com/noobs-guide-to-ESP8266-with-Arduino-Mega-2560-or-U",
+    "name": "A Newbie's Guide to Setup ESP8266 With Arduino Mega 2560 or Uno",
+    "snippet": "To save you from the frustrating moments, let's cut the chase and go straight to what works. If you are interested on what doesn't work, read between the lines or skip the steps below till the \"what works /does not work\" section. There are a few parameters that will make or break this setup.",
+    "host_name": "www.instructables.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  }
+]

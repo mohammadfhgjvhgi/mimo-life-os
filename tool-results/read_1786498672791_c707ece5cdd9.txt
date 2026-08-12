@@ -1,0 +1,730 @@
+     1→=== 🔍 فحص شامل لكل ملف مفيد في كل المستودعات ===
+     2→
+     3→═══ my-nextjs-project ═══
+     4→my-nextjs-project/.zscripts/build.sh
+     5→my-nextjs-project/.zscripts/database-runtime-build.sh
+     6→my-nextjs-project/.zscripts/dev.sh
+     7→my-nextjs-project/.zscripts/mini-services-build.sh
+     8→my-nextjs-project/.zscripts/mini-services-install.sh
+     9→my-nextjs-project/.zscripts/mini-services-start.sh
+    10→my-nextjs-project/.zscripts/python-runtime-build.sh
+    11→my-nextjs-project/.zscripts/start.sh
+    12→my-nextjs-project/API.md
+    13→my-nextjs-project/ARCHITECTURE.md
+    14→my-nextjs-project/README.md
+    15→my-nextjs-project/SETUP.md
+    16→my-nextjs-project/components.json
+    17→my-nextjs-project/docs/ARCHITECTURAL_CONFLICTS.md
+    18→my-nextjs-project/docs/CAPABILITY_MAP.md
+    19→my-nextjs-project/docs/FINAL_PRODUCT_MODEL.md
+    20→my-nextjs-project/docs/IMPLEMENTATION_READINESS.md
+    21→my-nextjs-project/docs/KNOWLEDGE_INDEX.md
+    22→my-nextjs-project/docs/MASTER_ARCHITECTURE.md
+    23→my-nextjs-project/docs/MISSING_CAPABILITIES.md
+    24→my-nextjs-project/docs/PROJECT_FILE_INVENTORY.md
+    25→my-nextjs-project/docs/PROJECT_UNDERSTANDING.md
+    26→my-nextjs-project/docs/SYSTEM_DATA_FLOW.md
+    27→my-nextjs-project/docs/SYSTEM_DEPENDENCY_GRAPH.md
+    28→my-nextjs-project/docs/SYSTEM_STATE_MODEL.md
+    29→my-nextjs-project/docs/TECHNOLOGY_CLASSIFICATION.md
+    30→my-nextjs-project/docs/decisions/ADR-001-glm-5-2-via-model-gateway.md
+    31→my-nextjs-project/docs/decisions/ADR-002-minimal-ts-runtime-on-vercel-ai-sdk.md
+    32→my-nextjs-project/docs/decisions/ADR-003-hybrid-agent-strategy.md
+    33→my-nextjs-project/docs/decisions/ADR-004-embedded-storage-for-v1.md
+    34→my-nextjs-project/docs/decisions/ADR-005-tiered-sandboxing-and-tool-runtime-mini-service.md
+    35→my-nextjs-project/docs/decisions/ADR-006-controlled-self-improvement-hard-boundary.md
+    36→my-nextjs-project/docs/decisions/ADR-007-context-management-mandatory.md
+    37→my-nextjs-project/docs/decisions/ADR-008-non-bypassable-policy-engine.md
+    38→my-nextjs-project/docs/decisions/ADR-009-mini-services-and-caddy-single-port.md
+    39→my-nextjs-project/docs/decisions/ADR-010-socket-io-real-time.md
+    40→my-nextjs-project/docs/decisions/README.md
+    41→my-nextjs-project/docs/knowledge/agents/agent_architectures.md
+    42→my-nextjs-project/docs/knowledge/agents/agent_handoff.md
+    43→my-nextjs-project/docs/knowledge/agents/agent_lifecycle.md
+    44→my-nextjs-project/docs/knowledge/agents/react_agent_loop.md
+    45→my-nextjs-project/docs/knowledge/agents/single_vs_multi_agent.md
+    46→my-nextjs-project/docs/knowledge/agents/supervisor_pattern.md
+    47→my-nextjs-project/docs/knowledge/autonomy/autonomous_agents.md
+    48→my-nextjs-project/docs/knowledge/autonomy/proactive_intelligence.md
+    49→my-nextjs-project/docs/knowledge/browser/browser_agent.md
+    50→my-nextjs-project/docs/knowledge/browser/browser_automation.md
+    51→my-nextjs-project/docs/knowledge/coding/coding_agent.md
+    52→my-nextjs-project/docs/knowledge/context/context_assembly.md
+    53→my-nextjs-project/docs/knowledge/context/context_compression.md
+    54→my-nextjs-project/docs/knowledge/context/context_engineering.md
+    55→my-nextjs-project/docs/knowledge/context/long_context_management.md
+    56→my-nextjs-project/docs/knowledge/evaluation/evaluation_lab.md
+    57→my-nextjs-project/docs/knowledge/execution/checkpointing.md
+    58→my-nextjs-project/docs/knowledge/execution/long_horizon_execution.md
+    59→my-nextjs-project/docs/knowledge/execution/recovery.md
+    60→my-nextjs-project/docs/knowledge/infrastructure/event_bus.md
+    61→my-nextjs-project/docs/knowledge/infrastructure/knowledge_graph_store.md
+    62→my-nextjs-project/docs/knowledge/infrastructure/task_queue.md
+    63→my-nextjs-project/docs/knowledge/infrastructure/vector_database.md
+    64→my-nextjs-project/docs/knowledge/learning/controlled_self_improvement.md
+    65→my-nextjs-project/docs/knowledge/learning/learning_engine.md
+    66→my-nextjs-project/docs/knowledge/memory/episodic_memory.md
+    67→my-nextjs-project/docs/knowledge/memory/memory_architectures.md
+    68→my-nextjs-project/docs/knowledge/memory/memory_compression.md
+    69→my-nextjs-project/docs/knowledge/memory/memory_consolidation.md
+    70→my-nextjs-project/docs/knowledge/memory/memory_retrieval.md
+    71→my-nextjs-project/docs/knowledge/memory/preference_memory.md
+    72→my-nextjs-project/docs/knowledge/memory/procedural_memory.md
+    73→my-nextjs-project/docs/knowledge/memory/semantic_memory.md
+    74→my-nextjs-project/docs/knowledge/models/embeddings.md
+    75→my-nextjs-project/docs/knowledge/models/glm_5_2.md
+    76→my-nextjs-project/docs/knowledge/models/model_gateway.md
+    77→my-nextjs-project/docs/knowledge/models/model_routing.md
+    78→my-nextjs-project/docs/knowledge/multimodal/asr_tts.md
+    79→my-nextjs-project/docs/knowledge/multimodal/image_generation.md
+    80→my-nextjs-project/docs/knowledge/multimodal/vision.md
+    81→my-nextjs-project/docs/knowledge/observability/audit_trails.md
+    82→my-nextjs-project/docs/knowledge/observability/observability.md
+    83→my-nextjs-project/docs/knowledge/protocols/a2a.md
+    84→my-nextjs-project/docs/knowledge/protocols/mcp.md
+    85→my-nextjs-project/docs/knowledge/reasoning/chain_of_thought.md
+    86→my-nextjs-project/docs/knowledge/reasoning/plan_and_solve.md
+    87→my-nextjs-project/docs/knowledge/reasoning/react.md
+    88→my-nextjs-project/docs/knowledge/reasoning/reflection.md
+    89→my-nextjs-project/docs/knowledge/reasoning/self_consistency.md
+    90→my-nextjs-project/docs/knowledge/reasoning/structured_reasoning.md
+    91→my-nextjs-project/docs/knowledge/retrieval/graphrag.md
+    92→my-nextjs-project/docs/knowledge/retrieval/hybrid_search.md
+    93→my-nextjs-project/docs/knowledge/retrieval/knowledge_graph.md
+    94→my-nextjs-project/docs/knowledge/retrieval/rag.md
+    95→my-nextjs-project/docs/knowledge/retrieval/reranking.md
+    96→my-nextjs-project/docs/knowledge/retrieval/vector_search.md
+    97→my-nextjs-project/docs/knowledge/security/agent_security.md
+    98→my-nextjs-project/docs/knowledge/security/permissions_rbac_abac.md
+    99→my-nextjs-project/docs/knowledge/security/prompt_injection_defense.md
+   100→my-nextjs-project/docs/knowledge/security/secrets_management.md
+   101→my-nextjs-project/docs/knowledge/tools/approval_workflow.md
+   102→my-nextjs-project/docs/knowledge/tools/function_calling.md
+   103→my-nextjs-project/docs/knowledge/tools/sandboxing.md
+   104→my-nextjs-project/docs/knowledge/tools/tool_policy_engine.md
+   105→my-nextjs-project/docs/knowledge/tools/tool_runtime.md
+   106→my-nextjs-project/docs/knowledge/verification/verification.md
+   107→my-nextjs-project/download/README.md
+   108→my-nextjs-project/package.json
+   109→my-nextjs-project/public/robots.txt
+   110→my-nextjs-project/tests/database-runtime-build.sh
+   111→my-nextjs-project/tests/python-runtime-build.sh
+   112→my-nextjs-project/tests/python-runtime-container.sh
+   113→my-nextjs-project/tsconfig.json
+   114→my-nextjs-project/upload/Pasted Content_1786280875960.txt
+   115→my-nextjs-project/upload/تقنيات بناء ai شهر 8 2026.txt
+   116→my-nextjs-project/upload/ملف التجميع المعلووومات البحثية لمشروع AI.txt
+   117→
+   118→═══ sasdfsdfgs — كل الملفات الكبيرة + md + txt + py ═══
+   119→  4.0K  download/README_Bridge.md
+   120→  12K  download/firebase_bridge_v3.2.py
+   121→  8.0K  download/firebase_bridge_v3.py
+   122→  4.0K  download/README.md
+   123→  8.0K  download/firebase_bridge_v3.1.py
+   124→  8.0K  download/firebase_bridge.py
+   125→  12K  download/smart_parking_safety_system.md
+   126→  16K  download/firebase_bridge_v3.3.py
+   127→  8.0K  download/firebase_bridge_v3.1_backup.py
+   128→  8.0K  worklog.md
+   129→  4.0K  public/robots.txt
+   130→  8.0K  README.md
+   131→  24K  skills/multi-search-engine/references/international-search.md
+   132→  4.0K  skills/multi-search-engine/CHANGELOG.md
+   133→  4.0K  skills/multi-search-engine/CHANNELLOG.md
+   134→  4.0K  skills/multi-search-engine/SKILL.md
+   135→  8.0K  skills/ai-news-collectors/references/sources.md
+   136→  8.0K  skills/ai-news-collectors/SKILL.md
+   137→  4.0K  skills/ASR/LICENSE.txt
+   138→  16K  skills/ASR/SKILL.md
+   139→  4.0K  skills/web-search/LICENSE.txt
+   140→  24K  skills/web-search/SKILL.md
+   141→  4.0K  skills/image-understand/LICENSE.txt
+   142→  24K  skills/image-understand/SKILL.md
+   143→  4.0K  skills/mindfulness-meditation/SKILL.md
+   144→  4.0K  skills/web-reader/LICENSE.txt
+   145→  28K  skills/web-reader/SKILL.md
+   146→  4.0K  skills/video-understand/LICENSE.txt
+   147→  28K  skills/video-understand/SKILL.md
+   148→  4.0K  skills/image-generation/LICENSE.txt
+   149→  16K  skills/image-generation/SKILL.md
+   150→  32K  skills/ppt/data-viz-components.md
+   151→  104K  skills/ppt/components.md
+   152→  68K  skills/ppt/beamer.md
+   153→  16K  skills/ppt/html2pptx.md
+   154→  20K  skills/ppt/references/beamer.md
+   155→  12K  skills/ppt/references/latex.md
+   156→  24K  skills/ppt/themes.md
+   157→  4.0K  skills/ppt/LICENSE.txt
+   158→  12K  skills/ppt/ooxml.md
+   159→  24K  skills/ppt/SKILL.md
+   160→  4.0K  skills/ppt/ooxml/scripts/unpack.py
+   161→  4.0K  skills/ppt/ooxml/scripts/validate.py
+   162→  4.0K  skills/ppt/ooxml/scripts/validation/__init__.py
+   163→  40K  skills/ppt/ooxml/scripts/validation/base.py
+   164→  12K  skills/ppt/ooxml/scripts/validation/pptx.py
+   165→  12K  skills/ppt/ooxml/scripts/validation/redlining.py
+   166→  12K  skills/ppt/ooxml/scripts/validation/docx.py
+   167→  8.0K  skills/ppt/ooxml/scripts/pack.py
+   168→  12K  skills/ppt/design-system.md
+   169→  20K  skills/ppt/scripts/inventory.py
+   170→  12K  skills/ppt/scripts/replace.py
+   171→  72K  skills/ppt/scripts/pdf.py
+   172→  8.0K  skills/ppt/scripts/rearrange.py
+   173→  16K  skills/ppt/scripts/thumbnail.py
+   174→  12K  skills/seo-content-writer/references/title-formulas.md
+   175→  20K  skills/seo-content-writer/references/content-structure-templates.md
+   176→  24K  skills/seo-content-writer/SKILL.md
+   177→  12K  skills/visual-design-foundations/references/spacing-iconography.md
+   178→  12K  skills/visual-design-foundations/references/color-systems.md
+   179→  12K  skills/visual-design-foundations/references/typography-systems.md
+   180→  8.0K  skills/visual-design-foundations/SKILL.md
+   181→  96K  skills/ui-ux-pro-max/data/styles.csv
+   182→  16K  skills/ui-ux-pro-max/data/landing.csv
+   183→  12K  skills/ui-ux-pro-max/data/colors.csv
+   184→  16K  skills/ui-ux-pro-max/data/icons.csv
+   185→  32K  skills/ui-ux-pro-max/data/products.csv
+   186→  8.0K  skills/ui-ux-pro-max/data/web-interface.csv
+   187→  20K  skills/ui-ux-pro-max/data/ux-guidelines.csv
+   188→  16K  skills/ui-ux-pro-max/data/react-performance.csv
+   189→  8.0K  skills/ui-ux-pro-max/data/charts.csv
+   190→  12K  skills/ui-ux-pro-max/data/stacks/astro.csv
+   191→  12K  skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv
+   192→  16K  skills/ui-ux-pro-max/data/stacks/react.csv
+   193→  20K  skills/ui-ux-pro-max/data/stacks/nuxtjs.csv
+   194→  12K  skills/ui-ux-pro-max/data/stacks/vue.csv
+   195→  12K  skills/ui-ux-pro-max/data/stacks/svelte.csv
+   196→  12K  skills/ui-ux-pro-max/data/stacks/react-native.csv
+   197→  12K  skills/ui-ux-pro-max/data/stacks/flutter.csv
+   198→  16K  skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv
+   199→  12K  skills/ui-ux-pro-max/data/stacks/html-tailwind.csv
+   200→  12K  skills/ui-ux-pro-max/data/stacks/swiftui.csv
+   201→  16K  skills/ui-ux-pro-max/data/stacks/nextjs.csv
+   202→  16K  skills/ui-ux-pro-max/data/stacks/shadcn.csv
+   203→  32K  skills/ui-ux-pro-max/data/typography.csv
+   204→  32K  skills/ui-ux-pro-max/data/ui-reasoning.csv
+   205→  24K  skills/ui-ux-pro-max/references/upstream-README.md
+   206→  12K  skills/ui-ux-pro-max/references/upstream-skill-content.md
+   207→  96K  skills/ui-ux-pro-max/assets/data/styles.csv
+   208→  16K  skills/ui-ux-pro-max/assets/data/landing.csv
+   209→  12K  skills/ui-ux-pro-max/assets/data/colors.csv
+   210→  16K  skills/ui-ux-pro-max/assets/data/icons.csv
+   211→  32K  skills/ui-ux-pro-max/assets/data/products.csv
+   212→  8.0K  skills/ui-ux-pro-max/assets/data/web-interface.csv
+   213→  20K  skills/ui-ux-pro-max/assets/data/ux-guidelines.csv
+   214→  16K  skills/ui-ux-pro-max/assets/data/react-performance.csv
+   215→  8.0K  skills/ui-ux-pro-max/assets/data/charts.csv
+   216→  12K  skills/ui-ux-pro-max/assets/data/stacks/astro.csv
+   217→  12K  skills/ui-ux-pro-max/assets/data/stacks/jetpack-compose.csv
+   218→  16K  skills/ui-ux-pro-max/assets/data/stacks/react.csv
+   219→  20K  skills/ui-ux-pro-max/assets/data/stacks/nuxtjs.csv
+   220→  12K  skills/ui-ux-pro-max/assets/data/stacks/vue.csv
+   221→  12K  skills/ui-ux-pro-max/assets/data/stacks/svelte.csv
+   222→  12K  skills/ui-ux-pro-max/assets/data/stacks/react-native.csv
+   223→  12K  skills/ui-ux-pro-max/assets/data/stacks/flutter.csv
+   224→  16K  skills/ui-ux-pro-max/assets/data/stacks/nuxt-ui.csv
+   225→  12K  skills/ui-ux-pro-max/assets/data/stacks/html-tailwind.csv
+   226→  12K  skills/ui-ux-pro-max/assets/data/stacks/swiftui.csv
+   227→  16K  skills/ui-ux-pro-max/assets/data/stacks/nextjs.csv
+   228→  16K  skills/ui-ux-pro-max/assets/data/stacks/shadcn.csv
+   229→  32K  skills/ui-ux-pro-max/assets/data/typography.csv
+   230→  32K  skills/ui-ux-pro-max/assets/data/ui-reasoning.csv
+   231→  4.0K  skills/ui-ux-pro-max/SKILL.md
+   232→  12K  skills/ui-ux-pro-max/scripts/core.py
+   233→  0  skills/ui-ux-pro-max/scripts/__init__.py
+   234→  44K  skills/ui-ux-pro-max/scripts/design_system.py
+   235→  8.0K  skills/ui-ux-pro-max/scripts/search.py
+   236→  8.0K  skills/auto-target-tracker/SKILL.md
+   237→  8.0K  skills/aminer-free-academic/references/api-catalog.md
+   238→  12K  skills/aminer-free-academic/SKILL.md
+   239→  12K  skills/fullstack-dev/SKILL.md
+   240→  4.0K  skills/writing-plans/SKILL.md
+   241→  12K  skills/finance/Finance_API_Doc.md
+   242→  4.0K  skills/finance/SKILL.md
+   243→  4.0K  skills/coding-agent/memory-template.md
+   244→  4.0K  skills/coding-agent/verification.md
+   245→  4.0K  skills/coding-agent/criteria.md
+   246→  4.0K  skills/coding-agent/SKILL.md
+   247→  4.0K  skills/coding-agent/execution.md
+   248→  4.0K  skills/coding-agent/planning.md
+   249→  4.0K  skills/coding-agent/state.md
+   250→  8.0K  skills/aminer-academic-search/SKILL.md
+   251→  16K  skills/aminer-academic-search/scripts/aminer.py
+   252→  4.0K  skills/blog-writer/2024-02-17-raycast-spotlight-superpowers.md
+   253→  4.0K  skills/blog-writer/2024-02-17-typing-speed-benefits.md
+   254→  4.0K  skills/blog-writer/2024-03-14-effective-ai-prompts.md
+   255→  4.0K  skills/blog-writer/2024-02-17-radical-transparency-sales.md
+   256→  4.0K  skills/blog-writer/README.md
+   257→  4.0K  skills/blog-writer/manage_examples.py
+   258→  8.0K  skills/blog-writer/SKILL.md
+   259→  8.0K  skills/blog-writer/2025-11-12-why-ai-art-is-useless.md
+   260→  8.0K  skills/blog-writer/2024-11-08-ai-revolutionizing-entry-level-sales.md
+   261→  8.0K  skills/blog-writer/2024-02-17-short-form-content-marketing.md
+   262→  8.0K  skills/blog-writer/style-guide.md
+   263→  4.0K  skills/VLM/LICENSE.txt
+   264→  16K  skills/VLM/SKILL.md
+   265→  8.0K  skills/stock-analysis-skill/SKILL.md
+   266→  16K  skills/docx/scenes/official-doc.md
+   267→  8.0K  skills/docx/scenes/copywriting.md
+   268→  36K  skills/docx/scenes/academic.md
+   269→  28K  skills/docx/scenes/exam.md
+   270→  24K  skills/docx/scenes/resume.md
+   271→  16K  skills/docx/scenes/report.md
+   272→  20K  skills/docx/scenes/contract.md
+   273→  12K  skills/docx/references/faq.md
+   274→  24K  skills/docx/references/common-rules.md
+   275→  20K  skills/docx/references/decorations.md
+   276→  12K  skills/docx/references/docx-js-core.md
+   277→  12K  skills/docx/references/toc.md
+   278→  12K  skills/docx/references/ooxml.md
+   279→  16K  skills/docx/references/chart-templates.md
+   280→  8.0K  skills/docx/references/math-formulas.md
+   281→  80K  skills/docx/references/design-system.md
+   282→  12K  skills/docx/references/docx-js-advanced.md
+   283→  4.0K  skills/docx/LICENSE.txt
+   284→  12K  skills/docx/SKILL.md
+   285→  4.0K  skills/docx/routes/read.md
+   286→  4.0K  skills/docx/routes/format.md
+   287→  12K  skills/docx/routes/create.md
+   288→  4.0K  skills/docx/routes/edit.md
+   289→  4.0K  skills/docx/routes/comment.md
+   290→  4.0K  skills/docx/scripts/__init__.py
+   291→  28K  skills/docx/scripts/add_toc_placeholders.py
+   292→  52K  skills/docx/scripts/document.py
+   293→  16K  skills/docx/scripts/utilities.py
+   294→  32K  skills/docx/scripts/postcheck.py
+   295→  72K  skills/pdf/typesetting/cover.md
+   296→  8.0K  skills/pdf/typesetting/palette.md
+   297→  4.0K  skills/pdf/typesetting/typography.md
+   298→  24K  skills/pdf/typesetting/overflow.md
+   299→  16K  skills/pdf/typesetting/cover-backgrounds.md
+   300→  20K  skills/pdf/typesetting/fill-engine.md
+   301→  16K  skills/pdf/typesetting/pagination.md
+   302→  12K  skills/pdf/typesetting/charts.md
+   303→  8.0K  skills/pdf/typesetting/geometry.md
+   304→  8.0K  skills/pdf/configs/components.md
+   305→  16K  skills/pdf/configs/visual_framework.md
+   306→  4.0K  skills/pdf/configs/fonts.md
+   307→  4.0K  skills/pdf/LICENSE.txt
+   308→  12K  skills/pdf/briefs/process.md
+   309→  48K  skills/pdf/briefs/academic.md
+   310→  36K  skills/pdf/briefs/poster.md
+   311→  48K  skills/pdf/briefs/creative.md
+   312→  72K  skills/pdf/briefs/report.md
+   313→  8.0K  skills/pdf/briefs/process-advanced.md
+   314→  68K  skills/pdf/SKILL.md
+   315→  80K  skills/pdf/scripts/toc_validate.py
+   316→  120K  skills/pdf/scripts/design_engine.py
+   317→  108K  skills/pdf/scripts/pdf.py
+   318→  60K  skills/pdf/scripts/poster_validate.py
+   319→  32K  skills/pdf/scripts/pdf_qa.py
+   320→  8.0K  skills/charts/references/d3.md
+   321→  28K  skills/charts/references/mermaid.md
+   322→  4.0K  skills/charts/references/_rules.md
+   323→  36K  skills/charts/references/mindmap-css.md
+   324→  12K  skills/charts/references/seaborn.md
+   325→  32K  skills/charts/references/playwright-css.md
+   326→  20K  skills/charts/references/echarts.md
+   327→  20K  skills/charts/references/radial-grid.md
+   328→  24K  skills/charts/references/matplotlib.md
+   329→  4.0K  skills/charts/LICENSE.txt
+   330→  24K  skills/charts/SKILL.md
+   331→  4.0K  skills/aminer-daily-paper/README.md
+   332→  4.0K  skills/aminer-daily-paper/SKILL.md
+   333→  8.0K  skills/aminer-daily-paper/scripts/recommend.py
+   334→  8.0K  skills/storyboard-manager/references/story_structures.md
+   335→  8.0K  skills/storyboard-manager/references/character_development.md
+   336→  20K  skills/storyboard-manager/SKILL.md
+   337→  16K  skills/storyboard-manager/scripts/timeline_tracker.py
+   338→  16K  skills/storyboard-manager/scripts/consistency_checker.py
+   339→  4.0K  skills/qingyan-research/generate_html.py
+   340→  12K  skills/qingyan-research/SKILL.md
+   341→  20K  skills/get-fortune-analysis/SKILL.md
+   342→  8.0K  skills/get-fortune-analysis/lunar_python.py
+   343→  4.0K  skills/podcast-generate/LICENSE.txt
+   344→  8.0K  skills/podcast-generate/SKILL.md
+   345→  8.0K  skills/podcast-generate/readme.md
+   346→  8.0K  skills/skill-vetter/SKILL.md
+   347→  16K  skills/xlsx/engines/vba-templates.md
+   348→  24K  skills/xlsx/engines/design.md
+   349→  4.0K  skills/xlsx/engines/chart.md
+   350→  8.0K  skills/xlsx/engines/chart-templates.md
+   351→  8.0K  skills/xlsx/scenes/finance_lite.md
+   352→  8.0K  skills/xlsx/scenes/vba.md
+   353→  8.0K  skills/xlsx/scenes/advanced.md
+   354→  12K  skills/xlsx/scenes/finance.md
+   355→  4.0K  skills/xlsx/scenes/create.md
+   356→  4.0K  skills/xlsx/scenes/convert.md
+   357→  8.0K  skills/xlsx/scenes/analyze-recipes.md
+   358→  8.0K  skills/xlsx/scenes/edit.md
+   359→  4.0K  skills/xlsx/scenes/analyze.md
+   360→  8.0K  skills/xlsx/scenes/edit-patterns.md
+   361→  12K  skills/xlsx/quality/pipeline.md
+   362→  4.0K  skills/xlsx/LICENSE.txt
+   363→  20K  skills/xlsx/templates/palettes.py
+   364→  24K  skills/xlsx/templates/base.py
+   365→  12K  skills/xlsx/SKILL.md
+   366→  52K  skills/xlsx/xlsx.py
+   367→  4.0K  skills/interview-designer/references/design_rationale.md
+   368→  4.0K  skills/interview-designer/README.md
+   369→  4.0K  skills/interview-designer/templates/interview_guide_template.md
+   370→  4.0K  skills/interview-designer/SKILL.md
+   371→  16K  skills/gift-evaluator/html_tools.py
+   372→  8.0K  skills/gift-evaluator/SKILL.md
+   373→  4.0K  skills/web-shader-extractor/references/encoded-definitions.md
+   374→  4.0K  skills/web-shader-extractor/references/tsl-extraction.md
+   375→  8.0K  skills/web-shader-extractor/references/shaders-com.md
+   376→  16K  skills/web-shader-extractor/references/unicorn-studio.md
+   377→  8.0K  skills/web-shader-extractor/references/shader-injection.md
+   378→  4.0K  skills/web-shader-extractor/references/extraction-workflow.md
+   379→  4.0K  skills/web-shader-extractor/references/config-extraction.md
+   380→  4.0K  skills/web-shader-extractor/references/tech-signatures.md
+   381→  8.0K  skills/web-shader-extractor/references/porting-strategy.md
+   382→  8.0K  skills/web-shader-extractor/SKILL.md
+   383→  40K  skills/market-research-reports/references/visual_generation_guide.md
+   384→  24K  skills/market-research-reports/references/report_structure_guide.md
+   385→  20K  skills/market-research-reports/references/data_analysis_patterns.md
+   386→  12K  skills/market-research-reports/assets/FORMATTING_GUIDE.md
+   387→  32K  skills/market-research-reports/SKILL.md
+   388→  20K  skills/market-research-reports/scripts/generate_market_visuals.py
+   389→  4.0K  skills/marketing-mode/mode-prompt.md
+   390→  4.0K  skills/marketing-mode/README.md
+   391→  20K  skills/marketing-mode/SKILL.md
+   392→  4.0K  skills/image-edit/LICENSE.txt
+   393→  28K  skills/image-edit/SKILL.md
+   394→  4.0K  skills/LLM/LICENSE.txt
+   395→  24K  skills/LLM/SKILL.md
+   396→  12K  skills/skill-creator/references/schemas.md
+   397→  12K  skills/skill-creator/LICENSE.txt
+   398→  16K  skills/skill-creator/eval-viewer/generate_review.py
+   399→  36K  skills/skill-creator/SKILL.md
+   400→  0  skills/skill-creator/scripts/__init__.py
+   401→  12K  skills/skill-creator/scripts/run_eval.py
+   402→  16K  skills/skill-creator/scripts/aggregate_benchmark.py
+   403→  8.0K  skills/skill-creator/scripts/package_skill.py
+   404→  4.0K  skills/skill-creator/scripts/quick_validate.py
+   405→  16K  skills/skill-creator/scripts/generate_report.py
+   406→  12K  skills/skill-creator/scripts/improve_description.py
+   407→  4.0K  skills/skill-creator/scripts/utils.py
+   408→  16K  skills/skill-creator/scripts/run_loop.py
+   409→  12K  skills/skill-creator/agents/analyzer.md
+   410→  8.0K  skills/skill-creator/agents/comparator.md
+   411→  12K  skills/skill-creator/agents/grader.md
+   412→  4.0K  skills/TTS/LICENSE.txt
+   413→  20K  skills/TTS/SKILL.md
+   414→  4.0K  skills/video-generation/LICENSE.txt
+   415→  32K  skills/video-generation/SKILL.md
+   416→  12K  skills/anti-pua/SKILL.md
+   417→  12K  skills/agent-browser/SKILL.md
+   418→  4.0K  skills/dream-interpreter/references/visual-mapping.md
+   419→  4.0K  skills/dream-interpreter/references/output-schema.md
+   420→  4.0K  skills/dream-interpreter/references/api_reference.md
+   421→  4.0K  skills/dream-interpreter/references/interpretation-guide.md
+   422→  4.0K  skills/dream-interpreter/references/questioning-strategy.md
+   423→  4.0K  skills/dream-interpreter/assets/example_asset.txt
+   424→  4.0K  skills/dream-interpreter/SKILL.md
+   425→  4.0K  skills/dream-interpreter/scripts/example.py
+   426→  4.0K  skills/skill-finder-cn/SKILL.md
+   427→  12K  skills/content-strategy/SKILL.md
+   428→  16K  skills/contentanalysis/ExtractWisdom/SKILL.md
+   429→  4.0K  skills/contentanalysis/ExtractWisdom/Workflows/Extract.md
+   430→  4.0K  skills/contentanalysis/SKILL.md
+   431→  8.0K  upload/README (3).md
+   432→  12K  upload/smart-parking-report.md
+   433→  8.0K  upload/مستند نصي جديد (2).txt
+   434→  12K  docs/parts-list.md
+   435→
+   436→═══ sasdfsdfgs — ملفات >50KB غير منسوخة ═══
+   437→  180K  index.html
+   438→  596K  download/mega_wifi_schematic.json
+   439→  172K  download/index.html
+   440→  288K  download/instructables_mega_wifi.json
+   441→  324K  bun.lock
+   442→  408K  page1.json
+   443→  104K  skills/ppt/components.md
+   444→  68K  skills/ppt/beamer.md
+   445→  240K  skills/ppt/ooxml/schemas/ISO-IEC29500-4_2016/sml.xsd
+   446→  84K  skills/ppt/ooxml/schemas/ISO-IEC29500-4_2016/pml.xsd
+   447→  76K  skills/ppt/ooxml/schemas/ISO-IEC29500-4_2016/dml-chart.xsd
+   448→  52K  skills/ppt/ooxml/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd
+   449→  168K  skills/ppt/ooxml/schemas/ISO-IEC29500-4_2016/wml.xsd
+   450→  152K  skills/ppt/ooxml/schemas/ISO-IEC29500-4_2016/dml-main.xsd
+   451→  60K  skills/ppt/scripts/html2pptx.js
+   452→  72K  skills/ppt/scripts/pdf.py
+   453→  11M  skills/ppt/scripts/tectonic
+   454→  96K  skills/ui-ux-pro-max/data/styles.csv
+   455→  96K  skills/ui-ux-pro-max/assets/data/styles.csv
+   456→  80K  skills/docx/references/design-system.md
+   457→  52K  skills/docx/scripts/document.py
+   458→  72K  skills/pdf/typesetting/cover.md
+   459→  72K  skills/pdf/briefs/report.md
+   460→  68K  skills/pdf/SKILL.md
+   461→  80K  skills/pdf/scripts/toc_validate.py
+   462→  120K  skills/pdf/scripts/design_engine.py
+   463→  108K  skills/pdf/scripts/pdf.py
+   464→  60K  skills/pdf/scripts/poster_validate.py
+   465→  52K  skills/xlsx/xlsx.py
+   466→  332K  page3.json
+   467→
+   468→═══ gggggg — كل الملفات الكبيرة + md + txt + py ═══
+   469→  4.0K  download/README.md
+   470→  28K  worklog.md
+   471→  4.0K  public/robots.txt
+   472→  24K  skills/multi-search-engine/references/international-search.md
+   473→  4.0K  skills/multi-search-engine/CHANGELOG.md
+   474→  4.0K  skills/multi-search-engine/CHANNELLOG.md
+   475→  4.0K  skills/multi-search-engine/SKILL.md
+   476→  8.0K  skills/ai-news-collectors/references/sources.md
+   477→  8.0K  skills/ai-news-collectors/SKILL.md
+   478→  4.0K  skills/ASR/LICENSE.txt
+   479→  16K  skills/ASR/SKILL.md
+   480→  4.0K  skills/web-search/LICENSE.txt
+   481→  24K  skills/web-search/SKILL.md
+   482→  4.0K  skills/image-understand/LICENSE.txt
+   483→  24K  skills/image-understand/SKILL.md
+   484→  4.0K  skills/mindfulness-meditation/SKILL.md
+   485→  4.0K  skills/web-reader/LICENSE.txt
+   486→  28K  skills/web-reader/SKILL.md
+   487→  4.0K  skills/video-understand/LICENSE.txt
+   488→  28K  skills/video-understand/SKILL.md
+   489→  4.0K  skills/image-generation/LICENSE.txt
+   490→  16K  skills/image-generation/SKILL.md
+   491→  12K  skills/seo-content-writer/references/title-formulas.md
+   492→  20K  skills/seo-content-writer/references/content-structure-templates.md
+   493→  24K  skills/seo-content-writer/SKILL.md
+   494→  12K  skills/visual-design-foundations/references/spacing-iconography.md
+   495→  12K  skills/visual-design-foundations/references/color-systems.md
+   496→  12K  skills/visual-design-foundations/references/typography-systems.md
+   497→  8.0K  skills/visual-design-foundations/SKILL.md
+   498→  96K  skills/ui-ux-pro-max/data/styles.csv
+   499→  16K  skills/ui-ux-pro-max/data/landing.csv
+   500→  12K  skills/ui-ux-pro-max/data/colors.csv
+   501→  16K  skills/ui-ux-pro-max/data/icons.csv
+   502→  32K  skills/ui-ux-pro-max/data/products.csv
+   503→  8.0K  skills/ui-ux-pro-max/data/web-interface.csv
+   504→  20K  skills/ui-ux-pro-max/data/ux-guidelines.csv
+   505→  16K  skills/ui-ux-pro-max/data/react-performance.csv
+   506→  8.0K  skills/ui-ux-pro-max/data/charts.csv
+   507→  12K  skills/ui-ux-pro-max/data/stacks/astro.csv
+   508→  12K  skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv
+   509→  16K  skills/ui-ux-pro-max/data/stacks/react.csv
+   510→  20K  skills/ui-ux-pro-max/data/stacks/nuxtjs.csv
+   511→  12K  skills/ui-ux-pro-max/data/stacks/vue.csv
+   512→  12K  skills/ui-ux-pro-max/data/stacks/svelte.csv
+   513→  12K  skills/ui-ux-pro-max/data/stacks/react-native.csv
+   514→  12K  skills/ui-ux-pro-max/data/stacks/flutter.csv
+   515→  16K  skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv
+   516→  12K  skills/ui-ux-pro-max/data/stacks/html-tailwind.csv
+   517→  12K  skills/ui-ux-pro-max/data/stacks/swiftui.csv
+   518→  16K  skills/ui-ux-pro-max/data/stacks/nextjs.csv
+   519→  16K  skills/ui-ux-pro-max/data/stacks/shadcn.csv
+   520→  32K  skills/ui-ux-pro-max/data/typography.csv
+   521→  32K  skills/ui-ux-pro-max/data/ui-reasoning.csv
+   522→  24K  skills/ui-ux-pro-max/references/upstream-README.md
+   523→  12K  skills/ui-ux-pro-max/references/upstream-skill-content.md
+   524→  96K  skills/ui-ux-pro-max/assets/data/styles.csv
+   525→  16K  skills/ui-ux-pro-max/assets/data/landing.csv
+   526→  12K  skills/ui-ux-pro-max/assets/data/colors.csv
+   527→  16K  skills/ui-ux-pro-max/assets/data/icons.csv
+   528→  32K  skills/ui-ux-pro-max/assets/data/products.csv
+   529→  8.0K  skills/ui-ux-pro-max/assets/data/web-interface.csv
+   530→  20K  skills/ui-ux-pro-max/assets/data/ux-guidelines.csv
+   531→  16K  skills/ui-ux-pro-max/assets/data/react-performance.csv
+   532→  8.0K  skills/ui-ux-pro-max/assets/data/charts.csv
+   533→  12K  skills/ui-ux-pro-max/assets/data/stacks/astro.csv
+   534→  12K  skills/ui-ux-pro-max/assets/data/stacks/jetpack-compose.csv
+   535→  16K  skills/ui-ux-pro-max/assets/data/stacks/react.csv
+   536→  20K  skills/ui-ux-pro-max/assets/data/stacks/nuxtjs.csv
+   537→  12K  skills/ui-ux-pro-max/assets/data/stacks/vue.csv
+   538→  12K  skills/ui-ux-pro-max/assets/data/stacks/svelte.csv
+   539→  12K  skills/ui-ux-pro-max/assets/data/stacks/react-native.csv
+   540→  12K  skills/ui-ux-pro-max/assets/data/stacks/flutter.csv
+   541→  16K  skills/ui-ux-pro-max/assets/data/stacks/nuxt-ui.csv
+   542→  12K  skills/ui-ux-pro-max/assets/data/stacks/html-tailwind.csv
+   543→  12K  skills/ui-ux-pro-max/assets/data/stacks/swiftui.csv
+   544→  16K  skills/ui-ux-pro-max/assets/data/stacks/nextjs.csv
+   545→  16K  skills/ui-ux-pro-max/assets/data/stacks/shadcn.csv
+   546→  32K  skills/ui-ux-pro-max/assets/data/typography.csv
+   547→  32K  skills/ui-ux-pro-max/assets/data/ui-reasoning.csv
+   548→  4.0K  skills/ui-ux-pro-max/SKILL.md
+   549→  12K  skills/ui-ux-pro-max/scripts/core.py
+   550→  0  skills/ui-ux-pro-max/scripts/__init__.py
+   551→  44K  skills/ui-ux-pro-max/scripts/design_system.py
+   552→  8.0K  skills/ui-ux-pro-max/scripts/search.py
+   553→  8.0K  skills/auto-target-tracker/SKILL.md
+   554→  12K  skills/fullstack-dev/SKILL.md
+   555→  4.0K  skills/writing-plans/SKILL.md
+   556→  12K  skills/finance/Finance_API_Doc.md
+   557→  4.0K  skills/finance/SKILL.md
+   558→  4.0K  skills/coding-agent/memory-template.md
+   559→  4.0K  skills/coding-agent/verification.md
+   560→  4.0K  skills/coding-agent/criteria.md
+   561→  4.0K  skills/coding-agent/SKILL.md
+   562→  4.0K  skills/coding-agent/execution.md
+   563→  4.0K  skills/coding-agent/planning.md
+   564→  4.0K  skills/coding-agent/state.md
+   565→  4.0K  skills/blog-writer/2024-02-17-raycast-spotlight-superpowers.md
+   566→  4.0K  skills/blog-writer/2024-02-17-typing-speed-benefits.md
+   567→  4.0K  skills/blog-writer/2024-03-14-effective-ai-prompts.md
+   568→  4.0K  skills/blog-writer/2024-02-17-radical-transparency-sales.md
+   569→  4.0K  skills/blog-writer/README.md
+   570→  4.0K  skills/blog-writer/manage_examples.py
+   571→  8.0K  skills/blog-writer/SKILL.md
+   572→  8.0K  skills/blog-writer/2025-11-12-why-ai-art-is-useless.md
+   573→  8.0K  skills/blog-writer/2024-11-08-ai-revolutionizing-entry-level-sales.md
+   574→  8.0K  skills/blog-writer/2024-02-17-short-form-content-marketing.md
+   575→  8.0K  skills/blog-writer/style-guide.md
+   576→  4.0K  skills/VLM/LICENSE.txt
+   577→  16K  skills/VLM/SKILL.md
+   578→  8.0K  skills/stock-analysis-skill/SKILL.md
+   579→  36K  skills/docx/docx-js.md
+   580→  4.0K  skills/docx/LICENSE.txt
+   581→  4.0K  skills/docx/CHANGELOG.md
+   582→  24K  skills/docx/ooxml.md
+   583→  20K  skills/docx/SKILL.md
+   584→  4.0K  skills/docx/ooxml/scripts/unpack.py
+   585→  4.0K  skills/docx/ooxml/scripts/validate.py
+   586→  4.0K  skills/docx/ooxml/scripts/validation/__init__.py
+   587→  40K  skills/docx/ooxml/scripts/validation/base.py
+   588→  16K  skills/docx/ooxml/scripts/validation/pptx.py
+   589→  12K  skills/docx/ooxml/scripts/validation/redlining.py
+   590→  12K  skills/docx/ooxml/scripts/validation/docx.py
+   591→  8.0K  skills/docx/ooxml/scripts/pack.py
+   592→  4.0K  skills/docx/scripts/__init__.py
+   593→  8.0K  skills/docx/scripts/add_toc_placeholders.py
+   594→  52K  skills/docx/scripts/document.py
+   595→  16K  skills/docx/scripts/utilities.py
+   596→  12K  skills/pdf/forms.md
+   597→  4.0K  skills/pdf/LICENSE.txt
+   598→  24K  skills/pdf/reference.md
+   599→  56K  skills/pdf/SKILL.md
+   600→  4.0K  skills/pdf/scripts/check_bounding_boxes.py
+   601→  12K  skills/pdf/scripts/check_bounding_boxes_test.py
+   602→  4.0K  skills/pdf/scripts/check_fillable_fields.py
+   603→  8.0K  skills/pdf/scripts/add_zai_metadata.py
+   604→  4.0K  skills/pdf/scripts/fill_pdf_form_with_annotations.py
+   605→  8.0K  skills/pdf/scripts/fill_fillable_fields.py
+   606→  8.0K  skills/pdf/scripts/extract_form_field_info.py
+   607→  4.0K  skills/pdf/scripts/convert_pdf_to_images.py
+   608→  4.0K  skills/pdf/scripts/sanitize_code.py
+   609→  4.0K  skills/pdf/scripts/create_validation_image.py
+   610→  8.0K  skills/storyboard-manager/references/story_structures.md
+   611→  8.0K  skills/storyboard-manager/references/character_development.md
+   612→  20K  skills/storyboard-manager/SKILL.md
+   613→  16K  skills/storyboard-manager/scripts/timeline_tracker.py
+   614→  16K  skills/storyboard-manager/scripts/consistency_checker.py
+   615→  4.0K  skills/qingyan-research/generate_html.py
+   616→  12K  skills/qingyan-research/SKILL.md
+   617→  28K  skills/aminer-open-academic/references/api-catalog.md
+   618→  12K  skills/aminer-open-academic/SKILL.md
+   619→  40K  skills/aminer-open-academic/scripts/aminer_client.py
+   620→  20K  skills/get-fortune-analysis/SKILL.md
+   621→  8.0K  skills/get-fortune-analysis/lunar_python.py
+   622→  4.0K  skills/podcast-generate/LICENSE.txt
+   623→  8.0K  skills/podcast-generate/SKILL.md
+   624→  8.0K  skills/podcast-generate/readme.md
+   625→  8.0K  skills/skill-vetter/SKILL.md
+   626→  8.0K  skills/xlsx/recalc.py
+   627→  4.0K  skills/xlsx/LICENSE.txt
+   628→  20K  skills/xlsx/SKILL.md
+   629→  4.0K  skills/interview-designer/references/design_rationale.md
+   630→  4.0K  skills/interview-designer/README.md
+   631→  4.0K  skills/interview-designer/templates/interview_guide_template.md
+   632→  4.0K  skills/interview-designer/SKILL.md
+   633→  16K  skills/gift-evaluator/html_tools.py
+   634→  8.0K  skills/gift-evaluator/SKILL.md
+   635→  40K  skills/market-research-reports/references/visual_generation_guide.md
+   636→  24K  skills/market-research-reports/references/report_structure_guide.md
+   637→  20K  skills/market-research-reports/references/data_analysis_patterns.md
+   638→  12K  skills/market-research-reports/assets/FORMATTING_GUIDE.md
+   639→  32K  skills/market-research-reports/SKILL.md
+   640→  20K  skills/market-research-reports/scripts/generate_market_visuals.py
+   641→  4.0K  skills/marketing-mode/mode-prompt.md
+   642→  4.0K  skills/marketing-mode/README.md
+   643→  20K  skills/marketing-mode/SKILL.md
+   644→  4.0K  skills/image-edit/LICENSE.txt
+   645→  28K  skills/image-edit/SKILL.md
+   646→  4.0K  skills/LLM/LICENSE.txt
+   647→  24K  skills/LLM/SKILL.md
+   648→  20K  skills/pptx/html2pptx.md
+   649→  4.0K  skills/pptx/LICENSE.txt
+   650→  12K  skills/pptx/ooxml.md
+   651→  28K  skills/pptx/SKILL.md
+   652→  4.0K  skills/pptx/ooxml/scripts/unpack.py
+   653→  4.0K  skills/pptx/ooxml/scripts/validate.py
+   654→  4.0K  skills/pptx/ooxml/scripts/validation/__init__.py
+   655→  40K  skills/pptx/ooxml/scripts/validation/base.py
+   656→  16K  skills/pptx/ooxml/scripts/validation/pptx.py
+   657→  12K  skills/pptx/ooxml/scripts/validation/redlining.py
+   658→  12K  skills/pptx/ooxml/scripts/validation/docx.py
+   659→  8.0K  skills/pptx/ooxml/scripts/pack.py
+   660→  40K  skills/pptx/scripts/inventory.py
+   661→  16K  skills/pptx/scripts/replace.py
+   662→  12K  skills/pptx/scripts/rearrange.py
+   663→  16K  skills/pptx/scripts/thumbnail.py
+   664→  12K  skills/skill-creator/references/schemas.md
+   665→  12K  skills/skill-creator/LICENSE.txt
+   666→  16K  skills/skill-creator/eval-viewer/generate_review.py
+   667→  36K  skills/skill-creator/SKILL.md
+   668→  0  skills/skill-creator/scripts/__init__.py
+   669→  12K  skills/skill-creator/scripts/run_eval.py
+   670→  16K  skills/skill-creator/scripts/aggregate_benchmark.py
+   671→  8.0K  skills/skill-creator/scripts/package_skill.py
+   672→  4.0K  skills/skill-creator/scripts/quick_validate.py
+   673→  16K  skills/skill-creator/scripts/generate_report.py
+   674→  12K  skills/skill-creator/scripts/improve_description.py
+   675→  4.0K  skills/skill-creator/scripts/utils.py
+   676→  16K  skills/skill-creator/scripts/run_loop.py
+   677→  12K  skills/skill-creator/agents/analyzer.md
+   678→  8.0K  skills/skill-creator/agents/comparator.md
+   679→  12K  skills/skill-creator/agents/grader.md
+   680→  4.0K  skills/TTS/LICENSE.txt
+   681→  20K  skills/TTS/SKILL.md
+   682→  4.0K  skills/video-generation/LICENSE.txt
+   683→  32K  skills/video-generation/SKILL.md
+   684→  12K  skills/agent-browser/SKILL.md
+   685→  4.0K  skills/dream-interpreter/references/visual-mapping.md
+   686→  4.0K  skills/dream-interpreter/references/output-schema.md
+   687→  4.0K  skills/dream-interpreter/references/api_reference.md
+   688→  4.0K  skills/dream-interpreter/references/interpretation-guide.md
+   689→  4.0K  skills/dream-interpreter/references/questioning-strategy.md
+   690→  4.0K  skills/dream-interpreter/assets/example_asset.txt
+   691→  4.0K  skills/dream-interpreter/SKILL.md
+   692→  4.0K  skills/dream-interpreter/scripts/example.py
+   693→  4.0K  skills/skill-finder-cn/SKILL.md
+   694→  12K  skills/content-strategy/SKILL.md
+   695→  16K  skills/contentanalysis/ExtractWisdom/SKILL.md
+   696→  4.0K  skills/contentanalysis/ExtractWisdom/Workflows/Extract.md
+   697→  4.0K  skills/contentanalysis/SKILL.md
+   698→  24K  generate-backgrounds.py
+   699→
+   700→═══ gggggg — ملفات >50KB غير منسوخة ═══
+   701→  84K  index.html
+   702→  344K  bun.lock
+   703→  68K  db/custom.db
+   704→  64K  public/images/backgrounds/customers.png
+   705→  72K  public/images/backgrounds/login.png
+   706→  288K  public/images/backgrounds/activity.png
+   707→  112K  public/images/backgrounds/settings.png
+   708→  64K  public/images/backgrounds/control.png
+   709→  112K  public/images/backgrounds/profile.png
+   710→  92K  public/images/backgrounds/calendar.png
+   711→  72K  public/images/backgrounds/bookings.png
+   712→  208K  public/images/backgrounds/users.png
+   713→  116K  public/images/backgrounds/dashboard.png
+   714→  168K  public/images/backgrounds/billing.png
+   715→  84K  public/index.html
+   716→  96K  skills/ui-ux-pro-max/data/styles.csv
+   717→  96K  skills/ui-ux-pro-max/assets/data/styles.csv
+   718→  240K  skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/sml.xsd
+   719→  84K  skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/pml.xsd
+   720→  76K  skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-chart.xsd
+   721→  52K  skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd
+   722→  168K  skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/wml.xsd
+   723→  152K  skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-main.xsd
+   724→  52K  skills/docx/scripts/document.py
+   725→  56K  skills/pdf/SKILL.md
+   726→  240K  skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/sml.xsd
+   727→  84K  skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/pml.xsd
+   728→  76K  skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-chart.xsd
+   729→  52K  skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd
+   730→  168K  skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/wml.xsd

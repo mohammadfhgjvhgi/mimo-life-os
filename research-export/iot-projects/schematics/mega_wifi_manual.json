@@ -1,0 +1,35 @@
+{
+  "code": 200,
+  "data": {
+    "description": "",
+    "html": "",
+    "metadata": {
+      "Author": "",
+      "CreationDate": "D:20180915150822+03'00'",
+      "Creator": "PScript5.dll Version 5.2.2",
+      "EncryptFilterName": "null",
+      "IsAcroFormPresent": "false",
+      "IsCollectionPresent": "false",
+      "IsLinearized": "true",
+      "IsSignaturesPresent": "false",
+      "IsXFAPresent": "false",
+      "Language": "null",
+      "ModDate": "D:20180927092037+03'00'",
+      "PDFFormatVersion": "1.6",
+      "Producer": "Acrobat Distiller 11.0 (Windows)",
+      "Title": ""
+    },
+    "publishedTime": "Wed, 29 Nov 2023 06:28:39 GMT",
+    "title": "2560WIFI.pdf",
+    "url": "http://product.ic114.com/PDF/M/2560WIFI.pdf",
+    "usage": {
+      "tokens": 0
+    }
+  },
+  "meta": {
+    "usage": {
+      "tokens": 0
+    }
+  },
+  "status": 20000
+}

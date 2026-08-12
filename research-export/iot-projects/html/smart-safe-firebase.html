@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0F0F1A">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="الخزنة الذكية">
+    
+    <title>الخزنة الذكية</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        html, body { height: 100%; overflow: hidden; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: linear-gradient(135deg, #0F0F1A 0%, #1A1A2E 50%, #16213E 100%); color: white; display: flex; flex-direction: column; }
+        
+        .header { text-align: center; padding: 15px 20px; }
+        .header h1 { font-size: 1.6rem; background: linear-gradient(45deg, #6C63FF, #00D9FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 15px; font-size: 0.75rem; margin-top: 8px; }
+        .status-badge.connected { background: rgba(76, 175, 80, 0.2); color: #4CAF50; }
+        .status-badge.disconnected { background: rgba(255, 82, 82, 0.2); color: #FF5252; }
+        
+        .main-content { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 20px; }
+        
+        .lock-button { width: 160px; height: 160px; border-radius: 50%; border: none; cursor: pointer; font-size: 4rem; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
+        .lock-button.locked { background: linear-gradient(135deg, #6C63FF, #00D9FF); box-shadow: 0 0 40px rgba(108, 99, 255, 0.5); }
+        .lock-button.unlocked { background: linear-gradient(135deg, #4CAF50, #8BC34A); box-shadow: 0 0 40px rgba(76, 175, 80, 0.5); }
+        .lock-button .inner { width: 130px; height: 130px; border-radius: 50%; background: #1A1A2E; display: flex; align-items: center; justify-content: center; }
+        
+        .status-text { font-size: 1.4rem; font-weight: bold; margin-bottom: 5px; }
+        .status-text.locked { color: #6C63FF; }
+        .status-text.unlocked { color: #4CAF50; }
+        .last-access { color: #666; font-size: 0.8rem; }
+        
+        .cards-row { display: flex; gap: 12px; margin: 20px 0; width: 100%; justify-content: center; }
+        .mini-card { background: #1A1A2E; border-radius: 15px; padding: 12px 15px; text-align: center; flex: 1; max-width: 100px; }
+        
+        /* Password Modal */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; z-index: 1000; }
+        .modal-overlay.show { display: flex; }
+        
+        .modal-box { background: #1A1A2E; border-radius: 20px; padding: 30px; width: 90%; max-width: 320px; text-align: center; }
+        .modal-box h2 { margin-bottom: 20px; color: #6C63FF; }
+        
+        .password-input { width: 100%; padding: 15px; font-size: 1.5rem; text-align: center; border-radius: 12px; border: 2px solid #6C63FF; background: #0F0F1A; color: white; letter-spacing: 8px; margin-bottom: 15px; }
+        .password-input:focus { outline: none; border-color: #00D9FF; }
+        
+        .modal-buttons { display: flex; gap: 10px; margin-top: 15px; }
+        .modal-btn { flex: 1; padding: 12px; border-radius: 12px; border: none; font-size: 1rem; cursor: pointer; transition: 0.3s; }
+        .modal-btn.confirm { background: linear-gradient(135deg, #6C63FF, #00D9FF); color: white; }
+        .modal-btn.cancel { background: #333; color: white; }
+        .modal-btn:active { transform: scale(0.95); }
+        
+        .error-msg { color: #FF5252; font-size: 0.85rem; margin-top: 10px; display: none; }
+        .error-msg.show { display: block; }
+        
+        .bottom-section { padding: 15px 20px; }
+        .log-container { background: #1A1A2E; border-radius: 15px; padding: 12px; max-height: 120px; overflow-y: auto; }
+        
+        .alarm-btn { position: fixed; bottom: 30px; right: 20px; background: #FF5252; border: none; padding: 12px 18px; border-radius: 25px; color: white; box-shadow: 0 4px 15px rgba(255, 82, 82, 0.4); }
+        
+        .toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-100px); padding: 12px 20px; border-radius: 12px; z-index: 1001; transition: 0.3s; }
+        .toast.show { transform: translateX(-50%) translateY(20px); }
+        
+        .loading { position: fixed; inset: 0; background: #0F0F1A; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2000; transition: 0.5s; }
+        .loading.hidden { opacity: 0; pointer-events: none; }
+        .spinner { width: 40px; height: 40px; border: 3px solid rgba(108, 99, 255, 0.3); border-top-color: #6C63FF; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading"><div class="spinner"></div></div>
+
+    <div class="header">
+        <h1>🔐 الخزنة الذكية</h1>
+        <div class="status-badge disconnected" id="statusBadge">غير متصل</div>
+    </div>
+
+    <div class="main-content">
+        <button class="lock-button locked" id="lockBtn" onclick="askPassword()">
+            <div class="inner"><span id="lockIcon">🔒</span></div>
+        </button>
+        <div class="status-text locked" id="statusText">الخزنة مقفلة</div>
+        <div class="last-access" id="lastAccess">-</div>
+
+        <div class="cards-row">
+            <div class="mini-card"><div class="icon">📡</div><div class="title">الاتصال</div><div class="value" id="connValue">-</div></div>
+            <div class="mini-card"><div class="icon">🎫</div><div class="title">الفتح</div><div class="value" id="accessType" style="color:#00D9FF">-</div></div>
+            <div class="mini-card"><div class="icon">⏰</div><div class="title">المدة</div><div class="value" style="color:#6C63FF">5 ث</div></div>
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <div class="log-container"><div id="logList" style="font-size: 0.75rem;"></div></div>
+    </div>
+
+    <button class="alarm-btn" onclick="triggerAlarm()">🚨 إنذار</button>
+    
+    <!-- Password Modal -->
+    <div class="modal-overlay" id="passwordModal">
+        <div class="modal-box">
+            <h2>🔐 أدخل كلمة المرور</h2>
+            <input type="password" class="password-input" id="passwordInput" maxlength="6" placeholder="······" onkeypress="handleEnter(event)">
+            <div class="error-msg" id="errorMsg">كلمة المرور غير صحيحة!</div>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" onclick="closeModal()">إلغاء</button>
+                <button class="modal-btn confirm" onclick="verifyPassword()">تأكيد</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="toast" id="toast"></div>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDI-eFQnkntPMgRbe07ymzuVebmnsRe0SE",
+            authDomain: "sssss-8d760.firebaseapp.com",
+            databaseURL: "https://sssss-8d760-default-rtdb.firebaseio.com",
+            projectId: "sssss-8d760",
+            storageBucket: "sssss-8d760.firebasestorage.app",
+            messagingSenderId: "601253161068",
+            appId: "1:601253161068:web:b8fda4072eaa824acf1049"
+        };
+
+        // كلمة المرور الافتراضية (يمكن تغييرها من Firebase)
+        const DEFAULT_PASSWORD = "123456";
+        
+        let db, connected = false, safeOpen = false;
+
+        function init() {
+            firebase.initializeApp(firebaseConfig);
+            db = firebase.database();
+
+            db.ref('.info/connected').on('value', s => {
+                connected = s.val();
+                document.getElementById('statusBadge').className = 'status-badge ' + (connected ? 'connected' : 'disconnected');
+                document.getElementById('statusBadge').textContent = connected ? 'متصل' : 'غير متصل';
+                document.getElementById('connValue').textContent = connected ? 'متصل' : 'غير متصل';
+                document.getElementById('connValue').style.color = connected ? '#4CAF50' : '#FF5252';
+            });
+
+            db.ref('safe_status').on('value', s => {
+                safeOpen = s.val() === true;
+                updateUI();
+            });
+
+            db.ref('last_access').on('value', s => {
+                if (s.val()) document.getElementById('lastAccess').textContent = s.val();
+            });
+
+            db.ref('access_type').on('value', s => {
+                const t = s.val();
+                document.getElementById('accessType').textContent = t === 'APP' ? 'تطبيق' : t === 'RFID' ? 'بطاقة' : '-';
+            });
+
+            db.ref('operation_log').on('value', s => {
+                const d = s.val();
+                if (d) {
+                    const logs = Object.values(d).reverse().slice(0, 3);
+                    let h = '';
+                    logs.forEach(l => {
+                        h += `<div style="padding:5px; border-bottom:1px solid #333">${l.action === 'OPENED' ? '🔓 فتح' : '🔒 إغلاق'} - ${l.timestamp} [${l.source}]</div>`;
+                    });
+                    document.getElementById('logList').innerHTML = h;
+                }
+            });
+
+            setTimeout(() => document.getElementById('loading').classList.add('hidden'), 800);
+        }
+
+        function updateUI() {
+            const btn = document.getElementById('lockBtn');
+            const icon = document.getElementById('lockIcon');
+            const txt = document.getElementById('statusText');
+            btn.className = safeOpen ? 'lock-button unlocked' : 'lock-button locked';
+            icon.textContent = safeOpen ? '🔓' : '🔒';
+            txt.className = safeOpen ? 'status-text unlocked' : 'status-text locked';
+            txt.textContent = safeOpen ? 'الخزنة مفتوحة' : 'الخزنة مقفلة';
+        }
+
+        function askPassword() {
+            if (!connected) {
+                showToast('غير متصل بالإنترنت!', '#FF5252');
+                return;
+            }
+            // إذا الخزنة مفتوحة، أغلقها مباشرة بدون كلمة مرور
+            if (safeOpen) {
+                closeSafe();
+                return;
+            }
+            // إذا مقفلة، اطلب كلمة المرور
+            document.getElementById('passwordModal').classList.add('show');
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('errorMsg').classList.remove('show');
+            setTimeout(() => document.getElementById('passwordInput').focus(), 100);
+        }
+
+        function closeModal() {
+            document.getElementById('passwordModal').classList.remove('show');
+        }
+
+        function handleEnter(e) {
+            if (e.key === 'Enter') verifyPassword();
+        }
+
+        function verifyPassword() {
+            const input = document.getElementById('passwordInput').value;
+            
+            // جلب كلمة المرور من Firebase أو استخدام الافتراضية
+            db.ref('app_password').once('value').then(snapshot => {
+                const correctPassword = snapshot.val() || DEFAULT_PASSWORD;
+                
+                if (input === correctPassword) {
+                    closeModal();
+                    openSafe();
+                } else {
+                    document.getElementById('errorMsg').classList.add('show');
+                    document.getElementById('passwordInput').value = '';
+                    document.getElementById('passwordInput').focus();
+                }
+            });
+        }
+
+        async function openSafe() {
+            const now = new Date();
+            const ts = now.toLocaleTimeString();
+            await db.ref('safe_status').set(true);
+            await db.ref('access_type').set('APP');
+            await db.ref('last_access').set(ts);
+            await db.ref('operation_log').push({ timestamp: ts, source: 'APP', action: 'OPENED' });
+            showToast('🔓 تم فتح الخزنة!', '#4CAF50');
+        }
+
+        async function closeSafe() {
+            const now = new Date();
+            const ts = now.toLocaleTimeString();
+            await db.ref('safe_status').set(false);
+            await db.ref('operation_log').push({ timestamp: ts, source: 'APP', action: 'LOCKED' });
+            showToast('🔒 تم إغلاق الخزنة!', '#6C63FF');
+        }
+
+        function triggerAlarm() { 
+            db.ref('alarm').set(true); 
+            showToast('🚨 تم تفعيل الإنذار!', '#FF5252');
+            setTimeout(() => db.ref('alarm').set(false), 2000); 
+        }
+
+        function showToast(msg, color) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.style.background = color;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+        
+        window.onload = init;
+    </script>
+</body>
+</html>

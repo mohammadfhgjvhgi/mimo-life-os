@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://support.arduino.cc/hc/en-us/articles/4408887452434-Flash-the-USB-to-serial-firmware-for-UNO-Rev3-and-earlier-and-Mega-boards",
+    "name": "Flash the USB-to-serial firmware for UNO (Rev3 and earlier",
+    "snippet": "You may want to use this procedure to restore USB-to-serial functionality if the converter has become corrupted or is not working properly, and resolve communication issues between the board and your computer.",
+    "host_name": "support.arduino.cc",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://mechatrofice.com/arduino/usb-ttl-serial-converter",
+    "name": "How to use Arduino UNO as a USB to TTL converter",
+    "snippet": "To use an Arduino board as a TTL-USB converter. Reset the board by grounding the reset pin; just connect a wire from reset pin to ground. Connect the RX pin on the Arduino board to the RX, TX to TX and GND to GND of the module. Connect the board to a USB port; through a USB type A type B cable.",
+    "host_name": "mechatrofice.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://electronics.stackexchange.com/questions/30999/how-can-i-fix-an-avrdude-not-in-sync-error-when-programming-arduino-via-usb-to-s",
+    "name": "How can I fix an AVRdude not-in-sync error when programming",
+    "snippet": "Later arduino boards are built to reset whenever a serial connection gets made, and programmatically by the bootloader. This blog article describes how it works, and even more interestingly, how to hack it onto earlier boards. It shouldn't be too hard to put it on a breadboard if you wanted to.",
+    "host_name": "electronics.stackexchange.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://microcontrollerslab.com/arduino-usb-ttl-converter-three-ways-use",
+    "name": "Arduino as usb TTL converter Three ways to use it",
+    "snippet": "It covers three steps to use an Arduino board as a USB to TTL converter to help us better understand the concept. Hopefully, this was helpful in expanding your knowledge about this topic.",
+    "host_name": "microcontrollerslab.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/arduino/comments/o37j0a/mega_2560_wont_acknowledge_anything_from_computer",
+    "name": "Mega 2560 won't acknowledge anything from computer : r/arduino",
+    "snippet": "While the Arduino IDE will connect to them both, when I press upload it will compile the code, try to upload, and then timeout. Neither TX nor RX light blinks when attempting to upload code. Any ideas? I've tried looking things up but couldn't find any solutions.",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.princetronics.com/arduino-uno-as-usb-to-serial-ttl-converter",
+    "name": "Arduino UNO as USB to serial TTL converter – PrinceTronics",
+    "snippet": "In this tutorial I’ll show you how to use an Arduino as a bridge between your computer and Serial communication module (like Bluetooth, Wi-Fi etc) which will allow your computer to talk directly to the module.",
+    "host_name": "www.princetronics.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.teachmemicro.com/arduino-usb-serial-converter",
+    "name": "How to Use Arduino as USB to Serial Converter",
+    "snippet": "If you want to do serial debugging for your PIC, ESP8266, Bluetooth module and a TTL-to-USB converter (pictured below) is nowhere in sight, you can simply use an Arduino USB serial converter! The Arduino UNO has its own FTDI chip whose function is to convert TTL signal levels to USB.",
+    "host_name": "www.teachmemicro.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  }
+]

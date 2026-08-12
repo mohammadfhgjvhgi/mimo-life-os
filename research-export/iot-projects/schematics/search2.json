@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://www.scribd.com/document/628950075/432568-179157",
+    "name": "Arduino Mega 2560 WiFi User Manual | PDF | Integrated",
+    "snippet": "This document provides instructions for operating an Arduino Mega 2560 WiFi BT board with multiple modules. It describes the different operating modes selected using DIP switches and their functions.",
+    "host_name": "www.scribd.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://newbiely.com/tutorials/arduino-mega/arduino-mega-dip-switch",
+    "name": "Arduino Mega - DIP Switch | Arduino Mega Tutorial - newbiely.com",
+    "snippet": "In this detailed guide, you'll discover how to integrate DIP switches (Dual In-line Package switches) into your Arduino projects for user-configurable settings, address selection, operating mode control, and binary input encoding.",
+    "host_name": "newbiely.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://manuals.plus/dip-switches/dip-switches-on-board-manual",
+    "name": "DIP Switches on-board User Manual - Manuals+",
+    "snippet": "Learn how to use the DIP switches on-board with this user manual. Featuring a customized ARDUINO MEGA R3 board with Atmel ATmega2560 microcontroller, ESP8266 Wi-Fi IC, and more. Find out how to set up components to work together or independently for optimal performance.",
+    "host_name": "manuals.plus",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://forum.arduino.cc/t/connecting-and-working-with-mega-wifi-r3-atmega2560-esp8266-32mb-memory/476356?page=3",
+    "name": "Connecting and working with Mega +WiFi R3  - Arduino Forum",
+    "snippet": "I wanted to learn how to program both MPU's, and to get them talking to each other via serial communications so that I could use the Mega 2560 for its large I/O capability and use the ESP8266 for its WiFi and MQTT capability.",
+    "host_name": "forum.arduino.cc",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://arduinogetstarted.com/tutorials/arduino-dip-switch",
+    "name": "Arduino - DIP Switch | Arduino Tutorial",
+    "snippet": "Learn: how DIP Switch works, how to connect DIP Switch to Arduino, how to code for DIP Switch, how to program Arduino step by step. The detail instruction, code, wiring diagram, video tutorial, line-by-line code explanation are provided to help you quickly get started with Arduino.",
+    "host_name": "arduinogetstarted.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/Ravikumara0/how-to-use-arduino-mega-with-built-in-esp8266",
+    "name": "How to Use Arduino Mega with Built-in ESP8266 - GitHub",
+    "snippet": "When connecting both the ESP8266 and Arduino Mega 2560, serial communication is used to exchange data between the two modules. This is essential for IoT applications where the Mega 2560 handles logic and the ESP8266 provides Wi-Fi connectivity.",
+    "host_name": "github.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://tinkererchronicle.com/index.php/2023/05/14/setting-up-mega2560-wifi",
+    "name": "Setting up Mega2560-wifi – The Tinkerer's Chronicle",
+    "snippet": "Set up a Mega 2560 with built in ESP wifi and get working within the Arduino IDE I recently purchase some Mega2560 with Wifi Boards from AliExpress, I wasn’t after wifi on them but they were only a couple of dollars more so I figured why not!.",
+    "host_name": "tinkererchronicle.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  }
+]
