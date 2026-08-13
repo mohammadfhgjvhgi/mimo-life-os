@@ -1,0 +1,10 @@
+## Hardware Components
+
+1. Arduino Mega - Main microcontroller
+2. ESP8266 - WiFi module
+3. Ultrasonic sensors (HC-SR04) - Distance measurement
+4. LEDs - Indicators for parking status
+5. Resistors - For LED current limiting
+6. Breadboard and jumper wires
+
+## System Architecture
